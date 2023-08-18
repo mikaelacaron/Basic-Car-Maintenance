@@ -23,15 +23,18 @@ brew install swiftlint
 * Clone to your computer
 * Setup the upstream remote
 
-`git remote add upstream https://github.com/mikaelacaron/Basic-Car-Maintenance.git`
+```sh
+git remote add upstream https://github.com/mikaelacaron/Basic-Car-Maintenance.git
+```
 
 * **BEFORE** starting on an issue, comment on the issue you want to work on.
    * This prevents two people from working on the same issue. Mikaela (the maintainer) will assign you that issue, and you can get started on it.
 
 * Checkout a new branch (from the `dev`` branch) to work on an issue:
 
-`git checkout -b issueNumber-feature-name`
-
+```sh
+git checkout -b issueNumber-feature-name
+```
 * When your feature/fix is complete open a pull request, PR, from your feature branch to the `dev`` branch
    * You must squash your commits into one single commit, how to do that shown [here](https://www.internalpointers.com/post/squash-commits-into-one-git)
 
