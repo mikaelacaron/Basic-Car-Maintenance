@@ -12,6 +12,10 @@ Welcome to my open source app! At this moment it's a work in progress, but it wi
 # Contributing
 To start contributing, review [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md). New contributors are always welcome to support this project. Issues labeled `good-first-issue` are great for beginners.
 
+:eyes: **Please be sure to comment on an issue you'd like to work on and [Mikaela Caron](https://github.com/mikaelacaron), the maintainer of this project, will assign it to you!**
+
+Checkout any issue labeled `hacktoberfest` to start contributing.
+
 ### Contributors
 <a href="https://github.com/mikaelacaron/Basic-Car-Maintenance/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=mikaelacaron/Basic-Car-Maintenance" />
