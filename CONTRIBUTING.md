@@ -36,7 +36,6 @@ git remote add upstream https://github.com/mikaelacaron/Basic-Car-Maintenance.gi
 git checkout -b issueNumber-feature-name
 ```
 * When your feature/fix is complete open a pull request, PR, from your feature branch to the `dev` branch
-   * You must squash your commits into one single commit, how to do that shown [here](https://www.internalpointers.com/post/squash-commits-into-one-git)
 
 # Branches and PRs
 * No commits should be made to the `main` branch directly. The `main` branch shall only consist of the deployed code
