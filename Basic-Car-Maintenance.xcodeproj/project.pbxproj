@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */; };
-		FF5D13A92A86C2D600BC9BD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13A82A86C2D600BC9BD6 /* ContentView.swift */; };
 		FF5D13AB2A86C2D800BC9BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */; };
 		FF5D13AF2A86C2D800BC9BD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5D13AE2A86C2D800BC9BD6 /* Preview Assets.xcassets */; };
 		FF5D13B92A86C2D800BC9BD6 /* BasicCarMaintenanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13B82A86C2D800BC9BD6 /* BasicCarMaintenanceTests.swift */; };
 		FF5D13C32A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13C22A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift */; };
 		FF5D13C52A86C2D800BC9BD6 /* BasicCarMaintenanceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13C42A86C2D800BC9BD6 /* BasicCarMaintenanceUITestsLaunchTests.swift */; };
+		FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B3B2A908E3E00F49A13 /* DashboardView.swift */; };
+		FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B3D2A908E7A00F49A13 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		FF5D13A32A86C2D600BC9BD6 /* Basic-Car-Maintenance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic-Car-Maintenance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceApp.swift; sourceTree = "<group>"; };
-		FF5D13A82A86C2D600BC9BD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF5D13AC2A86C2D800BC9BD6 /* Basic_Car_Maintenance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Basic_Car_Maintenance.entitlements; sourceTree = "<group>"; };
 		FF5D13AE2A86C2D800BC9BD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -46,6 +46,8 @@
 		FF5D13C22A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceUITests.swift; sourceTree = "<group>"; };
 		FF5D13C42A86C2D800BC9BD6 /* BasicCarMaintenanceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FF5D13D52A86C51200BC9BD6 /* BasicCarKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BasicCarKit; sourceTree = "<group>"; };
+		FF755B3B2A908E3E00F49A13 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		FF755B3D2A908E7A00F49A13 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,7 @@
 		FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */ = {
 			isa = PBXGroup;
 			children = (
-				FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */,
-				FF5D13A82A86C2D600BC9BD6 /* ContentView.swift */,
+				FF755B412A908F4100F49A13 /* Shared */,
 				FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */,
 				FF5D13AC2A86C2D800BC9BD6 /* Basic_Car_Maintenance.entitlements */,
 				FF5D13AD2A86C2D800BC9BD6 /* Preview Content */,
@@ -129,6 +130,32 @@
 				FF5D13C42A86C2D800BC9BD6 /* BasicCarMaintenanceUITestsLaunchTests.swift */,
 			);
 			path = "Basic-Car-MaintenanceUITests";
+			sourceTree = "<group>";
+		};
+		FF755B3F2A908EC400F49A13 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				FF755B3B2A908E3E00F49A13 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		FF755B402A908EC900F49A13 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FF755B3D2A908E7A00F49A13 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FF755B412A908F4100F49A13 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */,
+				FF755B3F2A908EC400F49A13 /* Dashboard */,
+				FF755B402A908EC900F49A13 /* Settings */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF5D13A92A86C2D600BC9BD6 /* ContentView.swift in Sources */,
+				FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */,
+				FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */,
 				FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
