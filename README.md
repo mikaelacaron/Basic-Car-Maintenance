@@ -25,7 +25,16 @@ Made with [contrib.rocks](https://contrib.rocks).
 
 ### Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mikaelacaron/Basic-Car-Maintenance&type=Date)](https://star-history.com/#mikaelacaron/Basic-Car-Maintenance&Date)
+## Star History
+
+<a href="https://star-history.com/#mikaelacaron/Basic-Car-Maintenance&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=mikaelacaron/Basic-Car-Maintenance&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=mikaelacaron/Basic-Car-Maintenance&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=mikaelacaron/Basic-Car-Maintenance&type=Date" />
+  </picture>
+</a>
+
 
 # License
 This project is licensed under [Apache 2.0](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/LICENSE).
