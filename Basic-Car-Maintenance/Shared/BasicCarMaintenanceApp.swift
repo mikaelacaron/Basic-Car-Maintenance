@@ -12,15 +12,15 @@ struct BasicCarMaintenanceApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-				DashboardView()
-					.tabItem {
-						Label("Dashboard", systemImage: "list.dash.header.rectangle")
-					}
-				
-				SettingsView()
-					.tabItem {
-						Label("Settings", systemImage: "gear")
-					}
+                DashboardView()
+                    .tabItem {
+                        Label("Dashboard", systemImage: "list.dash.header.rectangle")
+                    }
+                
+                SettingsView()
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
             }
         }
     }
