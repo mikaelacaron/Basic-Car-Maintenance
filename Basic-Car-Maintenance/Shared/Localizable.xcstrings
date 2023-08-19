@@ -4,8 +4,27 @@
     "Dashboard" : {
 
     },
+    "GitHub Repo" : {
+
+    },
+    "Links" : {
+
+    },
     "Settings" : {
 
+    },
+    "Thanks for using this app! It's open source and anyone can contribute to its development." : {
+
+    },
+    "Version %@ (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Version %1$@ (%2$@)"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

@@ -9,7 +9,14 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        Text("Settings")
+        NavigationStack {
+            Form {
+                Text("Thanks for using this app! It's open source and anyone can contribute to its development.")
+                
+                Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))")
+            }
+            .navigationTitle(Text("Settings"))
+        }
     }
 }
 

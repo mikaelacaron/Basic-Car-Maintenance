@@ -16,6 +16,7 @@
 		FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B3B2A908E3E00F49A13 /* DashboardView.swift */; };
 		FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B3D2A908E7A00F49A13 /* SettingsView.swift */; };
 		FF755B432A90915E00F49A13 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FF755B422A90915E00F49A13 /* Localizable.xcstrings */; };
+		FF755B462A90969D00F49A13 /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B452A90969D00F49A13 /* Bundle+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		FF755B3B2A908E3E00F49A13 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		FF755B3D2A908E7A00F49A13 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FF755B422A90915E00F49A13 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		FF755B452A90969D00F49A13 /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +159,17 @@
 				FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */,
 				FF755B3F2A908EC400F49A13 /* Dashboard */,
 				FF755B402A908EC900F49A13 /* Settings */,
+				FF755B442A90968D00F49A13 /* Utilities */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		FF755B442A90968D00F49A13 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FF755B452A90969D00F49A13 /* Bundle+extension.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +306,7 @@
 				FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */,
 				FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */,
 				FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */,
+				FF755B462A90969D00F49A13 /* Bundle+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
