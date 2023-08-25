@@ -17,11 +17,14 @@ struct DashboardView: View {
         NavigationStack {
             List {
                 ForEach(events) { event in
-                    VStack {
+                    VStack(alignment: .leading, spacing: 8) {
                         Text(event.title)
-                            .font(.title2)
+                            .font(.title3)
                         
                         Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
+                        
+                        Text(event.notes)
+                            .lineLimit(0)
                     }
                 }
                 .listStyle(.insetGrouped)
