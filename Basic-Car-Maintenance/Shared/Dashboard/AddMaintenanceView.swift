@@ -17,7 +17,7 @@ struct AddMaintenanceView: View {
         NavigationStack {
             Form {
                 Section {
-                    TextField("Title of the event", text: $title, prompt: Text("The title of the event"))
+                    TextField("Title of the maintenance event", text: $title, prompt: Text("The title of the event"))
                 } header: {
                     Text("Title")
                 }
@@ -32,8 +32,7 @@ struct AddMaintenanceView: View {
                     Text("Notes")
                 }
             }
-            .navigationTitle(Text("Add Maintenance Event"))
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle(Text("Add Maintenance"))
             .toolbar {
                 ToolbarItem {
                     Button {
@@ -43,6 +42,7 @@ struct AddMaintenanceView: View {
                     }
                 }
             }
+            
         }
     }
 }

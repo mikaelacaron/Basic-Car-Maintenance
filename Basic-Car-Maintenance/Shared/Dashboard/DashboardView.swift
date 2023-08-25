@@ -27,7 +27,7 @@ struct DashboardView: View {
                             .lineLimit(0)
                     }
                 }
-                .listStyle(.insetGrouped)
+                .listStyle(.inset)
             }
             .navigationTitle(Text("Dashboard"))
             .onAppear {
