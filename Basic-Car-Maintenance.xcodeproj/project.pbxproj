@@ -19,6 +19,8 @@
 		FF755B462A90969D00F49A13 /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B452A90969D00F49A13 /* Bundle+extension.swift */; };
 		FF755B492A909A0000F49A13 /* AddMaintenanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */; };
 		FFBFE0912A98EFEC000A9BEB /* MaintenanceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */; };
+		FFBFE0932A98F212000A9BEB /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0922A98F212000A9BEB /* Vehicle.swift */; };
+		FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		FF755B452A90969D00F49A13 /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
 		FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMaintenanceView.swift; sourceTree = "<group>"; };
 		FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceEvent.swift; sourceTree = "<group>"; };
+		FFBFE0922A98F212000A9BEB /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				FF755B3D2A908E7A00F49A13 /* SettingsView.swift */,
+				FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */,
+				FFBFE0922A98F212000A9BEB /* Vehicle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,7 +326,9 @@
 				FFBFE0912A98EFEC000A9BEB /* MaintenanceEvent.swift in Sources */,
 				FF755B492A909A0000F49A13 /* AddMaintenanceView.swift in Sources */,
 				FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */,
+				FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */,
 				FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */,
+				FFBFE0932A98F212000A9BEB /* Vehicle.swift in Sources */,
 				FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */,
 				FF755B462A90969D00F49A13 /* Bundle+extension.swift in Sources */,
 			);

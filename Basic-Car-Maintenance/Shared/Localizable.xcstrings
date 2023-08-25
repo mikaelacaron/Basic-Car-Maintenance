@@ -10,6 +10,12 @@
     "Add Maintenance Event" : {
 
     },
+    "Add vehcile view" : {
+
+    },
+    "Add Vehicle" : {
+
+    },
     "Additional Notes" : {
 
     },
@@ -38,6 +44,9 @@
 
     },
     "Title of the event" : {
+
+    },
+    "Vehicles" : {
 
     },
     "Version %@ (%@)" : {

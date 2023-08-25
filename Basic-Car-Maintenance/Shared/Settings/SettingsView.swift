@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    @State private var vehicles = [Vehicle]()
+    @State private var isShowingAddVehicle = false
+    
     var body: some View {
         NavigationStack {
             Form {
@@ -22,9 +26,34 @@ struct SettingsView: View {
                             .frame(width: 20, height: 20)
                     }
                 }
+                
+                Section {
+                    ForEach(vehicles) { vehicle in
+                        VStack {
+                            Text(vehicle.name)
+                                .font(.title)
+                            
+                            Text(vehicle.make)
+                            
+                            Text(vehicle.model)
+                        }
+                    }
+                    
+                    Button {
+                        isShowingAddVehicle.toggle()
+                    } label: {
+                        Text("Add Vehicle")
+                    }
+                } header: {
+                    Text("Vehicles")
+                }
+                
                 Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))")
             }
             .navigationTitle(Text("Settings"))
+            .sheet(isPresented: $isShowingAddVehicle) {
+                AddVehicleView()
+            }
         }
     }
 }
