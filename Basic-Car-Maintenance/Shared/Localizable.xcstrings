@@ -10,9 +10,6 @@
     "Add Maintenance Event" : {
 
     },
-    "Add vehcile view" : {
-
-    },
     "Add Vehicle" : {
 
     },
@@ -26,6 +23,15 @@
 
     },
     "GitHub Repo" : {
+
+    },
+    "Make" : {
+
+    },
+    "Model" : {
+
+    },
+    "Name" : {
 
     },
     "Notes" : {
@@ -44,6 +50,15 @@
 
     },
     "Title of the event" : {
+
+    },
+    "Vehicle Make" : {
+
+    },
+    "Vehicle Model" : {
+
+    },
+    "Vehicle Name" : {
 
     },
     "Vehicles" : {
