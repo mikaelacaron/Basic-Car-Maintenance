@@ -4,16 +4,37 @@
     "Add" : {
 
     },
+    "Add Maintenance Event" : {
+
+    },
+    "Additional Notes" : {
+
+    },
     "Dashboard" : {
 
     },
+    "Date" : {
+
+    },
     "GitHub Repo" : {
+
+    },
+    "Notes" : {
 
     },
     "Settings" : {
 
     },
     "Thanks for using this app! It's open source and anyone can contribute to its development." : {
+
+    },
+    "The title of the event" : {
+
+    },
+    "Title" : {
+
+    },
+    "Title of the event" : {
 
     },
     "Version %@ (%@)" : {
