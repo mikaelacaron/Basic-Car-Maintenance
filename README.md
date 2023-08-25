@@ -23,8 +23,6 @@ Checkout any issue labeled `hacktoberfest` to start contributing.
 
 Made with [contrib.rocks](https://contrib.rocks).
 
-### Star History
-
 ## Star History
 
 <a href="https://star-history.com/#mikaelacaron/Basic-Car-Maintenance&Date">
