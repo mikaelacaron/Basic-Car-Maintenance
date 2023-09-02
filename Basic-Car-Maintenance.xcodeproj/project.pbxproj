@@ -51,7 +51,6 @@
 		FF5D13BE2A86C2D800BC9BD6 /* Basic-Car-MaintenanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Basic-Car-MaintenanceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5D13C22A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceUITests.swift; sourceTree = "<group>"; };
 		FF5D13C42A86C2D800BC9BD6 /* BasicCarMaintenanceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FF5D13D52A86C51200BC9BD6 /* BasicCarKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BasicCarKit; sourceTree = "<group>"; };
 		FF755B3B2A908E3E00F49A13 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		FF755B3D2A908E7A00F49A13 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FF755B422A90915E00F49A13 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -90,7 +89,6 @@
 		FF5D139A2A86C2D500BC9BD6 = {
 			isa = PBXGroup;
 			children = (
-				FF5D13D52A86C51200BC9BD6 /* BasicCarKit */,
 				FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */,
 				FF5D13B72A86C2D800BC9BD6 /* Basic-Car-MaintenanceTests */,
 				FF5D13C12A86C2D800BC9BD6 /* Basic-Car-MaintenanceUITests */,
