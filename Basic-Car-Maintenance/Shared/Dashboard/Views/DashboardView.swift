@@ -34,6 +34,7 @@ struct DashboardView: View {
                 AddMaintenanceView() { event in
                     Task {
                         try? await viewModel.addEvent(event)
+                        viewModel.events.append(event)
                     }
                     
                 }
@@ -46,6 +47,9 @@ struct DashboardView: View {
                         Image(systemName: "plus")
                     }
                 }
+            }
+            .task {
+                await viewModel.getMaintenanceEvents()
             }
         }
     }
