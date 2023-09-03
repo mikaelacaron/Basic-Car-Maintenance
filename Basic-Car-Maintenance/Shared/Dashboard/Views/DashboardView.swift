@@ -30,12 +30,6 @@ struct DashboardView: View {
                 .listStyle(.inset)
             }
             .navigationTitle(Text("Dashboard"))
-            .onAppear {
-                viewModel.events.append(MaintenanceEvent(id: UUID().uuidString, title: "Oil Change", date: Date(), notes: "oil changed by me"))
-                viewModel.events.append(MaintenanceEvent(id: UUID().uuidString, title: "Oil Change", date: Date(), notes: "oil changed by me"))
-                viewModel.events.append(MaintenanceEvent(id: UUID().uuidString, title: "Oil Change", date: Date(), notes: "oil changed by me"))
-                viewModel.events.append(MaintenanceEvent(id: UUID().uuidString, title: "Oil Change", date: Date(), notes: "oil changed by me"))
-            }
             .sheet(isPresented: $isShowingAddView) {
                 AddMaintenanceView() { event in
                     Task {
