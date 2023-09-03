@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
 struct MaintenanceEvent: Codable, Identifiable, Hashable {
-    let id: UUID
+    @DocumentID var id: String?
     let title: String
     let date: Date
     let notes: String

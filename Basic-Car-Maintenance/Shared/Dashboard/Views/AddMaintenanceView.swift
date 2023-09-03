@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AddMaintenanceView: View {
     
+    let addTapped: (MaintenanceEvent) -> Void
+    
     @State private var title = ""
     @State private var date = Date()
     @State private var notes = ""
@@ -36,7 +38,8 @@ struct AddMaintenanceView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        
+                        let event = MaintenanceEvent(title: title, date: date, notes: notes)
+                        addTapped(event)
                     } label: {
                         Text("Add")
                     }
@@ -48,5 +51,5 @@ struct AddMaintenanceView: View {
 }
 
 #Preview {
-    AddMaintenanceView()
+    AddMaintenanceView() { _ in }
 }

@@ -11,12 +11,12 @@ struct DashboardView: View {
     
     @State private var isShowingAddView = false
     
-    @State private var events = [MaintenanceEvent]()
+    @StateObject private var viewModel = DashboardViewModel()
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(events) { event in
+                ForEach(viewModel.events) { event in
                     VStack(alignment: .leading, spacing: 8) {
                         Text(event.title)
                             .font(.title3)
@@ -31,13 +31,18 @@ struct DashboardView: View {
             }
             .navigationTitle(Text("Dashboard"))
             .onAppear {
-                events.append(MaintenanceEvent(id: UUID(), title: "Oil Change", date: Date(), notes: "oil changed by me"))
-                events.append(MaintenanceEvent(id: UUID(), title: "Oil Change", date: Date(), notes: "oil changed by me"))
-                events.append(MaintenanceEvent(id: UUID(), title: "Oil Change", date: Date(), notes: "oil changed by me"))
-                events.append(MaintenanceEvent(id: UUID(), title: "Oil Change", date: Date(), notes: "oil changed by me"))
+                viewModel.events.append(MaintenanceEvent(id: UUID().uuidString, title: "Oil Change", date: Date(), notes: "oil changed by me"))
+                viewModel.events.append(MaintenanceEvent(id: UUID().uuidString, title: "Oil Change", date: Date(), notes: "oil changed by me"))
+                viewModel.events.append(MaintenanceEvent(id: UUID().uuidString, title: "Oil Change", date: Date(), notes: "oil changed by me"))
+                viewModel.events.append(MaintenanceEvent(id: UUID().uuidString, title: "Oil Change", date: Date(), notes: "oil changed by me"))
             }
             .sheet(isPresented: $isShowingAddView) {
-                AddMaintenanceView()
+                AddMaintenanceView() { event in
+                    Task {
+                        try? await viewModel.addEvent(event)
+                    }
+                    
+                }
             }
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
