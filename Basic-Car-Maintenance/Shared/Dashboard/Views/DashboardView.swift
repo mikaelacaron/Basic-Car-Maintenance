@@ -26,6 +26,15 @@ struct DashboardView: View {
                         Text(event.notes)
                             .lineLimit(0)
                     }
+                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                        Button(role: .destructive) {
+                            Task {
+                                await viewModel.deleteEvent(event)
+                            }
+                        } label: {
+                            Image(systemName: "trash")
+                        }
+                    }
                 }
                 .listStyle(.inset)
             }

@@ -35,4 +35,15 @@ class DashboardViewModel: ObservableObject {
             }
         }
     }
+    
+    func deleteEvent(_ event: MaintenanceEvent) async {
+        guard let documentId = event.id else {
+            fatalError("Event \(event.title) has no document ID.")
+        }
+        try? await Firestore
+            .firestore()
+            .collection("maintenance_events")
+            .document(documentId)
+            .delete()
+    }
 }
