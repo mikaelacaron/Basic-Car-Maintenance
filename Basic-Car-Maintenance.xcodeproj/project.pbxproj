@@ -101,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF3DDF492AA4386C009D91C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF755B3B2A908E3E00F49A13 /* DashboardView.swift */,
+				FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FF5D139A2A86C2D500BC9BD6 = {
 			isa = PBXGroup;
 			children = (
@@ -161,8 +170,7 @@
 		FF755B3F2A908EC400F49A13 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				FF755B3B2A908E3E00F49A13 /* DashboardView.swift */,
-				FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */,
+				FF3DDF492AA4386C009D91C4 /* Views */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
