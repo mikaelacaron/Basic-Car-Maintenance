@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
 struct Vehicle: Codable, Identifiable {
-    let id: UUID
+    @DocumentID var id: String?
     let name: String
     let make: String
     let model: String
