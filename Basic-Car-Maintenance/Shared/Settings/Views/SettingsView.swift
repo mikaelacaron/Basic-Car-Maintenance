@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @State private var vehicles = [Vehicle]()
+    @StateObject private var viewModel = SettingsViewModel()
     @State private var isShowingAddVehicle = false
     
     var body: some View {
@@ -28,7 +28,7 @@ struct SettingsView: View {
                 }
                 
                 Section {
-                    ForEach(vehicles) { vehicle in
+                    ForEach(viewModel.vehicles) { vehicle in
                         VStack {
                             Text(vehicle.name)
                                 .font(.title)
