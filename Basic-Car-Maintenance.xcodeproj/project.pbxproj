@@ -22,6 +22,7 @@
 		FFBFE0912A98EFEC000A9BEB /* MaintenanceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */; };
 		FFBFE0932A98F212000A9BEB /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0922A98F212000A9BEB /* Vehicle.swift */; };
 		FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */; };
+		FFC67D1D2AAEF7920073B338 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC67D1C2AAEF7920073B338 /* SettingsViewModel.swift */; };
 		FFC8CDA42AA385E800D129A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */; };
 		FFC8CDA72AA3867A00D129A6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDA62AA3867A00D129A6 /* FirebaseAnalytics */; };
 		FFC8CDA92AA3867A00D129A6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDA82AA3867A00D129A6 /* FirebaseAnalyticsSwift */; };
@@ -68,6 +69,7 @@
 		FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceEvent.swift; sourceTree = "<group>"; };
 		FFBFE0922A98F212000A9BEB /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
+		FFC67D1C2AAEF7920073B338 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFC8CDB22AA4226900D129A6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -189,8 +191,8 @@
 		FF755B402A908EC900F49A13 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				FF755B3D2A908E7A00F49A13 /* SettingsView.swift */,
-				FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */,
+				FFC67D1E2AAEF7960073B338 /* Views */,
+				FFC67D1F2AAEF7A00073B338 /* ViewModels */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -224,6 +226,23 @@
 				FFBFE0922A98F212000A9BEB /* Vehicle.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FFC67D1E2AAEF7960073B338 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF755B3D2A908E7A00F49A13 /* SettingsView.swift */,
+				FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FFC67D1F2AAEF7A00073B338 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FFC67D1C2AAEF7920073B338 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		FFC8CDB12AA4226900D129A6 /* Frameworks */ = {
@@ -381,6 +400,7 @@
 				FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */,
 				FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */,
 				FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */,
+				FFC67D1D2AAEF7920073B338 /* SettingsViewModel.swift in Sources */,
 				FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */,
 				FFBFE0932A98F212000A9BEB /* Vehicle.swift in Sources */,
 				FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */,
