@@ -31,7 +31,7 @@ struct SettingsView: View {
                     ForEach(viewModel.vehicles) { vehicle in
                         VStack {
                             Text(vehicle.name)
-                                .font(.title)
+                                .font(.headline)
                             
                             Text(vehicle.make)
                             
@@ -51,8 +51,16 @@ struct SettingsView: View {
                 Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))")
             }
             .navigationTitle(Text("Settings"))
+            .task {
+                await viewModel.getVehicles()
+            }
             .sheet(isPresented: $isShowingAddVehicle) {
-                AddVehicleView()
+                AddVehicleView() { vehicle in
+                    Task {
+                        try? await viewModel.addVehicle(vehicle)
+                        viewModel.vehicles.append(vehicle)
+                    }
+                }
             }
         }
     }

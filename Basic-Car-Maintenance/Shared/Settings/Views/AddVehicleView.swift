@@ -9,9 +9,13 @@ import SwiftUI
 
 struct AddVehicleView: View {
     
+    let addTapped: (Vehicle) -> Void
+    
     @State private var name = ""
     @State private var make = ""
     @State private var model = ""
+    
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationStack {
@@ -29,7 +33,7 @@ struct AddVehicleView: View {
                 }
                 
                 Section {
-                    TextField("Vehicle Model", text: $name, prompt: Text("Vehicle Model"))
+                    TextField("Vehicle Model", text: $model, prompt: Text("Vehicle Model"))
                 } header: {
                     Text("Model")
                 }
@@ -37,7 +41,9 @@ struct AddVehicleView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        
+                        let vehicle = Vehicle(name: name, make: make, model: model)
+                        addTapped(vehicle)
+                        dismiss()
                     } label: {
                         Text("Add")
                     }
@@ -48,5 +54,5 @@ struct AddVehicleView: View {
 }
 
 #Preview {
-    AddVehicleView()
+    AddVehicleView() { _ in }
 }

@@ -9,18 +9,19 @@ import Foundation
 import FirebaseFirestoreSwift
 import FirebaseFirestore
 
+@MainActor
 final class SettingsViewModel: ObservableObject {
     
     @Published var vehicles = [Vehicle]()
     
-    func addEvent(_ vehicle: Vehicle) async throws {
+    func addVehicle(_ vehicle: Vehicle) async throws {
         try Firestore
             .firestore()
             .collection("vehicles")
             .addDocument(from: vehicle)
     }
     
-    func getMaintenanceEvents() async {
+    func getVehicles() async {
         let db = Firestore.firestore()
         let docRef = db.collection("vehicles")
         
@@ -35,9 +36,9 @@ final class SettingsViewModel: ObservableObject {
         }
     }
     
-    func deleteEvent(_ event: Vehicle) async {
-        guard let documentId = event.id else {
-            fatalError("Event \(event.name) has no document ID.")
+    func deleteVehicle(_ vehicle: Vehicle) async {
+        guard let documentId = vehicle.id else {
+            fatalError("Event \(vehicle.name) has no document ID.")
         }
         try? await Firestore
             .firestore()
