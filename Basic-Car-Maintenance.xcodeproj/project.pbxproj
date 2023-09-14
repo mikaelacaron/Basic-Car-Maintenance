@@ -126,6 +126,7 @@
 		FF5D139A2A86C2D500BC9BD6 = {
 			isa = PBXGroup;
 			children = (
+				FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */,
 				FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */,
 				FF5D13B72A86C2D800BC9BD6 /* Basic-Car-MaintenanceTests */,
 				FF5D13C12A86C2D800BC9BD6 /* Basic-Car-MaintenanceUITests */,
@@ -147,7 +148,6 @@
 		FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */ = {
 			isa = PBXGroup;
 			children = (
-				FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */,
 				FF755B412A908F4100F49A13 /* Shared */,
 				FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */,
 				FF5D13AC2A86C2D800BC9BD6 /* Basic_Car_Maintenance.entitlements */,
