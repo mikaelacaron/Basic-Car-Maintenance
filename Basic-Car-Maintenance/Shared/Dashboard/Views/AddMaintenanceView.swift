@@ -21,7 +21,9 @@ struct AddMaintenanceView: View {
         NavigationStack {
             Form {
                 Section {
-                    TextField("Title of the maintenance event", text: $title, prompt: Text("The title of the event"))
+                    TextField("Title of the maintenance event",
+                              text: $title,
+                              prompt: Text("The title of the event"))
                 } header: {
                     Text("Title")
                 }

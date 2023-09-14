@@ -15,7 +15,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Text("Thanks for using this app! It's open source and anyone can contribute to its development.")
+                Text("Thanks for using this app! It's open source and anyone can contribute to it.")
                 
                 Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance")!) {
                     Label {
