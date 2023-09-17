@@ -6,6 +6,7 @@ Welcome to my open source app! At this moment it's a work in progress, but it wi
 * Read the [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md) guidelines
 * Download Xcode 15 or later, and macOS 14.0 or later
 * Browse the open [issues](https://github.com/mikaelacaron/Basic-Car-Maintenance/issues) and **comment** which you would like to work on
+   * It is only one person per issue, except where noted.
 * Fork this repo
 * Clone the repo to your machine
 * In the same folder that contains the `Basic-Car-Maintenance.xcconfig.template`, run this command to create a new Xcode configuration file (which properly sets up the signing information)
@@ -16,10 +17,10 @@ cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
 
 * Fill in your `DEVELOPMENT_TEAM`, no spaces.
    * Example: `DEVELOPMENT_TEAM = IdNumber`
-   * You cacn find this by logging into Apple Developer Portal
+   * You can find this by logging into the Apple Developer Portal
 * Build the project
 
-* Checkout a new branch (from the `dev` branch) to work on an issue:
+* Checkout a new branch (from the `dev` branch) to work on an issue
 
 # Contributing
 To start contributing, review [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md). New contributors are always welcome to support this project. Issues labeled `good-first-issue` are great for beginners.
