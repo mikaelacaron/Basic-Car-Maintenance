@@ -46,15 +46,33 @@ final class AuthenticationViewModel: ObservableObject {
     }
     
     func signUpWithEmailPassword() async -> Bool {
-        return false
+        do {
+            try await Auth.auth().createUser(withEmail: email, password: password)
+            authenticationState = .authenticated
+            return true
+        } catch {
+            authenticationState = .unauthenticated
+            return false
+        }
     }
     
     func signOut() {
-        
+        do {
+            try Auth.auth().signOut()
+            authenticationState = .unauthenticated
+        } catch {
+            print(error)
+        }
     }
     
     func deleteAccount() async -> Bool {
-        return false
+        do {
+            try await user?.delete()
+            authenticationState = .unauthenticated
+            return true
+        } catch {
+            return false
+        }
     }
     
     func registerAuthStateHandler() {
