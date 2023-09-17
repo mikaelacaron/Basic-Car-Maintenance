@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF09FC912AB6FF44006BE61A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */; };
 		FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3DDF512AA4D28F009D91C4 /* DashboardViewModel.swift */; };
 		FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */; };
 		FF5D13AB2A86C2D800BC9BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Basic-Car-Maintenance.xcconfig"; sourceTree = SOURCE_ROOT; };
+		FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		FF3DDF512AA4D28F009D91C4 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		FF5D13A32A86C2D600BC9BD6 /* Basic-Car-Maintenance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic-Car-Maintenance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceApp.swift; sourceTree = "<group>"; };
@@ -183,14 +185,6 @@
 			path = "Basic-Car-MaintenanceUITests";
 			sourceTree = "<group>";
 		};
-		FF748B5C2AB3588F004748A5 /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				FF748B5D2AB3589C004748A5 /* AuthenticationViewModel.swift */,
-			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
 		FF755B3F2A908EC400F49A13 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,7 +209,6 @@
 				FF755B422A90915E00F49A13 /* Localizable.xcstrings */,
 				FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */,
 				FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */,
-				FF748B5C2AB3588F004748A5 /* Authentication */,
 				FFBFE08F2A98EFDD000A9BEB /* Models */,
 				FF755B3F2A908EC400F49A13 /* Dashboard */,
 				FF755B402A908EC900F49A13 /* Settings */,
@@ -246,6 +239,7 @@
 			children = (
 				FF755B3D2A908E7A00F49A13 /* SettingsView.swift */,
 				FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */,
+				FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -254,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				FFC67D1C2AAEF7920073B338 /* SettingsViewModel.swift */,
+				FF748B5D2AB3589C004748A5 /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -433,6 +428,7 @@
 			files = (
 				FFBFE0912A98EFEC000A9BEB /* MaintenanceEvent.swift in Sources */,
 				FF755B492A909A0000F49A13 /* AddMaintenanceView.swift in Sources */,
+				FF09FC912AB6FF44006BE61A /* AuthenticationView.swift in Sources */,
 				FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */,
 				FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */,
 				FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */,
