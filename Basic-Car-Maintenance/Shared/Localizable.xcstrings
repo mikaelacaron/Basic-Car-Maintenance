@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%@" : {
 
     },
@@ -38,6 +41,9 @@
 
     },
     "Settings" : {
+
+    },
+    "Test" : {
 
     },
     "Thanks for using this app! It's open source and anyone can contribute to it." : {

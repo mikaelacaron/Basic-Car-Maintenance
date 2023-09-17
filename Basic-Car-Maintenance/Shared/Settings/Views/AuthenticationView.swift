@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AuthenticationView: View {
     var body: some View {
-        Text("Hello, World!")
+        Text("Test")
     }
 }
 
