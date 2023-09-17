@@ -28,6 +28,12 @@ final class AuthenticationViewModel: ObservableObject {
     
     @Published var user: User?
     
+    private var authStateHandler: AuthStateDidChangeListenerHandle?
+    
+    init() {
+        registerAuthStateHandler()
+    }
+    
     func signInWithEmailPassword() async -> Bool {
         
         do {
@@ -49,5 +55,14 @@ final class AuthenticationViewModel: ObservableObject {
     
     func deleteAccount() async -> Bool {
         return false
+    }
+    
+    func registerAuthStateHandler() {
+        if authStateHandler == nil {
+            authStateHandler = Auth.auth().addStateDidChangeListener { _, user in
+                self.user = user
+                self.authenticationState = user == nil ? .unauthenticated : .authenticated
+            }
+        }
     }
 }
