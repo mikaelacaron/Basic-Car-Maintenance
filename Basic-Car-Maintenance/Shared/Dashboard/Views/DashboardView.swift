@@ -43,7 +43,6 @@ struct DashboardView: View {
                 AddMaintenanceView() { event in
                     Task {
                         try? await viewModel.addEvent(event)
-                        viewModel.events.append(event)
                     }
                     
                 }

@@ -14,11 +14,13 @@ class DashboardViewModel: ObservableObject {
     
     @Published var events = [MaintenanceEvent]()
     
-    func addEvent(_ maintenanceEvent: MaintenanceEvent) async throws {
-        try Firestore
+    func addEvent(_ maintenanceEvent: MaintenanceEvent) async {
+        try? Firestore
             .firestore()
             .collection("maintenance_events")
             .addDocument(from: maintenanceEvent)
+
+            events.append(maintenanceEvent)
     }
     
     func getMaintenanceEvents() async {
