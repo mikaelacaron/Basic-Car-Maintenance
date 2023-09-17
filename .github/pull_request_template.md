@@ -14,4 +14,4 @@ etc...
 * Anything else that should be noted about how you implemented this feature?
 
 # Screenshot
-* Add a screenshot of your new feature! OR show a screen recording of it in action. (On the simulator press Cmd + R to record, and the top button at the top when done). **This video should be longer than 30 seconds.**
+* Add a screenshot of your new feature! OR show a screen recording of it in action. (On the simulator press Cmd + R to record, and the stop button when done). **This video should be no longer than 30 seconds.**
