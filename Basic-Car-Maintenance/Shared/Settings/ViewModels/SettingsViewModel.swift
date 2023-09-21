@@ -14,11 +14,13 @@ final class SettingsViewModel: ObservableObject {
     
     @Published var vehicles = [Vehicle]()
     
-    func addVehicle(_ vehicle: Vehicle) async throws {
-        try Firestore
+    func addVehicle(_ vehicle: Vehicle) async {
+        try? Firestore
             .firestore()
             .collection("vehicles")
             .addDocument(from: vehicle)
+
+        vehicles.append(vehicle)
     }
     
     func getVehicles() async {

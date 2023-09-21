@@ -42,7 +42,7 @@ struct DashboardView: View {
             .sheet(isPresented: $isShowingAddView) {
                 AddMaintenanceView() { event in
                     Task {
-                        try? await viewModel.addEvent(event)
+                        await viewModel.addEvent(event)
                     }
                     
                 }

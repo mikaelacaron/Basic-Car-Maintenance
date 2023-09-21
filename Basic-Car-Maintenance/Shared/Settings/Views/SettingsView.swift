@@ -57,8 +57,7 @@ struct SettingsView: View {
             .sheet(isPresented: $isShowingAddVehicle) {
                 AddVehicleView() { vehicle in
                     Task {
-                        try? await viewModel.addVehicle(vehicle)
-                        viewModel.vehicles.append(vehicle)
+                        await viewModel.addVehicle(vehicle)
                     }
                 }
             }

@@ -19,8 +19,8 @@ class DashboardViewModel: ObservableObject {
             .firestore()
             .collection("maintenance_events")
             .addDocument(from: maintenanceEvent)
-
-            events.append(maintenanceEvent)
+        
+        events.append(maintenanceEvent)
     }
     
     func getMaintenanceEvents() async {
