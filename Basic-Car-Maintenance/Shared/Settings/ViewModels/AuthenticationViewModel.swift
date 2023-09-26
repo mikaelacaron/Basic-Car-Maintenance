@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseAuth
+import SwiftUI
 
 enum AuthenticationState {
     case unauthenticated
@@ -28,10 +29,32 @@ final class AuthenticationViewModel: ObservableObject {
     
     @Published var user: User?
     
+    @Published var flow: AuthenticationFlow = .signUp
+    
     private var authStateHandler: AuthStateDidChangeListenerHandle?
     
     init() {
         registerAuthStateHandler()
+        signIn()
+    }
+    
+    func linkWithEmailPassword() async -> Bool {
+        authenticationState = .authenticating
+        do {
+            let credential = EmailAuthProvider.credential(withEmail: email, password: password)
+            if let user {
+                let result = try await user.link(with: credential)
+                self.user = result.user
+                authenticationState = .authenticated
+                return true
+            } else {
+                fatalError("No user was signed in. This should not happen.")
+            }
+        } catch {
+            print(error)
+            authenticationState = .unauthenticated
+            return false
+        }
     }
     
     func signInWithEmailPassword() async -> Bool {
@@ -53,6 +76,24 @@ final class AuthenticationViewModel: ObservableObject {
         } catch {
             authenticationState = .unauthenticated
             return false
+        }
+    }
+    
+    func signIn() {
+        if Auth.auth().currentUser == nil {
+            print("Nobody is signed in. Trying to sign in anonymously.")
+            Task {
+                do {
+                    try await Auth.auth().signInAnonymously()
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+        } else {
+            print("Someone is signed in")
+            if let user = Auth.auth().currentUser {
+                print(user.uid)
+            }
         }
     }
     

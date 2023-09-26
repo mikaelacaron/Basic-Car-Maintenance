@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    @EnvironmentObject var authenticationViewModel: AuthenticationViewModel
+    
     @StateObject private var viewModel = SettingsViewModel()
     @State private var isShowingAddVehicle = false
     
@@ -46,6 +48,19 @@ struct SettingsView: View {
                     }
                 } header: {
                     Text("Vehicles")
+                }
+                
+                Section {
+                    NavigationLink {
+                        AuthenticationView()
+                            .environmentObject(authenticationViewModel)
+                    } label: {
+                        Label {
+                            Text("Profile")
+                        } icon: {
+                            Image(systemName: "person")
+                        }
+                    }
                 }
                 
                 Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))")

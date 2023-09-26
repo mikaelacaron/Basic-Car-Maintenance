@@ -20,15 +20,20 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct BasicCarMaintenanceApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
+    @StateObject var authenticationViewModel = AuthenticationViewModel()
+    
     var body: some Scene {
         WindowGroup {
             TabView {
                 DashboardView()
+                    .environmentObject(authenticationViewModel)
                     .tabItem {
                         Label("Dashboard", systemImage: "list.dash.header.rectangle")
                     }
                 
                 SettingsView()
+                    .environmentObject(authenticationViewModel)
                     .tabItem {
                         Label("Settings", systemImage: "gear")
                     }

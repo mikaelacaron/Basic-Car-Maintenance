@@ -19,13 +19,22 @@
     "Additional Notes" : {
 
     },
+    "Confirm Password" : {
+
+    },
     "Dashboard" : {
 
     },
     "Date" : {
 
     },
+    "Email" : {
+
+    },
     "GitHub Repo" : {
+
+    },
+    "Logged in anonymously with ID: %@" : {
 
     },
     "Make" : {
@@ -40,10 +49,19 @@
     "Notes" : {
 
     },
+    "Password" : {
+
+    },
+    "Profile" : {
+
+    },
     "Settings" : {
 
     },
-    "Test" : {
+    "Sign Up" : {
+
+    },
+    "Signed in as %@" : {
 
     },
     "Thanks for using this app! It's open source and anyone can contribute to it." : {

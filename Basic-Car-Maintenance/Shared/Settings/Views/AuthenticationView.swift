@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct AuthenticationView: View {
+    
+    @EnvironmentObject var viewModel: AuthenticationViewModel
+    
     var body: some View {
-        Text("Test")
+        switch viewModel.flow {
+        case .signIn:
+            SignInView()
+                .environmentObject(viewModel)
+        case .signUp:
+            SignUpView()
+                .environmentObject(viewModel)
+        }
     }
 }
 
 #Preview {
-    AuthenticationView()
+    NavigationStack {
+        AuthenticationView()
+            .environmentObject(AuthenticationViewModel())
+    }
 }
