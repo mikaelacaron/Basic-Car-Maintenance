@@ -12,7 +12,7 @@ Welcome to my open source app! At this moment it's a work in progress, but it wi
 # Contributing
 To start contributing, review [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md). New contributors are always welcome to support this project. Issues labeled `good-first-issue` are great for beginners.
 
-:eyes: **Please be sure to comment on an issue you'd like to work on and [Mikaela Caron](https://github.com/mikaelacaron), the maintainer of this project, will assign it to you!**
+:eyes: **Please be sure to comment on an issue you'd like to work on and [Mikaela Caron](https://github.com/mikaelacaron), the maintainer of this project, will assign it to you!** You can only work on **ONE** issue at a time.
 
 Checkout any issue labeled `hacktoberfest` to start contributing.
 
