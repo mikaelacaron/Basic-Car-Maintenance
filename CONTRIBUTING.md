@@ -17,7 +17,8 @@ This is a deployed app on the Apple App Store, available for iOS 17.0 or later. 
 ```sh
 brew install swiftlint
 ```
-
+* Use Firebase Local Emulator to develop with firebase locally. Read [this page](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/EMULATOR_SETUP.md) for setup instructions. 
+  
 ## Start Here
 * Fork the repo to your profile
 * Clone to your computer
@@ -53,3 +54,5 @@ git checkout -b issueNumber-feature-name
 # Coding Style Guidelines
 Developers should aim to write clean, maintainable, scalable and testable code. The following guidelines might come in handy for this:
 * Swift: [Swift Best Practices](https://github.com/Lickability/swift-best-practices), by [Lickability](https://lickability.com)
+* [Official Style Guideline](https://www.swift.org/documentation/api-design-guidelines/)
+* [Swift Style Guide from Google](https://google.github.io/swift/)
