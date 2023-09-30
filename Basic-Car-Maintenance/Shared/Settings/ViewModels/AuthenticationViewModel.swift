@@ -25,6 +25,7 @@ final class AuthenticationViewModel: ObservableObject {
     
     @Published var email = ""
     @Published var password = ""
+    @Published var confirmPassword = ""
     @Published var authenticationState: AuthenticationState = .unauthenticated
     
     @Published var user: User?
@@ -68,6 +69,12 @@ final class AuthenticationViewModel: ObservableObject {
         }
     }
     
+    func signInAnonymously() {
+        Task {
+            try? await Auth.auth().signInAnonymously()
+        }
+    }
+    
     func signUpWithEmailPassword() async -> Bool {
         do {
             try await Auth.auth().createUser(withEmail: email, password: password)
@@ -92,7 +99,6 @@ final class AuthenticationViewModel: ObservableObject {
         } else {
             print("Someone is signed in")
             if let user = Auth.auth().currentUser {
-                print(user.uid)
             }
         }
     }
@@ -101,6 +107,7 @@ final class AuthenticationViewModel: ObservableObject {
         do {
             try Auth.auth().signOut()
             authenticationState = .unauthenticated
+            signInAnonymously()
         } catch {
             print(error)
         }

@@ -18,7 +18,7 @@ struct SignUpView: View {
                 
                 SecureField("Password", text: $viewModel.password)
                 
-                SecureField("Confirm Password", text: $viewModel.password)
+                SecureField("Confirm Password", text: $viewModel.confirmPassword)
             }
             
             Section {

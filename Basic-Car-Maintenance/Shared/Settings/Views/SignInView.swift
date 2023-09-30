@@ -31,10 +31,10 @@ struct SignInView: View {
             ToolbarItem {
                 Button {
                     Task {
-                        await viewModel.linkWithEmailPassword()
+                        await viewModel.signInWithEmailPassword()
                     }
                 } label: {
-                    Text("Sign Up")
+                    Text("Sign In")
                 }
             }
         }
