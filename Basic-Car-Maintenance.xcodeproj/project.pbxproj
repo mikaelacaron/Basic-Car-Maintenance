@@ -21,6 +21,7 @@
 		FF755B432A90915E00F49A13 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FF755B422A90915E00F49A13 /* Localizable.xcstrings */; };
 		FF755B462A90969D00F49A13 /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B452A90969D00F49A13 /* Bundle+extension.swift */; };
 		FF755B492A909A0000F49A13 /* AddMaintenanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */; };
+		FFAA56ED2AC8905C000120EE /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = FFAA56EC2AC8905C000120EE /* Documentation.docc */; };
 		FFBFE0912A98EFEC000A9BEB /* MaintenanceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */; };
 		FFBFE0932A98F212000A9BEB /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0922A98F212000A9BEB /* Vehicle.swift */; };
 		FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */; };
@@ -73,6 +74,7 @@
 		FF755B422A90915E00F49A13 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		FF755B452A90969D00F49A13 /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
 		FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMaintenanceView.swift; sourceTree = "<group>"; };
+		FFAA56EC2AC8905C000120EE /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceEvent.swift; sourceTree = "<group>"; };
 		FFBFE0922A98F212000A9BEB /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */ = {
 			isa = PBXGroup;
 			children = (
+				FFAA56EC2AC8905C000120EE /* Documentation.docc */,
 				FF755B412A908F4100F49A13 /* Shared */,
 				FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */,
 				FF5D13AC2A86C2D800BC9BD6 /* Basic_Car_Maintenance.entitlements */,
@@ -445,6 +448,7 @@
 				FFFDCD962AC2888700227A9D /* SignUpView.swift in Sources */,
 				FF748B5E2AB3589C004748A5 /* AuthenticationViewModel.swift in Sources */,
 				FF755B462A90969D00F49A13 /* Bundle+extension.swift in Sources */,
+				FFAA56ED2AC8905C000120EE /* Documentation.docc in Sources */,
 				FFFDCD942AC2887F00227A9D /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
