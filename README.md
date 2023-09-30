@@ -8,7 +8,8 @@ Welcome to my open source app! At this moment it's a work in progress, but it wi
 * Browse the open [issues](https://github.com/mikaelacaron/Basic-Car-Maintenance/issues) and **comment** which you would like to work on
 * Fork this repo
 * Clone the repo to your machine
-
+* Develop on firebase locally with firebase emulator. Navigate to [this page](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/EMULATOR_SETUP.md) for setup instructions. 
+  
 # Contributing
 To start contributing, review [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md). New contributors are always welcome to support this project. Issues labeled `good-first-issue` are great for beginners.
 
