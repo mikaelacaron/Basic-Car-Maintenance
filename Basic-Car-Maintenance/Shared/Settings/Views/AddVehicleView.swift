@@ -13,6 +13,9 @@ struct AddVehicleView: View {
     @State private var name = ""
     @State private var make = ""
     @State private var model = ""
+    private var isVehicleValid: Bool {
+        !name.isEmpty && !make.isEmpty && !model.isEmpty
+    }
     
     @Environment(\.dismiss) var dismiss
     
@@ -41,15 +44,12 @@ struct AddVehicleView: View {
                 ToolbarItem {
                     Button {
                         let vehicle = Vehicle(name: name, make: make, model: model)
-                        
-                        if !name.isEmpty && !make.isEmpty && !model.isEmpty {
-                            addTapped(vehicle)
-                        }
-                        
-                        dismiss()
+                        addTapped(vehicle)
+                        dismiss()                        
                     } label: {
                         Text("Add")
                     }
+                    .disabled(!isVehicleValid)
                 }
             }
         }
