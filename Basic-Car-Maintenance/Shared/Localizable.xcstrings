@@ -1,19 +1,82 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
+    "%@" : {
+
+    },
     "Add" : {
+
+    },
+    "Add Maintenance" : {
+
+    },
+    "Add Vehicle" : {
+
+    },
+    "Additional Notes" : {
 
     },
     "Dashboard" : {
 
     },
+    "Date" : {
+
+    },
     "GitHub Repo" : {
+
+    },
+    "Logged in anonymously with ID: %@" : {
+
+    },
+    "Make" : {
+
+    },
+    "Model" : {
+
+    },
+    "Name" : {
+
+    },
+    "Notes" : {
+
+    },
+    "Profile" : {
 
     },
     "Settings" : {
 
     },
-    "Thanks for using this app! It's open source and anyone can contribute to its development." : {
+    "Sign Out" : {
+
+    },
+    "Signed in as %@" : {
+
+    },
+    "Thanks for using this app! It's open source and anyone can contribute to it." : {
+
+    },
+    "The title of the event" : {
+
+    },
+    "Title" : {
+
+    },
+    "Title of the maintenance event" : {
+
+    },
+    "Vehicle Make" : {
+
+    },
+    "Vehicle Model" : {
+
+    },
+    "Vehicle Name" : {
+
+    },
+    "Vehicles" : {
 
     },
     "Version %@ (%@)" : {
