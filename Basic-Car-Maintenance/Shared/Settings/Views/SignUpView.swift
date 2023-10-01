@@ -29,17 +29,6 @@ struct SignUpView: View {
                 }
             }
         }
-        .toolbar {
-            ToolbarItem {
-                Button {
-                    Task {
-                        await viewModel.linkWithEmailPassword()
-                    }
-                } label: {
-                    Text("Sign Up")
-                }
-            }
-        }
     }
 }
 

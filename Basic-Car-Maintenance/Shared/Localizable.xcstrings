@@ -58,10 +58,7 @@
     "Settings" : {
 
     },
-    "Sign In" : {
-
-    },
-    "Sign Up" : {
+    "Sign Out" : {
 
     },
     "Signed in as %@" : {

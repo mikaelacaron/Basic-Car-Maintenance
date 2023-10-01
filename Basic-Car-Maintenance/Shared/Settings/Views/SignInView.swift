@@ -6,36 +6,31 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct SignInView: View {
     
     @EnvironmentObject var viewModel: AuthenticationViewModel
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         Form {
             Section {
-                TextField("Email", text: $viewModel.email)
-                
-                SecureField("Password", text: $viewModel.password)
-            }
-            
-            Section {
                 if viewModel.user?.isAnonymous != nil {
                     Text("Logged in anonymously with ID: \(viewModel.user?.uid ?? "")")
                 } else {
-                    Text("Signed in as \(viewModel.user?.email ?? "EMAIL")")
+                    Text("Signed in as \(viewModel.user?.email ?? "No Email Found")")
                 }
             }
-        }
-        .toolbar {
-            ToolbarItem {
-                Button {
-                    Task {
-                        await viewModel.signInWithEmailPassword()
-                    }
-                } label: {
-                    Text("Sign In")
+            
+            Section {
+                SignInWithAppleButton(.signIn) { request in
+                    viewModel.handleSignInWithAppleRequest(request)
+                } onCompletion: { result in
+                    viewModel.handleSignInWithAppleCompletion(result)
                 }
+                .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
+                .frame(minHeight: 44)
             }
         }
     }

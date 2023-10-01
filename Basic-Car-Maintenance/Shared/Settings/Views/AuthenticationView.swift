@@ -6,19 +6,50 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct AuthenticationView: View {
     
     @EnvironmentObject var viewModel: AuthenticationViewModel
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        switch viewModel.flow {
-        case .signIn:
-            SignInView()
-                .environmentObject(viewModel)
-        case .signUp:
-            SignUpView()
-                .environmentObject(viewModel)
+        Form {
+            if let user = viewModel.user, user.isAnonymous {
+                Text("Logged in anonymously with ID: \(user.uid)")
+                
+                Section {
+                    switch viewModel.flow {
+                    case .signIn:
+                        SignInWithAppleButton(.signIn) { request in
+                            viewModel.handleSignInWithAppleRequest(request)
+                        } onCompletion: { result in
+                            viewModel.handleSignInWithAppleCompletion(result)
+                        }
+                        .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
+                        .frame(minHeight: 44)
+                    case .signUp:
+                        SignInWithAppleButton(.signUp) { request in
+                            viewModel.handleSignInWithAppleRequest(request)
+                        } onCompletion: { result in
+                            viewModel.handleSignInWithAppleCompletion(result)
+                        }
+                        .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
+                        .frame(minHeight: 44)
+                    }
+                }
+            } else {
+                VStack(alignment: .center, spacing: 8) {
+                    Text("Signed in as \(viewModel.user?.email ?? "No Email Found")")
+                    
+                    Button {
+                        viewModel.signOut()
+                    } label: {
+                        Text("Sign Out")
+                    }
+                    .buttonStyle(.borderedProminent)
+                }
+            }
         }
     }
 }
