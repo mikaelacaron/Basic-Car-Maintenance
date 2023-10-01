@@ -167,7 +167,7 @@ extension AuthenticationViewModel {
     }
 }
 
-// Adapted from https://auth0.com/docs/api-auth/tutorials/nonce#generate-a-cryptographically-random-nonce, from Firebase example
+// Adapted from https://auth0.com/docs/api-auth/tutorials/nonce#generate-a-cryptographically-random-nonce, from Firebase example // swiftlint:disable:this line_length
 private func randomNonceString(length: Int = 32) -> String {
     precondition(length > 0)
     let charset: [Character] =

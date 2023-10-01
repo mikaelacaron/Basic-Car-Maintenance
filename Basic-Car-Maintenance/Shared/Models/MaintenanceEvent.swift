@@ -10,6 +10,7 @@ import FirebaseFirestoreSwift
 
 struct MaintenanceEvent: Codable, Identifiable, Hashable {
     @DocumentID var id: String?
+    var userID: String? = nil
     let title: String
     let date: Date
     let notes: String

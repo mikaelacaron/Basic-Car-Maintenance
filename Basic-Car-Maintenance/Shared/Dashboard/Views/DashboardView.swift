@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct DashboardView: View {
-    
     @State private var isShowingAddView = false
     
-    @StateObject private var viewModel = DashboardViewModel()
+    @StateObject private var viewModel: DashboardViewModel
+    
+    init(authenticationViewModel: AuthenticationViewModel) {
+        self._viewModel = StateObject(wrappedValue: DashboardViewModel(authenticationViewModel: authenticationViewModel)) // swiftlint:disable:this line_length
+    }
     
     var body: some View {
         NavigationStack {
@@ -64,5 +67,5 @@ struct DashboardView: View {
 }
 
 #Preview {
-    DashboardView()
+    DashboardView(authenticationViewModel: AuthenticationViewModel())
 }

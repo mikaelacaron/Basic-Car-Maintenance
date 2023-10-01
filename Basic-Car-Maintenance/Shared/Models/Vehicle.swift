@@ -10,6 +10,7 @@ import FirebaseFirestoreSwift
 
 struct Vehicle: Codable, Identifiable {
     @DocumentID var id: String?
+    var userID: String? = nil
     let name: String
     let make: String
     let model: String

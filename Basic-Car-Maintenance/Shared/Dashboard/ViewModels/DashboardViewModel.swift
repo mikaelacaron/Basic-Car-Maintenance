@@ -12,30 +12,44 @@ import Foundation
 @MainActor
 class DashboardViewModel: ObservableObject {
     
+    let authenticationViewModel: AuthenticationViewModel
+    
     @Published var events = [MaintenanceEvent]()
     
+    init(authenticationViewModel: AuthenticationViewModel) {
+        self.authenticationViewModel = authenticationViewModel
+    }
+    
     func addEvent(_ maintenanceEvent: MaintenanceEvent) async {
-        try? Firestore
-            .firestore()
-            .collection("maintenance_events")
-            .addDocument(from: maintenanceEvent)
+        if let uid = authenticationViewModel.user?.uid {
+            var eventToAdd = maintenanceEvent
+            eventToAdd.userID = uid
+            
+            try? Firestore
+                .firestore()
+                .collection("maintenance_events")
+                .addDocument(from: eventToAdd)
+        }
         
         events.append(maintenanceEvent)
     }
     
     func getMaintenanceEvents() async {
-        let db = Firestore.firestore()
-        let docRef = db.collection("maintenance_events")
-        
-        let querySnapshot = try? await docRef.getDocuments()
-        
-        if let querySnapshot {
-            for document in querySnapshot.documents {
-                if let event = try? document.data(as: MaintenanceEvent.self) {
-                    events.append(event)
+        if let uid = authenticationViewModel.user?.uid {
+            let db = Firestore.firestore()
+            let docRef = db.collection("maintenance_events").whereField("userID", isEqualTo: uid)
+            
+            let querySnapshot = try? await docRef.getDocuments()
+            
+            if let querySnapshot {
+                for document in querySnapshot.documents {
+                    if let event = try? document.data(as: MaintenanceEvent.self) {
+                        events.append(event)
+                    }
                 }
             }
         }
+        
     }
     
     func deleteEvent(_ event: MaintenanceEvent) async {

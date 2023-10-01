@@ -26,8 +26,7 @@ struct BasicCarMaintenanceApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                DashboardView()
-                    .environmentObject(authenticationViewModel)
+                DashboardView(authenticationViewModel: authenticationViewModel)
                     .tabItem {
                         Label("Dashboard", systemImage: "list.dash.header.rectangle")
                     }
