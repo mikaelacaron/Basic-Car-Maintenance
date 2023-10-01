@@ -42,12 +42,16 @@ final class SettingsViewModel: ObservableObject {
             
             let querySnapshot = try? await docRef.getDocuments()
             
+            var vehicles = [Vehicle]()
+            
             if let querySnapshot {
                 for document in querySnapshot.documents {
-                    if let event = try? document.data(as: Vehicle.self) {
-                        vehicles.append(event)
+                    if let vehicle = try? document.data(as: Vehicle.self) {
+                        vehicles.append(vehicle)
                     }
                 }
+                
+                self.vehicles = vehicles
             }
         }
     }

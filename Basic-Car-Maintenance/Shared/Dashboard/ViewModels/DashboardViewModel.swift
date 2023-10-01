@@ -41,12 +41,15 @@ class DashboardViewModel: ObservableObject {
             
             let querySnapshot = try? await docRef.getDocuments()
             
+            var events = [MaintenanceEvent]()
+            
             if let querySnapshot {
                 for document in querySnapshot.documents {
                     if let event = try? document.data(as: MaintenanceEvent.self) {
                         events.append(event)
                     }
                 }
+                self.events = events
             }
         }
         
