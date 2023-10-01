@@ -33,8 +33,6 @@
 		FFC8CDAD2AA3867A00D129A6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDAC2AA3867A00D129A6 /* FirebaseFirestore */; };
 		FFC8CDAF2AA3867A00D129A6 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDAE2AA3867A00D129A6 /* FirebaseFirestoreSwift */; };
 		FFC8CDB32AA4226900D129A6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC8CDB22AA4226900D129A6 /* AdSupport.framework */; };
-		FFFDCD942AC2887F00227A9D /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFDCD932AC2887F00227A9D /* SignInView.swift */; };
-		FFFDCD962AC2888700227A9D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFDCD952AC2888700227A9D /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +79,6 @@
 		FFC67D1C2AAEF7920073B338 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFC8CDB22AA4226900D129A6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
-		FFFDCD932AC2887F00227A9D /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		FFFDCD952AC2888700227A9D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,8 +243,6 @@
 				FF755B3D2A908E7A00F49A13 /* SettingsView.swift */,
 				FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */,
 				FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */,
-				FFFDCD932AC2887F00227A9D /* SignInView.swift */,
-				FFFDCD952AC2888700227A9D /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -445,11 +439,9 @@
 				FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */,
 				FFBFE0932A98F212000A9BEB /* Vehicle.swift in Sources */,
 				FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */,
-				FFFDCD962AC2888700227A9D /* SignUpView.swift in Sources */,
 				FF748B5E2AB3589C004748A5 /* AuthenticationViewModel.swift in Sources */,
 				FF755B462A90969D00F49A13 /* Bundle+extension.swift in Sources */,
 				FFAA56ED2AC8905C000120EE /* Documentation.docc in Sources */,
-				FFFDCD942AC2887F00227A9D /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
