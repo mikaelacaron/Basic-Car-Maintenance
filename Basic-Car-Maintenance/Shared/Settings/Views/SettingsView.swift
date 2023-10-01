@@ -11,6 +11,8 @@ struct SettingsView: View {
     
     @StateObject private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
+    @State private var showDeleteVehicleError = false
+    @State var errorDetails: Error?
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     
     init(authenticationViewModel: AuthenticationViewModel) {
@@ -65,6 +67,22 @@ struct SettingsView: View {
                             
                             Text(vehicle.model)
                         }
+                        .swipeActions {
+                            Button("Delete") {
+                              Task {
+                                await viewModel.deleteVehicle(vehicle) { result in
+                                  switch result {
+                                  case .success:
+                                      isShowingAddVehicle = false
+                                  case .failure(let error):
+                                      errorDetails = error
+                                      showDeleteVehicleError = true
+                                  }
+                                }
+                              }
+                            }
+                            .tint(.red)
+                        }
                     }
                     
                     Button {
@@ -90,6 +108,17 @@ struct SettingsView: View {
                 
                 Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))")
             }
+            .alert("Failed to delete vehicle", isPresented: $showDeleteVehicleError, actions: {
+                Button("Ok, got it!") {
+                  showDeleteVehicleError = false
+                }
+            }, message: {
+                if let errorDetails {
+                    Text("Failed to delete vehicle\nDetails:\(errorDetails.localizedDescription)")
+                } else {
+                    Text("Failed to add vehicle. Unknown error.")
+                }
+            })
             .navigationTitle(Text("Settings"))
             .task {
                 await viewModel.getVehicles()

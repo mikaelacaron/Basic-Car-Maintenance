@@ -25,6 +25,18 @@
     "Date" : {
 
     },
+    "Delete" : {
+
+    },
+    "Failed to add vehicle. Unknown error." : {
+
+    },
+    "Failed to delete vehicle" : {
+
+    },
+    "Failed to delete vehicle\nDetails:%@" : {
+
+    },
     "GitHub Repo" : {
 
     },
@@ -41,6 +53,9 @@
 
     },
     "Notes" : {
+
+    },
+    "Ok, got it!" : {
 
     },
     "Profile" : {
