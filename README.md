@@ -15,7 +15,7 @@ Welcome to my open source app! At this moment it's a work in progress, but it wi
 cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
 ```
 
-* Fill in your `DEVELOPMENT_TEAM`, no spaces.
+* Fill in your `DEVELOPMENT_TEAM`.
    * Example: `DEVELOPMENT_TEAM = IdNumber`
    * You can find this by logging into the Apple Developer Portal
 * Build the project
