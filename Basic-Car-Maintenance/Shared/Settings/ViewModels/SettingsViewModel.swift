@@ -20,18 +20,24 @@ final class SettingsViewModel: ObservableObject {
         self.authenticationViewModel = authenticationViewModel
     }
     
-    func addVehicle(_ vehicle: Vehicle) async {
+    func addVehicle(_ vehicle: Vehicle, then: @escaping(Result<String, Error>) -> ()) async {
         
         if let uid = authenticationViewModel.user?.uid {
             var vehicleToAdd = vehicle
             vehicleToAdd.userID = uid
             
-            try? Firestore
-                .firestore()
-                .collection("vehicles")
-                .addDocument(from: vehicleToAdd)
-
-            vehicles.append(vehicleToAdd)
+            do {
+                try Firestore
+                    .firestore()
+                    .collection("vehicles")
+                    .addDocument(from: vehicleToAdd)
+                
+                vehicles.append(vehicleToAdd)
+                then(.success("Vehicle Added"))
+            } catch {
+                then(.failure(error))
+            }
+            
         }
     }
     

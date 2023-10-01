@@ -11,6 +11,8 @@ struct SettingsView: View {
     
     @StateObject private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
+    @State private var showAddVehicleError = false
+    @State var errorDetails: Error? = nil
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     
     init(authenticationViewModel: AuthenticationViewModel) {
@@ -68,6 +70,17 @@ struct SettingsView: View {
                 
                 Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))")
             }
+            .alert("Failed to add vehicle", isPresented: $showAddVehicleError, actions: {
+                Button("Ok, got it!"){
+                    showAddVehicleError = false
+                }
+            }, message: {
+                if let errorDetails {
+                    Text("Failed to add vehicle, internal error occured\nDetails:\(errorDetails.localizedDescription)")
+                } else {
+                    Text("Failed to add vehicle, internal error occured. Unknown error occured")
+                }
+            })
             .navigationTitle(Text("Settings"))
             .task {
                 await viewModel.getVehicles()
@@ -75,10 +88,19 @@ struct SettingsView: View {
             .sheet(isPresented: $isShowingAddVehicle) {
                 AddVehicleView() { vehicle in
                     Task {
-                        await viewModel.addVehicle(vehicle)
+                        await viewModel.addVehicle(vehicle) { result in
+                            switch result {
+                            case .success(_):
+                                isShowingAddVehicle = false
+                            case .failure(let error):
+                                errorDetails = error
+                                showAddVehicleError = true
+                            }
+                        }
                     }
                 }
             }
+
         }
     }
 }

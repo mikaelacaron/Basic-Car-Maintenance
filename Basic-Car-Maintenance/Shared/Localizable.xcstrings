@@ -79,6 +79,21 @@
     "Vehicles" : {
 
     },
+    "Vehicle Added" : {
+
+    },
+    "Failed to add vehicle" : {
+
+    },
+    "Failed to add vehicle, internal error occured. Unknown error occured" : {
+
+    },
+    "Ok, got it!" : {
+
+    },
+    "Failed to add vehicle, internal error occurred\nDetails:%@" : {
+
+    },
     "Version %@ (%@)" : {
       "localizations" : {
         "en" : {
