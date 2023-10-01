@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct AddVehicleView: View {
-    
     let addTapped: (Vehicle) -> Void
     
     @State private var name = ""
     @State private var make = ""
     @State private var model = ""
+    private var isVehicleValid: Bool {
+        !name.isEmpty && !make.isEmpty && !model.isEmpty
+    }
     
     @Environment(\.dismiss) var dismiss
     
@@ -43,10 +45,11 @@ struct AddVehicleView: View {
                     Button {
                         let vehicle = Vehicle(name: name, make: make, model: model)
                         addTapped(vehicle)
-                        dismiss()
+                        dismiss()                        
                     } label: {
                         Text("Add")
                     }
+                    .disabled(!isVehicleValid)
                 }
             }
         }
@@ -54,5 +57,5 @@ struct AddVehicleView: View {
 }
 
 #Preview {
-    AddVehicleView() { _ in }
+    AddVehicleView { _ in }
 }
