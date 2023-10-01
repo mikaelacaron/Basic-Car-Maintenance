@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AddVehicleView: View {
-    
     let addTapped: (Vehicle) -> Void
     
     @State private var name = ""
@@ -42,7 +41,11 @@ struct AddVehicleView: View {
                 ToolbarItem {
                     Button {
                         let vehicle = Vehicle(name: name, make: make, model: model)
-                        addTapped(vehicle)
+                        
+                        if !name.isEmpty && !make.isEmpty && !model.isEmpty {
+                            addTapped(vehicle)
+                        }
+                        
                         dismiss()
                     } label: {
                         Text("Add")
@@ -54,5 +57,5 @@ struct AddVehicleView: View {
 }
 
 #Preview {
-    AddVehicleView() { _ in }
+    AddVehicleView { _ in }
 }
