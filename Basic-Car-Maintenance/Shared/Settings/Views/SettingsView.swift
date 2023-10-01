@@ -9,10 +9,14 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @EnvironmentObject var authenticationViewModel: AuthenticationViewModel
-    
-    @StateObject private var viewModel = SettingsViewModel()
+    @StateObject private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
+    @ObservedObject var authenticationViewModel: AuthenticationViewModel
+    
+    init(authenticationViewModel: AuthenticationViewModel) {
+        self._viewModel = StateObject(wrappedValue: SettingsViewModel(authenticationViewModel: authenticationViewModel)) // swiftlint:disable:this line_length
+        self.authenticationViewModel = authenticationViewModel
+    }
     
     var body: some View {
         NavigationStack {
@@ -52,8 +56,7 @@ struct SettingsView: View {
                 
                 Section {
                     NavigationLink {
-                        AuthenticationView()
-                            .environmentObject(authenticationViewModel)
+                        AuthenticationView(viewModel: authenticationViewModel)
                     } label: {
                         Label {
                             Text("Profile")
@@ -81,5 +84,5 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(authenticationViewModel: AuthenticationViewModel())
 }

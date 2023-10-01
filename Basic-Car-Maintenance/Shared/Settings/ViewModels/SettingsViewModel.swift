@@ -12,27 +12,41 @@ import FirebaseFirestore
 @MainActor
 final class SettingsViewModel: ObservableObject {
     
+    let authenticationViewModel: AuthenticationViewModel
+    
     @Published var vehicles = [Vehicle]()
     
+    init(authenticationViewModel: AuthenticationViewModel) {
+        self.authenticationViewModel = authenticationViewModel
+    }
+    
     func addVehicle(_ vehicle: Vehicle) async {
-        try? Firestore
-            .firestore()
-            .collection("vehicles")
-            .addDocument(from: vehicle)
+        
+        if let uid = authenticationViewModel.user?.uid {
+            var vehicleToAdd = vehicle
+            vehicleToAdd.userID = uid
+            
+            try? Firestore
+                .firestore()
+                .collection("vehicles")
+                .addDocument(from: vehicleToAdd)
 
-        vehicles.append(vehicle)
+            vehicles.append(vehicleToAdd)
+        }
     }
     
     func getVehicles() async {
-        let db = Firestore.firestore()
-        let docRef = db.collection("vehicles")
-        
-        let querySnapshot = try? await docRef.getDocuments()
-        
-        if let querySnapshot {
-            for document in querySnapshot.documents {
-                if let event = try? document.data(as: Vehicle.self) {
-                    vehicles.append(event)
+        if let uid = authenticationViewModel.user?.uid {
+            let db = Firestore.firestore()
+            let docRef = db.collection("vehicles").whereField("userID", isEqualTo: uid)
+            
+            let querySnapshot = try? await docRef.getDocuments()
+            
+            if let querySnapshot {
+                for document in querySnapshot.documents {
+                    if let event = try? document.data(as: Vehicle.self) {
+                        vehicles.append(event)
+                    }
                 }
             }
         }

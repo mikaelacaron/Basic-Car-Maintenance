@@ -31,8 +31,7 @@ struct BasicCarMaintenanceApp: App {
                         Label("Dashboard", systemImage: "list.dash.header.rectangle")
                     }
                 
-                SettingsView()
-                    .environmentObject(authenticationViewModel)
+                SettingsView(authenticationViewModel: authenticationViewModel)
                     .tabItem {
                         Label("Settings", systemImage: "gear")
                     }

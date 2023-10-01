@@ -9,9 +9,13 @@ import SwiftUI
 import AuthenticationServices
 
 struct AuthenticationView: View {
-    
-    @EnvironmentObject var viewModel: AuthenticationViewModel
     @Environment(\.colorScheme) var colorScheme
+    
+    @ObservedObject var viewModel: AuthenticationViewModel
+    
+    init(viewModel: AuthenticationViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         Form {
@@ -56,7 +60,6 @@ struct AuthenticationView: View {
 
 #Preview {
     NavigationStack {
-        AuthenticationView()
-            .environmentObject(AuthenticationViewModel())
+        AuthenticationView(viewModel: AuthenticationViewModel())
     }
 }
