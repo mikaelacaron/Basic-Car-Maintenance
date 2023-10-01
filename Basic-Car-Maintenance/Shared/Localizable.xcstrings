@@ -1,94 +1,1113 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "" : {
-
-    },
-    "%@" : {
-
-    },
-    "Add" : {
-
-    },
-    "Add Maintenance" : {
-
-    },
-    "Add Vehicle" : {
-
-    },
-    "Additional Notes" : {
-
-    },
-    "Dashboard" : {
-
-    },
-    "Date" : {
-
-    },
-    "GitHub Repo" : {
-
-    },
-    "Logged in anonymously with ID: %@" : {
-
-    },
-    "Make" : {
-
-    },
-    "Model" : {
-
-    },
-    "Name" : {
-
-    },
-    "Notes" : {
-
-    },
-    "Profile" : {
-
-    },
-    "Settings" : {
-
-    },
-    "Sign Out" : {
-
-    },
-    "Signed in as %@" : {
-
-    },
-    "Thanks for using this app! It's open source and anyone can contribute to it." : {
-
-    },
-    "The title of the event" : {
-
-    },
-    "Title" : {
-
-    },
-    "Title of the maintenance event" : {
-
-    },
-    "Vehicle Make" : {
-
-    },
-    "Vehicle Model" : {
-
-    },
-    "Vehicle Name" : {
-
-    },
-    "Vehicles" : {
-
-    },
-    "Version %@ (%@)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Version %1$@ (%2$@)"
-          }
+    "sourceLanguage" : "en",
+    "strings" : {
+        "" : {
+            "key" : "emptyString",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : ""
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : ""
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : ""
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : ""
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : ""
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : ""
+                    }
+                }
+            }
+        },
+        "%@" : {
+            "key" : "placeholderString",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : ""
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : ""
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : ""
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : ""
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : ""
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : ""
+                    }
+                }
+            }
+        },
+        "Add" : {
+            "key" : "addButton",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "إضافة"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Ajouter"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "添加"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "जोड़ें"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Adicionar"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "追加"
+                    }
+                }
+            }
+        },
+        "Add Maintenance": {
+            "key": "addMaintenanceTitle",
+            "localizations": {
+                "ar": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "إضافة الصيانة"
+                    }
+                },
+                "fr": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Ajouter une maintenance"
+                    }
+                },
+                "zh-Hans": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "添加维护"
+                    }
+                },
+                "hi": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "रखरखाव जोड़ें"
+                    }
+                },
+                "pt": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Adicionar Manutenção"
+                    }
+                },
+                "ja": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "メンテナンスを追加"
+                    }
+                }
+            }
+        },
+        "Add Vehicle": {
+            "key": "addVehicleTitle",
+            "localizations": {
+                "ar": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "إضافة مركبة"
+                    }
+                },
+                "fr": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Ajouter un véhicule"
+                    }
+                },
+                "zh-Hans": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "添加车辆"
+                    }
+                },
+                "hi": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "वाहन जोड़ें"
+                    }
+                },
+                "pt": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Adicionar Veículo"
+                    }
+                },
+                "ja": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "車両を追加"
+                    }
+                }
+            }
+        },
+        "Additional Notes": {
+            "key": "additionalNotesLabel",
+            "localizations": {
+                "ar": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "ملاحظات إضافية"
+                    }
+                },
+                "fr": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Notes supplémentaires"
+                    }
+                },
+                "zh-Hans": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "附加说明"
+                    }
+                },
+                "hi": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "अतिरिक्त टिप्पणियाँ"
+                    }
+                },
+                "pt": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Notas Adicionais"
+                    }
+                },
+                "ja": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "追加のメモ"
+                    }
+                }
+            }
+        },
+        "Dashboard": {
+            "key": "dashboardTitle",
+            "localizations": {
+                "ar": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "لوحة القيادة"
+                    }
+                },
+                "fr": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Tableau de bord"
+                    }
+                },
+                "zh-Hans": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "仪表板"
+                    }
+                },
+                "hi": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "डैशबोर्ड"
+                    }
+                },
+                "pt": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Painel de Controle"
+                    }
+                },
+                "ja": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "ダッシュボード"
+                    }
+                }
+            }
+        },
+        "Date" : {
+            "key" : "dateLabel",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "التاريخ"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Date"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "日期"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "तारीख"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Data"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "日付"
+                    }
+                }
+            }
+        },
+        "GitHub Repo" : {
+            "key" : "githubRepoLabel",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "مستودع GitHub"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Dépôt GitHub"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "GitHub 仓库"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "GitHub रिपो"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Repositório GitHub"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "GitHub リポジトリ"
+                    }
+                }
+            }
+        },
+        "Logged in anonymously with ID: %@" : {
+            "key" : "loggedInAnonymouslyMessage",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "تم تسجيل الدخول بشكل مجهول بالرقم: %@"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Connecté anonymement avec l'ID : %@"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "匿名登录，ID 为：%@"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "आईडी के साथ गुमनामी से लॉग इन किया गया: %@"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Conectado anonimamente com ID: %@"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "匿名でID: %@でログインしました"
+                    }
+                }
+            }
+        },
+        "Make" : {
+            "key" : "makeLabel",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "الصانع"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Marque"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "制造商"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "निर्माता"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Fabricante"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "メーカー"
+                    }
+                }
+            }
+        },
+        "Model" : {
+            "key" : "modelLabel",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "الطراز"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Modèle"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "型号"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "मॉडल"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Modelo"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "モデル"
+                    }
+                }
+            }
+        },
+        "Name" : {
+            "key" : "nameLabel",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "الاسم"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Nom"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "名字"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "नाम"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Nome"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "名前"
+                    }
+                }
+            }
+        },
+        "Notes" : {
+            "key" : "notesLabel",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "ملاحظات"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Remarques"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "笔记"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "टिप्पणियाँ"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Notas"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "メモ"
+                    }
+                }
+            }
+        },
+        "Profile": {
+            "key": "profileTitle",
+            "localizations": {
+                "ar": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "الملف الشخصي"
+                    }
+                },
+                "fr": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Profil"
+                    }
+                },
+                "zh-Hans": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "个人资料"
+                    }
+                },
+                "hi": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "प्रोफाइल"
+                    }
+                },
+                "pt": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Perfil"
+                    }
+                },
+                "ja": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "プロフィール"
+                    }
+                }
+            }
+        },
+        "Settings" : {
+            "key" : "settingsTitle",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "الإعدادات"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Paramètres"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "设置"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "सेटिंग्स"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Configurações"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "設定"
+                    }
+                }
+            }
+        },
+        "Sign Out" : {
+            "key" : "signOutButton",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "تسجيل الخروج"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Se déconnecter"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "退出"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "लॉग आउट"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Sair"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "サインアウト"
+                    }
+                }
+            }
+        },
+        "Signed in as %@" : {
+            "key" : "signedInMessage",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "تم تسجيل الدخول كـ %@"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Connecté en tant que %@"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "以 %@ 身份登录"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "इस रूप में लॉग इन किया गया: %@"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Conectado como %@"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "としてサインイン済み: %@"
+                    }
+                }
+            }
+        },
+        "Thanks for using this app! It's open source and anyone can contribute to it.": {
+            "key": "thanksMessage",
+            "localizations": {
+                "ar": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "شكرًا لاستخدامك لهذا التطبيق! إنه مفتوح المصدر ويمكن لأي شخص المساهمة فيه."
+                    }
+                },
+                "fr": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Merci d'utiliser cette application ! Elle est open source et tout le monde peut y contribuer."
+                    }
+                },
+                "zh-Hans": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "感谢您使用此应用程序！它是开源的，任何人都可以为其做贡献。"
+                    }
+                },
+                "hi": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "इस ऐप का उपयोग करने के लिए धन्यवाद! यह ओपन सोर्स है और कोई भी इसमें योगदान कर सकता है।"
+                    }
+                },
+                "pt": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Obrigado por usar este aplicativo! Ele é de código aberto e qualquer um pode contribuir com ele."
+                    }
+                },
+                "ja": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "このアプリを使っていただきありがとうございます！オープンソースで誰でも貢献できます。"
+                    }
+                }
+            }
+        },
+        "The title of the event": {
+            "key": "eventTitleLabel",
+            "localizations": {
+                "ar": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "عنوان الحدث"
+                    }
+                },
+                "fr": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Le titre de l'événement"
+                    }
+                },
+                "zh-Hans": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "活动标题"
+                    }
+                },
+                "hi": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "घटना का शीर्षक"
+                    }
+                },
+                "pt": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "O título do evento"
+                    }
+                },
+                "ja": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "イベントのタイトル"
+                    }
+                }
+            }
+        },
+        "Title" : {
+            "key" : "titleLabel",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "العنوان"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Titre"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "标题"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "शीर्षक"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Título"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "タイトル"
+                    }
+                }
+            }
+        },
+        "Title of the maintenance event": {
+            "key": "maintenanceEventTitleLabel",
+            "localizations": {
+                "ar": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "عنوان حدث الصيانة"
+                    }
+                },
+                "fr": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Titre de l'événement de maintenance"
+                    }
+                },
+                "zh-Hans": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "维护事件的标题"
+                    }
+                },
+                "hi": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "रखरखाव घटना का शीर्षक"
+                    }
+                },
+                "pt": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "Título do evento de manutenção"
+                    }
+                },
+                "ja": {
+                    "stringUnit": {
+                        "state": "translated",
+                        "value": "メンテナンスイベントのタイトル"
+                    }
+                }
+            }
+        },
+        "Vehicle Make" : {
+            "key" : "vehicleMakeLabel",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "صنع السيارة"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Fabricant du véhicule"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "车辆制造商"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "वाहन निर्माता"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Fabricante do veículo"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "車両メーカー"
+                    }
+                }
+            }
+        },
+        "Vehicle Model" : {
+            "key" : "vehicleModelLabel",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "طراز السيارة"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Modèle de véhicule"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "车型"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "वाहन का मॉडल"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Modelo do veículo"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "車種"
+                    }
+                }
+            }
+        },
+        "Vehicle Name" : {
+            "key" : "vehicleNameLabel",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "اسم السيارة"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Nom du véhicule"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "车辆名称"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "वाहन का नाम"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Nome do veículo"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "車名"
+                    }
+                }
+            }
+        },
+        "Vehicles" : {
+            "key" : "vehiclesLabel",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "المركبات"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Véhicules"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "车辆"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "वाहनों"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Veículos"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "車両"
+                    }
+                }
+            }
+        },
+        "Version %@ (%@)" : {
+            "key" : "versionLabel",
+            "localizations" : {
+                "ar" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "الإصدار %@ (%@)"
+                    }
+                },
+                "fr" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Version %@ (%@)"
+                    }
+                },
+                "zh-Hans" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "版本 %@ (%@)"
+                    }
+                },
+                "hi" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "संस्करण %@ (%@)"
+                    }
+                },
+                "pt" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "Versão %@ (%@)"
+                    }
+                },
+                "ja" : {
+                    "stringUnit" : {
+                        "state" : "translated",
+                        "value" : "バージョン %@ (%@)"
+                    }
+                }
+            }
         }
-      }
-    }
-  },
-  "version" : "1.0"
+    },
+    "version" : "1.0"
 }
