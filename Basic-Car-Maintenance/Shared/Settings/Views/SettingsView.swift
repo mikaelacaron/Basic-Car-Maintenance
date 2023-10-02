@@ -108,15 +108,15 @@ struct SettingsView: View {
                 
                 Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))")
             }
-            .alert("Failed to delete vehicle", isPresented: $showDeleteVehicleError, actions: {
-                Button("Ok, got it!") {
+            .alert("Failed To Delete Vehicle", isPresented: $showDeleteVehicleError, actions: {
+                Button("OK") {
                   showDeleteVehicleError = false
                 }
             }, message: {
                 if let errorDetails {
-                    Text("Failed to delete vehicle\nDetails:\(errorDetails.localizedDescription)")
+                    Text("Failed To Delete Vehicle\nDetails:\(errorDetails.localizedDescription)")
                 } else {
-                    Text("Failed to add vehicle. Unknown error.")
+                    Text("Failed To Add Vehicle. Unknown Error.")
                 }
             })
             .navigationTitle(Text("Settings"))
