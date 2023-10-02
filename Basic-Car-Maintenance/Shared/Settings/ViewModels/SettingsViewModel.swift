@@ -5,13 +5,12 @@
 //  Created by Mikaela Caron on 9/11/23.
 //
 
-import Foundation
-import FirebaseFirestoreSwift
 import FirebaseFirestore
+import FirebaseFirestoreSwift
+import Foundation
 
 @MainActor
 final class SettingsViewModel: ObservableObject {
-    
     let authenticationViewModel: AuthenticationViewModel
     
     @Published var vehicles = [Vehicle]()
@@ -21,7 +20,6 @@ final class SettingsViewModel: ObservableObject {
     }
     
     func addVehicle(_ vehicle: Vehicle) async {
-        
         if let uid = authenticationViewModel.user?.uid {
             var vehicleToAdd = vehicle
             vehicleToAdd.userID = uid
@@ -65,5 +63,9 @@ final class SettingsViewModel: ObservableObject {
             .collection("vehicles")
             .document(documentId)
             .delete()
+        
+        vehicles.removeAll { vehicleFromList in
+            vehicleFromList.id == documentId
+        }
     }
 }
