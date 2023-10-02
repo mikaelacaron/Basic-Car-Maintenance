@@ -43,10 +43,7 @@ struct DashboardView: View {
             .navigationTitle(Text("Dashboard"))
             .sheet(isPresented: $isShowingAddView) {
                 AddMaintenanceView() { event in
-                    Task {
-                        await viewModel.addEvent(event)
-                    }
-                    
+                   viewModel.addEvent(event)
                 }
             }
             .toolbar {

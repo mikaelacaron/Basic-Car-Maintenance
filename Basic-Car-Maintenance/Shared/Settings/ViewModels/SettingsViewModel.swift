@@ -25,7 +25,7 @@ final class SettingsViewModel {
             var vehicleToAdd = vehicle
             vehicleToAdd.userID = uid
             
-            try? Firestore
+            _ = try? Firestore
                 .firestore()
                 .collection("vehicles")
                 .addDocument(from: vehicleToAdd)

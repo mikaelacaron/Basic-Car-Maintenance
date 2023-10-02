@@ -134,7 +134,7 @@ extension AuthenticationViewModel {
                                                                 appleIDCredential.fullName)
                 Task {
                     do {
-                        let result = try await Auth.auth().signIn(with: credential)
+                        _ = try await Auth.auth().signIn(with: credential)
                         authenticationState = .authenticated
                     } catch {
                         print("Error authenticating: \(error.localizedDescription)")

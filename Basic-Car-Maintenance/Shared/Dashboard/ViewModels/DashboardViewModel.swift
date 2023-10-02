@@ -20,12 +20,12 @@ class DashboardViewModel {
         self.authenticationViewModel = authenticationViewModel
     }
     
-    func addEvent(_ maintenanceEvent: MaintenanceEvent) async {
-        if let uid = await authenticationViewModel.user?.uid {
+    func addEvent(_ maintenanceEvent: MaintenanceEvent) {
+        if let uid = authenticationViewModel.user?.uid {
             var eventToAdd = maintenanceEvent
             eventToAdd.userID = uid
             
-            try? Firestore
+            _ = try? Firestore
                 .firestore()
                 .collection("maintenance_events")
                 .addDocument(from: eventToAdd)
@@ -35,7 +35,7 @@ class DashboardViewModel {
     }
     
     func getMaintenanceEvents() async {
-        if let uid = await authenticationViewModel.user?.uid {
+        if let uid =  authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
             let docRef = db.collection("maintenance_events").whereField("userID", isEqualTo: uid)
             
