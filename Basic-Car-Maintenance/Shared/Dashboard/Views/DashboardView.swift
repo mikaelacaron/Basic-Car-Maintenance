@@ -9,11 +9,10 @@ import SwiftUI
 
 struct DashboardView: View {
     @State private var isShowingAddView = false
-    
-    @StateObject private var viewModel: DashboardViewModel
+    @State private var viewModel: DashboardViewModel
     
     init(authenticationViewModel: AuthenticationViewModel) {
-        self._viewModel = StateObject(wrappedValue: DashboardViewModel(authenticationViewModel: authenticationViewModel)) // swiftlint:disable:this line_length
+        viewModel = DashboardViewModel(authenticationViewModel: authenticationViewModel)
     }
     
     var body: some View {

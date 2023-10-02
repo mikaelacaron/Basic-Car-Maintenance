@@ -9,19 +9,19 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import Foundation
 
-@MainActor
-class DashboardViewModel: ObservableObject {
+@Observable
+class DashboardViewModel {
     
     let authenticationViewModel: AuthenticationViewModel
     
-    @Published var events = [MaintenanceEvent]()
+    var events = [MaintenanceEvent]()
     
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
     }
     
     func addEvent(_ maintenanceEvent: MaintenanceEvent) async {
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = await authenticationViewModel.user?.uid {
             var eventToAdd = maintenanceEvent
             eventToAdd.userID = uid
             
@@ -35,7 +35,7 @@ class DashboardViewModel: ObservableObject {
     }
     
     func getMaintenanceEvents() async {
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = await authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
             let docRef = db.collection("maintenance_events").whereField("userID", isEqualTo: uid)
             
