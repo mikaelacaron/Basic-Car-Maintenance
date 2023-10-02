@@ -50,6 +50,13 @@ struct DashboardView: View {
                     
                 }
             }
+            .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert, actions: {
+                Button("OK") {
+                    viewModel.showErrorAlert = false
+                }
+            }, message: {
+                Text(viewModel.errorDeleting?.localizedDescription ?? "Error while deleting event").padding()
+            })
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
