@@ -40,7 +40,7 @@ struct DashboardView: View {
                 }
                 .listStyle(.inset)
             }
-            .animation(.linear, value: viewModel.sortedEvents)
+            .animation(.linear, value: viewModel.sortOption)
             .navigationTitle(Text("Dashboard"))
             .sheet(isPresented: $isShowingAddView) {
                 AddMaintenanceView() { event in
