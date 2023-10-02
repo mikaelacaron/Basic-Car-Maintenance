@@ -8,13 +8,10 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @ObservedObject var authenticationViewModel: AuthenticationViewModel
-    
     @State private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
     
     init(authenticationViewModel: AuthenticationViewModel) {
-        self.authenticationViewModel = authenticationViewModel
         viewModel = SettingsViewModel(authenticationViewModel: authenticationViewModel)
     }
     
@@ -78,7 +75,7 @@ struct SettingsView: View {
                 
                 Section {
                     NavigationLink {
-                        AuthenticationView(viewModel: authenticationViewModel)
+                        AuthenticationView(viewModel: viewModel.authenticationViewModel)
                     } label: {
                         Label {
                             Text("Profile")

@@ -8,20 +8,14 @@
 import FirebaseCore
 import SwiftUI
 
-class AppDelegate: NSObject, UIApplicationDelegate {
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
-    ) -> Bool {
-        FirebaseApp.configure()
-        return true
-    }
-}
-
 @main
 struct BasicCarMaintenanceApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @State private var authenticationViewModel: AuthenticationViewModel
     
-    @StateObject var authenticationViewModel = AuthenticationViewModel()
+    init() {
+        FirebaseApp.configure()
+        self._authenticationViewModel = .init(initialValue: AuthenticationViewModel())
+    }
     
     var body: some Scene {
         WindowGroup {

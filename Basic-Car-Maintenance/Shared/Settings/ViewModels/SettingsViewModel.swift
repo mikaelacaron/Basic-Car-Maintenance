@@ -11,7 +11,7 @@ import FirebaseFirestore
 
 @Observable
 final class SettingsViewModel {
-    private let authenticationViewModel: AuthenticationViewModel
+    let authenticationViewModel: AuthenticationViewModel
     
     var vehicles = [Vehicle]()
     
@@ -21,7 +21,7 @@ final class SettingsViewModel {
     
     func addVehicle(_ vehicle: Vehicle) async {
         
-        if let uid = await authenticationViewModel.user?.uid {
+        if let uid = authenticationViewModel.user?.uid {
             var vehicleToAdd = vehicle
             vehicleToAdd.userID = uid
             
@@ -35,7 +35,7 @@ final class SettingsViewModel {
     }
     
     func getVehicles() async {
-        if let uid = await authenticationViewModel.user?.uid {
+        if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
             let docRef = db.collection("vehicles").whereField("userID", isEqualTo: uid)
             
