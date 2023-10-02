@@ -9,12 +9,11 @@ import Foundation
 import FirebaseFirestoreSwift
 import FirebaseFirestore
 
-@MainActor
-final class SettingsViewModel: ObservableObject {
+@Observable
+final class SettingsViewModel {
+    private let authenticationViewModel: AuthenticationViewModel
     
-    let authenticationViewModel: AuthenticationViewModel
-    
-    @Published var vehicles = [Vehicle]()
+    var vehicles = [Vehicle]()
     
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
@@ -22,7 +21,7 @@ final class SettingsViewModel: ObservableObject {
     
     func addVehicle(_ vehicle: Vehicle) async {
         
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = await authenticationViewModel.user?.uid {
             var vehicleToAdd = vehicle
             vehicleToAdd.userID = uid
             
@@ -36,7 +35,7 @@ final class SettingsViewModel: ObservableObject {
     }
     
     func getVehicles() async {
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = await authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
             let docRef = db.collection("vehicles").whereField("userID", isEqualTo: uid)
             

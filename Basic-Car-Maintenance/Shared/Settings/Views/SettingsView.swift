@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct SettingsView: View {
-    
-    @StateObject private var viewModel: SettingsViewModel
-    @State private var isShowingAddVehicle = false
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     
+    @State private var viewModel: SettingsViewModel
+    @State private var isShowingAddVehicle = false
+    
     init(authenticationViewModel: AuthenticationViewModel) {
-        self._viewModel = StateObject(wrappedValue: SettingsViewModel(authenticationViewModel: authenticationViewModel)) // swiftlint:disable:this line_length
         self.authenticationViewModel = authenticationViewModel
+        viewModel = SettingsViewModel(authenticationViewModel: authenticationViewModel)
     }
     
     var body: some View {
