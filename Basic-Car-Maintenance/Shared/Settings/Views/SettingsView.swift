@@ -66,6 +66,15 @@ struct SettingsView: View {
                             Text(vehicle.model)
                         }
                     }
+                    .onDelete(perform: { indexSet in
+                        for index in indexSet {
+                            let vehicle = viewModel.vehicles[index]
+                            
+                            Task {
+                                await viewModel.deleteVehicle(vehicle)
+                            }
+                        }
+                    })
                     
                     Button {
                         isShowingAddVehicle.toggle()
