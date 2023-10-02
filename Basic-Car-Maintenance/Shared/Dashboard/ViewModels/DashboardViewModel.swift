@@ -64,9 +64,5 @@ class DashboardViewModel: ObservableObject {
             .collection("maintenance_events")
             .document(documentId)
             .delete()
-
-        if let index = events.firstIndex(where: {$0.id == documentId}) {
-            events.remove(at: index)
-        }
     }
 }

@@ -41,11 +41,11 @@ struct DashboardView: View {
                 }
                 .listStyle(.inset)
             }
-            .overlay(Group {
+            .overlay {
                 if viewModel.events.isEmpty {
                     Text("Add your first maintenance")
                 }
-            })
+            }
             .navigationTitle(Text("Dashboard"))
             .sheet(isPresented: $isShowingAddView) {
                 AddMaintenanceView() { event in
