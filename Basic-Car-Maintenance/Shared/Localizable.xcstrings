@@ -206,7 +206,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vielen Dank fürs Nutzen dieser App! Sie ist Open Source und jede und jeder kann zur Entwicklung beitragen."
+            "value" : "Vielen Dank fürs Nutzen dieser App! Sie ist Open Source und Jede*r kann zur Entwicklung beitragen."
           }
         }
       }
@@ -216,7 +216,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Der Titel des Events"
+            "value" : "Titel des Events"
           }
         }
       }
