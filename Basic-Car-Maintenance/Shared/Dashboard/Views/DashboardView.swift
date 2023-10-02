@@ -40,6 +40,11 @@ struct DashboardView: View {
                 }
                 .listStyle(.inset)
             }
+            .overlay {
+                if viewModel.events.isEmpty {
+                    Text("Add your first maintenance")
+                }
+            }
             .animation(.linear, value: viewModel.sortOption)
             .navigationTitle(Text("Dashboard"))
             .sheet(isPresented: $isShowingAddView) {

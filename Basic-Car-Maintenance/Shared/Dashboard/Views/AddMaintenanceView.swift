@@ -48,6 +48,7 @@ struct AddMaintenanceView: View {
                     } label: {
                         Text("Add")
                     }
+                    .disabled(title.isEmpty)
                 }
             }
             

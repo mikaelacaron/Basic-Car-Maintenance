@@ -14,6 +14,9 @@ struct AddVehicleView: View {
     @State private var name = ""
     @State private var make = ""
     @State private var model = ""
+    private var isVehicleValid: Bool {
+        !name.isEmpty && !make.isEmpty && !model.isEmpty
+    }
     
     @Environment(\.dismiss) var dismiss
     
@@ -47,6 +50,7 @@ struct AddVehicleView: View {
                     } label: {
                         Text("Add")
                     }
+                    .disabled(!isVehicleValid)
                 }
             }
         }
