@@ -8,6 +8,12 @@
             "state" : "translated",
             "value" : ""
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
         }
       }
     },
@@ -17,6 +23,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
           }
         }
       }
@@ -28,6 +40,12 @@
             "state" : "translated",
             "value" : "Přidat"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hinzufügen"
+          }
         }
       }
     },
@@ -37,6 +55,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přidat servisní záznam"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wartung hinzufügen"
           }
         }
       }
@@ -51,12 +75,28 @@
         }
       }
     },
+    "Add your first maintenance" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat první servisní záznam"
+          }
+        }
+      }
+    },
     "Additional Notes" : {
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Další poznámky"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug hinzufügen"
           }
         }
       }
@@ -68,12 +108,24 @@
             "state" : "translated",
             "value" : "Přehled"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dashboard"
+          }
         }
       }
     },
     "Date" : {
       "localizations" : {
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datum"
+          }
+        },
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Datum"
@@ -88,6 +140,12 @@
             "state" : "translated",
             "value" : "Github Repozitář"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub Repo"
+          }
         }
       }
     },
@@ -97,6 +155,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přihlášen anonymně jako ID: %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anonym angemeldet mit ID: %@"
           }
         }
       }
@@ -108,6 +172,12 @@
             "state" : "translated",
             "value" : "Výrobce"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hersteller"
+          }
         }
       }
     },
@@ -117,6 +187,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Model"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modell"
           }
         }
       }
@@ -128,6 +204,12 @@
             "state" : "translated",
             "value" : "Název"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
         }
       }
     },
@@ -138,12 +220,24 @@
             "state" : "translated",
             "value" : "Poznámky"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notizen"
+          }
         }
       }
     },
     "Profile" : {
       "localizations" : {
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil"
+          }
+        },
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profil"
@@ -158,6 +252,12 @@
             "state" : "translated",
             "value" : "Nahlásit chybu"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fehler melden"
+          }
         }
       }
     },
@@ -167,6 +267,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Požadavek na novou funkci"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neues Feature vorschlagen"
           }
         }
       }
@@ -178,6 +284,12 @@
             "state" : "translated",
             "value" : "Nastavení"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen"
+          }
         }
       }
     },
@@ -187,6 +299,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Odhlásit"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abmelden"
           }
         }
       }
@@ -198,6 +316,12 @@
             "state" : "translated",
             "value" : "Přihlášen jako %@"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angemeldet als %@"
+          }
         }
       }
     },
@@ -207,6 +331,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Děkuji Vám za využívání této aplikace! Díky otevřenosti může kdokoliv přispět k samotnému vývoji. "
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vielen Dank fürs Nutzen dieser App! Sie ist Open Source und Jede*r kann zur Entwicklung beitragen."
           }
         }
       }
@@ -218,6 +348,12 @@
             "state" : "translated",
             "value" : "Název události"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titel des Events"
+          }
         }
       }
     },
@@ -227,6 +363,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Název"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titel"
           }
         }
       }
@@ -238,6 +380,12 @@
             "state" : "translated",
             "value" : "Název údržby"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titel des Wartungs-Events"
+          }
         }
       }
     },
@@ -247,6 +395,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Výrobce vozidla"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeughersteller"
           }
         }
       }
@@ -258,6 +412,12 @@
             "state" : "translated",
             "value" : "Model vozidla"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeugmodell"
+          }
         }
       }
     },
@@ -268,6 +428,12 @@
             "state" : "translated",
             "value" : "Název vozidla"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeugname"
+          }
         }
       }
     },
@@ -277,6 +443,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vozidla"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeuge"
           }
         }
       }
@@ -289,10 +461,16 @@
             "value" : "Verze %1$@ (%2$@)"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Version %1$@ (%2$@)"
+            "state" : "translated",
+            "value" : ""
           }
         }
       }
