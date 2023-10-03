@@ -70,14 +70,11 @@ struct SettingsView: View {
                         .swipeActions {
                             Button("Delete") {
                               Task {
-                                await viewModel.deleteVehicle(vehicle) { result in
-                                  switch result {
-                                  case .success:
-                                      isShowingAddVehicle = false
-                                  case .failure(let error):
-                                      errorDetails = error
-                                      showDeleteVehicleError = true
-                                  }
+                                do {
+                                  try await viewModel.deleteVehicle(vehicle)
+                                } catch {
+                                  errorDetails = error
+                                  showDeleteVehicleError = true
                                 }
                               }
                             }

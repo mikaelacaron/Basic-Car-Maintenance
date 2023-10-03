@@ -56,9 +56,9 @@ final class SettingsViewModel: ObservableObject {
         }
     }
     
-    func deleteVehicle(_ vehicle: Vehicle, then: @escaping(Result<String, Error>) -> Void) async {
+    func deleteVehicle(_ vehicle: Vehicle) async throws {
       guard let documentId = vehicle.id else {
-          fatalError("Event \(vehicle.name) has no document ID.")
+        fatalError("Event \(vehicle.name) has no document ID.")
       }
 
       do {
@@ -69,9 +69,8 @@ final class SettingsViewModel: ObservableObject {
           .delete()
 
         vehicles.removeAll { $0.id == vehicle.id }
-        then(.success("Vehicle deleted"))
       } catch {
-        then(.failure(error))
+        throw error
       }
     }
 }
