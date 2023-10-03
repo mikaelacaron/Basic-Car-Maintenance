@@ -9,16 +9,17 @@ Welcome to my open source app! At this moment it's a work in progress, but it wi
    * It is only one person per issue, except where noted.
 * Fork this repo
 * Clone the repo to your machine
-* In the same folder that contains the `Basic-Car-Maintenance.xcconfig.template`, run this command to create a new Xcode configuration file (which properly sets up the signing information)
+* In the same folder that contains the `Basic-Car-Maintenance.xcconfig.template`, run this command, in Terminal, to create a new Xcode configuration file (which properly sets up the signing information)
 
 ```sh
 cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
 ```
 
-* Fill in your `DEVELOPMENT_TEAM`.
+* In the Basic-Car-Maintenance.xcconfig file, fill in your `DEVELOPMENT_TEAM`.
    * Example: `DEVELOPMENT_TEAM = IdNumber`
    * You can find this by logging into the Apple Developer Portal
-* Build the project
+   * This is only needed when running on a real device for iOS, this works with both free or paid Apple Developer accounts.
+* Build the project :white-check-mark:
 
 * Checkout a new branch (from the `dev` branch) to work on an issue
 
