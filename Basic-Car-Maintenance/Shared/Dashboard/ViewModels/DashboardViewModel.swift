@@ -16,7 +16,7 @@ class DashboardViewModel: ObservableObject {
     
     @Published var events = [MaintenanceEvent]()
     @Published var showErrorAlert = false
-    @Published var errorDeleting : Error?
+    @Published var errorMessage : String = ""
     
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
@@ -54,23 +54,22 @@ class DashboardViewModel: ObservableObject {
                 self.events = events
             }
         }
-        
     }
     
     func deleteEvent(_ event: MaintenanceEvent) async {
         guard let documentId = event.id else {
             fatalError("Event \(event.title) has no document ID.")
         }
-        do{
+        do {
             try await Firestore
                 .firestore()
                 .collection("maintenance_events")
                 .document(documentId)
                 .delete()
-        }
-        catch{
+            errorMessage = ""
+        } catch {
             showErrorAlert.toggle()
-            errorDeleting = error
+            errorMessage = error.localizedDescription
             //print("Error : \(error.localizedDescription)")
         }
     }

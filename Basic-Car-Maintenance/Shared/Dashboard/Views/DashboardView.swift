@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DashboardView: View {
+    
     @State private var isShowingAddView = false
     
     @StateObject private var viewModel: DashboardViewModel
@@ -55,7 +56,7 @@ struct DashboardView: View {
                     viewModel.showErrorAlert = false
                 }
             }, message: {
-                Text(viewModel.errorDeleting?.localizedDescription ?? "Error while deleting event").padding()
+                Text(viewModel.errorMessage).padding()
             })
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
