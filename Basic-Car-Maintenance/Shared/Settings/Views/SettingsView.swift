@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SettingsView: View {
-    
     @StateObject private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
@@ -31,7 +30,7 @@ struct SettingsView: View {
                             .resizable()
                             .frame(width: 20, height: 20)
                     }
-                }        
+                }
 
                 // swiftlint:disable:next line_length
                 Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=feature+request&projects=&template=feature-request.md&title=FEATURE+-")!) {
@@ -65,16 +64,17 @@ struct SettingsView: View {
                             
                             Text(vehicle.model)
                         }
-                    }
-                    .onDelete(perform: { indexSet in
-                        for index in indexSet {
-                            let vehicle = viewModel.vehicles[index]
-                            
-                            Task {
-                                await viewModel.deleteVehicle(vehicle)
+                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                            Button(role: .destructive) {
+                                Task {
+                                    await viewModel.deleteVehicle(vehicle)
+                                }
+                            }
+                            label: {
+                                Image(systemName: "trash")
                             }
                         }
-                    })
+                    }
                     
                     Button {
                         isShowingAddVehicle.toggle()
@@ -104,7 +104,7 @@ struct SettingsView: View {
                 await viewModel.getVehicles()
             }
             .sheet(isPresented: $isShowingAddVehicle) {
-                AddVehicleView() { vehicle in
+                AddVehicleView { vehicle in
                     Task {
                         await viewModel.addVehicle(vehicle)
                     }
