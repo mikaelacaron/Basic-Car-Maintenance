@@ -1,11 +1,10 @@
 name: SwiftLint
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
   pull_request:
-    paths:
-      - '.github/workflows/swiftlint.yml'
-      - '.swiftlint.yml'
-      - '**/*.swift'
+    branches:
+      - main
+      - dev
 jobs:
   SwiftLint:
     runs-on: macos-13
