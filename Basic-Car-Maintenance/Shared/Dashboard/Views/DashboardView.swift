@@ -65,9 +65,9 @@ struct DashboardView: View {
                     
                     Menu {
                         Picker(selection: $viewModel.sortOption, content: {
-                            ForEach(DashboardViewModel.SortOption.allCases, id: \.self) { option in
+                            ForEach(DashboardViewModel.SortOption.allCases) { option in
                                 Text(option.label)
-                                    .tag(option.id)
+                                    .tag(option)
                             }
                         }, label: { EmptyView() })
                     } label: {
