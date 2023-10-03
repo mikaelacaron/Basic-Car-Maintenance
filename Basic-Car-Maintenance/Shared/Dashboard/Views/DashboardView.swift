@@ -71,7 +71,7 @@ struct DashboardView: View {
                             }
                         }, label: { EmptyView() })
                     } label: {
-                        Image(systemName: "ellipsis.circle")
+                        Image(systemName: "line.3.horizontal.decrease.circle")
                     }
                 }
             }
