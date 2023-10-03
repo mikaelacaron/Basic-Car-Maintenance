@@ -9,7 +9,6 @@ import SwiftUI
 
 struct DashboardView: View {
     @State private var isShowingAddView = false
-    
     @StateObject private var viewModel: DashboardViewModel
     
     init(authenticationViewModel: AuthenticationViewModel) {
@@ -19,7 +18,7 @@ struct DashboardView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(viewModel.events) { event in
+                ForEach(viewModel.sortedEvents) { event in
                     VStack(alignment: .leading, spacing: 8) {
                         Text(event.title)
                             .font(.title3)
@@ -46,6 +45,7 @@ struct DashboardView: View {
                     Text("Add your first maintenance")
                 }
             }
+            .animation(.linear, value: viewModel.sortOption)
             .navigationTitle(Text("Dashboard"))
             .sheet(isPresented: $isShowingAddView) {
                 AddMaintenanceView() { event in
@@ -56,11 +56,22 @@ struct DashboardView: View {
                 }
             }
             .toolbar {
-                ToolbarItem(placement: .primaryAction) {
+                ToolbarItemGroup(placement: .primaryAction) {
                     Button {
                         isShowingAddView.toggle()
                     } label: {
                         Image(systemName: "plus")
+                    }
+                    
+                    Menu {
+                        Picker(selection: $viewModel.sortOption, content: {
+                            ForEach(DashboardViewModel.SortOption.allCases) { option in
+                                Text(option.label)
+                                    .tag(option)
+                            }
+                        }, label: { EmptyView() })
+                    } label: {
+                        Image(systemName: "line.3.horizontal.decrease.circle")
                     }
                 }
             }

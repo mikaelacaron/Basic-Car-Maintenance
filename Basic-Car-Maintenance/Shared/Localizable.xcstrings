@@ -64,6 +64,9 @@
         }
       }
     },
+    "Custom" : {
+
+    },
     "Dashboard" : {
       "localizations" : {
         "de" : {
@@ -134,6 +137,9 @@
         }
       }
     },
+    "Newest to Oldest" : {
+
+    },
     "Notes" : {
       "localizations" : {
         "de" : {
@@ -143,6 +149,9 @@
           }
         }
       }
+    },
+    "Oldest to Newest" : {
+
     },
     "Profile" : {
       "localizations" : {
