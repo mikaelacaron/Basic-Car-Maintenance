@@ -9,7 +9,6 @@ import SwiftUI
 
 struct DashboardView: View {
     
-    @State private var isShowingAddView = false
     @StateObject private var viewModel: DashboardViewModel
     
     init(authenticationViewModel: AuthenticationViewModel) {
@@ -48,7 +47,7 @@ struct DashboardView: View {
             }
             .animation(.linear, value: viewModel.sortOption)
             .navigationTitle(Text("Dashboard"))
-            .navigationDestination(isPresented: $isShowingAddView) {
+            .navigationDestination(isPresented: $viewModel.showAddView) {
                 AddMaintenanceView() { event in
                     Task {
                         await viewModel.addEvent(event)
@@ -65,7 +64,7 @@ struct DashboardView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
                     Button {
-                        isShowingAddView.toggle()
+                        viewModel.showAddView.toggle()
                     } label: {
                         Image(systemName: "plus")
                     }

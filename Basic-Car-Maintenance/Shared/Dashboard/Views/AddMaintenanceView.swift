@@ -15,8 +15,6 @@ struct AddMaintenanceView: View {
     @State private var date = Date()
     @State private var notes = ""
     
-    @Environment(\.dismiss) var dismiss
-    
     var body: some View {
         NavigationStack {
             Form {
@@ -44,7 +42,6 @@ struct AddMaintenanceView: View {
                     Button {
                         let event = MaintenanceEvent(title: title, date: date, notes: notes)
                         addTapped(event)
-                        dismiss()
                     } label: {
                         Text("Add")
                     }

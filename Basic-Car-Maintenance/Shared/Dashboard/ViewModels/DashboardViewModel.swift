@@ -13,6 +13,8 @@ import Foundation
 class DashboardViewModel: ObservableObject {
     let authenticationViewModel: AuthenticationViewModel
     
+    @Published var showAddView = false
+    
     @Published var events = [MaintenanceEvent]()
     @Published var showErrorAlert = false
     @Published var errorMessage : String = ""
@@ -41,6 +43,7 @@ class DashboardViewModel: ObservableObject {
                     .collection("maintenance_events")
                     .addDocument(from: eventToAdd)
                 errorMessage = ""
+                showAddView = false
             } catch {
                 showErrorAlert.toggle()
                 errorMessage = error.localizedDescription
