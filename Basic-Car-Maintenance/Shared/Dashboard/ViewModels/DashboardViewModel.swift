@@ -68,6 +68,7 @@ class DashboardViewModel: ObservableObject {
         guard let documentId = event.id else {
             fatalError("Event \(event.title) has no document ID.")
         }
+        
         do {
             try await Firestore
                 .firestore()
@@ -78,7 +79,6 @@ class DashboardViewModel: ObservableObject {
         } catch {
             showErrorAlert.toggle()
             errorMessage = error.localizedDescription
-            //print("Error : \(error.localizedDescription)")
         }
     }
 }

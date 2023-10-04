@@ -56,13 +56,13 @@ struct DashboardView: View {
                     
                 }
             }
-            .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert, actions: {
+            .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert) {
                 Button("OK") {
                     viewModel.showErrorAlert = false
                 }
-            }, message: {
+            } message: {
                 Text(viewModel.errorMessage).padding()
-            })
+            }
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
                     Button {
