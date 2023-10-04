@@ -8,7 +8,7 @@ xcrun xcodebuild docbuild \
 xcrun docc process-archive transform-for-static-hosting \
     "$PWD/.derivedData/Build/Products/Debug-iphonesimulator/Basic-Car-Maintenance.doccarchive" \
     --output-path ".docs" \
-    --hosting-base-path /
+    --hosting-base-path "Basic-Car-Maintenance"
 
 echo '<script>window.location.href += "documentation/basic_car_maintenance"</script>' > .docs/index.html
 
