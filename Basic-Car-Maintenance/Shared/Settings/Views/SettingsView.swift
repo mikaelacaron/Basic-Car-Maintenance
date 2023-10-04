@@ -57,6 +57,15 @@ struct SettingsView: View {
                     }
                 }
                 
+                NavigationLink {
+                    ContributorsListView(viewModel: viewModel)
+                } label: {
+                    HStack {
+                        Image(systemName: "person.3.fill")
+                        Text("Contributors")
+                    }
+                }
+                
                 Section {
                     ForEach(viewModel.vehicles) { vehicle in
                         VStack {

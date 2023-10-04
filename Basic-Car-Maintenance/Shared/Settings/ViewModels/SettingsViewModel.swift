@@ -13,11 +13,37 @@ import FirebaseFirestore
 final class SettingsViewModel: ObservableObject {
     
     let authenticationViewModel: AuthenticationViewModel
+    @Published var contributors: [Contributor]?
     
     @Published var vehicles = [Vehicle]()
     
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
+    }
+    
+    let urls: [String: URL] = [
+        "mikaelacaronProfile": URL(string: "https://github.com/mikaelacaron")!,
+        "Basic-Car-MaintenanceRepo": URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance")!,
+        "bugReport": URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues")!
+    ]
+    
+    func getContributors() async {
+guard let url =
+        URL(string: "https://api.github.com/repos/mikaelacaron/Basic-Car-Maintenance/contributors")
+        else {
+            return
+        }
+
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let contributors = try decoder.decode([Contributor].self, from: data)
+            self.contributors = contributors
+            print(contributors)
+        } catch {
+            print("Error fetching or decoding contributors: \(error)")
+        }
     }
     
     func addVehicle(_ vehicle: Vehicle) async {
