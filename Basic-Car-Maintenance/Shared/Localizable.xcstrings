@@ -99,6 +99,9 @@
     "Failed To Delete Vehicle\nDetails:%@" : {
 
     },
+    "Failed To Delete Event" : {
+
+    },
     "GitHub Repo" : {
       "localizations" : {
         "de" : {
@@ -163,6 +166,9 @@
       }
     },
     "Oldest to Newest" : {
+
+    },
+    "OK" : {
 
     },
     "OK" : {

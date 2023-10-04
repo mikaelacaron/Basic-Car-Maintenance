@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DashboardView: View {
+    
     @State private var isShowingAddView = false
     @StateObject private var viewModel: DashboardViewModel
     
@@ -55,6 +56,13 @@ struct DashboardView: View {
                     
                 }
             }
+            .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert, actions: {
+                Button("OK") {
+                    viewModel.showErrorAlert = false
+                }
+            }, message: {
+                Text(viewModel.errorMessage).padding()
+            })
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
                     Button {
