@@ -3,6 +3,12 @@
   "strings" : {
     "" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13,6 +19,12 @@
     },
     "%@" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23,6 +35,12 @@
     },
     "Add" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33,6 +51,12 @@
     },
     "Add Maintenance" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat servisní záznam"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -43,6 +67,12 @@
     },
     "Add Vehicle" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat vozidlo"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -52,10 +82,23 @@
       }
     },
     "Add your first maintenance" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat první servisní záznam"
+          }
+        }
+      }
     },
     "Additional Notes" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Další poznámky"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -72,6 +115,12 @@
     },
     "Dashboard" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přehled"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -82,6 +131,12 @@
     },
     "Date" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datum"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -104,6 +159,12 @@
     },
     "GitHub Repo" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Github Repozitář"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -114,6 +175,12 @@
     },
     "Logged in anonymously with ID: %@" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přihlášen anonymně jako ID: %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -124,6 +191,12 @@
     },
     "Make" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Výrobce"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -134,6 +207,12 @@
     },
     "Model" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -144,6 +223,12 @@
     },
     "Name" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -157,6 +242,12 @@
     },
     "Notes" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poznámky"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -173,6 +264,12 @@
     },
     "Profile" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -183,6 +280,12 @@
     },
     "Report a Bug" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nahlásit chybu"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -193,6 +296,12 @@
     },
     "Request a New Feature" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Požadavek na novou funkci"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -203,6 +312,12 @@
     },
     "Settings" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nastavení"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -213,6 +328,12 @@
     },
     "Sign Out" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odhlásit"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -223,6 +344,12 @@
     },
     "Signed in as %@" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přihlášen jako %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -233,6 +360,12 @@
     },
     "Thanks for using this app! It's open source and anyone can contribute to it." : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Děkuji Vám za využívání této aplikace! Díky otevřenosti může kdokoliv přispět k samotnému vývoji. "
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -243,6 +376,12 @@
     },
     "The title of the event" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název události"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -253,6 +392,12 @@
     },
     "Title" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -263,6 +408,12 @@
     },
     "Title of the maintenance event" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název údržby"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -273,6 +424,12 @@
     },
     "Vehicle Make" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Výrobce vozidla"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -283,6 +440,12 @@
     },
     "Vehicle Model" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model vozidla"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -293,6 +456,12 @@
     },
     "Vehicle Name" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název vozidla"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -303,6 +472,12 @@
     },
     "Vehicles" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vozidla"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -313,7 +488,19 @@
     },
     "Version %@ (%@)" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verze %1$@ (%2$@)"
+          }
+        },
         "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : ""
