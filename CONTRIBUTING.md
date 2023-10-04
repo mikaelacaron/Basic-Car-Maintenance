@@ -17,6 +17,13 @@ This is a deployed app on the Apple App Store, available for iOS 17.0 or later. 
 ```sh
 brew install swiftlint
 ```
+* Set your Xcode settings correctly:
+   * Open Xcode Settings `Cmd + ,`
+   * Text Editing
+   * Indentation tab
+   * Prefer Indent using Spaces
+   * Tab Width: 4
+   * Indent Width: 4
 
 ## Start Here
 * **Fork** the repo to your profile
