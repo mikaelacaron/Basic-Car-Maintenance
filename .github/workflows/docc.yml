@@ -19,6 +19,9 @@ jobs:
       - uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: "15.0.0"
+      - name: Setup Config file
+        run: |
+          cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
       - name: Run Build Docs
         run: ./build-docc.sh
       - name: Setup Pages
