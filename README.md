@@ -6,6 +6,7 @@ Welcome to my open source app! It is ready for contributors for [Hacktoberfest](
 ![Static Badge](https://img.shields.io/badge/status-active-brightgreen)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mikaelacaron/Basic-Car-Maintenance/dev?logo=github)
 ![GitHub contributors](https://img.shields.io/github/contributors/mikaelacaron/Basic-Car-Maintenance)
+[![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](https://www.firsttimersonly.com/)
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/mikaelacaron/Basic-Car-Maintenance/swiftlint.yml)
 
 * Read the [Code of Conduct](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CODE_OF_CONDUCT.md)
