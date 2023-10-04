@@ -107,6 +107,9 @@
         }
       }
     },
+    "An Error Occurred" : {
+
+    },
     "Custom" : {
 
     },
@@ -148,13 +151,13 @@
     "Failed To Add Vehicle. Unknown Error." : {
 
     },
+    "Failed To Delete Event" : {
+
+    },
     "Failed To Delete Vehicle" : {
 
     },
     "Failed To Delete Vehicle\nDetails:%@" : {
-
-    },
-    "Failed To Delete Event" : {
 
     },
     "GitHub Repo" : {
@@ -256,13 +259,10 @@
         }
       }
     },
+    "OK" : {
+
+    },
     "Oldest to Newest" : {
-
-    },
-    "OK" : {
-
-    },
-    "OK" : {
 
     },
     "Profile" : {
