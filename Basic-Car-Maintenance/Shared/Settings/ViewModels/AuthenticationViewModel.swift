@@ -5,11 +5,11 @@
 //  Created by Mikaela Caron on 9/14/23.
 //
 
-import Foundation
-import FirebaseAuth
-import SwiftUI
 import AuthenticationServices
 import CryptoKit
+import FirebaseAuth
+import Foundation
+import SwiftUI
 
 enum AuthenticationState {
     case unauthenticated
