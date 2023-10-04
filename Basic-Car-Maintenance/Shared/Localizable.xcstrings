@@ -72,6 +72,12 @@
             "state" : "translated",
             "value" : "Přidat vozidlo"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug hinzufügen"
+          }
         }
       }
     },
@@ -96,7 +102,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fahrzeug hinzufügen"
+            "value" : "Weitere Notizen"
           }
         }
       }
