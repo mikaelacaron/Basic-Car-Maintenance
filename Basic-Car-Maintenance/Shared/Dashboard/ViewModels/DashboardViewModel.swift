@@ -11,12 +11,20 @@ import Foundation
 
 @MainActor
 class DashboardViewModel: ObservableObject {
-    
     let authenticationViewModel: AuthenticationViewModel
     
     @Published var events = [MaintenanceEvent]()
     @Published var showErrorAlert = false
     @Published var errorMessage : String = ""
+    @Published var sortOption: SortOption = .custom
+    
+    var sortedEvents: [MaintenanceEvent] {
+        switch sortOption {
+        case .oldestToNewest: events.sorted { $0.date < $1.date }
+        case .newestToOldest: events.sorted { $0.date > $1.date }
+        case .custom: events
+        }
+    }
     
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
@@ -71,6 +79,27 @@ class DashboardViewModel: ObservableObject {
             showErrorAlert.toggle()
             errorMessage = error.localizedDescription
             //print("Error : \(error.localizedDescription)")
+        }
+    }
+}
+
+// MARK: - Sort Option
+extension DashboardViewModel {
+    enum SortOption: Int, CaseIterable, Identifiable {
+        case oldestToNewest = 0
+        case newestToOldest = 1
+        case custom = 2
+        
+        var id: Int {
+            rawValue
+        }
+        
+        var label: LocalizedStringResource {
+            switch self {
+            case .oldestToNewest: "Oldest to Newest"
+            case .newestToOldest: "Newest to Oldest"
+            case .custom: "Custom"
+            }
         }
     }
 }
