@@ -10,6 +10,6 @@ xcrun docc process-archive transform-for-static-hosting \
     --output-path ".docs" \
     --hosting-base-path ""
 
-echo '<script>window.location.href += "/documentation/Basic_Car_Maintenance"</script>' > .docs/index.html
+echo '<script>window.location.href += "documentation/basic_car_maintenance"</script>' > .docs/index.html
 
 
