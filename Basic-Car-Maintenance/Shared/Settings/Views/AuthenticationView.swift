@@ -11,10 +11,10 @@ import AuthenticationServices
 struct AuthenticationView: View {
     @Environment(\.colorScheme) var colorScheme
     
-    @State var viewModel: AuthenticationViewModel
+    var viewModel: AuthenticationViewModel
     
     init(viewModel: AuthenticationViewModel) {
-        self._viewModel = .init(initialValue: viewModel)
+        self.viewModel = viewModel
     }
     
     var body: some View {

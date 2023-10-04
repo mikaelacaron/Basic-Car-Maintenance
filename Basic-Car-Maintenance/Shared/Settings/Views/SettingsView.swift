@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var viewModel: SettingsViewModel
+    private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
     @State private var showDeleteVehicleError = false
     @State var errorDetails: Error?
-    @ObservedObject var authenticationViewModel: AuthenticationViewModel
     
     init(authenticationViewModel: AuthenticationViewModel) {
         viewModel = SettingsViewModel(authenticationViewModel: authenticationViewModel)

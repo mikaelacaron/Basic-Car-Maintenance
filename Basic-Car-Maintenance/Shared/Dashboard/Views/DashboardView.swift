@@ -10,7 +10,7 @@ import SwiftUI
 struct DashboardView: View {
     
     @State private var isShowingAddView = false
-    @State private var viewModel: DashboardViewModel
+    @Bindable private var viewModel: DashboardViewModel
     
     init(authenticationViewModel: AuthenticationViewModel) {
         viewModel = DashboardViewModel(authenticationViewModel: authenticationViewModel)

@@ -14,7 +14,7 @@ struct BasicCarMaintenanceApp: App {
     
     init() {
         FirebaseApp.configure()
-        self._authenticationViewModel = .init(initialValue: AuthenticationViewModel())
+        _authenticationViewModel = .init(initialValue: AuthenticationViewModel())
     }
     
     var body: some Scene {
