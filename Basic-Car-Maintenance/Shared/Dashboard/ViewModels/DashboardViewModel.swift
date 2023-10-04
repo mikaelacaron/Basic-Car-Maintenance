@@ -35,13 +35,13 @@ class DashboardViewModel: ObservableObject {
             var eventToAdd = maintenanceEvent
             eventToAdd.userID = uid
 
-            let eventAdded = try? Firestore
+            let documentReference = try? Firestore
                 .firestore()
                 .collection("maintenance_events")
                 .addDocument(from: eventToAdd)
 
             var event = maintenanceEvent
-            if let documentId = eventAdded?.documentID {
+            if let documentId = documentReference?.documentID {
                 event.id = documentId
             }
             events.append(event)
