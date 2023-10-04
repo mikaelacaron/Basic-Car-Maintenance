@@ -1,13 +1,13 @@
 # Contribution Guidelines
 This document contains the rules and guidelines that developers are expected to follow, while contributing to this repository.
 
-* All contributions must NOT add any SwiftLint warnings or errors. There is a GitHub action setup for any PRs to dev, and Xcode will show any warnings/errors.
+* All contributions must NOT add any SwiftLint warnings or errors. There is a GitHub action setup for any PRs to `dev, and Xcode will show any warnings/errors.
 
 # About the Project
 This app was created for [Hacktoberfest](https://hacktoberfest.com/), to help beginners in iOS dev contribute to open source. It is an app to help keep track of your car maintenance activites. This project uses [Firebase](https://firebase.google.com) and [Firestore](https://firebase.google.com/products/firestore).
 
 ### Project Status
-This is a deployed app on the Apple App Store, available for iOS 17.0 or later. After Hacktoberfest, a new version will be created and pushed to the App Store by Mikaela Caron (the maintainer).
+This is a deployed app on the Apple App Store, available for iOS 17.0 or later. After Hacktoberfest, a new version will be created and pushed to the App Store by [Mikaela Caron](https://github.com/mikaelacaron) (the maintainer).
 
 # Getting Started
 ## Prerequisites
@@ -19,22 +19,25 @@ brew install swiftlint
 ```
 
 ## Start Here
-* Fork the repo to your profile
-* Clone to your computer
+* **Fork** the repo to your profile
+* **Clone** to your computer
 * Setup the upstream remote on your local machine by running this command, in Terminal
 
 ```sh
 git remote add upstream https://github.com/mikaelacaron/Basic-Car-Maintenance.git
 ```
 
-* In the Basic-Car-Maintenance.xcconfig file, fill in your `DEVELOPMENT_TEAM`.
-   * Example: `DEVELOPMENT_TEAM = IdNumber`
+* In the `Basic-Car-Maintenance.xcconfig` file, fill in your `DEVELOPMENT_TEAM` and `PRODUCT_BUNDLE_IDENTIFIER`.
    * You can find this by logging into the Apple Developer Portal
    * This is only needed when running on a real device for iOS, this works with both free or paid Apple Developer accounts.
-* Build the project :white-check-mark:
+```
+DEVELOPMENT_TEAM = ABC123
+PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
+```
+* Build the project ✅
 
 * **BEFORE** starting on an issue, comment on the issue you want to work on.
-   * This prevents two people from working on the same issue. Mikaela (the maintainer) will assign you that issue, and you can get started on it.
+   * This prevents two people from working on the same issue. [Mikaela](https://github.com/mikaelacaron) (the maintainer) will assign you that issue, and you can get started on it.
 
 * Checkout a new branch (from the `dev` branch) to work on an issue
    * The `feature-name` part of the branch can be shortened or omitted and you add your username instead
@@ -43,7 +46,7 @@ git remote add upstream https://github.com/mikaelacaron/Basic-Car-Maintenance.gi
 git checkout -b issueNumber-feature-name
 ```
 * When your feature/fix is complete open a pull request, PR, from your feature branch to the `dev` branch
-   * Use a descriptive PR title
+   * Use a descriptive PR title and fill out the entire PR template, do not delete any sections.
 
 # Branches and PRs
 * No commits should be made to the `main` branch directly. The `main` branch shall only consist of the deployed code
