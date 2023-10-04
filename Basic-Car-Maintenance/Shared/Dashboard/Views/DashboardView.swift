@@ -64,12 +64,14 @@ struct DashboardView: View {
                     }
                     
                     Menu {
-                        Picker(selection: $viewModel.sortOption, content: {
+                        Picker(selection: $viewModel.sortOption) {
                             ForEach(DashboardViewModel.SortOption.allCases) { option in
                                 Text(option.label)
                                     .tag(option)
                             }
-                        }, label: { EmptyView() })
+                        } label: {
+                            EmptyView()
+                        }
                     } label: {
                         Image(systemName: "line.3.horizontal.decrease.circle")
                     }

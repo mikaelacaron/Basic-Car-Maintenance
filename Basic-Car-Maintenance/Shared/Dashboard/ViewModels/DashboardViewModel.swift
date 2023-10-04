@@ -18,7 +18,7 @@ class DashboardViewModel: ObservableObject {
     
     var sortedEvents: [MaintenanceEvent] {
         switch sortOption {
-        case .oldestToNewest: events.sorted {$0.date < $1.date }
+        case .oldestToNewest: events.sorted { $0.date < $1.date }
         case .newestToOldest: events.sorted { $0.date > $1.date }
         case .custom: events
         }
