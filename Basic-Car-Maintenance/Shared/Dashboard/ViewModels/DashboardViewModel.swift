@@ -34,16 +34,20 @@ class DashboardViewModel: ObservableObject {
         if let uid = authenticationViewModel.user?.uid {
             var eventToAdd = maintenanceEvent
             eventToAdd.userID = uid
-            
-            try? Firestore
+
+            let eventAdded = try? Firestore
                 .firestore()
                 .collection("maintenance_events")
                 .addDocument(from: eventToAdd)
+
+            var event = maintenanceEvent
+            if let documentId = eventAdded?.documentID {
+                event.id = documentId
+            }
+            events.append(event)
         }
-        
-        events.append(maintenanceEvent)
     }
-    
+
     func getMaintenanceEvents() async {
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
