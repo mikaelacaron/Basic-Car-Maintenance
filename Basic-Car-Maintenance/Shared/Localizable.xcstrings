@@ -87,6 +87,18 @@
         }
       }
     },
+    "Delete" : {
+
+    },
+    "Failed To Add Vehicle. Unknown Error." : {
+
+    },
+    "Failed To Delete Vehicle" : {
+
+    },
+    "Failed To Delete Vehicle\nDetails:%@" : {
+
+    },
     "GitHub Repo" : {
       "localizations" : {
         "de" : {
@@ -151,6 +163,9 @@
       }
     },
     "Oldest to Newest" : {
+
+    },
+    "OK" : {
 
     },
     "Profile" : {

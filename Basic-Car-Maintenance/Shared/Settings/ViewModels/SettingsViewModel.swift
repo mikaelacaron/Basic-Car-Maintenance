@@ -56,14 +56,21 @@ final class SettingsViewModel: ObservableObject {
         }
     }
     
-    func deleteVehicle(_ vehicle: Vehicle) async {
-        guard let documentId = vehicle.id else {
-            fatalError("Event \(vehicle.name) has no document ID.")
-        }
-        try? await Firestore
-            .firestore()
-            .collection("vehicles")
-            .document(documentId)
-            .delete()
+    func deleteVehicle(_ vehicle: Vehicle) async throws {
+      guard let documentId = vehicle.id else {
+        fatalError("Event \(vehicle.name) has no document ID.")
+      }
+
+      do {
+        try await Firestore
+          .firestore()
+          .collection("vehicles")
+          .document(documentId)
+          .delete()
+
+        vehicles.removeAll { $0.id == vehicle.id }
+      } catch {
+        throw error
+      }
     }
 }

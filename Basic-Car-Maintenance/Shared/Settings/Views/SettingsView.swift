@@ -11,6 +11,8 @@ struct SettingsView: View {
     
     @StateObject private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
+    @State private var showDeleteVehicleError = false
+    @State var errorDetails: Error?
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     
     init(authenticationViewModel: AuthenticationViewModel) {
@@ -65,6 +67,19 @@ struct SettingsView: View {
                             
                             Text(vehicle.model)
                         }
+                        .swipeActions {
+                            Button("Delete") {
+                              Task {
+                                do {
+                                  try await viewModel.deleteVehicle(vehicle)
+                                } catch {
+                                  errorDetails = error
+                                  showDeleteVehicleError = true
+                                }
+                              }
+                            }
+                            .tint(.red)
+                        }
                     }
                     
                     Button {
@@ -90,6 +105,17 @@ struct SettingsView: View {
                 
                 Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))")
             }
+            .alert("Failed To Delete Vehicle", isPresented: $showDeleteVehicleError, actions: {
+                Button("OK") {
+                  showDeleteVehicleError = false
+                }
+            }, message: {
+                if let errorDetails {
+                    Text("Failed To Delete Vehicle\nDetails:\(errorDetails.localizedDescription)")
+                } else {
+                    Text("Failed To Add Vehicle. Unknown Error.")
+                }
+            })
             .navigationTitle(Text("Settings"))
             .task {
                 await viewModel.getVehicles()
