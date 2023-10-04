@@ -7,9 +7,6 @@
     "%@" : {
 
     },
-    "About" : {
-
-    },
     "Add" : {
 
     },
@@ -28,9 +25,6 @@
     "Basic-Car-Maintenance" : {
 
     },
-    "Contributions" : {
-
-    },
     "Contributors" : {
 
     },
@@ -41,12 +35,6 @@
 
     },
     "GitHub Repo" : {
-
-    },
-    "If You Want To Contribute" : {
-
-    },
-    "ListOfContributors" : {
 
     },
     "Logged in anonymously with ID: %@" : {
@@ -80,9 +68,6 @@
 
     },
     "Signed in as %@" : {
-
-    },
-    "Thanks For Using" : {
 
     },
     "Thanks for using this app! It's open source and anyone can contribute to it." : {

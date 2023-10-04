@@ -14,8 +14,7 @@ struct ContributorsProfileView: View {
     private let imgFrame: CGFloat = 30
 
     init(name: String, url: String) {
-        let modifiedName = (name.first?.uppercased())! + name.dropFirst()
-        self.name = modifiedName
+        self.name = name
         self.imgUrl = url
     }
 

@@ -15,27 +15,25 @@ struct ContributorsListView: View {
         List {
             if let contributors = viewModel.contributors, !contributors.isEmpty {
                 ForEach(contributors) { contributor in
-                    Link(destination: URL(string: contributor.htmlURL) ?? viewModel.urls["Basic-Car-Maintenance"]!) {
+                    Link(
+                        destination: URL(string: contributor.htmlURL) ??
+                        viewModel.urls["Basic-Car-Maintenance"]!) {
                         ContributorsProfileView(name: contributor.login, url: contributor.avatarURL)
                     }
                 }
-            }
-            else {
+            } else {
                 ProgressView() {
                 }
             }
         }
-        .onAppear {
+        .task {
             Task {
                 await viewModel.getContributors()
             }
         }
         .navigationTitle("Contributors")
-       
     }
 }
-
-
 #Preview {
     let viewModel = SettingsViewModel(authenticationViewModel: AuthenticationViewModel())
     return ContributorsListView(viewModel: viewModel)

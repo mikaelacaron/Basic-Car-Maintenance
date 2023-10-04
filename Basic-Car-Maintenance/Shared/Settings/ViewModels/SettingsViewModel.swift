@@ -27,13 +27,16 @@ final class SettingsViewModel: ObservableObject {
         "bugReport": URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues")!
     ]
     
-    
     func getContributors() async {
-        guard let url = URL(string: "https://api.github.com/repos/mikaelacaron/Basic-Car-Maintenance/contributors") else { return }
+guard let url =
+        URL(string: "https://api.github.com/repos/mikaelacaron/Basic-Car-Maintenance/contributors")
+        else {
+            return
+        }
 
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
-            var decoder = JSONDecoder()
+            let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let contributors = try decoder.decode([Contributor].self, from: data)
             self.contributors = contributors

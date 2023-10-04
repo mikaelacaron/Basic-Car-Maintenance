@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @State var infoViewModel = AboutAppViewModel()
     @StateObject private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
@@ -22,12 +21,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
-                
-                Section(header: Text("About")) {
-                    Text(infoViewModel.infoText)
-                }
-                
-           
+            
                 Text("Thanks for using this app! It's open source and anyone can contribute to it.")
                 
                 Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance")!) {
@@ -62,18 +56,14 @@ struct SettingsView: View {
                     }
                 }
                 
-                Section(header: Text("Contributions")) {
-                    Text(infoViewModel.openSourceRemark)
-                    
                     NavigationLink {
                         ContributorsListView(viewModel: viewModel)
                     } label: {
                         HStack {
                             Image(systemName: "person.3.fill")
-                            Text("ListOfContributors")
+                            Text("Contributors")
                         }
                     }
-                }
                 
                 Section {
                     ForEach(viewModel.vehicles) { vehicle in

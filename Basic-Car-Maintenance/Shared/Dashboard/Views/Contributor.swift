@@ -48,9 +48,4 @@ struct Contributor: Codable, Hashable , Identifiable {
         case siteAdmin = "siteAdmin"
         case contributions
     }
-    
-    
-    
 }
-
-
