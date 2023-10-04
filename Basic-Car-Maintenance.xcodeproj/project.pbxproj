@@ -443,7 +443,6 @@
 			knownRegions = (
 				en,
 				Base,
-				cs,
 				de,
 			);
 			mainGroup = FF5D139A2A86C2D500BC9BD6;
