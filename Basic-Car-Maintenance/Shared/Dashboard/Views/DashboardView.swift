@@ -48,15 +48,14 @@ struct DashboardView: View {
             }
             .animation(.linear, value: viewModel.sortOption)
             .navigationTitle(Text("Dashboard"))
-            .sheet(isPresented: $isShowingAddView) {
+            .navigationDestination(isPresented: $isShowingAddView) {
                 AddMaintenanceView() { event in
                     Task {
                         await viewModel.addEvent(event)
                     }
-                    
                 }
             }
-            .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert) {
+            .alert("An Error Occurred", isPresented: $viewModel.showErrorAlert) {
                 Button("OK") {
                     viewModel.showErrorAlert = false
                 }

@@ -35,10 +35,16 @@ class DashboardViewModel: ObservableObject {
             var eventToAdd = maintenanceEvent
             eventToAdd.userID = uid
             
-            try? Firestore
-                .firestore()
-                .collection("maintenance_events")
-                .addDocument(from: eventToAdd)
+            do {
+                try Firestore
+                    .firestore()
+                    .collection("maintenance_events")
+                    .addDocument(from: eventToAdd)
+                errorMessage = ""
+            } catch {
+                showErrorAlert.toggle()
+                errorMessage = error.localizedDescription
+            }
         }
         
         events.append(maintenanceEvent)

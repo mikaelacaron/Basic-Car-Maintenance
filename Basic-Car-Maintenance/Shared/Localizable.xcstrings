@@ -64,6 +64,9 @@
         }
       }
     },
+    "An Error Occurred" : {
+
+    },
     "Custom" : {
 
     },
@@ -97,9 +100,6 @@
 
     },
     "Failed To Delete Vehicle\nDetails:%@" : {
-
-    },
-    "Failed To Delete Event" : {
 
     },
     "GitHub Repo" : {
@@ -165,13 +165,10 @@
         }
       }
     },
+    "OK" : {
+
+    },
     "Oldest to Newest" : {
-
-    },
-    "OK" : {
-
-    },
-    "OK" : {
 
     },
     "Profile" : {
