@@ -55,14 +55,21 @@ final class SettingsViewModel {
         }
     }
     
-    func deleteVehicle(_ vehicle: Vehicle) async {
+    func deleteVehicle(_ vehicle: Vehicle) async throws {
         guard let documentId = vehicle.id else {
             fatalError("Event \(vehicle.name) has no document ID.")
         }
-        try? await Firestore
-            .firestore()
-            .collection("vehicles")
-            .document(documentId)
-            .delete()
+        
+        do {
+            try await Firestore
+                .firestore()
+                .collection("vehicles")
+                .document(documentId)
+                .delete()
+            
+            vehicles.removeAll { $0.id == vehicle.id }
+        } catch {
+            throw error
+        }
     }
 }

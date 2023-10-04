@@ -1,26 +1,37 @@
 # Basic Car Maintenance
-Welcome to my open source app! At this moment it's a work in progress, but it will be ready for contributors for [Hacktoberfest](https://hacktoberfest.com/)! Use this app to gain experience getting started in open source for iOS and macOS development using Swift!
+Welcome to my open source app! It is ready for contributors for [Hacktoberfest](https://hacktoberfest.com/)! Use this app to gain experience getting started in open source for iOS and macOS development using Swift.
 
 # Getting Started
+
+![Static Badge](https://img.shields.io/badge/status-active-brightgreen)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mikaelacaron/Basic-Car-Maintenance/dev?logo=github)
+![GitHub contributors](https://img.shields.io/github/contributors/mikaelacaron/Basic-Car-Maintenance)
+[![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](https://www.firsttimersonly.com/)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/mikaelacaron/Basic-Car-Maintenance/swiftlint.yml)
+
 * Read the [Code of Conduct](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CODE_OF_CONDUCT.md)
 * Read the [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md) guidelines
 * Download Xcode 15 or later, and macOS 14.0 or later
 * Browse the open [issues](https://github.com/mikaelacaron/Basic-Car-Maintenance/issues) and **comment** which you would like to work on
    * It is only one person per issue, except where noted.
-* Fork this repo
-* Clone the repo to your machine
-* In the same folder that contains the `Basic-Car-Maintenance.xcconfig.template`, run this command to create a new Xcode configuration file (which properly sets up the signing information)
+* **Fork** this repo
+* **Clone** the repo to your machine
+* In the same folder that contains the `Basic-Car-Maintenance.xcconfig.template`, run this command, in Terminal, to create a new Xcode configuration file (which properly sets up the signing information)
 
 ```sh
 cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
 ```
 
-* Fill in your `DEVELOPMENT_TEAM`.
-   * Example: `DEVELOPMENT_TEAM = IdNumber`
+* In the `Basic-Car-Maintenance.xcconfig` file, fill in your `DEVELOPMENT_TEAM` and `PRODUCT_BUNDLE_IDENTIFIER`.
    * You can find this by logging into the Apple Developer Portal
-* Build the project
+   * This is only needed when running on a real device for iOS, this works with both free or paid Apple Developer accounts.
+```
+DEVELOPMENT_TEAM = ABC123
+PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
+```
+* Build the project ✅
 
-* Checkout a new branch (from the `dev` branch) to work on an issue
+* **Checkout** a new branch (from the `dev` branch) to work on an issue
 
 # Contributing
 To start contributing, review [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md). New contributors are always welcome to support this project. Issues labeled `good-first-issue` are great for beginners.
@@ -41,7 +52,7 @@ Made with [contrib.rocks](https://contrib.rocks).
 <a href="https://star-history.com/#mikaelacaron/Basic-Car-Maintenance&Date">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=mikaelacaron/Basic-Car-Maintenance&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=mikaelacaron/Basic-Car-Maintenance&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=mikaelacaron/Basic-Car-Maintenance&type=Date" />
     <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=mikaelacaron/Basic-Car-Maintenance&type=Date" />
   </picture>
 </a>

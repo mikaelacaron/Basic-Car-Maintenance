@@ -15,6 +15,17 @@ class DashboardViewModel {
     let authenticationViewModel: AuthenticationViewModel
     
     var events = [MaintenanceEvent]()
+    var showErrorAlert = false
+    var errorMessage : String = ""
+    var sortOption: SortOption = .custom
+    
+    var sortedEvents: [MaintenanceEvent] {
+        switch sortOption {
+        case .oldestToNewest: events.sorted { $0.date < $1.date }
+        case .newestToOldest: events.sorted { $0.date > $1.date }
+        case .custom: events
+        }
+    }
     
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
@@ -24,16 +35,20 @@ class DashboardViewModel {
         if let uid = authenticationViewModel.user?.uid {
             var eventToAdd = maintenanceEvent
             eventToAdd.userID = uid
-            
-            _ = try? Firestore
+
+            let documentReference = try? Firestore
                 .firestore()
                 .collection("maintenance_events")
                 .addDocument(from: eventToAdd)
+
+            var event = maintenanceEvent
+            if let documentId = documentReference?.documentID {
+                event.id = documentId
+            }
+            events.append(event)
         }
-        
-        events.append(maintenanceEvent)
     }
-    
+
     func getMaintenanceEvents() async {
         if let uid =  authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
@@ -52,17 +67,44 @@ class DashboardViewModel {
                 self.events = events
             }
         }
-        
     }
     
     func deleteEvent(_ event: MaintenanceEvent) async {
         guard let documentId = event.id else {
             fatalError("Event \(event.title) has no document ID.")
         }
-        try? await Firestore
-            .firestore()
-            .collection("maintenance_events")
-            .document(documentId)
-            .delete()
+        
+        do {
+            try await Firestore
+                .firestore()
+                .collection("maintenance_events")
+                .document(documentId)
+                .delete()
+            errorMessage = ""
+        } catch {
+            showErrorAlert.toggle()
+            errorMessage = error.localizedDescription
+        }
+    }
+}
+
+// MARK: - Sort Option
+extension DashboardViewModel {
+    enum SortOption: Int, CaseIterable, Identifiable {
+        case oldestToNewest = 0
+        case newestToOldest = 1
+        case custom = 2
+        
+        var id: Int {
+            rawValue
+        }
+        
+        var label: LocalizedStringResource {
+            switch self {
+            case .oldestToNewest: "Oldest to Newest"
+            case .newestToOldest: "Newest to Oldest"
+            case .custom: "Custom"
+            }
+        }
     }
 }

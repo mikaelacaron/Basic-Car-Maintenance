@@ -33,6 +33,13 @@
 		FFC8CDAD2AA3867A00D129A6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDAC2AA3867A00D129A6 /* FirebaseFirestore */; };
 		FFC8CDAF2AA3867A00D129A6 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDAE2AA3867A00D129A6 /* FirebaseFirestoreSwift */; };
 		FFC8CDB32AA4226900D129A6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC8CDB22AA4226900D129A6 /* AdSupport.framework */; };
+		FFDADF7F2ACD35A100DDEF79 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDADF7E2ACD35A100DDEF79 /* WidgetKit.framework */; };
+		FFDADF812ACD35A100DDEF79 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDADF802ACD35A100DDEF79 /* SwiftUI.framework */; };
+		FFDADF842ACD35A100DDEF79 /* BasicCarMaintenanceWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDADF832ACD35A100DDEF79 /* BasicCarMaintenanceWidgetBundle.swift */; };
+		FFDADF862ACD35A100DDEF79 /* BasicCarMaintenanceWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDADF852ACD35A100DDEF79 /* BasicCarMaintenanceWidget.swift */; };
+		FFDADF882ACD35A100DDEF79 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDADF872ACD35A100DDEF79 /* AppIntent.swift */; };
+		FFDADF8A2ACD35A200DDEF79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFDADF892ACD35A200DDEF79 /* Assets.xcassets */; };
+		FFDADF8E2ACD35A200DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FFDADF7D2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +57,28 @@
 			remoteGlobalIDString = FF5D13A22A86C2D600BC9BD6;
 			remoteInfo = "Basic-Car-Maintenance";
 		};
+		FFDADF8C2ACD35A200DDEF79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF5D139B2A86C2D500BC9BD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFDADF7C2ACD35A100DDEF79;
+			remoteInfo = "Basic-Car-Maintenance-WidgetExtension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FFDADF8F2ACD35A200DDEF79 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FFDADF8E2ACD35A200DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Basic-Car-Maintenance.xcconfig"; sourceTree = SOURCE_ROOT; };
@@ -79,6 +107,15 @@
 		FFC67D1C2AAEF7920073B338 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFC8CDB22AA4226900D129A6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
+		FFDADF5D2ACCE9AB00DDEF79 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		FFDADF7D2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Basic-Car-Maintenance-WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDADF7E2ACD35A100DDEF79 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FFDADF802ACD35A100DDEF79 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		FFDADF832ACD35A100DDEF79 /* BasicCarMaintenanceWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceWidgetBundle.swift; sourceTree = "<group>"; };
+		FFDADF852ACD35A100DDEF79 /* BasicCarMaintenanceWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceWidget.swift; sourceTree = "<group>"; };
+		FFDADF872ACD35A100DDEF79 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		FFDADF892ACD35A200DDEF79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFDADF8B2ACD35A200DDEF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +146,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFDADF7A2ACD35A100DDEF79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFDADF812ACD35A100DDEF79 /* SwiftUI.framework in Frameworks */,
+				FFDADF7F2ACD35A100DDEF79 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -132,8 +178,10 @@
 		FF5D139A2A86C2D500BC9BD6 = {
 			isa = PBXGroup;
 			children = (
+				FFDADF5D2ACCE9AB00DDEF79 /* Project.xcconfig */,
 				FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */,
 				FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */,
+				FFDADF822ACD35A100DDEF79 /* Basic-Car-Maintenance-Widget */,
 				FF5D13B72A86C2D800BC9BD6 /* Basic-Car-MaintenanceTests */,
 				FF5D13C12A86C2D800BC9BD6 /* Basic-Car-MaintenanceUITests */,
 				FF5D13A42A86C2D600BC9BD6 /* Products */,
@@ -147,6 +195,7 @@
 				FF5D13A32A86C2D600BC9BD6 /* Basic-Car-Maintenance.app */,
 				FF5D13B42A86C2D800BC9BD6 /* Basic-Car-MaintenanceTests.xctest */,
 				FF5D13BE2A86C2D800BC9BD6 /* Basic-Car-MaintenanceUITests.xctest */,
+				FFDADF7D2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -260,8 +309,22 @@
 			isa = PBXGroup;
 			children = (
 				FFC8CDB22AA4226900D129A6 /* AdSupport.framework */,
+				FFDADF7E2ACD35A100DDEF79 /* WidgetKit.framework */,
+				FFDADF802ACD35A100DDEF79 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFDADF822ACD35A100DDEF79 /* Basic-Car-Maintenance-Widget */ = {
+			isa = PBXGroup;
+			children = (
+				FFDADF832ACD35A100DDEF79 /* BasicCarMaintenanceWidgetBundle.swift */,
+				FFDADF852ACD35A100DDEF79 /* BasicCarMaintenanceWidget.swift */,
+				FFDADF872ACD35A100DDEF79 /* AppIntent.swift */,
+				FFDADF892ACD35A200DDEF79 /* Assets.xcassets */,
+				FFDADF8B2ACD35A200DDEF79 /* Info.plist */,
+			);
+			path = "Basic-Car-Maintenance-Widget";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,10 +338,12 @@
 				FF5D13A02A86C2D600BC9BD6 /* Frameworks */,
 				FF5D13A12A86C2D600BC9BD6 /* Resources */,
 				FF748B5A2AB34A61004748A5 /* SwiftLintScript */,
+				FFDADF8F2ACD35A200DDEF79 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FFDADF8D2ACD35A200DDEF79 /* PBXTargetDependency */,
 			);
 			name = "Basic-Car-Maintenance";
 			packageProductDependencies = (
@@ -328,6 +393,23 @@
 			productReference = FF5D13BE2A86C2D800BC9BD6 /* Basic-Car-MaintenanceUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		FFDADF7C2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFDADF922ACD35A200DDEF79 /* Build configuration list for PBXNativeTarget "Basic-Car-Maintenance-WidgetExtension" */;
+			buildPhases = (
+				FFDADF792ACD35A100DDEF79 /* Sources */,
+				FFDADF7A2ACD35A100DDEF79 /* Frameworks */,
+				FFDADF7B2ACD35A100DDEF79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Basic-Car-Maintenance-WidgetExtension";
+			productName = "Basic-Car-Maintenance-WidgetExtension";
+			productReference = FFDADF7D2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -349,6 +431,9 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = FF5D13A22A86C2D600BC9BD6;
 					};
+					FFDADF7C2ACD35A100DDEF79 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 				};
 			};
 			buildConfigurationList = FF5D139E2A86C2D500BC9BD6 /* Build configuration list for PBXProject "Basic-Car-Maintenance" */;
@@ -358,6 +443,8 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
+				de,
 			);
 			mainGroup = FF5D139A2A86C2D500BC9BD6;
 			packageReferences = (
@@ -370,6 +457,7 @@
 				FF5D13A22A86C2D600BC9BD6 /* Basic-Car-Maintenance */,
 				FF5D13B32A86C2D800BC9BD6 /* Basic-Car-MaintenanceTests */,
 				FF5D13BD2A86C2D800BC9BD6 /* Basic-Car-MaintenanceUITests */,
+				FFDADF7C2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -397,6 +485,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFDADF7B2ACD35A100DDEF79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFDADF8A2ACD35A200DDEF79 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +558,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFDADF792ACD35A100DDEF79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFDADF842ACD35A100DDEF79 /* BasicCarMaintenanceWidgetBundle.swift in Sources */,
+				FFDADF862ACD35A100DDEF79 /* BasicCarMaintenanceWidget.swift in Sources */,
+				FFDADF882ACD35A100DDEF79 /* AppIntent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -475,12 +581,17 @@
 			target = FF5D13A22A86C2D600BC9BD6 /* Basic-Car-Maintenance */;
 			targetProxy = FF5D13BF2A86C2D800BC9BD6 /* PBXContainerItemProxy */;
 		};
+		FFDADF8D2ACD35A200DDEF79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFDADF7C2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension */;
+			targetProxy = FFDADF8C2ACD35A200DDEF79 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FF5D13C62A86C2D800BC9BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */;
+			baseConfigurationReference = FFDADF5D2ACCE9AB00DDEF79 /* Project.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -542,7 +653,7 @@
 		};
 		FF5D13C72A86C2D800BC9BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */;
+			baseConfigurationReference = FFDADF5D2ACCE9AB00DDEF79 /* Project.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -596,12 +707,13 @@
 		};
 		FF5D13C92A86C2D800BC9BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Basic-Car-Maintenance/Basic_Car_Maintenance.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Basic-Car-Maintenance/Preview Content\"";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -621,9 +733,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.4;
-				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-Maintenance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -635,12 +745,13 @@
 		};
 		FF5D13CA2A86C2D800BC9BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Basic-Car-Maintenance/Basic_Car_Maintenance.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Basic-Car-Maintenance/Preview Content\"";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -660,9 +771,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.4;
-				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-Maintenance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -758,6 +867,65 @@
 			};
 			name = Release;
 		};
+		FFDADF902ACD35A200DDEF79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Basic-Car-Maintenance-Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Basic-Car-Maintenance-Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-Maintenance.Basic-Car-Maintenance-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FFDADF912ACD35A200DDEF79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Basic-Car-Maintenance-Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Basic-Car-Maintenance-Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-Maintenance.Basic-Car-Maintenance-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -793,6 +961,15 @@
 			buildConfigurations = (
 				FF5D13CF2A86C2D800BC9BD6 /* Debug */,
 				FF5D13D02A86C2D800BC9BD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFDADF922ACD35A200DDEF79 /* Build configuration list for PBXNativeTarget "Basic-Car-Maintenance-WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFDADF902ACD35A200DDEF79 /* Debug */,
+				FFDADF912ACD35A200DDEF79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
