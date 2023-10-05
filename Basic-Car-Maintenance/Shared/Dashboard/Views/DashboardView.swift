@@ -47,18 +47,6 @@ struct DashboardView: View {
             }
             .animation(.linear, value: viewModel.sortOption)
             .navigationTitle(Text("Dashboard"))
-            .navigationDestination(isPresented: $viewModel.showAddView) {
-                AddMaintenanceView() { event in
-                    Task {
-                        await viewModel.addEvent(event)
-                    }
-                }
-                .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
-                    Button("OK", role: .cancel) {}
-                } message: {
-                    Text(viewModel.errorMessage)
-                }
-            }
             .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert) {
                 Button("OK") {
                     viewModel.showErrorAlert = false
@@ -68,8 +56,17 @@ struct DashboardView: View {
             }
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
-                    Button {
-                        viewModel.showAddView.toggle()
+                    NavigationLink {
+                        AddMaintenanceView { event in
+                            Task {
+                                await viewModel.addEvent(event)
+                            }
+                        }
+                        .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
+                            Button("OK", role: .cancel) {}
+                        } message: {
+                            Text(viewModel.errorMessage)
+                        }
                     } label: {
                         Image(systemName: "plus")
                     }
