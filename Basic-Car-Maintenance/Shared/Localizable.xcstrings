@@ -30,6 +30,12 @@
             "state" : "translated",
             "value" : ""
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
         }
       }
     },
@@ -45,6 +51,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hinzufügen"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agregar"
           }
         }
       }
@@ -62,6 +74,12 @@
             "state" : "translated",
             "value" : "Wartung hinzufügen"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agregar Mantenimiento"
+          }
         }
       }
     },
@@ -78,6 +96,12 @@
             "state" : "translated",
             "value" : "Fahrzeug hinzufügen"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir Vehículo"
+          }
         }
       }
     },
@@ -87,6 +111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přidat první servisní záznam"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agrega tu primer mantenimiento"
           }
         }
       }
@@ -104,17 +134,44 @@
             "state" : "translated",
             "value" : "Weitere Notizen"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notas Adicionales"
+          }
+        }
+      }
+    },
+    "An Error Occurred" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ocurrió un Error"
+          }
         }
       }
     },
     "Contributors" : {
-    
-    },
-    "An Error Occurred" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contribuyentes"
+          }
+        }
+      }
     },
     "Custom" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personalizado"
+          }
+        }
+      }
     },
     "Dashboard" : {
       "localizations" : {
@@ -128,6 +185,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dashboard"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Panel"
           }
         }
       }
@@ -145,23 +208,64 @@
             "state" : "translated",
             "value" : "Datum"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fecha"
+          }
         }
       }
     },
     "Delete" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar"
+          }
+        }
+      }
     },
     "Failed To Add Vehicle. Unknown Error." : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo Agregar el Vehículo. Error Desconocido."
+          }
+        }
+      }
     },
     "Failed To Delete Event" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo Eliminar el Evento"
+          }
+        }
+      }
     },
     "Failed To Delete Vehicle" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo Eliminar el Vehículo"
+          }
+        }
+      }
     },
     "Failed To Delete Vehicle\nDetails:%@" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudieron Eliminar los Detalles del Vehículo: %@"
+          }
+        }
+      }
     },
     "GitHub Repo" : {
       "localizations" : {
@@ -175,6 +279,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "GitHub Repo"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repositorio de GitHub"
           }
         }
       }
@@ -192,6 +302,12 @@
             "state" : "translated",
             "value" : "Anonym angemeldet mit ID: %@"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar sesión de forma anónima con ID: %@"
+          }
         }
       }
     },
@@ -207,6 +323,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hersteller"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marca"
           }
         }
       }
@@ -224,6 +346,12 @@
             "state" : "translated",
             "value" : "Modell"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modelo"
+          }
         }
       }
     },
@@ -240,11 +368,24 @@
             "state" : "translated",
             "value" : "Name"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre"
+          }
         }
       }
     },
     "Newest to Oldest" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Más Nuevo a Más Antiguo"
+          }
+        }
+      }
     },
     "Notes" : {
       "localizations" : {
@@ -259,14 +400,34 @@
             "state" : "translated",
             "value" : "Notizen"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notas"
+          }
         }
       }
     },
     "OK" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
     },
     "Oldest to Newest" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Más Antiguo a Más Nuevo "
+          }
+        }
+      }
     },
     "Profile" : {
       "localizations" : {
@@ -280,6 +441,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profil"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perfil"
           }
         }
       }
@@ -297,6 +464,12 @@
             "state" : "translated",
             "value" : "Fehler melden"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reportar un Error"
+          }
         }
       }
     },
@@ -312,6 +485,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Neues Feature vorschlagen"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solicitar una Nueva Característica"
           }
         }
       }
@@ -329,6 +508,12 @@
             "state" : "translated",
             "value" : "Einstellungen"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configuración"
+          }
         }
       }
     },
@@ -344,6 +529,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abmelden"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desconectar"
           }
         }
       }
@@ -361,6 +552,12 @@
             "state" : "translated",
             "value" : "Angemeldet als %@"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registrado como %@"
+          }
         }
       }
     },
@@ -376,6 +573,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vielen Dank fürs Nutzen dieser App! Sie ist Open Source und Jede*r kann zur Entwicklung beitragen."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Gracias por usar esta aplicación! Es de código abierto y cualquiera puede contribuir."
           }
         }
       }
@@ -393,6 +596,12 @@
             "state" : "translated",
             "value" : "Titel des Events"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El título del evento"
+          }
         }
       }
     },
@@ -408,6 +617,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Titel"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Título"
           }
         }
       }
@@ -425,6 +640,12 @@
             "state" : "translated",
             "value" : "Titel des Wartungs-Events"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El Título del evento de mantenimiento"
+          }
         }
       }
     },
@@ -440,6 +661,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fahrzeughersteller"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marca del Vehículo"
           }
         }
       }
@@ -457,6 +684,12 @@
             "state" : "translated",
             "value" : "Fahrzeugmodell"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modelo vehículo"
+          }
         }
       }
     },
@@ -473,6 +706,12 @@
             "state" : "translated",
             "value" : "Fahrzeugname"
           }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre del Vehículo"
+          }
         }
       }
     },
@@ -488,6 +727,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fahrzeuge"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vehículos"
           }
         }
       }
@@ -510,6 +755,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : ""
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versión %@ (%@)"
           }
         }
       }
