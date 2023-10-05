@@ -84,9 +84,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5FA6DCA32ACF1E3B0086FB08 /* Testplan.UITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Testplan.UITests.xctestplan; sourceTree = "<group>"; };
+		5FA6DCA42ACF1E3B0086FB08 /* Testplan.UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Testplan.UnitTests.xctestplan; sourceTree = "<group>"; };
 		5FA841562ACF0FD000CB56C8 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
-		5FA841572ACF134100CB56C8 /* Testplan.UITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Testplan.UITests.xctestplan; sourceTree = "<group>"; };
-		5FA841582ACF134100CB56C8 /* Testplan.UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Testplan.UnitTests.xctestplan; sourceTree = "<group>"; };
 		5FA841592ACF143E00CB56C8 /* Base+Widget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Base+Widget.xcconfig"; sourceTree = "<group>"; };
 		E58499652ACDDA8B00634660 /* ContributorsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsListView.swift; sourceTree = "<group>"; };
 		E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsProfileView.swift; sourceTree = "<group>"; };
@@ -168,6 +168,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FA6DCA22ACF1E3B0086FB08 /* Testplans */ = {
+			isa = PBXGroup;
+			children = (
+				5FA6DCA32ACF1E3B0086FB08 /* Testplan.UITests.xctestplan */,
+				5FA6DCA42ACF1E3B0086FB08 /* Testplan.UnitTests.xctestplan */,
+			);
+			path = Testplans;
+			sourceTree = "<group>";
+		};
 		FF3DDF492AA4386C009D91C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,8 +197,7 @@
 		FF5D139A2A86C2D500BC9BD6 = {
 			isa = PBXGroup;
 			children = (
-				5FA841572ACF134100CB56C8 /* Testplan.UITests.xctestplan */,
-				5FA841582ACF134100CB56C8 /* Testplan.UnitTests.xctestplan */,
+				5FA6DCA22ACF1E3B0086FB08 /* Testplans */,
 				5FA841562ACF0FD000CB56C8 /* Base.xcconfig */,
 				5FA841592ACF143E00CB56C8 /* Base+Widget.xcconfig */,
 				FFDADF5D2ACCE9AB00DDEF79 /* Project.xcconfig */,
