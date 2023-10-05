@@ -17,10 +17,4 @@ final class BasicCarMaintenanceTests: XCTestCase {
 
     func testExample() throws {
     }
-
-    func testExample2() throws {
-    }
-
-    func testExample3() throws {
-    }
 }
