@@ -5,8 +5,8 @@
 //  Created by Mikaela Caron on 8/25/23.
 //
 
-import Foundation
 import FirebaseFirestoreSwift
+import Foundation
 
 struct MaintenanceEvent: Codable, Identifiable, Hashable {
     @DocumentID var id: String?

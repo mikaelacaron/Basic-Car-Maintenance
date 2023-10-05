@@ -5,9 +5,9 @@
 //  Created by Mikaela Caron on 9/11/23.
 //
 
-import Foundation
-import FirebaseFirestoreSwift
 import FirebaseFirestore
+import FirebaseFirestoreSwift
+import Foundation
 
 @MainActor
 final class SettingsViewModel: ObservableObject {
