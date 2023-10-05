@@ -62,8 +62,17 @@ struct DashboardView: View {
             }
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
-                    Button {
-                        isShowingAddView.toggle()
+                    NavigationLink {
+                        AddMaintenanceView { event in
+                            Task {
+                                await viewModel.addEvent(event)
+                            }
+                        }
+                        .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
+                            Button("OK", role: .cancel) {}
+                        } message: {
+                            Text(viewModel.errorMessage)
+                        }
                     } label: {
                         Image(systemName: "plus")
                     }

@@ -35,20 +35,27 @@ class DashboardViewModel {
         if let uid = authenticationViewModel.user?.uid {
             var eventToAdd = maintenanceEvent
             eventToAdd.userID = uid
-
-            let documentReference = try? Firestore
-                .firestore()
-                .collection("maintenance_events")
-                .addDocument(from: eventToAdd)
-
-            var event = maintenanceEvent
-            if let documentId = documentReference?.documentID {
+            
+            do {
+                let documentReference = try Firestore
+                    .firestore()
+                    .collection("maintenance_events")
+                    .addDocument(from: eventToAdd)
+                
+                var event = maintenanceEvent
+                let documentId = documentReference.documentID
                 event.id = documentId
+                
+                events.append(event)
+                
+                errorMessage = ""
+            } catch {
+                showAddErrorAlert.toggle()
+                errorMessage = error.localizedDescription
             }
-            events.append(event)
         }
     }
-
+    
     func getMaintenanceEvents() async {
         if let uid =  authenticationViewModel.user?.uid {
             let db = Firestore.firestore()

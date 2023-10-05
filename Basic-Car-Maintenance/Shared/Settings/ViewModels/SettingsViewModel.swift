@@ -5,18 +5,43 @@
 //  Created by Mikaela Caron on 9/11/23.
 //
 
-import Foundation
-import FirebaseFirestoreSwift
 import FirebaseFirestore
+import FirebaseFirestoreSwift
+import Foundation
 
 @Observable
 final class SettingsViewModel {
     let authenticationViewModel: AuthenticationViewModel
+    @Published var contributors: [Contributor]?
     
     var vehicles = [Vehicle]()
     
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
+    }
+    
+    let urls: [String: URL] = [
+        "mikaelacaronProfile": URL(string: "https://github.com/mikaelacaron")!,
+        "Basic-Car-MaintenanceRepo": URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance")!,
+        "bugReport": URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues")!
+    ]
+    
+    func getContributors() async {
+        guard let url =
+                URL(string: "https://api.github.com/repos/mikaelacaron/Basic-Car-Maintenance/contributors")
+        else {
+            return
+        }
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let contributors = try decoder.decode([Contributor].self, from: data)
+            self.contributors = contributors
+        } catch {
+            print("Error fetching or decoding contributors: \(error)")
+        }
     }
     
     func addVehicle(_ vehicle: Vehicle) async {
