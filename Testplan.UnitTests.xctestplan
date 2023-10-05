@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "F88F71A5-BE2E-4FB1-87CE-B795139129AF",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Basic-Car-Maintenance.xcodeproj",
+        "identifier" : "FF5D13B32A86C2D800BC9BD6",
+        "name" : "Basic-Car-Maintenance-Tests.xctest"
+      }
+    }
+  ],
+  "version" : 1
+}
