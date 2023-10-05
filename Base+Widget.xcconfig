@@ -1,2 +1,0 @@
-#include "Base.xcconfig"
-PRODUCT_BUNDLE_IDENTIFIER = $(BASE_BUNDLE_IDENTIFIER)-Widget

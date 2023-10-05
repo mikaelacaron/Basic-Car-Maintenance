@@ -177,6 +177,15 @@
 			path = Testplans;
 			sourceTree = "<group>";
 		};
+		5FA6DCA52ACF1EE50086FB08 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				5FA841562ACF0FD000CB56C8 /* Base.xcconfig */,
+				5FA841592ACF143E00CB56C8 /* Base+Widget.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		FF3DDF492AA4386C009D91C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,8 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				5FA6DCA22ACF1E3B0086FB08 /* Testplans */,
-				5FA841562ACF0FD000CB56C8 /* Base.xcconfig */,
-				5FA841592ACF143E00CB56C8 /* Base+Widget.xcconfig */,
+				5FA6DCA52ACF1EE50086FB08 /* Config */,
 				FFDADF5D2ACCE9AB00DDEF79 /* Project.xcconfig */,
 				FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */,
 				FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */,
