@@ -9,7 +9,6 @@ import SwiftUI
 
 struct DashboardView: View {
     
-    @State private var isShowingAddView = false
     @StateObject private var viewModel: DashboardViewModel
     
     init(authenticationViewModel: AuthenticationViewModel) {
@@ -48,12 +47,16 @@ struct DashboardView: View {
             }
             .animation(.linear, value: viewModel.sortOption)
             .navigationTitle(Text("Dashboard"))
-            .sheet(isPresented: $isShowingAddView) {
+            .navigationDestination(isPresented: $viewModel.showAddView) {
                 AddMaintenanceView() { event in
                     Task {
                         await viewModel.addEvent(event)
                     }
-                    
+                }
+                .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
+                    Button("OK", role: .cancel) {}
+                } message: {
+                    Text(viewModel.errorMessage)
                 }
             }
             .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert) {
@@ -66,7 +69,7 @@ struct DashboardView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
                     Button {
-                        isShowingAddView.toggle()
+                        viewModel.showAddView.toggle()
                     } label: {
                         Image(systemName: "plus")
                     }
