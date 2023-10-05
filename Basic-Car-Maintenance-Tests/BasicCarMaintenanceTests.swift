@@ -1,6 +1,6 @@
 //
 //  Basic_Car_MaintenanceTests.swift
-//  Basic-Car-MaintenanceTests
+//  Basic-Car-Maintenance-Tests
 //
 //  Created by Mikaela Caron on 8/11/23.
 //
@@ -16,5 +16,11 @@ final class BasicCarMaintenanceTests: XCTestCase {
     }
 
     func testExample() throws {
+    }
+
+    func testExample2() throws {
+    }
+
+    func testExample3() throws {
     }
 }
