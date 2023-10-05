@@ -1,7 +1,7 @@
 # Basic Car Maintenance
 Welcome to my open source app! It is ready for contributors for [Hacktoberfest](https://hacktoberfest.com/)! Use this app to gain experience getting started in open source for iOS and macOS development using Swift.
 
-# Getting Started
+# Getting Startedd
 
 ![Static Badge](https://img.shields.io/badge/status-active-brightgreen)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mikaelacaron/Basic-Car-Maintenance/dev?logo=github)
