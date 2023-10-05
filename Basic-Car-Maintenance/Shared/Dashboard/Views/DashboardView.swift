@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct DashboardView: View {
-    
+    @EnvironmentObject var actionService: ActionService
+    @Environment(\.scenePhase) var scenePhase
+    @State private var isShowingAddView = false
     @Bindable private var viewModel: DashboardViewModel
     @State private var isShowingEditView = false
     @State private var selectedMaintenanceEvent: MaintenanceEvent?
@@ -71,20 +73,12 @@ struct DashboardView: View {
                 Text(viewModel.errorMessage).padding()
             }
             .navigationDestination(isPresented: $viewModel.isShowingAddMaintenanceEvent) {
-                AddMaintenanceView { event in
-                    viewModel.addEvent(event)
-                }
-                .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
-                    Button("OK", role: .cancel) {}
-                } message: {
-                    Text(viewModel.errorMessage)
-                }
+                makeAddMaintenanceView()
             }
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
                     Button {
                         viewModel.isShowingAddMaintenanceEvent = true
-                        
                     } label: {
                         Image(systemName: "plus")
                     }
@@ -106,6 +100,39 @@ struct DashboardView: View {
             .task {
                 await viewModel.getMaintenanceEvents()
             }
+            .sheet(isPresented: $isShowingAddView) {
+                makeAddMaintenanceView()
+            }
+        }
+        .onChange(of: scenePhase) { _, newScenePhase in
+            guard case .active = newScenePhase else { return }
+            
+            guard let action = actionService.action,
+                  action == .newMaintenance
+            else {
+                // another action has been triggered, so we will need to dismiss the current presented view
+                isShowingAddView = false
+                return
+            }
+            
+            // if the view is already presented, do nothing
+            guard !isShowingAddView else { return }
+            // delay the presentation of the view a bit
+            // to make sure the already presented view is dismissed.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                isShowingAddView = true
+            }
+        }
+    }
+    
+    private func makeAddMaintenanceView() -> some View {
+        AddMaintenanceView { event in
+            viewModel.addEvent(event)
+        }
+        .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(viewModel.errorMessage)
         }
     }
 }
