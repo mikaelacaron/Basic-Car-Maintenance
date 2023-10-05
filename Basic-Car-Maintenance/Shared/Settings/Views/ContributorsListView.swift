@@ -18,8 +18,8 @@ struct ContributorsListView: View {
                     Link(
                         destination: URL(string: contributor.htmlURL) ??
                         viewModel.urls["Basic-Car-Maintenance"]!) {
-                        ContributorsProfileView(name: contributor.login, url: contributor.avatarURL)
-                    }
+                            ContributorsProfileView(name: contributor.login, url: contributor.avatarURL)
+                        }
                 }
             } else {
                 ProgressView() {

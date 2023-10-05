@@ -28,19 +28,18 @@ final class SettingsViewModel: ObservableObject {
     ]
     
     func getContributors() async {
-guard let url =
-        URL(string: "https://api.github.com/repos/mikaelacaron/Basic-Car-Maintenance/contributors")
+        guard let url =
+                URL(string: "https://api.github.com/repos/mikaelacaron/Basic-Car-Maintenance/contributors")
         else {
             return
         }
-
+        
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let contributors = try decoder.decode([Contributor].self, from: data)
             self.contributors = contributors
-            print(contributors)
         } catch {
             print("Error fetching or decoding contributors: \(error)")
         }
