@@ -16,6 +16,7 @@ class DashboardViewModel: ObservableObject {
     @Published var events = [MaintenanceEvent]()
     @Published var showAddErrorAlert = false
     @Published var showErrorAlert = false
+    @Published var isShowingAddMaintenanceEvent = false
     @Published var errorMessage : String = ""
     @Published var sortOption: SortOption = .custom
     
@@ -49,6 +50,7 @@ class DashboardViewModel: ObservableObject {
                 events.append(event)
                 
                 errorMessage = ""
+                isShowingAddMaintenanceEvent = false
             } catch {
                 showAddErrorAlert.toggle()
                 errorMessage = error.localizedDescription
