@@ -182,7 +182,7 @@
 		FF5D139A2A86C2D500BC9BD6 = {
 			isa = PBXGroup;
 			children = (
-				FFDADF5D2ACCE9AB00DDEF79 /* Project.xcconfig */,
+				FFBE79BA2AD0A48C0005524E /* Configurations */,
 				FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */,
 				FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */,
 				FFDADF822ACD35A100DDEF79 /* Basic-Car-Maintenance-Widget */,
@@ -278,6 +278,14 @@
 				FF755B452A90969D00F49A13 /* Bundle+extension.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FFBE79BA2AD0A48C0005524E /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				FFDADF5D2ACCE9AB00DDEF79 /* Project.xcconfig */,
+			);
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 		FFBFE08F2A98EFDD000A9BEB /* Models */ = {
@@ -723,7 +731,6 @@
 				CODE_SIGN_ENTITLEMENTS = "Basic-Car-Maintenance/Basic_Car_Maintenance.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Basic-Car-Maintenance/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -762,7 +769,6 @@
 				CODE_SIGN_ENTITLEMENTS = "Basic-Car-Maintenance/Basic_Car_Maintenance.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Basic-Car-Maintenance/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
