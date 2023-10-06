@@ -86,6 +86,7 @@
 /* Begin PBXFileReference section */
 		5FA6DCA72AD0630C0086FB08 /* Base+Widget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Base+Widget.xcconfig"; sourceTree = "<group>"; };
 		5FA6DCA82AD0630C0086FB08 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		5FA6DCA92AD0663A0086FB08 /* Base+Tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Base+Tests.xcconfig"; sourceTree = "<group>"; };
 		E58499652ACDDA8B00634660 /* ContributorsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsListView.swift; sourceTree = "<group>"; };
 		E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsProfileView.swift; sourceTree = "<group>"; };
 		E58499692ACDDAFF00634660 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 		5FA6DCA62AD0630C0086FB08 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				5FA6DCA92AD0663A0086FB08 /* Base+Tests.xcconfig */,
 				5FA6DCA72AD0630C0086FB08 /* Base+Widget.xcconfig */,
 				5FA6DCA82AD0630C0086FB08 /* Base.xcconfig */,
 			);
@@ -809,6 +811,7 @@
 		};
 		FF5D13CC2A86C2D800BC9BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FA6DCA92AD0663A0086FB08 /* Base+Tests.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -830,6 +833,7 @@
 		};
 		FF5D13CD2A86C2D800BC9BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FA6DCA92AD0663A0086FB08 /* Base+Tests.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -851,6 +855,7 @@
 		};
 		FF5D13CF2A86C2D800BC9BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FA6DCA92AD0663A0086FB08 /* Base+Tests.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -871,6 +876,7 @@
 		};
 		FF5D13D02A86C2D800BC9BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FA6DCA92AD0663A0086FB08 /* Base+Tests.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
