@@ -79,19 +79,24 @@ class DashboardViewModel: ObservableObject {
     }
     
     func updateEvent(_ maintenanceEvent: MaintenanceEvent) async {
-            
-            if let uid = authenticationViewModel.user?.uid {
-                guard let id = maintenanceEvent.id else {return}
-                var eventToUpdate = maintenanceEvent
-                eventToUpdate.userID = uid
-                try? Firestore
+        
+        if let uid = authenticationViewModel.user?.uid {
+            guard let id = maintenanceEvent.id else { return }
+            var eventToUpdate = maintenanceEvent
+            eventToUpdate.userID = uid
+            do {
+                try Firestore
                     .firestore()
                     .collection("maintenance_events")
                     .document(id)
                     .setData(from: eventToUpdate)
+            } catch {
+                showAddErrorAlert.toggle()
+                errorMessage = error.localizedDescription
             }
-                    await self.getMaintenanceEvents()
         }
+        await self.getMaintenanceEvents()
+    }
     
     func deleteEvent(_ event: MaintenanceEvent) async {
         guard let documentId = event.id else {

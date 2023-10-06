@@ -1,5 +1,5 @@
 //
-//  EditEventDetailView.swift
+//  EditMaintenanceEventView.swift
 //  Basic-Car-Maintenance
 //
 //  Created by Aaron Wilson on 10/5/23.
@@ -19,8 +19,7 @@ struct EditMaintenanceEventView: View {
         NavigationStack {
             Form {
                 Section {
-                    TextField("Title",
-                              text: $title)
+                    TextField("Title", text: $title)
                 } header: {
                     Text("Title")
                 }
@@ -35,9 +34,9 @@ struct EditMaintenanceEventView: View {
                     Text("Notes")
                 }
             }
-            .onAppear(perform: {
+            .onAppear {
                 setMaintenanceEventValues(event: selectedEvent)
-            })
+            }
             .navigationTitle(Text("Add Maintenance"))
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -47,15 +46,15 @@ struct EditMaintenanceEventView: View {
                         Text("Cancel")
                     }
                 }
+                
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
                         var event = MaintenanceEvent(title: title, date: date, notes: notes)
                         event.id = selectedEvent.id
-                        print("button pressed")
                         Task {
                             await viewModel.updateEvent(event)
+                            dismiss()
                         }
-                        dismiss()
                     } label: {
                         Text("Update")
                     }
@@ -65,6 +64,7 @@ struct EditMaintenanceEventView: View {
             
         }
     }
+    
     func setMaintenanceEventValues(event: MaintenanceEvent) {
         self.title = event.title
         self.date = event.date
