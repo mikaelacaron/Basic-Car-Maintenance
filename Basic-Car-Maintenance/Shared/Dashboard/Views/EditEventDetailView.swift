@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EditMaintenanceEventView: View {
-    @Binding var selectedEvent: MaintenanceEvent
+    @Binding var selectedEvent: MaintenanceEvent?
     @ObservedObject var viewModel: DashboardViewModel
     @State private var title = ""
     @State private var date = Date()
@@ -35,6 +35,7 @@ struct EditMaintenanceEventView: View {
                 }
             }
             .onAppear {
+                guard let selectedEvent = selectedEvent else { return }
                 setMaintenanceEventValues(event: selectedEvent)
             }
             .navigationTitle(Text("Add Maintenance"))
@@ -50,6 +51,7 @@ struct EditMaintenanceEventView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
                         var event = MaintenanceEvent(title: title, date: date, notes: notes)
+                        guard let selectedEvent = selectedEvent else { return }
                         event.id = selectedEvent.id
                         Task {
                             await viewModel.updateEvent(event)
@@ -61,7 +63,6 @@ struct EditMaintenanceEventView: View {
                     .disabled(title.isEmpty)
                 }
             }
-            
         }
     }
     
