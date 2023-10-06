@@ -227,6 +227,9 @@
         }
       }
     },
+    "Failed To Add Vehicle" : {
+
+    },
     "Failed To Add Vehicle\nDetails:%@" : {
 
     },
@@ -269,6 +272,9 @@
           }
         }
       }
+    },
+    "Failed To Delete Vehicle. Unknown Error." : {
+
     },
     "GitHub Repo" : {
       "localizations" : {

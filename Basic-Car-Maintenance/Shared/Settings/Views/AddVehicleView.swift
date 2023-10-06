@@ -46,7 +46,7 @@ struct AddVehicleView: View {
                     Button {
                         let vehicle = Vehicle(name: name, make: make, model: model)
                         addTapped(vehicle)
-//                        dismiss()
+                        dismiss()
                     } label: {
                         Text("Add")
                     }
