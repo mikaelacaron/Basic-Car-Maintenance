@@ -1,0 +1,3 @@
+#include "Base.xcconfig"
+// DO NOT TOUCH!!! This is used to set correct Bundle Identifier for the Widget-Extension
+PRODUCT_BUNDLE_IDENTIFIER = $(BASE_BUNDLE_IDENTIFIER)-Widget

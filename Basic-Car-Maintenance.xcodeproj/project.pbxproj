@@ -84,6 +84,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5FA6DCA72AD0630C0086FB08 /* Base+Widget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Base+Widget.xcconfig"; sourceTree = "<group>"; };
+		5FA6DCA82AD0630C0086FB08 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		E58499652ACDDA8B00634660 /* ContributorsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsListView.swift; sourceTree = "<group>"; };
 		E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsProfileView.swift; sourceTree = "<group>"; };
 		E58499692ACDDAFF00634660 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
@@ -164,6 +166,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FA6DCA62AD0630C0086FB08 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				5FA6DCA72AD0630C0086FB08 /* Base+Widget.xcconfig */,
+				5FA6DCA82AD0630C0086FB08 /* Base.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		FF3DDF492AA4386C009D91C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +195,7 @@
 		FF5D139A2A86C2D500BC9BD6 = {
 			isa = PBXGroup;
 			children = (
+				5FA6DCA62AD0630C0086FB08 /* Config */,
 				FFDADF5D2ACCE9AB00DDEF79 /* Project.xcconfig */,
 				FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */,
 				FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */,
@@ -719,7 +731,7 @@
 		};
 		FF5D13C92A86C2D800BC9BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */;
+			baseConfigurationReference = 5FA6DCA82AD0630C0086FB08 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -758,7 +770,7 @@
 		};
 		FF5D13CA2A86C2D800BC9BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */;
+			baseConfigurationReference = 5FA6DCA82AD0630C0086FB08 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -806,7 +818,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-MaintenanceTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -828,7 +839,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-MaintenanceTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -849,7 +859,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-MaintenanceUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -870,7 +879,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-MaintenanceUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -883,6 +891,7 @@
 		};
 		FFDADF902ACD35A200DDEF79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FA6DCA72AD0630C0086FB08 /* Base+Widget.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -900,7 +909,6 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-Maintenance.Basic-Car-Maintenance-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -912,6 +920,7 @@
 		};
 		FFDADF912ACD35A200DDEF79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FA6DCA72AD0630C0086FB08 /* Base+Widget.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -929,7 +938,6 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-Maintenance.Basic-Car-Maintenance-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

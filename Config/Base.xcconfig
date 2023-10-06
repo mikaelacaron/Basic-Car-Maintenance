@@ -1,0 +1,3 @@
+#include "Basic-Car-Maintenance.xcconfig"
+// DO NOT TOUCH!!! This is used to get all bundle identifiers correct
+PRODUCT_BUNDLE_IDENTIFIER = $(BASE_BUNDLE_IDENTIFIER)
