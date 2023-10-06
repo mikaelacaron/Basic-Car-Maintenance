@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    private var viewModel: SettingsViewModel
+    @State private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
     @State private var showDeleteVehicleError = false
     @State var errorDetails: Error?
