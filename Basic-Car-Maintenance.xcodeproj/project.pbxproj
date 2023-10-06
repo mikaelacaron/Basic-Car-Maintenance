@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */; };
 		E58499662ACDDA8B00634660 /* ContributorsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499652ACDDA8B00634660 /* ContributorsListView.swift */; };
 		E58499682ACDDA9A00634660 /* ContributorsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */; };
 		E584996A2ACDDAFF00634660 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499692ACDDAFF00634660 /* Contributor.swift */; };
@@ -84,6 +85,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventDetailView.swift; sourceTree = "<group>"; };
 		E58499652ACDDA8B00634660 /* ContributorsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsListView.swift; sourceTree = "<group>"; };
 		E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsProfileView.swift; sourceTree = "<group>"; };
 		E58499692ACDDAFF00634660 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				FF755B3B2A908E3E00F49A13 /* DashboardView.swift */,
 				FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */,
+				023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				E58499682ACDDA9A00634660 /* ContributorsProfileView.swift in Sources */,
 				FF755B492A909A0000F49A13 /* AddMaintenanceView.swift in Sources */,
 				FF09FC912AB6FF44006BE61A /* AuthenticationView.swift in Sources */,
+				023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */,
 				FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */,
 				FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */,
 				FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */,

@@ -10,6 +10,10 @@ import SwiftUI
 struct DashboardView: View {
     
     @StateObject private var viewModel: DashboardViewModel
+    @State private var isShowingEditView = false
+        @State private var selectedMaintenanceEvent: MaintenanceEvent = MaintenanceEvent(
+            title: "", date: Date(), notes: ""
+        )
     
     init(authenticationViewModel: AuthenticationViewModel) {
         self._viewModel = StateObject(wrappedValue: DashboardViewModel(authenticationViewModel: authenticationViewModel)) // swiftlint:disable:this line_length
@@ -36,6 +40,19 @@ struct DashboardView: View {
                         } label: {
                             Image(systemName: "trash")
                         }
+                        Button {
+                            selectedMaintenanceEvent = event
+                            isShowingEditView = true
+                        } label: {
+                            VStack {
+                                Text("Edit")
+                                Image(systemName: "pencil")
+                            }
+                        }
+                    }
+                    .sheet(isPresented: $isShowingEditView) {
+                            EditMaintenanceEventView(
+                            selectedEvent: $selectedMaintenanceEvent, viewModel: viewModel)
                     }
                 }
                 .listStyle(.inset)
