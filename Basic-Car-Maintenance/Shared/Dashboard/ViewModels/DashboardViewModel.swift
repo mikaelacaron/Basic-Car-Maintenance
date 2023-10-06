@@ -14,7 +14,9 @@ class DashboardViewModel: ObservableObject {
     let authenticationViewModel: AuthenticationViewModel
     
     @Published var events = [MaintenanceEvent]()
+    @Published var showAddErrorAlert = false
     @Published var showErrorAlert = false
+    @Published var isShowingAddMaintenanceEvent = false
     @Published var errorMessage : String = ""
     @Published var sortOption: SortOption = .custom
     
@@ -34,20 +36,28 @@ class DashboardViewModel: ObservableObject {
         if let uid = authenticationViewModel.user?.uid {
             var eventToAdd = maintenanceEvent
             eventToAdd.userID = uid
-
-            let documentReference = try? Firestore
-                .firestore()
-                .collection("maintenance_events")
-                .addDocument(from: eventToAdd)
-
-            var event = maintenanceEvent
-            if let documentId = documentReference?.documentID {
+            
+            do {
+                let documentReference = try Firestore
+                    .firestore()
+                    .collection("maintenance_events")
+                    .addDocument(from: eventToAdd)
+                
+                var event = maintenanceEvent
+                let documentId = documentReference.documentID
                 event.id = documentId
+                
+                events.append(event)
+                
+                errorMessage = ""
+                isShowingAddMaintenanceEvent = false
+            } catch {
+                showAddErrorAlert.toggle()
+                errorMessage = error.localizedDescription
             }
-            events.append(event)
         }
     }
-
+    
     func getMaintenanceEvents() async {
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
