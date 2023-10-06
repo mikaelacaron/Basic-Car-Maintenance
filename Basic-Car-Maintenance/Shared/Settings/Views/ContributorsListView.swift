@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ContributorsListView: View {
     
-    @ObservedObject var viewModel: SettingsViewModel
+    var viewModel: SettingsViewModel
+
+    init(viewModel: SettingsViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         List {

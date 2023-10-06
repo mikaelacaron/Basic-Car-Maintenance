@@ -12,7 +12,7 @@ import Foundation
 @Observable
 final class SettingsViewModel {
     let authenticationViewModel: AuthenticationViewModel
-    @Published var contributors: [Contributor]?
+    var contributors: [Contributor]?
     
     var vehicles = [Vehicle]()
     
