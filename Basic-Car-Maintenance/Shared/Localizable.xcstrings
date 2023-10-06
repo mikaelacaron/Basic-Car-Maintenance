@@ -228,13 +228,33 @@
       }
     },
     "Failed To Add Vehicle" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug konnte nicht hinzugefügt werden"
+          }
+        }
+      }
     },
     "Failed To Add Vehicle\nDetails:%@" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug konnte nicht hinzugefügt werden\nDetails:%@"
+          }
+        }
+      }
     },
     "Failed To Add Vehicle. Unknown Error." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug konnte nicht hinzugefügt werden. Unbekannter Fehler."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -255,6 +275,12 @@
     },
     "Failed To Delete Vehicle" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug konnte nicht gelöscht werden"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -265,6 +291,12 @@
     },
     "Failed To Delete Vehicle\nDetails:%@" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug konnte nicht gelöscht werden\nDetails:%@"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -274,7 +306,14 @@
       }
     },
     "Failed To Delete Vehicle. Unknown Error." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug konnte nicht gelöscht werden. Unbekannter Fehler."
+          }
+        }
+      }
     },
     "GitHub Repo" : {
       "localizations" : {
