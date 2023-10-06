@@ -15,7 +15,9 @@ class DashboardViewModel {
     let authenticationViewModel: AuthenticationViewModel
     
     var events = [MaintenanceEvent]()
+    var showAddErrorAlert = false
     var showErrorAlert = false
+    var isShowingAddMaintenanceEvent = false
     var errorMessage : String = ""
     var sortOption: SortOption = .custom
     
@@ -49,6 +51,7 @@ class DashboardViewModel {
                 events.append(event)
                 
                 errorMessage = ""
+                isShowingAddMaintenanceEvent = false
             } catch {
                 showAddErrorAlert.toggle()
                 errorMessage = error.localizedDescription

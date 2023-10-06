@@ -60,19 +60,23 @@ struct DashboardView: View {
             } message: {
                 Text(viewModel.errorMessage).padding()
             }
+            .navigationDestination(isPresented: $viewModel.isShowingAddMaintenanceEvent) {
+                AddMaintenanceView { event in
+                    Task {
+                        await viewModel.addEvent(event)
+                    }
+                }
+                .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
+                    Button("OK", role: .cancel) {}
+                } message: {
+                    Text(viewModel.errorMessage)
+                }
+            }
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
-                    NavigationLink {
-                        AddMaintenanceView { event in
-                            Task {
-                                await viewModel.addEvent(event)
-                            }
-                        }
-                        .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
-                            Button("OK", role: .cancel) {}
-                        } message: {
-                            Text(viewModel.errorMessage)
-                        }
+                    Button {
+                        viewModel.isShowingAddMaintenanceEvent = true
+                        
                     } label: {
                         Image(systemName: "plus")
                     }
