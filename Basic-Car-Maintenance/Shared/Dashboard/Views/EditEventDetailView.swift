@@ -40,7 +40,7 @@ struct EditMaintenanceEventView: View {
             }
             .navigationTitle(Text("Add Maintenance"))
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .topBarLeading) {
                     Button {
                         dismiss()
                     } label: {
@@ -48,7 +48,7 @@ struct EditMaintenanceEventView: View {
                     }
                 }
                 
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         var event = MaintenanceEvent(title: title, date: date, notes: notes)
                         guard let selectedEvent = selectedEvent else { return }
