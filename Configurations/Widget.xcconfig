@@ -1,0 +1,12 @@
+//
+//  Widget.xcconfig
+//  Basic-Car-Maintenance
+//
+//  Created by Mikaela Caron on 10/6/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Basic-Car-Maintenance.xcconfig"
+PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER)-Widget
