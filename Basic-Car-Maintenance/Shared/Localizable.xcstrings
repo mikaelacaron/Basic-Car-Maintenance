@@ -227,6 +227,9 @@
         }
       }
     },
+    "Failed To Add Vehicle\nDetails:%@" : {
+
+    },
     "Failed To Add Vehicle. Unknown Error." : {
       "localizations" : {
         "es-419" : {

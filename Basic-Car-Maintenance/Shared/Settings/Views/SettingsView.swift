@@ -12,6 +12,7 @@ struct SettingsView: View {
     @StateObject private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
     @State private var showDeleteVehicleError = false
+    @State private var showAddVehicleError: Bool = false
     @State var errorDetails: Error?
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     
@@ -33,8 +34,8 @@ struct SettingsView: View {
                             .resizable()
                             .frame(width: 20, height: 20)
                     }
-                }        
-
+                }
+                
                 // swiftlint:disable:next line_length
                 Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=feature+request&projects=&template=feature-request.md&title=FEATURE+-")!) {
                     Label {
@@ -45,7 +46,7 @@ struct SettingsView: View {
                             .frame(width: 20, height: 20)
                     }
                 }
-
+                
                 // swiftlint:disable:next line_length
                 Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=bug&projects=&template=bug-report.md&title=BUG+-")!) {
                     Label {
@@ -64,7 +65,7 @@ struct SettingsView: View {
                         Image(systemName: "person.3.fill")
                         Text("Contributors")
                     }
-                }
+                }.foregroundStyle(.blue)
                 
                 Section {
                     ForEach(viewModel.vehicles) { vehicle in
@@ -121,7 +122,7 @@ struct SettingsView: View {
                 if let errorDetails {
                     Text("Failed To Delete Vehicle\nDetails:\(errorDetails.localizedDescription)")
                 } else {
-                    Text("Failed To Add Vehicle. Unknown Error.")
+                    Text("Failed To Delete Vehicle. Unknown Error.")
                 }
             }
             .navigationTitle(Text("Settings"))
@@ -131,7 +132,23 @@ struct SettingsView: View {
             .sheet(isPresented: $isShowingAddVehicle) {
                 AddVehicleView() { vehicle in
                     Task {
-                        await viewModel.addVehicle(vehicle)
+                        do {
+                            try await viewModel.addVehicle(vehicle)
+                        } catch {
+                            errorDetails = error
+                            showAddVehicleError = true
+                        }
+                    }
+                }
+                .alert("Failed To Add Vehicle", isPresented: $showAddVehicleError) {
+                    Button("OK") {
+                        showAddVehicleError = false
+                    }
+                } message: {
+                    if let errorDetails {
+                        Text("Failed To Add Vehicle\nDetails:\(errorDetails.localizedDescription)")
+                    } else {
+                        Text("Failed To Add Vehicle. Unknown Error.")
                     }
                 }
             }
