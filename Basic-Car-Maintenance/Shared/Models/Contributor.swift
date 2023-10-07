@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Contributor: Codable, Hashable , Identifiable {
+struct Contributor: Codable, Hashable, Identifiable {
     let login: String
     let id: Int
     let nodeID: String

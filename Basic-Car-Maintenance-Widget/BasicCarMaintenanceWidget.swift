@@ -38,7 +38,7 @@ struct SimpleEntry: TimelineEntry {
     let configuration: ConfigurationAppIntent
 }
 
-struct BasicCarMaintenanceWidgetEntryView : View {
+struct BasicCarMaintenanceWidgetEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
