@@ -1,6 +1,6 @@
 //
-//  Basic_Car_MaintenanceUITests.swift
-//  Basic-Car-MaintenanceUITests
+//  Basic_Car_Maintenance-UITests.swift
+//  Basic-Car-Maintenance-UITests
 //
 //  Created by Mikaela Caron on 8/11/23.
 //
