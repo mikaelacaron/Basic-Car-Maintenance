@@ -10,12 +10,11 @@ import SwiftUI
 
 @main
 struct BasicCarMaintenanceApp: App {
-    
-    @StateObject var authenticationViewModel: AuthenticationViewModel
+    @State private var authenticationViewModel: AuthenticationViewModel
     
     init() {
         FirebaseApp.configure()
-        _authenticationViewModel = StateObject(wrappedValue: AuthenticationViewModel())
+        _authenticationViewModel = .init(initialValue: AuthenticationViewModel())
     }
     
     var body: some Scene {
