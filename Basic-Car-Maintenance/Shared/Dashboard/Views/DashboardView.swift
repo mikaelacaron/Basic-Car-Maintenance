@@ -9,8 +9,9 @@ import SwiftUI
 
 struct DashboardView: View {
     
-    @State private var isShowingAddView = false
     @Bindable private var viewModel: DashboardViewModel
+    @State private var isShowingAddView = false
+    @State private var selectedMaintenanceEvent: MaintenanceEvent?
     
     init(authenticationViewModel: AuthenticationViewModel) {
         viewModel = DashboardViewModel(authenticationViewModel: authenticationViewModel)
@@ -37,6 +38,20 @@ struct DashboardView: View {
                         } label: {
                             Image(systemName: "trash")
                         }
+                        
+                        Button {
+                            selectedMaintenanceEvent = event
+                            isShowingEditView = true
+                        } label: {
+                            VStack {
+                                Text("Edit")
+                                Image(systemName: "pencil")
+                            }
+                        }
+                    }
+                    .sheet(isPresented: $isShowingEditView) {
+                        EditMaintenanceEventView(
+                            selectedEvent: $selectedMaintenanceEvent, viewModel: viewModel)
                     }
                 }
                 .listStyle(.inset)
