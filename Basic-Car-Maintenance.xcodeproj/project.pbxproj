@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */; };
+		898009792AD1899700604E7C /* ContributorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898009782AD1899700604E7C /* ContributorTests.swift */; };
 		E58499662ACDDA8B00634660 /* ContributorsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499652ACDDA8B00634660 /* ContributorsListView.swift */; };
 		E58499682ACDDA9A00634660 /* ContributorsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */; };
 		E584996A2ACDDAFF00634660 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499692ACDDAFF00634660 /* Contributor.swift */; };
@@ -16,7 +17,6 @@
 		FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */; };
 		FF5D13AB2A86C2D800BC9BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */; };
 		FF5D13AF2A86C2D800BC9BD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5D13AE2A86C2D800BC9BD6 /* Preview Assets.xcassets */; };
-		FF5D13B92A86C2D800BC9BD6 /* BasicCarMaintenanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13B82A86C2D800BC9BD6 /* BasicCarMaintenanceTests.swift */; };
 		FF5D13C32A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13C22A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift */; };
 		FF748B5E2AB3589C004748A5 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF748B5D2AB3589C004748A5 /* AuthenticationViewModel.swift */; };
 		FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B3B2A908E3E00F49A13 /* DashboardView.swift */; };
@@ -85,6 +85,7 @@
 
 /* Begin PBXFileReference section */
 		023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventDetailView.swift; sourceTree = "<group>"; };
+		898009782AD1899700604E7C /* ContributorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorTests.swift; sourceTree = "<group>"; };
 		E58499652ACDDA8B00634660 /* ContributorsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsListView.swift; sourceTree = "<group>"; };
 		E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsProfileView.swift; sourceTree = "<group>"; };
 		E58499692ACDDAFF00634660 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
@@ -99,7 +100,6 @@
 		FF5D13AC2A86C2D800BC9BD6 /* Basic_Car_Maintenance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Basic_Car_Maintenance.entitlements; sourceTree = "<group>"; };
 		FF5D13AE2A86C2D800BC9BD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FF5D13B42A86C2D800BC9BD6 /* Basic-Car-Maintenance-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Basic-Car-Maintenance-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF5D13B82A86C2D800BC9BD6 /* BasicCarMaintenanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceTests.swift; sourceTree = "<group>"; };
 		FF5D13BE2A86C2D800BC9BD6 /* Basic-Car-Maintenance-UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Basic-Car-Maintenance-UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5D13C22A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceUITests.swift; sourceTree = "<group>"; };
 		FF748B5D2AB3589C004748A5 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -167,6 +167,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		898009762AD1897B00604E7C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				898009772AD1897F00604E7C /* Models */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		898009772AD1897F00604E7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				898009782AD1899700604E7C /* ContributorTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FF3DDF492AA4386C009D91C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,7 +249,7 @@
 		FF5D13B72A86C2D800BC9BD6 /* Basic-Car-Maintenance-Tests */ = {
 			isa = PBXGroup;
 			children = (
-				FF5D13B82A86C2D800BC9BD6 /* BasicCarMaintenanceTests.swift */,
+				898009762AD1897B00604E7C /* Shared */,
 			);
 			path = "Basic-Car-Maintenance-Tests";
 			sourceTree = "<group>";
@@ -572,7 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF5D13B92A86C2D800BC9BD6 /* BasicCarMaintenanceTests.swift in Sources */,
+				898009792AD1899700604E7C /* ContributorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
