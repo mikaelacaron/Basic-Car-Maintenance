@@ -72,9 +72,7 @@ struct DashboardView: View {
             }
             .navigationDestination(isPresented: $viewModel.isShowingAddMaintenanceEvent) {
                 AddMaintenanceView { event in
-                    Task {
-                        await viewModel.addEvent(event)
-                    }
+                    viewModel.addEvent(event)
                 }
                 .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
                     Button("OK", role: .cancel) {}
