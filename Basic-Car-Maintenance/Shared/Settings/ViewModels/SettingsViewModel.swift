@@ -9,13 +9,12 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import Foundation
 
-@MainActor
-final class SettingsViewModel: ObservableObject {
-    
+@Observable
+final class SettingsViewModel {
     let authenticationViewModel: AuthenticationViewModel
-    @Published var contributors: [Contributor]?
+    var contributors: [Contributor]?
     
-    @Published var vehicles = [Vehicle]()
+    var vehicles = [Vehicle]()
     
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
