@@ -41,7 +41,7 @@ struct DashboardView: View {
                         
                         Button {
                             selectedMaintenanceEvent = event
-                            isShowingEditView = true
+                            isShowingAddView = true
                         } label: {
                             VStack {
                                 Text("Edit")
@@ -49,7 +49,7 @@ struct DashboardView: View {
                             }
                         }
                     }
-                    .sheet(isPresented: $isShowingEditView) {
+                    .sheet(isPresented: $isShowingAddView) {
                         EditMaintenanceEventView(
                             selectedEvent: $selectedMaintenanceEvent, viewModel: viewModel)
                     }
