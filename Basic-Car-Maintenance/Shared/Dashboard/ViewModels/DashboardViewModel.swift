@@ -18,7 +18,7 @@ class DashboardViewModel {
     var showAddErrorAlert = false
     var showErrorAlert = false
     var isShowingAddMaintenanceEvent = false
-    var errorMessage : String = ""
+    var errorMessage: String = ""
     var sortOption: SortOption = .custom
     
     var sortedEvents: [MaintenanceEvent] {
