@@ -1,0 +1,34 @@
+name: Basic-Car-Maintenence CI
+
+on: 
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build:
+    runs-on: macos-14.0 or later
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up xcode
+      uses: actions/setup-xcode@v2
+      with:
+        xcode-version: '15.0'
+
+    - name: Build and test
+      run: |
+          xcodebuild clean build test -project Basic-Car-Maintenance.xcodeproj -scheme Basic-Car-Maintenence -destination 'platform=iOS Simulator, name=iPhone 15'
+      
+      
+      
+
+
+
