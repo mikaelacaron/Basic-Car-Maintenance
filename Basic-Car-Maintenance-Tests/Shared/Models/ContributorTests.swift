@@ -51,7 +51,13 @@ final class ContributorTests: XCTestCase {
     }
     
     func testContributorEncoding() throws {
-        let contributor = Contributor(login: "Drag0ndust", id: 12915108, nodeID: "MDQ6VXNlcjEyOTE1MTA4", avatarURL: "https://avatars.githubusercontent.com/u/12915108?v=4", gravatarID: "", url: "https://api.github.com/users/Drag0ndust", htmlURL: "https://github.com/Drag0ndust", contributions: 0)
+        let contributor = Contributor(login: "Drag0ndust",
+                                      id: 12915108,
+                                      nodeID: "MDQ6VXNlcjEyOTE1MTA4",
+                                      avatarURL: "https://avatars.githubusercontent.com/u/12915108?v=4",
+                                      gravatarID: "", url: "https://api.github.com/users/Drag0ndust",
+                                      htmlURL: "https://github.com/Drag0ndust",
+                                      contributions: 0)
         
         let contributorData = try jsonEncoder.encode(contributor)
         
