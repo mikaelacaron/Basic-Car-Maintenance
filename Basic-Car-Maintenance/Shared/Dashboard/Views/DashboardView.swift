@@ -10,7 +10,7 @@ import SwiftUI
 struct DashboardView: View {
     
     @Bindable private var viewModel: DashboardViewModel
-    @State private var isShowingAddView = false
+    @State private var isShowingEditView = false
     @State private var selectedMaintenanceEvent: MaintenanceEvent?
     
     init(authenticationViewModel: AuthenticationViewModel) {
@@ -41,7 +41,7 @@ struct DashboardView: View {
                         
                         Button {
                             selectedMaintenanceEvent = event
-                            isShowingAddView = true
+                            isShowingEditView = true
                         } label: {
                             VStack {
                                 Text("Edit")
@@ -49,7 +49,7 @@ struct DashboardView: View {
                             }
                         }
                     }
-                    .sheet(isPresented: $isShowingAddView) {
+                    .sheet(isPresented: $isShowingEditView) {
                         EditMaintenanceEventView(
                             selectedEvent: $selectedMaintenanceEvent, viewModel: viewModel)
                     }
@@ -63,11 +63,6 @@ struct DashboardView: View {
             }
             .animation(.linear, value: viewModel.sortOption)
             .navigationTitle(Text("Dashboard"))
-            .sheet(isPresented: $isShowingAddView) {
-                AddMaintenanceView() { event in
-                   viewModel.addEvent(event)
-                }
-            }
             .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert) {
                 Button("OK") {
                     viewModel.showErrorAlert = false

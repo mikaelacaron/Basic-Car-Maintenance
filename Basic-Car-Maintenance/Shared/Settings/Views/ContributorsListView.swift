@@ -10,10 +10,6 @@ import SwiftUI
 struct ContributorsListView: View {
     
     var viewModel: SettingsViewModel
-
-    init(viewModel: SettingsViewModel) {
-        self.viewModel = viewModel
-    }
     
     var body: some View {
         List {
