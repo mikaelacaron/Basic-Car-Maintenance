@@ -1,7 +1,5 @@
 # By default, SwiftLint uses a set of sensible default rules you can adjust:
 disabled_rules: # rule identifiers turned on by default to exclude from running
-  - control_statement
-  - type_name
   - trailing_whitespace
   - identifier_name
   - empty_parentheses_with_trailing_closure
