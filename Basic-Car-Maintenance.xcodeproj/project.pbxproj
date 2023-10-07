@@ -72,7 +72,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		FFDADF8F2ACD35A200DDEF79 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
