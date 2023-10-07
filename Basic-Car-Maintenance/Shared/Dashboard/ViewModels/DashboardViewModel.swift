@@ -60,7 +60,7 @@ class DashboardViewModel {
     }
     
     func getMaintenanceEvents() async {
-        if let uid =  authenticationViewModel.user?.uid {
+        if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
             let docRef = db.collection("maintenance_events").whereField("userID", isEqualTo: uid)
             
