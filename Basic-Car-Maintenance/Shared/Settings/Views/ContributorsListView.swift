@@ -22,8 +22,7 @@ struct ContributorsListView: View {
                         }
                 }
             } else {
-                ProgressView() {
-                }
+                ProgressView()
             }
         }
         .task {
