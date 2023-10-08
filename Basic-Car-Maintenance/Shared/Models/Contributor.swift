@@ -44,7 +44,7 @@ struct Contributor: Codable, Hashable, Identifiable {
     /// The number of Pull Requests successfully merged
     let contributions: Int
     
-    /// Keys used in the HTTP Response
+    /// Keys to be used for encoding and decoding.
     enum CodingKeys: String, CodingKey {
         case login, id
         case nodeID = "nodeId"
