@@ -38,7 +38,7 @@ struct Contributor: Codable, Hashable, Identifiable {
     /// The endpoint for a user's profile data
     let url: String
     
-    /// The url for overview of an account
+    /// The url to this account on GitHub
     let htmlURL: String
     
     /// The number of Pull Requests successfully merged
