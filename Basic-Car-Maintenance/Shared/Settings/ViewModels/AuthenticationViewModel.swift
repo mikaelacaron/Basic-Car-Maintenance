@@ -5,11 +5,11 @@
 //  Created by Mikaela Caron on 9/14/23.
 //
 
-import Foundation
-import FirebaseAuth
-import SwiftUI
 import AuthenticationServices
 import CryptoKit
+import FirebaseAuth
+import Foundation
+import SwiftUI
 
 enum AuthenticationState {
     case unauthenticated
@@ -22,21 +22,22 @@ enum AuthenticationFlow {
     case signUp
 }
 
-@MainActor
-final class AuthenticationViewModel: ObservableObject {
+@Observable
+final class AuthenticationViewModel {
     
-    @Published var email = ""
-    @Published var password = ""
-    @Published var confirmPassword = ""
-    @Published var authenticationState: AuthenticationState = .unauthenticated
+    var email = ""
+    var password = ""
+    var confirmPassword = ""
+    var authenticationState: AuthenticationState = .unauthenticated
     
-    @Published var user: User?
+    var user: User?
     
-    @Published var flow: AuthenticationFlow = .signUp
+    var flow: AuthenticationFlow = .signUp
     
     private var authStateHandler: AuthStateDidChangeListenerHandle?
     private var currentNonce: String?
     
+    @MainActor
     init() {
         registerAuthStateHandler()
         verifySignInWithAppleAuthenticationState()
@@ -49,6 +50,7 @@ final class AuthenticationViewModel: ObservableObject {
         }
     }
     
+    @MainActor
     func signIn() {
         if Auth.auth().currentUser == nil {
             print("No user signed in. Trying to sign in anonymously.")
@@ -89,6 +91,7 @@ final class AuthenticationViewModel: ObservableObject {
         }
     }
     
+    @MainActor
     private func registerAuthStateHandler() {
         if authStateHandler == nil {
             authStateHandler = Auth.auth().addStateDidChangeListener { _, user in
@@ -131,7 +134,7 @@ extension AuthenticationViewModel {
                                                                 appleIDCredential.fullName)
                 Task {
                     do {
-                        let result = try await Auth.auth().signIn(with: credential)
+                        _ = try await Auth.auth().signIn(with: credential)
                         authenticationState = .authenticated
                     } catch {
                         print("Error authenticating: \(error.localizedDescription)")
@@ -141,6 +144,7 @@ extension AuthenticationViewModel {
         }
     }
     
+    @MainActor
     func verifySignInWithAppleAuthenticationState() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let providerData = Auth.auth().currentUser?.providerData

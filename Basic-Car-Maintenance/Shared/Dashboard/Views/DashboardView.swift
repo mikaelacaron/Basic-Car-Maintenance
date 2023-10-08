@@ -9,11 +9,12 @@ import SwiftUI
 
 struct DashboardView: View {
     
-    @State private var isShowingAddView = false
-    @StateObject private var viewModel: DashboardViewModel
+    @Bindable private var viewModel: DashboardViewModel
+    @State private var isShowingEditView = false
+    @State private var selectedMaintenanceEvent: MaintenanceEvent?
     
     init(authenticationViewModel: AuthenticationViewModel) {
-        self._viewModel = StateObject(wrappedValue: DashboardViewModel(authenticationViewModel: authenticationViewModel)) // swiftlint:disable:this line_length
+        viewModel = DashboardViewModel(authenticationViewModel: authenticationViewModel)
     }
     
     var body: some View {
@@ -37,6 +38,20 @@ struct DashboardView: View {
                         } label: {
                             Image(systemName: "trash")
                         }
+                        
+                        Button {
+                            selectedMaintenanceEvent = event
+                            isShowingEditView = true
+                        } label: {
+                            VStack {
+                                Text("Edit")
+                                Image(systemName: "pencil")
+                            }
+                        }
+                    }
+                    .sheet(isPresented: $isShowingEditView) {
+                        EditMaintenanceEventView(
+                            selectedEvent: $selectedMaintenanceEvent, viewModel: viewModel)
                     }
                 }
                 .listStyle(.inset)
@@ -48,14 +63,6 @@ struct DashboardView: View {
             }
             .animation(.linear, value: viewModel.sortOption)
             .navigationTitle(Text("Dashboard"))
-            .sheet(isPresented: $isShowingAddView) {
-                AddMaintenanceView() { event in
-                    Task {
-                        await viewModel.addEvent(event)
-                    }
-                    
-                }
-            }
             .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert) {
                 Button("OK") {
                     viewModel.showErrorAlert = false
@@ -63,10 +70,21 @@ struct DashboardView: View {
             } message: {
                 Text(viewModel.errorMessage).padding()
             }
+            .navigationDestination(isPresented: $viewModel.isShowingAddMaintenanceEvent) {
+                AddMaintenanceView { event in
+                    viewModel.addEvent(event)
+                }
+                .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
+                    Button("OK", role: .cancel) {}
+                } message: {
+                    Text(viewModel.errorMessage)
+                }
+            }
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
                     Button {
-                        isShowingAddView.toggle()
+                        viewModel.isShowingAddMaintenanceEvent = true
+                        
                     } label: {
                         Image(systemName: "plus")
                     }

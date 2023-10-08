@@ -1,17 +1,17 @@
 # Contribution Guidelines
 This document contains the rules and guidelines that developers are expected to follow, while contributing to this repository.
 
-* All contributions must NOT add any SwiftLint warnings or errors. There is a GitHub action setup for any PRs to `dev, and Xcode will show any warnings/errors.
+* All contributions must NOT add any SwiftLint warnings or errors. There is a GitHub action setup for any PRs to `dev`, and Xcode will show any warnings/errors.
 
 # About the Project
-This app was created for [Hacktoberfest](https://hacktoberfest.com/), to help beginners in iOS dev contribute to open source. It is an app to help keep track of your car maintenance activites. This project uses [Firebase](https://firebase.google.com) and [Firestore](https://firebase.google.com/products/firestore).
+This app was created for [Hacktoberfest](https://hacktoberfest.com/), to help beginners in iOS dev contribute to open source. It is an app to help keep track of your car maintenance activites. This project uses [Firebase](https://firebase.google.com), [Firestore](https://firebase.google.com/products/firestore), and Sign in With Apple.
 
 ### Project Status
 This is a deployed app on the Apple App Store, available for iOS 17.0 or later. After Hacktoberfest, a new version will be created and pushed to the App Store by [Mikaela Caron](https://github.com/mikaelacaron) (the maintainer).
 
 # Getting Started
 ## Prerequisites
-* Download Xcode 15.0 or later, and macOS 14.0 or later.
+* Download Xcode 15.0 or later
 * Install [SwiftLint](https://github.com/realm/SwiftLint) onto your machine via [Homebrew](https://brew.sh/)
    * This is not a requirement, but is preferred.
 ```sh
@@ -36,7 +36,7 @@ git remote add upstream https://github.com/mikaelacaron/Basic-Car-Maintenance.gi
 
 * In the `Basic-Car-Maintenance.xcconfig` file, fill in your `DEVELOPMENT_TEAM` and `PRODUCT_BUNDLE_IDENTIFIER`.
    * You can find this by logging into the Apple Developer Portal
-   * This is only needed when running on a real device for iOS, this works with both free or paid Apple Developer accounts.
+   * This works with both free or paid Apple Developer accounts. Do **NOT** run this app on a real device due to issues with the Sign in With Apple capability.
 ```
 DEVELOPMENT_TEAM = ABC123
 PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance

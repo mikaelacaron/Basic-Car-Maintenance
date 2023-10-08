@@ -1,5 +1,5 @@
 # Basic Car Maintenance
-Welcome to my open source app! It is ready for contributors for [Hacktoberfest](https://hacktoberfest.com/)! Use this app to gain experience getting started in open source for iOS and macOS development using Swift.
+Welcome to my open source app! It is ready for contributors for [Hacktoberfest](https://hacktoberfest.com/)! Use this app to gain experience getting started in open source for iOS and macOS development using Swift and SwiftUI.
 
 # Getting Started
 
@@ -11,7 +11,7 @@ Welcome to my open source app! It is ready for contributors for [Hacktoberfest](
 
 * Read the [Code of Conduct](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CODE_OF_CONDUCT.md)
 * Read the [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md) guidelines
-* Download Xcode 15 or later, and macOS 14.0 or later
+* Download Xcode 15 or later
 * Browse the open [issues](https://github.com/mikaelacaron/Basic-Car-Maintenance/issues) and **comment** which you would like to work on
    * It is only one person per issue, except where noted.
 * **Fork** this repo
@@ -24,7 +24,7 @@ cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
 
 * In the `Basic-Car-Maintenance.xcconfig` file, fill in your `DEVELOPMENT_TEAM` and `PRODUCT_BUNDLE_IDENTIFIER`.
    * You can find this by logging into the Apple Developer Portal
-   * This is only needed when running on a real device for iOS, this works with both free or paid Apple Developer accounts.
+   * This works with both free or paid Apple Developer accounts. Do **NOT** run this app on a real device due to issues with the Sign in With Apple capability.
 ```
 DEVELOPMENT_TEAM = ABC123
 PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
@@ -34,7 +34,7 @@ PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 * **Checkout** a new branch (from the `dev` branch) to work on an issue
 
 # Contributing
-To start contributing, review [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md). New contributors are always welcome to support this project. Issues labeled `good-first-issue` are great for beginners.
+To start contributing, review [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md). New contributors are always welcome to support this project. Issues labeled `good-first-issue` or `first-timers-only` are great for beginners.
 
 :eyes: **Please be sure to comment on an issue you'd like to work on and [Mikaela Caron](https://github.com/mikaelacaron), the maintainer of this project, will assign it to you!** You can only work on **ONE** issue at a time.
 
