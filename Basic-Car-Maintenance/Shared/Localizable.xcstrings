@@ -40,6 +40,7 @@
       }
     },
     "Add" : {
+      "comment" : "Label for button to add data",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -62,6 +63,7 @@
       }
     },
     "Add Maintenance" : {
+      "comment" : "Nagivation title for Add Maintenance view",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -122,6 +124,7 @@
       }
     },
     "Additional Notes" : {
+      "comment" : "Notes text field placeholder",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -199,6 +202,7 @@
       }
     },
     "Date" : {
+      "comment" : "Date picker label",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -394,6 +398,7 @@
       }
     },
     "Notes" : {
+      "comment" : "Maintenance event notes text field label",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -590,6 +595,7 @@
       }
     },
     "The title of the event" : {
+      "comment" : "Maintenance event title text field label placeholder",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -612,6 +618,7 @@
       }
     },
     "Title" : {
+      "comment" : "Maintenance event title text field header",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -634,6 +641,7 @@
       }
     },
     "Title of the maintenance event" : {
+      "comment" : "Maintenance event title text field label",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
