@@ -20,18 +20,19 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Text("Thanks for using this app! It's open source and anyone can contribute to it.")
+                // swiftlint:disable:next line_length
+                Text("Thanks for using this app! It's open source and anyone can contribute to it.", comment: "Thanks a user for using the app and tells the user they can contribute to the codebase")
                 
                 Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance")!) {
                     Label {
-                        Text("GitHub Repo")
+                        Text("GitHub Repo", comment: "Link to the Basic Car Maintenance GitHub repo.")
                     } icon: {
                         Image("github-logo")
                             .resizable()
                             .frame(width: 20, height: 20)
                     }
                 }
-                
+              
                 Link(destination: URL(string: "https://github.com/mikaelacaron")!) {
                     Text("🦄 Mikaela Caron - Maintainer", comment: "Link to maintainer Github account.")
                 }
@@ -39,18 +40,17 @@ struct SettingsView: View {
                 // swiftlint:disable:next line_length
                 Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=feature+request&projects=&template=feature-request.md&title=FEATURE+-")!) {
                     Label {
-                        Text("Request a New Feature")
+                        Text("Request a New Feature", comment: "Link to request a new feature.")
                     } icon: {
                         Image(systemName: "doc.badge.plus")
                             .resizable()
                             .frame(width: 20, height: 20)
                     }
                 }
-
                 // swiftlint:disable:next line_length
                 Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=bug&projects=&template=bug-report.md&title=BUG+-")!) {
                     Label {
-                        Text("Report a Bug")
+                        Text("Report a Bug", comment: "Link to report a bug")
                     } icon: {
                         Image(systemName: "ladybug")
                             .resizable()
@@ -63,7 +63,7 @@ struct SettingsView: View {
                 } label: {
                     HStack {
                         Image(systemName: "person.3.fill")
-                        Text("Contributors")
+                        Text("Contributors", comment: "Link to contributors list.")
                     }
                 }
                 
@@ -78,7 +78,7 @@ struct SettingsView: View {
                             Text(vehicle.model)
                         }
                         .swipeActions {
-                            Button("Delete", role: .destructive) {
+                            Button(role: .destructive) {
                                 Task {
                                     do {
                                         try await viewModel.deleteVehicle(vehicle)
@@ -87,6 +87,8 @@ struct SettingsView: View {
                                         showDeleteVehicleError = true
                                     }
                                 }
+                            } label: {
+                                Text("Delete", comment: "Label to delete a vehicle")
                             }
                         }
                     }
@@ -94,10 +96,10 @@ struct SettingsView: View {
                     Button {
                         isShowingAddVehicle.toggle()
                     } label: {
-                        Text("Add Vehicle")
+                        Text("Add Vehicle", comment: "Label to add a vehicle.")
                     }
                 } header: {
-                    Text("Vehicles")
+                    Text("Vehicles", comment: "Label to display header title.")
                 }
                 
                 Section {
@@ -105,27 +107,32 @@ struct SettingsView: View {
                         AuthenticationView(viewModel: viewModel.authenticationViewModel)
                     } label: {
                         Label {
-                            Text("Profile")
+                            Text("Profile", comment: "Link to view profile.")
                         } icon: {
                             Image(systemName: "person")
                         }
                     }
                 }
-                
-                Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))")
+                // swiftlint:disable:next line_length
+                Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))", comment: "Label to display version and build number.")
             }
-            .alert("Failed To Delete Vehicle", isPresented: $showDeleteVehicleError) {
-                Button("OK") {
+            // swiftlint:disable:next line_length
+            .alert(Text("Failed To Delete Vehicle", comment: "Label to dsplay title of the delete vehicle alert"),
+                   isPresented: $showDeleteVehicleError) {
+                Button {
                     showDeleteVehicleError = false
+                } label: {
+                    Text("OK", comment: "Label to dismiss alert")
                 }
             } message: {
                 if let errorDetails {
-                    Text("Failed To Delete Vehicle\nDetails:\(errorDetails.localizedDescription)")
+                    // swiftlint:disable:next line_length
+                    Text("Failed To Delete Vehicle\nDetails:\(errorDetails.localizedDescription)", comment: "Label to display localized error description.")
                 } else {
-                    Text("Failed To Add Vehicle. Unknown Error.")
+                    Text("Failed To Add Vehicle. Unknown Error.", comment: "Label to display error details.")
                 }
             }
-            .navigationTitle(Text("Settings"))
+            .navigationTitle(Text("Settings", comment: "Label to display settings."))
             .task {
                 await viewModel.getVehicles()
             }
