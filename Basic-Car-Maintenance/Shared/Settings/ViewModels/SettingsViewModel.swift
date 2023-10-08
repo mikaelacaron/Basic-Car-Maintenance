@@ -48,7 +48,7 @@ final class SettingsViewModel {
         }
     }
     
-    /// Adds a new vehicle to the Firestore database and the local 'vehicles' array.
+    /// Adds a new vehicle to the Firestore database and the local `vehicles` array.
     ///
     /// - Parameter vehicle: The vehicle object to be added.
     /// - Throws: An error if there's an issue adding the vehicle to Firestore.
