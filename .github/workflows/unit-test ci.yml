@@ -25,7 +25,7 @@ jobs:
 
     - name: Build and test
       run: |
-          xcodebuild clean build test -project Basic-Car-Maintenance.xcodeproj -scheme Basic-Car-Maintenence -destination 'platform=iOS Simulator, name=iPhone 15'
+          xcodebuild clean build test -project Basic-Car-Maintenance.xcodeproj -scheme Basic-Car-Maintenance -destination 'platform=iOS Simulator, name=iPhone 15'
       
       
       
