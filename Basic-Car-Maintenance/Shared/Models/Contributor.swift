@@ -25,7 +25,7 @@ struct Contributor: Codable, Hashable, Identifiable {
     /// The unique identifier for an account
     let id: Int
     
-    /// The ID used to move between the REST API & the GraphQL API
+    /// The ID used to move between the REST API and the GraphQL API
     let nodeID: String
     
     /// The link to profile image of the user
