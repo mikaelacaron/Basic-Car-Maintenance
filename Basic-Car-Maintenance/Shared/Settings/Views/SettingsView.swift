@@ -30,7 +30,11 @@ struct SettingsView: View {
                             .resizable()
                             .frame(width: 20, height: 20)
                     }
-                }        
+                }
+                
+                Link(destination: URL(string: "https://github.com/mikaelacaron")!) {
+                    Text("🦄 Mikaela Caron - Maintainer", comment: "Link to maintainer Github account.")
+                }
 
                 // swiftlint:disable:next line_length
                 Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=feature+request&projects=&template=feature-request.md&title=FEATURE+-")!) {
