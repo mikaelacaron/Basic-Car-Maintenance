@@ -1,4 +1,4 @@
-name: Basic-Car-Maintenence CI
+name: Run Unit Tests
 
 on: 
   push:
