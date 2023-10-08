@@ -9,16 +9,17 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import Foundation
 
-@MainActor
-class DashboardViewModel: ObservableObject {
+@Observable
+class DashboardViewModel {
+    
     let authenticationViewModel: AuthenticationViewModel
     
-    @Published var events = [MaintenanceEvent]()
-    @Published var showAddErrorAlert = false
-    @Published var showErrorAlert = false
-    @Published var isShowingAddMaintenanceEvent = false
-    @Published var errorMessage : String = ""
-    @Published var sortOption: SortOption = .custom
+    var events = [MaintenanceEvent]()
+    var showAddErrorAlert = false
+    var showErrorAlert = false
+    var isShowingAddMaintenanceEvent = false
+    var errorMessage: String = ""
+    var sortOption: SortOption = .custom
     
     var sortedEvents: [MaintenanceEvent] {
         switch sortOption {
@@ -32,7 +33,7 @@ class DashboardViewModel: ObservableObject {
         self.authenticationViewModel = authenticationViewModel
     }
     
-    func addEvent(_ maintenanceEvent: MaintenanceEvent) async {
+    func addEvent(_ maintenanceEvent: MaintenanceEvent) {
         if let uid = authenticationViewModel.user?.uid {
             var eventToAdd = maintenanceEvent
             eventToAdd.userID = uid
@@ -76,6 +77,26 @@ class DashboardViewModel: ObservableObject {
                 self.events = events
             }
         }
+    }
+    
+    func updateEvent(_ maintenanceEvent: MaintenanceEvent) async {
+        
+        if let uid = authenticationViewModel.user?.uid {
+            guard let id = maintenanceEvent.id else { return }
+            var eventToUpdate = maintenanceEvent
+            eventToUpdate.userID = uid
+            do {
+                try Firestore
+                    .firestore()
+                    .collection("maintenance_events")
+                    .document(id)
+                    .setData(from: eventToUpdate)
+            } catch {
+                showAddErrorAlert.toggle()
+                errorMessage = error.localizedDescription
+            }
+        }
+        await self.getMaintenanceEvents()
     }
     
     func deleteEvent(_ event: MaintenanceEvent) async {

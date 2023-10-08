@@ -1,5 +1,5 @@
 //
-//  Basic_Car_Maintenance_Widget.swift
+//  Basic-Car-Maintenance-Widget.swift
 //  Basic-Car-Maintenance-Widget
 //
 //  Created by Mikaela Caron on 10/4/23.
@@ -38,7 +38,7 @@ struct SimpleEntry: TimelineEntry {
     let configuration: ConfigurationAppIntent
 }
 
-struct BasicCarMaintenanceWidgetEntryView : View {
+struct BasicCarMaintenanceWidgetEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {

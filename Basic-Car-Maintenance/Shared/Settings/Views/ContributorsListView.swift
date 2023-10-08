@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContributorsListView: View {
     
-    @ObservedObject var viewModel: SettingsViewModel
+    var viewModel: SettingsViewModel
     
     var body: some View {
         List {
@@ -22,8 +22,7 @@ struct ContributorsListView: View {
                         }
                 }
             } else {
-                ProgressView() {
-                }
+                ProgressView()
             }
         }
         .task {

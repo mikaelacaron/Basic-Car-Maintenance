@@ -153,6 +153,9 @@
         }
       }
     },
+    "Cancel" : {
+
+    },
     "Contributors" : {
       "localizations" : {
         "es-419" : {
@@ -246,6 +249,10 @@
           }
         }
       }
+      },
+
+    "Edit" : {
+
     },
     "Failed To Add Vehicle. Unknown Error." : {
       "localizations" : {
@@ -696,6 +703,9 @@
           }
         }
       }
+    },
+    "Update" : {
+
     },
     "Vehicle Make" : {
       "localizations" : {
