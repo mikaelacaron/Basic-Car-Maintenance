@@ -11,7 +11,7 @@ import SwiftUI
 struct AuthenticationView: View {
     @Environment(\.colorScheme) var colorScheme
     
-    @ObservedObject var viewModel: AuthenticationViewModel
+    var viewModel: AuthenticationViewModel
     
     init(viewModel: AuthenticationViewModel) {
         self.viewModel = viewModel

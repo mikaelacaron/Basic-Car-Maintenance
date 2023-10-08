@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditMaintenanceEventView: View {
     @Binding var selectedEvent: MaintenanceEvent?
-    @ObservedObject var viewModel: DashboardViewModel
+    var viewModel: DashboardViewModel
     @State private var title = ""
     @State private var date = Date()
     @State private var notes = ""

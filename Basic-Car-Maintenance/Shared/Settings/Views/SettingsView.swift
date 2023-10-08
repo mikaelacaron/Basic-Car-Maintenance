@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct SettingsView: View {
-    
-    @StateObject private var viewModel: SettingsViewModel
+    @State private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
     @State private var showDeleteVehicleError = false
     @State var errorDetails: Error?
-    @ObservedObject var authenticationViewModel: AuthenticationViewModel
     
     init(authenticationViewModel: AuthenticationViewModel) {
-        self._viewModel = StateObject(wrappedValue: SettingsViewModel(authenticationViewModel: authenticationViewModel)) // swiftlint:disable:this line_length
-        self.authenticationViewModel = authenticationViewModel
+        viewModel = SettingsViewModel(authenticationViewModel: authenticationViewModel)
     }
     
     var body: some View {
@@ -103,7 +100,7 @@ struct SettingsView: View {
                 
                 Section {
                     NavigationLink {
-                        AuthenticationView(viewModel: authenticationViewModel)
+                        AuthenticationView(viewModel: viewModel.authenticationViewModel)
                     } label: {
                         Label {
                             Text("Profile", comment: "Link to view profile.")
