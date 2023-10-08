@@ -62,7 +62,8 @@ struct SettingsView: View {
                         Image(systemName: "person.3.fill")
                         Text("Contributors")
                     }
-                }.foregroundStyle(.blue)
+                }
+                .foregroundStyle(.blue)
                 
                 Section {
                     ForEach(viewModel.vehicles) { vehicle in

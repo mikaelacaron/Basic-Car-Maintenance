@@ -27,9 +27,6 @@ final class SettingsViewModel {
     ]
     
     /// Fetches the list of contributors for the GitHub repository 'Basic-Car-Maintenance'.
-    ///
-    /// This function makes an asynchronous network request to the GitHub API to retrieve the list of contributors for the specified repository. 
-    /// It then decodes the JSON response into an array of 'Contributor' objects and updates the 'contributors' property with the result.
     func getContributors() async {
         guard let url =
                 URL(string: "https://api.github.com/repos/mikaelacaron/Basic-Car-Maintenance/contributors")
@@ -52,8 +49,6 @@ final class SettingsViewModel {
     ///
     /// - Parameter vehicle: The vehicle object to be added.
     /// - Throws: An error if there's an issue adding the vehicle to Firestore.
-    ///
-    /// This function adds a new vehicle object to the Firestore database under the 'vehicles' collection.
     func addVehicle(_ vehicle: Vehicle) async throws {
         if let uid = authenticationViewModel.user?.uid {
             var vehicleToAdd = vehicle
@@ -72,8 +67,6 @@ final class SettingsViewModel {
     }
     
     /// Fetches the user's vehicles from Firestore based on their unique user ID.
-    ///
-    /// This asynchronous function retrieves a list of vehicles associated with the currently authenticated user from the Firestore database.
     func getVehicles() async {
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
@@ -99,8 +92,6 @@ final class SettingsViewModel {
     ///
     /// - Parameter vehicle: The vehicle object to be deleted.
     /// - Throws: An error if there's an issue deleting the vehicle from Firestore.
-    ///
-    /// This function deletes a specific vehicle from Firestore by identifying it with its unique document ID. It also removes the vehicle from the local 'vehicles' array to keep the data in sync.
     func deleteVehicle(_ vehicle: Vehicle) async throws {
         guard let documentId = vehicle.id else {
             fatalError("Event \(vehicle.name) has no document ID.")

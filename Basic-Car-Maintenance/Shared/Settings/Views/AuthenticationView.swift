@@ -41,7 +41,8 @@ struct AuthenticationView: View {
                         .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
                         .frame(minHeight: 44)
                     }
-                }.listRowBackground(Color.clear)
+                }
+                .listRowBackground(Color.clear)
             } else {
                 VStack(alignment: .center, spacing: 8) {
                     Text("Signed in as \(viewModel.user?.email ?? "No Email Found")")
