@@ -102,29 +102,6 @@ struct SettingsView: View {
                         isShowingAddVehicle = true
                     } label: {
                         Text("Add Vehicle", comment: "Label to add a vehicle.")
-                    }.navigationDestination(isPresented: $isShowingAddVehicle) {
-                        AddVehicleView() { vehicle in
-                            Task {
-                                do {
-                                    try await viewModel.addVehicle(vehicle)
-                                    isShowingAddVehicle = false
-                                } catch {
-                                    errorDetails = error
-                                    showAddVehicleError = true
-                                }
-                            }
-                        }
-                        .alert("Failed To Add Vehicle", isPresented: $showAddVehicleError) {
-                            Button("OK") {
-                                showAddVehicleError = false
-                            }
-                        } message: {
-                            if let errorDetails {
-                                Text("Failed To Add Vehicle\nDetails:\(errorDetails.localizedDescription)")
-                            } else {
-                                Text("Failed To Add Vehicle. Unknown Error.")
-                            }
-                        }
                     }
                 } header: {
                     Text("Vehicles", comment: "Label to display header title.")
@@ -143,6 +120,30 @@ struct SettingsView: View {
                 }
                 // swiftlint:disable:next line_length
                 Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))", comment: "Label to display version and build number.")
+            }
+            .navigationDestination(isPresented: $isShowingAddVehicle) {
+                AddVehicleView() { vehicle in
+                    Task {
+                        do {
+                            try await viewModel.addVehicle(vehicle)
+                            isShowingAddVehicle = false
+                        } catch {
+                            errorDetails = error
+                            showAddVehicleError = true
+                        }
+                    }
+                }
+                .alert("Failed To Add Vehicle", isPresented: $showAddVehicleError) {
+                    Button("OK") {
+                        showAddVehicleError = false
+                    }
+                } message: {
+                    if let errorDetails {
+                        Text("Failed To Add Vehicle\nDetails:\(errorDetails.localizedDescription)")
+                    } else {
+                        Text("Failed To Add Vehicle. Unknown Error.")
+                    }
+                }
             }
             // swiftlint:disable:next line_length
             .alert(Text("Failed To Delete Vehicle", comment: "Label to dsplay title of the delete vehicle alert"),
