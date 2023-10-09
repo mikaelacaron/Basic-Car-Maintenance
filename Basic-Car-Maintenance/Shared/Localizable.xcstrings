@@ -40,7 +40,15 @@
       }
     },
     "🦄 Mikaela Caron - Maintainer" : {
-      "comment" : "Link to maintainer Github account."
+      "comment" : "Link to maintainer Github account.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 Mikaela Caron - Maintainer"
+          }
+        }
+      }
     },
     "Add" : {
       "comment" : "Label for button to add data",
@@ -89,7 +97,7 @@
       }
     },
     "Add Vehicle" : {
-      "comment" : "Label to add a vehicle.",
+      "comment" : "Navigation title for Add Vehicle View\nLabel to add a vehicle.",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -117,6 +125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přidat první servisní záznam"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erste Wartung hinzufügen"
           }
         },
         "es-419" : {
@@ -152,6 +166,12 @@
     },
     "An Error Occurred" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es ist ein Fehler aufgetreten"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -161,11 +181,24 @@
       }
     },
     "Cancel" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        }
+      }
     },
     "Contributors" : {
       "comment" : "Link to contributors list.",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mitwirkende"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -175,7 +208,14 @@
       }
     },
     "Custom" : {
+      "comment" : "Sorting option that sorts items according to the user's preferences.",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benutzerdefiniert"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -232,6 +272,12 @@
     "Delete" : {
       "comment" : "Label to delete a vehicle",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Löschen"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -241,7 +287,14 @@
       }
     },
     "Edit" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bearbeiten"
+          }
+        }
+      }
     },
     "Failed To Add Vehicle" : {
       "localizations" : {
@@ -282,6 +335,12 @@
     },
     "Failed To Delete Event" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Event konnte nicht gelöscht werden"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -313,7 +372,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fahrzeug konnte nicht gelöscht werden\nDetails:%@"
+            "value" : "Fahrzeug konnte nicht gelöscht werden.\nDetails: %@"
           }
         },
         "es-419" : {
@@ -447,7 +506,14 @@
       }
     },
     "Newest to Oldest" : {
+      "comment" : "Sorting option that displays newer items first.",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neu vor alt"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -482,6 +548,12 @@
     "OK" : {
       "comment" : "Label to dismiss alert",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -491,7 +563,14 @@
       }
     },
     "Oldest to Newest" : {
+      "comment" : "Sorting option that displays older items first.",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alt vor neu"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -729,7 +808,14 @@
       }
     },
     "Update" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktualisierung"
+          }
+        }
+      }
     },
     "Vehicle Make" : {
       "localizations" : {

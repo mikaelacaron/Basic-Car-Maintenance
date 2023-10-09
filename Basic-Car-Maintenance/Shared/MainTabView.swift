@@ -14,10 +14,10 @@ enum TabSelection: Int {
 
 @MainActor
 struct MainTabView: View {
+    @AppStorage("lastTabOpen") var selectedTab = TabSelection.dashboard
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @State var authenticationViewModel = AuthenticationViewModel()
-    @State var selectedTab: TabSelection = .dashboard
     
     var body: some View {
         TabView(selection: $selectedTab) {
