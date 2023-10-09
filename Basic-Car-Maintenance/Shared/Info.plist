@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconSymbolName</key>
+			<string>wrench.and.screwdriver.fill</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>New Maintenence</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>NewMaintenance</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconSymbolName</key>
+			<string>plus.circle.fill</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Add Vehicle</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>AddVehicle</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -11,10 +11,13 @@ struct SettingsView: View {
     @State private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
     @State private var showDeleteVehicleError = false
-    @State var errorDetails: Error?
+    @Environment(ActionService.self) var actionService
+    @Environment(\.scenePhase) var scenePhase
+    @State private var errorDetails: Error?
     
     init(authenticationViewModel: AuthenticationViewModel) {
-        viewModel = SettingsViewModel(authenticationViewModel: authenticationViewModel)
+        let settingsViewModel = SettingsViewModel(authenticationViewModel: authenticationViewModel)
+        _viewModel = .init(initialValue: settingsViewModel)
     }
     
     var body: some View {
@@ -142,6 +145,26 @@ struct SettingsView: View {
                         await viewModel.addVehicle(vehicle)
                     }
                 }
+            }
+        }
+        .onChange(of: scenePhase) { _, newScenePhase in
+            guard case .active = newScenePhase else { return }
+            
+            guard let action = actionService.action,
+                  action == .addVehicle
+            else {
+                // another action has been triggered
+                // so we will need to dismiss the current presented view
+                isShowingAddVehicle = false
+                return
+            }
+            
+            // if the view is already presented, do nothing
+            guard !isShowingAddVehicle else { return }
+            // delay the presentation of the view a bit
+            // to make sure the already presented view is dismissed.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                isShowingAddVehicle = true
             }
         }
     }
