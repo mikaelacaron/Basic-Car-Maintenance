@@ -25,6 +25,14 @@ jobs:
       - name: Setup Config file
         run: |
           cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
+      - uses: actions/cache@v3
+        with:
+          path: |
+            .build
+            .derivedData
+          key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-spm-
       - name: Run Build Docs
         run: ./build-docc.sh
       - name: Setup Pages
