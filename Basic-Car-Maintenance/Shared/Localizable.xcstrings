@@ -240,6 +240,9 @@
         }
       }
     },
+    "Edit" : {
+
+    },
     "Failed To Add Vehicle" : {
       "localizations" : {
         "de" : {
@@ -259,10 +262,6 @@
           }
         }
       }
-      },
-
-    "Edit" : {
-
     },
     "Failed To Add Vehicle. Unknown Error." : {
       "comment" : "Label to display error details.",
@@ -326,6 +325,7 @@
       }
     },
     "Failed To Delete Vehicle. Unknown Error." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {

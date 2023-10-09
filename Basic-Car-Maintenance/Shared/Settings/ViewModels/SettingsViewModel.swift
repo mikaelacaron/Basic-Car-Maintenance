@@ -59,10 +59,11 @@ final class SettingsViewModel {
                     .firestore()
                     .collection("vehicles")
                     .addDocument(from: vehicleToAdd)
+                
+                vehicles.append(vehicleToAdd)
             } catch {
                 throw error
             }
-            vehicles.append(vehicleToAdd)
         }
     }
     
