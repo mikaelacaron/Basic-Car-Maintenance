@@ -10,13 +10,13 @@ import SwiftUI
 
 @main
 struct BasicCarMaintenanceApp: App {
-    private let actionService = ActionService.shared
+    @State private var actionService = ActionService.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
         WindowGroup {
             MainTabView()
-                .environmentObject(actionService)
+                .environment(actionService)
         }
     }
 }
@@ -25,7 +25,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     private let actionService = ActionService.shared
     
     func application(
-        _ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
         FirebaseApp.configure()
         return true

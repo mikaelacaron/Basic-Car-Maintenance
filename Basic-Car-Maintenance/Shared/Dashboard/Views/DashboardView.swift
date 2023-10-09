@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DashboardView: View {
-    @EnvironmentObject var actionService: ActionService
+    @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @State private var isShowingAddView = false
     @Bindable private var viewModel: DashboardViewModel

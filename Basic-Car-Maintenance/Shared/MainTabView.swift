@@ -12,8 +12,9 @@ enum TabSelection: Int {
     case settings = 1
 }
 
+@MainActor
 struct MainTabView: View {
-    @EnvironmentObject var actionService: ActionService
+    @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @State var authenticationViewModel = AuthenticationViewModel()
     @State var selectedTab: TabSelection = .dashboard

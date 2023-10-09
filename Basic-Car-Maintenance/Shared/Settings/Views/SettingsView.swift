@@ -11,9 +11,9 @@ struct SettingsView: View {
     @State private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
     @State private var showDeleteVehicleError = false
-    @EnvironmentObject var actionService: ActionService
+    @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
-    @State var errorDetails: Error?
+    @State private var errorDetails: Error?
     
     init(authenticationViewModel: AuthenticationViewModel) {
         let settingsViewModel = SettingsViewModel(authenticationViewModel: authenticationViewModel)
