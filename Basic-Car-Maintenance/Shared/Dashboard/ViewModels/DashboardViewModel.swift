@@ -131,9 +131,18 @@ extension DashboardViewModel {
         
         var label: LocalizedStringResource {
             switch self {
-            case .oldestToNewest: LocalizedStringResource("Oldest to Newest", comment: "Sorting option that displays older items first.")
-            case .newestToOldest: LocalizedStringResource("Newest to Oldest", comment: "Sorting option that displays newer items first.")
-            case .custom: LocalizedStringResource("Custom", comment: "Sorting option that sorts items according to the user's preferences.")
+            case .oldestToNewest:
+                LocalizedStringResource(
+                    "Oldest to Newest",
+                    comment: "Sorting option that displays older items first.")
+            case .newestToOldest:
+                LocalizedStringResource(
+                    "Newest to Oldest",
+                    comment: "Sorting option that displays newer items first.")
+            case .custom:
+                LocalizedStringResource(
+                    "Custom",
+                    comment: "Sorting option that sorts items according to the user's preferences.")
             }
         }
     }
