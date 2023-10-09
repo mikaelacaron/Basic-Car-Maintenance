@@ -45,9 +45,9 @@ final class SettingsViewModel {
         }
     }
     
-    /// Adds a new vehicle to the Firestore database and the local `vehicles` array.
+    /// Adds a new vehicle to the Firestore database and the local ``SettingsViewModel/vehicles`` array.
     ///
-    /// - Parameter vehicle: The vehicle object to be added.
+    /// - Parameter vehicle: The vehicle to be added.
     /// - Throws: An error if there's an issue adding the vehicle to Firestore.
     func addVehicle(_ vehicle: Vehicle) async throws {
         if let uid = authenticationViewModel.user?.uid {
@@ -89,9 +89,9 @@ final class SettingsViewModel {
         }
     }
     
-    /// Deletes a vehicle from both Firestore and the local 'vehicles' array.
+    /// Deletes a vehicle from both Firestore and the local ``SettingsViewModel/vehicles`` array.
     ///
-    /// - Parameter vehicle: The vehicle object to be deleted.
+    /// - Parameter vehicle: The vehicle to be deleted.
     /// - Throws: An error if there's an issue deleting the vehicle from Firestore.
     func deleteVehicle(_ vehicle: Vehicle) async throws {
         guard let documentId = vehicle.id else {
