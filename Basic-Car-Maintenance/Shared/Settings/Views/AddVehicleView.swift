@@ -53,6 +53,7 @@ struct AddVehicleView: View {
                     .disabled(!isVehicleValid)
                 }
             }
+            .navigationTitle(Text("Add Vehicle"))
         }
     }
 }
