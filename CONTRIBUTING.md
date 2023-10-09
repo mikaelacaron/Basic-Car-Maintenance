@@ -28,11 +28,6 @@ brew install swiftlint
 ## Start Here
 * **Fork** the repo to your profile
 * **Clone** to your computer
-* Setup the upstream remote on your local machine by running this command, in Terminal
-
-```sh
-git remote add upstream https://github.com/mikaelacaron/Basic-Car-Maintenance.git
-```
 
 * In the `Basic-Car-Maintenance.xcconfig` file, fill in your `DEVELOPMENT_TEAM` and `PRODUCT_BUNDLE_IDENTIFIER`.
    * You can find this by logging into the Apple Developer Portal

@@ -39,7 +39,11 @@
         }
       }
     },
+    "🦄 Mikaela Caron - Maintainer" : {
+      "comment" : "Link to maintainer Github account."
+    },
     "Add" : {
+      "comment" : "Label for button to add data",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -62,6 +66,7 @@
       }
     },
     "Add Maintenance" : {
+      "comment" : "Nagivation title for Add Maintenance view",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -84,6 +89,7 @@
       }
     },
     "Add Vehicle" : {
+      "comment" : "Label to add a vehicle.",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -122,6 +128,7 @@
       }
     },
     "Additional Notes" : {
+      "comment" : "Notes text field placeholder",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -157,6 +164,7 @@
 
     },
     "Contributors" : {
+      "comment" : "Link to contributors list.",
       "localizations" : {
         "es-419" : {
           "stringUnit" : {
@@ -199,6 +207,7 @@
       }
     },
     "Date" : {
+      "comment" : "Date picker label",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -221,6 +230,7 @@
       }
     },
     "Delete" : {
+      "comment" : "Label to delete a vehicle",
       "localizations" : {
         "es-419" : {
           "stringUnit" : {
@@ -255,6 +265,7 @@
 
     },
     "Failed To Add Vehicle. Unknown Error." : {
+      "comment" : "Label to display error details.",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -281,6 +292,7 @@
       }
     },
     "Failed To Delete Vehicle" : {
+      "comment" : "Label to dsplay title of the delete vehicle alert",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -297,6 +309,7 @@
       }
     },
     "Failed To Delete Vehicle\nDetails:%@" : {
+      "comment" : "Label to display localized error description.",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -323,6 +336,7 @@
       }
     },
     "GitHub Repo" : {
+      "comment" : "Link to the Basic Car Maintenance GitHub repo.",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -443,6 +457,7 @@
       }
     },
     "Notes" : {
+      "comment" : "Maintenance event notes text field label",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -465,6 +480,7 @@
       }
     },
     "OK" : {
+      "comment" : "Label to dismiss alert",
       "localizations" : {
         "es-419" : {
           "stringUnit" : {
@@ -485,6 +501,7 @@
       }
     },
     "Profile" : {
+      "comment" : "Link to view profile.",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -507,6 +524,7 @@
       }
     },
     "Report a Bug" : {
+      "comment" : "Link to report a bug",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -529,6 +547,7 @@
       }
     },
     "Request a New Feature" : {
+      "comment" : "Link to request a new feature.",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -551,6 +570,7 @@
       }
     },
     "Settings" : {
+      "comment" : "Label to display settings.",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -617,6 +637,7 @@
       }
     },
     "Thanks for using this app! It's open source and anyone can contribute to it." : {
+      "comment" : "Thanks a user for using the app and tells the user they can contribute to the codebase",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -639,6 +660,7 @@
       }
     },
     "The title of the event" : {
+      "comment" : "Maintenance event title text field label placeholder",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -661,6 +683,7 @@
       }
     },
     "Title" : {
+      "comment" : "Maintenance event title text field header",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -683,6 +706,7 @@
       }
     },
     "Title of the maintenance event" : {
+      "comment" : "Maintenance event title text field label",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -774,6 +798,7 @@
       }
     },
     "Vehicles" : {
+      "comment" : "Label to display header title.",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -796,6 +821,7 @@
       }
     },
     "Version %@ (%@)" : {
+      "comment" : "Label to display version and build number.",
       "localizations" : {
         "cs" : {
           "stringUnit" : {

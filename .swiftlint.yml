@@ -3,7 +3,15 @@ disabled_rules: # rule identifiers turned on by default to exclude from running
   - trailing_whitespace
   - empty_parentheses_with_trailing_closure
 opt_in_rules: # some rules are turned off by default, so you need to opt-in
-  - empty_count # Find all the available rules by running: `swiftlint rules`
+  - empty_count
+  - closure_parameter_position
+  - closing_brace
+  - comma
+  - colon
+  - cyclomatic_complexity
+  - duplicate_imports
+  - for_where
+  - force_try
 
 # Alternatively, specify all rules explicitly by uncommenting this option:
 # only_rules: # delete `disabled_rules` & `opt_in_rules` if using this
