@@ -11,7 +11,7 @@ struct ContributorsProfileView: View {
     
     let name: String
     let imgUrl: String
-    private let imgFrame: CGFloat = 30
+    @ScaledMetric(relativeTo: .largeTitle) var imgFrame: CGFloat = 50
 
     init(name: String, url: String) {
         self.name = name
