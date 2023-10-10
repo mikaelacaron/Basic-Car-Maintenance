@@ -155,10 +155,11 @@ struct SettingsView: View {
                 }
             } message: {
                 if let errorDetails {
-                    // swiftlint:disable:next line_length
-                    Text("Failed To Delete Vehicle\nDetails:\(errorDetails.localizedDescription)", comment: "Label to display localized error description.")
+                    Text("Failed To Delete Vehicle\nDetails:\(errorDetails.localizedDescription)",
+                         comment: "Label to display localized error description.")
                 } else {
-                    Text("Failed To Delete Vehicle. Unknown Error.", comment: "Label to display error details.")
+                    Text("Failed To Delete Vehicle. Unknown Error.",
+                         comment: "Label to display error details.")
                 }
             }
             .navigationTitle(Text("Settings", comment: "Label to display settings."))
