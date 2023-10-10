@@ -11,6 +11,7 @@ struct SettingsView: View {
     @State private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
     @State private var showDeleteVehicleError = false
+    @State private var showAddVehicleError = false
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @State private var errorDetails: Error?
@@ -35,7 +36,7 @@ struct SettingsView: View {
                             .frame(width: 20, height: 20)
                     }
                 }
-              
+                
                 Link(destination: URL(string: "https://github.com/mikaelacaron")!) {
                     Text("🦄 Mikaela Caron - Maintainer", comment: "Link to maintainer Github account.")
                 }
@@ -69,6 +70,7 @@ struct SettingsView: View {
                         Text("Contributors", comment: "Link to contributors list.")
                     }
                 }
+                .foregroundStyle(.blue)
                 
                 Section {
                     ForEach(viewModel.vehicles) { vehicle in
@@ -97,7 +99,7 @@ struct SettingsView: View {
                     }
                     
                     Button {
-                        isShowingAddVehicle.toggle()
+                        isShowingAddVehicle = true
                     } label: {
                         Text("Add Vehicle", comment: "Label to add a vehicle.")
                     }
@@ -119,6 +121,30 @@ struct SettingsView: View {
                 // swiftlint:disable:next line_length
                 Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))", comment: "Label to display version and build number.")
             }
+            .navigationDestination(isPresented: $isShowingAddVehicle) {
+                AddVehicleView() { vehicle in
+                    Task {
+                        do {
+                            try await viewModel.addVehicle(vehicle)
+                            isShowingAddVehicle = false
+                        } catch {
+                            errorDetails = error
+                            showAddVehicleError = true
+                        }
+                    }
+                }
+                .alert("Failed To Add Vehicle", isPresented: $showAddVehicleError) {
+                    Button("OK") {
+                        showAddVehicleError = false
+                    }
+                } message: {
+                    if let errorDetails {
+                        Text("Failed To Add Vehicle\nDetails:\(errorDetails.localizedDescription)")
+                    } else {
+                        Text("Failed To Add Vehicle. Unknown Error.")
+                    }
+                }
+            }
             // swiftlint:disable:next line_length
             .alert(Text("Failed To Delete Vehicle", comment: "Label to dsplay title of the delete vehicle alert"),
                    isPresented: $showDeleteVehicleError) {
@@ -129,22 +155,16 @@ struct SettingsView: View {
                 }
             } message: {
                 if let errorDetails {
-                    // swiftlint:disable:next line_length
-                    Text("Failed To Delete Vehicle\nDetails:\(errorDetails.localizedDescription)", comment: "Label to display localized error description.")
+                    Text("Failed To Delete Vehicle\nDetails:\(errorDetails.localizedDescription)",
+                         comment: "Label to display localized error description.")
                 } else {
-                    Text("Failed To Add Vehicle. Unknown Error.", comment: "Label to display error details.")
+                    Text("Failed To Delete Vehicle. Unknown Error.",
+                         comment: "Label to display error details.")
                 }
             }
             .navigationTitle(Text("Settings", comment: "Label to display settings."))
             .task {
                 await viewModel.getVehicles()
-            }
-            .sheet(isPresented: $isShowingAddVehicle) {
-                AddVehicleView() { vehicle in
-                    Task {
-                        await viewModel.addVehicle(vehicle)
-                    }
-                }
             }
         }
         .onChange(of: scenePhase) { _, newScenePhase in

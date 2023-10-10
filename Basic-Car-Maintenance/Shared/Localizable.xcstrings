@@ -296,6 +296,26 @@
         }
       }
     },
+    "Failed To Add Vehicle" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug konnte nicht hinzugefügt werden"
+          }
+        }
+      }
+    },
+    "Failed To Add Vehicle\nDetails:%@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug konnte nicht hinzugefügt werden\nDetails:%@"
+          }
+        }
+      }
+    },
     "Failed To Add Vehicle. Unknown Error." : {
       "comment" : "Label to display error details.",
       "localizations" : {
@@ -335,7 +355,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fahrzeug konnte nicht gelöscht werden."
+            "value" : "Fahrzeug konnte nicht gelöscht werden"
           }
         },
         "es-419" : {
@@ -359,6 +379,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se pudieron Eliminar los Detalles del Vehículo: %@"
+          }
+        }
+      }
+    },
+    "Failed To Delete Vehicle. Unknown Error." : {
+      "comment" : "Label to display error details.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug konnte nicht gelöscht werden. Unbekannter Fehler."
           }
         }
       }
