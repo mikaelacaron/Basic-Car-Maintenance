@@ -26,5 +26,5 @@ lane :unit_tests do
   run_tests(build_for_testing: true,
             scheme: "Basic-Car-Maintenance",
             only_testing: "Basic-Car-Maintenance-Tests",
-            device: "iPhone 14")
+            device: "iPhone 15 Pro")
 end
