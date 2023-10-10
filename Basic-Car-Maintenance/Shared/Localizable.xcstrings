@@ -14,6 +14,12 @@
             "state" : "translated",
             "value" : ""
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
         }
       }
     },
@@ -36,6 +42,12 @@
             "state" : "translated",
             "value" : "%@"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
         }
       }
     },
@@ -46,6 +58,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🦄 Mikaela Caron - Maintainer"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 Mikaela Caron - Maintaineur"
           }
         }
       }
@@ -70,6 +88,12 @@
             "state" : "translated",
             "value" : "Agregar"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter"
+          }
         }
       }
     },
@@ -92,6 +116,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Agregar Mantenimiento"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter une maintenance"
           }
         }
       }
@@ -116,6 +146,12 @@
             "state" : "translated",
             "value" : "Añadir Vehículo"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter un véhicule"
+          }
         }
       }
     },
@@ -137,6 +173,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Agrega tu primer mantenimiento"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajoutez votre première maintenance"
           }
         }
       }
@@ -161,6 +203,12 @@
             "state" : "translated",
             "value" : "Notas Adicionales"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notes additionnelles"
+          }
         }
       }
     },
@@ -177,6 +225,12 @@
             "state" : "translated",
             "value" : "Ocurrió un Error"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une erreur est survenue"
+          }
         }
       }
     },
@@ -186,6 +240,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abbrechen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuler"
           }
         }
       }
@@ -204,6 +264,12 @@
             "state" : "translated",
             "value" : "Contribuyentes"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contributeurs"
+          }
         }
       }
     },
@@ -220,6 +286,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Personalizado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personnalisé"
           }
         }
       }
@@ -242,6 +314,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Panel"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tableau de bord"
           }
         }
       }
@@ -266,6 +344,12 @@
             "state" : "translated",
             "value" : "Fecha"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date"
+          }
         }
       }
     },
@@ -283,6 +367,12 @@
             "state" : "translated",
             "value" : "Borrar"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer"
+          }
         }
       }
     },
@@ -292,6 +382,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bearbeiten"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifier"
           }
         }
       }
@@ -303,6 +399,12 @@
             "state" : "translated",
             "value" : "Fahrzeug konnte nicht hinzugefügt werden"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible d'ajouter le véhicule"
+          }
         }
       }
     },
@@ -312,6 +414,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fahrzeug konnte nicht hinzugefügt werden\nDetails:%@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible d'ajouter le véhicule\nDétails : %@"
           }
         }
       }
@@ -330,6 +438,12 @@
             "state" : "translated",
             "value" : "No se pudo Agregar el Vehículo. Error Desconocido."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible d'ajouter le véhicule. Erreur inconnue."
+          }
         }
       }
     },
@@ -345,6 +459,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se pudo Eliminar el Evento"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de supprimer l'évènement"
           }
         }
       }
@@ -363,6 +483,12 @@
             "state" : "translated",
             "value" : "No se pudo Eliminar el Vehículo"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de supprimer le véhicule"
+          }
         }
       }
     },
@@ -380,6 +506,12 @@
             "state" : "translated",
             "value" : "No se pudieron Eliminar los Detalles del Vehículo: %@"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de supprimer le véhicule\nDétails : %@"
+          }
         }
       }
     },
@@ -390,6 +522,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fahrzeug konnte nicht gelöscht werden. Unbekannter Fehler."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de supprimer le véhicule. Erreur inconnue."
           }
         }
       }
@@ -414,6 +552,12 @@
             "state" : "translated",
             "value" : "Repositorio de GitHub"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repo GitHub"
+          }
         }
       }
     },
@@ -435,6 +579,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Iniciar sesión de forma anónima con ID: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connecté anonymement avec l'ID : %@"
           }
         }
       }
@@ -458,6 +608,12 @@
             "state" : "translated",
             "value" : "Marca"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fabricant"
+          }
         }
       }
     },
@@ -479,6 +635,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Modelo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modèle"
           }
         }
       }
@@ -502,6 +664,12 @@
             "state" : "translated",
             "value" : "Nombre"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom"
+          }
         }
       }
     },
@@ -518,6 +686,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Más Nuevo a Más Antiguo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du plus au moins récent"
           }
         }
       }
@@ -542,6 +716,12 @@
             "state" : "translated",
             "value" : "Notas"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notes"
+          }
         }
       }
     },
@@ -555,6 +735,12 @@
           }
         },
         "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
@@ -575,6 +761,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Más Antiguo a Más Nuevo "
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du moins au plus récent"
           }
         }
       }
@@ -599,6 +791,12 @@
             "state" : "translated",
             "value" : "Perfil"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil"
+          }
         }
       }
     },
@@ -621,6 +819,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reportar un Error"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rapporter un bug"
           }
         }
       }
@@ -645,6 +849,12 @@
             "state" : "translated",
             "value" : "Solicitar una Nueva Característica"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demander une nouvelle fonctionnalité"
+          }
         }
       }
     },
@@ -668,6 +878,12 @@
             "state" : "translated",
             "value" : "Configuración"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réglages"
+          }
         }
       }
     },
@@ -690,6 +906,12 @@
             "state" : "translated",
             "value" : "Desconectar"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se déconnecter"
+          }
         }
       }
     },
@@ -711,6 +933,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Registrado como %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connecté en tant que %@"
           }
         }
       }
@@ -735,6 +963,12 @@
             "state" : "translated",
             "value" : "¡Gracias por usar esta aplicación! Es de código abierto y cualquiera puede contribuir."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merci d'utiliser cette app ! Le code est open source et tout le monde peut contribuer."
+          }
         }
       }
     },
@@ -757,6 +991,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "El título del evento"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le titre de l'évènement"
           }
         }
       }
@@ -781,6 +1021,12 @@
             "state" : "translated",
             "value" : "Título"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titre"
+          }
         }
       }
     },
@@ -804,6 +1050,12 @@
             "state" : "translated",
             "value" : "El Título del evento de mantenimiento"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le titre de l'évènement de maintenance"
+          }
         }
       }
     },
@@ -813,6 +1065,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aktualisierung"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mettre à jour"
           }
         }
       }
@@ -836,6 +1094,12 @@
             "state" : "translated",
             "value" : "Marca del Vehículo"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fabricant du véhicule"
+          }
         }
       }
     },
@@ -857,6 +1121,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Modelo vehículo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modèle du véhicule"
           }
         }
       }
@@ -880,6 +1150,12 @@
             "state" : "translated",
             "value" : "Nombre del Vehículo"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom du véhicule"
+          }
         }
       }
     },
@@ -902,6 +1178,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vehículos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Véhicules"
           }
         }
       }
@@ -931,6 +1213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Versión %@ (%@)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
           }
         }
       }

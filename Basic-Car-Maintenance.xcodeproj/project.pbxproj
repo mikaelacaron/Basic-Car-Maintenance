@@ -501,6 +501,7 @@
 				Base,
 				cs,
 				de,
+				fr,
 			);
 			mainGroup = FF5D139A2A86C2D500BC9BD6;
 			packageReferences = (
