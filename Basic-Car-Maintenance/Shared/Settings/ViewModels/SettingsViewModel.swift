@@ -26,7 +26,7 @@ final class SettingsViewModel {
         "bugReport": URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues")!
     ]
     
-    /// Fetches the list of contributors for the GitHub repository 'Basic-Car-Maintenance'.
+    /// Fetches the list of contributors for the GitHub repository [Basic-Car-Maintenance](https://github.com/mikaelacaron/Basic-Car-Maintenance).
     func getContributors() async {
         guard let url =
                 URL(string: "https://api.github.com/repos/mikaelacaron/Basic-Car-Maintenance/contributors")
