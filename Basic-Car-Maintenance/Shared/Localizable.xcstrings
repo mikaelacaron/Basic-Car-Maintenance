@@ -97,7 +97,7 @@
       }
     },
     "Add Vehicle" : {
-      "comment" : "Navigation title for Add Vehicle View\nLabel to add a vehicle.",
+      "comment" : "Label to add a vehicle.\nNavigation title for Add Vehicle View",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -384,7 +384,7 @@
       }
     },
     "Failed To Delete Vehicle. Unknown Error." : {
-      "extractionState" : "stale",
+      "comment" : "Label to display error details.",
       "localizations" : {
         "de" : {
           "stringUnit" : {
