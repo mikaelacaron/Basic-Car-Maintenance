@@ -101,7 +101,7 @@
 		E58499692ACDDAFF00634660 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
 		FF0813562AD0A83000910EFA /* UITests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UITests.xcconfig; sourceTree = "<group>"; };
 		FF0813572AD0A92700910EFA /* Widget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Widget.xcconfig; sourceTree = "<group>"; };
-		FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Basic-Car-Maintenance.xcconfig"; sourceTree = SOURCE_ROOT; };
+		FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Basic-Car-Maintenance.xcconfig"; path = "Configurations/Basic-Car-Maintenance.xcconfig"; sourceTree = SOURCE_ROOT; };
 		FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		FF3DDF512AA4D28F009D91C4 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		FF5D13A32A86C2D600BC9BD6 /* Basic-Car-Maintenance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic-Car-Maintenance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				FFBE79BA2AD0A48C0005524E /* Configurations */,
-				FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */,
 				FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */,
 				FFDADF822ACD35A100DDEF79 /* Basic-Car-Maintenance-Widget */,
 				FF5D13B72A86C2D800BC9BD6 /* Basic-Car-Maintenance-Tests */,
@@ -326,6 +325,7 @@
 				FFBE79BB2AD0A57D0005524E /* UnitTests.xcconfig */,
 				FF0813562AD0A83000910EFA /* UITests.xcconfig */,
 				FF0813572AD0A92700910EFA /* Widget.xcconfig */,
+				FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -801,8 +801,6 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.4;
 				OTHER_LDFLAGS = "-ObjC";
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = "com.andrewmuniz.Basic-Car-Maintenance";
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "com.andrewmuniz.Basic-Car-Maintenance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";

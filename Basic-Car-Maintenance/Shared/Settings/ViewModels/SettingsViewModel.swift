@@ -16,6 +16,23 @@ final class SettingsViewModel {
     
     var vehicles = [Vehicle]()
     
+    var sortedContributors: [Contributor] {
+        guard let contributors = contributors, !contributors.isEmpty else {
+            return []
+        }
+        
+        return contributors.sorted { (contributor1, contributor2) in
+            switch (contributor1.contributions, contributor2.contributions) {
+            case let (contributor1, contributor2) where contributor1 > contributor2:
+                return true
+            case let (contributor1, contributor2) where contributor1 < contributor2:
+                return false
+            default:
+                return contributor1.login < contributor2.login
+            }
+        }
+    }
+    
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
     }
