@@ -56,9 +56,9 @@ final class SettingsViewModel {
             
             do {
                 let firestoreRef = try Firestore
-                                        .firestore()
-                                        .collection("vehicles")
-                                        .addDocument(from: vehicleToAdd)
+                    .firestore()
+                    .collection("vehicles")
+                    .addDocument(from: vehicleToAdd)
                 vehicleToAdd.id = firestoreRef.documentID
                 vehicles.append(vehicleToAdd)
             } catch {
