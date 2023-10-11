@@ -54,6 +54,12 @@
     "🦄 Mikaela Caron - Maintainer" : {
       "comment" : "Link to maintainer Github account.",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 Mikaela Caron - Hlavní vývojář"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -214,6 +220,12 @@
     },
     "An Error Occurred" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nastala chyba"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -236,6 +248,12 @@
     },
     "Cancel" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zrušit"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -253,6 +271,12 @@
     "Contributors" : {
       "comment" : "Link to contributors list.",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Další vývojáři"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -276,6 +300,12 @@
     "Custom" : {
       "comment" : "Sorting option that sorts items according to the user's preferences.",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vlastní"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -356,6 +386,12 @@
     "Delete" : {
       "comment" : "Label to delete a vehicle",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -378,6 +414,12 @@
     },
     "Edit" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upravit"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -394,6 +436,12 @@
     },
     "Failed To Add Vehicle" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nelze přidat vozidlo"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -410,6 +458,12 @@
     },
     "Failed To Add Vehicle\nDetails:%@" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nelze přidat detaily vozidla: %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -427,6 +481,12 @@
     "Failed To Add Vehicle. Unknown Error." : {
       "comment" : "Label to display error details.",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nelze přidat vozidlo. Příčina neznámá."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -449,6 +509,12 @@
     },
     "Failed To Delete Event" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nelze smazat událost"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -472,6 +538,12 @@
     "Failed To Delete Vehicle" : {
       "comment" : "Label to dsplay title of the delete vehicle alert",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nelze smazat vozidlo"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -495,6 +567,12 @@
     "Failed To Delete Vehicle\nDetails:%@" : {
       "comment" : "Label to display localized error description.",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nelze smazat detail vozidla: %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -518,6 +596,12 @@
     "Failed To Delete Vehicle. Unknown Error." : {
       "comment" : "Label to display error details.",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nelze smazat vozidlo. Příčina neznámá."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -676,6 +760,12 @@
     "Newest to Oldest" : {
       "comment" : "Sorting option that displays newer items first.",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Od nejnovějšího"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -728,6 +818,12 @@
     "OK" : {
       "comment" : "Label to dismiss alert",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -751,6 +847,12 @@
     "Oldest to Newest" : {
       "comment" : "Sorting option that displays older items first.",
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Od nejstaršího"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1061,6 +1163,12 @@
     },
     "Update" : {
       "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktualizovat"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
