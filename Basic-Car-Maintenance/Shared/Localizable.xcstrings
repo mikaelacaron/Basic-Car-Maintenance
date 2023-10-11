@@ -71,6 +71,12 @@
             "state" : "translated",
             "value" : "🦄 Mikaela Caron - Maintaineur"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 Мікаела Карон - адміністраторка"
+          }
         }
       }
     },
@@ -99,6 +105,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajouter"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Додати"
           }
         }
       }
@@ -129,6 +141,12 @@
             "state" : "translated",
             "value" : "Ajouter une maintenance"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Додати обслуговування"
+          }
         }
       }
     },
@@ -158,6 +176,12 @@
             "state" : "translated",
             "value" : "Ajouter un véhicule"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Додати авто"
+          }
         }
       }
     },
@@ -185,6 +209,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajoutez votre première maintenance"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Додайте своє перше обслуговування"
           }
         }
       }
@@ -215,6 +245,12 @@
             "state" : "translated",
             "value" : "Notes additionnelles"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Додаткові замітки"
+          }
         }
       }
     },
@@ -243,6 +279,12 @@
             "state" : "translated",
             "value" : "Une erreur est survenue"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сталася помилка"
+          }
         }
       }
     },
@@ -264,6 +306,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annuler"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скасувати"
           }
         }
       }
@@ -294,6 +342,12 @@
             "state" : "translated",
             "value" : "Contributeurs"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Співтворці"
+          }
         }
       }
     },
@@ -323,6 +377,12 @@
             "state" : "translated",
             "value" : "Personnalisé"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Власне"
+          }
         }
       }
     },
@@ -350,6 +410,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tableau de bord"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зведення"
           }
         }
       }
@@ -380,6 +446,12 @@
             "state" : "translated",
             "value" : "Date"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дата"
+          }
         }
       }
     },
@@ -409,6 +481,12 @@
             "state" : "translated",
             "value" : "Supprimer"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Видалити"
+          }
         }
       }
     },
@@ -430,6 +508,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Modifier"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Редагувати"
           }
         }
       }
@@ -453,6 +537,12 @@
             "state" : "translated",
             "value" : "Impossible d'ajouter le véhicule"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося видалити авто"
+          }
         }
       }
     },
@@ -474,6 +564,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossible d'ajouter le véhicule\nDétails : %@"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося додати авто\nДеталі:%@"
           }
         }
       }
@@ -504,6 +600,12 @@
             "state" : "translated",
             "value" : "Impossible d'ajouter le véhicule. Erreur inconnue."
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося додати авто. Невідома помилка."
+          }
         }
       }
     },
@@ -531,6 +633,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossible de supprimer l'évènement"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося видалити подію"
           }
         }
       }
@@ -561,6 +669,12 @@
             "state" : "translated",
             "value" : "Impossible de supprimer le véhicule"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося видалити авто"
+          }
         }
       }
     },
@@ -590,6 +704,12 @@
             "state" : "translated",
             "value" : "Impossible de supprimer le véhicule\nDétails : %@"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося видалити авто\nДеталі:%@"
+          }
         }
       }
     },
@@ -612,6 +732,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossible de supprimer le véhicule. Erreur inconnue."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося видалити авто. Невідома помилка."
           }
         }
       }
@@ -642,6 +768,12 @@
             "state" : "translated",
             "value" : "Repo GitHub"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сховище на GitHub"
+          }
         }
       }
     },
@@ -669,6 +801,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Connecté anonymement avec l'ID : %@"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ви увійшли анонімно з ID: %@"
           }
         }
       }
@@ -698,6 +836,12 @@
             "state" : "translated",
             "value" : "Fabricant"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Виробник"
+          }
         }
       }
     },
@@ -726,6 +870,12 @@
             "state" : "translated",
             "value" : "Modèle"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Модель"
+          }
         }
       }
     },
@@ -753,6 +903,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nom"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Імʼя"
           }
         }
       }
@@ -783,6 +939,12 @@
             "state" : "translated",
             "value" : "Du plus au moins récent"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Від найновіших до найстаріших"
+          }
         }
       }
     },
@@ -812,14 +974,34 @@
             "state" : "translated",
             "value" : "Notes"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Замітки"
+          }
         }
       }
     },
     "Odometer" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Одометр"
+          }
+        }
+      }
     },
     "OdometerView, coming soon" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Одометр, скоро буде"
+          }
+        }
+      }
     },
     "OK" : {
       "comment" : "Label to dismiss alert",
@@ -846,6 +1028,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добре"
           }
         }
       }
@@ -876,6 +1064,12 @@
             "state" : "translated",
             "value" : "Du moins au plus récent"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Від найстаріших до найновіших"
+          }
         }
       }
     },
@@ -904,6 +1098,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profil"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профіль"
           }
         }
       }
@@ -934,6 +1134,12 @@
             "state" : "translated",
             "value" : "Rapporter un bug"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Повідомити про помилку"
+          }
         }
       }
     },
@@ -962,6 +1168,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Demander une nouvelle fonctionnalité"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подати запит на нову функцію"
           }
         }
       }
@@ -992,6 +1204,12 @@
             "state" : "translated",
             "value" : "Réglages"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Налаштування"
+          }
         }
       }
     },
@@ -1020,6 +1238,12 @@
             "state" : "translated",
             "value" : "Se déconnecter"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вийти з облікового запису"
+          }
         }
       }
     },
@@ -1047,6 +1271,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Connecté en tant que %@"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Увійшли в додаток як %@"
           }
         }
       }
@@ -1077,6 +1307,12 @@
             "state" : "translated",
             "value" : "Merci d'utiliser cette app ! Le code est open source et tout le monde peut contribuer."
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дякуємо за використання цього додатку! Він має відкритий вихідний код і будь-хто може долучитися у його розвиток."
+          }
         }
       }
     },
@@ -1105,6 +1341,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Le titre de l'évènement"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва події"
           }
         }
       }
@@ -1135,6 +1377,12 @@
             "state" : "translated",
             "value" : "Titre"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва"
+          }
         }
       }
     },
@@ -1164,6 +1412,12 @@
             "state" : "translated",
             "value" : "Le titre de l'évènement de maintenance"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва обслуговування"
+          }
         }
       }
     },
@@ -1185,6 +1439,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mettre à jour"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оновити"
           }
         }
       }
@@ -1214,6 +1474,12 @@
             "state" : "translated",
             "value" : "Fabricant du véhicule"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Виробник авто"
+          }
         }
       }
     },
@@ -1241,6 +1507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Modèle du véhicule"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Модель авто"
           }
         }
       }
@@ -1270,6 +1542,12 @@
             "state" : "translated",
             "value" : "Nom du véhicule"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Імʼя авто"
+          }
         }
       }
     },
@@ -1298,6 +1576,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Véhicules"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Автомобілі"
           }
         }
       }
