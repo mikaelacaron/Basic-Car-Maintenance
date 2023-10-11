@@ -66,7 +66,7 @@ struct DashboardView: View {
                 } else if viewModel.viewEvents.isEmpty && !viewModel.searchText.isEmpty {
                     ContentUnavailableView("No results",
                                            systemImage: "magnifyingglass",
-                                           description: Text("There were no maintenance events for '\(viewModel.searchText)'. Try a new search."))
+                                           description: noSearchResultsDescription)
                 }
             }
             .animation(.linear, value: viewModel.sortOption)
@@ -140,6 +140,10 @@ struct DashboardView: View {
         } message: {
             Text(viewModel.errorMessage)
         }
+    }
+    
+    private var noSearchResultsDescription: Text {
+        Text("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.")
     }
 }
 
