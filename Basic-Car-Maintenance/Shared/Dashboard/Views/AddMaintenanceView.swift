@@ -35,6 +35,7 @@ struct AddMaintenanceView: View {
                     Text("Date",
                          comment: "Date picker label")
                 }
+                .dynamicTypeSize(...DynamicTypeSize.accessibility2)
                 
                 Section {
                     TextField(text: $notes,
