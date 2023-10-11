@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */; };
+		8014A4CD2AD755C8005B51F6 /* Basic-Car-Maintenance.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */; };
 		898009792AD1899700604E7C /* ContributorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898009782AD1899700604E7C /* ContributorTests.swift */; };
 		8AEE816F2ACF37F800FC0C2A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE816E2ACF37F800FC0C2A /* Action.swift */; };
 		8AEE81722ACF384D00FC0C2A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE81712ACF384D00FC0C2A /* MainTabView.swift */; };
@@ -537,6 +538,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF5D13AF2A86C2D800BC9BD6 /* Preview Assets.xcassets in Resources */,
+				8014A4CD2AD755C8005B51F6 /* Basic-Car-Maintenance.xcconfig in Resources */,
 				FFC8CDA42AA385E800D129A6 /* GoogleService-Info.plist in Resources */,
 				FF5D13AB2A86C2D800BC9BD6 /* Assets.xcassets in Resources */,
 				FF755B432A90915E00F49A13 /* Localizable.xcstrings in Resources */,
@@ -782,6 +784,7 @@
 		};
 		FF5D13C92A86C2D800BC9BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
