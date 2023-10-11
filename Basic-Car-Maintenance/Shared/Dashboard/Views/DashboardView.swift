@@ -58,6 +58,7 @@ struct DashboardView: View {
                 }
                 .listStyle(.inset)
             }
+            .searchable(text: $viewModel.searchText)
             .overlay {
                 if viewModel.events.isEmpty {
                     Text("Add your first maintenance")

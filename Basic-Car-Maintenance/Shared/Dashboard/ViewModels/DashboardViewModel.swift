@@ -20,6 +20,7 @@ class DashboardViewModel {
     var isShowingAddMaintenanceEvent = false
     var errorMessage: String = ""
     var sortOption: SortOption = .custom
+    var searchText: String = ""
     
     var sortedEvents: [MaintenanceEvent] {
         switch sortOption {
