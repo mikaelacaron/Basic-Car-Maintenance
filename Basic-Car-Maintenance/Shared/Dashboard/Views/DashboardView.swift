@@ -63,6 +63,10 @@ struct DashboardView: View {
             .overlay {
                 if viewModel.events.isEmpty {
                     Text("Add your first maintenance")
+                } else if viewModel.viewEvents.isEmpty && !viewModel.searchText.isEmpty {
+                    ContentUnavailableView("No results",
+                                           systemImage: "magnifyingglass",
+                                           description: Text("There were no maintenance events for '\(viewModel.searchText)'. Try a new search."))
                 }
             }
             .animation(.linear, value: viewModel.sortOption)

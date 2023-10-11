@@ -786,6 +786,9 @@
         }
       }
     },
+    "No results" : {
+
+    },
     "Notes" : {
       "comment" : "Maintenance event notes text field label",
       "localizations" : {
@@ -1108,6 +1111,9 @@
           }
         }
       }
+    },
+    "There were no maintenance events for '%@'. Try a new search." : {
+
     },
     "Title" : {
       "comment" : "Maintenance event title text field header",
