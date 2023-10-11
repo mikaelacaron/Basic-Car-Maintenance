@@ -20,6 +20,7 @@ struct DashboardView: View {
     }
     
     var body: some View {
+        @Bindable var viewModel = viewModel
         NavigationStack {
             List {
                 ForEach(viewModel.sortedEvents) { event in
