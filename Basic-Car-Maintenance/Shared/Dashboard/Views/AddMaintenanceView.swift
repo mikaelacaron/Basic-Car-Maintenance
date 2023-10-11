@@ -50,8 +50,8 @@ struct AddMaintenanceView: View {
                          comment: "Notes text field header")
                 }
             }
-            .navigationTitle(Text("Add Maintenance",
-                                  comment: "Nagivation title for Add Maintenance view"))
+            .navigationTitle(Text("Update Maintenance",
+                                  comment: "Nagivation title for Update Maintenance view"))
             .toolbar {
                 ToolbarItem {
                     Button {
