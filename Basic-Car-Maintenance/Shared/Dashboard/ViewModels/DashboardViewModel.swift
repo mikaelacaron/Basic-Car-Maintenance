@@ -30,6 +30,14 @@ class DashboardViewModel {
         }
     }
     
+    var viewEvents: [MaintenanceEvent] {
+        if searchText.isEmpty {
+            sortedEvents
+        } else {
+            sortedEvents.filter { $0.title.localizedStandardContains(searchText) }
+        }
+    }
+    
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
     }

@@ -23,7 +23,7 @@ struct DashboardView: View {
         @Bindable var viewModel = viewModel
         NavigationStack {
             List {
-                ForEach(viewModel.sortedEvents) { event in
+                ForEach(viewModel.viewEvents) { event in
                     VStack(alignment: .leading, spacing: 8) {
                         Text(event.title)
                             .font(.title3)
