@@ -34,11 +34,17 @@ PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 * **Checkout** a new branch (from the `dev` branch) to work on an issue
 
 # Contributing
-To start contributing, review [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md). New contributors are always welcome to support this project. Issues labeled `good-first-issue` or `first-timers-only` are great for beginners.
+To start contributing, review [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md). New contributors are always welcome to support this project.
 
 :eyes: **Please be sure to comment on an issue you'd like to work on and [Mikaela Caron](https://github.com/mikaelacaron), the maintainer of this project, will assign it to you!** You can only work on **ONE** issue at a time.
 
 Checkout any issue labeled `hacktoberfest` to start contributing.
+
+## Issue Labels
+* `first-timers-only` is only for someone who has **not** contributed to the repo yet! (and is new to open source and iOS development)
+* `good-first-issue` is an issue that's beginner level
+
+Please choose an appropriate issue for your skill level
 
 ### Contributors
 <a href="https://github.com/mikaelacaron/Basic-Car-Maintenance/graphs/contributors">
