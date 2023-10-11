@@ -26,6 +26,7 @@ final class SettingsViewModel {
         "bugReport": URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues")!
     ]
     
+    // swiftlint:disable:next line_length
     /// Fetches the list of contributors for the GitHub repository [Basic-Car-Maintenance](https://github.com/mikaelacaron/Basic-Car-Maintenance).
     func getContributors() async {
         guard let url =
