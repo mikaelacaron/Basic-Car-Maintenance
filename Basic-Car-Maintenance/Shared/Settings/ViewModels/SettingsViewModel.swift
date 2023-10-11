@@ -56,11 +56,11 @@ final class SettingsViewModel {
             vehicleToAdd.userID = uid
             
             do {
-                try Firestore
+                let firestoreRef = try Firestore
                     .firestore()
                     .collection("vehicles")
                     .addDocument(from: vehicleToAdd)
-                
+                vehicleToAdd.id = firestoreRef.documentID
                 vehicles.append(vehicleToAdd)
             } catch {
                 throw error
