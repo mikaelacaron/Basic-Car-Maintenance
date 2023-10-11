@@ -69,7 +69,7 @@ struct DashboardView: View {
                                            description: noSearchResultsDescription)
                 }
             }
-            .animation(.linear, value: viewModel.sortOption)
+            .animation(.linear, value: viewModel.viewEvents)
             .navigationTitle(Text("Dashboard"))
             .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert) {
                 Button("OK") {
