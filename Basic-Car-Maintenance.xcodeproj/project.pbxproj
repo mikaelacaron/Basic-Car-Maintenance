@@ -48,6 +48,7 @@
 		FFDADF882ACD35A100DDEF79 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDADF872ACD35A100DDEF79 /* AppIntent.swift */; };
 		FFDADF8A2ACD35A200DDEF79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFDADF892ACD35A200DDEF79 /* Assets.xcassets */; };
 		FFDADF8E2ACD35A200DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FFDADF7D2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FFE0AF562AD66C3500AB46F8 /* OdometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0AF552AD66C3500AB46F8 /* OdometerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		FFDADF872ACD35A100DDEF79 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		FFDADF892ACD35A200DDEF79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFDADF8B2ACD35A200DDEF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFE0AF552AD66C3500AB46F8 /* OdometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdometerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +303,7 @@
 				8AEE81712ACF384D00FC0C2A /* MainTabView.swift */,
 				FFBFE08F2A98EFDD000A9BEB /* Models */,
 				FF755B3F2A908EC400F49A13 /* Dashboard */,
+				FFE0AF542AD66C1E00AB46F8 /* Odometer */,
 				FF755B402A908EC900F49A13 /* Settings */,
 				FF755B442A90968D00F49A13 /* Utilities */,
 			);
@@ -378,6 +381,14 @@
 				FFDADF8B2ACD35A200DDEF79 /* Info.plist */,
 			);
 			path = "Basic-Car-Maintenance-Widget";
+			sourceTree = "<group>";
+		};
+		FFE0AF542AD66C1E00AB46F8 /* Odometer */ = {
+			isa = PBXGroup;
+			children = (
+				FFE0AF552AD66C3500AB46F8 /* OdometerView.swift */,
+			);
+			path = Odometer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,6 +600,7 @@
 				023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */,
 				FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */,
 				FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */,
+				FFE0AF562AD66C3500AB46F8 /* OdometerView.swift in Sources */,
 				8AEE816F2ACF37F800FC0C2A /* Action.swift in Sources */,
 				FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */,
 				E584996A2ACDDAFF00634660 /* Contributor.swift in Sources */,

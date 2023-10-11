@@ -133,7 +133,7 @@
       }
     },
     "Add Vehicle" : {
-      "comment" : "Label to add a vehicle.\nNavigation title for Add Vehicle View",
+      "comment" : "Navigation title for Add Vehicle View\nLabel to add a vehicle.",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -814,6 +814,12 @@
           }
         }
       }
+    },
+    "Odometer" : {
+
+    },
+    "OdometerView, coming soon" : {
+
     },
     "OK" : {
       "comment" : "Label to dismiss alert",

@@ -9,7 +9,8 @@ import SwiftUI
 
 enum TabSelection: Int {
     case dashboard = 0
-    case settings = 1
+    case odometer = 1
+    case settings = 2
 }
 
 @MainActor
@@ -25,6 +26,12 @@ struct MainTabView: View {
                 .tag(TabSelection.dashboard)
                 .tabItem {
                     Label("Dashboard", systemImage: "list.dash.header.rectangle")
+                }
+            
+            OdometerView()
+                .tag(TabSelection.odometer)
+                .tabItem {
+                    Label("Odometer", systemImage: "gauge")
                 }
             
             SettingsView(authenticationViewModel: authenticationViewModel)
