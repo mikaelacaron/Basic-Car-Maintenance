@@ -38,7 +38,7 @@ struct EditMaintenanceEventView: View {
                 guard let selectedEvent = selectedEvent else { return }
                 setMaintenanceEventValues(event: selectedEvent)
             }
-            .navigationTitle(Text("Add Maintenance"))
+            .navigationTitle(Text("Update Maintenance"))
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
