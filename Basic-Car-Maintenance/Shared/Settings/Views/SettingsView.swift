@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct SettingsView: View {
     @State private var viewModel: SettingsViewModel
@@ -15,6 +16,8 @@ struct SettingsView: View {
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @State private var errorDetails: Error?
+    @State private var copiedAppVersion: Bool = false
+    private let appVersion = "Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))"
     
     init(authenticationViewModel: AuthenticationViewModel) {
         let settingsViewModel = SettingsViewModel(authenticationViewModel: authenticationViewModel)
@@ -119,7 +122,26 @@ struct SettingsView: View {
                     }
                 }
                 // swiftlint:disable:next line_length
-                Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))", comment: "Label to display version and build number.")
+                Text(LocalizedStringKey(stringLiteral: appVersion), comment: "Label to display version and build number.")
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .onLongPressGesture {
+                        let clipboard = UIPasteboard.general
+                        clipboard.setValue(appVersion, forPasteboardType: UTType.plainText.identifier)
+                        copiedAppVersion = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            copiedAppVersion = false
+                        }
+                    }
+                    .overlay {
+                        // A toast view to notify the user of version copy
+                        Text("Copied!", comment: "Text to notify user that app version was copied").font(.callout)
+                            .padding(8)
+                            .background(.black)
+                            .foregroundStyle(.white)
+                            .clipShape(Capsule())
+                            .opacity(copiedAppVersion ? 1 : 0)
+                            .animation(.linear(duration: 0.2), value: copiedAppVersion)
+                    }
             }
             .navigationDestination(isPresented: $isShowingAddVehicle) {
                 AddVehicleView() { vehicle in
