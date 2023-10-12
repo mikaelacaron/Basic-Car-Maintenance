@@ -151,7 +151,7 @@
       }
     },
     "Add Vehicle" : {
-      "comment" : "Label to add a vehicle.\nNavigation title for Add Vehicle View",
+      "comment" : "Navigation title for Add Vehicle View\nLabel to add a vehicle.",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -320,9 +320,6 @@
 
     },
     "Choose App Icon" : {
-
-    },
-    "Choose the App Icon that you would like to see on your Home Screen." : {
 
     },
     "Contributors" : {
@@ -1359,6 +1356,9 @@
           }
         }
       }
+    },
+    "This App Icon will appear on your Home Screen." : {
+
     },
     "Title" : {
       "comment" : "Maintenance event title text field header",

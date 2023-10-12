@@ -1,22 +1,16 @@
-//
-//  AppIcon.swift
-//  Basic-Car-Maintenance
-//
-//  Created by Daniel Lyons on 10/11/23.
-//
 import UIKit
 import Observation
 
 /// The ViewModel responsible for allowing users to change the AppIcon
 @Observable class ChangeAppIconViewModel {
-  var selectedAppIcon: AppIcon
+  private(set) var selectedAppIcon: AppIcon
   
   init() {
     if let iconName = UIApplication.shared.alternateIconName,
        let appIcon = AppIcon(rawValue: iconName) {
-      self.selectedAppIcon = appIcon
+      self._selectedAppIcon = appIcon
     } else {
-      self.selectedAppIcon = .primary
+      self._selectedAppIcon = .primary
     }
   }
   
@@ -26,12 +20,13 @@ import Observation
     
     Task { @MainActor in
       guard UIApplication.shared.alternateIconName != icon.iconName else {
-        // No need to update since we're already using this icon.
+         print("No need to update icon since we're already using this icon.")
         return
       }
       
       do {
         try await UIApplication.shared.setAlternateIconName(icon.iconName)
+        print("Successfully updated icon.")
       } catch {
         // We're only logging the error here and not actively handling the app icon failure
         // since it's very unlikely to fail.
@@ -52,35 +47,35 @@ enum AppIcon: String, CaseIterable, Identifiable {
   case carBlack = "AppIcon-car-black"
   case carOrange = "AppIcon-car-orange"
   
-  var id: String{ rawValue }
+  var id: String { rawValue }
   var iconName: String? {
     switch self {
-      /// returns `nil`. Use this case to reset the app icon back to its primary icon.
-      case .primary:
-        return nil
-      default:
-        return rawValue
+    /// returns `nil`. Use this case to reset the app icon back to its primary icon.
+    case .primary:
+      return nil
+    default:
+      return rawValue
     }
   }
   
   var description: String {
     switch self {
-      case .primary:
-        return "Default"
-      case .carDark:
-        return "Dark Mode"
-      case .carRed:
-        return "Red Car"
-      case .carYellow:
-        return "Yellow Car"
-      case .carBlack:
-        return "Black Car"
-      case .carOrange:
-        return "Orange Car"
+    case .primary:
+      return "Default"
+    case .carDark:
+      return "Dark Mode"
+    case .carRed:
+      return "Red Car"
+    case .carYellow:
+      return "Yellow Car"
+    case .carBlack:
+      return "Black Car"
+    case .carOrange:
+      return "Orange Car"
     }
   }
   
   var preview: UIImage {
-    UIImage(named: rawValue + "-Preview") ?? UIImage()
+    UIImage(named: rawValue) ?? UIImage()
   }
 }

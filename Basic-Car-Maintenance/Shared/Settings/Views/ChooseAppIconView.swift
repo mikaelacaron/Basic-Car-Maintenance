@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ChooseAppIconView: View {
-  @Bindable var viewModel: ChangeAppIconViewModel
+  @State var viewModel: ChangeAppIconViewModel = .init()
   
-  func isSelected(_ icon: AppIcon) -> Bool {
+  private func isSelected(_ icon: AppIcon) -> Bool {
     return viewModel.selectedAppIcon == icon
   }
   
@@ -22,7 +22,11 @@ struct ChooseAppIconView: View {
     
     return Form {
       Section {
-        Text("Choose the App Icon that you would like to see on your Home Screen.")
+        HStack {
+          Image(systemName: "apps.iphone")
+            .font(.title)
+          Text("This App Icon will appear on your Home Screen.")
+        }
       }
       
       LazyVGrid(columns: columns) {
@@ -30,13 +34,11 @@ struct ChooseAppIconView: View {
           IconChoice(icon: icon, isSelected: self.isSelected(icon))
             .onTapGesture {
               withAnimation {
-                viewModel.selectedAppIcon = icon
+                viewModel.updateAppIcon(to: icon)
               }
             }
         }
-        
       }
-      
     }
     .navigationTitle("Choose App Icon")
   }
@@ -47,16 +49,22 @@ extension ChooseAppIconView {
   private struct IconChoice: View {
     let icon: AppIcon
     let isSelected: Bool
+    var checkmarkImage: String {
+      isSelected ? "checkmark.circle.fill" : "circle"
+    }
+    
     var body: some View {
       if let iconName = icon.iconName {
-        GroupBox(icon.iconName ?? "Icon") {
-          Image(iconName, label: Text(iconName))
+        GroupBox {
+          HStack {
+            Image(systemName: checkmarkImage)
+              .foregroundStyle(.blue)
+            Text(icon.description)
+            Spacer()
+          }
+          Image(uiImage: icon.preview)
             .resizable()
-            .scaledToFill()
-            .overlay(alignment: .bottomTrailing) {
-              Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
-                .foregroundStyle(.blue)
-            }
+            .aspectRatio(contentMode: .fit)
         }
       } else {
         EmptyView()
