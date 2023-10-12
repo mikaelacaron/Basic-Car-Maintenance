@@ -12,6 +12,7 @@ struct EditMaintenanceEventView: View {
     var viewModel: DashboardViewModel
     @State private var title = ""
     @State private var date = Date()
+    @State private var selectedVehicle: Vehicle?
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
     
@@ -22,6 +23,21 @@ struct EditMaintenanceEventView: View {
                     TextField("Title", text: $title)
                 } header: {
                     Text("Title")
+                }
+                
+                Section {
+                    Picker(selection: $selectedVehicle) {
+                        ForEach(viewModel.vehicles) { vehicle in
+                            Text(vehicle.name)
+                        }
+                    } label: {
+                        Text("Select a vehicle",
+                             comment: "Maintenance event vehicle picker label")
+                    }
+                    .pickerStyle(.menu)
+                } header: {
+                    Text("Vehicle",
+                         comment: "Maintenance event vehicle picker header")
                 }
                 
                 DatePicker(selection: $date, displayedComponents: .date) {

@@ -151,7 +151,7 @@
       }
     },
     "Add Vehicle" : {
-      "comment" : "Label to add a vehicle.\nNavigation title for Add Vehicle View",
+      "comment" : "Navigation title for Add Vehicle View\nLabel to add a vehicle.",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -1179,7 +1179,7 @@
       }
     },
     "Select a vehicle" : {
-      "comment" : "Maintenance event vehicle picker header"
+      "comment" : "Maintenance event vehicle picker label"
     },
     "Settings" : {
       "comment" : "Label to display settings.",
