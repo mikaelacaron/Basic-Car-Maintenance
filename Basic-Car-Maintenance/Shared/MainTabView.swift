@@ -60,4 +60,5 @@ struct MainTabView: View {
 
 #Preview {
     MainTabView()
+        .environment(ActionService.shared)
 }

@@ -192,4 +192,5 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView(authenticationViewModel: AuthenticationViewModel())
+        .environment(ActionService.shared)
 }

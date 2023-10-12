@@ -29,8 +29,10 @@ struct DashboardView: View {
                         
                         Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
                         
-                        Text(event.notes)
-                            .lineLimit(0)
+                        if !event.notes.isEmpty {
+                            Text(event.notes)
+                                .lineLimit(0)
+                        }
                     }
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                         Button(role: .destructive) {
@@ -148,4 +150,5 @@ struct DashboardView: View {
 
 #Preview {
     DashboardView(authenticationViewModel: AuthenticationViewModel())
+        .environment(ActionService.shared)
 }
