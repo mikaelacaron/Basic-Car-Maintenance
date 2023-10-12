@@ -4,7 +4,6 @@
 //
 //  Created by Mikaela Caron on 8/25/23.
 //
-import FirebaseAnalytics
 import FirebaseFirestoreSwift
 import Foundation
 

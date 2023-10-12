@@ -306,7 +306,6 @@
 		FF755B412A908F4100F49A13 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				D594B5582AD77882006C4F75 /* Managers */,
 				FF755B422A90915E00F49A13 /* Localizable.xcstrings */,
 				FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */,
 				8AEE81732ACF394E00FC0C2A /* Info.plist */,
@@ -316,6 +315,7 @@
 				FF755B3F2A908EC400F49A13 /* Dashboard */,
 				FFE0AF542AD66C1E00AB46F8 /* Odometer */,
 				FF755B402A908EC900F49A13 /* Settings */,
+				D594B5582AD77882006C4F75 /* Managers */,
 				FF755B442A90968D00F49A13 /* Utilities */,
 			);
 			path = Shared;

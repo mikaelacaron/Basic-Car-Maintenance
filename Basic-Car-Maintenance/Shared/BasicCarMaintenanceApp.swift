@@ -4,7 +4,6 @@
 //
 //  Created by Mikaela Caron on 8/11/23.
 //
-import Firebase
 import FirebaseCore
 import SwiftUI
 

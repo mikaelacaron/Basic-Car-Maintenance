@@ -4,7 +4,6 @@
 //
 //  Created by Omar Hegazy on 05/10/2023.
 //
-import FirebaseAnalytics
 import UIKit
 
 enum ActionType: String {

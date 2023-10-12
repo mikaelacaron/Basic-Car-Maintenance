@@ -17,9 +17,9 @@ final class AnalyticsManager {
     public func logEventVehicleCreated(_ vehicleCreated: AnalyticsEvent) {
         var paramaters: [String: Any] = [:]
         switch vehicleCreated {
-        case .vehicleCreated(let rMCVehicleCreatedEvent):
+        case .vehicleCreated(let vehicleCreatedEvent):
             do {
-                let data = try JSONEncoder().encode(rMCVehicleCreatedEvent)
+                let data = try JSONEncoder().encode(vehicleCreatedEvent)
                 let dict = try JSONSerialization.jsonObject(with: data) as? [String: Any] ?? [:]
                 paramaters = dict
             } catch {
@@ -34,7 +34,7 @@ final class AnalyticsManager {
 }
 
 enum AnalyticsEvent {
-    case vehicleCreated(RMCVehicleCreatedEvent)
+    case vehicleCreated(VehicleCreatedEvent)
     
     var eventName: String {
         switch self {
@@ -43,8 +43,7 @@ enum AnalyticsEvent {
     }
 }
 
-struct RMCVehicleCreatedEvent: Codable {
+struct VehicleCreatedEvent: Codable {
     let vehicleAction: String
     let origin: String
-    let timestamp: Date
 }
