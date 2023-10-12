@@ -107,17 +107,24 @@ struct SettingsView: View {
                     Text("Vehicles", comment: "Label to display header title.")
                 }
                 
-                Section {
-                    NavigationLink {
-                        AuthenticationView(viewModel: viewModel.authenticationViewModel)
-                    } label: {
-                        Label {
-                            Text("Profile", comment: "Link to view profile.")
-                        } icon: {
-                            Image(systemName: "person")
-                        }
-                    }
+              Section {
+                NavigationLink {
+                  AuthenticationView(viewModel: viewModel.authenticationViewModel)
+                } label: {
+                  Label {
+                    Text("Profile", comment: "Link to view profile.")
+                  } icon: {
+                    Image(systemName: "person")
+                  }
                 }
+                
+                NavigationLink {
+                  ChooseAppIconView(viewModel: viewModel.chooseAppIconViewModel)
+                } label: {
+                  Label("Change App Icon", systemImage: "photo.fill")
+                }
+              }
+              
                 // swiftlint:disable:next line_length
                 Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))", comment: "Label to display version and build number.")
             }
