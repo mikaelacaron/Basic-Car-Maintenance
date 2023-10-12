@@ -13,7 +13,7 @@ import Foundation
 final class SettingsViewModel {
     let authenticationViewModel: AuthenticationViewModel
     var contributors: [Contributor]?
-  var chooseAppIconViewModel: ChangeAppIconViewModel
+  var chooseAppIconViewModel: ChooseAppIconViewModel
     
     var vehicles = [Vehicle]()
     

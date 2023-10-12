@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChooseAppIconView: View {
-  @State var viewModel: ChangeAppIconViewModel = .init()
+  @State var viewModel: ChooseAppIconViewModel = .init()
   
   private func isSelected(_ icon: AppIcon) -> Bool {
     return viewModel.selectedAppIcon == icon
@@ -54,20 +54,16 @@ extension ChooseAppIconView {
     }
     
     var body: some View {
-      if let iconName = icon.iconName {
-        GroupBox {
-          HStack {
-            Image(systemName: checkmarkImage)
-              .foregroundStyle(.blue)
-            Text(icon.description)
-            Spacer()
-          }
-          Image(uiImage: icon.preview)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+      GroupBox {
+        HStack {
+          Image(systemName: checkmarkImage)
+            .foregroundStyle(.blue)
+          Text(icon.description)
+          Spacer()
         }
-      } else {
-        EmptyView()
+        Image(uiImage: icon.preview)
+          .resizable()
+          .aspectRatio(contentMode: .fit)
       }
     }
   }
