@@ -129,7 +129,7 @@ struct DashboardView: View {
     }
     
     private func makeAddMaintenanceView() -> some View {
-        AddMaintenanceView { event in
+        AddMaintenanceView(vehicles: viewModel.vehicles) { event in
             viewModel.addEvent(event)
         }
         .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {

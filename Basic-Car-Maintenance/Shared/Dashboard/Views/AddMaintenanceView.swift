@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddMaintenanceView: View {
     
+    let vehicles: [Vehicle]
     let addTapped: (MaintenanceEvent) -> Void
     
     @State private var title = ""
@@ -70,5 +71,9 @@ struct AddMaintenanceView: View {
 }
 
 #Preview {
-    AddMaintenanceView() { _ in }
+    AddMaintenanceView(vehicles: sampleVehicles) { _ in }
 }
+
+let sampleVehicles = [
+    Vehicle(name: "Lexus", make: "Lexus", model: "White")
+]
