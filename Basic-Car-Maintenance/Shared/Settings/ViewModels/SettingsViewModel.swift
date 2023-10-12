@@ -26,6 +26,8 @@ final class SettingsViewModel {
         "bugReport": URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues")!
     ]
     
+    // swiftlint:disable:next line_length
+    /// Fetches the list of contributors for the GitHub repository [Basic-Car-Maintenance](https://github.com/mikaelacaron/Basic-Car-Maintenance).
     func getContributors() async {
         guard let url =
                 URL(string: "https://api.github.com/repos/mikaelacaron/Basic-Car-Maintenance/contributors")
@@ -44,21 +46,29 @@ final class SettingsViewModel {
         }
     }
     
-    func addVehicle(_ vehicle: Vehicle) async {
-        
+    /// Adds a new vehicle to the Firestore database and the local ``SettingsViewModel/vehicles`` array.
+    ///
+    /// - Parameter vehicle: The vehicle to be added.
+    /// - Throws: An error if there's an issue adding the vehicle to Firestore.
+    func addVehicle(_ vehicle: Vehicle) async throws {
         if let uid = authenticationViewModel.user?.uid {
             var vehicleToAdd = vehicle
             vehicleToAdd.userID = uid
             
-            try? Firestore
-                .firestore()
-                .collection("vehicles")
-                .addDocument(from: vehicleToAdd)
-
-            vehicles.append(vehicleToAdd)
+            do {
+                let firestoreRef = try Firestore
+                    .firestore()
+                    .collection("vehicles")
+                    .addDocument(from: vehicleToAdd)
+                vehicleToAdd.id = firestoreRef.documentID
+                vehicles.append(vehicleToAdd)
+            } catch {
+                throw error
+            }
         }
     }
     
+    /// Fetches the user's vehicles from Firestore based on their unique user ID.
     func getVehicles() async {
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
@@ -80,6 +90,10 @@ final class SettingsViewModel {
         }
     }
     
+    /// Deletes a vehicle from both Firestore and the local ``SettingsViewModel/vehicles`` array.
+    ///
+    /// - Parameter vehicle: The vehicle to be deleted.
+    /// - Throws: An error if there's an issue deleting the vehicle from Firestore.
     func deleteVehicle(_ vehicle: Vehicle) async throws {
         guard let documentId = vehicle.id else {
             fatalError("Event \(vehicle.name) has no document ID.")

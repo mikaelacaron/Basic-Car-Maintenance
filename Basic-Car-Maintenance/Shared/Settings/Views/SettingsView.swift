@@ -6,14 +6,19 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct SettingsView: View {
     @State private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
     @State private var showDeleteVehicleError = false
+    @State private var showAddVehicleError = false
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
+    @Environment(\.colorScheme) var colorScheme
     @State private var errorDetails: Error?
+    @State private var copiedAppVersion: Bool = false
+    private let appVersion = "Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))"
     
     init(authenticationViewModel: AuthenticationViewModel) {
         let settingsViewModel = SettingsViewModel(authenticationViewModel: authenticationViewModel)
@@ -35,7 +40,7 @@ struct SettingsView: View {
                             .frame(width: 20, height: 20)
                     }
                 }
-              
+                
                 Link(destination: URL(string: "https://github.com/mikaelacaron")!) {
                     Text("🦄 Mikaela Caron - Maintainer", comment: "Link to maintainer Github account.")
                 }
@@ -69,6 +74,7 @@ struct SettingsView: View {
                         Text("Contributors", comment: "Link to contributors list.")
                     }
                 }
+                .foregroundStyle(.blue)
                 
                 Section {
                     ForEach(viewModel.vehicles) { vehicle in
@@ -97,7 +103,7 @@ struct SettingsView: View {
                     }
                     
                     Button {
-                        isShowingAddVehicle.toggle()
+                        isShowingAddVehicle = true
                     } label: {
                         Text("Add Vehicle", comment: "Label to add a vehicle.")
                     }
@@ -117,7 +123,51 @@ struct SettingsView: View {
                     }
                 }
                 // swiftlint:disable:next line_length
-                Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))", comment: "Label to display version and build number.")
+                Text(LocalizedStringKey(stringLiteral: appVersion), comment: "Label to display version and build number.")
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .onLongPressGesture {
+                        let clipboard = UIPasteboard.general
+                        clipboard.setValue(appVersion, forPasteboardType: UTType.plainText.identifier)
+                        copiedAppVersion = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            copiedAppVersion = false
+                        }
+                    }
+                    .overlay {
+                        // A toast view to notify the user of version copy
+                        Text("Copied!", comment: "Text to notify user that app version was copied")
+                            .font(.callout)
+                            .padding(8)
+                            .foregroundStyle(colorScheme == .light ? .white : .black)
+                            .background(colorScheme == .light ? .black : .white)
+                            .clipShape(Capsule())
+                            .opacity(copiedAppVersion ? 1 : 0)
+                            .animation(.linear(duration: 0.2), value: copiedAppVersion)
+                    }
+            }
+            .navigationDestination(isPresented: $isShowingAddVehicle) {
+                AddVehicleView() { vehicle in
+                    Task {
+                        do {
+                            try await viewModel.addVehicle(vehicle)
+                            isShowingAddVehicle = false
+                        } catch {
+                            errorDetails = error
+                            showAddVehicleError = true
+                        }
+                    }
+                }
+                .alert("Failed To Add Vehicle", isPresented: $showAddVehicleError) {
+                    Button("OK") {
+                        showAddVehicleError = false
+                    }
+                } message: {
+                    if let errorDetails {
+                        Text("Failed To Add Vehicle\nDetails:\(errorDetails.localizedDescription)")
+                    } else {
+                        Text("Failed To Add Vehicle. Unknown Error.")
+                    }
+                }
             }
             // swiftlint:disable:next line_length
             .alert(Text("Failed To Delete Vehicle", comment: "Label to dsplay title of the delete vehicle alert"),
@@ -129,22 +179,16 @@ struct SettingsView: View {
                 }
             } message: {
                 if let errorDetails {
-                    // swiftlint:disable:next line_length
-                    Text("Failed To Delete Vehicle\nDetails:\(errorDetails.localizedDescription)", comment: "Label to display localized error description.")
+                    Text("Failed To Delete Vehicle\nDetails:\(errorDetails.localizedDescription)",
+                         comment: "Label to display localized error description.")
                 } else {
-                    Text("Failed To Add Vehicle. Unknown Error.", comment: "Label to display error details.")
+                    Text("Failed To Delete Vehicle. Unknown Error.",
+                         comment: "Label to display error details.")
                 }
             }
             .navigationTitle(Text("Settings", comment: "Label to display settings."))
             .task {
                 await viewModel.getVehicles()
-            }
-            .sheet(isPresented: $isShowingAddVehicle) {
-                AddVehicleView() { vehicle in
-                    Task {
-                        await viewModel.addVehicle(vehicle)
-                    }
-                }
             }
         }
         .onChange(of: scenePhase) { _, newScenePhase in
@@ -172,4 +216,5 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView(authenticationViewModel: AuthenticationViewModel())
+        .environment(ActionService.shared)
 }

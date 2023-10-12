@@ -7,7 +7,7 @@ This document contains the rules and guidelines that developers are expected to 
 This app was created for [Hacktoberfest](https://hacktoberfest.com/), to help beginners in iOS dev contribute to open source. It is an app to help keep track of your car maintenance activites. This project uses [Firebase](https://firebase.google.com), [Firestore](https://firebase.google.com/products/firestore), and Sign in With Apple.
 
 ### Project Status
-This is a deployed app on the Apple App Store, available for iOS 17.0 or later. After Hacktoberfest, a new version will be created and pushed to the App Store by [Mikaela Caron](https://github.com/mikaelacaron) (the maintainer).
+This app will be deployed on the Apple App Store, available for iOS 17.0 or later, [Mikaela Caron](https://github.com/mikaelacaron) (the maintainer) will upload it to the App Store after Hacktoberfest.
 
 # Getting Started
 ## Prerequisites

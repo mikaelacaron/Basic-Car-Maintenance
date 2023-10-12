@@ -18,8 +18,6 @@ struct AddVehicleView: View {
         !name.isEmpty && !make.isEmpty && !model.isEmpty
     }
     
-    @Environment(\.dismiss) var dismiss
-    
     var body: some View {
         NavigationStack {
             Form {
@@ -46,13 +44,13 @@ struct AddVehicleView: View {
                     Button {
                         let vehicle = Vehicle(name: name, make: make, model: model)
                         addTapped(vehicle)
-                        dismiss()
                     } label: {
                         Text("Add")
                     }
                     .disabled(!isVehicleValid)
                 }
             }
+            .navigationTitle(Text("Add Vehicle", comment: "Navigation title for Add Vehicle View"))
         }
     }
 }

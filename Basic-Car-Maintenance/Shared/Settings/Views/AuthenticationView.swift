@@ -42,6 +42,7 @@ struct AuthenticationView: View {
                         .frame(minHeight: 44)
                     }
                 }
+                .listRowBackground(Color.clear)
             } else {
                 VStack(alignment: .center, spacing: 8) {
                     Text("Signed in as \(viewModel.user?.email ?? "No Email Found")")
