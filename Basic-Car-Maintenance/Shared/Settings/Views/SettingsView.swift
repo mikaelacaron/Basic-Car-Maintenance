@@ -15,6 +15,7 @@ struct SettingsView: View {
     @State private var showAddVehicleError = false
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
+    @Environment(\.colorScheme) var colorScheme
     @State private var errorDetails: Error?
     @State private var copiedAppVersion: Bool = false
     private let appVersion = "Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))"
@@ -134,10 +135,11 @@ struct SettingsView: View {
                     }
                     .overlay {
                         // A toast view to notify the user of version copy
-                        Text("Copied!", comment: "Text to notify user that app version was copied").font(.callout)
+                        Text("Copied!", comment: "Text to notify user that app version was copied")
+                            .font(.callout)
                             .padding(8)
-                            .background(.black)
-                            .foregroundStyle(.white)
+                            .foregroundStyle(colorScheme == .light ? .white : .black)
+                            .background(colorScheme == .light ? .black : .white)
                             .clipShape(Capsule())
                             .opacity(copiedAppVersion ? 1 : 0)
                             .animation(.linear(duration: 0.2), value: copiedAppVersion)
