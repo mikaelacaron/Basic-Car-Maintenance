@@ -351,6 +351,9 @@
         }
       }
     },
+    "Copied!" : {
+      "comment" : "Text to notify user that app version was copied"
+    },
     "Custom" : {
       "comment" : "Sorting option that sorts items according to the user's preferences.",
       "localizations" : {
