@@ -40,7 +40,7 @@ struct SettingsView: View {
                 Link(destination: URL(string: "https://github.com/mikaelacaron")!) {
                     Text("🦄 Mikaela Caron - Maintainer", comment: "Link to maintainer Github account.")
                 }
-
+                
                 // swiftlint:disable:next line_length
                 Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=feature+request&projects=&template=feature-request.md&title=FEATURE+-")!) {
                     Label {
@@ -107,24 +107,24 @@ struct SettingsView: View {
                     Text("Vehicles", comment: "Label to display header title.")
                 }
                 
-              Section {
-                NavigationLink {
-                  AuthenticationView(viewModel: viewModel.authenticationViewModel)
-                } label: {
-                  Label {
-                    Text("Profile", comment: "Link to view profile.")
-                  } icon: {
-                    Image(systemName: "person")
-                  }
+                Section {
+                    NavigationLink {
+                        AuthenticationView(viewModel: viewModel.authenticationViewModel)
+                    } label: {
+                        Label {
+                            Text("Profile", comment: "Link to view profile.")
+                        } icon: {
+                            Image(systemName: "person")
+                        }
+                    }
+                    
+                    NavigationLink {
+                        ChooseAppIconView(viewModel: ChooseAppIconViewModel())
+                    } label: {
+                        Label("Change App Icon", systemImage: "apps.iphone")
+                    }
                 }
                 
-                NavigationLink {
-                  ChooseAppIconView(viewModel: ChooseAppIconViewModel())
-                } label: {
-                  Label("Change App Icon", systemImage: "apps.iphone")
-                }
-              }
-              
                 // swiftlint:disable:next line_length
                 Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))", comment: "Label to display version and build number.")
             }
