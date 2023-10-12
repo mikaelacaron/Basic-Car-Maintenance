@@ -30,6 +30,25 @@ final class ContributorTests: XCTestCase {
         jsonEncoder = JSONEncoder()
         jsonEncoder.keyEncodingStrategy = .convertToSnakeCase
     }
+    func testNewFeature() throws {
+    // Arrange: Prepare the data and context for the test
+    let contributor = Contributor(login: "NewUser",
+                                  id: 12345678,
+                                  nodeID: "MDQ6VXNlcjEyMzQ1Njc4",
+                                  avatarURL: "https://example.com/avatar.png",
+                                  url: "https://api.github.com/users/NewUser",
+                                  htmlURL: "https://github.com/NewUser",
+                                  contributions: 42)
+
+    // Act: Perform the action you want to test
+    let contributorData = try jsonEncoder.encode(contributor)
+    
+    // Assert: Check if the result is as expected
+    let decodedContributor = try jsonDecoder.decode(Contributor.self, from: contributorData)
+    
+    XCTAssertEqual(contributor, decodedContributor)
+}
+
 
     func testContributorDecoding() throws {
         guard let data = testContributorJson.data(using: .utf8) else {
