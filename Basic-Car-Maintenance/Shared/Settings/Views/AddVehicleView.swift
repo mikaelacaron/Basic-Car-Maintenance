@@ -44,6 +44,8 @@ struct AddVehicleView: View {
                     Button {
                         let vehicle = Vehicle(name: name, make: make, model: model)
                         addTapped(vehicle)
+                        // Log vehicle created event to Firebase Analytics
+                        AnalyticsManager.shared.logEventVehicleCreated(.vehicleCreated(RMCVehicleCreatedEvent(vehicleAction: "created", origin: "AddVehicleView", timestamp: Date())))
                     } label: {
                         Text("Add")
                     }
