@@ -141,4 +141,5 @@ struct DashboardView: View {
 
 #Preview {
     DashboardView(authenticationViewModel: AuthenticationViewModel())
+        .environment(ActionService.shared)
 }
