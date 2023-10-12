@@ -22,7 +22,7 @@ struct DashboardView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(viewModel.viewEvents) { event in
+                ForEach(viewModel.searchedEvents) { event in
                     VStack(alignment: .leading, spacing: 8) {
                         Text(event.title)
                             .font(.title3)
@@ -62,13 +62,13 @@ struct DashboardView: View {
             .overlay {
                 if viewModel.events.isEmpty {
                     Text("Add your first maintenance")
-                } else if viewModel.viewEvents.isEmpty && !viewModel.searchText.isEmpty {
+                } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
                     ContentUnavailableView("No results",
                                            systemImage: "magnifyingglass",
                                            description: noSearchResultsDescription)
                 }
             }
-            .animation(.linear, value: viewModel.viewEvents)
+            .animation(.linear, value: viewModel.searchedEvents)
             .navigationTitle(Text("Dashboard"))
             .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert) {
                 Button("OK") {

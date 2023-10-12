@@ -30,7 +30,7 @@ class DashboardViewModel {
         }
     }
     
-    var viewEvents: [MaintenanceEvent] {
+    var searchedEvents: [MaintenanceEvent] {
         if searchText.isEmpty {
             sortedEvents
         } else {
