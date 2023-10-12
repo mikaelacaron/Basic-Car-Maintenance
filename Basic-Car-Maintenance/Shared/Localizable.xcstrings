@@ -151,7 +151,7 @@
       }
     },
     "Add Vehicle" : {
-      "comment" : "Navigation title for Add Vehicle View\nLabel to add a vehicle.",
+      "comment" : "Label to add a vehicle.\nNavigation title for Add Vehicle View",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -1448,6 +1448,9 @@
           }
         }
       }
+    },
+    "Update Maintenance" : {
+      "extractionState" : "manual"
     },
     "Vehicle Make" : {
       "localizations" : {
