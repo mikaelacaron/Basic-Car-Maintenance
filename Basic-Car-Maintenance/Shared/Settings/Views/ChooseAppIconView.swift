@@ -14,13 +14,12 @@ struct ChooseAppIconView: View {
     return viewModel.selectedAppIcon == icon
   }
   
+  private let columns = [
+    GridItem(.flexible(minimum: 30, maximum: 300)),
+    GridItem(.flexible(minimum: 30, maximum: 300))
+  ]
   var body: some View {
-    let columns = [
-      GridItem(.flexible(minimum: 30, maximum: 300)),
-      GridItem(.flexible(minimum: 30, maximum: 300))
-    ]
-    
-    return Form {
+    Form {
       Section {
         HStack {
           Image(systemName: "apps.iphone")
@@ -64,6 +63,7 @@ extension ChooseAppIconView {
         Image(uiImage: icon.preview)
           .resizable()
           .aspectRatio(contentMode: .fit)
+          .clipShape(.rect(cornerRadius: 20))
       }
     }
   }

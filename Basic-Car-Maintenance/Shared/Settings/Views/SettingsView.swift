@@ -119,7 +119,7 @@ struct SettingsView: View {
                 }
                 
                 NavigationLink {
-                  ChooseAppIconView(viewModel: viewModel.chooseAppIconViewModel)
+                  ChooseAppIconView(viewModel: ChooseAppIconViewModel())
                 } label: {
                   Label("Change App Icon", systemImage: "apps.iphone")
                 }

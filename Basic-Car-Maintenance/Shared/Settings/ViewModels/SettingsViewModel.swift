@@ -13,13 +13,11 @@ import Foundation
 final class SettingsViewModel {
     let authenticationViewModel: AuthenticationViewModel
     var contributors: [Contributor]?
-  var chooseAppIconViewModel: ChooseAppIconViewModel
     
     var vehicles = [Vehicle]()
     
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
-        self.chooseAppIconViewModel = .init()
     }
     
     let urls: [String: URL] = [
