@@ -14,6 +14,7 @@ struct AddMaintenanceView: View {
     
     @State private var title = ""
     @State private var date = Date()
+    @State private var selectedVehicle: Vehicle?
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
     
@@ -30,6 +31,21 @@ struct AddMaintenanceView: View {
                 } header: {
                     Text("Title",
                          comment: "Maintenance event title text field header")
+                }
+                
+                Section {
+                    Picker(selection: $selectedVehicle) {
+                        ForEach(vehicles) { vehicle in
+                            Text(vehicle.name)
+                        }
+                    } label: {
+                        Text("Select a vehicle",
+                             comment: "Maintenance event vehicle picker label")
+                    }
+                    .pickerStyle(.menu)
+                } header: {
+                    Text("Vehicle",
+                         comment: "Maintenance event vehicle picker header")
                 }
                 
                 DatePicker(selection: $date, displayedComponents: .date) {
