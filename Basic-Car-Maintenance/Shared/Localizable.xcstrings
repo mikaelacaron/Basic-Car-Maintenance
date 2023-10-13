@@ -51,6 +51,9 @@
         }
       }
     },
+    "🤠" : {
+
+    },
     "🦄 Mikaela Caron - Maintainer" : {
       "comment" : "Link to maintainer Github account.",
       "localizations" : {
@@ -151,7 +154,7 @@
       }
     },
     "Add Vehicle" : {
-      "comment" : "Navigation title for Add Vehicle View\nLabel to add a vehicle.",
+      "comment" : "Label to add a vehicle.\nNavigation title for Add Vehicle View",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -357,6 +360,9 @@
         }
       }
     },
+    "Copied!" : {
+      "comment" : "Text to notify user that app version was copied"
+    },
     "Custom" : {
       "comment" : "Sorting option that sorts items according to the user's preferences.",
       "localizations" : {
@@ -495,6 +501,9 @@
           }
         }
       }
+    },
+    "Dismiss" : {
+
     },
     "Edit" : {
       "localizations" : {
@@ -817,6 +826,9 @@
         }
       }
     },
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." : {
+
+    },
     "Make" : {
       "localizations" : {
         "cs" : {
@@ -953,6 +965,9 @@
           }
         }
       }
+    },
+    "No results" : {
+
     },
     "Notes" : {
       "comment" : "Maintenance event notes text field label",
@@ -1113,6 +1128,9 @@
           }
         }
       }
+    },
+    "Read More..." : {
+
     },
     "Report a Bug" : {
       "comment" : "Link to report a bug",
@@ -1357,7 +1375,12 @@
         }
       }
     },
+    "There were no maintenance events for '%@'. Try a new search." : {
+
+    },
     "This App Icon will appear on your Home Screen." : {
+    },
+    "This is the title" : {
 
     },
     "Title" : {

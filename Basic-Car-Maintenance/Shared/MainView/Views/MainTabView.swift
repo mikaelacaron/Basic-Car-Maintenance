@@ -18,6 +18,7 @@ struct MainTabView: View {
     @AppStorage("lastTabOpen") var selectedTab = TabSelection.dashboard
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
+    @State private var isShowingRealTimeAlert = false
     @State var authenticationViewModel = AuthenticationViewModel()
     
     var body: some View {
@@ -40,6 +41,14 @@ struct MainTabView: View {
                     Label("Settings", systemImage: "gear")
                 }
         }
+        .sheet(isPresented: $isShowingRealTimeAlert) {
+            AlertView()
+                .presentationDetents([.medium])
+        }
+        // TODO: To be deleted
+        .onTapGesture(count: 2) {
+            isShowingRealTimeAlert = true
+        }
         .onChange(of: scenePhase) { _, newScenePhase in
             guard
                 case .active = newScenePhase,
@@ -60,4 +69,5 @@ struct MainTabView: View {
 
 #Preview {
     MainTabView()
+        .environment(ActionService.shared)
 }
