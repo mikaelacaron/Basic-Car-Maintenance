@@ -51,6 +51,9 @@
         }
       }
     },
+    "🤠" : {
+
+    },
     "🦄 Mikaela Caron - Maintainer" : {
       "comment" : "Link to maintainer Github account.",
       "localizations" : {
@@ -151,7 +154,7 @@
       }
     },
     "Add Vehicle" : {
-      "comment" : "Navigation title for Add Vehicle View\nLabel to add a vehicle.",
+      "comment" : "Label to add a vehicle.\nNavigation title for Add Vehicle View",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -493,6 +496,9 @@
         }
       }
     },
+    "Dismiss" : {
+
+    },
     "Edit" : {
       "localizations" : {
         "cs" : {
@@ -814,6 +820,9 @@
         }
       }
     },
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." : {
+
+    },
     "Make" : {
       "localizations" : {
         "cs" : {
@@ -1114,6 +1123,9 @@
         }
       }
     },
+    "Read More..." : {
+
+    },
     "Report a Bug" : {
       "comment" : "Link to report a bug",
       "localizations" : {
@@ -1358,6 +1370,9 @@
       }
     },
     "There were no maintenance events for '%@'. Try a new search." : {
+
+    },
+    "This is the title" : {
 
     },
     "Title" : {
