@@ -135,6 +135,9 @@ struct DashboardView: View {
     private func makeAddMaintenanceView() -> some View {
         AddMaintenanceView { event in
             viewModel.addEvent(event)
+            Task {
+                await viewModel.getMaintenanceEvents()
+            }
         }
         .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
             Button("OK", role: .cancel) {}

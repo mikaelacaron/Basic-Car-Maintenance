@@ -48,16 +48,12 @@ class DashboardViewModel {
             eventToAdd.userID = uid
             
             do {
-                let documentReference = try Firestore
+                try Firestore
                     .firestore()
                     .collection("maintenance_events")
                     .addDocument(from: eventToAdd)
                 
-                var event = maintenanceEvent
-                let documentId = documentReference.documentID
-                event.id = documentId
-                
-                events.append(event)
+                events.append(maintenanceEvent)
                 
                 errorMessage = ""
                 isShowingAddMaintenanceEvent = false
