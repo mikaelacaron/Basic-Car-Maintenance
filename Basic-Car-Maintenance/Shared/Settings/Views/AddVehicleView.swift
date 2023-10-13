@@ -44,13 +44,14 @@ struct AddVehicleView: View {
                     Button {
                         let vehicle = Vehicle(name: name, make: make, model: model)
                         addTapped(vehicle)
-                        // Log vehicle created event to Firebase Analytics
-                        AnalyticsManager.shared.logEventVehicleCreated(.vehicleCreated(VehicleCreatedEvent(vehicleAction: "created", origin: "AddVehicleView")))
+            // Log the vehicle created event to Firebase Analytics
+            AnalyticsManager.shared.logEvent(.vehicleCreated,
+                parameters: ["analyticsView": AnalyticsView.addVehicleView])
                     } label: {
                         Text("Add")
                     }
                     .disabled(!isVehicleValid)
-                }
+                } 
             }
             .navigationTitle(Text("Add Vehicle", comment: "Navigation title for Add Vehicle View"))
         }

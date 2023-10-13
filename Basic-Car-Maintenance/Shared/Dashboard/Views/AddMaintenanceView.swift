@@ -58,6 +58,9 @@ struct AddMaintenanceView: View {
                         let event = MaintenanceEvent(title: title, date: date, notes: notes)
                         addTapped(event)
                         dismiss()
+                        // Log the maintenance created event to Firebase Analytics
+                        AnalyticsManager.shared.logEvent(.maintenanceEventCreated,
+                            parameters: ["analyticsView": AnalyticsView.addMaintenanceView])
                     } label: {
                         Text("Add",
                              comment: "Label for button to add data")

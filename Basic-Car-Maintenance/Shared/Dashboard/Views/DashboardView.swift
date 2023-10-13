@@ -37,6 +37,8 @@ struct DashboardView: View {
                             Task {
                                 await viewModel.deleteEvent(event)
                             }
+                            AnalyticsManager.shared.logEvent(.maintenanceEventDeleted, 
+                                parameters: ["analyticsView": AnalyticsView.dashboardView])
                         } label: {
                             Image(systemName: "trash")
                         }

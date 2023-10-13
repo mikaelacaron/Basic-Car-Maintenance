@@ -56,6 +56,9 @@ struct EditMaintenanceEventView: View {
                         Task {
                             await viewModel.updateEvent(event)
                             dismiss()
+                            // Log the maintenance updated event to Firebase Analytics
+                            AnalyticsManager.shared.logEvent(.maintenanceEventUpdated,
+                                parameters: ["analyticsView": AnalyticsView.editEventDetailView])
                         }
                     } label: {
                         Text("Update")

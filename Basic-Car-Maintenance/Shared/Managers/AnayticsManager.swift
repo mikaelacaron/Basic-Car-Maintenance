@@ -4,7 +4,6 @@
 //
 //  Created by 0xJs on 10/11/23.
 //
-
 import Foundation
 import FirebaseAnalytics
 
@@ -14,36 +13,57 @@ final class AnalyticsManager {
     
     static let shared = AnalyticsManager()
     
-    public func logEventVehicleCreated(_ vehicleCreated: AnalyticsEvent) {
-        var paramaters: [String: Any] = [:]
-        switch vehicleCreated {
-        case .vehicleCreated(let vehicleCreatedEvent):
-            do {
-                let data = try JSONEncoder().encode(vehicleCreatedEvent)
-                let dict = try JSONSerialization.jsonObject(with: data) as? [String: Any] ?? [:]
-                paramaters = dict
-            } catch {
-                
-            }
-        }
-        print("\n Event: \(vehicleCreated.eventName) | Params: \(paramaters)")
+    public func logEvent(_ event: AnalyticsAction, parameters: [String: Any] = [:]) {
+        print("\n Event: \(event.rawValue) | Params: \(parameters)")
         
-        Analytics.logEvent(vehicleCreated.eventName, 
-                           parameters: paramaters)
+        Analytics.logEvent(event.rawValue, parameters: parameters)
     }
 }
 
-enum AnalyticsEvent {
-    case vehicleCreated(VehicleCreatedEvent)
-    
-    var eventName: String {
-        switch self {
-        case .vehicleCreated: return "vehicle_created"
-        }
-    }
+enum AnalyticsAction: String, Codable {
+  case vehicleCreated
+  case vehicleUpdated
+  case vehicleDeleted
+  case maintenanceEventCreated
+  case maintenanceEventUpdated
+  case maintenanceEventDeleted
+}
+
+enum AnalyticsView: String, Codable {
+  case addVehicleView
+// case updateVehicleView (update?)
+  case settingsViewModel
+  case addMaintenanceView
+  case editEventDetailView
+  case dashboardView
 }
 
 struct VehicleCreatedEvent: Codable {
-    let vehicleAction: String
-    let origin: String
+  let vehicleAction: AnalyticsAction
+  let origin: AnalyticsView
+}
+
+struct VehicleUpdatedEvent: Codable {
+  let vehicleAction: AnalyticsAction
+  let origin: AnalyticsView
+}
+
+struct VehicleDeletedEvent: Codable {
+  let vehicleAction: AnalyticsAction
+  let origin: AnalyticsView
+}
+
+struct MaintenanceEventCreatedEvent: Codable {
+  let vehicleAction: AnalyticsAction
+  let origin: AnalyticsView
+}
+
+struct MaintenanceEventUpdatedEvent: Codable {
+  let vehicleAction: AnalyticsAction
+  let origin: AnalyticsView
+}
+
+struct MaintenanceEventDeletedEvent: Codable {
+  let vehicleAction: AnalyticsAction
+  let origin: AnalyticsView
 }

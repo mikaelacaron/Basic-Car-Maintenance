@@ -107,6 +107,9 @@ final class SettingsViewModel {
                 .delete()
             
             vehicles.removeAll { $0.id == vehicle.id }
+        // Log the vehicle deleted event to Firebase Analytics
+        AnalyticsManager.shared.logEvent(.vehicleDeleted, 
+            parameters: ["analyticsView": AnalyticsView.settingsViewModel])
         } catch {
             throw error
         }
