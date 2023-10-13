@@ -84,10 +84,6 @@ class DashboardViewModel {
         }
     }
     
-    func syncEvents() async {
-        await self.getMaintenanceEvents()
-    }
-    
     func updateEvent(_ maintenanceEvent: MaintenanceEvent) async {
         
         if let uid = authenticationViewModel.user?.uid {

@@ -38,7 +38,6 @@ struct DashboardView: View {
                         Button(role: .destructive) {
                             Task {
                                 await viewModel.deleteEvent(event)
-                                await viewModel.syncEvents()
                             }
                         } label: {
                             Image(systemName: "trash")
@@ -137,7 +136,7 @@ struct DashboardView: View {
         AddMaintenanceView { event in
             viewModel.addEvent(event)
             Task {
-                await viewModel.syncEvents()
+                await viewModel.getMaintenanceEvents()
             }
         }
         .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
