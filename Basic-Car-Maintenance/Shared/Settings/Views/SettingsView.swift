@@ -14,6 +14,7 @@ struct SettingsView: View {
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @State private var errorDetails: Error?
+    @ScaledMetric var scale: CGFloat = 1
     
     init(authenticationViewModel: AuthenticationViewModel) {
         let settingsViewModel = SettingsViewModel(authenticationViewModel: authenticationViewModel)
@@ -32,7 +33,7 @@ struct SettingsView: View {
                     } icon: {
                         Image("github-logo")
                             .resizable()
-                            .frame(width: 20, height: 20)
+                            .frame(width: 20 * scale, height: 20 * scale)
                     }
                 }
               
@@ -47,7 +48,7 @@ struct SettingsView: View {
                     } icon: {
                         Image(systemName: "doc.badge.plus")
                             .resizable()
-                            .frame(width: 20, height: 20)
+                            .frame(width: 20 * scale, height: 20 * scale)
                     }
                 }
                 // swiftlint:disable:next line_length
@@ -57,7 +58,7 @@ struct SettingsView: View {
                     } icon: {
                         Image(systemName: "ladybug")
                             .resizable()
-                            .frame(width: 20, height: 20)
+                            .frame(width: 20 * scale, height: 20 * scale)
                     }
                 }
                 
