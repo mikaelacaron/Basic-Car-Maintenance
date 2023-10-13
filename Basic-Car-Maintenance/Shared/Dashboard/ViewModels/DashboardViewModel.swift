@@ -20,12 +20,21 @@ class DashboardViewModel {
     var isShowingAddMaintenanceEvent = false
     var errorMessage: String = ""
     var sortOption: SortOption = .custom
+    var searchText: String = ""
     
     var sortedEvents: [MaintenanceEvent] {
         switch sortOption {
         case .oldestToNewest: events.sorted { $0.date < $1.date }
         case .newestToOldest: events.sorted { $0.date > $1.date }
         case .custom: events
+        }
+    }
+    
+    var searchedEvents: [MaintenanceEvent] {
+        if searchText.isEmpty {
+            sortedEvents
+        } else {
+            sortedEvents.filter { $0.title.localizedStandardContains(searchText) }
         }
     }
     
@@ -111,6 +120,10 @@ class DashboardViewModel {
                 .document(documentId)
                 .delete()
             errorMessage = ""
+            
+            if let eventIndex = events.firstIndex(of: event) {
+                events.remove(at: eventIndex)
+            }
         } catch {
             showErrorAlert.toggle()
             errorMessage = error.localizedDescription
