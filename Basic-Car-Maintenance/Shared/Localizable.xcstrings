@@ -1481,6 +1481,9 @@
         }
       }
     },
+    "Update Maintenance" : {
+      "extractionState" : "manual"
+    },
     "Vehicle Make" : {
       "localizations" : {
         "cs" : {
