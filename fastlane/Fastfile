@@ -23,7 +23,7 @@ platform :ios do
 end
 
 lane :unit_tests do
-  run_tests(build_for_testing: true,
+  run_tests(clean: true,
             scheme: "Basic-Car-Maintenance",
             only_testing: "Basic-Car-Maintenance-Tests",
             device: "iPhone 15 Pro")
