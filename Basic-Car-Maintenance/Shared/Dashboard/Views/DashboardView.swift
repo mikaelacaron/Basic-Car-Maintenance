@@ -22,15 +22,17 @@ struct DashboardView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(viewModel.sortedEvents) { event in
+                ForEach(viewModel.searchedEvents) { event in
                     VStack(alignment: .leading, spacing: 8) {
                         Text(event.title)
                             .font(.title3)
                         
                         Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
                         
-                        Text(event.notes)
-                            .lineLimit(0)
+                        if !event.notes.isEmpty {
+                            Text(event.notes)
+                                .lineLimit(0)
+                        }
                     }
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                         Button(role: .destructive) {
@@ -60,12 +62,17 @@ struct DashboardView: View {
                 }
                 .listStyle(.inset)
             }
+            .searchable(text: $viewModel.searchText)
             .overlay {
                 if viewModel.events.isEmpty {
                     Text("Add your first maintenance")
+                } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
+                    ContentUnavailableView("No results",
+                                           systemImage: "magnifyingglass",
+                                           description: noSearchResultsDescription)
                 }
             }
-            .animation(.linear, value: viewModel.sortOption)
+            .animation(.linear, value: viewModel.searchedEvents)
             .navigationTitle(Text("Dashboard"))
             .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert) {
                 Button("OK") {
@@ -137,8 +144,13 @@ struct DashboardView: View {
             Text(viewModel.errorMessage)
         }
     }
+    
+    private var noSearchResultsDescription: Text {
+        Text("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.")
+    }
 }
 
 #Preview {
     DashboardView(authenticationViewModel: AuthenticationViewModel())
+        .environment(ActionService.shared)
 }

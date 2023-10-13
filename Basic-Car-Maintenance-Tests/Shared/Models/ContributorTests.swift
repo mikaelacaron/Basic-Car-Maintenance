@@ -17,7 +17,6 @@ final class ContributorTests: XCTestCase {
     "id": 12915108,
     "node_id": "MDQ6VXNlcjEyOTE1MTA4",
     "avatar_url": "https://avatars.githubusercontent.com/u/12915108?v=4",
-    "gravatar_id": "",
     "url": "https://api.github.com/users/Drag0ndust",
     "html_url": "https://github.com/Drag0ndust",
     "contributions": 0
@@ -44,7 +43,6 @@ final class ContributorTests: XCTestCase {
         XCTAssertEqual(sut.id, 12915108)
         XCTAssertEqual(sut.nodeID, "MDQ6VXNlcjEyOTE1MTA4")
         XCTAssertEqual(sut.avatarURL, "https://avatars.githubusercontent.com/u/12915108?v=4")
-        XCTAssertEqual(sut.gravatarID, "")
         XCTAssertEqual(sut.url, "https://api.github.com/users/Drag0ndust")
         XCTAssertEqual(sut.htmlURL, "https://github.com/Drag0ndust")
         XCTAssertEqual(sut.contributions, 0)
@@ -55,7 +53,7 @@ final class ContributorTests: XCTestCase {
                                       id: 12915108,
                                       nodeID: "MDQ6VXNlcjEyOTE1MTA4",
                                       avatarURL: "https://avatars.githubusercontent.com/u/12915108?v=4",
-                                      gravatarID: "", url: "https://api.github.com/users/Drag0ndust",
+                                      url: "https://api.github.com/users/Drag0ndust",
                                       htmlURL: "https://github.com/Drag0ndust",
                                       contributions: 0)
         

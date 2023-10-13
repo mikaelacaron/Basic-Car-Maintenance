@@ -15,7 +15,7 @@ Welcome to my open source app! It is ready for contributors for [Hacktoberfest](
 * Browse the open [issues](https://github.com/mikaelacaron/Basic-Car-Maintenance/issues) and **comment** which you would like to work on
    * It is only one person per issue, except where noted.
 * **Fork** this repo
-* **Clone** the repo to your machine
+* **Clone** the repo to your machine (do **not** open Xcode yet)
 * In the same folder that contains the `Basic-Car-Maintenance.xcconfig.template`, run this command, in Terminal, to create a new Xcode configuration file (which properly sets up the signing information)
 
 ```sh
@@ -29,6 +29,7 @@ cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
 DEVELOPMENT_TEAM = ABC123
 PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 ```
+* Open Xcode
 * Build the project ✅
 
 * **Checkout** a new branch (from the `dev` branch) to work on an issue

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */; };
 		898009792AD1899700604E7C /* ContributorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898009782AD1899700604E7C /* ContributorTests.swift */; };
+		8A3D74862AD6D9A10000FEEB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D74852AD6D9A10000FEEB /* AlertView.swift */; };
 		8AEE816F2ACF37F800FC0C2A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE816E2ACF37F800FC0C2A /* Action.swift */; };
 		8AEE81722ACF384D00FC0C2A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE81712ACF384D00FC0C2A /* MainTabView.swift */; };
 		D594B55A2AD778AE006C4F75 /* AnayticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D594B5592AD778AE006C4F75 /* AnayticsManager.swift */; };
@@ -93,6 +94,7 @@
 /* Begin PBXFileReference section */
 		023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventDetailView.swift; sourceTree = "<group>"; };
 		898009782AD1899700604E7C /* ContributorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorTests.swift; sourceTree = "<group>"; };
+		8A3D74852AD6D9A10000FEEB /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		8AEE816E2ACF37F800FC0C2A /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		8AEE81712ACF384D00FC0C2A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8AEE81732ACF394E00FC0C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -198,12 +200,30 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		D594B5582AD77882006C4F75 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				D594B5592AD778AE006C4F75 /* AnayticsManager.swift */,
 			);
 			path = Managers;
+=======
+		8A3D74832AD6D9870000FEEB /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				8A3D74842AD6D9920000FEEB /* Views */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		8A3D74842AD6D9920000FEEB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8AEE81712ACF384D00FC0C2A /* MainTabView.swift */,
+				8A3D74852AD6D9A10000FEEB /* AlertView.swift */,
+			);
+			path = Views;
+>>>>>>> 41be14912beb310d4e759e6458e8ec691814636d
 			sourceTree = "<group>";
 		};
 		FF3DDF492AA4386C009D91C4 /* Views */ = {
@@ -310,7 +330,7 @@
 				FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */,
 				8AEE81732ACF394E00FC0C2A /* Info.plist */,
 				FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */,
-				8AEE81712ACF384D00FC0C2A /* MainTabView.swift */,
+				8A3D74832AD6D9870000FEEB /* MainView */,
 				FFBFE08F2A98EFDD000A9BEB /* Models */,
 				FF755B3F2A908EC400F49A13 /* Dashboard */,
 				FFE0AF542AD66C1E00AB46F8 /* Odometer */,
@@ -611,6 +631,7 @@
 				FF755B492A909A0000F49A13 /* AddMaintenanceView.swift in Sources */,
 				FF09FC912AB6FF44006BE61A /* AuthenticationView.swift in Sources */,
 				023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */,
+				8A3D74862AD6D9A10000FEEB /* AlertView.swift in Sources */,
 				FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */,
 				FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */,
 				FFE0AF562AD66C3500AB46F8 /* OdometerView.swift in Sources */,
