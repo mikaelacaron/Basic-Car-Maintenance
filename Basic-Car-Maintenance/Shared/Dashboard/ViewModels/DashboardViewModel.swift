@@ -120,6 +120,10 @@ class DashboardViewModel {
                 .document(documentId)
                 .delete()
             errorMessage = ""
+            
+            if let eventIndex = events.firstIndex(of: event) {
+                events.remove(at: eventIndex)
+            }
         } catch {
             showErrorAlert.toggle()
             errorMessage = error.localizedDescription
