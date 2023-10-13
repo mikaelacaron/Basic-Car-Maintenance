@@ -9,16 +9,16 @@ import SwiftUI
 
 struct ContributorsListView: View {
     var viewModel: SettingsViewModel
-
+    
     var body: some View {
         List {
             if !viewModel.sortedContributors.isEmpty {
-                ForEach(viewModel.sortedContributors, id: \.id) { contributor in
+                ForEach(viewModel.sortedContributors) { contributor in
                     Link(
                         destination: URL(string: contributor.htmlURL) ??
-                            viewModel.urls["Basic-Car-Maintenance"]!) {
-                        ContributorsProfileView(name: contributor.login, url: contributor.avatarURL)
-                    }
+                        viewModel.urls["Basic-Car-Maintenance"]!) {
+                            ContributorsProfileView(name: contributor.login, url: contributor.avatarURL)
+                        }
                 }
             } else {
                 ProgressView()
