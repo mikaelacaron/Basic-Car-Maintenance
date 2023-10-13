@@ -354,6 +354,9 @@
         }
       }
     },
+    "Copied!" : {
+      "comment" : "Text to notify user that app version was copied"
+    },
     "Custom" : {
       "comment" : "Sorting option that sorts items according to the user's preferences.",
       "localizations" : {
@@ -957,6 +960,9 @@
         }
       }
     },
+    "No results" : {
+
+    },
     "Notes" : {
       "comment" : "Maintenance event notes text field label",
       "localizations" : {
@@ -1364,6 +1370,9 @@
       }
     },
     "This is the title" : {
+
+    },
+    "There were no maintenance events for '%@'. Try a new search." : {
 
     },
     "Title" : {
