@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */; };
+		8014A4CF2AD75928005B51F6 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4CE2AD75928005B51F6 /* AppIcon.swift */; };
+		8014A4D12AD76034005B51F6 /* ChooseAppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */; };
+		8014A4D32AD77C92005B51F6 /* ChooseAppIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */; };
 		898009792AD1899700604E7C /* ContributorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898009782AD1899700604E7C /* ContributorTests.swift */; };
 		8A3D74862AD6D9A10000FEEB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D74852AD6D9A10000FEEB /* AlertView.swift */; };
 		8AEE816F2ACF37F800FC0C2A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE816E2ACF37F800FC0C2A /* Action.swift */; };
@@ -92,6 +95,9 @@
 
 /* Begin PBXFileReference section */
 		023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventDetailView.swift; sourceTree = "<group>"; };
+		8014A4CE2AD75928005B51F6 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
+		8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppIconView.swift; sourceTree = "<group>"; };
+		8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppIconViewModel.swift; sourceTree = "<group>"; };
 		898009782AD1899700604E7C /* ContributorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorTests.swift; sourceTree = "<group>"; };
 		8A3D74852AD6D9A10000FEEB /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		8AEE816E2ACF37F800FC0C2A /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
@@ -355,6 +361,7 @@
 				E58499692ACDDAFF00634660 /* Contributor.swift */,
 				FFBFE0922A98F212000A9BEB /* Vehicle.swift */,
 				8AEE816E2ACF37F800FC0C2A /* Action.swift */,
+				8014A4CE2AD75928005B51F6 /* AppIcon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				FF755B3D2A908E7A00F49A13 /* SettingsView.swift */,
+				8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */,
 				FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */,
 				E58499652ACDDA8B00634660 /* ContributorsListView.swift */,
 				E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */,
@@ -376,6 +384,7 @@
 			children = (
 				FFC67D1C2AAEF7920073B338 /* SettingsViewModel.swift */,
 				FF748B5D2AB3589C004748A5 /* AuthenticationViewModel.swift */,
+				8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -625,12 +634,15 @@
 				8AEE816F2ACF37F800FC0C2A /* Action.swift in Sources */,
 				FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */,
 				E584996A2ACDDAFF00634660 /* Contributor.swift in Sources */,
+				8014A4D32AD77C92005B51F6 /* ChooseAppIconViewModel.swift in Sources */,
+				8014A4CF2AD75928005B51F6 /* AppIcon.swift in Sources */,
 				FFC67D1D2AAEF7920073B338 /* SettingsViewModel.swift in Sources */,
 				FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */,
 				8AEE81722ACF384D00FC0C2A /* MainTabView.swift in Sources */,
 				E58499662ACDDA8B00634660 /* ContributorsListView.swift in Sources */,
 				FFBFE0932A98F212000A9BEB /* Vehicle.swift in Sources */,
 				FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */,
+				8014A4D12AD76034005B51F6 /* ChooseAppIconView.swift in Sources */,
 				FF748B5E2AB3589C004748A5 /* AuthenticationViewModel.swift in Sources */,
 				FF755B462A90969D00F49A13 /* Bundle+extension.swift in Sources */,
 				FFAA56ED2AC8905C000120EE /* Documentation.docc in Sources */,
@@ -804,6 +816,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
+				"ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES[sdk=*]" = "AppIcon-car-red AppIcon-car-yellow AppIcon-car-dark AppIcon-car-orange AppIcon-car-black";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Basic-Car-Maintenance/Basic_Car_Maintenance.entitlements";
@@ -843,6 +857,7 @@
 			baseConfigurationReference = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Basic-Car-Maintenance/Basic_Car_Maintenance.entitlements";

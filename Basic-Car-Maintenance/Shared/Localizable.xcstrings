@@ -319,6 +319,12 @@
         }
       }
     },
+    "Change App Icon" : {
+
+    },
+    "Choose App Icon" : {
+
+    },
     "Contributors" : {
       "comment" : "Link to contributors list.",
       "localizations" : {
@@ -1371,6 +1377,8 @@
     },
     "There were no maintenance events for '%@'. Try a new search." : {
 
+    },
+    "This App Icon will appear on your Home Screen." : {
     },
     "This is the title" : {
 

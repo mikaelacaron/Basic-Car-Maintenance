@@ -44,7 +44,7 @@ struct SettingsView: View {
                 Link(destination: URL(string: "https://github.com/mikaelacaron")!) {
                     Text("🦄 Mikaela Caron - Maintainer", comment: "Link to maintainer Github account.")
                 }
-
+                
                 // swiftlint:disable:next line_length
                 Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=feature+request&projects=&template=feature-request.md&title=FEATURE+-")!) {
                     Label {
@@ -121,7 +121,14 @@ struct SettingsView: View {
                             Image(systemName: "person")
                         }
                     }
+                    
+                    NavigationLink {
+                        ChooseAppIconView(viewModel: ChooseAppIconViewModel())
+                    } label: {
+                        Label("Change App Icon", systemImage: "apps.iphone")
+                    }
                 }
+                
                 // swiftlint:disable:next line_length
                 Text(LocalizedStringKey(stringLiteral: appVersion), comment: "Label to display version and build number.")
                     .frame(maxWidth: .infinity, alignment: .center)
