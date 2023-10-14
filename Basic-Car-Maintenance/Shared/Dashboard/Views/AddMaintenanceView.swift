@@ -67,6 +67,9 @@ struct AddMaintenanceView: View {
                          comment: "Notes text field header")
                 }
             }
+            .onAppear {
+                selectedVehicle = vehicles[0]
+            }
             .navigationTitle(Text("Add Maintenance",
                                   comment: "Nagivation title for Add Maintenance view"))
             .toolbar {
