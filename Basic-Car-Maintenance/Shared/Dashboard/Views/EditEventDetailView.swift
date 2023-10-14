@@ -12,7 +12,7 @@ struct EditMaintenanceEventView: View {
     var viewModel: DashboardViewModel
     @State private var title = ""
     @State private var date = Date()
-    @State private var selectedVehicle: Vehicle?
+    @State private var selectedVehicle = Vehicle(name: "", make: "", model: "")
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
     
@@ -28,7 +28,7 @@ struct EditMaintenanceEventView: View {
                 Section {
                     Picker(selection: $selectedVehicle) {
                         ForEach(viewModel.vehicles) { vehicle in
-                            Text(vehicle.name)
+                            Text(vehicle.name).tag(vehicle as Vehicle)
                         }
                     } label: {
                         Text("Select a vehicle",
@@ -66,8 +66,10 @@ struct EditMaintenanceEventView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        guard let vehicle = selectedVehicle else { return }
-                        var event = MaintenanceEvent(title: title, date: date, notes: notes, vehicle: vehicle)
+                        var event = MaintenanceEvent(title: title,
+                                                     date: date,
+                                                     notes: notes,
+                                                     vehicle: selectedVehicle)
                         guard let selectedEvent = selectedEvent else { return }
                         event.id = selectedEvent.id
                         Task {
@@ -92,7 +94,10 @@ struct EditMaintenanceEventView: View {
 }
 
 #Preview {
-    EditMaintenanceEventView(selectedEvent: .constant(MaintenanceEvent(title: "", date: Date(), notes: "", vehicle: Vehicle(name: "", make: "", model: ""))),
-                             viewModel: DashboardViewModel(authenticationViewModel: AuthenticationViewModel())
+    EditMaintenanceEventView(selectedEvent:
+            .constant(MaintenanceEvent(title: "", date: Date(), notes: "",
+                                       vehicle: Vehicle(name: "", make: "", model: ""))),
+                             viewModel:
+                                DashboardViewModel(authenticationViewModel: AuthenticationViewModel())
     )
 }

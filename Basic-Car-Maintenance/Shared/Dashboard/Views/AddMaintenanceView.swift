@@ -14,7 +14,7 @@ struct AddMaintenanceView: View {
     
     @State private var title = ""
     @State private var date = Date()
-    @State private var selectedVehicle: Vehicle?
+    @State private var selectedVehicle = Vehicle(name: "", make: "", model: "")
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
     
@@ -36,7 +36,7 @@ struct AddMaintenanceView: View {
                 Section {
                     Picker(selection: $selectedVehicle) {
                         ForEach(vehicles) { vehicle in
-                            Text(vehicle.name)
+                            Text(vehicle.name).tag(vehicle as Vehicle)
                         }
                     } label: {
                         Text("Select a vehicle",
@@ -72,8 +72,10 @@ struct AddMaintenanceView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        guard let vehicle = selectedVehicle else { return }
-                        let event = MaintenanceEvent(title: title, date: date, notes: notes, vehicle: vehicle)
+                        let event = MaintenanceEvent(title: title,
+                                                     date: date,
+                                                     notes: notes,
+                                                     vehicle: selectedVehicle)
                         addTapped(event)
                         dismiss()
                     } label: {
@@ -92,5 +94,6 @@ struct AddMaintenanceView: View {
 }
 
 let sampleVehicles = [
-    Vehicle(name: "Lexus", make: "Lexus", model: "White")
+    Vehicle(name: "Lexus", make: "Lexus", model: "White"),
+    Vehicle(name: "Test", make: "Lexus", model: "White")
 ]
