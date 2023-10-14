@@ -157,6 +157,7 @@ struct SettingsView: View {
                     Task {
                         do {
                             try await viewModel.addVehicle(vehicle)
+                            await viewModel.getVehicles()
                             isShowingAddVehicle = false
                         } catch {
                             errorDetails = error
