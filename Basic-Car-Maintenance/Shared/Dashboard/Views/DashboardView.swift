@@ -22,7 +22,7 @@ struct DashboardView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(viewModel.sortedEvents) { event in
+                ForEach(viewModel.searchedEvents) { event in
                     VStack(alignment: .leading, spacing: 8) {
                         Text(event.title)
                             .font(.title3)
@@ -60,12 +60,17 @@ struct DashboardView: View {
                 }
                 .listStyle(.inset)
             }
+            .searchable(text: $viewModel.searchText)
             .overlay {
                 if viewModel.events.isEmpty {
                     Text("Add your first maintenance")
+                } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
+                    ContentUnavailableView("No results",
+                                           systemImage: "magnifyingglass",
+                                           description: noSearchResultsDescription)
                 }
             }
-            .animation(.linear, value: viewModel.sortOption)
+            .animation(.linear, value: viewModel.searchedEvents)
             .navigationTitle(Text("Dashboard"))
             .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert) {
                 Button("OK") {
@@ -131,12 +136,19 @@ struct DashboardView: View {
     private func makeAddMaintenanceView() -> some View {
         AddMaintenanceView(vehicles: viewModel.vehicles) { event in
             viewModel.addEvent(event)
+            Task {
+                await viewModel.getMaintenanceEvents()
+            }
         }
         .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
             Button("OK", role: .cancel) {}
         } message: {
             Text(viewModel.errorMessage)
         }
+    }
+    
+    private var noSearchResultsDescription: Text {
+        Text("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.")
     }
 }
 

@@ -21,12 +21,21 @@ class DashboardViewModel {
     var errorMessage: String = ""
     var sortOption: SortOption = .custom
     var vehicles = [Vehicle]()
+    var searchText: String = ""
     
     var sortedEvents: [MaintenanceEvent] {
         switch sortOption {
         case .oldestToNewest: events.sorted { $0.date < $1.date }
         case .newestToOldest: events.sorted { $0.date > $1.date }
         case .custom: events
+        }
+    }
+    
+    var searchedEvents: [MaintenanceEvent] {
+        if searchText.isEmpty {
+            sortedEvents
+        } else {
+            sortedEvents.filter { $0.title.localizedStandardContains(searchText) }
         }
     }
     
@@ -40,16 +49,12 @@ class DashboardViewModel {
             eventToAdd.userID = uid
             
             do {
-                let documentReference = try Firestore
+                try Firestore
                     .firestore()
                     .collection("maintenance_events")
                     .addDocument(from: eventToAdd)
                 
-                var event = maintenanceEvent
-                let documentId = documentReference.documentID
-                event.id = documentId
-                
-                events.append(event)
+                events.append(maintenanceEvent)
                 
                 errorMessage = ""
                 isShowingAddMaintenanceEvent = false
@@ -112,6 +117,10 @@ class DashboardViewModel {
                 .document(documentId)
                 .delete()
             errorMessage = ""
+            
+            if let eventIndex = events.firstIndex(of: event) {
+                events.remove(at: eventIndex)
+            }
         } catch {
             showErrorAlert.toggle()
             errorMessage = error.localizedDescription
