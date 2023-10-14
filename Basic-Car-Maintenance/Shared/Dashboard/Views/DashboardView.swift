@@ -27,6 +27,8 @@ struct DashboardView: View {
                         Text(event.title)
                             .font(.title3)
                         
+                        Text("For \(event.vehicle.name)")
+                        
                         Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
                         
                         if !event.notes.isEmpty {
