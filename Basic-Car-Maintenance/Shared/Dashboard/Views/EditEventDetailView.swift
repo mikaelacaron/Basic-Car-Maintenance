@@ -87,6 +87,7 @@ struct EditMaintenanceEventView: View {
         self.title = event.title
         self.date = event.date
         self.notes = event.notes
+        self.selectedVehicle = event.vehicle
     }
 }
 
