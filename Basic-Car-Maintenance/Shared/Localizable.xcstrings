@@ -154,7 +154,7 @@
       }
     },
     "Add Vehicle" : {
-      "comment" : "Label to add a vehicle.\nNavigation title for Add Vehicle View",
+      "comment" : "Label to add a vehicle.",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -1379,6 +1379,7 @@
 
     },
     "This App Icon will appear on your Home Screen." : {
+
     },
     "This is the title" : {
 
