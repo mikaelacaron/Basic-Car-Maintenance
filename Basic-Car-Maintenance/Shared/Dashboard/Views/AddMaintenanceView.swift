@@ -72,7 +72,8 @@ struct AddMaintenanceView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        let event = MaintenanceEvent(title: title, date: date, notes: notes)
+                        guard let vehicle = selectedVehicle else { return }
+                        let event = MaintenanceEvent(title: title, date: date, notes: notes, vehicle: vehicle)
                         addTapped(event)
                         dismiss()
                     } label: {

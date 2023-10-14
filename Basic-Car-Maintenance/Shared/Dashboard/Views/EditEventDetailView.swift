@@ -66,7 +66,8 @@ struct EditMaintenanceEventView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        var event = MaintenanceEvent(title: title, date: date, notes: notes)
+                        guard let vehicle = selectedVehicle else { return }
+                        var event = MaintenanceEvent(title: title, date: date, notes: notes, vehicle: vehicle)
                         guard let selectedEvent = selectedEvent else { return }
                         event.id = selectedEvent.id
                         Task {
@@ -90,7 +91,7 @@ struct EditMaintenanceEventView: View {
 }
 
 #Preview {
-    EditMaintenanceEventView(selectedEvent: .constant(MaintenanceEvent(title: "", date: Date(), notes: "")),
+    EditMaintenanceEventView(selectedEvent: .constant(MaintenanceEvent(title: "", date: Date(), notes: "", vehicle: Vehicle(name: "", make: "", model: ""))),
                              viewModel: DashboardViewModel(authenticationViewModel: AuthenticationViewModel())
     )
 }
