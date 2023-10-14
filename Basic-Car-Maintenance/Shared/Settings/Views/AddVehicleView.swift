@@ -14,8 +14,12 @@ struct AddVehicleView: View {
     @State private var name = ""
     @State private var make = ""
     @State private var model = ""
+    @State private var year = ""
+    @State private var color = ""
+    @State private var VIN = ""
+    @State private var licensePlateNumber = ""
     private var isVehicleValid: Bool {
-        !name.isEmpty && !make.isEmpty && !model.isEmpty
+        !name.isEmpty && !make.isEmpty && !model.isEmpty && !year.isEmpty && !color.isEmpty && !VIN.isEmpty && !licensePlateNumber.isEmpty
     }
     
     var body: some View {
@@ -38,11 +42,35 @@ struct AddVehicleView: View {
                 } header: {
                     Text("Model")
                 }
+
+                Section {
+                    TextField("Vehicle Year", text: $year, prompt: Text("Vehicle Year"))
+                } header: {
+                    Text("Year")
+                }
+
+                Section {
+                    TextField("Vehicle Color", text: $color, prompt: Text("Vehicle Color"))
+                } header: {
+                    Text("Color")
+                }
+
+                Section {
+                    TextField("Vehicle VIN", text: $VIN, prompt: Text("Vehicle VIN"))
+                } header: {
+                    Text("VIN")
+                }
+
+                Section {
+                    TextField("Vehicle License Plate Number", text: $licensePlateNumber, prompt: Text("Vehicle License Plate Number"))
+                } header: {
+                    Text("License Plate Number")
+                }
             }
             .toolbar {
                 ToolbarItem {
                     Button {
-                        let vehicle = Vehicle(name: name, make: make, model: model)
+                        let vehicle = Vehicle(name: name, make: make, model: model, year: year, color: color, VIN: VIN, licensePlateNumber: licensePlateNumber)
                         addTapped(vehicle)
                     } label: {
                         Text("Add")
