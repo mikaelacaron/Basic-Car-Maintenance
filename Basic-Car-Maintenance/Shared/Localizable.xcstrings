@@ -1682,14 +1682,7 @@
       }
     },
     "This App Icon will appear on your Home Screen." : {
-      "localizations" : {
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "यह ऐप आइकन आपकी होम स्क्रीन पर दिखाई देगा।"
-          }
-        }
-      }
+
     },
     "This is the title" : {
       "localizations" : {
