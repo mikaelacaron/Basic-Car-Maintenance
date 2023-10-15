@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 enum TabSelection: Int {
     case dashboard = 0
@@ -20,6 +21,7 @@ struct MainTabView: View {
     @Environment(\.scenePhase) var scenePhase
     @State private var isShowingRealTimeAlert = false
     @State var authenticationViewModel = AuthenticationViewModel()
+    @State var viewModel: MainTabViewModel
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -42,11 +44,10 @@ struct MainTabView: View {
                 }
         }
         .sheet(isPresented: $isShowingRealTimeAlert) {
-            AlertView()
-                .presentationDetents([.medium])
-        }
-        .onTapGesture(count: 2) {
-            isShowingRealTimeAlert = true
+            if let alert = viewModel.alert {
+                AlertView(alert: alert)
+                    .presentationDetents([.medium])
+            }
         }
         .onChange(of: scenePhase) { _, newScenePhase in
             guard
@@ -63,10 +64,24 @@ struct MainTabView: View {
                 selectedTab = .settings
             }
         }
+        .onAppear {
+            viewModel.listenToAlertsUpdates()
+        }
+        .onChange(of: viewModel.alert) { _, newValue in
+            guard newValue != nil else { return }
+            isShowingRealTimeAlert = true
+        }
+    }
+    
+    init(modelContext: ModelContext) {
+        let mainViewModel = MainTabViewModel(modelContext: modelContext)
+        self._viewModel = .init(initialValue: mainViewModel)
     }
 }
 
 #Preview {
-    MainTabView()
+    @Environment(\.modelContext) var modelContext
+    
+    return MainTabView(modelContext: modelContext)
         .environment(ActionService.shared)
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AlertView: View {
+    let alert: AlertItem
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -15,15 +16,15 @@ struct AlertView: View {
             VStack {
                 ScrollView {
                     VStack(alignment: .center) {
-                        Text("🤠")
+                        Text(alert.icon)
                             .font(.system(size: 100))
                         
-                        Text("This is the title")
+                        Text(alert.title)
                             .font(.title)
                             .lineLimit(2)
                             .bold()
                         
-                        Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+                        Text(alert.message)
                             .multilineTextAlignment(.center)
                     }
                 }
@@ -31,9 +32,16 @@ struct AlertView: View {
                 .padding(.horizontal, 24)
                 
                 Button {
-                    UIApplication.shared.open(URL(string: "https://www.google.com")!)
+                    guard 
+                        let url = URL(string: alert.actionURL),
+                        UIApplication.shared.canOpenURL(url)
+                    else {
+                        dismiss()
+                        return
+                    }
+                    UIApplication.shared.open(url)
                 } label: {
-                    Text("Read More...")
+                    Text(alert.actionTxt)
                         .font(.title3)
                         .foregroundStyle(.black)
                         .frame(maxWidth: .infinity)
@@ -62,5 +70,15 @@ struct AlertView: View {
 }
 
 #Preview {
-    AlertView()
+    AlertView(
+        alert: AlertItem(
+            id: nil,
+            actionTxt: "",
+            actionURL: "",
+            icon: "",
+            isOn: false,
+            message: "",
+            title: ""
+        )
+    )
 }

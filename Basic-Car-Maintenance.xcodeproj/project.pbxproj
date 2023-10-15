@@ -17,6 +17,8 @@
 		8014A4D32AD77C92005B51F6 /* ChooseAppIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */; };
 		898009792AD1899700604E7C /* ContributorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898009782AD1899700604E7C /* ContributorTests.swift */; };
 		8A3D74862AD6D9A10000FEEB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D74852AD6D9A10000FEEB /* AlertView.swift */; };
+		8A3D748A2AD9C3E00000FEEB /* MainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D74892AD9C3E00000FEEB /* MainTabViewModel.swift */; };
+		8A3D748C2AD9C41D0000FEEB /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D748B2AD9C41D0000FEEB /* AlertItem.swift */; };
 		8AEE816F2ACF37F800FC0C2A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE816E2ACF37F800FC0C2A /* Action.swift */; };
 		8AEE81722ACF384D00FC0C2A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE81712ACF384D00FC0C2A /* MainTabView.swift */; };
 		E58499662ACDDA8B00634660 /* ContributorsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499652ACDDA8B00634660 /* ContributorsListView.swift */; };
@@ -108,6 +110,8 @@
 		8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppIconViewModel.swift; sourceTree = "<group>"; };
 		898009782AD1899700604E7C /* ContributorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorTests.swift; sourceTree = "<group>"; };
 		8A3D74852AD6D9A10000FEEB /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		8A3D74892AD9C3E00000FEEB /* MainTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewModel.swift; sourceTree = "<group>"; };
+		8A3D748B2AD9C41D0000FEEB /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		8AEE816E2ACF37F800FC0C2A /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		8AEE81712ACF384D00FC0C2A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8AEE81732ACF394E00FC0C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				8A3D74842AD6D9920000FEEB /* Views */,
+				8A3D74882AD9C3B10000FEEB /* ViewModels */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -244,6 +249,14 @@
 				8A3D74852AD6D9A10000FEEB /* AlertView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8A3D74882AD9C3B10000FEEB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8A3D74892AD9C3E00000FEEB /* MainTabViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		FF3DDF492AA4386C009D91C4 /* Views */ = {
@@ -389,6 +402,7 @@
 				8AEE816E2ACF37F800FC0C2A /* Action.swift */,
 				8014A4CE2AD75928005B51F6 /* AppIcon.swift */,
 				57CDD9A32ADC320F002EFED0 /* OdometerReading.swift */,
+				8A3D748B2AD9C41D0000FEEB /* AlertItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -669,6 +683,8 @@
 				FFE0AF562AD66C3500AB46F8 /* OdometerView.swift in Sources */,
 				8AEE816F2ACF37F800FC0C2A /* Action.swift in Sources */,
 				FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */,
+				8A3D748C2AD9C41D0000FEEB /* AlertItem.swift in Sources */,
+				8A3D748A2AD9C3E00000FEEB /* MainTabViewModel.swift in Sources */,
 				E584996A2ACDDAFF00634660 /* Contributor.swift in Sources */,
 				8014A4D32AD77C92005B51F6 /* ChooseAppIconViewModel.swift in Sources */,
 				8014A4CF2AD75928005B51F6 /* AppIcon.swift in Sources */,

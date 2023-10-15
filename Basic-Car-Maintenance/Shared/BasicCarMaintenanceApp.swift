@@ -7,16 +7,27 @@
 
 import FirebaseCore
 import SwiftUI
+import SwiftData
 
 @main
 struct BasicCarMaintenanceApp: App {
     @State private var actionService = ActionService.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    let container: ModelContainer
+    
+    init() {
+        do {
+            self.container = try ModelContainer(for: AcknowledgedAlert.self)
+        } catch {
+            fatalError("Failed to create ModelContainer for AcknowledgedAlert.")
+        }
+    }
     
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+            MainTabView(modelContext: container.mainContext)
                 .environment(actionService)
+                .modelContainer(container)
         }
     }
 }

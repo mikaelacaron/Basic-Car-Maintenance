@@ -86,9 +86,6 @@
         }
       }
     },
-    "🤠" : {
-
-    },
     "🦄 Mikaela Caron - Maintainer" : {
       "comment" : "Link to maintainer Github account.",
       "localizations" : {
@@ -1650,16 +1647,6 @@
         }
       }
     },
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." : {
-      "localizations" : {
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "로렘 입숨(Lorem Ipsum)은 인쇄 및 조판 산업의 더미 텍스트(dummy text)로, 1500년대부터 산업의 표준 더미 텍스트로 사용되어 왔습니다. 알려지지 않은 인쇄인이 활자를 조합하여 표본 책을 만들기 위해 사용한 것이기도 합니다. 이 텍스트는 오직 다섯 세기뿐만 아니라 전자 조판으로의 진전에도 견디며 본질적으로 변하지 않았습니다. 1960년대에 Letraset 시트에 로렘 입숨 단락이 포함된 것으로 널리 알려지게 되었으며, 최근에는 Aldus PageMaker와 같은 데스크톱 퍼블리싱 소프트웨어에서도 로렘 입숨의 버전이 포함되어 사용되고 있습니다."
-          }
-        }
-      }
-    },
     "Make" : {
       "localizations" : {
         "be" : {
@@ -2835,6 +2822,7 @@
           }
         }
       }
+
     },
     "Title" : {
       "comment" : "Maintenance event title text field header",
