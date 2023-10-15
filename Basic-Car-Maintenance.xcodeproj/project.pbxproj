@@ -219,6 +219,7 @@
 		FF5D139A2A86C2D500BC9BD6 = {
 			isa = PBXGroup;
 			children = (
+				FFBE79BA2AD0A48C0005524E /* Configurations */,
 				FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */,
 				FFBE79BA2AD0A48C0005524E /* Configurations */,
 				FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */,
@@ -840,8 +841,6 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.4;
 				OTHER_LDFLAGS = "-ObjC";
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = "com.andrewmuniz.Basic-Car-Maintenance";
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "com.andrewmuniz.Basic-Car-Maintenance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
