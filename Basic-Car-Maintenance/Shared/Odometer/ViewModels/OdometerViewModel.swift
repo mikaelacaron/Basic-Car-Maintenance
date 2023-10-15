@@ -22,14 +22,6 @@ class OdometerViewModel {
     var sortOption: SortOption = .custom
     var vehicles = [Vehicle]()
     
-    var sortedReadings: [OdometerReading] {
-        switch sortOption {
-        case .oldestToNewest: readings.sorted { $0.date < $1.date }
-        case .newestToOldest: readings.sorted { $0.date > $1.date }
-        case .custom: readings
-        }
-    }
-    
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
     }
@@ -77,45 +69,6 @@ class OdometerViewModel {
                 }
                 self.readings = readings
             }
-        }
-    }
-    
-    func updateReading(_ odometerReading: OdometerReading) async {
-        if let uid = authenticationViewModel.user?.uid {
-            guard let id = odometerReading.id else { return }
-            var readingToUpdate = odometerReading
-            readingToUpdate.userID = uid
-            do {
-                try Firestore
-                    .firestore()
-                    .collection("odometer_readings")
-                    .document(id)
-                    .setData(from: readingToUpdate)
-            } catch {
-                showAddErrorAlert.toggle()
-                errorMessage = error.localizedDescription
-            }
-        }
-        await self.getOdometerReadings()
-    }
-    
-    func deleteReading(_ reading: OdometerReading) async {
-        guard let documentId = reading.id else {
-            let rDescription = "\(reading.distance) \(reading.unitsAreMetric ? "Km" : "M") "
-            let vDescription = "\(reading.vehicle.name) \(reading.vehicle.make) \(reading.vehicle.model)"
-            fatalError("Reading \(rDescription) for Vehicle \(vDescription) has no document ID.")
-        }
-        
-        do {
-            try await Firestore
-                .firestore()
-                .collection("odometer_readings")
-                .document(documentId)
-                .delete()
-            errorMessage = ""
-        } catch {
-            showErrorAlert.toggle()
-            errorMessage = error.localizedDescription
         }
     }
     
