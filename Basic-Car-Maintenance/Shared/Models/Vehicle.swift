@@ -14,8 +14,8 @@ struct Vehicle: Codable, Identifiable {
     let name: String
     let make: String
     let model: String
-    let year: String
-    let color: String
-    let VIN: String
-    let licensePlateNumber: String
+    let year: String?
+    let color: String?
+    let vin: String?
+    let licensePlateNumber: String?
 }

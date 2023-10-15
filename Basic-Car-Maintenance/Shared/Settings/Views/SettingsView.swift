@@ -86,13 +86,13 @@ struct SettingsView: View {
                             
                             Text(vehicle.model)
 
-                            Text(vehicle.year)
+                            Text(vehicle.year ?? "")
 
-                            Text(vehicle.color)
+                            Text(vehicle.color ?? "")
 
-                            Text(vehicle.VIN)
+                            Text(vehicle.vin ?? "")
 
-                            Text(vehicle.licensePlateNumber)
+                            Text(vehicle.licensePlateNumber ?? "")
                         }
                         .swipeActions {
                             Button(role: .destructive) {

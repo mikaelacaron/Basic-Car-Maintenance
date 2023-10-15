@@ -70,7 +70,7 @@ struct AddVehicleView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        let vehicle = Vehicle(name: name, make: make, model: model, year: year, color: color, VIN: VIN, licensePlateNumber: licensePlateNumber)
+                        let vehicle = Vehicle(name: name, make: make, model: model, year: year, color: color, vin: VIN, licensePlateNumber: licensePlateNumber)
                         addTapped(vehicle)
                     } label: {
                         Text("Add")
