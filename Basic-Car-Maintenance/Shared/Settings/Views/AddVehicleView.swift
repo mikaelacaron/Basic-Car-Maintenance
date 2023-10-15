@@ -19,7 +19,7 @@ struct AddVehicleView: View {
     @State private var VIN = ""
     @State private var licensePlateNumber = ""
     private var isVehicleValid: Bool {
-        !name.isEmpty && !make.isEmpty && !model.isEmpty && !year.isEmpty && !color.isEmpty && !VIN.isEmpty && !licensePlateNumber.isEmpty
+        !name.isEmpty && !make.isEmpty && !model.isEmpty
     }
     
     var body: some View {
