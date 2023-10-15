@@ -58,7 +58,7 @@ final class SettingsViewModel {
             do {
                 try Firestore
                     .firestore()
-                    .collection("vehicles")
+                    .collection(FirestoreCollection.vehicles)
                     .addDocument(from: vehicleToAdd)
                 vehicles.append(vehicleToAdd)
             } catch {
@@ -71,7 +71,8 @@ final class SettingsViewModel {
     func getVehicles() async {
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
-            let docRef = db.collection("vehicles").whereField("userID", isEqualTo: uid)
+            let docRef = db.collection(FirestoreCollection.vehicles)
+                .whereField(FirestoreField.userID, isEqualTo: uid)
             
             let querySnapshot = try? await docRef.getDocuments()
             
@@ -101,7 +102,7 @@ final class SettingsViewModel {
         do {
             try await Firestore
                 .firestore()
-                .collection("vehicles")
+                .collection(FirestoreCollection.vehicles)
                 .document(documentId)
                 .delete()
             
