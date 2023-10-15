@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct ContributorsListView: View {
-    
     var viewModel: SettingsViewModel
     
     var body: some View {
         List {
-            if let contributors = viewModel.contributors, !contributors.isEmpty {
-                ForEach(contributors) { contributor in
+            if !viewModel.sortedContributors.isEmpty {
+                ForEach(viewModel.sortedContributors) { contributor in
                     Link(
                         destination: URL(string: contributor.htmlURL) ??
                         viewModel.urls["Basic-Car-Maintenance"]!) {
@@ -33,6 +32,7 @@ struct ContributorsListView: View {
         .navigationTitle("Contributors")
     }
 }
+
 #Preview {
     let viewModel = SettingsViewModel(authenticationViewModel: AuthenticationViewModel())
     return ContributorsListView(viewModel: viewModel)
