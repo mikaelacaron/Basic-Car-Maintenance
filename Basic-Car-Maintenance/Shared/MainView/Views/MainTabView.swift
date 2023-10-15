@@ -62,8 +62,6 @@ struct MainTabView: View {
                 selectedTab = .dashboard
             case .addVehicle:
                 selectedTab = .settings
-            case .addOdometerReading:
-                selectedTab = .odometer
             }
         }
     }
