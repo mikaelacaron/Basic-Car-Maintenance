@@ -221,7 +221,6 @@
 			children = (
 				FFBE79BA2AD0A48C0005524E /* Configurations */,
 				FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */,
-				FFBE79BA2AD0A48C0005524E /* Configurations */,
 				FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */,
 				FFDADF822ACD35A100DDEF79 /* Basic-Car-Maintenance-Widget */,
 				FF5D13B72A86C2D800BC9BD6 /* Basic-Car-Maintenance-Tests */,
