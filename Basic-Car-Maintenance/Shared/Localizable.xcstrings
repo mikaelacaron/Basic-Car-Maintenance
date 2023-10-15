@@ -48,6 +48,12 @@
             "state" : "translated",
             "value" : ""
           }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
         }
       }
     },
@@ -73,6 +79,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🦄 Mikaela Caron - Maintaineur"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 मिकाएला कैरोन - अभिरक्षक"
           }
         },
         "uk" : {
@@ -110,6 +122,12 @@
             "value" : "Ajouter"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दर्ज करें"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -143,6 +161,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajouter une maintenance"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रखरखाव दर्ज करें"
           }
         },
         "uk" : {
@@ -180,6 +204,12 @@
             "value" : "Ajouter un véhicule"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन दर्ज करें"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -212,6 +242,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajoutez votre première maintenance"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अपना पहला रखरखाव दर्ज करें"
           }
         },
         "uk" : {
@@ -249,6 +285,12 @@
             "value" : "Notes additionnelles"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अतिरिक्त टिप्पणी"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -283,6 +325,12 @@
             "value" : "Une erreur est survenue"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "एक त्रुटि हुई"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -311,6 +359,12 @@
             "value" : "Annuler"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रद्द करें"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -320,10 +374,24 @@
       }
     },
     "Change App Icon" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "एप्लिकेशन आइकन बदलें"
+          }
+        }
+      }
     },
     "Choose App Icon" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ऐप आइकन चुनें"
+          }
+        }
+      }
     },
     "Contributors" : {
       "comment" : "Link to contributors list.",
@@ -352,6 +420,12 @@
             "value" : "Contributeurs"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "योगदानकर्ता"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -361,7 +435,15 @@
       }
     },
     "Copied!" : {
-      "comment" : "Text to notify user that app version was copied"
+      "comment" : "Text to notify user that app version was copied",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कॉपी किया गया"
+          }
+        }
+      }
     },
     "Custom" : {
       "comment" : "Sorting option that sorts items according to the user's preferences.",
@@ -388,6 +470,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Personnalisé"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कस्टम"
           }
         },
         "uk" : {
@@ -422,6 +510,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tableau de bord"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "डैशबोर्ड"
           }
         },
         "uk" : {
@@ -459,6 +553,12 @@
             "value" : "Date"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "तारीख"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -494,6 +594,12 @@
             "value" : "Supprimer"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मिटायें"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -503,7 +609,14 @@
       }
     },
     "Dismiss" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "खारिज"
+          }
+        }
+      }
     },
     "Edit" : {
       "localizations" : {
@@ -523,6 +636,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Modifier"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "संपादित करें"
           }
         },
         "uk" : {
@@ -553,6 +672,12 @@
             "value" : "Impossible d'ajouter le véhicule"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन दर्ज करने में विफलता।"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -579,6 +704,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossible d'ajouter le véhicule\nDétails : %@"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन दर्ज करने में विफलता:%@"
           }
         },
         "uk" : {
@@ -616,6 +747,12 @@
             "value" : "Impossible d'ajouter le véhicule. Erreur inconnue."
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन दर्ज करने में विफलता। अज्ञात त्रुटि।"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -648,6 +785,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossible de supprimer l'évènement"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कार्यक्रम हटाने में विफलता"
           }
         },
         "uk" : {
@@ -685,6 +828,12 @@
             "value" : "Impossible de supprimer le véhicule"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन मिटाने में विफलता"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -720,6 +869,12 @@
             "value" : "Impossible de supprimer le véhicule\nDétails : %@"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन की जानकारी मिटाने में विफलता:%@"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -747,6 +902,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossible de supprimer le véhicule. Erreur inconnue."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन मिटाने में विफलता। अज्ञात त्रुटि।"
           }
         },
         "uk" : {
@@ -787,6 +948,12 @@
             "value" : "Repo GitHub"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गिटहब रेपो"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -819,6 +986,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Connecté anonymement avec l'ID : %@"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गुमनाम आईडी से लॉग इन किया गया: %@"
           }
         },
         "uk" : {
@@ -858,6 +1031,12 @@
             "value" : "Fabricant"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन कंपनी"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -892,6 +1071,12 @@
             "value" : "Modèle"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मॉडल"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -924,6 +1109,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nom"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नाम"
           }
         },
         "uk" : {
@@ -961,6 +1152,12 @@
             "value" : "Du plus au moins récent"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नवीनतम से सबसे पुराना"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -970,7 +1167,14 @@
       }
     },
     "No results" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कोई परिणाम नहीं"
+          }
+        }
+      }
     },
     "Notes" : {
       "comment" : "Maintenance event notes text field label",
@@ -999,6 +1203,12 @@
             "value" : "Notes"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "टिप्पणी"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1009,6 +1219,12 @@
     },
     "Odometer" : {
       "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ओडोमीटर"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1019,6 +1235,12 @@
     },
     "OdometerView, coming soon" : {
       "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ओडोमीटर जानकारी स्क्रीन, जल्द ही आ रही है"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1052,6 +1274,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ठीक है"
           }
         },
         "uk" : {
@@ -1089,6 +1317,12 @@
             "value" : "Du moins au plus récent"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सबसे पुराने से नवीनतम"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1124,6 +1358,12 @@
             "value" : "Profil"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रोफ़ाइल"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1133,7 +1373,14 @@
       }
     },
     "Read More..." : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "और पढ़ें..."
+          }
+        }
+      }
     },
     "Report a Bug" : {
       "comment" : "Link to report a bug",
@@ -1160,6 +1407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rapporter un bug"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "समस्या रिपोर्ट करें"
           }
         },
         "uk" : {
@@ -1195,6 +1448,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Demander une nouvelle fonctionnalité"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नई सुविधा का अनुरोध करें"
           }
         },
         "uk" : {
@@ -1235,6 +1494,12 @@
             "value" : "Réglages"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सेटिंग्स"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1269,6 +1534,12 @@
             "value" : "Se déconnecter"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "साइन आउट"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1301,6 +1572,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Connecté en tant que %@"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ आईडी से साइन इन"
           }
         },
         "uk" : {
@@ -1338,6 +1615,12 @@
             "value" : "Merci d'utiliser cette app ! Le code est open source et tout le monde peut contribuer."
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इस ऐप का उपयोग करने के लिए धन्यवाद! यह खुला स्रोत है और कोई भी इसमें योगदान दे सकता है।"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1373,6 +1656,12 @@
             "value" : "Le titre de l'évènement"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "घटना का शीर्षक"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1382,13 +1671,34 @@
       }
     },
     "There were no maintenance events for '%@'. Try a new search." : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "'%@' के लिए कोई रखरखाव कार्यक्रम नहीं थे। नई खोज का प्रयास करें।"
+          }
+        }
+      }
     },
     "This App Icon will appear on your Home Screen." : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "यह ऐप आइकन आपकी होम स्क्रीन पर दिखाई देगा।"
+          }
+        }
+      }
     },
     "This is the title" : {
-
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "यह शीर्षक है"
+          }
+        }
+      }
     },
     "Title" : {
       "comment" : "Maintenance event title text field header",
@@ -1415,6 +1725,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Titre"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शीर्षक"
           }
         },
         "uk" : {
@@ -1452,6 +1768,12 @@
             "value" : "Le titre de l'évènement de maintenance"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रखरखाव कार्यक्रम का शीर्षक"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1480,6 +1802,12 @@
             "value" : "Mettre à jour"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अपडेट"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1489,7 +1817,15 @@
       }
     },
     "Update Maintenance" : {
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रखरखाव अपडेट करें"
+          }
+        }
+      }
     },
     "Vehicle" : {
       "comment" : "Maintenance event vehicle picker header"
@@ -1518,6 +1854,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fabricant du véhicule"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन कंपनी"
           }
         },
         "uk" : {
@@ -1554,6 +1896,12 @@
             "value" : "Modèle du véhicule"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन मॉडल"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1586,6 +1934,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nom du véhicule"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन का नाम"
           }
         },
         "uk" : {
@@ -1621,6 +1975,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Véhicules"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन"
           }
         },
         "uk" : {
@@ -1662,6 +2022,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : ""
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वरजन %@ (%@)"
           }
         }
       }
