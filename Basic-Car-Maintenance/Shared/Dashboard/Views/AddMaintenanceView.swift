@@ -14,7 +14,7 @@ struct AddMaintenanceView: View {
     
     @State private var title = ""
     @State private var date = Date()
-    @State private var selectedVehicle = Vehicle(name: "", make: "", model: "")
+    @State private var selectedVehicle: Vehicle?
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
     
@@ -68,19 +68,24 @@ struct AddMaintenanceView: View {
                 }
             }
             .onAppear {
-                selectedVehicle = vehicles[0]
+                if !vehicles.isEmpty {
+                    selectedVehicle = vehicles[0]
+                }
             }
             .navigationTitle(Text("Add Maintenance",
                                   comment: "Nagivation title for Add Maintenance view"))
             .toolbar {
                 ToolbarItem {
                     Button {
-                        let event = MaintenanceEvent(title: title,
-                                                     date: date,
-                                                     notes: notes,
-                                                     vehicle: selectedVehicle)
-                        addTapped(event)
-                        dismiss()
+                        
+                        if let selectedVehicle {
+                            let event = MaintenanceEvent(title: title,
+                                                         date: date,
+                                                         notes: notes,
+                                                         vehicle: selectedVehicle)
+                            addTapped(event)
+                            dismiss()
+                        }
                     } label: {
                         Text("Add",
                              comment: "Label for button to add data")

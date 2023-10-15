@@ -12,7 +12,7 @@ struct EditMaintenanceEventView: View {
     var viewModel: DashboardViewModel
     @State private var title = ""
     @State private var date = Date()
-    @State private var selectedVehicle = Vehicle(name: "", make: "", model: "")
+    @State private var selectedVehicle: Vehicle?
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
     
@@ -66,15 +66,16 @@ struct EditMaintenanceEventView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        var event = MaintenanceEvent(title: title,
-                                                     date: date,
-                                                     notes: notes,
-                                                     vehicle: selectedVehicle)
-                        guard let selectedEvent = selectedEvent else { return }
-                        event.id = selectedEvent.id
-                        Task {
-                            await viewModel.updateEvent(event)
-                            dismiss()
+                        if let selectedVehicle, let selectedEvent {
+                            var event = MaintenanceEvent(title: title,
+                                                         date: date,
+                                                         notes: notes,
+                                                         vehicle: selectedVehicle)
+                            event.id = selectedEvent.id
+                            Task {
+                                await viewModel.updateEvent(event)
+                                dismiss()
+                            }
                         }
                     } label: {
                         Text("Update")

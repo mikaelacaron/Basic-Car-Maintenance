@@ -757,6 +757,9 @@
         }
       }
     },
+    "For %@" : {
+
+    },
     "GitHub Repo" : {
       "comment" : "Link to the Basic Car Maintenance GitHub repo.",
       "localizations" : {
@@ -1202,6 +1205,9 @@
         }
       }
     },
+    "Select a vehicle" : {
+      "comment" : "Maintenance event vehicle picker label"
+    },
     "Settings" : {
       "comment" : "Label to display settings.",
       "localizations" : {
@@ -1484,6 +1490,9 @@
     },
     "Update Maintenance" : {
       "extractionState" : "manual"
+    },
+    "Vehicle" : {
+      "comment" : "Maintenance event vehicle picker header"
     },
     "Vehicle Make" : {
       "localizations" : {
