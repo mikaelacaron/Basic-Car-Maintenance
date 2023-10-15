@@ -27,6 +27,8 @@ struct DashboardView: View {
                         Text(event.title)
                             .font(.title3)
                         
+                        Text("For \(event.vehicle.name)")
+                        
                         Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
                         
                         if !event.notes.isEmpty {
@@ -108,6 +110,7 @@ struct DashboardView: View {
             }
             .task {
                 await viewModel.getMaintenanceEvents()
+                await viewModel.getVehicles()
             }
             .sheet(isPresented: $isShowingAddView) {
                 makeAddMaintenanceView()
@@ -135,8 +138,11 @@ struct DashboardView: View {
     }
     
     private func makeAddMaintenanceView() -> some View {
-        AddMaintenanceView { event in
+        AddMaintenanceView(vehicles: viewModel.vehicles) { event in
             viewModel.addEvent(event)
+            Task {
+                await viewModel.getMaintenanceEvents()
+            }
         }
         .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
             Button("OK", role: .cancel) {}
