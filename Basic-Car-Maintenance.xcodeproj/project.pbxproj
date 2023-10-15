@@ -12,6 +12,7 @@
 		57CDD9A02ADC31A8002EFED0 /* AddOdometerReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */; };
 		57CDD9A22ADC31C6002EFED0 /* EditOdometerReadingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD9A12ADC31C6002EFED0 /* EditOdometerReadingDetailView.swift */; };
 		57CDD9A42ADC320F002EFED0 /* OdometerReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD9A32ADC320F002EFED0 /* OdometerReading.swift */; };
+		154984AA2AD9CAEE0015594C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154984A92AD9CAEE0015594C /* Constants.swift */; };
 		8014A4CF2AD75928005B51F6 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4CE2AD75928005B51F6 /* AppIcon.swift */; };
 		8014A4D12AD76034005B51F6 /* ChooseAppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */; };
 		8014A4D32AD77C92005B51F6 /* ChooseAppIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */; };
@@ -103,6 +104,7 @@
 		57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOdometerReadingView.swift; sourceTree = "<group>"; };
 		57CDD9A12ADC31C6002EFED0 /* EditOdometerReadingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOdometerReadingDetailView.swift; sourceTree = "<group>"; };
 		57CDD9A32ADC320F002EFED0 /* OdometerReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdometerReading.swift; sourceTree = "<group>"; };
+		154984A92AD9CAEE0015594C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8014A4CE2AD75928005B51F6 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
 		8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppIconView.swift; sourceTree = "<group>"; };
 		8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppIconViewModel.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				FF755B452A90969D00F49A13 /* Bundle+extension.swift */,
+				154984A92AD9CAEE0015594C /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154984AA2AD9CAEE0015594C /* Constants.swift in Sources */,
 				FFBFE0912A98EFEC000A9BEB /* MaintenanceEvent.swift in Sources */,
 				57CDD9A42ADC320F002EFED0 /* OdometerReading.swift in Sources */,
 				E58499682ACDDA9A00634660 /* ContributorsProfileView.swift in Sources */,

@@ -57,6 +57,16 @@
         }
       }
     },
+    "%lld %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld %2$@"
+          }
+        }
+      }
+    },
     "🤠" : {
 
     },
@@ -177,6 +187,9 @@
         }
       }
     },
+    "Add Reading" : {
+      "comment" : "Nagivation title for Add Odometer view"
+    },
     "Add Vehicle" : {
       "comment" : "Label to add a vehicle.",
       "localizations" : {
@@ -257,6 +270,9 @@
           }
         }
       }
+    },
+    "Add your first odometer" : {
+
     },
     "Additional Notes" : {
       "comment" : "Notes text field placeholder",
@@ -392,6 +408,9 @@
           }
         }
       }
+    },
+    "Color" : {
+
     },
     "Contributors" : {
       "comment" : "Link to contributors list.",
@@ -618,6 +637,12 @@
         }
       }
     },
+    "Distance" : {
+
+    },
+    "Distance in %@" : {
+
+    },
     "Edit" : {
       "localizations" : {
         "cs" : {
@@ -801,6 +826,9 @@
         }
       }
     },
+    "Failed To Delete Reading" : {
+
+    },
     "Failed To Delete Vehicle" : {
       "comment" : "Label to dsplay title of the delete vehicle alert",
       "localizations" : {
@@ -962,6 +990,12 @@
         }
       }
     },
+    "Kilometers" : {
+
+    },
+    "License Plate Number" : {
+
+    },
     "Logged in anonymously with ID: %@" : {
       "localizations" : {
         "cs" : {
@@ -1044,6 +1078,9 @@
           }
         }
       }
+    },
+    "Miles" : {
+
     },
     "Model" : {
       "localizations" : {
@@ -1234,6 +1271,7 @@
       }
     },
     "OdometerView, coming soon" : {
+      "extractionState" : "stale",
       "localizations" : {
         "hi" : {
           "stringUnit" : {
@@ -1465,7 +1503,7 @@
       }
     },
     "Select a vehicle" : {
-      "comment" : "Maintenance event vehicle picker label"
+      "comment" : "Maintenance event vehicle picker label\nOdometer reading vehicle picker label\nOdometer Reading vehicle picker label"
     },
     "Settings" : {
       "comment" : "Label to display settings.",
@@ -1782,6 +1820,9 @@
         }
       }
     },
+    "Unit" : {
+
+    },
     "Update" : {
       "localizations" : {
         "cs" : {
@@ -1827,8 +1868,17 @@
         }
       }
     },
+    "Update Odometer Reading" : {
+
+    },
     "Vehicle" : {
-      "comment" : "Maintenance event vehicle picker header"
+      "comment" : "Maintenance event vehicle picker header\nOdometer reading vehicle picker header"
+    },
+    "Vehicle Color" : {
+
+    },
+    "Vehicle License Plate Number" : {
+
     },
     "Vehicle Make" : {
       "localizations" : {
@@ -1950,6 +2000,12 @@
         }
       }
     },
+    "Vehicle VIN" : {
+
+    },
+    "Vehicle Year" : {
+
+    },
     "Vehicles" : {
       "comment" : "Label to display header title.",
       "localizations" : {
@@ -2031,6 +2087,12 @@
           }
         }
       }
+    },
+    "VIN" : {
+
+    },
+    "Year" : {
+
     }
   },
   "version" : "1.0"
