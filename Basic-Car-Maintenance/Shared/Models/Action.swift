@@ -10,11 +10,13 @@ import UIKit
 enum ActionType: String {
     case newMaintenance = "NewMaintenance"
     case addVehicle = "AddVehicle"
+    case addOdometerReading = "AddOdometerReading"
 }
 
 enum Action: Equatable {
     case newMaintenance
     case addVehicle
+    case addOdometerReading
     
     init?(shortcutItem: UIApplicationShortcutItem) {
         guard let type = ActionType(rawValue: shortcutItem.type) else {
@@ -26,6 +28,8 @@ enum Action: Equatable {
             self = .newMaintenance
         case .addVehicle:
             self = .addVehicle
+        case .addOdometerReading:
+            self = .addOdometerReading
         }
     }
 }

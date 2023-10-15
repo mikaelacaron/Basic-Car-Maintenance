@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
+
+struct OdometerReading: Codable, Identifiable, Hashable {
+    @DocumentID var id: String?
+    var userID: String?
+    let date: Date
+    let distance: Int
+    let unitsAreMetric: Bool
+    let vehicle: Vehicle
+}
