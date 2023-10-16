@@ -11,9 +11,7 @@ struct OdometerView: View {
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @Bindable private var viewModel: OdometerViewModel
-    @State private var isShowingAddView = false
-    @State private var selectedOdometerReading: OdometerReading?
-    
+
     init(authenticationViewModel: AuthenticationViewModel) {
         viewModel = OdometerViewModel(authenticationViewModel: authenticationViewModel)
     }
@@ -62,7 +60,7 @@ struct OdometerView: View {
                 await viewModel.getOdometerReadings()
                 await viewModel.getVehicles()
             }
-            .sheet(isPresented: $isShowingAddView) {
+            .sheet(isPresented: $viewModel.isShowingAddView) {
                 makeAddOdometerView()
             }
         }

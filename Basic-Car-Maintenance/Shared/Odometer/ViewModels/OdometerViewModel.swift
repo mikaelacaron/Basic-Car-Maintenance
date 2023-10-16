@@ -18,10 +18,11 @@ class OdometerViewModel {
     var showAddErrorAlert = false
     var showErrorAlert = false
     var isShowingAddOdometerReading = false
+    var isShowingAddView = false
     var errorMessage: String = ""
     var sortOption: SortOption = .custom
     var vehicles = [Vehicle]()
-    
+
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
     }
