@@ -18,28 +18,59 @@ struct MainTabView: View {
     @AppStorage("lastTabOpen") var selectedTab = TabSelection.dashboard
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @State var showNavigationSplitView = false
     @State private var isShowingRealTimeAlert = false
     @State var authenticationViewModel = AuthenticationViewModel()
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            DashboardView(authenticationViewModel: authenticationViewModel)
-                .tag(TabSelection.dashboard)
-                .tabItem {
-                    Label("Dashboard", systemImage: "list.dash.header.rectangle")
+        Group {
+            // If the screen is an iPhone or a split screen
+            // show a tab view, else show a NavigationSplitView
+            if horizontalSizeClass == .compact || showNavigationSplitView == false {
+                TabView(selection: $selectedTab) {
+                    DashboardView(authenticationViewModel: authenticationViewModel)
+                        .tag(TabSelection.dashboard)
+                        .tabItem {
+                            Label("Dashboard", systemImage: "list.dash.header.rectangle")
+                        }
+                    
+                    OdometerView()
+                        .tag(TabSelection.odometer)
+                        .tabItem {
+                            Label("Odometer", systemImage: "gauge")
+                        }
+                    
+                    SettingsView(authenticationViewModel: authenticationViewModel)
+                        .tag(TabSelection.settings)
+                        .tabItem {
+                            Label("Settings", systemImage: "gear")
+                        }
                 }
-            
-            OdometerView()
-                .tag(TabSelection.odometer)
-                .tabItem {
-                    Label("Odometer", systemImage: "gauge")
+            } else {
+                NavigationSplitView {
+                    List {
+                        NavigationLink {
+                            DashboardView(authenticationViewModel: authenticationViewModel)
+                        } label: {
+                            Label("Dashboard", systemImage: "list.dash.header.rectangle")
+                        }
+                        NavigationLink {
+                            OdometerView()
+                        } label: {
+                            Label("Odometer", systemImage: "gauge")
+                        }
+                        NavigationLink {
+                            SettingsView(authenticationViewModel: authenticationViewModel)
+                        } label: {
+                            Label("Settings", systemImage: "gear")
+                        }
+                    }
+
+                } detail: {
+                    DashboardView(authenticationViewModel: authenticationViewModel)
                 }
-            
-            SettingsView(authenticationViewModel: authenticationViewModel)
-                .tag(TabSelection.settings)
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                }
+            }
         }
         .sheet(isPresented: $isShowingRealTimeAlert) {
             AlertView()
@@ -63,6 +94,13 @@ struct MainTabView: View {
             case .addVehicle:
                 selectedTab = .settings
             }
+        }
+        // Orientation changed, let's update state to a navigation view if needed
+        .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
+            showNavigationSplitView = UIDevice.current.orientation.isLandscape
+        }
+        .onAppear {
+            showNavigationSplitView = UIDevice.current.orientation.isLandscape
         }
     }
 }
