@@ -82,7 +82,7 @@ struct AddOdometerReadingView: View {
                         Text("Add",
                              comment: "Label for button to add data")
                     }
-                    .disabled(distance == 0)
+                    .disabled(distance < 0)
                 }
             }
         }
