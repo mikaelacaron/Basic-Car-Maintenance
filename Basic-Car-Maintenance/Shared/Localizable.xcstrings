@@ -393,6 +393,9 @@
         }
       }
     },
+    "Color" : {
+
+    },
     "Contributors" : {
       "comment" : "Link to contributors list.",
       "localizations" : {
@@ -964,6 +967,9 @@
           }
         }
       }
+    },
+    "License Plate Number" : {
+
     },
     "Logged in anonymously with ID: %@" : {
       "localizations" : {
@@ -1833,6 +1839,12 @@
     "Vehicle" : {
       "comment" : "Maintenance event vehicle picker header"
     },
+    "Vehicle Color" : {
+
+    },
+    "Vehicle License Plate Number" : {
+
+    },
     "Vehicle Make" : {
       "localizations" : {
         "cs" : {
@@ -1953,6 +1965,12 @@
         }
       }
     },
+    "Vehicle VIN" : {
+
+    },
+    "Vehicle Year" : {
+
+    },
     "Vehicles" : {
       "comment" : "Label to display header title.",
       "localizations" : {
@@ -2034,6 +2052,12 @@
           }
         }
       }
+    },
+    "VIN" : {
+
+    },
+    "Year" : {
+
     }
   },
   "version" : "1.0"

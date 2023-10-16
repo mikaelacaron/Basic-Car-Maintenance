@@ -85,6 +85,14 @@ struct SettingsView: View {
                             Text(vehicle.make)
                             
                             Text(vehicle.model)
+
+                            Text(vehicle.year ?? "")
+
+                            Text(vehicle.color ?? "")
+
+                            Text(vehicle.vin ?? "")
+
+                            Text(vehicle.licensePlateNumber ?? "")
                         }
                         .swipeActions {
                             Button(role: .destructive) {

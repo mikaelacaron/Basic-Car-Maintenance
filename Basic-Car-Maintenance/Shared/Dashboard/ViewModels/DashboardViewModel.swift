@@ -51,7 +51,7 @@ class DashboardViewModel {
             do {
                 try Firestore
                     .firestore()
-                    .collection("maintenance_events")
+                    .collection(FirestoreCollection.maintenanceEvents)
                     .addDocument(from: eventToAdd)
                 
                 events.append(maintenanceEvent)
@@ -68,7 +68,8 @@ class DashboardViewModel {
     func getMaintenanceEvents() async {
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
-            let docRef = db.collection("maintenance_events").whereField("userID", isEqualTo: uid)
+            let docRef = db.collection(FirestoreCollection.maintenanceEvents)
+                .whereField(FirestoreField.userID, isEqualTo: uid)
             
             let querySnapshot = try? await docRef.getDocuments()
             
@@ -94,7 +95,7 @@ class DashboardViewModel {
             do {
                 try Firestore
                     .firestore()
-                    .collection("maintenance_events")
+                    .collection(FirestoreCollection.maintenanceEvents)
                     .document(id)
                     .setData(from: eventToUpdate)
             } catch {
@@ -113,7 +114,7 @@ class DashboardViewModel {
         do {
             try await Firestore
                 .firestore()
-                .collection("maintenance_events")
+                .collection(FirestoreCollection.maintenanceEvents)
                 .document(documentId)
                 .delete()
             errorMessage = ""
