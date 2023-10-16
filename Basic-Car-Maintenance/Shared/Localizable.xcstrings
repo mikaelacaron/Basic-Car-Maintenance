@@ -96,7 +96,7 @@
       }
     },
     "Add" : {
-      "comment" : "Label for button to add data",
+      "comment" : "Label for button to add data\nLable above the plus button on the DashboardView",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -917,6 +917,9 @@
           }
         }
       }
+    },
+    "Filter" : {
+      "comment" : "Lable above the filter button on the DashboardView"
     },
     "For %@" : {
 
