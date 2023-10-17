@@ -30,6 +30,12 @@ struct DashboardView: View {
                         Text("Add your first maintenance")
                     } else {
                         maintenanceListView
+                        .overlay {
+                          if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
+                    ContentUnavailableView("No results",
+                                           systemImage: "magnifyingglass",
+                                           description: noSearchResultsDescription)
+                        }
                     }
                 }
             }
@@ -73,6 +79,7 @@ struct DashboardView: View {
         .onAppear {
             Task {
                 await viewModel.getMaintenanceEvents()
+                await viewModel.getVehicles()
             }
         }
         .onChange(of: scenePhase) { _, newScenePhase in
@@ -98,13 +105,15 @@ struct DashboardView: View {
     
     private var maintenanceListView: some View {
         List {
-            ForEach(viewModel.sortedEvents) { event in
+            ForEach(viewModel.searchedEvents) { event in
                 VStack(alignment: .leading, spacing: 8) {
                     Text(event.title)
                         .font(.title3)
-                    
+
+                    Text("For \(event.vehicle.name)")
+
                     Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
-                    
+
                     if !event.notes.isEmpty {
                         Text(event.notes)
                             .lineLimit(0)
@@ -118,7 +127,7 @@ struct DashboardView: View {
                     } label: {
                         Image(systemName: "trash")
                     }
-                    
+
                     Button {
                         selectedMaintenanceEvent = event
                         isShowingEditView = true
@@ -129,25 +138,30 @@ struct DashboardView: View {
                         }
                     }
                 }
+            .animation(.linear, value: viewModel.searchedEvents)
+            .searchable(text: $viewModel.searchText)
                 .sheet(isPresented: $isShowingEditView) {
                     EditMaintenanceEventView(
                         selectedEvent: $selectedMaintenanceEvent, viewModel: viewModel)
-                }
-            }
-            .listStyle(.inset)
         }
-        .animation(.linear, value: viewModel.sortOption)
     }
     
     private func makeAddMaintenanceView() -> some View {
-        AddMaintenanceView { event in
+        AddMaintenanceView(vehicles: viewModel.vehicles) { event in
             viewModel.addEvent(event)
+            Task {
+                await viewModel.getMaintenanceEvents()
+            }
         }
         .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
             Button("OK", role: .cancel) {}
         } message: {
             Text(viewModel.errorMessage)
         }
+    }
+    
+    private var noSearchResultsDescription: Text {
+        Text("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.")
     }
 }
 

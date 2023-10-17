@@ -16,6 +16,23 @@ final class SettingsViewModel {
     
     var vehicles = [Vehicle]()
     
+    var sortedContributors: [Contributor] {
+        guard let contributors = contributors, !contributors.isEmpty else {
+            return []
+        }
+        
+        return contributors.sorted { (contributor1, contributor2) in
+            switch (contributor1.contributions, contributor2.contributions) {
+            case let (contributor1, contributor2) where contributor1 > contributor2:
+                return true
+            case let (contributor1, contributor2) where contributor1 < contributor2:
+                return false
+            default:
+                return contributor1.login < contributor2.login
+            }
+        }
+    }
+    
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
     }
@@ -56,11 +73,10 @@ final class SettingsViewModel {
             vehicleToAdd.userID = uid
             
             do {
-                let firestoreRef = try Firestore
+                try Firestore
                     .firestore()
-                    .collection("vehicles")
+                    .collection(FirestoreCollection.vehicles)
                     .addDocument(from: vehicleToAdd)
-                vehicleToAdd.id = firestoreRef.documentID
                 vehicles.append(vehicleToAdd)
             } catch {
                 throw error
@@ -72,7 +88,8 @@ final class SettingsViewModel {
     func getVehicles() async {
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
-            let docRef = db.collection("vehicles").whereField("userID", isEqualTo: uid)
+            let docRef = db.collection(FirestoreCollection.vehicles)
+                .whereField(FirestoreField.userID, isEqualTo: uid)
             
             let querySnapshot = try? await docRef.getDocuments()
             
@@ -102,7 +119,7 @@ final class SettingsViewModel {
         do {
             try await Firestore
                 .firestore()
-                .collection("vehicles")
+                .collection(FirestoreCollection.vehicles)
                 .document(documentId)
                 .delete()
             

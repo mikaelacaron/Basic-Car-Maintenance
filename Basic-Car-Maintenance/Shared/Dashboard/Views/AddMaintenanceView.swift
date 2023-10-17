@@ -9,10 +9,12 @@ import SwiftUI
 
 struct AddMaintenanceView: View {
     
+    let vehicles: [Vehicle]
     let addTapped: (MaintenanceEvent) -> Void
     
     @State private var title = ""
     @State private var date = Date()
+    @State private var selectedVehicle: Vehicle?
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
     
@@ -29,6 +31,21 @@ struct AddMaintenanceView: View {
                 } header: {
                     Text("Title",
                          comment: "Maintenance event title text field header")
+                }
+                
+                Section {
+                    Picker(selection: $selectedVehicle) {
+                        ForEach(vehicles) { vehicle in
+                            Text(vehicle.name).tag(vehicle as Vehicle)
+                        }
+                    } label: {
+                        Text("Select a vehicle",
+                             comment: "Maintenance event vehicle picker label")
+                    }
+                    .pickerStyle(.menu)
+                } header: {
+                    Text("Vehicle",
+                         comment: "Maintenance event vehicle picker header")
                 }
                 
                 DatePicker(selection: $date, displayedComponents: .date) {
@@ -50,14 +67,25 @@ struct AddMaintenanceView: View {
                          comment: "Notes text field header")
                 }
             }
+            .onAppear {
+                if !vehicles.isEmpty {
+                    selectedVehicle = vehicles[0]
+                }
+            }
             .navigationTitle(Text("Add Maintenance",
                                   comment: "Nagivation title for Add Maintenance view"))
             .toolbar {
                 ToolbarItem {
                     Button {
-                        let event = MaintenanceEvent(title: title, date: date, notes: notes)
-                        addTapped(event)
-                        dismiss()
+                        
+                        if let selectedVehicle {
+                            let event = MaintenanceEvent(title: title,
+                                                         date: date,
+                                                         notes: notes,
+                                                         vehicle: selectedVehicle)
+                            addTapped(event)
+                            dismiss()
+                        }
                     } label: {
                         Text("Add",
                              comment: "Label for button to add data")
@@ -70,5 +98,10 @@ struct AddMaintenanceView: View {
 }
 
 #Preview {
-    AddMaintenanceView() { _ in }
+    AddMaintenanceView(vehicles: sampleVehicles) { _ in }
 }
+
+let sampleVehicles = [
+    Vehicle(name: "Lexus", make: "Lexus", model: "White"),
+    Vehicle(name: "Test", make: "Lexus", model: "White")
+]

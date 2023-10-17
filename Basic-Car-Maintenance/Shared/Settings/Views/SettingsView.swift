@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct SettingsView: View {
     @State private var viewModel: SettingsViewModel
@@ -14,7 +15,10 @@ struct SettingsView: View {
     @State private var showAddVehicleError = false
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
+    @Environment(\.colorScheme) var colorScheme
     @State private var errorDetails: Error?
+    @State private var copiedAppVersion: Bool = false
+    private let appVersion = "Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))"
     
     init(authenticationViewModel: AuthenticationViewModel) {
         let settingsViewModel = SettingsViewModel(authenticationViewModel: authenticationViewModel)
@@ -40,7 +44,7 @@ struct SettingsView: View {
                 Link(destination: URL(string: "https://github.com/mikaelacaron")!) {
                     Text("🦄 Mikaela Caron - Maintainer", comment: "Link to maintainer Github account.")
                 }
-
+                
                 // swiftlint:disable:next line_length
                 Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=feature+request&projects=&template=feature-request.md&title=FEATURE+-")!) {
                     Label {
@@ -81,6 +85,14 @@ struct SettingsView: View {
                             Text(vehicle.make)
                             
                             Text(vehicle.model)
+
+                            Text(vehicle.year ?? "")
+
+                            Text(vehicle.color ?? "")
+
+                            Text(vehicle.vin ?? "")
+
+                            Text(vehicle.licensePlateNumber ?? "")
                         }
                         .swipeActions {
                             Button(role: .destructive) {
@@ -117,15 +129,43 @@ struct SettingsView: View {
                             Image(systemName: "person")
                         }
                     }
+                    
+                    NavigationLink {
+                        ChooseAppIconView(viewModel: ChooseAppIconViewModel())
+                    } label: {
+                        Label("Change App Icon", systemImage: "apps.iphone")
+                    }
                 }
+                
                 // swiftlint:disable:next line_length
-                Text("Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))", comment: "Label to display version and build number.")
+                Text(LocalizedStringKey(stringLiteral: appVersion), comment: "Label to display version and build number.")
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .onLongPressGesture {
+                        let clipboard = UIPasteboard.general
+                        clipboard.setValue(appVersion, forPasteboardType: UTType.plainText.identifier)
+                        copiedAppVersion = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            copiedAppVersion = false
+                        }
+                    }
+                    .overlay {
+                        // A toast view to notify the user of version copy
+                        Text("Copied!", comment: "Text to notify user that app version was copied")
+                            .font(.callout)
+                            .padding(8)
+                            .foregroundStyle(colorScheme == .light ? .white : .black)
+                            .background(colorScheme == .light ? .black : .white)
+                            .clipShape(Capsule())
+                            .opacity(copiedAppVersion ? 1 : 0)
+                            .animation(.linear(duration: 0.2), value: copiedAppVersion)
+                    }
             }
             .navigationDestination(isPresented: $isShowingAddVehicle) {
                 AddVehicleView() { vehicle in
                     Task {
                         do {
                             try await viewModel.addVehicle(vehicle)
+                            await viewModel.getVehicles()
                             isShowingAddVehicle = false
                         } catch {
                             errorDetails = error

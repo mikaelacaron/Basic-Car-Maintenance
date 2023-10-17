@@ -20,6 +20,8 @@ class DashboardViewModel {
     var isShowingAddMaintenanceEvent = false
     var errorMessage: String = ""
     var sortOption: SortOption = .custom
+    var vehicles = [Vehicle]()
+    var searchText: String = ""
     
     var sortedEvents: [MaintenanceEvent] {
         switch sortOption {
@@ -30,6 +32,14 @@ class DashboardViewModel {
     }
     
     var loadingState: LoadingState = .isLoading
+
+    var searchedEvents: [MaintenanceEvent] {
+        if searchText.isEmpty {
+            sortedEvents
+        } else {
+            sortedEvents.filter { $0.title.localizedStandardContains(searchText) }
+        }
+    }
     
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
@@ -41,16 +51,12 @@ class DashboardViewModel {
             eventToAdd.userID = uid
             
             do {
-                let documentReference = try Firestore
+                try Firestore
                     .firestore()
-                    .collection("maintenance_events")
+                    .collection(FirestoreCollection.maintenanceEvents)
                     .addDocument(from: eventToAdd)
                 
-                var event = maintenanceEvent
-                let documentId = documentReference.documentID
-                event.id = documentId
-                
-                events.append(event)
+                events.append(maintenanceEvent)
                 
                 errorMessage = ""
                 isShowingAddMaintenanceEvent = false
@@ -65,7 +71,8 @@ class DashboardViewModel {
         loadingState = .isLoading
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
-            let docRef = db.collection("maintenance_events").whereField("userID", isEqualTo: uid)
+            let docRef = db.collection(FirestoreCollection.maintenanceEvents)
+                .whereField(FirestoreField.userID, isEqualTo: uid)
             
             let querySnapshot = try? await docRef.getDocuments()
             
@@ -92,7 +99,7 @@ class DashboardViewModel {
             do {
                 try Firestore
                     .firestore()
-                    .collection("maintenance_events")
+                    .collection(FirestoreCollection.maintenanceEvents)
                     .document(id)
                     .setData(from: eventToUpdate)
             } catch {
@@ -111,13 +118,39 @@ class DashboardViewModel {
         do {
             try await Firestore
                 .firestore()
-                .collection("maintenance_events")
+                .collection(FirestoreCollection.maintenanceEvents)
                 .document(documentId)
                 .delete()
             errorMessage = ""
+            
+            if let eventIndex = events.firstIndex(of: event) {
+                events.remove(at: eventIndex)
+            }
         } catch {
             showErrorAlert.toggle()
             errorMessage = error.localizedDescription
+        }
+    }
+    
+    /// Fetches the user's vehicles from Firestore based on their unique user ID.
+    func getVehicles() async {
+        if let uid = authenticationViewModel.user?.uid {
+            let db = Firestore.firestore()
+            let docRef = db.collection("vehicles").whereField("userID", isEqualTo: uid)
+            
+            let querySnapshot = try? await docRef.getDocuments()
+            
+            var vehicles = [Vehicle]()
+            
+            if let querySnapshot {
+                for document in querySnapshot.documents {
+                    if let vehicle = try? document.data(as: Vehicle.self) {
+                        vehicles.append(vehicle)
+                    }
+                }
+                
+                self.vehicles = vehicles
+            }
         }
     }
 }
