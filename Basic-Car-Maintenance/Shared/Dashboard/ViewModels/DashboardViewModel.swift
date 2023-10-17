@@ -29,6 +29,8 @@ class DashboardViewModel {
         }
     }
     
+    var loadingState: LoadingState = .isLoading
+    
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
     }
@@ -60,6 +62,7 @@ class DashboardViewModel {
     }
     
     func getMaintenanceEvents() async {
+        loadingState = .isLoading
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
             let docRef = db.collection("maintenance_events").whereField("userID", isEqualTo: uid)
@@ -75,6 +78,7 @@ class DashboardViewModel {
                     }
                 }
                 self.events = events
+                self.loadingState = .loaded
             }
         }
     }
@@ -145,5 +149,10 @@ extension DashboardViewModel {
                     comment: "Sorting option that sorts items according to the user's preferences.")
             }
         }
+    }
+    
+    enum LoadingState: String {
+        case isLoading
+        case loaded
     }
 }

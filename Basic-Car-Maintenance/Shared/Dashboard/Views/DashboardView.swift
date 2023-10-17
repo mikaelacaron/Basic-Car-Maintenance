@@ -21,51 +21,18 @@ struct DashboardView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(viewModel.sortedEvents) { event in
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text(event.title)
-                            .font(.title3)
-                        
-                        Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
-                        
-                        if !event.notes.isEmpty {
-                            Text(event.notes)
-                                .lineLimit(0)
-                        }
-                    }
-                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-                        Button(role: .destructive) {
-                            Task {
-                                await viewModel.deleteEvent(event)
-                            }
-                        } label: {
-                            Image(systemName: "trash")
-                        }
-                        
-                        Button {
-                            selectedMaintenanceEvent = event
-                            isShowingEditView = true
-                        } label: {
-                            VStack {
-                                Text("Edit")
-                                Image(systemName: "pencil")
-                            }
-                        }
-                    }
-                    .sheet(isPresented: $isShowingEditView) {
-                        EditMaintenanceEventView(
-                            selectedEvent: $selectedMaintenanceEvent, viewModel: viewModel)
+            Group {
+                switch viewModel.loadingState {
+                case .isLoading:
+                    ProgressView()
+                case .loaded:
+                    if viewModel.events.isEmpty {
+                        Text("Add your first maintenance")
+                    } else {
+                        maintenanceListView
                     }
                 }
-                .listStyle(.inset)
             }
-            .overlay {
-                if viewModel.events.isEmpty {
-                    Text("Add your first maintenance")
-                }
-            }
-            .animation(.linear, value: viewModel.sortOption)
             .navigationTitle(Text("Dashboard"))
             .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert) {
                 Button("OK") {
@@ -99,11 +66,13 @@ struct DashboardView: View {
                     }
                 }
             }
-            .task {
-                await viewModel.getMaintenanceEvents()
-            }
             .sheet(isPresented: $isShowingAddView) {
                 makeAddMaintenanceView()
+            }
+        }
+        .onAppear {
+            Task {
+                await viewModel.getMaintenanceEvents()
             }
         }
         .onChange(of: scenePhase) { _, newScenePhase in
@@ -125,6 +94,49 @@ struct DashboardView: View {
                 isShowingAddView = true
             }
         }
+    }
+    
+    private var maintenanceListView: some View {
+        List {
+            ForEach(viewModel.sortedEvents) { event in
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(event.title)
+                        .font(.title3)
+                    
+                    Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
+                    
+                    if !event.notes.isEmpty {
+                        Text(event.notes)
+                            .lineLimit(0)
+                    }
+                }
+                .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                    Button(role: .destructive) {
+                        Task {
+                            await viewModel.deleteEvent(event)
+                        }
+                    } label: {
+                        Image(systemName: "trash")
+                    }
+                    
+                    Button {
+                        selectedMaintenanceEvent = event
+                        isShowingEditView = true
+                    } label: {
+                        VStack {
+                            Text("Edit")
+                            Image(systemName: "pencil")
+                        }
+                    }
+                }
+                .sheet(isPresented: $isShowingEditView) {
+                    EditMaintenanceEventView(
+                        selectedEvent: $selectedMaintenanceEvent, viewModel: viewModel)
+                }
+            }
+            .listStyle(.inset)
+        }
+        .animation(.linear, value: viewModel.sortOption)
     }
     
     private func makeAddMaintenanceView() -> some View {
