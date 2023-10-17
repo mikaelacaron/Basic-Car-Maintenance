@@ -31,10 +31,13 @@ struct DashboardView: View {
                     } else {
                         maintenanceListView
                         .overlay {
-                          if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
-                    ContentUnavailableView("No results",
-                                           systemImage: "magnifyingglass",
-                                           description: noSearchResultsDescription)
+                            if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
+                                ContentUnavailableView(
+                                    "No results",
+                                    systemImage: "magnifyingglass",
+                                    description: noSearchResultsDescription
+                                )
+                            }
                         }
                     }
                 }
@@ -109,11 +112,11 @@ struct DashboardView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text(event.title)
                         .font(.title3)
-
+                    
                     Text("For \(event.vehicle.name)")
-
+                    
                     Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
-
+                    
                     if !event.notes.isEmpty {
                         Text(event.notes)
                             .lineLimit(0)
@@ -127,7 +130,7 @@ struct DashboardView: View {
                     } label: {
                         Image(systemName: "trash")
                     }
-
+                    
                     Button {
                         selectedMaintenanceEvent = event
                         isShowingEditView = true
@@ -138,11 +141,13 @@ struct DashboardView: View {
                         }
                     }
                 }
-            .animation(.linear, value: viewModel.searchedEvents)
-            .searchable(text: $viewModel.searchText)
+                .animation(.linear, value: viewModel.searchedEvents)
+                .searchable(text: $viewModel.searchText)
                 .sheet(isPresented: $isShowingEditView) {
                     EditMaintenanceEventView(
                         selectedEvent: $selectedMaintenanceEvent, viewModel: viewModel)
+                }
+            }
         }
     }
     
