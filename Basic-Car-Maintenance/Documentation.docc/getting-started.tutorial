@@ -1,0 +1,103 @@
+@Tutorial(time: 15) {
+    @Intro(title: "How to contribute to this project.") {
+        Here you will find instructions on how to prepare, fork, clone, configure, build and contribute to this project. 
+        
+    }
+    
+    @Section(title: "Prerequisites") {
+
+        @ContentAndMedia {
+            Add engaging section text here.
+        }
+        
+        @Steps {
+            @Step {
+                Read the Code of Conduct
+            }
+            @Step {
+                Read the CONTRIBUTING guidelines
+            }
+            @Step {
+                Download Xcode 15 or later
+            }
+            @Step {
+                Install Github command line tools
+            }
+
+        }
+    }
+            
+    @Section(title: "Fork and Clone") {
+        @ContentAndMedia {
+            Fork and clone 
+            
+            @Image(source: 2-fork.png, alt: "GitHub Fork")
+        }
+        
+        @Steps {
+            @Step {
+                Fork the repo on GitHub to your own account.  Select Fork from the Basic-Car-Maintenance github page.
+                
+                @Image(source: 2-fork.png, alt: "GitHub Fork")
+            }
+            
+            @Step {
+                Clone your fork to your computer. 
+                
+                gh repo clone USERNAME/Basic-Car-Maintenance
+                
+                @Image(source: 3-clone.png, alt: "CLI github clone")
+            }
+        }
+    }
+    @Section(title: "Configure and Build") {
+        @ContentAndMedia {
+            Copy the template file, edit it to include your development team ID. Set an appropriate bundle id. 
+            
+            @Image(source: 4-config.png, alt: "Copying template file")
+        }
+        
+        @Steps {
+            @Step {
+                In the same folder that contains the Basic-Car-Maintenance.xcconfig.template, run this command, in Terminal, to create a new Xcode configuration file (which properly sets up the signing information)
+                
+                cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
+                
+                @Image(source: 4-config.png, alt: "Copying template file")
+            }
+            
+            @Step {
+                In the Basic-Car-Maintenance.xcconfig file, fill in your DEVELOPMENT_TEAM and PRODUCT_BUNDLE_IDENTIFIER. You can find this by logging into the Apple Developer Portal
+                
+                This works with both free or paid Apple Developer accounts. Do NOT run this app on a real device due to issues with the Sign in With Apple capability.
+
+                @Image(source: 5-dev-id.png, alt: "Edit config with dev id")
+            }
+            @Step {
+                Build project in Xcode
+
+                @Image(source: 6-build.png, alt: "Basic Car Maitnenace running in simulator")
+            }
+        }
+    }
+    
+    @Section(title: "Starting on an issue") {
+        @ContentAndMedia {
+            BEFORE starting on an issue, comment on the issue you want to work on.
+
+            This prevents two people from working on the same issue. Mikaela (the maintainer) will assign you that issue, and you can get started on it.
+
+            @Image(source: 7-issue.png, alt: "GitHub issue")
+        }
+        
+        @Steps {
+            @Step {
+                Checkout a new branch (from the dev branch) to work on an issue. The feature-name part of the branch can be shortened or omitted and you add your username instead. No commits should be made to the main branch directly. The main branch shall only consist of the deployed code. Developers are expected to work on feature branches, and upon successful development and testing, a PR (pull request) must be opened to merge with dev
+                
+                git checkout -b issueNumber-feature-name
+                
+                @Image(source: 8-checkout.png, alt: "Checkout issue locally")
+            }
+        }
+    }
+}

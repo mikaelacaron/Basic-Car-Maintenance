@@ -1,0 +1,15 @@
+@Tutorials(name: "Basic-Car-Maitenance") {
+    @Intro(title: "Getting Started") {
+        How to get started contributing to this project. 
+        
+        @Image(source: 1-intro.png, alt: "Screenshot of Basic-Car-Maintenance GitHub page")
+    }
+    
+    @Chapter(name: "Getting Started") {
+        Prerequisites
+        
+        @Image(source: "xcode-about.png", alt: "Xcode 15 about screen")
+        
+        @TutorialReference(tutorial: "doc:getting-started")
+    }
+}
