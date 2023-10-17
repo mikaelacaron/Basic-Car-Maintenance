@@ -38,4 +38,15 @@ struct Vehicle: Codable, Identifiable, Hashable {
         self.vin = vin
         self.licensePlateNumber = licensePlateNumber
     }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(userID)
+        hasher.combine(name)
+        hasher.combine(make)
+        hasher.combine(model)
+        hasher.combine(year)
+        hasher.combine(color)
+        hasher.combine(vin)
+        hasher.combine(licensePlateNumber)
+    }
 }

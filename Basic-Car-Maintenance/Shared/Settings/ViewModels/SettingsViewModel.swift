@@ -108,6 +108,7 @@ final class SettingsViewModel {
     }
     
     /// Deletes a vehicle from both Firestore and the local ``SettingsViewModel/vehicles`` array.
+    /// it also deletes all associated maintenance events for this vehicle
     ///
     /// - Parameter vehicle: The vehicle to be deleted.
     /// - Throws: An error if there's an issue deleting the vehicle from Firestore.
@@ -117,13 +118,35 @@ final class SettingsViewModel {
         }
         
         do {
-            try await Firestore
+            let vehicleRef = Firestore
                 .firestore()
                 .collection(FirestoreCollection.vehicles)
                 .document(documentId)
-                .delete()
-            
-            vehicles.removeAll { $0.id == vehicle.id }
+
+            if let vehicle = try? await vehicleRef.getDocument().data(as: Vehicle.self),
+               let uid = authenticationViewModel.user?.uid {
+                // Get all events with the associated user ide
+                let events = try await Firestore
+                    .firestore()
+                    .collection(FirestoreCollection.maintenanceEvents)
+                    .whereField(FirestoreField.userID, isEqualTo: uid)
+                    .getDocuments()
+
+                for event in events.documents {
+                    // Now check if the document is a valid MaintenanceEvent and if it has the same
+                    // vehicle like the vehicle we want to delete.
+                    // Because the vehicle and the vehicle in the event has different ids,
+                    // we have to check the hash value which is constructed without the id
+                    if let maintenanceEvent = try? event.data(as: MaintenanceEvent.self),
+                       maintenanceEvent.vehicle.hashValue == vehicle.hashValue {
+                        try await event.reference.delete()
+                    }
+                }
+
+                // After all events are deleted we can now safely delete the vehicle
+                try await vehicleRef.delete()
+                vehicles.removeAll { $0.hashValue == vehicle.hashValue }
+            }
         } catch {
             throw error
         }
