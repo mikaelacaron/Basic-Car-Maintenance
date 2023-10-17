@@ -23,20 +23,19 @@ struct AddOdometerReadingView: View {
         NavigationStack {
             Form {
                 Section {
-                    HStack {
-                        TextField("Distance", value: $distance, format: .number)
-                        Button("Unit") {
-                            switchUnitModalIsPresented = true
+                    VStack {
+                        HStack {
+                            TextField("Distance", value: $distance, format: .number)
+                            Picker(selection: $unitsAreMetric) {
+                                Text("Miles").tag(false)
+                                Text("Kilometers").tag(true)
+                            } label: {
+                                Text("Preferred units",
+                                     comment: "Odometer reading units picker label")
+                            }
+                            .pickerStyle(.segmented)
                         }
                     }
-                    .sheet(isPresented: $switchUnitModalIsPresented) {
-                        Toggle(isOn: $unitsAreMetric) {
-                            Text(unitsAreMetric ? "Kilometers" : "Miles")
-                        }
-                        .presentationDetents([.height(100)])
-                    }
-                } header: {
-                    Text("Distance in \(unitsAreMetric ? "Kilometers" : "Miles")")
                 }
                 
                 Section {
