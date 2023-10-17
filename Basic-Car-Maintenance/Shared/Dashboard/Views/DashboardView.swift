@@ -79,11 +79,9 @@ struct DashboardView: View {
                 makeAddMaintenanceView()
             }
         }
-        .onAppear {
-            Task {
-                await viewModel.getMaintenanceEvents()
-                await viewModel.getVehicles()
-            }
+        .task {
+            await viewModel.getMaintenanceEvents()
+            await viewModel.getVehicles()
         }
         .onChange(of: scenePhase) { _, newScenePhase in
             guard case .active = newScenePhase else { return }

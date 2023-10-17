@@ -9,6 +9,11 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import Foundation
 
+enum LoadingState: String {
+    case isLoading
+    case loaded
+}
+
 @Observable
 class DashboardViewModel {
     
@@ -182,10 +187,5 @@ extension DashboardViewModel {
                     comment: "Sorting option that sorts items according to the user's preferences.")
             }
         }
-    }
-    
-    enum LoadingState: String {
-        case isLoading
-        case loaded
     }
 }
