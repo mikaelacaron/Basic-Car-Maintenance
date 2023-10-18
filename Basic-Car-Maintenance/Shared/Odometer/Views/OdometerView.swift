@@ -20,7 +20,7 @@ struct OdometerView: View {
             List {
                 ForEach(viewModel.readings) { reading in
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("\(reading.distance) \(reading.unitsAreMetric ? "km" : "mi")")
+                        Text("\(reading.distance) \(reading.isMetric ? "km" : "mi")")
                             .font(.title3)
                         
                         Text("For \(reading.vehicle.name)")

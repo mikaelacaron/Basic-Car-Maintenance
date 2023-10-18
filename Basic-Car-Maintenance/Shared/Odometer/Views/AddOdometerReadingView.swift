@@ -14,7 +14,7 @@ struct AddOdometerReadingView: View {
 
     @State private var date = Date()
     @State private var selectedVehicle: Vehicle?
-    @State private var unitsAreMetric = false
+    @State private var isMetric = false
     @State private var distance = 0
     @State private var switchUnitModalIsPresented = false
     @Environment(\.dismiss) var dismiss
@@ -26,7 +26,7 @@ struct AddOdometerReadingView: View {
                     VStack {
                         HStack {
                             TextField("Distance", value: $distance, format: .number)
-                            Picker(selection: $unitsAreMetric) {
+                            Picker(selection: $isMetric) {
                                 Text("Miles").tag(false)
                                 Text("Kilometers").tag(true)
                             } label: {
@@ -72,7 +72,7 @@ struct AddOdometerReadingView: View {
                         if let selectedVehicle {
                             let reading = OdometerReading(date: date,
                                                           distance: distance,
-                                                          unitsAreMetric: unitsAreMetric,
+                                                          isMetric: isMetric,
                                                           vehicle: selectedVehicle)
                             addTapped(reading)
                             dismiss()

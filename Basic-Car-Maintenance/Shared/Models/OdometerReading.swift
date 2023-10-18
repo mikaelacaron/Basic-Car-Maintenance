@@ -13,6 +13,6 @@ struct OdometerReading: Codable, Identifiable, Hashable {
     var userID: String?
     let date: Date
     let distance: Int
-    let unitsAreMetric: Bool
+    let isMetric: Bool
     let vehicle: Vehicle
 }
