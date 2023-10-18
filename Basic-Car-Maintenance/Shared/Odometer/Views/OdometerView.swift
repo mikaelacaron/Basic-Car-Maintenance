@@ -32,7 +32,8 @@ struct OdometerView: View {
             }
             .overlay {
                 if viewModel.readings.isEmpty {
-                    Text("Add your first odometer")
+                    Text("Add your first odometer",
+                         comment: "Placeholder text for empty odometer reading list")
                 }
             }
             .navigationTitle(Text("Odometer"))

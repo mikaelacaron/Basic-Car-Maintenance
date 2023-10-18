@@ -106,7 +106,7 @@
       }
     },
     "Add" : {
-      "comment" : "Label for button to add data",
+      "comment" : "Label for button to add data\nLabel for submit button on form when adding an odometer reading",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -188,7 +188,7 @@
       }
     },
     "Add Reading" : {
-      "comment" : "Nagivation title for Add Odometer view"
+      "comment" : "Title for form when adding an odometer reading"
     },
     "Add Vehicle" : {
       "comment" : "Label to add a vehicle.",
@@ -272,7 +272,7 @@
       }
     },
     "Add your first odometer" : {
-
+      "comment" : "Placeholder text for empty odometer reading list"
     },
     "Additional Notes" : {
       "comment" : "Notes text field placeholder",
@@ -546,7 +546,7 @@
       }
     },
     "Date" : {
-      "comment" : "Date picker label",
+      "comment" : "Date picker label\nLabel for date picker when adding an odometer reading",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -1370,7 +1370,7 @@
       }
     },
     "Preferred units" : {
-      "comment" : "Odometer reading units picker label"
+      "comment" : "Label for units selected when adding an odometer reading"
     },
     "Profile" : {
       "comment" : "Link to view profile.",
@@ -1506,7 +1506,7 @@
       }
     },
     "Select a vehicle" : {
-      "comment" : "Maintenance event vehicle picker label\nOdometer reading vehicle picker label"
+      "comment" : "Maintenance event vehicle picker label\nPicker for selecting a vehicle when adding an odometer reading"
     },
     "Settings" : {
       "comment" : "Label to display settings.",
@@ -1869,7 +1869,7 @@
       }
     },
     "Vehicle" : {
-      "comment" : "Maintenance event vehicle picker header\nOdometer Reading Vehicle Picker Label"
+      "comment" : "Maintenance event vehicle picker header\nLabel for Picker for selecting a vehicle when adding an odometer reading"
     },
     "Vehicle Color" : {
 

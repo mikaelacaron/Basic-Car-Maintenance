@@ -33,7 +33,7 @@ struct AddOdometerReadingView: View {
                                 Text("Kilometers").tag(true)
                             } label: {
                                 Text("Preferred units",
-                                     comment: "Odometer reading units picker label")
+                                     comment: "Label for units selected when adding an odometer reading")
                             }
                             .pickerStyle(.segmented)
                         }
@@ -47,16 +47,17 @@ struct AddOdometerReadingView: View {
                         }
                     } label: {
                         Text("Select a vehicle",
-                             comment: "Odometer reading vehicle picker label")
+                             comment: "Picker for selecting a vehicle when adding an odometer reading")
                     }
                     .pickerStyle(.menu)
                 } header: {
-                    Text("Vehicle", comment: "Odometer Reading Vehicle Picker Label")
+                    Text("Vehicle",
+                         comment: "Label for Picker for selecting a vehicle when adding an odometer reading")
                 }
                 
                 DatePicker(selection: $date, displayedComponents: .date) {
                     Text("Date",
-                         comment: "Date picker label")
+                         comment: "Label for date picker when adding an odometer reading")
                 }
                 .dynamicTypeSize(...DynamicTypeSize.accessibility2)
             }
@@ -67,7 +68,7 @@ struct AddOdometerReadingView: View {
                 }
             }
             .navigationTitle(Text("Add Reading",
-                                  comment: "Nagivation title for Add Odometer view"))
+                                  comment: "Title for form when adding an odometer reading"))
             .toolbar {
                 ToolbarItem {
                     Button {
@@ -82,7 +83,7 @@ struct AddOdometerReadingView: View {
                         }
                     } label: {
                         Text("Add",
-                             comment: "Label for button to add data")
+                             comment: "Label for submit button on form when adding an odometer reading")
                     }
                     .disabled(distance < 0)
                 }
