@@ -131,7 +131,7 @@ struct SettingsView: View {
                 
                 // swiftlint:disable:next line_length
                 if let privacyURL = viewModel.privacyURL, !privacyURL.absoluteString.isEmpty {
-                    Link(LocalizedStringKey(stringLiteral: viewModel.privacyText), destination: privacyURL)
+                    Link("Privacy Policy", destination: privacyURL)
                 }
                 Text(LocalizedStringKey(stringLiteral: appVersion), comment: "Label to display version and build number.")
                     .frame(maxWidth: .infinity, alignment: .center)

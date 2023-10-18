@@ -12,7 +12,6 @@ import Foundation
 @Observable
 final class SettingsViewModel {
     let authenticationViewModel: AuthenticationViewModel
-    let privacyText = "Privacy Policy"
     let privacyURL = URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance-Privacy")
 
     var contributors: [Contributor]?
