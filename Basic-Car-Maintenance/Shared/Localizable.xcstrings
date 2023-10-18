@@ -25,6 +25,12 @@
     },
     "%@" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -58,11 +64,24 @@
       }
     },
     "🤠" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🤠"
+          }
+        }
+      }
     },
     "🦄 Mikaela Caron - Maintainer" : {
       "comment" : "Link to maintainer Github account.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 Mikaela Caron - Суправаджальніца"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -98,6 +117,12 @@
     "Add" : {
       "comment" : "Label for button to add data",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дадаць"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -139,6 +164,12 @@
     "Add Maintenance" : {
       "comment" : "Nagivation title for Add Maintenance view",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дадаць абслугоўванне"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -180,6 +211,12 @@
     "Add Vehicle" : {
       "comment" : "Label to add a vehicle.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дадаць транспартны сродак"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -220,6 +257,12 @@
     },
     "Add your first maintenance" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дадайце першае абслугоўванне"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -261,6 +304,12 @@
     "Additional Notes" : {
       "comment" : "Notes text field placeholder",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дадатковая інфармацыя"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -301,6 +350,12 @@
     },
     "An Error Occurred" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адбылася памылка"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -341,6 +396,12 @@
     },
     "Cancel" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адмяніць"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -375,6 +436,12 @@
     },
     "Change App Icon" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Змяніць значок дадатка"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -385,6 +452,12 @@
     },
     "Choose App Icon" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберыце значок дадатка"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -394,11 +467,24 @@
       }
     },
     "Color" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Колер"
+          }
+        }
+      }
     },
     "Contributors" : {
       "comment" : "Link to contributors list.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удзельнікі"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -440,6 +526,12 @@
     "Copied!" : {
       "comment" : "Text to notify user that app version was copied",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скапіравана!"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -451,6 +543,12 @@
     "Custom" : {
       "comment" : "Sorting option that sorts items according to the user's preferences.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вольны"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -491,6 +589,12 @@
     },
     "Dashboard" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дэшборд"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -532,6 +636,12 @@
     "Date" : {
       "comment" : "Date picker label",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дата"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -573,6 +683,12 @@
     "Delete" : {
       "comment" : "Label to delete a vehicle",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выдаліць"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -613,6 +729,12 @@
     },
     "Dismiss" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адхіліць"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -623,6 +745,12 @@
     },
     "Edit" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рэдагаваць"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -657,6 +785,12 @@
     },
     "Failed To Add Vehicle" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не атрымалася дадаць транспартны сродак"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -691,6 +825,12 @@
     },
     "Failed To Add Vehicle\nDetails:%@" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не атрымалася дадаць транспартны сродак\nПадрабязнасці:%@"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -726,6 +866,12 @@
     "Failed To Add Vehicle. Unknown Error." : {
       "comment" : "Label to display error details.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не атрымалася дадаць транспартны сродак. Невядомая памылка."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -766,6 +912,12 @@
     },
     "Failed To Delete Event" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не ўдалося выдаліць падзею"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -807,6 +959,12 @@
     "Failed To Delete Vehicle" : {
       "comment" : "Label to dsplay title of the delete vehicle alert",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не ўдалося выдаліць транспартны сродак"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -848,6 +1006,12 @@
     "Failed To Delete Vehicle\nDetails:%@" : {
       "comment" : "Label to display localized error description.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не ўдалося выдаліць транспартны сродак Падрабязнасці:%@"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -889,6 +1053,12 @@
     "Failed To Delete Vehicle. Unknown Error." : {
       "comment" : "Label to display error details.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не ўдалося выдаліць аўтамабіль. Невядомая памылка."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -922,13 +1092,34 @@
       }
     },
     "Filter" : {
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фільтр"
+          }
+        }
+      }
     },
     "For %@" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для %@"
+          }
+        }
+      }
     },
     "GitHub Repo" : {
       "comment" : "Link to the Basic Car Maintenance GitHub repo.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рэпазітар на GitHub"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -968,10 +1159,23 @@
       }
     },
     "License Plate Number" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нумарны знак"
+          }
+        }
+      }
     },
     "Logged in anonymously with ID: %@" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ананімны ўваход з ідэнтыфікатарам: %@"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1015,6 +1219,12 @@
     },
     "Make" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вытворца"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1055,6 +1265,12 @@
     },
     "Model" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мадэль"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1095,6 +1311,12 @@
     },
     "Name" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Імя"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1136,6 +1358,12 @@
     "Newest to Oldest" : {
       "comment" : "Sorting option that displays newer items first.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ад найноўшых да самых старых"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1176,6 +1404,12 @@
     },
     "No results" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вынікаў няма"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1187,6 +1421,12 @@
     "Notes" : {
       "comment" : "Maintenance event notes text field label",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нататкі"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1227,6 +1467,12 @@
     },
     "Odometer" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адометр"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1243,6 +1489,12 @@
     },
     "OdometerView, coming soon" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адометр, хутка будзе"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1260,6 +1512,12 @@
     "OK" : {
       "comment" : "Label to dismiss alert",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добра"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1301,6 +1559,12 @@
     "Oldest to Newest" : {
       "comment" : "Sorting option that displays older items first.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ад самых старых да новых"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1342,6 +1606,12 @@
     "Profile" : {
       "comment" : "Link to view profile.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профіль"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1382,6 +1652,12 @@
     },
     "Read More..." : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Больш падрабязна..."
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1393,6 +1669,12 @@
     "Report a Bug" : {
       "comment" : "Link to report a bug",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Паведаміць пра памылку"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1434,6 +1716,12 @@
     "Request a New Feature" : {
       "comment" : "Link to request a new feature.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запытаць новую функцыю"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1473,11 +1761,25 @@
       }
     },
     "Select a vehicle" : {
-      "comment" : "Maintenance event vehicle picker label"
+      "comment" : "Maintenance event vehicle picker label",
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберыце транспартны сродак"
+          }
+        }
+      }
     },
     "Settings" : {
       "comment" : "Label to display settings.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Налады"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1518,6 +1820,12 @@
     },
     "Sign Out" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выйсці"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1558,6 +1866,12 @@
     },
     "Signed in as %@" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Увайсці як %@"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1599,6 +1913,12 @@
     "Thanks for using this app! It's open source and anyone can contribute to it." : {
       "comment" : "Thanks a user for using the app and tells the user they can contribute to the codebase",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дзякуй, што карыстаецеся гэтым дадаткам! Ëн з адкрытым зыходным кодам, і кожны можа ўнесці свой уклад у яго."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1640,6 +1960,12 @@
     "The title of the event" : {
       "comment" : "Maintenance event title text field label placeholder",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва падзеі"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1680,6 +2006,12 @@
     },
     "There were no maintenance events for '%@'. Try a new search." : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не было тэхнічнага абслугоўвання для «%@». Паспрабуйце новы пошук."
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1690,6 +2022,12 @@
     },
     "This App Icon will appear on your Home Screen." : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Значок дадатка, які з'явіцца на вашым галоўным экране."
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1700,6 +2038,12 @@
     },
     "This is the title" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Гэта назва"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1711,6 +2055,12 @@
     "Title" : {
       "comment" : "Maintenance event title text field header",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1752,6 +2102,12 @@
     "Title of the maintenance event" : {
       "comment" : "Maintenance event title text field label",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва мерапрыемства па тэхнічным абслугоўванні"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1792,6 +2148,12 @@
     },
     "Update" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Абнавіць"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1827,6 +2189,12 @@
     "Update Maintenance" : {
       "extractionState" : "manual",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Абнаўленне тэхнічнага абслугоўвання"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1836,16 +2204,44 @@
       }
     },
     "Vehicle" : {
-      "comment" : "Maintenance event vehicle picker header"
+      "comment" : "Maintenance event vehicle picker header",
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Транспартны сродак"
+          }
+        }
+      }
     },
     "Vehicle Color" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Колер транспартнага сродку"
+          }
+        }
+      }
     },
     "Vehicle License Plate Number" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нумар транспартнага сродку"
+          }
+        }
+      }
     },
     "Vehicle Make" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вытворца транспартнага сродку"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1886,6 +2282,12 @@
     },
     "Vehicle Model" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мадэль транспартнага сродку"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1926,6 +2328,12 @@
     },
     "Vehicle Name" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва транспартнага сродку"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1965,14 +2373,34 @@
       }
     },
     "Vehicle VIN" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ідэнтыфікатар транспартнага сродку"
+          }
+        }
+      }
     },
     "Vehicle Year" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Год транспартнага сродку"
+          }
+        }
+      }
     },
     "Vehicles" : {
       "comment" : "Label to display header title.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Транспартныя сродкі"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2014,6 +2442,12 @@
     "Version %@ (%@)" : {
       "comment" : "Label to display version and build number.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версія %@ (%@)"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2053,10 +2487,24 @@
       }
     },
     "VIN" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ІТС\n"
+          }
+        }
+      }
     },
     "Year" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Год"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
