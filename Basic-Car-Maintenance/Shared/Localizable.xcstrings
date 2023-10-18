@@ -932,6 +932,11 @@
         }
       }
     },
+    "Filter" : {
+    },
+    "For %@" : {
+
+    },
     "GitHub Repo" : {
       "comment" : "Link to the Basic Car Maintenance GitHub repo.",
       "localizations" : {
