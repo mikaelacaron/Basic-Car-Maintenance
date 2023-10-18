@@ -375,6 +375,12 @@
     },
     "Change App Icon" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Icon wechseln"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -385,6 +391,12 @@
     },
     "Choose App Icon" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle ein App Icon"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -394,7 +406,14 @@
       }
     },
     "Color" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Farbe"
+          }
+        }
+      }
     },
     "Contributors" : {
       "comment" : "Link to contributors list.",
@@ -440,6 +459,12 @@
     "Copied!" : {
       "comment" : "Text to notify user that app version was copied",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopiert!"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -613,6 +638,12 @@
     },
     "Dismiss" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwerfen"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -922,9 +953,24 @@
       }
     },
     "Filter" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filter"
+          }
+        }
+      }
     },
     "For %@" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für %@"
+          }
+        }
+      }
     },
     "GitHub Repo" : {
       "comment" : "Link to the Basic Car Maintenance GitHub repo.",
@@ -968,7 +1014,14 @@
       }
     },
     "License Plate Number" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autokennzeichen"
+          }
+        }
+      }
     },
     "Logged in anonymously with ID: %@" : {
       "localizations" : {
@@ -1176,6 +1229,12 @@
     },
     "No results" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kein Ergebnis"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1227,6 +1286,12 @@
     },
     "Odometer" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kilometerzähler"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1243,6 +1308,12 @@
     },
     "OdometerView, coming soon" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kilometerzähler ist bald verfügbar"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1382,6 +1453,12 @@
     },
     "Read More..." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mehr lesen..."
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1473,7 +1550,15 @@
       }
     },
     "Select a vehicle" : {
-      "comment" : "Maintenance event vehicle picker label"
+      "comment" : "Maintenance event vehicle picker label",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle ein Fahrzeug"
+          }
+        }
+      }
     },
     "Settings" : {
       "comment" : "Label to display settings.",
@@ -1680,6 +1765,12 @@
     },
     "There were no maintenance events for '%@'. Try a new search." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es gibt keine Wartung für '%@'. Versuche eine neue Suche"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1690,6 +1781,12 @@
     },
     "This App Icon will appear on your Home Screen." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das App Icon wird auf deinem Home Screen erscheinen"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1700,6 +1797,12 @@
     },
     "This is the title" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das ist der Titel"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1827,6 +1930,12 @@
     "Update Maintenance" : {
       "extractionState" : "manual",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wartung aktualisieren"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1836,13 +1945,35 @@
       }
     },
     "Vehicle" : {
-      "comment" : "Maintenance event vehicle picker header"
+      "comment" : "Maintenance event vehicle picker header",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug"
+          }
+        }
+      }
     },
     "Vehicle Color" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeugfarbe"
+          }
+        }
+      }
     },
     "Vehicle License Plate Number" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug Kennzeichen"
+          }
+        }
+      }
     },
     "Vehicle Make" : {
       "localizations" : {
@@ -1965,10 +2096,24 @@
       }
     },
     "Vehicle VIN" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrgestellnummer"
+          }
+        }
+      }
     },
     "Vehicle Year" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baujahr"
+          }
+        }
+      }
     },
     "Vehicles" : {
       "comment" : "Label to display header title.",
@@ -2053,10 +2198,24 @@
       }
     },
     "VIN" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrgestellnummer"
+          }
+        }
+      }
     },
     "Year" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baujahr"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
