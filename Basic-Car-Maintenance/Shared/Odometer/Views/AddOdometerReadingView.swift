@@ -47,17 +47,17 @@ struct AddOdometerReadingView: View {
                         }
                     } label: {
                         Text("Select a vehicle",
-                             comment: "Picker for selecting a vehicle when adding an odometer reading")
+                             comment: "Picker for selecting a vehicle")
                     }
                     .pickerStyle(.menu)
                 } header: {
                     Text("Vehicle",
-                         comment: "Label for Picker for selecting a vehicle when adding an odometer reading")
+                         comment: "Label for Picker for selecting a vehicle")
                 }
                 
                 DatePicker(selection: $date, displayedComponents: .date) {
                     Text("Date",
-                         comment: "Label for date picker when adding an odometer reading")
+                         comment: "Date picker label")
                 }
                 .dynamicTypeSize(...DynamicTypeSize.accessibility2)
             }
@@ -83,7 +83,7 @@ struct AddOdometerReadingView: View {
                         }
                     } label: {
                         Text("Add",
-                             comment: "Label for submit button on form when adding an odometer reading")
+                             comment: "Label for submit button on form to add an entry")
                     }
                     .disabled(distance < 0)
                 }

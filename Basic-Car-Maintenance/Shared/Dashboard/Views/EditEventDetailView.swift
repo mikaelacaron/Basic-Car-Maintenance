@@ -32,7 +32,7 @@ struct EditMaintenanceEventView: View {
                         }
                     } label: {
                         Text("Select a vehicle",
-                             comment: "Maintenance event vehicle picker label")
+                             comment: "Label for Picker for selecting a vehicle")
                     }
                     .pickerStyle(.menu)
                 } header: {
