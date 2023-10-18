@@ -109,11 +109,7 @@ struct DashboardView: View {
                         Image(systemName: "line.3.horizontal.decrease.circle")
                     }
                     .accessibilityShowsLargeContentViewer {
-                        Label {
-                            Text("Filter", comment: "Lable above the filter button on the DashboardView")
-                        } icon: {
-                            Image(systemName: "line.3.horizontal.decrease.circle")
-                        }
+                        Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
 
                     }
                 }
