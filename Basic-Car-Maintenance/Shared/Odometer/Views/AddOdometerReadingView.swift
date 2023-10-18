@@ -14,13 +14,15 @@ struct AddOdometerReadingView: View {
 
     @State private var date = Date()
     @State private var selectedVehicle: Vehicle?
+    @State private var selectedVehicleId: String?
     @State private var isMetric = false
     @State private var distance = 0
     @State private var switchUnitModalIsPresented = false
     @Environment(\.dismiss) var dismiss
-    
+
     var body: some View {
         NavigationStack {
+
             Form {
                 Section {
                     VStack {
@@ -39,9 +41,9 @@ struct AddOdometerReadingView: View {
                 }
                 
                 Section {
-                    Picker(selection: $selectedVehicle) {
-                        ForEach(vehicles) { vehicle in
-                            Text(vehicle.name).tag(vehicle as Vehicle)
+                    Picker(selection: $selectedVehicleId) {
+                        ForEach(vehicles) {
+                            Text($0.name).tag($0.id)
                         }
                     } label: {
                         Text("Select a vehicle",
@@ -49,10 +51,9 @@ struct AddOdometerReadingView: View {
                     }
                     .pickerStyle(.menu)
                 } header: {
-                    Text("Vehicle",
-                         comment: "Odometer reading vehicle picker header")
+                    Text("Vehicle", comment: "Odometer Reading Vehicle Picker Label")
                 }
-                                
+                
                 DatePicker(selection: $date, displayedComponents: .date) {
                     Text("Date",
                          comment: "Date picker label")
@@ -62,6 +63,7 @@ struct AddOdometerReadingView: View {
             .onAppear {
                 if !vehicles.isEmpty {
                     selectedVehicle = vehicles[0]
+                    selectedVehicleId = vehicles[0].id
                 }
             }
             .navigationTitle(Text("Add Reading",
@@ -69,6 +71,7 @@ struct AddOdometerReadingView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
+                        selectedVehicle = vehicles.first(where: {$0.id == selectedVehicleId})
                         if let selectedVehicle {
                             let reading = OdometerReading(date: date,
                                                           distance: distance,
