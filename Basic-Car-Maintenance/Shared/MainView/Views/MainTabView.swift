@@ -16,12 +16,14 @@ enum TabSelection: Int {
 
 @MainActor
 struct MainTabView: View {
+    @Query var acknowledgedAlerts: [AcknowledgedAlert]
+    @Environment(\.modelContext) private var context
     @AppStorage("lastTabOpen") var selectedTab = TabSelection.dashboard
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @State private var isShowingRealTimeAlert = false
     @State var authenticationViewModel = AuthenticationViewModel()
-    @State var viewModel: MainTabViewModel
+    @State var viewModel = MainTabViewModel()
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -65,23 +67,24 @@ struct MainTabView: View {
             }
         }
         .onAppear {
-            viewModel.listenToAlertsUpdates()
+            viewModel.listenToAlertsUpdates(ignoring: acknowledgedAlerts.map(\.id))
         }
         .onChange(of: viewModel.alert) { _, newValue in
-            guard newValue != nil else { return }
+            guard let id = newValue?.id else { return }
+            saveNewAlert(id)
             isShowingRealTimeAlert = true
         }
     }
     
-    init(modelContext: ModelContext) {
-        let mainViewModel = MainTabViewModel(modelContext: modelContext)
-        self._viewModel = .init(initialValue: mainViewModel)
+    /// Save newly acknowledged alert to DB
+    /// - Parameter id: alert's id
+    private func saveNewAlert(_ id: String) {
+        let acknowledgedAlert = AcknowledgedAlert(id: id)
+        context.insert(acknowledgedAlert)
     }
 }
 
 #Preview {
-    @Environment(\.modelContext) var modelContext
-    
-    return MainTabView(modelContext: modelContext)
+    MainTabView()
         .environment(ActionService.shared)
 }

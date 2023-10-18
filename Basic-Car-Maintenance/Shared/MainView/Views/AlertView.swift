@@ -41,7 +41,7 @@ struct AlertView: View {
                     }
                     UIApplication.shared.open(url)
                 } label: {
-                    Text(alert.actionTxt)
+                    Text(alert.actionText)
                         .font(.title3)
                         .foregroundStyle(.black)
                         .frame(maxWidth: .infinity)
@@ -73,7 +73,7 @@ struct AlertView: View {
     AlertView(
         alert: AlertItem(
             id: nil,
-            actionTxt: "",
+            actionText: "",
             actionURL: "",
             icon: "",
             isOn: false,

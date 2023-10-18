@@ -13,21 +13,12 @@ import SwiftData
 struct BasicCarMaintenanceApp: App {
     @State private var actionService = ActionService.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    let container: ModelContainer
-    
-    init() {
-        do {
-            self.container = try ModelContainer(for: AcknowledgedAlert.self)
-        } catch {
-            fatalError("Failed to create ModelContainer for AcknowledgedAlert.")
-        }
-    }
     
     var body: some Scene {
         WindowGroup {
-            MainTabView(modelContext: container.mainContext)
+            MainTabView()
                 .environment(actionService)
-                .modelContainer(container)
+                .modelContainer(for: [AcknowledgedAlert.self])
         }
     }
 }

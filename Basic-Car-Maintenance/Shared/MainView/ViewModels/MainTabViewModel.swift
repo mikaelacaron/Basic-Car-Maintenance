@@ -12,33 +12,27 @@ import SwiftData
 
 @Observable
 class MainTabViewModel {
-    private var acknowledgedAlerts = [AcknowledgedAlert]()
     @MainActor var alert: AlertItem?
-    let modelContext: ModelContext
-    
-    init(modelContext: ModelContext) {
-        self.modelContext = modelContext
-        fetchAcknowledgedAlerts()
-    }
     
     /// Update the UI once a new alert is sent
-    func listenToAlertsUpdates() {
+    func listenToAlertsUpdates(ignoring acknowledgedAlerts: [String]) {
+        
         var query = Firestore
             .firestore()
-            .collection("alerts")
-            .whereField("isOn", isEqualTo: true)
+            .collection(FirestoreCollection.alerts)
+            .whereField(FirestoreField.isOn, isEqualTo: true)
             .limit(to: 1)
         
         if !acknowledgedAlerts.isEmpty {
             query = query
-                .whereField("_id", notIn: self.acknowledgedAlerts.map(\.id) as [String])
+                .whereField(FirestoreField.id, notIn: acknowledgedAlerts)
         }
         
-        query.addSnapshotListener {[weak self] snapShot, error in
+        query.addSnapshotListener {[weak self] snapshot, error in
             guard
                 let self,
                 error == nil,
-                let documents = snapShot?.documents
+                let documents = snapshot?.documents
             else { return }
             
             let newAlert = documents
@@ -46,38 +40,17 @@ class MainTabViewModel {
                     do {
                         return try $0.data(as: AlertItem.self)
                     } catch {
-                        print("Error decoding to AlertItem: ", error.localizedDescription)
+                        print("Error decoding to AlertItem: ", error)
                         return nil
                     }
                 }
                 .first
             
-            if let newAlert,
-               let newAlertId = newAlert.id {
+            if let newAlert {
                 Task { @MainActor in
                     self.alert = newAlert
                 }
-                saveNewAlert(id: newAlertId)
             }
         }
-    }
-    
-    /// Retrieve previously acknowledged alerts from DB
-    private func fetchAcknowledgedAlerts() {
-        let descriptor = FetchDescriptor<AcknowledgedAlert>()
-        do {
-            let acknowledgedAlerts = try modelContext.fetch(descriptor)
-            self.acknowledgedAlerts = acknowledgedAlerts
-        } catch {
-            print("Fetching AcknowledgedAlert failed: ", error.localizedDescription)
-        }
-        
-    }
-    
-    /// Save newly acknowledged alert to DB
-    /// - Parameter id: alert's id
-    private func saveNewAlert(id: String) {
-        let acknowledgedAlert = AcknowledgedAlert(id: id)
-        modelContext.insert(acknowledgedAlert)
     }
 }

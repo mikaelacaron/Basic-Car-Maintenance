@@ -11,7 +11,7 @@ import SwiftData
 
 struct AlertItem: Codable, Identifiable {
     @DocumentID var id: String?
-    var actionTxt: String
+    var actionText: String
     var actionURL: String
     var icon: String
     var isOn: Bool
@@ -20,7 +20,7 @@ struct AlertItem: Codable, Identifiable {
     
     enum CodingKeys: String, CodingKey {
         case id
-        case actionTxt = "actionTex"
+        case actionText
         case actionURL
         case icon = "emojiIcon"
         case isOn
