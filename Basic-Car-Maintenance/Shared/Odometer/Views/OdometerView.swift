@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OdometerView: View {
     @Environment(ActionService.self) var actionService
-    @Bindable private var viewModel: OdometerViewModel
+    @State private var viewModel: OdometerViewModel
 
     init(authenticationViewModel: AuthenticationViewModel) {
         viewModel = OdometerViewModel(authenticationViewModel: authenticationViewModel)
