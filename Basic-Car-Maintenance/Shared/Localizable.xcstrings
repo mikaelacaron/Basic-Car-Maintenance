@@ -96,7 +96,7 @@
       }
     },
     "Add" : {
-      "comment" : "Label for button to add data\nLable above the plus button on the DashboardView",
+      "comment" : "Label for button to add data",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
