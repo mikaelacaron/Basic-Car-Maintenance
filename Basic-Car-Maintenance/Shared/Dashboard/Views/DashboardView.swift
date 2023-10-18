@@ -19,6 +19,12 @@ struct DashboardView: View {
         viewModel = DashboardViewModel(authenticationViewModel: authenticationViewModel)
     }
     
+    var eventDateFormat: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM-dd-yy"
+        return formatter
+    }
+    
     var body: some View {
         NavigationStack {
             List {
@@ -26,14 +32,15 @@ struct DashboardView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(event.title)
                             .font(.title3)
+                            .foregroundStyle(.primary)
                         
-                        Text("For \(event.vehicle.name)")
-                        
-                        Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
+                        Text("\(event.vehicle.name) on \(eventDateFormat.string(from: event.date))")
+                            .foregroundStyle(.secondary)
                         
                         if !event.notes.isEmpty {
                             Text(event.notes)
                                 .lineLimit(0)
+                                .foregroundStyle(.secondary)
                         }
                     }
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {

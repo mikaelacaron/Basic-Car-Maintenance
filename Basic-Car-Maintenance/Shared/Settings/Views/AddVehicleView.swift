@@ -62,7 +62,11 @@ struct AddVehicleView: View {
                 }
 
                 Section {
-                    TextField("Vehicle License Plate Number", text: $licensePlateNumber, prompt: Text("Vehicle License Plate Number"))
+                    TextField(
+                        "Vehicle License Plate Number",
+                        text: $licensePlateNumber,
+                        prompt: Text("Vehicle License Plate Number")
+                    )
                 } header: {
                     Text("License Plate Number")
                 }
@@ -70,7 +74,15 @@ struct AddVehicleView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        let vehicle = Vehicle(name: name, make: make, model: model, year: year, color: color, vin: VIN, licensePlateNumber: licensePlateNumber)
+                        let vehicle = Vehicle(
+                            name: name,
+                            make: make,
+                            model: model,
+                            year: year,
+                            color: color,
+                            vin: VIN,
+                            licensePlateNumber: licensePlateNumber
+                        )
                         addTapped(vehicle)
                     } label: {
                         Text("Add")
