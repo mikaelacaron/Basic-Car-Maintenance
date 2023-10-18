@@ -41,7 +41,7 @@ struct OdometerView: View {
                     viewModel.showErrorAlert = false
                 }
             } message: {
-                Text(viewModel.errorMessage).padding()
+                Text(viewModel.errorMessage)
             }
             .navigationDestination(isPresented: $viewModel.isShowingAddOdometerReading) {
                 makeAddOdometerView()
