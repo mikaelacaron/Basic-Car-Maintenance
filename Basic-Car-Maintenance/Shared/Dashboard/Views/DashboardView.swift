@@ -91,6 +91,10 @@ struct DashboardView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
+                    .accessibilityShowsLargeContentViewer {
+                        Label("Add", systemImage: "plus")
+
+                    }
                     
                     Menu {
                         Picker(selection: $viewModel.sortOption) {
@@ -103,6 +107,10 @@ struct DashboardView: View {
                         }
                     } label: {
                         Image(systemName: "line.3.horizontal.decrease.circle")
+                    }
+                    .accessibilityShowsLargeContentViewer {
+                        Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
+
                     }
                 }
             }
