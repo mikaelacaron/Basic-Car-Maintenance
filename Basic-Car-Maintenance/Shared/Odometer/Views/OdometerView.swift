@@ -9,7 +9,6 @@ import SwiftUI
 
 struct OdometerView: View {
     @Environment(ActionService.self) var actionService
-    @Environment(\.scenePhase) var scenePhase
     @Bindable private var viewModel: OdometerViewModel
 
     init(authenticationViewModel: AuthenticationViewModel) {
