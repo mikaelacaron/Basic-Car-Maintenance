@@ -92,11 +92,7 @@ struct DashboardView: View {
                         Image(systemName: "plus")
                     }
                     .accessibilityShowsLargeContentViewer {
-                        Label {
-                            Text("Add", comment: "Lable above the plus button on the DashboardView")
-                        } icon: {
-                            Image(systemName: "plus")
-                        }
+                        Label("Add", systemImage: "plus")
 
                     }
                     
