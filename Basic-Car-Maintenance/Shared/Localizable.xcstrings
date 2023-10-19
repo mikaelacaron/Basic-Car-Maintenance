@@ -55,6 +55,12 @@
             "state" : "translated",
             "value" : "%@"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
         }
       }
     },
@@ -86,6 +92,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🦄 मिकाएला कैरोन - अभिरक्षक"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 Mikaela Caron - 유지관리자"
           }
         },
         "uk" : {
@@ -129,6 +141,12 @@
             "value" : "दर्ज करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추가"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -168,6 +186,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "रखरखाव दर्ज करें"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유지 추가"
           }
         },
         "uk" : {
@@ -211,6 +235,12 @@
             "value" : "वाहन दर्ज करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 추가"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -249,6 +279,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "अपना पहला रखरखाव दर्ज करें"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "첫번째 유지관리 추가"
           }
         },
         "uk" : {
@@ -292,6 +328,12 @@
             "value" : "अतिरिक्त टिप्पणी"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추가 노트"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -332,6 +374,12 @@
             "value" : "एक त्रुटि हुई"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "에러 발생"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -366,6 +414,12 @@
             "value" : "रद्द करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " 취소"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -387,6 +441,12 @@
             "state" : "translated",
             "value" : "एप्लिकेशन आइकन बदलें"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱아이콘 변경"
+          }
         }
       }
     },
@@ -403,6 +463,12 @@
             "state" : "translated",
             "value" : "ऐप आइकन चुनें"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱아이콘 선택"
+          }
         }
       }
     },
@@ -412,6 +478,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Farbe"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "색깔"
           }
         }
       }
@@ -449,6 +521,12 @@
             "value" : "योगदानकर्ता"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기여자들"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -470,6 +548,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "कॉपी किया गया"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "복사완료!"
           }
         }
       }
@@ -505,6 +589,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "कस्टम"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "커스텀"
           }
         },
         "uk" : {
@@ -545,6 +635,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "डैशबोर्ड"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대시보드"
           }
         },
         "uk" : {
@@ -588,6 +684,12 @@
             "value" : "तारीख"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "날짜"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -629,6 +731,12 @@
             "value" : "मिटायें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "삭제"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -649,6 +757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "खारिज"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "닫기"
           }
         }
       }
@@ -677,6 +791,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "संपादित करें"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "편집"
           }
         },
         "uk" : {
@@ -713,6 +833,12 @@
             "value" : "वाहन दर्ज करने में विफलता।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 추가 실패"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -745,6 +871,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "वाहन दर्ज करने में विफलता:%@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 세부 정보를 불러오지 못했습니다: %@"
           }
         },
         "uk" : {
@@ -788,6 +920,12 @@
             "value" : "वाहन दर्ज करने में विफलता। अज्ञात त्रुटि।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 추가에 실패했습니다. 알 수 없는 오류입니다."
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -826,6 +964,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "कार्यक्रम हटाने में विफलता"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이벤트 삭제에 실패했습니다."
           }
         },
         "uk" : {
@@ -869,6 +1013,12 @@
             "value" : "वाहन मिटाने में विफलता"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 삭제에 실패했습니다."
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -910,6 +1060,12 @@
             "value" : "वाहन की जानकारी मिटाने में विफलता:%@"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 세부 정보 삭제에 실패했습니다: %@"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -945,6 +1101,12 @@
             "value" : "वाहन मिटाने में विफलता। अज्ञात त्रुटि।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 삭제에 실패했습니다. 알 수 없는 오류입니다."
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -969,6 +1131,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Für %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대상 차량: %@"
           }
         }
       }
@@ -1006,6 +1174,12 @@
             "value" : "गिटहब रेपो"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub 저장소"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1020,6 +1194,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Autokennzeichen"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 번호판"
           }
         }
       }
@@ -1056,6 +1236,12 @@
             "value" : "गुमनाम आईडी से लॉग इन किया गया: %@"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "익명으로 로그인되었습니다. ID: %@"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1065,7 +1251,14 @@
       }
     },
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로렘 입숨(Lorem Ipsum)은 인쇄 및 조판 산업의 더미 텍스트(dummy text)로, 1500년대부터 산업의 표준 더미 텍스트로 사용되어 왔습니다. 알려지지 않은 인쇄인이 활자를 조합하여 표본 책을 만들기 위해 사용한 것이기도 합니다. 이 텍스트는 오직 다섯 세기뿐만 아니라 전자 조판으로의 진전에도 견디며 본질적으로 변하지 않았습니다. 1960년대에 Letraset 시트에 로렘 입숨 단락이 포함된 것으로 널리 알려지게 되었으며, 최근에는 Aldus PageMaker와 같은 데스크톱 퍼블리싱 소프트웨어에서도 로렘 입숨의 버전이 포함되어 사용되고 있습니다."
+          }
+        }
+      }
     },
     "Make" : {
       "localizations" : {
@@ -1097,6 +1290,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "वाहन कंपनी"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "제조사"
           }
         },
         "uk" : {
@@ -1139,6 +1338,12 @@
             "value" : "मॉडल"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모델"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1177,6 +1382,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "नाम"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량명"
           }
         },
         "uk" : {
@@ -1220,6 +1431,12 @@
             "value" : "नवीनतम से सबसे पुराना"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최신순에서 오래된 순"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1240,6 +1457,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "कोई परिणाम नहीं"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결과 없음"
           }
         }
       }
@@ -1277,6 +1500,12 @@
             "value" : "टिप्पणी"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "노트"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1299,6 +1528,12 @@
             "value" : "ओडोमीटर"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주행거리 계기"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1319,6 +1554,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ओडोमीटर जानकारी स्क्रीन, जल्द ही आ रही है"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주행거리 뷰, 곧 출시 예정입니다"
           }
         },
         "uk" : {
@@ -1362,6 +1603,12 @@
             "value" : "ठीक है"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확인"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1401,6 +1648,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "सबसे पुराने से नवीनतम"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오래된 순에서 최신순으로"
           }
         },
         "uk" : {
@@ -1447,6 +1700,12 @@
             "value" : "प्रोफ़ाइल"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로필"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1467,6 +1726,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "और पढ़ें..."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "더 보기..."
           }
         }
       }
@@ -1502,6 +1767,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "समस्या रिपोर्ट करें"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버그 신고"
           }
         },
         "uk" : {
@@ -1545,6 +1816,12 @@
             "value" : "नई सुविधा का अनुरोध करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로운 기능 요청"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1560,6 +1837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wähle ein Fahrzeug"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 선택"
           }
         }
       }
@@ -1595,6 +1878,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "सेटिंग्स"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정"
           }
         },
         "uk" : {
@@ -1637,6 +1926,12 @@
             "value" : "साइन आउट"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로그아웃"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1675,6 +1970,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ आईडी से साइन इन"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@으로 로그인되었습니다"
           }
         },
         "uk" : {
@@ -1718,6 +2019,12 @@
             "value" : "इस ऐप का उपयोग करने के लिए धन्यवाद! यह खुला स्रोत है और कोई भी इसमें योगदान दे सकता है।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 앱을 사용해 주셔서 감사합니다! 이 앱은 오픈 소스로 누구나 기여할 수 있습니다."
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1759,6 +2066,12 @@
             "value" : "घटना का शीर्षक"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이벤트 제목"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1780,6 +2093,12 @@
             "state" : "translated",
             "value" : "'%@' के लिए कोई रखरखाव कार्यक्रम नहीं थे। नई खोज का प्रयास करें।"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@에 대한 유지 보수 이벤트가 없습니다. 새로운 검색을 시도하세요."
+          }
         }
       }
     },
@@ -1796,6 +2115,12 @@
             "state" : "translated",
             "value" : "यह ऐप आइकन आपकी होम स्क्रीन पर दिखाई देगा।"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 앱 아이콘이 홈 화면에 나타납니다."
+          }
         }
       }
     },
@@ -1811,6 +2136,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "यह शीर्षक है"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이것은 제목입니다"
           }
         }
       }
@@ -1846,6 +2177,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "शीर्षक"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "제목"
           }
         },
         "uk" : {
@@ -1889,6 +2226,12 @@
             "value" : "रखरखाव कार्यक्रम का शीर्षक"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유지 보수 이벤트 제목"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1923,6 +2266,12 @@
             "value" : "अपडेट"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업데이트"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1945,6 +2294,12 @@
             "state" : "translated",
             "value" : "रखरखाव अपडेट करें"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유지 보수 업데이트"
+          }
         }
       }
     },
@@ -1956,6 +2311,12 @@
             "state" : "translated",
             "value" : "Fahrzeug"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량"
+          }
         }
       }
     },
@@ -1966,6 +2327,12 @@
             "state" : "translated",
             "value" : "Fahrzeugfarbe"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 색상"
+          }
         }
       }
     },
@@ -1975,6 +2342,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fahrzeug Kennzeichen"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 번호판 번호"
           }
         }
       }
@@ -2009,6 +2382,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "वाहन कंपनी"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 제조사"
           }
         },
         "uk" : {
@@ -2051,6 +2430,12 @@
             "value" : "वाहन मॉडल"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 모델"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2091,6 +2476,12 @@
             "value" : "वाहन का नाम"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 이름"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2106,6 +2497,12 @@
             "state" : "translated",
             "value" : "Fahrgestellnummer"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 VIN"
+          }
         }
       }
     },
@@ -2115,6 +2512,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Baujahr"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 연도"
           }
         }
       }
@@ -2150,6 +2553,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "वाहन"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량"
           }
         },
         "uk" : {
@@ -2199,6 +2608,12 @@
             "state" : "translated",
             "value" : "वरजन %@ (%@)"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버전 %@ (%@)"
+          }
         }
       }
     },
@@ -2209,6 +2624,12 @@
             "state" : "translated",
             "value" : "Fahrgestellnummer"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VIN"
+          }
         }
       }
     },
@@ -2218,6 +2639,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Baujahr"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연도"
           }
         }
       }
