@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -1662,6 +1663,9 @@
         }
       }
     },
+    "Privacy Policy" : {
+
+    },
     "Profile" : {
       "comment" : "Link to view profile.",
       "localizations" : {
@@ -2566,6 +2570,7 @@
     },
     "Version %@ (%@)" : {
       "comment" : "Label to display version and build number.",
+      "extractionState" : "stale",
       "localizations" : {
         "be" : {
           "stringUnit" : {
