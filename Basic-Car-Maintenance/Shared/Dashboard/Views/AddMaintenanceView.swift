@@ -5,6 +5,7 @@
 //  Created by Mikaela Caron on 8/19/23.
 //
 
+import FirebaseAnalyticsSwift
 import SwiftUI
 
 struct AddMaintenanceView: View {
@@ -67,6 +68,7 @@ struct AddMaintenanceView: View {
                          comment: "Notes text field header")
                 }
             }
+            .analyticsScreen(name: "\(Self.self)")
             .onAppear {
                 if !vehicles.isEmpty {
                     selectedVehicle = vehicles[0]
