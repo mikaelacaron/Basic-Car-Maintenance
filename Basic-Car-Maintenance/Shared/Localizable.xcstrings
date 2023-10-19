@@ -1664,7 +1664,14 @@
       }
     },
     "Privacy Policy" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Палітыка прыватнасці"
+          }
+        }
+      }
     },
     "Profile" : {
       "comment" : "Link to view profile.",
