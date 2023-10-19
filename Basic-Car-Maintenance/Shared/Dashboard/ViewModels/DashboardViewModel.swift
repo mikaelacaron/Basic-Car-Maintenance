@@ -12,6 +12,7 @@ import Foundation
 enum LoadingState: String {
     case isLoading
     case loaded
+    case error
 }
 
 @Observable
@@ -22,6 +23,7 @@ class DashboardViewModel {
     var events = [MaintenanceEvent]()
     var showAddErrorAlert = false
     var showErrorAlert = false
+    var showFailedLoadErrorAlert = false
     var isShowingAddMaintenanceEvent = false
     var errorMessage: String = ""
     var sortOption: SortOption = .custom
@@ -91,6 +93,10 @@ class DashboardViewModel {
                 }
                 self.events = events
                 self.loadingState = .loaded
+            } else {
+                showFailedLoadErrorAlert.toggle()
+                errorMessage = "Please try again"
+                loadingState = .error
             }
         }
     }

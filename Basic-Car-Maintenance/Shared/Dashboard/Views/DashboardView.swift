@@ -40,12 +40,14 @@ struct DashboardView: View {
                             }
                         }
                     }
+                case .error:
+                    maintenanceListView
                 }
             }
             .navigationTitle(Text("Dashboard"))
-            .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert) {
+            .alert("Failed To Load Events", isPresented: $viewModel.showFailedLoadErrorAlert) {
                 Button("OK") {
-                    viewModel.showErrorAlert = false
+                    viewModel.showFailedLoadErrorAlert = false
                 }
             } message: {
                 Text(viewModel.errorMessage).padding()
