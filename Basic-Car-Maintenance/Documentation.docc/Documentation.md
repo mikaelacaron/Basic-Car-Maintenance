@@ -17,4 +17,4 @@ Icons have the following colors:
 * Black #000000
 * Orange #F78616
 
-[Firestore Details](FireStoreDetails.md)
+[Firestore Details](FirestoreDetails.md)
