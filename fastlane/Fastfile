@@ -27,6 +27,7 @@ platform :ios do
 
 		xcov(
 			scheme: "Basic-Car-Maintenance",
+			only_project_targets: true,
 			output_directory: "./fastlane/CodeCoverageReport"
   		)
 	end
