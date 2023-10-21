@@ -5,6 +5,7 @@
 //  Created by Aaron Wilson on 10/5/23.
 //
 
+import FirebaseAnalyticsSwift
 import SwiftUI
 
 struct EditMaintenanceEventView: View {
@@ -50,6 +51,7 @@ struct EditMaintenanceEventView: View {
                     Text("Notes")
                 }
             }
+            .analyticsScreen(name: "\(Self.self)")
             .onAppear {
                 guard let selectedEvent = selectedEvent else { return }
                 setMaintenanceEventValues(event: selectedEvent)
