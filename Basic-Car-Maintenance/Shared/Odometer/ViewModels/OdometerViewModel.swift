@@ -24,27 +24,15 @@ class OdometerViewModel {
         self.authenticationViewModel = authenticationViewModel
     }
     
-    func addReading(_ odometerReading: OdometerReading) {
+    func addReading(_ odometerReading: OdometerReading) throws {
         if let uid = authenticationViewModel.user?.uid {
             var readingToAdd = odometerReading
             readingToAdd.userID = uid
             
-            do {
-                let documentReference = try Firestore
-                    .firestore()
-                    .collection("odometer_readings")
-                    .addDocument(from: readingToAdd)
-                
-                var reading = odometerReading
-                
-                readings.append(reading)
-                
-                errorMessage = ""
-                isShowingAddOdometerReading = false
-            } catch {
-                showAddErrorAlert.toggle()
-                errorMessage = error.localizedDescription
-            }
+            _ = try Firestore
+                .firestore()
+                .collection("odometer_readings")
+                .addDocument(from: readingToAdd)
         }
     }
     
@@ -72,7 +60,8 @@ class OdometerViewModel {
     func getVehicles() async {
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
-            let docRef = db.collection(FirestoreCollection.vehicles).whereField(FirestoreField.userID, isEqualTo: uid)
+            let docRef = db.collection(FirestoreCollection.vehicles)
+                .whereField(FirestoreField.userID, isEqualTo: uid)
             
             let querySnapshot = try? await docRef.getDocuments()
             

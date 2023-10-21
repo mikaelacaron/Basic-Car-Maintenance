@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OdometerView: View {
     @Environment(ActionService.self) var actionService
+    
     @State private var viewModel: OdometerViewModel
 
     init(authenticationViewModel: AuthenticationViewModel) {
@@ -58,13 +59,19 @@ struct OdometerView: View {
     
     private func makeAddOdometerView() -> some View {
         AddOdometerReadingView(vehicles: viewModel.vehicles) { reading in
-            viewModel.addReading(reading)
-            Task {
-                await viewModel.getOdometerReadings()
+            do {
+                try viewModel.addReading(reading)
+                viewModel.isShowingAddOdometerReading = false
+                Task {
+                    await viewModel.getOdometerReadings()
+                }
+            } catch {
+                viewModel.errorMessage = error.localizedDescription
+                viewModel.showAddErrorAlert = true
             }
         }
         .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
-            Button("OK", role: .cancel) {}
+            Button("OK", role: .cancel) { }
         } message: {
             Text(viewModel.errorMessage)
         }

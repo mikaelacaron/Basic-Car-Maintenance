@@ -75,7 +75,6 @@ struct AddOdometerReadingView: View {
                                                           isMetric: isMetric,
                                                           vehicle: selectedVehicle)
                             addTapped(reading)
-                            dismiss()
                         }
                     } label: {
                         Text("Add",
