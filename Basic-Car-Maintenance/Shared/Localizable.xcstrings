@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -25,6 +26,12 @@
     },
     "%@" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -54,6 +61,12 @@
             "state" : "translated",
             "value" : "%@"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
         }
       }
     },
@@ -73,6 +86,12 @@
     "🦄 Mikaela Caron - Maintainer" : {
       "comment" : "Link to maintainer Github account.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 Mikaela Caron - Суправаджальніца"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -97,6 +116,12 @@
             "value" : "🦄 मिकाएला कैरोन - अभिरक्षक"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 Mikaela Caron - 유지관리자"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -108,6 +133,12 @@
     "Add" : {
       "comment" : "Label for submit button on form to add an entry",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дадаць"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -138,6 +169,12 @@
             "value" : "दर्ज करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추가"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -149,6 +186,12 @@
     "Add Maintenance" : {
       "comment" : "Nagivation title for Add Maintenance view",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дадаць абслугоўванне"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -179,6 +222,12 @@
             "value" : "रखरखाव दर्ज करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유지 추가"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -193,6 +242,12 @@
     "Add Vehicle" : {
       "comment" : "Label to add a vehicle.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дадаць транспартны сродак"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -223,6 +278,12 @@
             "value" : "वाहन दर्ज करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 추가"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -233,6 +294,12 @@
     },
     "Add your first maintenance" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дадайце першае абслугоўванне"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -263,6 +330,12 @@
             "value" : "अपना पहला रखरखाव दर्ज करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "첫번째 유지관리 추가"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -277,6 +350,12 @@
     "Additional Notes" : {
       "comment" : "Notes text field placeholder",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дадатковая інфармацыя"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -307,6 +386,12 @@
             "value" : "अतिरिक्त टिप्पणी"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추가 노트"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -317,6 +402,12 @@
     },
     "An Error Occurred" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адбылася памылка"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -347,6 +438,12 @@
             "value" : "एक त्रुटि हुई"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "에러 발생"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -357,6 +454,12 @@
     },
     "Cancel" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адмяніць"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -381,6 +484,12 @@
             "value" : "रद्द करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " 취소"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -391,30 +500,91 @@
     },
     "Change App Icon" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Змяніць значок дадатка"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Icon wechseln"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "एप्लिकेशन आइकन बदलें"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱아이콘 변경"
           }
         }
       }
     },
     "Choose App Icon" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберыце значок дадатка"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle ein App Icon"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "ऐप आइकन चुनें"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱아이콘 선택"
+          }
         }
       }
     },
     "Color" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Колер"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Farbe"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "색깔"
+          }
+        }
+      }
     },
     "Contributors" : {
       "comment" : "Link to contributors list.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удзельнікі"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -445,6 +615,12 @@
             "value" : "योगदानकर्ता"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기여자들"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -456,10 +632,28 @@
     "Copied!" : {
       "comment" : "Text to notify user that app version was copied",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скапіравана!"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopiert!"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "कॉपी किया गया"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "복사완료!"
           }
         }
       }
@@ -467,6 +661,12 @@
     "Custom" : {
       "comment" : "Sorting option that sorts items according to the user's preferences.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вольны парадак"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -497,6 +697,12 @@
             "value" : "कस्टम"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "커스텀"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -507,6 +713,12 @@
     },
     "Dashboard" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дэшборд"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -537,6 +749,12 @@
             "value" : "डैशबोर्ड"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대시보드"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -548,6 +766,12 @@
     "Date" : {
       "comment" : "Date picker label",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дата"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -578,6 +802,12 @@
             "value" : "तारीख"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "날짜"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -589,6 +819,12 @@
     "Delete" : {
       "comment" : "Label to delete a vehicle",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выдаліць"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -619,6 +855,12 @@
             "value" : "मिटायें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "삭제"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -629,10 +871,28 @@
     },
     "Dismiss" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адхіліць"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwerfen"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "खारिज"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "닫기"
           }
         }
       }
@@ -642,6 +902,12 @@
     },
     "Edit" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рэдагаваць"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -666,6 +932,12 @@
             "value" : "संपादित करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "편집"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -676,6 +948,12 @@
     },
     "Failed To Add Vehicle" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не атрымалася дадаць транспартны сродак"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -700,6 +978,12 @@
             "value" : "वाहन दर्ज करने में विफलता।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 추가 실패"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -710,6 +994,12 @@
     },
     "Failed To Add Vehicle\nDetails:%@" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не атрымалася дадаць транспартны сродак\nПадрабязнасці:%@"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -734,6 +1024,12 @@
             "value" : "वाहन दर्ज करने में विफलता:%@"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 세부 정보를 불러오지 못했습니다: %@"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -745,6 +1041,12 @@
     "Failed To Add Vehicle. Unknown Error." : {
       "comment" : "Label to display error details.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не атрымалася дадаць транспартны сродак. Невядомая памылка."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -775,6 +1077,12 @@
             "value" : "वाहन दर्ज करने में विफलता। अज्ञात त्रुटि।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 추가에 실패했습니다. 알 수 없는 오류입니다."
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -785,6 +1093,12 @@
     },
     "Failed To Delete Event" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не ўдалося выдаліць падзею"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -815,6 +1129,12 @@
             "value" : "कार्यक्रम हटाने में विफलता"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이벤트 삭제에 실패했습니다."
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -826,6 +1146,12 @@
     "Failed To Delete Vehicle" : {
       "comment" : "Label to dsplay title of the delete vehicle alert",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не ўдалося выдаліць транспартны сродак"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -856,6 +1182,12 @@
             "value" : "वाहन मिटाने में विफलता"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 삭제에 실패했습니다."
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -867,6 +1199,12 @@
     "Failed To Delete Vehicle\nDetails:%@" : {
       "comment" : "Label to display localized error description.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не ўдалося выдаліць транспартны сродак Падрабязнасці:%@"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -897,6 +1235,12 @@
             "value" : "वाहन की जानकारी मिटाने में विफलता:%@"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 세부 정보 삭제에 실패했습니다: %@"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -908,6 +1252,12 @@
     "Failed To Delete Vehicle. Unknown Error." : {
       "comment" : "Label to display error details.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не ўдалося выдаліць аўтамабіль. Невядомая памылка."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -932,6 +1282,12 @@
             "value" : "वाहन मिटाने में विफलता। अज्ञात त्रुटि।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 삭제에 실패했습니다. 알 수 없는 오류입니다."
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -941,14 +1297,52 @@
       }
     },
     "Filter" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фільтр"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filter"
+          }
+        }
+      }
     },
     "For %@" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "대상 차량: %@"
+          }
+        }
+      }
     },
     "GitHub Repo" : {
       "comment" : "Link to the Basic Car Maintenance GitHub repo.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рэпазітар на GitHub"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -979,6 +1373,12 @@
             "value" : "गिटहब रेपो"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub 저장소"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -991,10 +1391,35 @@
 
     },
     "License Plate Number" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нумарны знак"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autokennzeichen"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 번호판"
+          }
+        }
+      }
     },
     "Logged in anonymously with ID: %@" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ананімны ўваход з ідэнтыфікатарам: %@"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1025,6 +1450,12 @@
             "value" : "गुमनाम आईडी से लॉग इन किया गया: %@"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "익명으로 로그인되었습니다. ID: %@"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1034,10 +1465,23 @@
       }
     },
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로렘 입숨(Lorem Ipsum)은 인쇄 및 조판 산업의 더미 텍스트(dummy text)로, 1500년대부터 산업의 표준 더미 텍스트로 사용되어 왔습니다. 알려지지 않은 인쇄인이 활자를 조합하여 표본 책을 만들기 위해 사용한 것이기도 합니다. 이 텍스트는 오직 다섯 세기뿐만 아니라 전자 조판으로의 진전에도 견디며 본질적으로 변하지 않았습니다. 1960년대에 Letraset 시트에 로렘 입숨 단락이 포함된 것으로 널리 알려지게 되었으며, 최근에는 Aldus PageMaker와 같은 데스크톱 퍼블리싱 소프트웨어에서도 로렘 입숨의 버전이 포함되어 사용되고 있습니다."
+          }
+        }
+      }
     },
     "Make" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вытворца"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1068,6 +1512,12 @@
             "value" : "वाहन कंपनी"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "제조사"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1081,6 +1531,12 @@
     },
     "Model" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мадэль"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1111,6 +1567,12 @@
             "value" : "मॉडल"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모델"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1121,6 +1583,12 @@
     },
     "Name" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Імя"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1151,6 +1619,12 @@
             "value" : "नाम"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량명"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1162,6 +1636,12 @@
     "Newest to Oldest" : {
       "comment" : "Sorting option that displays newer items first.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ад найноўшых да самых старых"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1192,6 +1672,12 @@
             "value" : "नवीनतम से सबसे पुराना"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최신순에서 오래된 순"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1202,10 +1688,28 @@
     },
     "No results" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вынікаў няма"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kein Ergebnis"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "कोई परिणाम नहीं"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결과 없음"
           }
         }
       }
@@ -1213,6 +1717,12 @@
     "Notes" : {
       "comment" : "Maintenance event notes text field label",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нататкі"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1243,6 +1753,12 @@
             "value" : "टिप्पणी"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "노트"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1253,10 +1769,28 @@
     },
     "Odometer" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адометр"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kilometerzähler"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "ओडोमीटर"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주행거리 계기"
           }
         },
         "uk" : {
@@ -1270,10 +1804,28 @@
     "OdometerView, coming soon" : {
       "extractionState" : "stale",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адометр, хутка будзе"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kilometerzähler ist bald verfügbar"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "ओडोमीटर जानकारी स्क्रीन, जल्द ही आ रही है"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주행거리 뷰, 곧 출시 예정입니다"
           }
         },
         "uk" : {
@@ -1287,6 +1839,12 @@
     "OK" : {
       "comment" : "Label to dismiss alert",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добра"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1317,6 +1875,12 @@
             "value" : "ठीक है"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확인"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1328,6 +1892,12 @@
     "Oldest to Newest" : {
       "comment" : "Sorting option that displays older items first.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ад самых старых да новых"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1358,6 +1928,12 @@
             "value" : "सबसे पुराने से नवीनतम"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오래된 순에서 최신순으로"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1369,9 +1945,25 @@
     "Preferred units" : {
       "comment" : "Label for units selected when adding an odometer reading"
     },
+    "Privacy Policy" : {
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Палітыка прыватнасці"
+          }
+        }
+      }
+    },
     "Profile" : {
       "comment" : "Link to view profile.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профіль"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1402,6 +1994,12 @@
             "value" : "प्रोफ़ाइल"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프로필"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1412,10 +2010,28 @@
     },
     "Read More..." : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Больш падрабязна..."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mehr lesen..."
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "और पढ़ें..."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "더 보기..."
           }
         }
       }
@@ -1423,6 +2039,12 @@
     "Report a Bug" : {
       "comment" : "Link to report a bug",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Паведаміць пра памылку"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1453,6 +2075,12 @@
             "value" : "समस्या रिपोर्ट करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버그 신고"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1464,6 +2092,12 @@
     "Request a New Feature" : {
       "comment" : "Link to request a new feature.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запытаць новую функцыю"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1494,6 +2128,12 @@
             "value" : "नई सुविधा का अनुरोध करें"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로운 기능 요청"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1503,11 +2143,37 @@
       }
     },
     "Select a vehicle" : {
-      "comment" : "Picker for selecting a vehicle"
+      "comment" : "Picker for selecting a vehicle",
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберыце транспартны сродак"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle ein Fahrzeug"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 선택"
+          }
+        }
+      }
     },
     "Settings" : {
       "comment" : "Label to display settings.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Налады"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1538,6 +2204,12 @@
             "value" : "सेटिंग्स"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1548,6 +2220,12 @@
     },
     "Sign Out" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выйсці"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1578,6 +2256,12 @@
             "value" : "साइन आउट"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로그아웃"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1588,6 +2272,12 @@
     },
     "Signed in as %@" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Увайсці як %@"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1618,6 +2308,12 @@
             "value" : "%@ आईडी से साइन इन"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@으로 로그인되었습니다"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1629,6 +2325,12 @@
     "Thanks for using this app! It's open source and anyone can contribute to it." : {
       "comment" : "Thanks a user for using the app and tells the user they can contribute to the codebase",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дзякуй, што карыстаецеся гэтым дадаткам! Ëн з адкрытым зыходным кодам, і кожны можа ўнесці свой уклад у яго."
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1659,6 +2361,12 @@
             "value" : "इस ऐप का उपयोग करने के लिए धन्यवाद! यह खुला स्रोत है और कोई भी इसमें योगदान दे सकता है।"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 앱을 사용해 주셔서 감사합니다! 이 앱은 오픈 소스로 누구나 기여할 수 있습니다."
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1670,6 +2378,12 @@
     "The title of the event" : {
       "comment" : "Maintenance event title text field label placeholder",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва падзеі"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1700,6 +2414,12 @@
             "value" : "घटना का शीर्षक"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이벤트 제목"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1710,30 +2430,84 @@
     },
     "There were no maintenance events for '%@'. Try a new search." : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не было тэхнічнага абслугоўвання для «%@». Паспрабуйце новы пошук."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es gibt keine Wartung für '%@'. Versuche eine neue Suche"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "'%@' के लिए कोई रखरखाव कार्यक्रम नहीं थे। नई खोज का प्रयास करें।"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@에 대한 유지 보수 이벤트가 없습니다. 새로운 검색을 시도하세요."
           }
         }
       }
     },
     "This App Icon will appear on your Home Screen." : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Значок дадатка, які з'явіцца на вашым галоўным экране."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das App Icon wird auf deinem Home Screen erscheinen"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "यह ऐप आइकन आपकी होम स्क्रीन पर दिखाई देगा।"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 앱 아이콘이 홈 화면에 나타납니다."
           }
         }
       }
     },
     "This is the title" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Гэта назва"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das ist der Titel"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "यह शीर्षक है"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이것은 제목입니다"
           }
         }
       }
@@ -1741,6 +2515,12 @@
     "Title" : {
       "comment" : "Maintenance event title text field header",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1771,6 +2551,12 @@
             "value" : "शीर्षक"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "제목"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1782,6 +2568,12 @@
     "Title of the maintenance event" : {
       "comment" : "Maintenance event title text field label",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва мерапрыемства па тэхнічным абслугоўванні"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1812,6 +2604,12 @@
             "value" : "रखरखाव कार्यक्रम का शीर्षक"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유지 보수 이벤트 제목"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1822,6 +2620,12 @@
     },
     "Update" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Абнавіць"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1846,6 +2650,12 @@
             "value" : "अपडेट"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업데이트"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1857,25 +2667,107 @@
     "Update Maintenance" : {
       "extractionState" : "manual",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Абнаўленне тэхнічнага абслугоўвання"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wartung aktualisieren"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "रखरखाव अपडेट करें"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유지 보수 업데이트"
+          }
         }
       }
     },
     "Vehicle" : {
-      "comment" : "Maintenance event vehicle picker header"
+      "comment" : "Maintenance event vehicle picker header",
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Транспартны сродак"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량"
+          }
+        }
+      }
     },
     "Vehicle Color" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Колер транспартнага сродку"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeugfarbe"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 색상"
+          }
+        }
+      }
     },
     "Vehicle License Plate Number" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нумар транспартнага сродку"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug Kennzeichen"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 번호판 번호"
+          }
+        }
+      }
     },
     "Vehicle Make" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вытворца транспартнага сродку"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1906,6 +2798,12 @@
             "value" : "वाहन कंपनी"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 제조사"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1916,6 +2814,12 @@
     },
     "Vehicle Model" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мадэль транспартнага сродку"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1946,6 +2850,12 @@
             "value" : "वाहन मॉडल"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 모델"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1956,6 +2866,12 @@
     },
     "Vehicle Name" : {
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва транспартнага сродку"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1986,6 +2902,12 @@
             "value" : "वाहन का नाम"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 이름"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1995,14 +2917,58 @@
       }
     },
     "Vehicle VIN" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ідэнтыфікатар транспартнага сродку"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrgestellnummer"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 VIN"
+          }
+        }
+      }
     },
     "Vehicle Year" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Год транспартнага сродку"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baujahr"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량 연도"
+          }
+        }
+      }
     },
     "Vehicles" : {
       "comment" : "Label to display header title.",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Транспартныя сродкі"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2033,6 +2999,12 @@
             "value" : "वाहन"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차량"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2054,7 +3026,14 @@
     },
     "Version %@ (%@)" : {
       "comment" : "Label to display version and build number.",
+      "extractionState" : "stale",
       "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версія %@ (%@)"
+          }
+        },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2090,14 +3069,58 @@
             "state" : "translated",
             "value" : "वरजन %@ (%@)"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버전 %@ (%@)"
+          }
         }
       }
     },
     "VIN" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ІТС"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrgestellnummer"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VIN"
+          }
+        }
+      }
     },
     "Year" : {
-
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Год"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baujahr"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연도"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
