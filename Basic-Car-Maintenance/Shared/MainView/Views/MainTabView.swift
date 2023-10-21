@@ -29,7 +29,7 @@ struct MainTabView: View {
                     Label("Dashboard", systemImage: "list.dash.header.rectangle")
                 }
             
-            OdometerView()
+            OdometerView(authenticationViewModel: authenticationViewModel)
                 .tag(TabSelection.odometer)
                 .tabItem {
                     Label("Odometer", systemImage: "gauge")
@@ -45,7 +45,6 @@ struct MainTabView: View {
             AlertView()
                 .presentationDetents([.medium])
         }
-        // TODO: To be deleted
         .onTapGesture(count: 2) {
             isShowingRealTimeAlert = true
         }

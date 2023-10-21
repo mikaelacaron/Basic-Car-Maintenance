@@ -5,6 +5,7 @@
 //  Created by Mikaela Caron on 8/19/23.
 //
 
+import FirebaseAnalyticsSwift
 import SwiftUI
 
 struct AddMaintenanceView: View {
@@ -40,7 +41,7 @@ struct AddMaintenanceView: View {
                         }
                     } label: {
                         Text("Select a vehicle",
-                             comment: "Maintenance event vehicle picker label")
+                             comment: "Picker for selecting a vehicle")
                     }
                     .pickerStyle(.menu)
                 } header: {
@@ -67,6 +68,7 @@ struct AddMaintenanceView: View {
                          comment: "Notes text field header")
                 }
             }
+            .analyticsScreen(name: "\(Self.self)")
             .onAppear {
                 if !vehicles.isEmpty {
                     selectedVehicle = vehicles[0]
@@ -88,7 +90,7 @@ struct AddMaintenanceView: View {
                         }
                     } label: {
                         Text("Add",
-                             comment: "Label for button to add data")
+                             comment: "Label for submit button on form to add an entry")
                     }
                     .disabled(title.isEmpty)
                 }

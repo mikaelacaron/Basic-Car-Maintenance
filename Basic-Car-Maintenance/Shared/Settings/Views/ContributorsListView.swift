@@ -5,6 +5,7 @@
 //  Created by Yashraj jadhav on 01/10/23.
 //
 
+import FirebaseAnalyticsSwift
 import SwiftUI
 
 struct ContributorsListView: View {
@@ -24,6 +25,7 @@ struct ContributorsListView: View {
                 ProgressView()
             }
         }
+        .analyticsScreen(name: "\(Self.self)")
         .task {
             Task {
                 await viewModel.getContributors()
