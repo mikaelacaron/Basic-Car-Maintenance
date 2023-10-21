@@ -70,6 +70,16 @@
         }
       }
     },
+    "%lld %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld %2$@"
+          }
+        }
+      }
+    },
     "🤠" : {
 
     },
@@ -121,7 +131,7 @@
       }
     },
     "Add" : {
-      "comment" : "Label for button to add data",
+      "comment" : "Label for submit button on form to add an entry",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -225,6 +235,9 @@
           }
         }
       }
+    },
+    "Add Reading" : {
+      "comment" : "Title for form when adding an odometer reading"
     },
     "Add Vehicle" : {
       "comment" : "Label to add a vehicle.",
@@ -330,6 +343,9 @@
           }
         }
       }
+    },
+    "Add your first odometer" : {
+      "comment" : "Placeholder text for empty odometer reading list"
     },
     "Additional Notes" : {
       "comment" : "Notes text field placeholder",
@@ -881,6 +897,9 @@
         }
       }
     },
+    "Distance" : {
+
+    },
     "Edit" : {
       "localizations" : {
         "be" : {
@@ -1368,6 +1387,9 @@
         }
       }
     },
+    "Kilometers" : {
+
+    },
     "License Plate Number" : {
       "localizations" : {
         "be" : {
@@ -1503,6 +1525,9 @@
           }
         }
       }
+    },
+    "Miles" : {
+
     },
     "Model" : {
       "localizations" : {
@@ -1777,6 +1802,7 @@
       }
     },
     "OdometerView, coming soon" : {
+      "extractionState" : "stale",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -1915,6 +1941,9 @@
           }
         }
       }
+    },
+    "Preferred units" : {
+      "comment" : "Label for units selected when adding an odometer reading"
     },
     "Privacy Policy" : {
       "localizations" : {
@@ -2114,7 +2143,7 @@
       }
     },
     "Select a vehicle" : {
-      "comment" : "Maintenance event vehicle picker label",
+      "comment" : "Picker for selecting a vehicle",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -2980,6 +3009,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Автомобілі"
+          }
+        }
+      }
+    },
+    "VehicleSectionHeader" : {
+      "comment" : "Label for Picker for selecting a vehicle",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vehicle"
           }
         }
       }

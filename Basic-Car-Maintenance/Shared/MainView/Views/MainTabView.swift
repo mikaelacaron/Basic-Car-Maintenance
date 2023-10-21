@@ -29,7 +29,7 @@ struct MainTabView: View {
                     Label("Dashboard", systemImage: "list.dash.header.rectangle")
                 }
             
-            OdometerView()
+            OdometerView(authenticationViewModel: authenticationViewModel)
                 .tag(TabSelection.odometer)
                 .tabItem {
                     Label("Odometer", systemImage: "gauge")

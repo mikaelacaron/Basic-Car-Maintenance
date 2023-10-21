@@ -40,7 +40,7 @@ struct AddMaintenanceView: View {
                         }
                     } label: {
                         Text("Select a vehicle",
-                             comment: "Maintenance event vehicle picker label")
+                             comment: "Picker for selecting a vehicle")
                     }
                     .pickerStyle(.menu)
                 } header: {
@@ -88,7 +88,7 @@ struct AddMaintenanceView: View {
                         }
                     } label: {
                         Text("Add",
-                             comment: "Label for button to add data")
+                             comment: "Label for submit button on form to add an entry")
                     }
                     .disabled(title.isEmpty)
                 }
