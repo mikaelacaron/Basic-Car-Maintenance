@@ -823,9 +823,6 @@
         }
       }
     },
-    "Failed To Delete Reading" : {
-
-    },
     "Failed To Delete Vehicle" : {
       "comment" : "Label to dsplay title of the delete vehicle alert",
       "localizations" : {
@@ -1506,7 +1503,7 @@
       }
     },
     "Select a vehicle" : {
-      "comment" : "Picker for selecting a vehicle\nLabel for Picker for selecting a vehicle"
+      "comment" : "Picker for selecting a vehicle"
     },
     "Settings" : {
       "comment" : "Label to display settings.",
@@ -1869,7 +1866,7 @@
       }
     },
     "Vehicle" : {
-      "comment" : "Label for Picker for selecting a vehicle\nMaintenance event vehicle picker header"
+      "comment" : "Maintenance event vehicle picker header"
     },
     "Vehicle Color" : {
 
@@ -2040,6 +2037,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Автомобілі"
+          }
+        }
+      }
+    },
+    "VehicleSectionHeader" : {
+      "comment" : "Label for Picker for selecting a vehicle",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vehicle"
           }
         }
       }

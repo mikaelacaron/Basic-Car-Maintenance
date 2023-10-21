@@ -11,39 +11,37 @@ struct AddOdometerReadingView: View {
     
     let vehicles: [Vehicle]
     let addTapped: (OdometerReading) -> Void
-
+    
+    @Environment(\.dismiss) var dismiss
+    
     @State private var date = Date()
-    @State private var selectedVehicle: Vehicle?
-    @State private var selectedVehicleId: String?
+    @State private var selectedVehicleID: String?
     @State private var isMetric = false
     @State private var distance = 0
-    @State private var switchUnitModalIsPresented = false
-    @Environment(\.dismiss) var dismiss
-
+    
     var body: some View {
         NavigationStack {
-
             Form {
                 Section {
-                    VStack {
-                        HStack {
-                            TextField("Distance", value: $distance, format: .number)
-                            Picker(selection: $isMetric) {
-                                Text("Miles").tag(false)
-                                Text("Kilometers").tag(true)
-                            } label: {
-                                Text("Preferred units",
-                                     comment: "Label for units selected when adding an odometer reading")
-                            }
-                            .pickerStyle(.segmented)
+                    HStack {
+                        TextField("Distance", value: $distance, format: .number)
+                        
+                        Picker(selection: $isMetric) {
+                            Text("Miles").tag(false)
+                            Text("Kilometers").tag(true)
+                        } label: {
+                            Text("Preferred units",
+                                 comment: "Label for units selected when adding an odometer reading")
                         }
+                        .pickerStyle(.segmented)
                     }
                 }
                 
                 Section {
-                    Picker(selection: $selectedVehicleId) {
-                        ForEach(vehicles) {
-                            Text($0.name).tag($0.id)
+                    Picker(selection: $selectedVehicleID) {
+                        ForEach(vehicles) { vehicle in
+                            Text(vehicle.name)
+                                .tag(vehicle.id)
                         }
                     } label: {
                         Text("Select a vehicle",
@@ -51,20 +49,18 @@ struct AddOdometerReadingView: View {
                     }
                     .pickerStyle(.menu)
                 } header: {
-                    Text("Vehicle",
+                    Text("VehicleSectionHeader",
                          comment: "Label for Picker for selecting a vehicle")
                 }
                 
                 DatePicker(selection: $date, displayedComponents: .date) {
-                    Text("Date",
-                         comment: "Date picker label")
+                    Text("Date", comment: "Date picker label")
                 }
                 .dynamicTypeSize(...DynamicTypeSize.accessibility2)
             }
             .onAppear {
                 if !vehicles.isEmpty {
-                    selectedVehicle = vehicles[0]
-                    selectedVehicleId = vehicles[0].id
+                    selectedVehicleID = vehicles[0].id
                 }
             }
             .navigationTitle(Text("Add Reading",
@@ -72,7 +68,7 @@ struct AddOdometerReadingView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        selectedVehicle = vehicles.first(where: {$0.id == selectedVehicleId})
+                        let selectedVehicle = vehicles.first { $0.id == selectedVehicleID }
                         if let selectedVehicle {
                             let reading = OdometerReading(date: date,
                                                           distance: distance,

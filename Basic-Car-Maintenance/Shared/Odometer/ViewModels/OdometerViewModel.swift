@@ -5,9 +5,9 @@
 //  Created by Nate Schaffner on 10/15/23.
 //
 
-import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import Foundation
 
 @Observable
 class OdometerViewModel {
@@ -16,9 +16,7 @@ class OdometerViewModel {
     
     var readings = [OdometerReading]()
     var showAddErrorAlert = false
-    var showErrorAlert = false
     var isShowingAddOdometerReading = false
-    var isShowingAddView = false
     var errorMessage: String = ""
     var vehicles = [Vehicle]()
 
@@ -54,7 +52,7 @@ class OdometerViewModel {
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
             let docRef = db.collection(FirestoreCollection.odometerReadings)
-                .whereField("userID", isEqualTo: uid)
+                .whereField(FirestoreField.userID, isEqualTo: uid)
             
             let querySnapshot = try? await docRef.getDocuments()
             
@@ -74,7 +72,7 @@ class OdometerViewModel {
     func getVehicles() async {
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
-            let docRef = db.collection("vehicles").whereField("userID", isEqualTo: uid)
+            let docRef = db.collection(FirestoreCollection.vehicles).whereField(FirestoreField.userID, isEqualTo: uid)
             
             let querySnapshot = try? await docRef.getDocuments()
             

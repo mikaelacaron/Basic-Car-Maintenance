@@ -37,13 +37,6 @@ struct OdometerView: View {
                 }
             }
             .navigationTitle(Text("Odometer"))
-            .alert("Failed To Delete Reading", isPresented: $viewModel.showErrorAlert) {
-                Button("OK") {
-                    viewModel.showErrorAlert = false
-                }
-            } message: {
-                Text(viewModel.errorMessage)
-            }
             .navigationDestination(isPresented: $viewModel.isShowingAddOdometerReading) {
                 makeAddOdometerView()
             }
@@ -59,9 +52,6 @@ struct OdometerView: View {
             .task {
                 await viewModel.getOdometerReadings()
                 await viewModel.getVehicles()
-            }
-            .sheet(isPresented: $viewModel.isShowingAddView) {
-                makeAddOdometerView()
             }
         }
     }
