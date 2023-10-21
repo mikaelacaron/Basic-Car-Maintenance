@@ -45,7 +45,6 @@ struct MainTabView: View {
             AlertView()
                 .presentationDetents([.medium])
         }
-        // TODO: To be deleted
         .onTapGesture(count: 2) {
             isShowingRealTimeAlert = true
         }
