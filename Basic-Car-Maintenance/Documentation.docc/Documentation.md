@@ -16,3 +16,6 @@ Icons have the following colors:
 * Blue #253AA7
 * Black #000000
 * Orange #F78616
+
+## App Store Listing
+See the [App Store Connect article](AppStoreConnect) for suggested texts, keywords and so on for the App Store listing. The app will be submitted to the App Store after Hacktoberfest 2023.
