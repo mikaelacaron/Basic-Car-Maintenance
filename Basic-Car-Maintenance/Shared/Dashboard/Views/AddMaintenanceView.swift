@@ -14,7 +14,7 @@ struct AddMaintenanceView: View {
     
     @State private var title = ""
     @State private var date = Date()
-    @State private var selectedVehicle: Vehicle?
+    @State private var selectedVehicle: String?
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
     
@@ -69,7 +69,7 @@ struct AddMaintenanceView: View {
             }
             .onAppear {
                 if !vehicles.isEmpty {
-                    selectedVehicle = vehicles[0]
+                  selectedVehicle = vehicles[0].id
                 }
             }
             .navigationTitle(Text("Add Maintenance",
@@ -79,10 +79,11 @@ struct AddMaintenanceView: View {
                     Button {
                         
                         if let selectedVehicle {
+                            let vehicle = vehicles.filter { $0.id == selectedVehicle }[0]
                             let event = MaintenanceEvent(title: title,
                                                          date: date,
                                                          notes: notes,
-                                                         vehicle: selectedVehicle)
+                                                         vehicle: vehicle)
                             addTapped(event)
                             dismiss()
                         }
