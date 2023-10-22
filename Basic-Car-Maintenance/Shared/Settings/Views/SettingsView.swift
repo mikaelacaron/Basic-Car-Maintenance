@@ -14,7 +14,7 @@ struct SettingsView: View {
     @State private var isShowingAddVehicle = false
     @State private var showDeleteVehicleError = false
     @State private var showAddVehicleError = false
-    @State private var deleteError: LocalizedStringKey = "Failed To Delete Vehicle. Unknown Error."
+    @State private var showLastVehicleDeleteError = false
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.colorScheme) var colorScheme
@@ -99,8 +99,7 @@ struct SettingsView: View {
                         .swipeActions {
                             Button(role: viewModel.vehicles.count > 1 ? .destructive : .none) {
                                 guard viewModel.vehicles.count > 1 else {
-                                    showDeleteVehicleError = true
-                                    deleteError = "You must have at least one vehicle"
+                                    showLastVehicleDeleteError = true
                                     return
                                 }
                                 Task {
@@ -198,6 +197,17 @@ struct SettingsView: View {
                     }
                 }
             }
+            
+            .alert(Text("Can't Delete Last Vehicle", comment: "Label to dsplay title of the delete vehicle alert"),
+                   isPresented: $showLastVehicleDeleteError) {
+                Button {
+                    showLastVehicleDeleteError = false
+                } label: {
+                    Text("OK", comment: "Label to dismiss alert")
+                }
+            } message: {
+                Text("The last vehicle can't be deleted", comment: "Label to display error details.")
+            }
             // swiftlint:disable:next line_length
             .alert(Text("Failed To Delete Vehicle", comment: "Label to dsplay title of the delete vehicle alert"),
                    isPresented: $showDeleteVehicleError) {
@@ -211,7 +221,8 @@ struct SettingsView: View {
                     Text("Failed To Delete Vehicle\nDetails:\(errorDetails.localizedDescription)",
                          comment: "Label to display localized error description.")
                 } else {
-                    Text(deleteError, comment: "Label to display error details.")
+                    Text("Failed To Delete Vehicle. Unknown Error.",
+                         comment: "Label to display error details.")
                 }
             }
             .navigationTitle(Text("Settings", comment: "Label to display settings."))

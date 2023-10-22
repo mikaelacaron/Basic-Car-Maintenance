@@ -452,6 +452,9 @@
         }
       }
     },
+    "Can't Delete Last Vehicle" : {
+      "comment" : "Label to dsplay title of the delete vehicle alert"
+    },
     "Cancel" : {
       "localizations" : {
         "be" : {
@@ -1386,6 +1389,9 @@
           }
         }
       }
+    },
+    "Key" : {
+      "extractionState" : "manual"
     },
     "Kilometers" : {
 
@@ -2375,6 +2381,9 @@
         }
       }
     },
+    "The last vehicle can't be deleted" : {
+      "extractionState" : "manual"
+    },
     "The title of the event" : {
       "comment" : "Maintenance event title text field label placeholder",
       "localizations" : {
@@ -3121,9 +3130,6 @@
           }
         }
       }
-    },
-    "You must have at least one vehicle" : {
-      "extractionState" : "manual"
     }
   },
   "version" : "1.0"
