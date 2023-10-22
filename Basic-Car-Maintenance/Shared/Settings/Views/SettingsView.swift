@@ -14,6 +14,7 @@ struct SettingsView: View {
     @State private var isShowingAddVehicle = false
     @State private var showDeleteVehicleError = false
     @State private var showAddVehicleError = false
+    @State private var deleteError: LocalizedStringKey = "Failed To Delete Vehicle. Unknown Error."
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.colorScheme) var colorScheme
@@ -96,7 +97,12 @@ struct SettingsView: View {
                             Text(vehicle.licensePlateNumber ?? "")
                         }
                         .swipeActions {
-                            Button(role: .destructive) {
+                            Button(role: viewModel.vehicles.count > 1 ? .destructive : .none) {
+                                guard viewModel.vehicles.count > 1 else {
+                                    showDeleteVehicleError = true
+                                    deleteError = "You must have at least one vehicle"
+                                    return
+                                }
                                 Task {
                                     do {
                                         try await viewModel.deleteVehicle(vehicle)
@@ -108,6 +114,7 @@ struct SettingsView: View {
                             } label: {
                                 Text("Delete", comment: "Label to delete a vehicle")
                             }
+                            .tint(.red)
                         }
                     }
                     
@@ -204,8 +211,7 @@ struct SettingsView: View {
                     Text("Failed To Delete Vehicle\nDetails:\(errorDetails.localizedDescription)",
                          comment: "Label to display localized error description.")
                 } else {
-                    Text("Failed To Delete Vehicle. Unknown Error.",
-                         comment: "Label to display error details.")
+                    Text(deleteError, comment: "Label to display error details.")
                 }
             }
             .navigationTitle(Text("Settings", comment: "Label to display settings."))

@@ -3121,6 +3121,9 @@
           }
         }
       }
+    },
+    "You must have at least one vehicle" : {
+      "extractionState" : "manual"
     }
   },
   "version" : "1.0"
