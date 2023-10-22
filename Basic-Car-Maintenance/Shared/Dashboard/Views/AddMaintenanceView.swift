@@ -14,7 +14,7 @@ struct AddMaintenanceView: View {
     
     @State private var title = ""
     @State private var date = Date()
-    @State private var selectedVehicle: String?
+    @State private var selectedVehicle: Vehicle?
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
     
@@ -36,7 +36,7 @@ struct AddMaintenanceView: View {
                 Section {
                     Picker(selection: $selectedVehicle) {
                         ForEach(vehicles) { vehicle in
-                            Text(vehicle.name).tag(vehicle as Vehicle)
+                            Text(vehicle.name).tag(vehicle as Vehicle?)
                         }
                     } label: {
                         Text("Select a vehicle",
@@ -69,7 +69,7 @@ struct AddMaintenanceView: View {
             }
             .onAppear {
                 if !vehicles.isEmpty {
-                  selectedVehicle = vehicles[0].id
+                    selectedVehicle = vehicles.first
                 }
             }
             .navigationTitle(Text("Add Maintenance",
@@ -79,11 +79,10 @@ struct AddMaintenanceView: View {
                     Button {
                         
                         if let selectedVehicle {
-                            let vehicle = vehicles.filter { $0.id == selectedVehicle }[0]
                             let event = MaintenanceEvent(title: title,
                                                          date: date,
                                                          notes: notes,
-                                                         vehicle: vehicle)
+                                                         vehicle: selectedVehicle)
                             addTapped(event)
                             dismiss()
                         }
