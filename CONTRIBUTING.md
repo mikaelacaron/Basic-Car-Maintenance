@@ -26,8 +26,15 @@ brew install swiftlint
    * Indent Width: 4
 
 ## Start Here
-* **Fork** the repo to your profile
-* **Clone** to your computer
+* **Fork** this repo
+* **Clone** the repo to your machine (do **not** open Xcode yet)
+* In the same folder that contains the `Basic-Car-Maintenance.xcconfig.template`, run this command, in Terminal, to create a new Xcode configuration file (which properly sets up the signing information)
+
+```sh
+cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
+```
+
+* Open Xcode
 
 * In the `Basic-Car-Maintenance.xcconfig` file, fill in your `DEVELOPMENT_TEAM` and `PRODUCT_BUNDLE_IDENTIFIER`.
    * You can find this by logging into the Apple Developer Portal
@@ -36,17 +43,10 @@ brew install swiftlint
 DEVELOPMENT_TEAM = ABC123
 PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 ```
+
 * Build the project ✅
 
-* **BEFORE** starting on an issue, comment on the issue you want to work on.
-   * This prevents two people from working on the same issue. [Mikaela](https://github.com/mikaelacaron) (the maintainer) will assign you that issue, and you can get started on it.
-
-* Checkout a new branch (from the `dev` branch) to work on an issue
-   * The `feature-name` part of the branch can be shortened or omitted and you add your username instead
-
-```sh
-git checkout -b issueNumber-feature-name
-```
+* **Checkout** a new branch (from the `dev` branch) to work on an issue
 * When your feature/fix is complete open a pull request, PR, from your feature branch to the `dev` branch
    * Use a descriptive PR title and fill out the entire PR template, do not delete any sections.
 

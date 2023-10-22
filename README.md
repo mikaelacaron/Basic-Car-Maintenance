@@ -22,6 +22,8 @@ Welcome to my open source app! It is ready for contributors for [Hacktoberfest](
 cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
 ```
 
+* Open Xcode
+
 * In the `Basic-Car-Maintenance.xcconfig` file, fill in your `DEVELOPMENT_TEAM` and `PRODUCT_BUNDLE_IDENTIFIER`.
    * You can find this by logging into the Apple Developer Portal
    * This works with both free or paid Apple Developer accounts. Do **NOT** run this app on a real device due to issues with the Sign in With Apple capability.
@@ -29,7 +31,7 @@ cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
 DEVELOPMENT_TEAM = ABC123
 PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 ```
-* Open Xcode
+
 * Build the project ✅
 
 * **Checkout** a new branch (from the `dev` branch) to work on an issue
