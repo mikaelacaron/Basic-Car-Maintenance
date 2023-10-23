@@ -8,7 +8,7 @@ Here's the Apple developer site covering how to set up an app's product page, as
 
 ### App Information
 
-Set up the app's name and subtitle under **General** ▸ **App Information** in the **Localizable Information** section at the top of the page. You have a maximum of 30 characters for each field. According to [Appfigures](https://appfigures.com/resources/guides/app-name-optimization), you should portion out keywords between the name and the subtitle for optimal ASO, App Store Optimization, which is the black art of doing everything you can in your App Store listing to make it highly visible in the Store.
+Set up the app's name and subtitle under **General** ▸ **App Information** in the **Localizable Information** section at the top of the page. You have a maximum of 30 characters for each field. According to [Appfigures](https://appfigures.com/resources/guides/app-name-optimization), you should portion out keywords between the name and the subtitle for optimal ASO, App Store Optimization, which is the magic of doing everything you can in your App Store listing to make it highly visible in the Store.
 
 **Name**: `Basic Auto Vehicle Maintenance`
 
