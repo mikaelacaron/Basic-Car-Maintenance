@@ -4,7 +4,7 @@
 
 This article contains suggested texts and settings for the App Store listing, which will be set up in App Store Connect after Hacktoberfest.
 
-Here's the Apple developer site covering how to set up an app's product page, as well as the many other things you can do with App Store Connect: https://developer.apple.com/app-store-connect/
+Here's the Apple developer site covering how to set up an app's product page, as well as the many other things you can do with App Store Connect: [https://developer.apple.com/app-store-connect/](https://developer.apple.com/app-store-connect/)
 
 ### App Information
 
