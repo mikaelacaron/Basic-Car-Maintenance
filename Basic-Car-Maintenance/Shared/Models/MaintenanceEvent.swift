@@ -14,4 +14,5 @@ struct MaintenanceEvent: Codable, Identifiable, Hashable {
     let title: String
     let date: Date
     let notes: String
+    var vehicle: Vehicle
 }

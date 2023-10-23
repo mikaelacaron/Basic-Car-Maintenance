@@ -5,6 +5,7 @@
 //  Created by Mikaela Caron on 8/19/23.
 //
 
+import FirebaseAnalyticsSwift
 import SwiftUI
 
 struct DashboardView: View {
@@ -22,15 +23,19 @@ struct DashboardView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(viewModel.sortedEvents) { event in
+                ForEach(viewModel.searchedEvents) { event in
                     VStack(alignment: .leading, spacing: 8) {
                         Text(event.title)
                             .font(.title3)
                         
+                        Text("For \(event.vehicle.name)")
+                        
                         Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
                         
-                        Text(event.notes)
-                            .lineLimit(0)
+                        if !event.notes.isEmpty {
+                            Text(event.notes)
+                                .lineLimit(0)
+                        }
                     }
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                         Button(role: .destructive) {
@@ -58,12 +63,18 @@ struct DashboardView: View {
                 }
                 .listStyle(.inset)
             }
+            .analyticsScreen(name: "\(Self.self)")
+            .searchable(text: $viewModel.searchText)
             .overlay {
                 if viewModel.events.isEmpty {
                     Text("Add your first maintenance")
+                } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
+                    ContentUnavailableView("No results",
+                                           systemImage: "magnifyingglass",
+                                           description: noSearchResultsDescription)
                 }
             }
-            .animation(.linear, value: viewModel.sortOption)
+            .animation(.linear, value: viewModel.searchedEvents)
             .navigationTitle(Text("Dashboard"))
             .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert) {
                 Button("OK") {
@@ -82,6 +93,10 @@ struct DashboardView: View {
                     } label: {
                         Image(systemName: "plus")
                     }
+                    .accessibilityShowsLargeContentViewer {
+                        Label("Add", systemImage: "plus")
+
+                    }
                     
                     Menu {
                         Picker(selection: $viewModel.sortOption) {
@@ -95,10 +110,15 @@ struct DashboardView: View {
                     } label: {
                         Image(systemName: "line.3.horizontal.decrease.circle")
                     }
+                    .accessibilityShowsLargeContentViewer {
+                        Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
+
+                    }
                 }
             }
             .task {
                 await viewModel.getMaintenanceEvents()
+                await viewModel.getVehicles()
             }
             .sheet(isPresented: $isShowingAddView) {
                 makeAddMaintenanceView()
@@ -126,8 +146,11 @@ struct DashboardView: View {
     }
     
     private func makeAddMaintenanceView() -> some View {
-        AddMaintenanceView { event in
+        AddMaintenanceView(vehicles: viewModel.vehicles) { event in
             viewModel.addEvent(event)
+            Task {
+                await viewModel.getMaintenanceEvents()
+            }
         }
         .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
             Button("OK", role: .cancel) {}
@@ -135,8 +158,13 @@ struct DashboardView: View {
             Text(viewModel.errorMessage)
         }
     }
+    
+    private var noSearchResultsDescription: Text {
+        Text("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.")
+    }
 }
 
 #Preview {
     DashboardView(authenticationViewModel: AuthenticationViewModel())
+        .environment(ActionService.shared)
 }

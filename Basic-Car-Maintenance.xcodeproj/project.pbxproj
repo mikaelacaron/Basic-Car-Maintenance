@@ -9,7 +9,15 @@
 /* Begin PBXBuildFile section */
 		023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */; };
 		8288B89B2AE5C5C900AA21F9 /* AddVehicleViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8288B89A2AE5C5C900AA21F9 /* AddVehicleViewUITest.swift */; };
+		154984AA2AD9CAEE0015594C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154984A92AD9CAEE0015594C /* Constants.swift */; };
+		57CDD99E2ADC3173002EFED0 /* OdometerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD99D2ADC3173002EFED0 /* OdometerViewModel.swift */; };
+		57CDD9A02ADC31A8002EFED0 /* AddOdometerReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */; };
+		57CDD9A42ADC320F002EFED0 /* OdometerReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD9A32ADC320F002EFED0 /* OdometerReading.swift */; };
+		8014A4CF2AD75928005B51F6 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4CE2AD75928005B51F6 /* AppIcon.swift */; };
+		8014A4D12AD76034005B51F6 /* ChooseAppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */; };
+		8014A4D32AD77C92005B51F6 /* ChooseAppIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */; };
 		898009792AD1899700604E7C /* ContributorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898009782AD1899700604E7C /* ContributorTests.swift */; };
+		8A3D74862AD6D9A10000FEEB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D74852AD6D9A10000FEEB /* AlertView.swift */; };
 		8AEE816F2ACF37F800FC0C2A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE816E2ACF37F800FC0C2A /* Action.swift */; };
 		8AEE81722ACF384D00FC0C2A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE81712ACF384D00FC0C2A /* MainTabView.swift */; };
 		E58499662ACDDA8B00634660 /* ContributorsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499652ACDDA8B00634660 /* ContributorsListView.swift */; };
@@ -17,8 +25,6 @@
 		E584996A2ACDDAFF00634660 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499692ACDDAFF00634660 /* Contributor.swift */; };
 		FF09FC912AB6FF44006BE61A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */; };
 		FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3DDF512AA4D28F009D91C4 /* DashboardViewModel.swift */; };
-		FF4E82BA2AD39863004949AF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82B92AD39863004949AF /* FirebaseDatabase */; };
-		FF4E82BC2AD39863004949AF /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BB2AD39863004949AF /* FirebaseDatabaseSwift */; };
 		FF4E82BE2AD39863004949AF /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */; };
 		FF4E82C02AD39863004949AF /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BF2AD39863004949AF /* FirebaseRemoteConfigSwift */; };
 		FF4E82C22AD39863004949AF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82C12AD39863004949AF /* FirebaseStorage */; };
@@ -51,6 +57,7 @@
 		FFDADF882ACD35A100DDEF79 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDADF872ACD35A100DDEF79 /* AppIntent.swift */; };
 		FFDADF8A2ACD35A200DDEF79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFDADF892ACD35A200DDEF79 /* Assets.xcassets */; };
 		FFDADF8E2ACD35A200DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FFDADF7D2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FFE0AF562AD66C3500AB46F8 /* OdometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0AF552AD66C3500AB46F8 /* OdometerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +100,19 @@
 
 /* Begin PBXFileReference section */
 		023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventDetailView.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		8288B89A2AE5C5C900AA21F9 /* AddVehicleViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleViewUITest.swift; sourceTree = "<group>"; };
+=======
+		154984A92AD9CAEE0015594C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		57CDD99D2ADC3173002EFED0 /* OdometerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdometerViewModel.swift; sourceTree = "<group>"; };
+		57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOdometerReadingView.swift; sourceTree = "<group>"; };
+		57CDD9A32ADC320F002EFED0 /* OdometerReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdometerReading.swift; sourceTree = "<group>"; };
+		8014A4CE2AD75928005B51F6 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
+		8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppIconView.swift; sourceTree = "<group>"; };
+		8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppIconViewModel.swift; sourceTree = "<group>"; };
+>>>>>>> upstream/dev
 		898009782AD1899700604E7C /* ContributorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorTests.swift; sourceTree = "<group>"; };
+		8A3D74852AD6D9A10000FEEB /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		8AEE816E2ACF37F800FC0C2A /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		8AEE81712ACF384D00FC0C2A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8AEE81732ACF394E00FC0C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,6 +155,7 @@
 		FFDADF872ACD35A100DDEF79 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		FFDADF892ACD35A200DDEF79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFDADF8B2ACD35A200DDEF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFE0AF552AD66C3500AB46F8 /* OdometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdometerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +164,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4E82BE2AD39863004949AF /* FirebaseRemoteConfig in Frameworks */,
-				FF4E82BC2AD39863004949AF /* FirebaseDatabaseSwift in Frameworks */,
 				FFC8CDAF2AA3867A00D129A6 /* FirebaseFirestoreSwift in Frameworks */,
 				FFC8CDA92AA3867A00D129A6 /* FirebaseAnalyticsSwift in Frameworks */,
 				FFC8CDAD2AA3867A00D129A6 /* FirebaseFirestore in Frameworks */,
@@ -153,7 +171,6 @@
 				FFC8CDA72AA3867A00D129A6 /* FirebaseAnalytics in Frameworks */,
 				FF4E82C02AD39863004949AF /* FirebaseRemoteConfigSwift in Frameworks */,
 				FF4E82C22AD39863004949AF /* FirebaseStorage in Frameworks */,
-				FF4E82BA2AD39863004949AF /* FirebaseDatabase in Frameworks */,
 				FFC8CDB32AA4226900D129A6 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,6 +201,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57CDD99B2ADC3150002EFED0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFE0AF552AD66C3500AB46F8 /* OdometerView.swift */,
+				57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		57CDD99C2ADC3159002EFED0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				57CDD99D2ADC3173002EFED0 /* OdometerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		898009762AD1897B00604E7C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +232,23 @@
 				898009782AD1899700604E7C /* ContributorTests.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8A3D74832AD6D9870000FEEB /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				8A3D74842AD6D9920000FEEB /* Views */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		8A3D74842AD6D9920000FEEB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8AEE81712ACF384D00FC0C2A /* MainTabView.swift */,
+				8A3D74852AD6D9A10000FEEB /* AlertView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FF3DDF492AA4386C009D91C4 /* Views */ = {
@@ -305,9 +356,10 @@
 				FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */,
 				8AEE81732ACF394E00FC0C2A /* Info.plist */,
 				FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */,
-				8AEE81712ACF384D00FC0C2A /* MainTabView.swift */,
+				8A3D74832AD6D9870000FEEB /* MainView */,
 				FFBFE08F2A98EFDD000A9BEB /* Models */,
 				FF755B3F2A908EC400F49A13 /* Dashboard */,
+				FFE0AF542AD66C1E00AB46F8 /* Odometer */,
 				FF755B402A908EC900F49A13 /* Settings */,
 				FF755B442A90968D00F49A13 /* Utilities */,
 			);
@@ -318,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				FF755B452A90969D00F49A13 /* Bundle+extension.swift */,
+				154984A92AD9CAEE0015594C /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -340,6 +393,8 @@
 				E58499692ACDDAFF00634660 /* Contributor.swift */,
 				FFBFE0922A98F212000A9BEB /* Vehicle.swift */,
 				8AEE816E2ACF37F800FC0C2A /* Action.swift */,
+				8014A4CE2AD75928005B51F6 /* AppIcon.swift */,
+				57CDD9A32ADC320F002EFED0 /* OdometerReading.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -348,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				FF755B3D2A908E7A00F49A13 /* SettingsView.swift */,
+				8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */,
 				FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */,
 				E58499652ACDDA8B00634660 /* ContributorsListView.swift */,
 				E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */,
@@ -361,6 +417,7 @@
 			children = (
 				FFC67D1C2AAEF7920073B338 /* SettingsViewModel.swift */,
 				FF748B5D2AB3589C004748A5 /* AuthenticationViewModel.swift */,
+				8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -385,6 +442,15 @@
 				FFDADF8B2ACD35A200DDEF79 /* Info.plist */,
 			);
 			path = "Basic-Car-Maintenance-Widget";
+			sourceTree = "<group>";
+		};
+		FFE0AF542AD66C1E00AB46F8 /* Odometer */ = {
+			isa = PBXGroup;
+			children = (
+				57CDD99B2ADC3150002EFED0 /* Views */,
+				57CDD99C2ADC3159002EFED0 /* ViewModels */,
+			);
+			path = Odometer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,8 +478,6 @@
 				FFC8CDAA2AA3867A00D129A6 /* FirebaseAuth */,
 				FFC8CDAC2AA3867A00D129A6 /* FirebaseFirestore */,
 				FFC8CDAE2AA3867A00D129A6 /* FirebaseFirestoreSwift */,
-				FF4E82B92AD39863004949AF /* FirebaseDatabase */,
-				FF4E82BB2AD39863004949AF /* FirebaseDatabaseSwift */,
 				FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */,
 				FF4E82BF2AD39863004949AF /* FirebaseRemoteConfigSwift */,
 				FF4E82C12AD39863004949AF /* FirebaseStorage */,
@@ -510,6 +574,12 @@
 				Base,
 				cs,
 				de,
+				fr,
+				uk,
+				hi,
+				ko,
+				be,
+				ru,
 			);
 			mainGroup = FF5D139A2A86C2D500BC9BD6;
 			packageReferences = (
@@ -590,22 +660,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154984AA2AD9CAEE0015594C /* Constants.swift in Sources */,
 				FFBFE0912A98EFEC000A9BEB /* MaintenanceEvent.swift in Sources */,
+				57CDD9A42ADC320F002EFED0 /* OdometerReading.swift in Sources */,
 				E58499682ACDDA9A00634660 /* ContributorsProfileView.swift in Sources */,
 				FF755B492A909A0000F49A13 /* AddMaintenanceView.swift in Sources */,
 				FF09FC912AB6FF44006BE61A /* AuthenticationView.swift in Sources */,
 				023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */,
+				8A3D74862AD6D9A10000FEEB /* AlertView.swift in Sources */,
+				57CDD9A02ADC31A8002EFED0 /* AddOdometerReadingView.swift in Sources */,
+				57CDD99E2ADC3173002EFED0 /* OdometerViewModel.swift in Sources */,
 				FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */,
 				FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */,
+				FFE0AF562AD66C3500AB46F8 /* OdometerView.swift in Sources */,
 				8AEE816F2ACF37F800FC0C2A /* Action.swift in Sources */,
 				FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */,
 				E584996A2ACDDAFF00634660 /* Contributor.swift in Sources */,
+				8014A4D32AD77C92005B51F6 /* ChooseAppIconViewModel.swift in Sources */,
+				8014A4CF2AD75928005B51F6 /* AppIcon.swift in Sources */,
 				FFC67D1D2AAEF7920073B338 /* SettingsViewModel.swift in Sources */,
 				FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */,
 				8AEE81722ACF384D00FC0C2A /* MainTabView.swift in Sources */,
 				E58499662ACDDA8B00634660 /* ContributorsListView.swift in Sources */,
 				FFBFE0932A98F212000A9BEB /* Vehicle.swift in Sources */,
 				FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */,
+				8014A4D12AD76034005B51F6 /* ChooseAppIconView.swift in Sources */,
 				FF748B5E2AB3589C004748A5 /* AuthenticationViewModel.swift in Sources */,
 				FF755B462A90969D00F49A13 /* Bundle+extension.swift in Sources */,
 				FFAA56ED2AC8905C000120EE /* Documentation.docc in Sources */,
@@ -785,6 +864,8 @@
 			baseConfigurationReference = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
+				"ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES[sdk=*]" = "AppIcon-car-red AppIcon-car-yellow AppIcon-car-dark AppIcon-car-orange AppIcon-car-black";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Basic-Car-Maintenance/Basic_Car_Maintenance.entitlements";
@@ -825,6 +906,7 @@
 			baseConfigurationReference = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Basic-Car-Maintenance/Basic_Car_Maintenance.entitlements";
@@ -1061,16 +1143,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FF4E82B92AD39863004949AF /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		FF4E82BB2AD39863004949AF /* FirebaseDatabaseSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabaseSwift;
-		};
 		FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

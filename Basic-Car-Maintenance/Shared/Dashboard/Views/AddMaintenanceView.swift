@@ -5,14 +5,17 @@
 //  Created by Mikaela Caron on 8/19/23.
 //
 
+import FirebaseAnalyticsSwift
 import SwiftUI
 
 struct AddMaintenanceView: View {
     
+    let vehicles: [Vehicle]
     let addTapped: (MaintenanceEvent) -> Void
     
     @State private var title = ""
     @State private var date = Date()
+    @State private var selectedVehicle: Vehicle?
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
     
@@ -31,10 +34,26 @@ struct AddMaintenanceView: View {
                          comment: "Maintenance event title text field header")
                 }
                 
+                Section {
+                    Picker(selection: $selectedVehicle) {
+                        ForEach(vehicles) { vehicle in
+                            Text(vehicle.name).tag(vehicle as Vehicle)
+                        }
+                    } label: {
+                        Text("Select a vehicle",
+                             comment: "Picker for selecting a vehicle")
+                    }
+                    .pickerStyle(.menu)
+                } header: {
+                    Text("Vehicle",
+                         comment: "Maintenance event vehicle picker header")
+                }
+                
                 DatePicker(selection: $date, displayedComponents: .date) {
                     Text("Date",
                          comment: "Date picker label")
                 }
+                .dynamicTypeSize(...DynamicTypeSize.accessibility2)
                 
                 Section {
                     TextField(text: $notes,
@@ -49,17 +68,29 @@ struct AddMaintenanceView: View {
                          comment: "Notes text field header")
                 }
             }
+            .analyticsScreen(name: "\(Self.self)")
+            .onAppear {
+                if !vehicles.isEmpty {
+                    selectedVehicle = vehicles[0]
+                }
+            }
             .navigationTitle(Text("Add Maintenance",
                                   comment: "Nagivation title for Add Maintenance view"))
             .toolbar {
                 ToolbarItem {
                     Button {
-                        let event = MaintenanceEvent(title: title, date: date, notes: notes)
-                        addTapped(event)
-                        dismiss()
+                        
+                        if let selectedVehicle {
+                            let event = MaintenanceEvent(title: title,
+                                                         date: date,
+                                                         notes: notes,
+                                                         vehicle: selectedVehicle)
+                            addTapped(event)
+                            dismiss()
+                        }
                     } label: {
                         Text("Add",
-                             comment: "Label for button to add data")
+                             comment: "Label for submit button on form to add an entry")
                     }
                     .disabled(title.isEmpty)
                 }
@@ -69,5 +100,10 @@ struct AddMaintenanceView: View {
 }
 
 #Preview {
-    AddMaintenanceView() { _ in }
+    AddMaintenanceView(vehicles: sampleVehicles) { _ in }
 }
+
+let sampleVehicles = [
+    Vehicle(name: "Lexus", make: "Lexus", model: "White"),
+    Vehicle(name: "Test", make: "Lexus", model: "White")
+]
