@@ -7,7 +7,9 @@
     @Section(title: "Prerequisites") {
 
         @ContentAndMedia {
-            Add engaging section text here.
+            Complete these steps before beginning. 
+            
+            @Image(source: 1-intro.png, alt:"GitHub Screenshot")
         }
         
         @Steps {
