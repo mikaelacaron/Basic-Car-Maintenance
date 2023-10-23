@@ -28,11 +28,11 @@ The remainder of the **General Information** on this page gets set when the app 
 Enter the following metadata on the version information page, which appears under **iOS App** at the top left-hand side of the App Store tab in App Store Connect
 
 #### Description
-`Basic Auto Vehicle Maintenance lets you easily log repairs and routine service. You can also track odometer readings, handy for business travel or just to figure out how far your fuel gets you.`
+`Basic Auto Vehicle Maintenance lets you easily log repairs and routine service. You can also track odometer readings, handy for business travel or just to figure out how far your fuel or battery charge gets you.`
 
 `This app began as a Hacktoberfest 2023 project and remains open source, maintained by Mikaela Caron. Look for mikaelacaron / Basic-Car-Maintenance and come contribute!`
 
 #### Keywords
 You have 100 characters of keyword space, which get combined with the Name and Subtitle fields discussed above when a user searches the App Store. Ariel Michaeli of Appfigures recently advised to put the more important keywords closer to the start of this field. Separate keywords with commas; omit spaces. 
 
-Suggested: `car,van,motorcycle,bike,care,repair,manage,easy,simple,oil,change,tire,rotation,record,fuel,gas,log`
+Suggested: `car,van,electric,bike,care,repair,manage,easy,simple,oil,change,tire,rotation,record,fuel,gas,charge`
