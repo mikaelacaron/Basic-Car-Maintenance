@@ -1,5 +1,5 @@
 @Tutorial(time: 15) {
-    @Intro(title: "How to contribute to this project.") {
+    @Intro(title: "How to Contribute to this Project.") {
         Here you will find instructions on how to prepare, fork, clone, configure, build and contribute to this project. 
         
     }
@@ -18,7 +18,8 @@
                 Read the CONTRIBUTING guidelines
             }
             @Step {
-                Download Xcode 15 or later
+                Download [Xcode 15](https://developer.apple.com/xcode/resources/) or later.
+                
             }
             @Step {
                 Install Github command line tools
@@ -44,13 +45,13 @@
             @Step {
                 Clone your fork to your computer. 
                 
-                gh repo clone USERNAME/Basic-Car-Maintenance
+                `gh repo clone USERNAME/Basic-Car-Maintenance`
                 
                 @Image(source: 3-clone.png, alt: "CLI github clone")
             }
         }
     }
-    @Section(title: "Configure and Build") {
+    @Section(title: "Configuring the project with the xcconfig files to build the project on your machine") {
         @ContentAndMedia {
             Copy the template file, edit it to include your development team ID. Set an appropriate bundle id. 
             
@@ -61,7 +62,7 @@
             @Step {
                 In the same folder that contains the Basic-Car-Maintenance.xcconfig.template, run this command, in Terminal, to create a new Xcode configuration file (which properly sets up the signing information)
                 
-                cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
+                `cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig`
                 
                 @Image(source: 4-config.png, alt: "Copying template file")
             }
@@ -83,7 +84,7 @@
     
     @Section(title: "Starting on an issue") {
         @ContentAndMedia {
-            BEFORE starting on an issue, comment on the issue you want to work on.
+            **BEFORE** starting on an issue, comment on the issue you want to work on.
 
             This prevents two people from working on the same issue. Mikaela (the maintainer) will assign you that issue, and you can get started on it.
 
@@ -92,9 +93,9 @@
         
         @Steps {
             @Step {
-                Checkout a new branch (from the dev branch) to work on an issue. The feature-name part of the branch can be shortened or omitted and you add your username instead. No commits should be made to the main branch directly. The main branch shall only consist of the deployed code. Developers are expected to work on feature branches, and upon successful development and testing, a PR (pull request) must be opened to merge with dev
+                Checkout a new branch (from the dev branch) to work on an issue. 
                 
-                git checkout -b issueNumber-feature-name
+                The feature-name part of the branch can be shortened or omitted and you add your username instead. No commits should be made to the main branch directly. The main branch shall only consist of the deployed code. Developers are expected to work on feature branches, and upon successful development and testing, a PR (pull request) must be opened to merge with dev. `git checkout -b issueNumber-feature-name`
                 
                 @Image(source: 8-checkout.png, alt: "Checkout issue locally")
             }
