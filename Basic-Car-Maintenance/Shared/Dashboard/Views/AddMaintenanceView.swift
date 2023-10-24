@@ -35,7 +35,7 @@ struct AddMaintenanceView: View {
                 
                 Section {
                     Picker(selection: $selectedVehicleID) {
-                        ForEach(vehicles, id: \.self) { vehicle in
+                        ForEach(vehicles) { vehicle in
                             Text(vehicle.name).tag(vehicle.id)
                         }
                     } label: {
