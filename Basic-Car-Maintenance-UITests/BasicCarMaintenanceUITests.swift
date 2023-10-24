@@ -5,10 +5,11 @@
 //  Created by Mikaela Caron on 8/11/23.
 //
 
+
 import XCTest
 
 final class BasicCarMaintenanceUITests: XCTestCase {
-
+    
     let app = XCUIApplication()
     
     override func setUp() {
@@ -19,7 +20,7 @@ final class BasicCarMaintenanceUITests: XCTestCase {
     func testAddVehicle() {
         // Navigate to the AddVehicleView
         app.buttons["Settings"].tap()
-        app.buttons["Add Vehicle"].tap()
+        XCUIApplication().collectionViews/*@START_MENU_TOKEN@*/.buttons["Add Vehicle"]/*[[".cells.buttons[\"Add Vehicle\"]",".buttons[\"Add Vehicle\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
         // Fill in valid vehicle information
         let nameTextField = app.textFields["Vehicle Name"]
