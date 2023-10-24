@@ -75,11 +75,10 @@ struct AddMaintenanceView: View {
                         
                         if let selectedVehicleID {
                             if let vehicle = vehicles.filter({ $0.id == selectedVehicleID }).first {
-                                let event = MaintenanceEvent(title: 
-                                                            title,
-                                                            date: date,
-                                                            notes: notes,
-                                                            vehicle: vehicle)
+                                let event = MaintenanceEvent(title: title,
+                                                             date: date,
+                                                             notes: notes,
+                                                             vehicle: vehicle)
                                 addTapped(event)
                             }
                             dismiss()
