@@ -5,6 +5,7 @@
 //  Created by Mikaela Caron on 8/19/23.
 //
 
+import FirebaseAnalyticsSwift
 import SwiftUI
 import UniformTypeIdentifiers
 
@@ -137,10 +138,11 @@ struct SettingsView: View {
                     }
                 }
                 
-                // swiftlint:disable:next line_length
                 if let privacyURL = viewModel.privacyURL, !privacyURL.absoluteString.isEmpty {
                     Link("Privacy Policy", destination: privacyURL)
                 }
+                
+                // swiftlint:disable:next line_length
                 Text(LocalizedStringKey(stringLiteral: appVersion), comment: "Label to display version and build number.")
                     .frame(maxWidth: .infinity, alignment: .center)
                     .onLongPressGesture {
@@ -163,6 +165,7 @@ struct SettingsView: View {
                             .animation(.linear(duration: 0.2), value: copiedAppVersion)
                     }
             }
+            .analyticsScreen(name: "\(Self.self)")
             .navigationDestination(isPresented: $isShowingAddVehicle) {
                 AddVehicleView() { vehicle in
                     Task {
