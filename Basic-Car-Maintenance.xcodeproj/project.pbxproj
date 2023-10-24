@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */; };
+		0CA7ED092AE82BF100609019 /* ContributionTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7ED082AE82BF100609019 /* ContributionTip.swift */; };
 		154984AA2AD9CAEE0015594C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154984A92AD9CAEE0015594C /* Constants.swift */; };
 		57CDD99E2ADC3173002EFED0 /* OdometerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD99D2ADC3173002EFED0 /* OdometerViewModel.swift */; };
 		57CDD9A02ADC31A8002EFED0 /* AddOdometerReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */; };
@@ -99,6 +100,7 @@
 
 /* Begin PBXFileReference section */
 		023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventDetailView.swift; sourceTree = "<group>"; };
+		0CA7ED082AE82BF100609019 /* ContributionTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionTip.swift; sourceTree = "<group>"; };
 		154984A92AD9CAEE0015594C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		57CDD99D2ADC3173002EFED0 /* OdometerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdometerViewModel.swift; sourceTree = "<group>"; };
 		57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOdometerReadingView.swift; sourceTree = "<group>"; };
@@ -196,6 +198,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CA7ED072AE82BD100609019 /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				0CA7ED082AE82BF100609019 /* ContributionTip.swift */,
+			);
+			path = Tips;
+			sourceTree = "<group>";
+		};
 		57CDD99B2ADC3150002EFED0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +349,7 @@
 			children = (
 				FFC67D1E2AAEF7960073B338 /* Views */,
 				FFC67D1F2AAEF7A00073B338 /* ViewModels */,
+				0CA7ED072AE82BD100609019 /* Tips */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -668,6 +679,7 @@
 				FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */,
 				FFE0AF562AD66C3500AB46F8 /* OdometerView.swift in Sources */,
 				8AEE816F2ACF37F800FC0C2A /* Action.swift in Sources */,
+				0CA7ED092AE82BF100609019 /* ContributionTip.swift in Sources */,
 				FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */,
 				E584996A2ACDDAFF00634660 /* Contributor.swift in Sources */,
 				8014A4D32AD77C92005B51F6 /* ChooseAppIconViewModel.swift in Sources */,
