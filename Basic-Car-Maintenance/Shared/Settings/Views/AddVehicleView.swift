@@ -59,12 +59,16 @@ struct AddVehicleView: View {
 
                 Section {
                     TextField("Vehicle VIN", text: $VIN, prompt: Text("Vehicle VIN"))
+                        .textInputAutocapitalization(.characters)
                 } header: {
                     Text("VIN")
                 }
 
                 Section {
-                    TextField("Vehicle License Plate Number", text: $licensePlateNumber, prompt: Text("Vehicle License Plate Number"))
+                    TextField("Vehicle License Plate Number",
+                              text: $licensePlateNumber,
+                              prompt: Text("Vehicle License Plate Number"))
+                    .textInputAutocapitalization(.characters)
                 } header: {
                     Text("License Plate Number")
                 }
