@@ -1,4 +1,4 @@
-@Tutorials(name: "Basic-Car-Maitenance") {
+@Tutorials(name: "Basic-Car-Maintenance") {
     @Intro(title: "Getting Started") {
         How to get started contributing to this project
         
