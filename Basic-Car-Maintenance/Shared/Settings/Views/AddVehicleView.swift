@@ -46,6 +46,7 @@ struct AddVehicleView: View {
 
                 Section {
                     TextField("Vehicle Year", text: $year, prompt: Text("Vehicle Year"))
+                        .keyboardType(.numberPad)
                 } header: {
                     Text("Year")
                 }
