@@ -9,15 +9,17 @@ import SwiftUI
 
 enum TabSelection: Int {
     case dashboard = 0
-    case settings = 1
+    case odometer = 1
+    case settings = 2
 }
 
 @MainActor
 struct MainTabView: View {
+    @AppStorage("lastTabOpen") var selectedTab = TabSelection.dashboard
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
+    @State private var isShowingRealTimeAlert = false
     @State var authenticationViewModel = AuthenticationViewModel()
-    @State var selectedTab: TabSelection = .dashboard
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -27,11 +29,24 @@ struct MainTabView: View {
                     Label("Dashboard", systemImage: "list.dash.header.rectangle")
                 }
             
+            OdometerView(authenticationViewModel: authenticationViewModel)
+                .tag(TabSelection.odometer)
+                .tabItem {
+                    Label("Odometer", systemImage: "gauge")
+                }
+            
             SettingsView(authenticationViewModel: authenticationViewModel)
                 .tag(TabSelection.settings)
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
+        }
+        .sheet(isPresented: $isShowingRealTimeAlert) {
+            AlertView()
+                .presentationDetents([.medium])
+        }
+        .onTapGesture(count: 2) {
+            isShowingRealTimeAlert = true
         }
         .onChange(of: scenePhase) { _, newScenePhase in
             guard
@@ -53,4 +68,5 @@ struct MainTabView: View {
 
 #Preview {
     MainTabView()
+        .environment(ActionService.shared)
 }

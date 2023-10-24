@@ -31,10 +31,6 @@ struct Contributor: Codable, Hashable, Identifiable {
     /// The link to profile image of the user
     let avatarURL: String
     
-    /// The link to user's avatar on Gravatar if they haven't uploaded an avatar directly.
-    /// - Warning: Deprecated by GitHub in 2014
-    let gravatarID: String
-    
     /// The endpoint for a user's profile data
     let url: String
     
@@ -49,7 +45,6 @@ struct Contributor: Codable, Hashable, Identifiable {
         case login, id
         case nodeID = "nodeId"
         case avatarURL = "avatarUrl"
-        case gravatarID = "gravatarId"
         case url
         case htmlURL = "htmlUrl"
         case contributions
