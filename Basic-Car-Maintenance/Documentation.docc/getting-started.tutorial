@@ -1,6 +1,6 @@
 @Tutorial(time: 15) {
-    @Intro(title: "How to Contribute to this Project.") {
-        Here you will find instructions on how to prepare, fork, clone, configure, build and contribute to this project. 
+    @Intro(title: "How to Contribute to this Project") {
+        Here's instructions on how to prepare, fork, clone, configure, build and contribute to this project. This tutorial uses the [GitHub CLI](https://cli.github.com/)
         
     }
     
@@ -20,13 +20,16 @@
                 Read the CONTRIBUTING guidelines
             }
             @Step {
-                Download [Xcode 15](https://developer.apple.com/xcode/resources/) or later.
+                Download [Xcode 15.0](https://developer.apple.com/xcode/resources/) or later.
                 
             }
             @Step {
-                Install Github command line tools
+                Install [GitHub CLI](https://cli.github.com/) command line tools
             }
 
+            @Step {
+               Use `gh auth login` to authenticate with the [GitHub CLI](https://cli.github.com/manual/gh_auth_login)
+            }
         }
     }
             
@@ -40,6 +43,8 @@
         @Steps {
             @Step {
                 Fork the repo on GitHub to your own account.  Select Fork from the Basic-Car-Maintenance github page.
+                
+                This example shows a fork to `ampsonic`'s profile
                 
                 @Image(source: 2-fork.png, alt: "GitHub Fork")
             }
@@ -72,7 +77,7 @@
             @Step {
                 In the Basic-Car-Maintenance.xcconfig file, fill in your DEVELOPMENT_TEAM and PRODUCT_BUNDLE_IDENTIFIER. You can find this by logging into the Apple Developer Portal
                 
-                This works with both free or paid Apple Developer accounts. Do NOT run this app on a real device due to issues with the Sign in With Apple capability.
+                Note: A free account does not have a `DEVELOPMENT_TEAM`. Instead fill in `ABC123`. Do NOT run this app on a real device due to issues with the Sign in With Apple capability.
 
                 @Image(source: 5-dev-id.png, alt: "Edit config with dev id")
             }
@@ -88,16 +93,16 @@
         @ContentAndMedia {
             **BEFORE** starting on an issue, comment on the issue you want to work on.
 
-            This prevents two people from working on the same issue. Mikaela (the maintainer) will assign you that issue, and you can get started on it.
+            This prevents two people from working on the same issue. [Mikaela](https://github.com/mikaelacaron) (the maintainer) will assign you that issue, and you can get started on it.
 
             @Image(source: 7-issue.png, alt: "GitHub issue")
         }
         
         @Steps {
             @Step {
-                Checkout a new branch (from the dev branch) to work on an issue. 
+                Checkout a new branch (from the `dev` branch) to work on an issue. 
                 
-                The feature-name part of the branch can be shortened or omitted and you add your username instead. No commits should be made to the main branch directly. The main branch shall only consist of the deployed code. Developers are expected to work on feature branches, and upon successful development and testing, a PR (pull request) must be opened to merge with dev. `git checkout -b issueNumber-feature-name`
+                The `feature-name` part of the branch can be shortened or omitted and you add your username instead. No commits should be made to the `main` branch directly. The `main` branch shall only consist of the deployed code. Developers are expected to work on feature branches, and upon successful development and testing, a PR (pull request) must be opened to merge with `dev`. `git checkout -b issueNumber-feature-name`
                 
                 @Image(source: 8-checkout.png, alt: "Checkout issue locally")
             }

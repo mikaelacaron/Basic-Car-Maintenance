@@ -1,6 +1,6 @@
 @Tutorials(name: "Basic-Car-Maitenance") {
     @Intro(title: "Getting Started") {
-        How to get started contributing to this project. 
+        How to get started contributing to this project
         
         @Image(source: 1-intro.png, alt: "Screenshot of Basic-Car-Maintenance GitHub page")
     }
