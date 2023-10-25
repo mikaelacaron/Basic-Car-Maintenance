@@ -20,7 +20,7 @@ final class BasicCarMaintenanceUITests: XCTestCase {
     func testAddVehicle() {
         // Navigate to the AddVehicleView
         app.buttons["Settings"].tap()
-        XCUIApplication().collectionViews/*@START_MENU_TOKEN@*/.buttons["Add Vehicle"]/*[[".cells.buttons[\"Add Vehicle\"]",".buttons[\"Add Vehicle\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        XCUIApplication().collectionViews.buttons["Add Vehicle"].tap()
         
         // Fill in valid vehicle information
         let nameTextField = app.textFields["Vehicle Name"]
