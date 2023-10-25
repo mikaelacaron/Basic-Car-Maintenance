@@ -24,11 +24,8 @@ struct ContributorsProfileView: View {
                 switch phase {
                 case .empty:
                     
-                    Image(systemName: "person.circle")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
+                    ProgressView()
                         .frame(width: imgFrame, height: imgFrame)
-                        .foregroundColor(.gray)
                 case .success(let image):
                     
                     image
