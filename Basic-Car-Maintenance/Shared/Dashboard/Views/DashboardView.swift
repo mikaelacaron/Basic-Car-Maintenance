@@ -88,16 +88,6 @@ struct DashboardView: View {
             }
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
-                    Button {
-                        viewModel.isShowingAddMaintenanceEvent = true
-                    } label: {
-                        Image(systemName: "plus")
-                    }
-                    .accessibilityShowsLargeContentViewer {
-                        Label("Add", systemImage: "plus")
-
-                    }
-                    
                     Menu {
                         Picker(selection: $viewModel.sortOption) {
                             ForEach(DashboardViewModel.SortOption.allCases) { option in
@@ -112,6 +102,15 @@ struct DashboardView: View {
                     }
                     .accessibilityShowsLargeContentViewer {
                         Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
+
+                    }
+                    Button {
+                        viewModel.isShowingAddMaintenanceEvent = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .accessibilityShowsLargeContentViewer {
+                        Label("Add", systemImage: "plus")
 
                     }
                 }
