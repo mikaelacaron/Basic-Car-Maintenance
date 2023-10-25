@@ -13,7 +13,7 @@ struct AlertItem: Codable, Identifiable {
     @DocumentID var id: String?
     var actionText: String
     var actionURL: String
-    var icon: String
+    var emojiIcon: String
     var isOn: Bool
     var message: String
     var title: String
@@ -22,7 +22,7 @@ struct AlertItem: Codable, Identifiable {
         case id
         case actionText
         case actionURL
-        case icon = "emojiIcon"
+        case emojiIcon
         case isOn
         case message
         case title

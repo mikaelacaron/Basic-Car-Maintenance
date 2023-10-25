@@ -24,7 +24,6 @@ struct MainTabView: View {
     
     @AppStorage("lastTabOpen") var selectedTab = TabSelection.dashboard
     
-    @State private var isShowingRealTimeAlert = false
     @State var authenticationViewModel = AuthenticationViewModel()
     @State var viewModel = MainTabViewModel()
     
@@ -48,11 +47,9 @@ struct MainTabView: View {
                     Label("Settings", systemImage: "gear")
                 }
         }
-        .sheet(isPresented: $isShowingRealTimeAlert) {
-            if let alert = viewModel.alert {
-                AlertView(alert: alert)
-                    .presentationDetents([.medium])
-            }
+        .sheet(item: $viewModel.alert) { alert in
+            AlertView(alert: alert)
+                .presentationDetents([.medium])
         }
         .onChange(of: scenePhase) { _, newScenePhase in
             guard
@@ -70,12 +67,11 @@ struct MainTabView: View {
             }
         }
         .onAppear {
-            viewModel.listenToAlertsUpdates(ignoring: acknowledgedAlerts.map(\.id))
+            viewModel.fetchNewestAlert(ignoring: acknowledgedAlerts.map(\.id))
         }
         .onChange(of: viewModel.alert) { _, newValue in
             guard let id = newValue?.id else { return }
             saveNewAlert(id)
-            isShowingRealTimeAlert = true
         }
     }
     

@@ -16,17 +16,18 @@ struct AlertView: View {
             VStack {
                 ScrollView {
                     VStack(alignment: .center) {
-                        Text(alert.icon)
+                        Text(alert.emojiIcon)
                             .font(.system(size: 100))
                         
                         Text(alert.title)
                             .font(.title)
+                            .minimumScaleFactor(0.7)
                             .lineLimit(2)
                             .bold()
                         
-                        Text(alert.message)
-                            .multilineTextAlignment(.center)
+                        Text(alert.message.replacingOccurrences(of: "\\n", with: "\n"))
                     }
+                    .multilineTextAlignment(.center)
                 }
                 .scrollIndicators(.hidden)
                 .padding(.horizontal, 24)
@@ -73,7 +74,7 @@ struct AlertView: View {
             id: nil,
             actionText: "",
             actionURL: "",
-            icon: "",
+            emojiIcon: "",
             isOn: false,
             message: "",
             title: ""

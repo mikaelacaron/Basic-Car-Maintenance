@@ -8,14 +8,13 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
-import SwiftData
 
 @Observable
 class MainTabViewModel {
     @MainActor var alert: AlertItem?
     
     /// Update the UI once a new alert is sent
-    func listenToAlertsUpdates(ignoring acknowledgedAlerts: [String]) {
+    func fetchNewestAlert(ignoring acknowledgedAlerts: [String]) {
         
         var query = Firestore
             .firestore()
@@ -28,7 +27,7 @@ class MainTabViewModel {
                 .whereField(FirestoreField.id, notIn: acknowledgedAlerts)
         }
         
-        query.addSnapshotListener { [weak self] snapshot, error in
+        query.getDocuments { [weak self] snapshot, error in
             guard let self,
                   error == nil,
                   let documents = snapshot?.documents else {
