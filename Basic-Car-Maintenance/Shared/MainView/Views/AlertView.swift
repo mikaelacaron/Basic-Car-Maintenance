@@ -58,7 +58,6 @@ struct AlertView: View {
                         dismiss()
                     } label: {
                         Text("Dismiss")
-                            .foregroundStyle(.black)
                             .bold()
                     }
                 }
