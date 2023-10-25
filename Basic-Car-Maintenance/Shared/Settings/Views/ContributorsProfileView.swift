@@ -26,7 +26,6 @@ struct ContributorsProfileView: View {
                     
                     ProgressView()
                         .frame(width: imgFrame, height: imgFrame)
-                        .scaleEffect(0.5)
                 case .success(let image):
                     
                     image
