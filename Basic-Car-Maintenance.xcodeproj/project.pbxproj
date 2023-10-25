@@ -349,7 +349,6 @@
 			children = (
 				FFC67D1E2AAEF7960073B338 /* Views */,
 				FFC67D1F2AAEF7A00073B338 /* ViewModels */,
-				0CA7ED072AE82BD100609019 /* Tips */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -366,6 +365,7 @@
 				FF755B3F2A908EC400F49A13 /* Dashboard */,
 				FFE0AF542AD66C1E00AB46F8 /* Odometer */,
 				FF755B402A908EC900F49A13 /* Settings */,
+				0CA7ED072AE82BD100609019 /* Tips */,
 				FF755B442A90968D00F49A13 /* Utilities */,
 			);
 			path = Shared;

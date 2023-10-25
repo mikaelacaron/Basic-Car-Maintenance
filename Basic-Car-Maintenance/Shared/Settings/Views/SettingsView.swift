@@ -31,57 +31,54 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Section {
-                    Group {
-                        // swiftlint:disable:next line_length
-                        Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance")!) {
-                            Label {
-                                Text("GitHub Repo", comment: "Link to the Basic Car Maintenance GitHub repo.")
-                            } icon: {
-                                Image("github-logo")
-                                    .resizable()
-                                    .frame(width: 20, height: 20)
-                            }
+                    // swiftlint:disable:next line_length
+                    Text("Thanks for using this app! It's open source and anyone can contribute to it.", comment: "Thanks a user for using the app and tells the user they can contribute to the codebase")
+                    
+                    Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance")!) {
+                        Label {
+                            Text("GitHub Repo", comment: "Link to the Basic Car Maintenance GitHub repo.")
+                        } icon: {
+                            Image("github-logo")
+                                .resizable()
+                                .frame(width: 20, height: 20)
                         }
-                        .popoverTip(ContributionTip(), arrowEdge: .bottom)
-                        
-                        Link(destination: URL(string: "https://github.com/mikaelacaron")!) {
-                            // swiftlint:disable:next line_length
-                            Text("🦄 Mikaela Caron - Maintainer", comment: "Link to maintainer Github account.")
+                    }
+                    .popoverTip(ContributionTip(), arrowEdge: .bottom)
+                    
+                    Link(destination: URL(string: "https://github.com/mikaelacaron")!) {
+                        Text("🦄 Mikaela Caron - Maintainer", comment: "Link to maintainer Github account.")
+                    }
+                    
+                    // swiftlint:disable:next line_length
+                    Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=feature+request&projects=&template=feature-request.md&title=FEATURE+-")!) {
+                        Label {
+                            Text("Request a New Feature", comment: "Link to request a new feature.")
+                        } icon: {
+                            Image(systemName: "doc.badge.plus")
+                                .resizable()
+                                .frame(width: 20, height: 20)
                         }
-                        
-                        // swiftlint:disable:next line_length
-                        Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=feature+request&projects=&template=feature-request.md&title=FEATURE+-")!) {
-                            Label {
-                                Text("Request a New Feature", comment: "Link to request a new feature.")
-                            } icon: {
-                                Image(systemName: "doc.badge.plus")
-                                    .resizable()
-                                    .frame(width: 20, height: 20)
-                            }
+                    }
+                    // swiftlint:disable:next line_length
+                    Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=bug&projects=&template=bug-report.md&title=BUG+-")!) {
+                        Label {
+                            Text("Report a Bug", comment: "Link to report a bug")
+                        } icon: {
+                            Image(systemName: "ladybug")
+                                .resizable()
+                                .frame(width: 20, height: 20)
                         }
-                        // swiftlint:disable:next line_length
-                        Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=bug&projects=&template=bug-report.md&title=BUG+-")!) {
-                            Label {
-                                Text("Report a Bug", comment: "Link to report a bug")
-                            } icon: {
-                                Image(systemName: "ladybug")
-                                    .resizable()
-                                    .frame(width: 20, height: 20)
-                            }
-                        }
-                        
-                        NavigationLink {
-                            ContributorsListView(viewModel: viewModel)
-                        } label: {
-                            HStack {
-                                Image(systemName: "person.3.fill")
-                                Text("Contributors", comment: "Link to contributors list.")
-                            }
+                    }
+                    
+                    NavigationLink {
+                        ContributorsListView(viewModel: viewModel)
+                    } label: {
+                        HStack {
+                            Image(systemName: "person.3.fill")
+                            Text("Contributors", comment: "Link to contributors list.")
                         }
                     }
                     .foregroundStyle(.blue)
-                } header: {
-                    Text("Contribution")
                 }
                 
                 Section {
