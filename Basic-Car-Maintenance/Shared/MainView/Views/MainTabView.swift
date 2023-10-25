@@ -17,10 +17,13 @@ enum TabSelection: Int {
 @MainActor
 struct MainTabView: View {
     @Query var acknowledgedAlerts: [AcknowledgedAlert]
-    @Environment(\.modelContext) private var context
-    @AppStorage("lastTabOpen") var selectedTab = TabSelection.dashboard
+    
     @Environment(ActionService.self) var actionService
+    @Environment(\.modelContext) private var context
     @Environment(\.scenePhase) var scenePhase
+    
+    @AppStorage("lastTabOpen") var selectedTab = TabSelection.dashboard
+    
     @State private var isShowingRealTimeAlert = false
     @State var authenticationViewModel = AuthenticationViewModel()
     @State var viewModel = MainTabViewModel()

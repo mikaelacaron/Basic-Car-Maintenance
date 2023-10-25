@@ -28,12 +28,12 @@ class MainTabViewModel {
                 .whereField(FirestoreField.id, notIn: acknowledgedAlerts)
         }
         
-        query.addSnapshotListener {[weak self] snapshot, error in
-            guard
-                let self,
-                error == nil,
-                let documents = snapshot?.documents
-            else { return }
+        query.addSnapshotListener { [weak self] snapshot, error in
+            guard let self,
+                  error == nil,
+                  let documents = snapshot?.documents else {
+                return
+            }
             
             let newAlert = documents
                 .compactMap {

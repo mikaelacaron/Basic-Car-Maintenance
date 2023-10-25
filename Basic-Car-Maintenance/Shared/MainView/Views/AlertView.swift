@@ -32,13 +32,12 @@ struct AlertView: View {
                 .padding(.horizontal, 24)
                 
                 Button {
-                    guard 
-                        let url = URL(string: alert.actionURL),
-                        UIApplication.shared.canOpenURL(url)
-                    else {
+                    guard let url = URL(string: alert.actionURL),
+                          UIApplication.shared.canOpenURL(url) else {
                         dismiss()
                         return
                     }
+                    
                     UIApplication.shared.open(url)
                 } label: {
                     Text(alert.actionText)
