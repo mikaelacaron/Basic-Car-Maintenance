@@ -5,7 +5,6 @@
 //  Created by Mikaela Caron on 8/11/23.
 //
 
-
 import XCTest
 
 final class BasicCarMaintenanceUITests: XCTestCase {
@@ -22,7 +21,6 @@ final class BasicCarMaintenanceUITests: XCTestCase {
         app.buttons["Settings"].tap()
         app.collectionViews.buttons["Add Vehicle"].tap()
         
-        // Fill in valid vehicle information
         let nameTextField = app.textFields["Vehicle Name"]
         nameTextField.tap()
         nameTextField.typeText("My Car")
@@ -35,9 +33,7 @@ final class BasicCarMaintenanceUITests: XCTestCase {
         modelTextField.tap()
         modelTextField.typeText("Camry")
         
-        // Tap the "Add" button
         app.buttons["Add"].tap()
-        
     }
     
 }
