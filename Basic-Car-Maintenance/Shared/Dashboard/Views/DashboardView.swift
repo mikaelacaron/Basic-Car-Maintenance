@@ -102,8 +102,8 @@ struct DashboardView: View {
                     }
                     .accessibilityShowsLargeContentViewer {
                         Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
-
                     }
+                    
                     Button {
                         viewModel.isShowingAddMaintenanceEvent = true
                     } label: {
@@ -111,7 +111,6 @@ struct DashboardView: View {
                     }
                     .accessibilityShowsLargeContentViewer {
                         Label("Add", systemImage: "plus")
-
                     }
                 }
             }
