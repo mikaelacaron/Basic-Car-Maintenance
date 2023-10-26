@@ -26,19 +26,19 @@ struct MainTabView: View {
             DashboardView(authenticationViewModel: authenticationViewModel)
                 .tag(TabSelection.dashboard)
                 .tabItem {
-                    Label("Dashboard", systemImage: "list.dash.header.rectangle")
+                    Label("Dashboard", systemImage: SFSymbol.dashboard)
                 }
             
             OdometerView(authenticationViewModel: authenticationViewModel)
                 .tag(TabSelection.odometer)
                 .tabItem {
-                    Label("Odometer", systemImage: "gauge")
+                    Label("Odometer", systemImage: SFSymbol.odometer)
                 }
             
             SettingsView(authenticationViewModel: authenticationViewModel)
                 .tag(TabSelection.settings)
                 .tabItem {
-                    Label("Settings", systemImage: "gear")
+                    Label("Settings", systemImage: SFSymbol.settings)
                 }
         }
         .sheet(isPresented: $isShowingRealTimeAlert) {
