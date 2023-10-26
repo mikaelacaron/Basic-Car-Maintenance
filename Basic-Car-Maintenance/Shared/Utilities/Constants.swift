@@ -40,8 +40,9 @@ enum SFSymbol {
     static let appIcon = "apps.iphone"
     
     //ChoseAopIcon View icons
-    static let checkmark = "checkmarkImage"
-    
+    static let checkmarkSelected = "checkmark.circle.fill"
+    static let checkmarkNotSelected = "circle"
+
     //ContributorsProfileView icon
     static let personcircle = "person.circle.fill"
   
