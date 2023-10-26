@@ -44,7 +44,5 @@ enum SFSymbol {
     
     //ContributorsProfileView icon
     static let personcircle = "person.circle.fill"
-
-    
-    
+  
 }
