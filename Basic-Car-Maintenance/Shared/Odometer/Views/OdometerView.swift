@@ -47,7 +47,7 @@ struct OdometerView: View {
                     Button {
                         viewModel.isShowingAddOdometerReading = true
                     } label: {
-                        Image(systemName: "plus")
+                        Image(systemName: SFSymbol.add)
                     }
                 }
             }
