@@ -22,7 +22,8 @@ class DashboardViewModel {
     var sortOption: SortOption = .custom
     var vehicles = [Vehicle]()
     var searchText: String = ""
-    
+    var fetchingMaintenanceEvents = false
+
     var sortedEvents: [MaintenanceEvent] {
         switch sortOption {
         case .oldestToNewest: events.sorted { $0.date < $1.date }
@@ -66,6 +67,8 @@ class DashboardViewModel {
     }
     
     func getMaintenanceEvents() async {
+        fetchingMaintenanceEvents = true
+
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
             let docRef = db.collection(FirestoreCollection.maintenanceEvents)
@@ -81,6 +84,7 @@ class DashboardViewModel {
                         events.append(event)
                     }
                 }
+                self.fetchingMaintenanceEvents = false
                 self.events = events
             }
         }
