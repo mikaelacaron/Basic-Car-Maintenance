@@ -32,18 +32,18 @@ enum SFSymbol {
     static let pencil = "pencil"
     static let magnifyingGlass = "magnifyingglass"
     
-    // Settings icons
+    // Settings
     static let document = "doc.badge.plus"
     static let reportBug = "ladybug"
     static let contributors = "person.3.fill"
     static let person = "person"
     static let iPhoneWithApps = "apps.iphone"
     
-    // ChoseAopIcon View icons
+    // ChoseAopIcon View
     static let checkmarkFill = "checkmark.circle.fill"
     static let circle = "circle"
 
-    // ContributorsProfileView icon
+    // ContributorsProfileView
     static let personCircle = "person.circle.fill"
   
 }
