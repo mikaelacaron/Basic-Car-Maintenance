@@ -2145,47 +2145,6 @@
         }
       }
     },
-    "OdometerView, coming soon" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Адометр, хутка будзе"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kilometerzähler ist bald verfügbar"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ओडोमीटर जानकारी स्क्रीन, जल्द ही आ रही है"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "주행거리 뷰, 곧 출시 예정입니다"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Одометр скоро появится"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Одометр, скоро буде"
-          }
-        }
-      }
-    },
     "OK" : {
       "comment" : "Label to dismiss alert",
       "localizations" : {
@@ -3630,7 +3589,6 @@
     },
     "Version %@ (%@)" : {
       "comment" : "Label to display version and build number.",
-      "extractionState" : "stale",
       "localizations" : {
         "be" : {
           "stringUnit" : {
