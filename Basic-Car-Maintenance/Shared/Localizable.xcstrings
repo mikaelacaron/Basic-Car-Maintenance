@@ -1622,6 +1622,9 @@
         }
       }
     },
+    "It's open source and anyone can contribute to it." : {
+      "comment" : "Tells the user they can contribute to the codebase."
+    },
     "Kilometers" : {
       "localizations" : {
         "uk" : {
@@ -2693,6 +2696,9 @@
           }
         }
       }
+    },
+    "Thanks for using this app!" : {
+      "comment" : "Thanks a user for using the app."
     },
     "Thanks for using this app! It's open source and anyone can contribute to it." : {
       "comment" : "Thanks a user for using the app and tells the user they can contribute to the codebase",
