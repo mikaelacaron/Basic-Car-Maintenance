@@ -4408,8 +4408,11 @@
         }
       }
     },
+    "Update Odometer" : {
+
+    },
     "Vehicle" : {
-      "comment" : "Maintenance event vehicle picker header",
+      "comment" : "Maintenance event vehicle picker header\nOdometer reading vehicle picker header",
       "localizations" : {
         "be" : {
           "stringUnit" : {

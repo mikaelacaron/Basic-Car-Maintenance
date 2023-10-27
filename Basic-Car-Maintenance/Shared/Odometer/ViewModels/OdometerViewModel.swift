@@ -73,6 +73,26 @@ class OdometerViewModel {
         }
     }
     
+    func updateReading(_ odometerReading: OdometerReading) async {
+        
+        if let uid = authenticationViewModel.user?.uid {
+            guard let id = odometerReading.id else { return }
+            var readingToUpdate = odometerReading
+            readingToUpdate.userID = uid
+            do {
+                try Firestore
+                    .firestore()
+                    .collection(FirestoreCollection.odometerReadings)
+                    .document(id)
+                    .setData(from: readingToUpdate)
+            } catch {
+                showAddErrorAlert.toggle()
+                errorMessage = error.localizedDescription
+            }
+        }
+        await self.getOdometerReadings()
+    }
+    
     func getVehicles() async {
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
