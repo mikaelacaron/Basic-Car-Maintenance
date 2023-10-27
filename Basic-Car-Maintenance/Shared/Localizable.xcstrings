@@ -2005,6 +2005,12 @@
             "value" : "제조사"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marca"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2021,6 +2027,12 @@
     },
     "Miles" : {
       "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Milhas"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2071,6 +2083,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "모델"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modelo"
           }
         },
         "ru" : {
@@ -2129,6 +2147,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량명"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nome"
           }
         },
         "ru" : {
@@ -2190,6 +2214,12 @@
             "value" : "최신순에서 오래된 순"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mais novo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2228,6 +2258,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "결과 없음"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sem resultados"
           }
         },
         "ru" : {
@@ -2289,6 +2325,12 @@
             "value" : "노트"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notas"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2327,6 +2369,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "주행거리 계기"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odometro"
           }
         },
         "ru" : {
@@ -2388,6 +2436,12 @@
             "value" : "확인"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2447,6 +2501,12 @@
             "value" : "오래된 순에서 최신순으로"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mais antigo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2464,6 +2524,12 @@
     "Preferred units" : {
       "comment" : "Label for units selected when adding an odometer reading",
       "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unidades preferenciais"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2478,6 +2544,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Палітыка прыватнасці"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Politica de privacidade"
           }
         },
         "uk" : {
@@ -2533,6 +2605,12 @@
             "value" : "프로필"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perfil"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2571,6 +2649,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "더 보기..."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leia mais..."
           }
         },
         "ru" : {
@@ -2632,6 +2716,12 @@
             "value" : "버그 신고"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reportar erro"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2691,6 +2781,12 @@
             "value" : "새로운 기능 요청"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sugerir nova funcionalidade"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2724,6 +2820,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량 선택"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecionar veiculo"
           }
         },
         "ru" : {
@@ -2785,6 +2887,12 @@
             "value" : "설정"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configurações"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2841,6 +2949,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "로그아웃"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desconectar"
           }
         },
         "ru" : {
@@ -2901,6 +3015,12 @@
             "value" : "%@으로 로그인되었습니다"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conectado como %@"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2916,7 +3036,15 @@
       }
     },
     "Thanks for using this app!" : {
-      "comment" : "Thanks a user for using the app."
+      "comment" : "Thanks a user for using the app.",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obrigado por usar nosso App"
+          }
+        }
+      }
     },
     "Thanks for using this app! It's open source and anyone can contribute to it." : {
       "comment" : "Thanks a user for using the app and tells the user they can contribute to the codebase",
@@ -2961,6 +3089,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이 앱을 사용해 주셔서 감사합니다! 이 앱은 오픈 소스로 누구나 기여할 수 있습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obrigado por usar nosso App., Esse é um projeto open source qualquer um pode contribuir"
           }
         },
         "ru" : {
@@ -3022,6 +3156,12 @@
             "value" : "이벤트 제목"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O titulo do evento"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3060,6 +3200,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@에 대한 유지 보수 이벤트가 없습니다. 새로운 검색을 시도하세요."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nao ha eventos de manutenção para %@. Faca uma nova pesquisa"
           }
         },
         "ru" : {
@@ -3102,6 +3248,12 @@
             "value" : "이 앱 아이콘이 홈 화면에 나타납니다."
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esse icone aparecerá na sua Home Screen"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3140,6 +3292,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이것은 제목입니다"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esse é o titulo"
           }
         },
         "ru" : {
@@ -3201,6 +3359,12 @@
             "value" : "제목"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titulo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3260,6 +3424,12 @@
             "value" : "유지 보수 이벤트 제목"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titulo do evento de manutenção"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3312,6 +3482,12 @@
             "value" : "업데이트"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atualizar"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3353,6 +3529,12 @@
             "value" : "유지 보수 업데이트"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atualizar manutenção"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3386,6 +3568,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veiculo"
           }
         },
         "ru" : {
@@ -3422,6 +3610,12 @@
             "value" : "차량 색상"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cor do veiculo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3454,6 +3648,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량 번호판 번호"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placa do veiculo"
           }
         },
         "ru" : {
@@ -3514,6 +3714,12 @@
             "value" : "차량 제조사"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marca do veiculo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3570,6 +3776,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량 모델"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modelo do veiculo"
           }
         },
         "ru" : {
@@ -3630,6 +3842,12 @@
             "value" : "차량 이름"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nome do veiculo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3664,6 +3882,12 @@
             "value" : "차량 VIN"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numero do registro do veiculo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3696,6 +3920,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량 연도"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ano do veiculo"
           }
         },
         "ru" : {
@@ -3757,6 +3987,12 @@
             "value" : "차량"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veiculos"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3778,6 +4014,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vehicle"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veiculo"
           }
         },
         "uk" : {
@@ -3839,6 +4081,12 @@
             "value" : "버전 %@ (%@)"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versão: %@ (%@)"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3865,6 +4113,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "VIN"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numero de registro"
           }
         },
         "ru" : {
@@ -3899,6 +4153,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "연도"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ano"
           }
         },
         "ru" : {
