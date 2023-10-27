@@ -61,6 +61,12 @@
     },
     "%lld %@" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -77,6 +83,12 @@
     },
     "🤠" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -259,6 +271,12 @@
     "Add Reading" : {
       "comment" : "Title for form when adding an odometer reading",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KM-Stand hinzufügen"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -387,6 +405,12 @@
     "Add your first odometer" : {
       "comment" : "Placeholder text for empty odometer reading list",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ersten Kilometerstand hinzufügen"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1055,6 +1079,12 @@
     },
     "Distance" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entfernung"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1623,10 +1653,24 @@
       }
     },
     "It's open source and anyone can contribute to it." : {
-      "comment" : "Tells the user they can contribute to the codebase."
+      "comment" : "Tells the user they can contribute to the codebase.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es ist Open Source und jede und jeder kann mitwirken."
+          }
+        }
+      }
     },
     "Kilometers" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kilometer"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1729,6 +1773,12 @@
     },
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1803,6 +1853,12 @@
     },
     "Miles" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meilen"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2096,7 +2152,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kilometerzähler"
+            "value" : "Kilometerstand"
           }
         },
         "hi" : {
@@ -2246,6 +2302,12 @@
     "Preferred units" : {
       "comment" : "Label for units selected when adding an odometer reading",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bevorzugte Masseinheiten"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2260,6 +2322,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Палітыка прыватнасці"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datenschutzrichtlinie"
           }
         },
         "uk" : {
@@ -2698,7 +2766,15 @@
       }
     },
     "Thanks for using this app!" : {
-      "comment" : "Thanks a user for using the app."
+      "comment" : "Thanks a user for using the app.",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danke, dass Sie diese App nutzen."
+          }
+        }
+      }
     },
     "Thanks for using this app! It's open source and anyone can contribute to it." : {
       "comment" : "Thanks a user for using the app and tells the user they can contribute to the codebase",
@@ -3556,6 +3632,12 @@
     "VehicleSectionHeader" : {
       "comment" : "Label for Picker for selecting a vehicle",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
