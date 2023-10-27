@@ -124,6 +124,12 @@
             "value" : "🦄 Mikaela Caron - 유지관리자"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 Mikaela Caron - Lider"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -181,6 +187,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "추가"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adicionar"
           }
         },
         "ru" : {
@@ -242,6 +254,12 @@
             "value" : "유지 추가"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adicionar manutenção"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -259,6 +277,12 @@
     "Add Reading" : {
       "comment" : "Title for form when adding an odometer reading",
       "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adicionar leitura"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -310,6 +334,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량 추가"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adicionar veiculo"
           }
         },
         "ru" : {
@@ -370,6 +400,12 @@
             "value" : "첫번째 유지관리 추가"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adicionar primeira manutençao"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -387,6 +423,12 @@
     "Add your first odometer" : {
       "comment" : "Placeholder text for empty odometer reading list",
       "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adicionar primeiro odometro"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -438,6 +480,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "추가 노트"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adicionar notas"
           }
         },
         "ru" : {
@@ -498,6 +546,12 @@
             "value" : "에러 발생"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ocorreu um erro"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -550,6 +604,12 @@
             "value" : " 취소"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -588,6 +648,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "앱아이콘 변경"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trocar icone do App"
           }
         },
         "ru" : {
@@ -630,6 +696,12 @@
             "value" : "앱아이콘 선택"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolha um icone"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -662,6 +734,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "색깔"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cor"
           }
         },
         "ru" : {
@@ -723,6 +801,12 @@
             "value" : "기여자들"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Equipe"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -762,6 +846,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "복사완료!"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiado"
           }
         },
         "ru" : {
@@ -821,6 +911,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "커스텀"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personalizado"
           }
         },
         "ru" : {
