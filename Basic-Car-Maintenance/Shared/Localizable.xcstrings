@@ -977,6 +977,12 @@
             "value" : "대시보드"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Painel"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1034,6 +1040,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "날짜"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data"
           }
         },
         "ru" : {
@@ -1095,6 +1107,12 @@
             "value" : "삭제"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deletar"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1135,6 +1153,12 @@
             "value" : "닫기"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dispensar"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1151,6 +1175,12 @@
     },
     "Distance" : {
       "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Distancia"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1195,6 +1225,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "편집"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar"
           }
         },
         "ru" : {
@@ -1249,6 +1285,12 @@
             "value" : "차량 추가 실패"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erro ao adicionar veiculo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1299,6 +1341,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량 세부 정보를 불러오지 못했습니다: %@"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ocorreu um erro ao adicionar veiculo. Erro: %@"
           }
         },
         "ru" : {
@@ -1360,6 +1408,12 @@
             "value" : "차량 추가에 실패했습니다. 알 수 없는 오류입니다."
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ocorreu um erro ao adicionar o veiculo. Erro desconhecido"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1416,6 +1470,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이벤트 삭제에 실패했습니다."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erro ao deletar evento"
           }
         },
         "ru" : {
@@ -1477,6 +1537,12 @@
             "value" : "차량 삭제에 실패했습니다."
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erro ao deletar veiculo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1536,6 +1602,12 @@
             "value" : "차량 세부 정보 삭제에 실패했습니다: %@"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erro ao deletar veiculo. Erro: %@"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1589,6 +1661,12 @@
             "value" : "차량 삭제에 실패했습니다. 알 수 없는 오류입니다."
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erro ao deletar veiculo. Erro desconhecido"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1617,6 +1695,12 @@
             "value" : "Filter"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtro"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1643,6 +1727,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "대상 차량: %@"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para %@"
           }
         },
         "ru" : {
@@ -1704,6 +1794,12 @@
             "value" : "GitHub 저장소"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repositorio do Github"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1719,10 +1815,24 @@
       }
     },
     "It's open source and anyone can contribute to it." : {
-      "comment" : "Tells the user they can contribute to the codebase."
+      "comment" : "Tells the user they can contribute to the codebase.",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esse é um projeto open source todos podem contribuir"
+          }
+        }
+      }
     },
     "Kilometers" : {
       "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kilometros"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1749,6 +1859,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량 번호판"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numero da placa"
           }
         },
         "ru" : {
@@ -1807,6 +1923,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "익명으로 로그인되었습니다. ID: %@"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logado anonimamente com ID: %@"
           }
         },
         "ru" : {
