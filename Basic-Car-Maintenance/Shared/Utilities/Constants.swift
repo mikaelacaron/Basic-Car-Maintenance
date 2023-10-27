@@ -34,7 +34,7 @@ enum SFSymbol {
     
     // Settings icons
     static let document = "doc.badge.plus"
-    static let reportbug = "ladybug"
+    static let reportBug = "ladybug"
     static let contributors = "person.3.fill"
     static let person = "person"
     static let iPhoneWithApps = "apps.iphone"
