@@ -10,15 +10,17 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 struct SettingsView: View {
+    @Environment(ActionService.self) var actionService
+    @Environment(\.scenePhase) var scenePhase
+    @Environment(\.colorScheme) var colorScheme
+    
     @State private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
     @State private var showDeleteVehicleError = false
     @State private var showAddVehicleError = false
-    @Environment(ActionService.self) var actionService
-    @Environment(\.scenePhase) var scenePhase
-    @Environment(\.colorScheme) var colorScheme
     @State private var errorDetails: Error?
     @State private var copiedAppVersion: Bool = false
+    
     private let appVersion = "Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))"
     
     init(authenticationViewModel: AuthenticationViewModel) {
@@ -142,8 +144,8 @@ struct SettingsView: View {
                     Link("Privacy Policy", destination: privacyURL)
                 }
                 
-                // swiftlint:disable:next line_length
-                Text(LocalizedStringKey(stringLiteral: appVersion), comment: "Label to display version and build number.")
+                Text(LocalizedStringKey(appVersion),
+                     comment: "Label to display version and build number.")
                     .frame(maxWidth: .infinity, alignment: .center)
                     .onLongPressGesture {
                         let clipboard = UIPasteboard.general
