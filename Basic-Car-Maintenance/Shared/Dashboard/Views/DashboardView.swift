@@ -43,7 +43,7 @@ struct DashboardView: View {
                                 await viewModel.deleteEvent(event)
                             }
                         } label: {
-                            Image(systemName:  SFSymbol.trash)
+                            Image(systemName: SFSymbol.trash)
                         }
                         
                         Button {
@@ -52,7 +52,7 @@ struct DashboardView: View {
                         } label: {
                             VStack {
                                 Text("Edit")
-                                Image(systemName:  SFSymbol.pencil)
+                                Image(systemName: SFSymbol.pencil)
                             }
                         }
                     }
@@ -107,10 +107,10 @@ struct DashboardView: View {
                     Button {
                         viewModel.isShowingAddMaintenanceEvent = true
                     } label: {
-                        Image(systemName:  SFSymbol.plus)
+                        Image(systemName: SFSymbol.plus)
                     }
                     .accessibilityShowsLargeContentViewer {
-                        Label("Add", systemImage:  SFSymbol.plus)
+                        Label("Add", systemImage: SFSymbol.plus)
                     }
                 }
             }

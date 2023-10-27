@@ -66,7 +66,7 @@ struct SettingsView: View {
                         Label {
                             Text("Report a Bug", comment: "Link to report a bug")
                         } icon: {
-                            Image(systemName: SFSymbol.reportBug)
+                            Image(systemName: SFSymbol.ladybug)
                                 .resizable()
                                 .frame(width: 20, height: 20)
                         }

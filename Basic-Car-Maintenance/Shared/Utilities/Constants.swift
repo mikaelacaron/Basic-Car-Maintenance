@@ -18,7 +18,7 @@ enum FirestoreField {
 }
 
 enum SFSymbol {
-    // Tabview
+    // MainTabView
     static let dashboard = "list.dash.header.rectangle"
     static let gauge = "gauge"
     static let gear = "gear"
@@ -34,7 +34,7 @@ enum SFSymbol {
     
     // Settings
     static let document = "doc.badge.plus"
-    static let reportBug = "ladybug"
+    static let ladybug = "ladybug"
     static let contributors = "person.3.fill"
     static let person = "person"
     static let iPhoneWithApps = "apps.iphone"
