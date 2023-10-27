@@ -52,7 +52,7 @@ struct DashboardView: View {
                         } label: {
                             VStack {
                                 Text("Edit")
-                                Image(systemName:  SFSymbol.edit)
+                                Image(systemName:  SFSymbol.pencil)
                             }
                         }
                     }
@@ -70,7 +70,7 @@ struct DashboardView: View {
                     Text("Add your first maintenance")
                 } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
                     ContentUnavailableView("No results",
-                                           systemImage: SFSymbol.magnifyingglass,
+                                           systemImage: SFSymbol.magnifyingGlass,
                                            description: noSearchResultsDescription)
                 }
             }
@@ -107,10 +107,10 @@ struct DashboardView: View {
                     Button {
                         viewModel.isShowingAddMaintenanceEvent = true
                     } label: {
-                        Image(systemName:  SFSymbol.add)
+                        Image(systemName:  SFSymbol.plus)
                     }
                     .accessibilityShowsLargeContentViewer {
-                        Label("Add", systemImage:  SFSymbol.add)
+                        Label("Add", systemImage:  SFSymbol.plus)
                     }
                 }
             }

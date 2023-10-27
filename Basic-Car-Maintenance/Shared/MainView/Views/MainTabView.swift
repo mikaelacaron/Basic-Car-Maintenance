@@ -32,13 +32,13 @@ struct MainTabView: View {
             OdometerView(authenticationViewModel: authenticationViewModel)
                 .tag(TabSelection.odometer)
                 .tabItem {
-                    Label("Odometer", systemImage: SFSymbol.odometer)
+                    Label("Odometer", systemImage: SFSymbol.gauge)
                 }
             
             SettingsView(authenticationViewModel: authenticationViewModel)
                 .tag(TabSelection.settings)
                 .tabItem {
-                    Label("Settings", systemImage: SFSymbol.settings)
+                    Label("Settings", systemImage: SFSymbol.gear)
                 }
         }
         .sheet(isPresented: $isShowingRealTimeAlert) {

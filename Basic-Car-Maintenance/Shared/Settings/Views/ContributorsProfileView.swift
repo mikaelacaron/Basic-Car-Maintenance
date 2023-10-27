@@ -34,14 +34,14 @@ struct ContributorsProfileView: View {
                         .clipShape(Circle())
                     
                 case .failure:
-                    Image(systemName: SFSymbol.personcircle)
+                    Image(systemName: SFSymbol.personCircle)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: imageSize, height: imageSize)
                         .foregroundColor(.gray)
                     
                 @unknown default:
-                    Image(systemName: SFSymbol.personcircle)
+                    Image(systemName: SFSymbol.personCircle)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: imageSize, height: imageSize)

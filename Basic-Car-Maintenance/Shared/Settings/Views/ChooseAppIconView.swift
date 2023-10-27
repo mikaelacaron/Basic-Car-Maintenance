@@ -22,7 +22,7 @@ struct ChooseAppIconView: View {
         Form {
             Section {
                 HStack {
-                    Image(systemName: SFSymbol.appIcon)
+                    Image(systemName: SFSymbol.iPhoneWithApps)
                         .font(.title)
                     Text("This App Icon will appear on your Home Screen.")
                 }
@@ -49,7 +49,7 @@ extension ChooseAppIconView {
         let icon: AppIcon
         let isSelected: Bool
         var checkmarkImage: String {
-            isSelected ? SFSymbol.checkmarkSelected : SFSymbol.checkmarkNotSelected
+            isSelected ? SFSymbol.checkmarkFill : SFSymbol.circle
         }
         
         var body: some View {

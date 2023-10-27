@@ -56,7 +56,7 @@ struct SettingsView: View {
                         Label {
                             Text("Request a New Feature", comment: "Link to request a new feature.")
                         } icon: {
-                            Image(systemName: "doc.badge.plus")
+                            Image(systemName: SFSymbol.document)
                                 .resizable()
                                 .frame(width: 20, height: 20)
                         }
@@ -66,7 +66,7 @@ struct SettingsView: View {
                         Label {
                             Text("Report a Bug", comment: "Link to report a bug")
                         } icon: {
-                            Image(systemName: "ladybug")
+                            Image(systemName: SFSymbol.reportBug)
                                 .resizable()
                                 .frame(width: 20, height: 20)
                         }
@@ -76,7 +76,7 @@ struct SettingsView: View {
                         ContributorsListView(viewModel: viewModel)
                     } label: {
                         HStack {
-                            Image(systemName: "person.3.fill")
+                            Image(systemName: SFSymbol.contributors)
                             Text("Contributors", comment: "Link to contributors list.")
                         }
                     }
@@ -133,14 +133,14 @@ struct SettingsView: View {
                         Label {
                             Text("Profile", comment: "Link to view profile.")
                         } icon: {
-                            Image(systemName: SFSymbol.profile)
+                            Image(systemName: SFSymbol.person)
                         }
                     }
                     
                     NavigationLink {
                         ChooseAppIconView(viewModel: ChooseAppIconViewModel())
                     } label: {
-                        Label("Change App Icon", systemImage: SFSymbol.appIcon)
+                        Label("Change App Icon", systemImage: SFSymbol.iPhoneWithApps)
                     }
                 }
                 
