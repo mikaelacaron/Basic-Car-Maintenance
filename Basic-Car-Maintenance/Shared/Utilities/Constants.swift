@@ -21,7 +21,7 @@ enum SFSymbol {
     // Tabview
     static let dashboard = "list.dash.header.rectangle"
     static let gauge = "gauge"
-    static let settings = "gear"
+    static let gear = "gear"
 
     // Navigation Items
     static let filter = "line.3.horizontal.decrease.circle"
