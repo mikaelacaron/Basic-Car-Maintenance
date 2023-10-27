@@ -18,32 +18,32 @@ enum FirestoreField {
 }
 
 enum SFSymbol {
-    //Tabview icons
+    // Tabview
     static let dashboard = "list.dash.header.rectangle"
     static let odometer = "gauge"
     static let settings = "gear"
 
-    //Navigation header icons
+    // Navigation Items
     static let filter = "line.3.horizontal.decrease.circle"
     static let add = "plus"
     
-    //Dashboard icons
+    // Dashboard
     static let trash = "trash"
     static let edit = "pencil"
     static let magnifyingglass = "magnifyingglass"
     
-    //Settings icons
+    // Settings icons
     static let document = "doc.badge.plus"
     static let reportbug = "ladybug"
     static let contributors = "person.3.fill"
     static let profile = "person"
     static let appIcon = "apps.iphone"
     
-    //ChoseAopIcon View icons
+    // ChoseAopIcon View icons
     static let checkmarkSelected = "checkmark.circle.fill"
     static let checkmarkNotSelected = "circle"
 
-    //ContributorsProfileView icon
+    // ContributorsProfileView icon
     static let personcircle = "person.circle.fill"
   
 }
