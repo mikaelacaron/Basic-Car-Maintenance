@@ -1,3784 +1,4258 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "%@" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+  "sourceLanguage": "en",
+  "strings": {
+    "%@": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         }
       }
     },
-    "%lld %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+    "%lld %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$lld %2$@"
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld %2$@"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld %2$@"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld %2$@"
           }
         }
       }
     },
-    "🤠" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+    "🤠": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🤠"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🤠"
           }
         }
       }
     },
-    "🦄 Mikaela Caron - Maintainer" : {
-      "comment" : "Link to maintainer Github account.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🦄 Mikaela Caron - Суправаджальніца"
+    "🦄 Mikaela Caron - Maintainer": {
+      "comment": "Link to maintainer Github account.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🦄 Mikaela Caron - Суправаджальніца"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🦄 Mikaela Caron - Hlavní vývojář"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🦄 Mikaela Caron - Hlavní vývojář"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🦄 Mikaela Caron - Maintainer"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🦄 Mikaela Caron - Maintainer"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🦄 Mikaela Caron - Maintaineur"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🦄 Mikaela Caron - Maintaineur"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🦄 मिकाएला कैरोन - अभिरक्षक"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🦄 मिकाएला कैरोन - अभिरक्षक"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🦄 Mikaela Caron - 유지관리자"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🦄 Mikaela Caron - 유지관리자"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🦄 Микаэла Карон - администратор"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🦄 Mikaela Caron - Lider"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "🦄 Мікаела Карон - адміністраторка"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🦄 Микаэла Карон - администратор"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "🦄 Мікаела Карон - адміністраторка"
+          }
         }
       }
     },
-    "Add" : {
-      "comment" : "Label for submit button on form to add an entry",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дадаць"
+    "Add": {
+      "comment": "Label for submit button on form to add an entry",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадаць"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přidat"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Přidat"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hinzufügen"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hinzufügen"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agregar"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Agregar"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajouter"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "दर्ज करें"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "दर्ज करें"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "추가"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "추가"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Добавить"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Додати"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Додати"
           }
         }
       }
     },
-    "Add Maintenance" : {
-      "comment" : "Nagivation title for Add Maintenance view",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дадаць абслугоўванне"
+    "Add Maintenance": {
+      "comment": "Nagivation title for Add Maintenance view",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадаць абслугоўванне"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Přidat servisní záznam"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přidat servisní záznam"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wartung hinzufügen"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wartung hinzufügen"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Agregar Mantenimiento"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agregar Mantenimiento"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajouter une maintenance"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter une maintenance"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "रखरखाव दर्ज करें"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "रखरखाव दर्ज करें"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "유지 추가"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "유지 추가"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Добавить обслуживание"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar manutenção"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Додати обслуговування"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить обслуживание"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Додати обслуговування"
+          }
         }
       }
     },
-    "Add Reading" : {
-      "comment" : "Title for form when adding an odometer reading",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "KM-Stand hinzufügen"
+    "Add Reading": {
+      "comment": "Title for form when adding an odometer reading",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "KM-Stand hinzufügen"
+          },
+          "pt-BR": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Adicionar leitura"
+            }
+          },
+          "uk": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Додати значення"
+            }
           }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Додати значення"
-          }
         }
       }
     },
-    "Add Vehicle" : {
-      "comment" : "Label to add a vehicle.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дадаць транспартны сродак"
+    "Add Vehicle": {
+      "comment": "Label to add a vehicle.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадаць транспартны сродак"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přidat vozidlo"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Přidat vozidlo"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeug hinzufügen"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeug hinzufügen"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añadir Vehículo"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Añadir Vehículo"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter un véhicule"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajouter un véhicule"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वाहन दर्ज करें"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वाहन दर्ज करें"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 추가"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 추가"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar veiculo"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Добавить машину"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить машину"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Додати авто"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Додати авто"
           }
         }
       }
     },
-    "Add your first maintenance" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дадайце першае абслугоўванне"
+    "Add your first maintenance": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадайце першае абслугоўванне"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přidat první servisní záznam"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Přidat první servisní záznam"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erste Wartung hinzufügen"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Erste Wartung hinzufügen"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agrega tu primer mantenimiento"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Agrega tu primer mantenimiento"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajoutez votre première maintenance"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajoutez votre première maintenance"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अपना पहला रखरखाव दर्ज करें"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "अपना पहला रखरखाव दर्ज करें"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "첫번째 유지관리 추가"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "첫번째 유지관리 추가"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar primeira manutençao"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Добавить свое первое обслуживание"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить свое первое обслуживание"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Додайте своє перше обслуговування"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Додайте своє перше обслуговування"
           }
         }
       }
     },
-    "Add your first odometer" : {
-      "comment" : "Placeholder text for empty odometer reading list",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ersten Kilometerstand hinzufügen"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Додайте свій перший одометр"
+    "Add your first odometer": {
+      "comment": "Placeholder text for empty odometer reading list",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ersten Kilometerstand hinzufügen"
+          },
+          "pt-BR": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Adicionar primeiro odometro"
+            }
+          },
+          "uk": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Додайте свій перший одометр"
+            }
           }
         }
       }
     },
-    "Additional Notes" : {
-      "comment" : "Notes text field placeholder",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дадатковая інфармацыя"
+    "Additional Notes": {
+      "comment": "Notes text field placeholder",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадатковая інфармацыя"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Další poznámky"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Další poznámky"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weitere Notizen"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weitere Notizen"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Notas Adicionales"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notas Adicionales"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Notes additionnelles"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notes additionnelles"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "अतिरिक्त टिप्पणी"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अतिरिक्त टिप्पणी"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "추가 노트"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "추가 노트"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дополнительные заметки"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar notas"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Додаткові замітки"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дополнительные заметки"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Додаткові замітки"
+          }
         }
       }
     },
-    "An Error Occurred" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Адбылася памылка"
+    "An Error Occurred": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адбылася памылка"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nastala chyba"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nastala chyba"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Es ist ein Fehler aufgetreten"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Es ist ein Fehler aufgetreten"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ocurrió un Error"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ocurrió un Error"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Une erreur est survenue"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Une erreur est survenue"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "एक त्रुटि हुई"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "एक त्रुटि हुई"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "에러 발생"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "에러 발생"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Произошла ошибка"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ocorreu um erro"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Сталася помилка"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Произошла ошибка"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сталася помилка"
+          }
         }
       }
     },
-    "Cancel" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Адмяніць"
+    "Cancel": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адмяніць"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zrušit"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zrušit"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbrechen"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abbrechen"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annuler"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "रद्द करें"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "रद्द करें"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " 취소"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " 취소"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Отменить"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отменить"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Скасувати"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скасувати"
           }
         }
       }
     },
-    "Change App Icon" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Змяніць значок дадатка"
+    "Change App Icon": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Змяніць значок дадатка"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App Icon wechseln"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App Icon wechseln"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "एप्लिकेशन आइकन बदलें"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "एप्लिकेशन आइकन बदलें"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱아이콘 변경"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "앱아이콘 변경"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trocar icone do App"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Сменить иконку"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сменить иконку"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Змінити іконку додатку"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Змінити іконку додатку"
           }
         }
       }
     },
-    "Choose App Icon" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Выберыце значок дадатка"
+    "Choose App Icon": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выберыце значок дадатка"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wähle ein App Icon"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wähle ein App Icon"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ऐप आइकन चुनें"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ऐप आइकन चुनें"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱아이콘 선택"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "앱아이콘 선택"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escolha um icone"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Выбрать иконку"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выбрать иконку"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Оберіть іконки додатку"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Оберіть іконки додатку"
           }
         }
       }
     },
-    "Color" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Колер"
+    "Color": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Колер"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Farbe"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Farbe"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "색깔"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "색깔"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cor"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Цвет"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Цвет"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Колір"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Колір"
           }
         }
       }
     },
-    "Contributors" : {
-      "comment" : "Link to contributors list.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Удзельнікі"
+    "Contributors": {
+      "comment": "Link to contributors list.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удзельнікі"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Další vývojáři"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Další vývojáři"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mitwirkende"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mitwirkende"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contribuyentes"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Contribuyentes"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contributeurs"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Contributeurs"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "योगदानकर्ता"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "योगदानकर्ता"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "기여자들"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "기여자들"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Equipe"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Участники"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Участники"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Співтворці"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Співтворці"
           }
         }
       }
     },
-    "Copied!" : {
-      "comment" : "Text to notify user that app version was copied",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Скапіравана!"
+    "Copied!": {
+      "comment": "Text to notify user that app version was copied",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скапіравана!"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kopiert!"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopiert!"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "कॉपी किया गया"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कॉपी किया गया"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "복사완료!"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복사완료!"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Скопировано!"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiado"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Скопійовано!"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скопировано!"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скопійовано!"
+          }
         }
       }
     },
-    "Custom" : {
-      "comment" : "Sorting option that sorts items according to the user's preferences.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Вольны парадак"
+    "Custom": {
+      "comment": "Sorting option that sorts items according to the user's preferences.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вольны парадак"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vlastní"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vlastní"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Benutzerdefiniert"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Benutzerdefiniert"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Personalizado"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personalizado"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Personnalisé"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personnalisé"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "कस्टम"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कस्टम"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "커스텀"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "커스텀"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Изменить"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personalizado"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Власне"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Изменить"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Власне"
+          }
         }
       }
     },
-    "Dashboard" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дэшборд"
+    "Dashboard": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дэшборд"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přehled"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Přehled"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dashboard"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dashboard"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Panel"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Panel"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tableau de bord"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tableau de bord"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "डैशबोर्ड"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "डैशबोर्ड"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "대시보드"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "대시보드"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Painel"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дэшборд"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дэшборд"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Зведення"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зведення"
           }
         }
       }
     },
-    "Date" : {
-      "comment" : "Date picker label",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дата"
+    "Date": {
+      "comment": "Date picker label",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дата"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Datum"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Datum"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Datum"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Datum"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fecha"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fecha"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Date"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Date"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "तारीख"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "तारीख"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "날짜"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "날짜"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дата"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дата"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дата"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дата"
           }
         }
       }
     },
-    "Delete" : {
-      "comment" : "Label to delete a vehicle",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Выдаліць"
+    "Delete": {
+      "comment": "Label to delete a vehicle",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выдаліць"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smazat"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Smazat"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Löschen"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Löschen"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrar"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Borrar"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Supprimer"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "मिटायें"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "मिटायें"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "삭제"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "삭제"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deletar"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Удалить"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Видалити"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Видалити"
           }
         }
       }
     },
-    "Dismiss" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Адхіліць"
+    "Dismiss": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адхіліць"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verwerfen"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verwerfen"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "खारिज"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "खारिज"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "닫기"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "닫기"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Отклонить"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dispensar"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Закрити"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отклонить"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Закрити"
+          }
         }
       }
     },
-    "Distance" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entfernung"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Відстань"
+    "Distance": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entfernung"
+          },
+          "pt-BR": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Distancia"
+            }
+          },
+          "uk": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Відстань"
+            }
           }
         }
       }
     },
-    "Edit" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Рэдагаваць"
+    "Edit": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рэдагаваць"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Upravit"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upravit"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bearbeiten"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bearbeiten"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modifier"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifier"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "संपादित करें"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "संपादित करें"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "편집"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "편집"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Редактировать"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Редагувати"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Редактировать"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Редагувати"
+          }
         }
       }
     },
-    "Failed To Add Vehicle" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не атрымалася дадаць транспартны сродак"
+    "Failed To Add Vehicle": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не атрымалася дадаць транспартны сродак"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nelze přidat vozidlo"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nelze přidat vozidlo"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeug konnte nicht hinzugefügt werden"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeug konnte nicht hinzugefügt werden"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Impossible d'ajouter le véhicule"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible d'ajouter le véhicule"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वाहन दर्ज करने में विफलता।"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वाहन दर्ज करने में विफलता।"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 추가 실패"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 추가 실패"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не удалось добавить авто"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erro ao adicionar veiculo"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не вдалося видалити авто"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось добавить авто"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не вдалося видалити авто"
+          }
         }
       }
     },
-    "Failed To Add Vehicle\nDetails:%@" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не атрымалася дадаць транспартны сродак\nПадрабязнасці:%@"
+    "Failed To Add Vehicle\nDetails:%@": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не атрымалася дадаць транспартны сродак\nПадрабязнасці:%@"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nelze přidat detaily vozidla: %@"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nelze přidat detaily vozidla: %@"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeug konnte nicht hinzugefügt werden\nDetails:%@"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeug konnte nicht hinzugefügt werden\nDetails:%@"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible d'ajouter le véhicule\nDétails : %@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Impossible d'ajouter le véhicule\nDétails : %@"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वाहन दर्ज करने में विफलता:%@"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वाहन दर्ज करने में विफलता:%@"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 세부 정보를 불러오지 못했습니다: %@"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 세부 정보를 불러오지 못했습니다: %@"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ocorreu um erro ao adicionar veiculo. Erro: %@"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не удалось добавить авто\nДетали:%@"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось добавить авто\nДетали:%@"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не вдалося додати авто\nДеталі:%@"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не вдалося додати авто\nДеталі:%@"
           }
         }
       }
     },
-    "Failed To Add Vehicle. Unknown Error." : {
-      "comment" : "Label to display error details.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не атрымалася дадаць транспартны сродак. Невядомая памылка."
+    "Failed To Add Vehicle. Unknown Error.": {
+      "comment": "Label to display error details.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не атрымалася дадаць транспартны сродак. Невядомая памылка."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nelze přidat vozidlo. Příčina neznámá."
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nelze přidat vozidlo. Příčina neznámá."
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeug konnte nicht hinzugefügt werden. Unbekannter Fehler."
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeug konnte nicht hinzugefügt werden. Unbekannter Fehler."
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo Agregar el Vehículo. Error Desconocido."
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No se pudo Agregar el Vehículo. Error Desconocido."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible d'ajouter le véhicule. Erreur inconnue."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Impossible d'ajouter le véhicule. Erreur inconnue."
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वाहन दर्ज करने में विफलता। अज्ञात त्रुटि।"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वाहन दर्ज करने में विफलता। अज्ञात त्रुटि।"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 추가에 실패했습니다. 알 수 없는 오류입니다."
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 추가에 실패했습니다. 알 수 없는 오류입니다."
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ocorreu um erro ao adicionar o veiculo. Erro desconhecido"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не удалось добавить авто. Неизвестная ошибка"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось добавить авто. Неизвестная ошибка"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не вдалося додати авто. Невідома помилка."
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не вдалося додати авто. Невідома помилка."
           }
         }
       }
     },
-    "Failed To Delete Event" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не ўдалося выдаліць падзею"
+    "Failed To Delete Event": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не ўдалося выдаліць падзею"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nelze smazat událost"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nelze smazat událost"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Event konnte nicht gelöscht werden"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Event konnte nicht gelöscht werden"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo Eliminar el Evento"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No se pudo Eliminar el Evento"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible de supprimer l'évènement"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Impossible de supprimer l'évènement"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कार्यक्रम हटाने में विफलता"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "कार्यक्रम हटाने में विफलता"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이벤트 삭제에 실패했습니다."
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이벤트 삭제에 실패했습니다."
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erro ao deletar evento"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Удаление невозможно"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удаление невозможно"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не вдалося видалити подію"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не вдалося видалити подію"
           }
         }
       }
     },
-    "Failed To Delete Vehicle" : {
-      "comment" : "Label to dsplay title of the delete vehicle alert",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не ўдалося выдаліць транспартны сродак"
+    "Failed To Delete Vehicle": {
+      "comment": "Label to dsplay title of the delete vehicle alert",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не ўдалося выдаліць транспартны сродак"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nelze smazat vozidlo"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nelze smazat vozidlo"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeug konnte nicht gelöscht werden"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeug konnte nicht gelöscht werden"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No se pudo Eliminar el Vehículo"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo Eliminar el Vehículo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Impossible de supprimer le véhicule"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible de supprimer le véhicule"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वाहन मिटाने में विफलता"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वाहन मिटाने में विफलता"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 삭제에 실패했습니다."
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 삭제에 실패했습니다."
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Удаление авто невозможно"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erro ao deletar veiculo"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не вдалося видалити авто"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удаление авто невозможно"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не вдалося видалити авто"
+          }
         }
       }
     },
-    "Failed To Delete Vehicle\nDetails:%@" : {
-      "comment" : "Label to display localized error description.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не ўдалося выдаліць транспартны сродак Падрабязнасці:%@"
+    "Failed To Delete Vehicle\nDetails:%@": {
+      "comment": "Label to display localized error description.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не ўдалося выдаліць транспартны сродак Падрабязнасці:%@"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nelze smazat detail vozidla: %@"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nelze smazat detail vozidla: %@"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeug konnte nicht gelöscht werden.\nDetails: %@"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeug konnte nicht gelöscht werden.\nDetails: %@"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No se pudieron Eliminar los Detalles del Vehículo: %@"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudieron Eliminar los Detalles del Vehículo: %@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Impossible de supprimer le véhicule\nDétails : %@"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible de supprimer le véhicule\nDétails : %@"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वाहन की जानकारी मिटाने में विफलता:%@"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वाहन की जानकारी मिटाने में विफलता:%@"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 세부 정보 삭제에 실패했습니다: %@"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 세부 정보 삭제에 실패했습니다: %@"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Удаление авто невозможно\nДетали:%@"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erro ao deletar veiculo. Erro: %@"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не вдалося видалити авто\nДеталі:%@"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удаление авто невозможно\nДетали:%@"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не вдалося видалити авто\nДеталі:%@"
+          }
         }
       }
     },
-    "Failed To Delete Vehicle. Unknown Error." : {
-      "comment" : "Label to display error details.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не ўдалося выдаліць аўтамабіль. Невядомая памылка."
+    "Failed To Delete Vehicle. Unknown Error.": {
+      "comment": "Label to display error details.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не ўдалося выдаліць аўтамабіль. Невядомая памылка."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nelze smazat vozidlo. Příčina neznámá."
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nelze smazat vozidlo. Příčina neznámá."
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeug konnte nicht gelöscht werden. Unbekannter Fehler."
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeug konnte nicht gelöscht werden. Unbekannter Fehler."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible de supprimer le véhicule. Erreur inconnue."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Impossible de supprimer le véhicule. Erreur inconnue."
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वाहन मिटाने में विफलता। अज्ञात त्रुटि।"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वाहन मिटाने में विफलता। अज्ञात त्रुटि।"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 삭제에 실패했습니다. 알 수 없는 오류입니다."
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 삭제에 실패했습니다. 알 수 없는 오류입니다."
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erro ao deletar veiculo. Erro desconhecido"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Удаление авто невозможно. Ошибка неизвестна"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удаление авто невозможно. Ошибка неизвестна"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не вдалося видалити авто. Невідома помилка."
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не вдалося видалити авто. Невідома помилка."
           }
         }
       }
     },
-    "Filter" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Фільтр"
+    "Filter": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Фільтр"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filter"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filter"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filtro"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Фільтр"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Фільтр"
           }
         }
       }
     },
-    "For %@" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Для %@"
+    "For %@": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Для %@"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Für %@"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Für %@"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "대상 차량: %@"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "대상 차량: %@"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Para %@"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Для %@"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Для %@"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Для %@"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Для %@"
           }
         }
       }
     },
-    "GitHub Repo" : {
-      "comment" : "Link to the Basic Car Maintenance GitHub repo.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Рэпазітар на GitHub"
+    "GitHub Repo": {
+      "comment": "Link to the Basic Car Maintenance GitHub repo.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рэпазітар на GitHub"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Github Repozitář"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Github Repozitář"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "GitHub Repo"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "GitHub Repo"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Repositorio de GitHub"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repositorio de GitHub"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Repo GitHub"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repo GitHub"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "गिटहब रेपो"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "गिटहब रेपो"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "GitHub 저장소"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "GitHub 저장소"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "GitHub репозиторий"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repositorio do Github"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Сховище на GitHub"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "GitHub репозиторий"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сховище на GitHub"
+          }
         }
       }
     },
-    "It's open source and anyone can contribute to it." : {
-      "comment" : "Tells the user they can contribute to the codebase.",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Es ist Open Source und jede und jeder kann mitwirken."
+    "It's open source and anyone can contribute to it.": {
+      "comment": "Tells the user they can contribute to the codebase.",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Es ist Open Source und jede und jeder kann mitwirken."
+          },
+          "pt-BR": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Esse é um projeto open source todos podem contribuir"
+            }
           }
         }
       }
     },
-    "Kilometers" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kilometer"
+    "Kilometers": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kilometer"
+          },
+          "pt-BR": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Kilometros"
+            }
+          },
+          "uk": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Кілометри"
+            }
           }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Кілометри"
-          }
         }
       }
     },
-    "License Plate Number" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Нумарны знак"
+    "License Plate Number": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нумарны знак"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autokennzeichen"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autokennzeichen"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 번호판"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 번호판"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Numero da placa"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Номер лицензии"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Номер лицензии"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Номерний знак авта"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Номерний знак авта"
           }
         }
       }
     },
-    "Logged in anonymously with ID: %@" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ананімны ўваход з ідэнтыфікатарам: %@"
+    "Logged in anonymously with ID: %@": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ананімны ўваход з ідэнтыфікатарам: %@"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přihlášen anonymně jako ID: %@"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Přihlášen anonymně jako ID: %@"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anonym angemeldet mit ID: %@"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Anonym angemeldet mit ID: %@"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar sesión de forma anónima con ID: %@"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Iniciar sesión de forma anónima con ID: %@"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecté anonymement avec l'ID : %@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Connecté anonymement avec l'ID : %@"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "गुमनाम आईडी से लॉग इन किया गया: %@"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "गुमनाम आईडी से लॉग इन किया गया: %@"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "익명으로 로그인되었습니다. ID: %@"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "익명으로 로그인되었습니다. ID: %@"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logado anonimamente com ID: %@"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Включен анонимный режим с ID: %@"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Включен анонимный режим с ID: %@"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ви увійшли анонімно з ID: %@"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ви увійшли анонімно з ID: %@"
           }
         }
       }
     },
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "로렘 입숨(Lorem Ipsum)은 인쇄 및 조판 산업의 더미 텍스트(dummy text)로, 1500년대부터 산업의 표준 더미 텍스트로 사용되어 왔습니다. 알려지지 않은 인쇄인이 활자를 조합하여 표본 책을 만들기 위해 사용한 것이기도 합니다. 이 텍스트는 오직 다섯 세기뿐만 아니라 전자 조판으로의 진전에도 견디며 본질적으로 변하지 않았습니다. 1960년대에 Letraset 시트에 로렘 입숨 단락이 포함된 것으로 널리 알려지게 되었으며, 최근에는 Aldus PageMaker와 같은 데스크톱 퍼블리싱 소프트웨어에서도 로렘 입숨의 버전이 포함되어 사용되고 있습니다."
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "로렘 입숨(Lorem Ipsum)은 인쇄 및 조판 산업의 더미 텍스트(dummy text)로, 1500년대부터 산업의 표준 더미 텍스트로 사용되어 왔습니다. 알려지지 않은 인쇄인이 활자를 조합하여 표본 책을 만들기 위해 사용한 것이기도 합니다. 이 텍스트는 오직 다섯 세기뿐만 아니라 전자 조판으로의 진전에도 견디며 본질적으로 변하지 않았습니다. 1960년대에 Letraset 시트에 로렘 입숨 단락이 포함된 것으로 널리 알려지게 되었으며, 최근에는 Aldus PageMaker와 같은 데스크톱 퍼블리싱 소프트웨어에서도 로렘 입숨의 버전이 포함되어 사용되고 있습니다."
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Це випадково згенерована панграма українською мовою. На вершині гір живе цей цап зі своїм вірним другом, ягням. Ці незвичайні друзі завжди разом. Їхня неймовірна дружба ніколи не знає кінця. Цап завжди намагається бути в захопленні від краси природи, тому він завжди спостерігає за чудовими розцвітаючими квітами та жвавими метеликами. Ягня, з іншого боку, представляє собою спокій і ніжність. Його шерсть завжди м'яка і тепла, ніби пухнаста хмара в лагідному небі. Цей дивовижний світ, в якому вони живуть, наповнений гармонією та різноманіттям."
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Це випадково згенерована панграма українською мовою. На вершині гір живе цей цап зі своїм вірним другом, ягням. Ці незвичайні друзі завжди разом. Їхня неймовірна дружба ніколи не знає кінця. Цап завжди намагається бути в захопленні від краси природи, тому він завжди спостерігає за чудовими розцвітаючими квітами та жвавими метеликами. Ягня, з іншого боку, представляє собою спокій і ніжність. Його шерсть завжди м'яка і тепла, ніби пухнаста хмара в лагідному небі. Цей дивовижний світ, в якому вони живуть, наповнений гармонією та різноманіттям."
           }
         }
       }
     },
-    "Make" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Вытворца"
+    "Make": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вытворца"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Výrobce"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Výrobce"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hersteller"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hersteller"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marca"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Marca"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fabricant"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fabricant"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वाहन कंपनी"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वाहन कंपनी"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "제조사"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "제조사"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marca"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Производитель"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Производитель"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Виробник"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Виробник"
           }
         }
       }
     },
-    "Miles" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Meilen"
+    "Miles": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meilen"
+          },
+          "pt-BR": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Milhas"
+            }
+          },
+          "uk": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Милі"
+            }
           }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Милі"
-          }
         }
       }
     },
-    "Model" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Мадэль"
+    "Model": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мадэль"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Model"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Model"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modell"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modell"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modelo"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modelo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modèle"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modèle"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "मॉडल"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "मॉडल"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "모델"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "모델"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Модель"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modelo"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Модель"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Модель"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Модель"
+          }
         }
       }
     },
-    "Name" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Імя"
+    "Name": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Імя"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Název"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Název"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Name"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nombre"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nombre"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nom"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nom"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नाम"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "नाम"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량명"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량명"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nome"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Имя"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Имя"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Імʼя"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Імʼя"
           }
         }
       }
     },
-    "Newest to Oldest" : {
-      "comment" : "Sorting option that displays newer items first.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ад найноўшых да самых старых"
+    "Newest to Oldest": {
+      "comment": "Sorting option that displays newer items first.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ад найноўшых да самых старых"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Od nejnovějšího"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Od nejnovějšího"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neu vor alt"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Neu vor alt"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más Nuevo a Más Antiguo"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Más Nuevo a Más Antiguo"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du plus au moins récent"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Du plus au moins récent"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नवीनतम से सबसे पुराना"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "नवीनतम से सबसे पुराना"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "최신순에서 오래된 순"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "최신순에서 오래된 순"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mais novo"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "От нового к предыдущим"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "От нового к предыдущим"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Від найновіших до найстаріших"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Від найновіших до найстаріших"
           }
         }
       }
     },
-    "No results" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Вынікаў няма"
+    "No results": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вынікаў няма"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kein Ergebnis"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kein Ergebnis"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कोई परिणाम नहीं"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "कोई परिणाम नहीं"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "결과 없음"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "결과 없음"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem resultados"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Результата нет"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Результата нет"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Немає результатів"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Немає результатів"
           }
         }
       }
     },
-    "Notes" : {
-      "comment" : "Maintenance event notes text field label",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Нататкі"
+    "Notes": {
+      "comment": "Maintenance event notes text field label",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нататкі"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poznámky"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Poznámky"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notizen"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Notizen"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notas"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Notas"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notes"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Notes"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टिप्पणी"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "टिप्पणी"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "노트"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "노트"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notas"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Заметки"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Заметки"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Замітки"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Замітки"
           }
         }
       }
     },
-    "Odometer" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Адометр"
+    "Odometer": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адометр"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kilometerstand"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kilometerstand"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ओडोमीटर"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ओडोमीटर"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "주행거리 계기"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "주행거리 계기"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odometro"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Одометр"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Одометр"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Одометр"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Одометр"
           }
         }
       }
     },
-    "OK" : {
-      "comment" : "Label to dismiss alert",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Добра"
+    "OK": {
+      "comment": "Label to dismiss alert",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добра"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ठीक है"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ठीक है"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "확인"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "확인"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ОК"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Добре"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ОК"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добре"
+          }
         }
       }
     },
-    "Oldest to Newest" : {
-      "comment" : "Sorting option that displays older items first.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ад самых старых да новых"
+    "Oldest to Newest": {
+      "comment": "Sorting option that displays older items first.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ад самых старых да новых"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Od nejstaršího"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Od nejstaršího"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alt vor neu"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alt vor neu"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Más Antiguo a Más Nuevo "
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más Antiguo a Más Nuevo "
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Du moins au plus récent"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du moins au plus récent"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "सबसे पुराने से नवीनतम"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सबसे पुराने से नवीनतम"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "오래된 순에서 최신순으로"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "오래된 순에서 최신순으로"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "От предыдущих до новых"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mais antigo"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Від найстаріших до найновіших"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "От предыдущих до новых"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Від найстаріших до найновіших"
+          }
         }
       }
     },
-    "Preferred units" : {
-      "comment" : "Label for units selected when adding an odometer reading",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bevorzugte Masseinheiten"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Бажані одиниці виміру"
+    "Preferred units": {
+      "comment": "Label for units selected when adding an odometer reading",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bevorzugte Masseinheiten"
+          },
+          "pt-BR": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Unidades preferenciais"
+            }
+          },
+          "uk": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Бажані одиниці виміру"
+            }
           }
         }
       }
     },
-    "Privacy Policy" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Палітыка прыватнасці"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Datenschutzrichtlinie"
+    "Privacy Policy": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Палітыка прыватнасці"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Політика приватності"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Datenschutzrichtlinie"
+          },
+          "pt-BR": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Politica de privacidade"
+            }
+          },
+          "uk": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Політика приватності"
+            }
           }
         }
       }
     },
-    "Profile" : {
-      "comment" : "Link to view profile.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Профіль"
+    "Profile": {
+      "comment": "Link to view profile.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Профіль"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Profil"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Profil"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perfil"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Perfil"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Profil"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "प्रोफ़ाइल"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "प्रोफ़ाइल"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "프로필"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "프로필"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perfil"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Профиль"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Профиль"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Профіль"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Профіль"
           }
         }
       }
     },
-    "Read More..." : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Больш падрабязна..."
+    "Read More...": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Больш падрабязна..."
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mehr lesen..."
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mehr lesen..."
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "और पढ़ें..."
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "और पढ़ें..."
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "더 보기..."
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "더 보기..."
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Читать больше..."
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leia mais..."
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дізнатися більше..."
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Читать больше..."
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дізнатися більше..."
+          }
         }
       }
     },
-    "Report a Bug" : {
-      "comment" : "Link to report a bug",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Паведаміць пра памылку"
+    "Report a Bug": {
+      "comment": "Link to report a bug",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Паведаміць пра памылку"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nahlásit chybu"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nahlásit chybu"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fehler melden"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fehler melden"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reportar un Error"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reportar un Error"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rapporter un bug"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rapporter un bug"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "समस्या रिपोर्ट करें"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "समस्या रिपोर्ट करें"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "버그 신고"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "버그 신고"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reportar erro"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Уведомление об ошибке"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Уведомление об ошибке"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Повідомити про помилку"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Повідомити про помилку"
           }
         }
       }
     },
-    "Request a New Feature" : {
-      "comment" : "Link to request a new feature.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Запытаць новую функцыю"
+    "Request a New Feature": {
+      "comment": "Link to request a new feature.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Запытаць новую функцыю"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Požadavek na novou funkci"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Požadavek na novou funkci"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Neues Feature vorschlagen"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neues Feature vorschlagen"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Solicitar una Nueva Característica"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solicitar una Nueva Característica"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Demander une nouvelle fonctionnalité"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demander une nouvelle fonctionnalité"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "नई सुविधा का अनुरोध करें"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नई सुविधा का अनुरोध करें"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "새로운 기능 요청"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "새로운 기능 요청"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Отправить запрос на новую функцию"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sugerir nova funcionalidade"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Подати запит на нову функцію"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отправить запрос на новую функцию"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Подати запит на нову функцію"
+          }
         }
       }
     },
-    "Select a vehicle" : {
-      "comment" : "Picker for selecting a vehicle",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Выберыце транспартны сродак"
+    "Select a vehicle": {
+      "comment": "Picker for selecting a vehicle",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выберыце транспартны сродак"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wähle ein Fahrzeug"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wähle ein Fahrzeug"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 선택"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 선택"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Выбрать авто"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Selecionar veiculo"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Оберіть авто"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выбрать авто"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Оберіть авто"
+          }
         }
       }
     },
-    "Settings" : {
-      "comment" : "Label to display settings.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Налады"
+    "Settings": {
+      "comment": "Label to display settings.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Налады"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nastavení"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nastavení"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einstellungen"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einstellungen"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configuración"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Configuración"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglages"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Réglages"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सेटिंग्स"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "सेटिंग्स"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "설정"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configurações"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Настройки"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Настройки"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Налаштування"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Налаштування"
           }
         }
       }
     },
-    "Sign Out" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Выйсці"
+    "Sign Out": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выйсці"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odhlásit"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Odhlásit"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abmelden"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abmelden"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desconectar"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Desconectar"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se déconnecter"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se déconnecter"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "साइन आउट"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "साइन आउट"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "로그아웃"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "로그아웃"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desconectar"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Выйти"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выйти"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Вийти з облікового запису"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вийти з облікового запису"
           }
         }
       }
     },
-    "Signed in as %@" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Увайсці як %@"
+    "Signed in as %@": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Увайсці як %@"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přihlášen jako %@"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Přihlášen jako %@"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Angemeldet als %@"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Angemeldet als %@"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrado como %@"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Registrado como %@"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecté en tant que %@"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Connecté en tant que %@"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ आईडी से साइन इन"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ आईडी से साइन इन"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@으로 로그인되었습니다"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@으로 로그인되었습니다"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conectado como %@"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Зарегистрироваться как %@"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зарегистрироваться как %@"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Увійшли в додаток як %@"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Увійшли в додаток як %@"
           }
         }
       }
     },
-    "Thanks for using this app!" : {
-      "comment" : "Thanks a user for using the app.",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Danke, dass Sie diese App nutzen."
+    "Thanks for using this app!": {
+      "comment": "Thanks a user for using the app.",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Danke, dass Sie diese App nutzen."
+          },
+          "pt-BR": {
+            "stringUnit": {
+              "state": "translated",
+              "value": "Obrigado por usar nosso App"
+            }
           }
         }
       }
     },
-    "Thanks for using this app! It's open source and anyone can contribute to it." : {
-      "comment" : "Thanks a user for using the app and tells the user they can contribute to the codebase",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дзякуй, што карыстаецеся гэтым дадаткам! Ëн з адкрытым зыходным кодам, і кожны можа ўнесці свой уклад у яго."
+    "Thanks for using this app! It's open source and anyone can contribute to it.": {
+      "comment": "Thanks a user for using the app and tells the user they can contribute to the codebase",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дзякуй, што карыстаецеся гэтым дадаткам! Ëн з адкрытым зыходным кодам, і кожны можа ўнесці свой уклад у яго."
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Děkuji Vám za využívání této aplikace! Díky otevřenosti může kdokoliv přispět k samotnému vývoji. "
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Děkuji Vám za využívání této aplikace! Díky otevřenosti může kdokoliv přispět k samotnému vývoji. "
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vielen Dank fürs Nutzen dieser App! Sie ist Open Source und Jede*r kann zur Entwicklung beitragen."
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vielen Dank fürs Nutzen dieser App! Sie ist Open Source und Jede*r kann zur Entwicklung beitragen."
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¡Gracias por usar esta aplicación! Es de código abierto y cualquiera puede contribuir."
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¡Gracias por usar esta aplicación! Es de código abierto y cualquiera puede contribuir."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Merci d'utiliser cette app ! Le code est open source et tout le monde peut contribuer."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Merci d'utiliser cette app ! Le code est open source et tout le monde peut contribuer."
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "इस ऐप का उपयोग करने के लिए धन्यवाद! यह खुला स्रोत है और कोई भी इसमें योगदान दे सकता है।"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इस ऐप का उपयोग करने के लिए धन्यवाद! यह खुला स्रोत है और कोई भी इसमें योगदान दे सकता है।"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이 앱을 사용해 주셔서 감사합니다! 이 앱은 오픈 소스로 누구나 기여할 수 있습니다."
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 앱을 사용해 주셔서 감사합니다! 이 앱은 오픈 소스로 누구나 기여할 수 있습니다."
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Спасибо что скачали это приложение! Оно находиться в открытом доступе и каждый может участвовать в его развитии и разработке."
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obrigado por usar nosso App., Esse é um projeto open source qualquer um pode contribuir"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Дякуємо за використання цього додатку! Він має відкритий вихідний код і будь-хто може долучитися у його розвиток."
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спасибо что скачали это приложение! Оно находиться в открытом доступе и каждый может участвовать в его развитии и разработке."
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дякуємо за використання цього додатку! Він має відкритий вихідний код і будь-хто може долучитися у його розвиток."
+          }
         }
       }
     },
-    "The title of the event" : {
-      "comment" : "Maintenance event title text field label placeholder",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Назва падзеі"
+    "The title of the event": {
+      "comment": "Maintenance event title text field label placeholder",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назва падзеі"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Název události"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Název události"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Titel des Events"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel des Events"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "El título del evento"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El título del evento"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le titre de l'évènement"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le titre de l'évènement"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "घटना का शीर्षक"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "घटना का शीर्षक"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이벤트 제목"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이벤트 제목"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Название события"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O titulo do evento"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Назва події"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Название события"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назва події"
+          }
         }
       }
     },
-    "There were no maintenance events for '%@'. Try a new search." : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Не было тэхнічнага абслугоўвання для «%@». Паспрабуйце новы пошук."
+    "There were no maintenance events for '%@'. Try a new search.": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не было тэхнічнага абслугоўвання для «%@». Паспрабуйце новы пошук."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Es gibt keine Wartung für '%@'. Versuche eine neue Suche"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Es gibt keine Wartung für '%@'. Versuche eine neue Suche"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "'%@' के लिए कोई रखरखाव कार्यक्रम नहीं थे। नई खोज का प्रयास करें।"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "'%@' के लिए कोई रखरखाव कार्यक्रम नहीं थे। नई खोज का प्रयास करें।"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@에 대한 유지 보수 이벤트가 없습니다. 새로운 검색을 시도하세요."
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@에 대한 유지 보수 이벤트가 없습니다. 새로운 검색을 시도하세요."
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nao ha eventos de manutenção para %@. Faca uma nova pesquisa"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Тех обслуживания не было для '%@'. Попробуйте новый поиск."
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Тех обслуживания не было для '%@'. Попробуйте новый поиск."
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Для '%@' не виявлено обслуговуваннь. Спробуйте новий пошук."
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Для '%@' не виявлено обслуговуваннь. Спробуйте новий пошук."
           }
         }
       }
     },
-    "This App Icon will appear on your Home Screen." : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Значок дадатка, які з'явіцца на вашым галоўным экране."
+    "This App Icon will appear on your Home Screen.": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Значок дадатка, які з'явіцца на вашым галоўным экране."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das App Icon wird auf deinem Home Screen erscheinen"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Das App Icon wird auf deinem Home Screen erscheinen"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह ऐप आइकन आपकी होम स्क्रीन पर दिखाई देगा।"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "यह ऐप आइकन आपकी होम स्क्रीन पर दिखाई देगा।"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 앱 아이콘이 홈 화면에 나타납니다."
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이 앱 아이콘이 홈 화면에 나타납니다."
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esse icone aparecerá na sua Home Screen"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Эта иконка появится на экране Home."
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Эта иконка появится на экране Home."
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ця іконка додатку з'явиться на вашому головному екрані."
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ця іконка додатку з'явиться на вашому головному екрані."
           }
         }
       }
     },
-    "This is the title" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Гэта назва"
+    "This is the title": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Гэта назва"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das ist der Titel"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Das ist der Titel"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह शीर्षक है"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "यह शीर्षक है"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이것은 제목입니다"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이것은 제목입니다"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esse é o titulo"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Заголовок"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Заголовок"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Це заголовок"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Це заголовок"
           }
         }
       }
     },
-    "Title" : {
-      "comment" : "Maintenance event title text field header",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Назва"
+    "Title": {
+      "comment": "Maintenance event title text field header",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назва"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Název"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Název"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Titel"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Título"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Título"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titre"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Titre"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "शीर्षक"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "शीर्षक"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "제목"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "제목"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titulo"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Название"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Название"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Назва"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назва"
           }
         }
       }
     },
-    "Title of the maintenance event" : {
-      "comment" : "Maintenance event title text field label",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Назва мерапрыемства па тэхнічным абслугоўванні"
+    "Title of the maintenance event": {
+      "comment": "Maintenance event title text field label",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назва мерапрыемства па тэхнічным абслугоўванні"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Název údržby"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Název údržby"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel des Wartungs-Events"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Titel des Wartungs-Events"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El Título del evento de mantenimiento"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "El Título del evento de mantenimiento"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le titre de l'évènement de maintenance"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Le titre de l'évènement de maintenance"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "रखरखाव कार्यक्रम का शीर्षक"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "रखरखाव कार्यक्रम का शीर्षक"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "유지 보수 이벤트 제목"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "유지 보수 이벤트 제목"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titulo do evento de manutenção"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Название обслуживания"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Название обслуживания"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Назва обслуговування"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назва обслуговування"
           }
         }
       }
     },
-    "Update" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Абнавіць"
+    "Update": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Абнавіць"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktualizovat"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktualizovat"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktualisierung"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktualisierung"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mettre à jour"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mettre à jour"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "अपडेट"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अपडेट"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "업데이트"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "업데이트"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Обновить"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atualizar"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Оновити"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Обновить"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Оновити"
+          }
         }
       }
     },
-    "Update Maintenance" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Абнаўленне тэхнічнага абслугоўвання"
+    "Update Maintenance": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Абнаўленне тэхнічнага абслугоўвання"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wartung aktualisieren"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wartung aktualisieren"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "रखरखाव अपडेट करें"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "रखरखाव अपडेट करें"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "유지 보수 업데이트"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "유지 보수 업데이트"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Обновить тех обслуживание"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atualizar manutenção"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Оновити обслуговування"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Обновить тех обслуживание"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Оновити обслуговування"
+          }
         }
       }
     },
-    "Vehicle" : {
-      "comment" : "Maintenance event vehicle picker header",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Транспартны сродак"
+    "Vehicle": {
+      "comment": "Maintenance event vehicle picker header",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Транспартны сродак"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeug"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeug"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Veiculo"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Авто"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Авто"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Авто"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Авто"
           }
         }
       }
     },
-    "Vehicle Color" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Колер транспартнага сродку"
+    "Vehicle Color": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Колер транспартнага сродку"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeugfarbe"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeugfarbe"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 색상"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 색상"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cor do veiculo"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Цвет авто"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Цвет авто"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Колір авта"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Колір авта"
           }
         }
       }
     },
-    "Vehicle License Plate Number" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Нумар транспартнага сродку"
+    "Vehicle License Plate Number": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нумар транспартнага сродку"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeug Kennzeichen"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeug Kennzeichen"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 번호판 번호"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 번호판 번호"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Placa do veiculo"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Номер лицензии авто"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Номер лицензии авто"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Номерний знак авта"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Номерний знак авта"
           }
         }
       }
     },
-    "Vehicle Make" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Вытворца транспартнага сродку"
+    "Vehicle Make": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вытворца транспартнага сродку"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Výrobce vozidla"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Výrobce vozidla"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeughersteller"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeughersteller"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Marca del Vehículo"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marca del Vehículo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fabricant du véhicule"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fabricant du véhicule"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वाहन कंपनी"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वाहन कंपनी"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 제조사"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 제조사"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Производитель авто"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marca do veiculo"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Виробник авто"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Производитель авто"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Виробник авто"
+          }
         }
       }
     },
-    "Vehicle Model" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Мадэль транспартнага сродку"
+    "Vehicle Model": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мадэль транспартнага сродку"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Model vozidla"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Model vozidla"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeugmodell"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeugmodell"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modelo vehículo"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modelo vehículo"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modèle du véhicule"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modèle du véhicule"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वाहन मॉडल"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वाहन मॉडल"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 모델"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 모델"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Модель авто"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modelo do veiculo"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Модель авто"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Модель авто"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Модель авто"
+          }
         }
       }
     },
-    "Vehicle Name" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Назва транспартнага сродку"
+    "Vehicle Name": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назва транспартнага сродку"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Název vozidla"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Název vozidla"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeugname"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeugname"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nombre del Vehículo"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nombre del Vehículo"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nom du véhicule"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nom du véhicule"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वाहन का नाम"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वाहन का नाम"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 이름"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 이름"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nome do veiculo"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Название авто"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Название авто"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Імʼя авто"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Імʼя авто"
           }
         }
       }
     },
-    "Vehicle VIN" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ідэнтыфікатар транспартнага сродку"
+    "Vehicle VIN": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ідэнтыфікатар транспартнага сродку"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrgestellnummer"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrgestellnummer"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 VIN"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 VIN"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Numero do registro do veiculo"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "VIN номер"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VIN номер"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "VIN код авта"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VIN код авта"
           }
         }
       }
     },
-    "Vehicle Year" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Год транспартнага сродку"
+    "Vehicle Year": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Год транспартнага сродку"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baujahr"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Baujahr"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량 연도"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량 연도"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ano do veiculo"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Год производства"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Год производства"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Рік випуску авто"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рік випуску авто"
           }
         }
       }
     },
-    "Vehicles" : {
-      "comment" : "Label to display header title.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Транспартныя сродкі"
+    "Vehicles": {
+      "comment": "Label to display header title.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Транспартныя сродкі"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vozidla"
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vozidla"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeuge"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeuge"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vehículos"
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vehículos"
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Véhicules"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Véhicules"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वाहन"
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वाहन"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "차량"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "차량"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Авто"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Veiculos"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Автомобілі"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Авто"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Автомобілі"
+          }
         }
       }
     },
-    "VehicleSectionHeader" : {
-      "comment" : "Label for Picker for selecting a vehicle",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrzeug"
+    "VehicleSectionHeader": {
+      "comment": "Label for Picker for selecting a vehicle",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrzeug"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vehicle"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vehicle"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Авто"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Veiculo"
           }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Авто"
+          }
         }
       }
     },
-    "Version %@ (%@)" : {
-      "comment" : "Label to display version and build number.",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Версія %@ (%@)"
+    "Version %@ (%@)": {
+      "comment": "Label to display version and build number.",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Версія %@ (%@)"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verze %1$@ (%2$@)"
           }
         },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verze %1$@ (%2$@)"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versión %@ (%@)"
           }
         },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Versión %@ (%@)"
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वरजन %@ (%@)"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "वरजन %@ (%@)"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "버전 %@ (%@)"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "버전 %@ (%@)"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versão: %@ (%@)"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Версия %@ (%@)"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Версия %@ (%@)"
           }
         }
       }
     },
-    "VIN" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ІТС"
+    "VIN": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ІТС"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fahrgestellnummer"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fahrgestellnummer"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VIN"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "VIN"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Numero de registro"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "VIN"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VIN"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "VIN"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VIN"
           }
         }
       }
     },
-    "Year" : {
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Год"
+    "Year": {
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Год"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baujahr"
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Baujahr"
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "연도"
           }
         },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "연도"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ano"
           }
         },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Год"
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Год"
           }
         },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Рік"
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рік"
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }
