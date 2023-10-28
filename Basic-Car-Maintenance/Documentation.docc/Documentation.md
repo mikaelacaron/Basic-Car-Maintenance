@@ -4,7 +4,11 @@ A basic app to track your car's maintenance, like oil changes, tire rotation, et
 
 ## Overview
 
-This app is open source for Hacktoberfest 2023! More documentation to be added soon!
+This app is open source for [Hacktoberfest 2023](https://hacktoberfest.com/)! 
+
+Use this app to gain experience getting started in open source for iOS and macOS development using Swift and SwiftUI.
+
+More documentation to be added soon!
 
 ## New Icon
 The app icon contains a Car, Tools, and Gear
