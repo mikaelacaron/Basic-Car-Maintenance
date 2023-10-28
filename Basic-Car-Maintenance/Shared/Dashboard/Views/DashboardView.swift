@@ -114,16 +114,17 @@ struct DashboardView: View {
                     }
                 }
             }
-            .task {
-                await viewModel.getMaintenanceEvents()
-                await viewModel.getVehicles()
-            }
             .sheet(isPresented: $isShowingAddView) {
                 makeAddMaintenanceView()
             }
         }
         .onChange(of: scenePhase) { _, newScenePhase in
             guard case .active = newScenePhase else { return }
+            
+            Task {
+                await viewModel.getMaintenanceEvents()
+                await viewModel.getVehicles()
+            }
             
             guard let action = actionService.action,
                   action == .newMaintenance
