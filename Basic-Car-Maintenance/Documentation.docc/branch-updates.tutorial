@@ -1,0 +1,40 @@
+@Tutorial(time: 15) {
+    @Intro(title: "Updating Branch for Pull Requests") {
+        Add engaging introduction text here.
+
+    }
+    
+    @Section(title: "Update Local Branch") {
+        @ContentAndMedia {
+            Add engaging section text here.
+        }
+        
+        @Steps {
+            @Step {
+                Add engaging step 1 text here.
+            }
+            
+            @Step {
+                Add code for step 1 here.
+            }
+        }
+    }
+    
+    
+    
+    @Section(title: "Merge and Push") {
+        @ContentAndMedia {
+            Add engaging section text here.
+        }
+        
+        @Steps {
+            @Step {
+                Add engaging step 1 text here.
+            }
+            
+            @Step {
+                Add code for step 1 here.
+            }
+        }
+    }
+}
