@@ -66,7 +66,7 @@ struct DashboardView: View {
             .analyticsScreen(name: "\(Self.self)")
             .searchable(text: $viewModel.searchText)
             .overlay {
-                if viewModel.fetchingMaintenanceEvents {
+                if viewModel.isLoading {
                     ProgressView("Loading...")
                 } else {
                     if viewModel.events.isEmpty {

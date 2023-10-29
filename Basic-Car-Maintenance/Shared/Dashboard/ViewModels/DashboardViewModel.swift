@@ -22,7 +22,7 @@ class DashboardViewModel {
     var sortOption: SortOption = .custom
     var vehicles = [Vehicle]()
     var searchText: String = ""
-    var fetchingMaintenanceEvents = false
+    var isLoading = false
 
     var sortedEvents: [MaintenanceEvent] {
         switch sortOption {
@@ -67,7 +67,7 @@ class DashboardViewModel {
     }
     
     func getMaintenanceEvents() async {
-        fetchingMaintenanceEvents = true
+        isLoading = true
 
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
@@ -84,7 +84,7 @@ class DashboardViewModel {
                         events.append(event)
                     }
                 }
-                self.fetchingMaintenanceEvents = false
+                self.isLoading = false
                 self.events = events
             }
         }
