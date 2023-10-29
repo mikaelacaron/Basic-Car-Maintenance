@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@" : {
+      "comment" : "Maintenance list item description 'Date' formatted",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -135,7 +136,7 @@
       }
     },
     "Add" : {
-      "comment" : "Label for submit button on form to add an entry",
+      "comment" : "Label for submit button on form to add an entry\nLabel for adding maintenance event on Dashboard view",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -1677,7 +1678,7 @@
       }
     },
     "Filter" : {
-      "extractionState" : "stale",
+      "comment" : "Label for filtering on Dashboard view",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -1705,10 +1706,8 @@
         }
       }
     },
-    "Filterinki" : {
-
-    },
     "For %@" : {
+      "comment" : "Maintenance list item description 'For which vehicle'",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -2503,9 +2502,6 @@
           }
         }
       }
-    },
-    "Oukkidoukki" : {
-
     },
     "Preferred units" : {
       "comment" : "Label for units selected when adding an odometer reading",

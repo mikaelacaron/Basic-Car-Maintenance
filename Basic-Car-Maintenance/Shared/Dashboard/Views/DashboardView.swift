@@ -25,15 +25,17 @@ struct DashboardView: View {
             List {
                 ForEach(viewModel.searchedEvents) { event in
                     VStack(alignment: .leading, spacing: 8) {
-                        Text(event.title)
+                      Text(event.title)
                             .font(.title3)
                         
-                        Text("For \(event.vehicle.name)")
+                        Text("For \(event.vehicle.name)",
+                             comment: "Maintenance list item description 'For which vehicle'")
                         
-                        Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
+                        Text("\(event.date.formatted(date: .abbreviated, time: .omitted))",
+                             comment: "Maintenance list item description 'Date' formatted")
                         
                         if !event.notes.isEmpty {
-                            Text(event.notes)
+                          Text(event.notes)
                                 .lineLimit(0)
                         }
                     }
@@ -82,8 +84,10 @@ struct DashboardView: View {
             .alert(Text("Failed To Delete Event",
                         comment: "Title for alert shown when deleting maintenance event fails"),
                    isPresented: $viewModel.showErrorAlert) {
-                Button("OK") {
+                Button {
                     viewModel.showErrorAlert = false
+                } label: {
+                    Text("OK", comment: "Label to dismiss alert")
                 }
             } message: {
                 Text(viewModel.errorMessage).padding()
@@ -106,7 +110,11 @@ struct DashboardView: View {
                         Image(systemName: SFSymbol.filter)
                     }
                     .accessibilityShowsLargeContentViewer {
-                        Label("Filter", systemImage: SFSymbol.filter)
+                        Label {
+                            Text("Filter", comment: "Label for filtering on Dashboard view")
+                        } icon: {
+                            Image(systemName: SFSymbol.filter)
+                        }
                     }
                     
                     Button {
@@ -115,7 +123,11 @@ struct DashboardView: View {
                         Image(systemName: SFSymbol.plus)
                     }
                     .accessibilityShowsLargeContentViewer {
-                        Label("Add", systemImage: SFSymbol.plus)
+                        Label {
+                            Text("Add", comment: "Label for adding maintenance event on Dashboard view")
+                        } icon: {
+                            Image(systemName: SFSymbol.plus)
+                        }
                     }
                 }
             }
@@ -158,7 +170,9 @@ struct DashboardView: View {
         .alert(Text("An Error Occurred",
                     comment: "Title for alert shown when adding maintenance event fails"),
                isPresented: $viewModel.showAddErrorAlert) {
-            Button("OK", role: .cancel) {}
+            Button(role: .cancel) {} label: {
+                Text("OK", comment: "Label to dismiss alert")
+            }
         } message: {
             Text(viewModel.errorMessage)
         }
