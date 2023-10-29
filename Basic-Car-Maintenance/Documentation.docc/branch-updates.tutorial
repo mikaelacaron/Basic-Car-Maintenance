@@ -4,56 +4,63 @@
 
     }
     
-    @Section(title: "Grab latest dev Changes") {
+    @Section(title: "Grab the Latest Changes") {
         @ContentAndMedia {
-            Update local your dev branch with changes from the remote dev branch.
+            Update local your `dev` branch with changes from the remote `dev` branch.
         }
         
         @Steps {
             @Step {
-                Sync your forked repo with the latest changes from Dev branch by clicking the `Sync fork` button and following the prompts.
+                Sync your forked repo with the latest changes from `dev` branch by clicking the `Sync fork` button and following the prompts.
                 
                 @Image(source: 9-sync.png, alt: "GitHub repository sync button" )
             }
             @Step {
-                In a command prompt, use `git checkout dev` to checkout the dev branch in your local repo.
+                In a command prompt, use `git checkout dev` to checkout the `dev` branch in your local repo.
                 @Image(source: 10-checkout-dev.png, alt: "Command prompt using git checkout dev")
             }
             
             @Step {
-                Update the remote tracking branches by using `git fetch`. This will 
+                Update the remote tracking branches by using `git fetch`.
+                
                 Note - `git fetch` is optional as it is done within a `git pull`. For a more in-depth discussion on these commands, see [Git Pull GitHub Guide](https://github.com/git-guides/git-pull)
                 
                 @Image(source: 11-fetch.png, alt: "Command prompt using git fetch")
             }
             @Step {
-                Update your current local working branch by using `git pull`.
+                Update your current local working branch with `git pull`
+                
+                The changes shown in Terminal afterwards will look different than this screenshot.
                 
                 @Image(source: 12-pull.png, alt: "Command prompt using git pull")
             }
         }
     }
     
-    @Section(title: "Merge and Push to PR") {
+    @Section(title: "Update Feature Branch and Push to PR") {
         @ContentAndMedia {
             Now that your local `dev` branch is up to date, merge these changes into your feature branch. This will make it ready to push.
         }
         
         @Steps {
             @Step {
-                Switch to your local feature branch by using `git checkout feature-branch`. 
+                Switch to your local feature branch by using `git checkout feature-branch`.
                 
                 @Image(source: 13-checkout-feature.png, alt: "Command promopt using git checkout with example feature branch")
             }
             
             @Step {
-                Merge your local dev branch into your local feature branch by using `git merge dev`. Resolve any merge conflicts if applicable. See [Merge Conflicts in Command Line GitHub guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) for more information.
+                Merge your local dev branch into your local feature branch by using `git merge dev`
+                
+                 Resolve any merge conflicts if applicable. See [Merge Conflicts in Command Line GitHub guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) for more information.
                 
                 @Image(source: 14-merge-dev.png, alt: "Command prompt using git merge dev")
             }
             
             @Step {
-                Push your local changes up the remote branch using `git push`. The PR in the original Basic-Car-Maintenance repo will receive the updates pushed.
+                Push your local changes up the remote branch using `git push`
+                
+                The PR in the original `Basic-Car-Maintenance` repo will automatically update with these changes.
                 
                 @Image(source: 15-push.png, alt: "Command prompt using git push")
             }
