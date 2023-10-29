@@ -11,5 +11,6 @@
         @Image(source: "xcode-about.png", alt: "Xcode 15 about screen")
         
         @TutorialReference(tutorial: "doc:getting-started")
+        @TutorialReference(tutorial: "doc:branch-updates")
     }
 }
