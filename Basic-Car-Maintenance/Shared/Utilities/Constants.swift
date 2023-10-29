@@ -11,10 +11,13 @@ enum FirestoreCollection {
     static let maintenanceEvents = "maintenance_events"
     static let vehicles = "vehicles"
     static let odometerReadings = "odometer_readings"
+    static let alerts = "alerts"
 }
 
 enum FirestoreField {
     static let userID = "userID"
+    static let isOn = "isOn"
+    static let id = "_id"
 }
 
 enum SFSymbol {
