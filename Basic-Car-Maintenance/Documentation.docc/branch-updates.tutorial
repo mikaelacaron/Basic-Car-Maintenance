@@ -1,4 +1,4 @@
-@Tutorial(time: 15) {
+@Tutorial(time: 10) {
     @Intro(title: "Updating Feature Branch") {
         During the PR process, it is important to make sure the local feature branch has been updated with the latest `dev` branch changes before pushing updates to the PR. Follow these instructions to keep a feature branch up to date with the latest `dev` changes during the PR process.
 
@@ -11,7 +11,7 @@
         
         @Steps {
             @Step {
-                Sync your forked repo with the latest changes from Dev branch.
+                Sync your forked repo with the latest changes from Dev branch by clicking the `Sync fork` button and following the prompts.
                 
                 @Image(source: 9-sync.png, alt: "GitHub repository sync button" )
             }
@@ -47,7 +47,7 @@
             }
             
             @Step {
-                Merge your local dev branch into your local feature branch by using `git merge dev`
+                Merge your local dev branch into your local feature branch by using `git merge dev`. Resolve any merge conflicts if applicable. See [Merge Conflicts in Command Line GitHub guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line) for more information.
                 
                 @Image(source: 14-merge-dev.png, alt: "Command prompt using git merge dev")
             }
