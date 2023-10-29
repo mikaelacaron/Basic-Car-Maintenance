@@ -1,29 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
-          }
-        }
-      }
-    },
     "%@" : {
       "localizations" : {
         "be" : {
@@ -70,8 +47,14 @@
         },
         "ru" : {
           "stringUnit" : {
-           "state" : "translated",
-           "value" : "%@"
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
           }
         }
       }
@@ -83,11 +66,24 @@
             "state" : "new",
             "value" : "%1$lld %2$@"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld %2$@"
+          }
         }
       }
     },
     "🤠" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🤠"
+          }
+        }
+      }
     },
     "🦄 Mikaela Caron - Maintainer" : {
       "comment" : "Link to maintainer Github account.",
@@ -128,16 +124,22 @@
             "value" : "🦄 Mikaela Caron - 유지관리자"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "🦄 Мікаела Карон - адміністраторка"
+            "value" : "🦄 Mikaela Caron - Lider"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "🦄 Микаэла Карон - администратор"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 Мікаела Карон - адміністраторка"
           }
         }
       }
@@ -187,16 +189,22 @@
             "value" : "추가"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Додати"
+            "value" : "Adicionar"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Добавить"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Додати"
           }
         }
       }
@@ -246,10 +254,10 @@
             "value" : "유지 추가"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Додати обслуговування"
+            "value" : "Adicionar manutenção"
           }
         },
         "ru" : {
@@ -257,11 +265,31 @@
             "state" : "translated",
             "value" : "Добавить обслуживание"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Додати обслуговування"
+          }
         }
       }
     },
     "Add Reading" : {
-      "comment" : "Title for form when adding an odometer reading"
+      "comment" : "Title for form when adding an odometer reading",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adicionar leitura"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Додати значення"
+          }
+        }
+      }
     },
     "Add Vehicle" : {
       "comment" : "Label to add a vehicle.",
@@ -308,16 +336,22 @@
             "value" : "차량 추가"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Додати авто"
+            "value" : "Adicionar veiculo"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Добавить машину"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Додати авто"
           }
         }
       }
@@ -366,10 +400,10 @@
             "value" : "첫번째 유지관리 추가"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Додайте своє перше обслуговування"
+            "value" : "Adicionar primeira manutençao"
           }
         },
         "ru" : {
@@ -377,11 +411,31 @@
             "state" : "translated",
             "value" : "Добавить свое первое обслуживание"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Додайте своє перше обслуговування"
+          }
         }
       }
     },
     "Add your first odometer" : {
-      "comment" : "Placeholder text for empty odometer reading list"
+      "comment" : "Placeholder text for empty odometer reading list",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adicionar primeiro odometro"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Додайте свій перший одометр"
+          }
+        }
+      }
     },
     "Additional Notes" : {
       "comment" : "Notes text field placeholder",
@@ -428,16 +482,22 @@
             "value" : "추가 노트"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Додаткові замітки"
+            "value" : "Adicionar notas"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дополнительные заметки"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Додаткові замітки"
           }
         }
       }
@@ -486,16 +546,22 @@
             "value" : "에러 발생"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сталася помилка"
+            "value" : "Ocorreu um erro"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Произошла ошибка"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сталася помилка"
           }
         }
       }
@@ -538,16 +604,22 @@
             "value" : " 취소"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Скасувати"
+            "value" : "Cancelar"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Отменить"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скасувати"
           }
         }
       }
@@ -578,10 +650,22 @@
             "value" : "앱아이콘 변경"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trocar icone do App"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сменить иконку"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Змінити іконку додатку"
           }
         }
       }
@@ -612,10 +696,22 @@
             "value" : "앱아이콘 선택"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escolha um icone"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выбрать иконку"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оберіть іконки додатку"
           }
         }
       }
@@ -640,10 +736,22 @@
             "value" : "색깔"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cor"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Цвет"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Колір"
           }
         }
       }
@@ -693,16 +801,22 @@
             "value" : "기여자들"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Співтворці"
+            "value" : "Equipe"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Участники"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Співтворці"
           }
         }
       }
@@ -734,10 +848,22 @@
             "value" : "복사완료!"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiado"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скопировано!"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скопійовано!"
           }
         }
       }
@@ -787,16 +913,22 @@
             "value" : "커스텀"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Власне"
+            "value" : "Personalizado"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Изменить"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Власне"
           }
         }
       }
@@ -845,16 +977,22 @@
             "value" : "대시보드"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Зведення"
+            "value" : "Painel"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дэшборд"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зведення"
           }
         }
       }
@@ -904,13 +1042,19 @@
             "value" : "날짜"
           }
         },
-        "uk" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дата"
           }
         },
-        "ru" : {
+        "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дата"
@@ -963,16 +1107,22 @@
             "value" : "삭제"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Видалити"
+            "value" : "Deletar"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Удалить"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Видалити"
           }
         }
       }
@@ -1003,16 +1153,41 @@
             "value" : "닫기"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dispensar"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Отклонить"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрити"
+          }
         }
       }
     },
     "Distance" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Distancia"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Відстань"
+          }
+        }
+      }
     },
     "Edit" : {
       "localizations" : {
@@ -1052,16 +1227,22 @@
             "value" : "편집"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Редагувати"
+            "value" : "Editar"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Редактировать"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Редагувати"
           }
         }
       }
@@ -1104,16 +1285,22 @@
             "value" : "차량 추가 실패"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Не вдалося видалити авто"
+            "value" : "Erro ao adicionar veiculo"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не удалось добавить авто"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося видалити авто"
           }
         }
       }
@@ -1156,16 +1343,22 @@
             "value" : "차량 세부 정보를 불러오지 못했습니다: %@"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Не вдалося додати авто\nДеталі:%@"
+            "value" : "Ocorreu um erro ao adicionar veiculo. Erro: %@"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не удалось добавить авто\nДетали:%@"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося додати авто\nДеталі:%@"
           }
         }
       }
@@ -1215,16 +1408,22 @@
             "value" : "차량 추가에 실패했습니다. 알 수 없는 오류입니다."
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Не вдалося додати авто. Невідома помилка."
+            "value" : "Ocorreu um erro ao adicionar o veiculo. Erro desconhecido"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не удалось добавить авто. Неизвестная ошибка"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося додати авто. Невідома помилка."
           }
         }
       }
@@ -1273,16 +1472,22 @@
             "value" : "이벤트 삭제에 실패했습니다."
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Не вдалося видалити подію"
+            "value" : "Erro ao deletar evento"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Удаление невозможно"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося видалити подію"
           }
         }
       }
@@ -1332,16 +1537,22 @@
             "value" : "차량 삭제에 실패했습니다."
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Не вдалося видалити авто"
+            "value" : "Erro ao deletar veiculo"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Удаление авто невозможно"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося видалити авто"
           }
         }
       }
@@ -1391,16 +1602,22 @@
             "value" : "차량 세부 정보 삭제에 실패했습니다: %@"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Не вдалося видалити авто\nДеталі:%@"
+            "value" : "Erro ao deletar veiculo. Erro: %@"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Удаление авто невозможно\nДетали:%@"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося видалити авто\nДеталі:%@"
           }
         }
       }
@@ -1444,16 +1661,22 @@
             "value" : "차량 삭제에 실패했습니다. 알 수 없는 오류입니다."
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Не вдалося видалити авто. Невідома помилка."
+            "value" : "Erro ao deletar veiculo. Erro desconhecido"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Удаление авто невозможно. Ошибка неизвестна"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не вдалося видалити авто. Невідома помилка."
           }
         }
       }
@@ -1470,6 +1693,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Filter"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtro"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фільтр"
           }
         }
       }
@@ -1494,7 +1729,19 @@
             "value" : "대상 차량: %@"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para %@"
+          }
+        },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для %@"
+          }
+        },
+        "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Для %@"
@@ -1547,10 +1794,10 @@
             "value" : "GitHub 저장소"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сховище на GitHub"
+            "value" : "Repositorio do Github"
           }
         },
         "ru" : {
@@ -1558,11 +1805,41 @@
             "state" : "translated",
             "value" : "GitHub репозиторий"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сховище на GitHub"
+          }
+        }
+      }
+    },
+    "It's open source and anyone can contribute to it." : {
+      "comment" : "Tells the user they can contribute to the codebase.",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esse é um projeto open source todos podem contribuir"
+          }
         }
       }
     },
     "Kilometers" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kilometros"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кілометри"
+          }
+        }
+      }
     },
     "License Plate Number" : {
       "localizations" : {
@@ -1584,10 +1861,22 @@
             "value" : "차량 번호판"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numero da placa"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Номер лицензии"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Номерний знак авта"
           }
         }
       }
@@ -1636,16 +1925,22 @@
             "value" : "익명으로 로그인되었습니다. ID: %@"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ви увійшли анонімно з ID: %@"
+            "value" : "Logado anonimamente com ID: %@"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Включен анонимный режим с ID: %@"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ви увійшли анонімно з ID: %@"
           }
         }
       }
@@ -1656,6 +1951,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "로렘 입숨(Lorem Ipsum)은 인쇄 및 조판 산업의 더미 텍스트(dummy text)로, 1500년대부터 산업의 표준 더미 텍스트로 사용되어 왔습니다. 알려지지 않은 인쇄인이 활자를 조합하여 표본 책을 만들기 위해 사용한 것이기도 합니다. 이 텍스트는 오직 다섯 세기뿐만 아니라 전자 조판으로의 진전에도 견디며 본질적으로 변하지 않았습니다. 1960년대에 Letraset 시트에 로렘 입숨 단락이 포함된 것으로 널리 알려지게 되었으며, 최근에는 Aldus PageMaker와 같은 데스크톱 퍼블리싱 소프트웨어에서도 로렘 입숨의 버전이 포함되어 사용되고 있습니다."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Це випадково згенерована панграма українською мовою. На вершині гір живе цей цап зі своїм вірним другом, ягням. Ці незвичайні друзі завжди разом. Їхня неймовірна дружба ніколи не знає кінця. Цап завжди намагається бути в захопленні від краси природи, тому він завжди спостерігає за чудовими розцвітаючими квітами та жвавими метеликами. Ягня, з іншого боку, представляє собою спокій і ніжність. Його шерсть завжди м'яка і тепла, ніби пухнаста хмара в лагідному небі. Цей дивовижний світ, в якому вони живуть, наповнений гармонією та різноманіттям."
           }
         }
       }
@@ -1704,10 +2005,10 @@
             "value" : "제조사"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Виробник"
+            "value" : "Marca"
           }
         },
         "ru" : {
@@ -1715,11 +2016,30 @@
             "state" : "translated",
             "value" : "Производитель"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Виробник"
+          }
         }
       }
     },
     "Miles" : {
-
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Milhas"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Милі"
+          }
+        }
+      }
     },
     "Model" : {
       "localizations" : {
@@ -1765,13 +2085,19 @@
             "value" : "모델"
           }
         },
-        "uk" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modelo"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Модель"
           }
         },
-        "ru" : {
+        "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Модель"
@@ -1823,16 +2149,22 @@
             "value" : "차량명"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Імʼя"
+            "value" : "Nome"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Имя"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Імʼя"
           }
         }
       }
@@ -1882,16 +2214,22 @@
             "value" : "최신순에서 오래된 순"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Від найновіших до найстаріших"
+            "value" : "Mais novo"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "От нового к предыдущим"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Від найновіших до найстаріших"
           }
         }
       }
@@ -1922,10 +2260,22 @@
             "value" : "결과 없음"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sem resultados"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Результата нет"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Немає результатів"
           }
         }
       }
@@ -1975,16 +2325,22 @@
             "value" : "노트"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Замітки"
+            "value" : "Notas"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Заметки"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Замітки"
           }
         }
       }
@@ -2015,10 +2371,10 @@
             "value" : "주행거리 계기"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Одометр"
+            "value" : "Odometro"
           }
         },
         "ru" : {
@@ -2026,46 +2382,11 @@
             "state" : "translated",
             "value" : "Одометр"
           }
-        }
-      }
-    },
-    "OdometerView, coming soon" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Адометр, хутка будзе"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kilometerzähler ist bald verfügbar"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ओडोमीटर जानकारी स्क्रीन, जल्द ही आ रही है"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "주행거리 뷰, 곧 출시 예정입니다"
-          }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Одометр, скоро буде"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Одометр скоро появится"
+            "value" : "Одометр"
           }
         }
       }
@@ -2115,16 +2436,22 @@
             "value" : "확인"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Добре"
+            "value" : "OK"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "ОК"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добре"
           }
         }
       }
@@ -2174,10 +2501,10 @@
             "value" : "오래된 순에서 최신순으로"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Від найстаріших до найновіших"
+            "value" : "Mais antigo"
           }
         },
         "ru" : {
@@ -2185,11 +2512,31 @@
             "state" : "translated",
             "value" : "От предыдущих до новых"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Від найстаріших до найновіших"
+          }
         }
       }
     },
     "Preferred units" : {
-      "comment" : "Label for units selected when adding an odometer reading"
+      "comment" : "Label for units selected when adding an odometer reading",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unidades preferenciais"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бажані одиниці виміру"
+          }
+        }
+      }
     },
     "Privacy Policy" : {
       "localizations" : {
@@ -2197,6 +2544,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Палітыка прыватнасці"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Politica de privacidade"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Політика приватності"
           }
         }
       }
@@ -2246,16 +2605,22 @@
             "value" : "프로필"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Профіль"
+            "value" : "Perfil"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Профиль"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профіль"
           }
         }
       }
@@ -2286,10 +2651,22 @@
             "value" : "더 보기..."
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leia mais..."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Читать больше..."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дізнатися більше..."
           }
         }
       }
@@ -2339,16 +2716,22 @@
             "value" : "버그 신고"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Повідомити про помилку"
+            "value" : "Reportar erro"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Уведомление об ошибке"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Повідомити про помилку"
           }
         }
       }
@@ -2398,16 +2781,22 @@
             "value" : "새로운 기능 요청"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Подати запит на нову функцію"
+            "value" : "Sugerir nova funcionalidade"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Отправить запрос на новую функцию"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подати запит на нову функцію"
           }
         }
       }
@@ -2433,10 +2822,22 @@
             "value" : "차량 선택"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecionar veiculo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выбрать авто"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оберіть авто"
           }
         }
       }
@@ -2486,16 +2887,22 @@
             "value" : "설정"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Налаштування"
+            "value" : "Configurações"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Настройки"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Налаштування"
           }
         }
       }
@@ -2544,16 +2951,22 @@
             "value" : "로그아웃"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Вийти з облікового запису"
+            "value" : "Desconectar"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выйти"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вийти з облікового запису"
           }
         }
       }
@@ -2602,16 +3015,33 @@
             "value" : "%@으로 로그인되었습니다"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Увійшли в додаток як %@"
+            "value" : "Conectado como %@"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Зарегистрироваться как %@"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Увійшли в додаток як %@"
+          }
+        }
+      }
+    },
+    "Thanks for using this app!" : {
+      "comment" : "Thanks a user for using the app.",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obrigado por usar nosso App"
           }
         }
       }
@@ -2661,16 +3091,22 @@
             "value" : "이 앱을 사용해 주셔서 감사합니다! 이 앱은 오픈 소스로 누구나 기여할 수 있습니다."
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Дякуємо за використання цього додатку! Він має відкритий вихідний код і будь-хто може долучитися у його розвиток."
+            "value" : "Obrigado por usar nosso App., Esse é um projeto open source qualquer um pode contribuir"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Спасибо что скачали это приложение! Оно находиться в открытом доступе и каждый может участвовать в его развитии и разработке."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дякуємо за використання цього додатку! Він має відкритий вихідний код і будь-хто може долучитися у його розвиток."
           }
         }
       }
@@ -2720,16 +3156,22 @@
             "value" : "이벤트 제목"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Назва події"
+            "value" : "O titulo do evento"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Название события"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва події"
           }
         }
       }
@@ -2760,10 +3202,22 @@
             "value" : "%@에 대한 유지 보수 이벤트가 없습니다. 새로운 검색을 시도하세요."
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nao ha eventos de manutenção para %@. Faca uma nova pesquisa"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тех обслуживания не было для '%@'. Попробуйте новый поиск."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для '%@' не виявлено обслуговуваннь. Спробуйте новий пошук."
           }
         }
       }
@@ -2794,10 +3248,22 @@
             "value" : "이 앱 아이콘이 홈 화면에 나타납니다."
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esse icone aparecerá na sua Home Screen"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Эта иконка появится на экране Home."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ця іконка додатку з'явиться на вашому головному екрані."
           }
         }
       }
@@ -2828,10 +3294,22 @@
             "value" : "이것은 제목입니다"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esse é o titulo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Заголовок"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Це заголовок"
           }
         }
       }
@@ -2881,16 +3359,22 @@
             "value" : "제목"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Назва"
+            "value" : "Titulo"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Название"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва"
           }
         }
       }
@@ -2940,16 +3424,22 @@
             "value" : "유지 보수 이벤트 제목"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Назва обслуговування"
+            "value" : "Titulo do evento de manutenção"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Название обслуживания"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва обслуговування"
           }
         }
       }
@@ -2992,16 +3482,22 @@
             "value" : "업데이트"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Оновити"
+            "value" : "Atualizar"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Обновить"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оновити"
           }
         }
       }
@@ -3033,10 +3529,22 @@
             "value" : "유지 보수 업데이트"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atualizar manutenção"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Обновить тех обслуживание"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оновити обслуговування"
           }
         }
       }
@@ -3062,7 +3570,19 @@
             "value" : "차량"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veiculo"
+          }
+        },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Авто"
+          }
+        },
+        "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Авто"
@@ -3090,10 +3610,22 @@
             "value" : "차량 색상"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cor do veiculo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Цвет авто"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Колір авта"
           }
         }
       }
@@ -3118,10 +3650,22 @@
             "value" : "차량 번호판 번호"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placa do veiculo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Номер лицензии авто"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Номерний знак авта"
           }
         }
       }
@@ -3170,16 +3714,22 @@
             "value" : "차량 제조사"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Виробник авто"
+            "value" : "Marca do veiculo"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Производитель авто"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Виробник авто"
           }
         }
       }
@@ -3228,13 +3778,19 @@
             "value" : "차량 모델"
           }
         },
-        "uk" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modelo do veiculo"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Модель авто"
           }
         },
-        "ru" : {
+        "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Модель авто"
@@ -3286,16 +3842,22 @@
             "value" : "차량 이름"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Імʼя авто"
+            "value" : "Nome do veiculo"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Название авто"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Імʼя авто"
           }
         }
       }
@@ -3320,10 +3882,22 @@
             "value" : "차량 VIN"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numero do registro do veiculo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "VIN номер"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VIN код авта"
           }
         }
       }
@@ -3348,10 +3922,22 @@
             "value" : "차량 연도"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ano do veiculo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Год производства"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рік випуску авто"
           }
         }
       }
@@ -3401,16 +3987,22 @@
             "value" : "차량"
           }
         },
-        "uk" : {
+        "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Автомобілі"
+            "value" : "Veiculos"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Авто"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Автомобілі"
           }
         }
       }
@@ -3423,12 +4015,23 @@
             "state" : "translated",
             "value" : "Vehicle"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veiculo"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Авто"
+          }
         }
       }
     },
     "Version %@ (%@)" : {
       "comment" : "Label to display version and build number.",
-      "extractionState" : "stale",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -3478,6 +4081,12 @@
             "value" : "버전 %@ (%@)"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versão: %@ (%@)"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3506,13 +4115,24 @@
             "value" : "VIN"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numero de registro"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "VIN"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VIN"
+          }
         }
-
       }
     },
     "Year" : {
@@ -3535,13 +4155,24 @@
             "value" : "연도"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ano"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Год"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рік"
+          }
         }
-
       }
     }
   },

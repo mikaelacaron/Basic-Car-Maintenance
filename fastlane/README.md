@@ -13,26 +13,15 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-### unit_tests
-
-```sh
-[bundle exec] fastlane unit_tests
-```
-
-
-
-----
-
-
 ## iOS
 
-### ios custom_lane
+### ios unit_tests
 
 ```sh
-[bundle exec] fastlane ios custom_lane
+[bundle exec] fastlane ios unit_tests
 ```
 
-Description of what the lane does
+Run tests and create a unit-test report
 
 ----
 

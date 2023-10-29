@@ -8,17 +8,20 @@
 import FirebaseAnalyticsSwift
 import SwiftUI
 import UniformTypeIdentifiers
+import TipKit
 
 struct SettingsView: View {
+    @Environment(ActionService.self) var actionService
+    @Environment(\.scenePhase) var scenePhase
+    @Environment(\.colorScheme) var colorScheme
+    
     @State private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
     @State private var showDeleteVehicleError = false
     @State private var showAddVehicleError = false
-    @Environment(ActionService.self) var actionService
-    @Environment(\.scenePhase) var scenePhase
-    @Environment(\.colorScheme) var colorScheme
     @State private var errorDetails: Error?
     @State private var copiedAppVersion: Bool = false
+    
     private let appVersion = "Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))"
     
     init(authenticationViewModel: AuthenticationViewModel) {
@@ -29,53 +32,56 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
-                // swiftlint:disable:next line_length
-                Text("Thanks for using this app! It's open source and anyone can contribute to it.", comment: "Thanks a user for using the app and tells the user they can contribute to the codebase")
-                
-                Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance")!) {
-                    Label {
-                        Text("GitHub Repo", comment: "Link to the Basic Car Maintenance GitHub repo.")
-                    } icon: {
-                        Image("github-logo")
-                            .resizable()
-                            .frame(width: 20, height: 20)
+                Section {
+                    // swiftlint:disable:next line_length
+                    Text("Thanks for using this app! It's open source and anyone can contribute to it.", comment: "Thanks a user for using the app and tells the user they can contribute to the codebase")
+                    
+                    Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance")!) {
+                        Label {
+                            Text("GitHub Repo", comment: "Link to the Basic Car Maintenance GitHub repo.")
+                        } icon: {
+                            Image("github-logo")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                        }
                     }
-                }
-                
-                Link(destination: URL(string: "https://github.com/mikaelacaron")!) {
-                    Text("🦄 Mikaela Caron - Maintainer", comment: "Link to maintainer Github account.")
-                }
-                
-                // swiftlint:disable:next line_length
-                Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=feature+request&projects=&template=feature-request.md&title=FEATURE+-")!) {
-                    Label {
-                        Text("Request a New Feature", comment: "Link to request a new feature.")
-                    } icon: {
-                        Image(systemName: "doc.badge.plus")
-                            .resizable()
-                            .frame(width: 20, height: 20)
+                    .popoverTip(ContributionTip(), arrowEdge: .bottom)
+                    
+                    Link(destination: URL(string: "https://github.com/mikaelacaron")!) {
+                        Text("🦄 Mikaela Caron - Maintainer", comment: "Link to maintainer Github account.")
                     }
-                }
-                // swiftlint:disable:next line_length
-                Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=bug&projects=&template=bug-report.md&title=BUG+-")!) {
-                    Label {
-                        Text("Report a Bug", comment: "Link to report a bug")
-                    } icon: {
-                        Image(systemName: "ladybug")
-                            .resizable()
-                            .frame(width: 20, height: 20)
+                    
+                    // swiftlint:disable:next line_length
+                    Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=feature+request&projects=&template=feature-request.md&title=FEATURE+-")!) {
+                        Label {
+                            Text("Request a New Feature", comment: "Link to request a new feature.")
+                        } icon: {
+                            Image(systemName: SFSymbol.document)
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                        }
                     }
-                }
-                
-                NavigationLink {
-                    ContributorsListView(viewModel: viewModel)
-                } label: {
-                    HStack {
-                        Image(systemName: "person.3.fill")
-                        Text("Contributors", comment: "Link to contributors list.")
+                    // swiftlint:disable:next line_length
+                    Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=bug&projects=&template=bug-report.md&title=BUG+-")!) {
+                        Label {
+                            Text("Report a Bug", comment: "Link to report a bug")
+                        } icon: {
+                            Image(systemName: SFSymbol.ladybug)
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                        }
                     }
+                    
+                    NavigationLink {
+                        ContributorsListView(viewModel: viewModel)
+                    } label: {
+                        HStack {
+                            Image(systemName: SFSymbol.contributors)
+                            Text("Contributors", comment: "Link to contributors list.")
+                        }
+                    }
+                    .foregroundStyle(.blue)
                 }
-                .foregroundStyle(.blue)
                 
                 Section {
                     ForEach(viewModel.vehicles) { vehicle in
@@ -127,14 +133,14 @@ struct SettingsView: View {
                         Label {
                             Text("Profile", comment: "Link to view profile.")
                         } icon: {
-                            Image(systemName: "person")
+                            Image(systemName: SFSymbol.person)
                         }
                     }
                     
                     NavigationLink {
                         ChooseAppIconView(viewModel: ChooseAppIconViewModel())
                     } label: {
-                        Label("Change App Icon", systemImage: "apps.iphone")
+                        Label("Change App Icon", systemImage: SFSymbol.iPhoneWithApps)
                     }
                 }
                 
@@ -142,8 +148,8 @@ struct SettingsView: View {
                     Link("Privacy Policy", destination: privacyURL)
                 }
                 
-                // swiftlint:disable:next line_length
-                Text(LocalizedStringKey(stringLiteral: appVersion), comment: "Label to display version and build number.")
+                Text(LocalizedStringKey(appVersion),
+                     comment: "Label to display version and build number.")
                     .frame(maxWidth: .infinity, alignment: .center)
                     .onLongPressGesture {
                         let clipboard = UIPasteboard.general

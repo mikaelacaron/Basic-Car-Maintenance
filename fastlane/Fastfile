@@ -13,18 +13,39 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+require 'fileutils'
+
 default_platform(:ios)
 
-platform :ios do
-  desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
-  end
+$ignore_file_path = '.xcovignore'
+
+before_all do
+	FileUtils.rm_rf("./UnitTestsReport")
+	FileUtils.rm_rf("./CodeCoverageReport")
 end
 
-lane :unit_tests do
-  run_tests(build_for_testing: true,
-            scheme: "Basic-Car-Maintenance",
-            only_testing: "Basic-Car-Maintenance-Tests",
-            device: "iPhone 15 Pro")
+platform :ios do
+	desc "Run tests and create a unit-test report"
+
+	lane :unit_tests do
+  		run_tests(
+			scheme: "Basic-Car-Maintenance",
+			only_testing: "Basic-Car-Maintenance-Tests",
+			clean: true,
+			code_coverage: true,
+			device: "iPhone 15 Pro",
+			skip_build: true,
+			xcodebuild_formatter: 'xcbeautify -qq --is-ci --renderer github-actions',
+			output_types: 'junit',
+			output_directory: "./fastlane/UnitTestsReport"
+		)
+
+		xcov(
+			scheme: "Basic-Car-Maintenance",
+			only_project_targets: true,
+			output_directory: "./fastlane/CodeCoverageReport"
+			#minimum_coverage_percentage: 80.0
+  		)
+	end
+
 end

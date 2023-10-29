@@ -7,6 +7,7 @@
 
 import FirebaseCore
 import SwiftUI
+import TipKit
 
 @main
 struct BasicCarMaintenanceApp: App {
@@ -17,6 +18,9 @@ struct BasicCarMaintenanceApp: App {
         WindowGroup {
             MainTabView()
                 .environment(actionService)
+                .task {
+                  try? Tips.configure()
+                }
         }
     }
 }
