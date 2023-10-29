@@ -347,6 +347,7 @@
       }
     },
     "Add your first maintenance" : {
+      "comment" : "Placeholder text for empty maintenance list",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -493,6 +494,7 @@
       }
     },
     "An Error Occurred" : {
+      "comment" : "Title for alert shown when adding maintenance event fails",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -924,6 +926,7 @@
       }
     },
     "Dashboard" : {
+      "comment" : "Title label for Dashboard view",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -1180,6 +1183,7 @@
       }
     },
     "Edit" : {
+      "comment" : "Button label to start editing maintenance",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -1419,6 +1423,7 @@
       }
     },
     "Failed To Delete Event" : {
+      "comment" : "Title for alert shown when deleting maintenance event fails",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -1672,6 +1677,7 @@
       }
     },
     "Filter" : {
+      "extractionState" : "stale",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -1698,6 +1704,9 @@
           }
         }
       }
+    },
+    "Filterinki" : {
+
     },
     "For %@" : {
       "localizations" : {
@@ -2495,6 +2504,9 @@
         }
       }
     },
+    "Oukkidoukki" : {
+
+    },
     "Preferred units" : {
       "comment" : "Label for units selected when adding an odometer reading",
       "localizations" : {
@@ -3105,6 +3117,7 @@
       }
     },
     "There were no maintenance events for '%@'. Try a new search." : {
+      "comment" : "Text shwon when there are no results for maintenance search",
       "localizations" : {
         "be" : {
           "stringUnit" : {
