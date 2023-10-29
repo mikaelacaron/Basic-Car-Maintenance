@@ -1,12 +1,12 @@
 @Tutorial(time: 15) {
-    @Intro(title: "Updating Branch for Pull Requests") {
-        After creating a PR, it is important to make sure the local feature branch has been updated with the latest `dev` branch changes before pushing local branch features updates to the PR. Follow these instructions to keep a feature branch up to date.
+    @Intro(title: "Updating Feature Branch") {
+        During the PR process, it is important to make sure the local feature branch has been updated with the latest `dev` branch changes before pushing updates to the PR. Follow these instructions to keep a feature branch up to date with the latest `dev` changes during the PR process.
 
     }
     
-    @Section(title: "Grab latest Dev Changes") {
+    @Section(title: "Grab latest dev Changes") {
         @ContentAndMedia {
-          Prior to pushing your changes, make sure that your local branch is up to date.
+            Update local your dev branch with changes from the remote dev branch.
         }
         
         @Steps {
@@ -14,7 +14,7 @@
                 Sync your forked repo with the latest changes from Dev branch.
             }
             @Step {
-                In a command prompt, use 'git checkout dev' to checkout the dev branch in your local repo.
+                In a command prompt, use `git checkout dev` to checkout the dev branch in your local repo.
             }
             
             @Step {
@@ -26,8 +26,6 @@
             }
         }
     }
-    
-    
     
     @Section(title: "Merge and Push to PR") {
         @ContentAndMedia {
