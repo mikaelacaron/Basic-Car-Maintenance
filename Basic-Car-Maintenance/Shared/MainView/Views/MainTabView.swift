@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 enum TabSelection: Int {
     case dashboard = 0
@@ -15,11 +16,16 @@ enum TabSelection: Int {
 
 @MainActor
 struct MainTabView: View {
-    @AppStorage("lastTabOpen") var selectedTab = TabSelection.dashboard
+    @Query var acknowledgedAlerts: [AcknowledgedAlert]
+    
     @Environment(ActionService.self) var actionService
+    @Environment(\.modelContext) private var context
     @Environment(\.scenePhase) var scenePhase
-    @State private var isShowingRealTimeAlert = false
+    
+    @AppStorage("lastTabOpen") var selectedTab = TabSelection.dashboard
+    
     @State var authenticationViewModel = AuthenticationViewModel()
+    @State var viewModel = MainTabViewModel()
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -41,12 +47,9 @@ struct MainTabView: View {
                     Label("Settings", systemImage: SFSymbol.gear)
                 }
         }
-        .sheet(isPresented: $isShowingRealTimeAlert) {
-            AlertView()
+        .sheet(item: $viewModel.alert) { alert in
+            AlertView(alert: alert)
                 .presentationDetents([.medium])
-        }
-        .onTapGesture(count: 2) {
-            isShowingRealTimeAlert = true
         }
         .onChange(of: scenePhase) { _, newScenePhase in
             guard
@@ -63,6 +66,20 @@ struct MainTabView: View {
                 selectedTab = .settings
             }
         }
+        .onAppear {
+            viewModel.fetchNewestAlert(ignoring: acknowledgedAlerts.map(\.id))
+        }
+        .onChange(of: viewModel.alert) { _, newValue in
+            guard let id = newValue?.id else { return }
+            saveNewAlert(id)
+        }
+    }
+    
+    /// Save newly acknowledged alert to DB
+    /// - Parameter id: alert's id
+    private func saveNewAlert(_ id: String) {
+        let acknowledgedAlert = AcknowledgedAlert(id: id)
+        context.insert(acknowledgedAlert)
     }
 }
 
