@@ -1,5 +1,4 @@
-# Basic-Car-Maintenance
-
+![Basic Car Maintenance](images/BasicCarMaintenance.png)
 A basic app to track your car's maintenance, like oil changes, tire rotation, etc.
 
 ## Overview
