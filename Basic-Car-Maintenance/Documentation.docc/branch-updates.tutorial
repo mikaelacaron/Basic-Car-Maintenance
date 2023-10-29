@@ -21,9 +21,9 @@
             }
             
             @Step {
-                Update the remote tracking branches by using `git fetch`.
+                Update the remote tracking branches by using `git fetch`
                 
-                Note - `git fetch` is optional as it is done within a `git pull`. For a more in-depth discussion on these commands, see [Git Pull GitHub Guide](https://github.com/git-guides/git-pull)
+                Note - `git fetch` is optional as it is done within a `git pull` For a more in-depth discussion on these commands, see [Git Pull GitHub Guide](https://github.com/git-guides/git-pull)
                 
                 @Image(source: 11-fetch.png, alt: "Command prompt using git fetch")
             }
@@ -44,7 +44,7 @@
         
         @Steps {
             @Step {
-                Switch to your local feature branch by using `git checkout feature-branch`.
+                Switch to your local feature branch by using `git checkout feature-branch`
                 
                 @Image(source: 13-checkout-feature.png, alt: "Command promopt using git checkout with example feature branch")
             }
