@@ -267,6 +267,12 @@
     "Add Reading" : {
       "comment" : "Title for form when adding an odometer reading",
       "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दूरी दर्ज करें"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -413,6 +419,12 @@
     "Add your first odometer" : {
       "comment" : "Placeholder text for empty odometer reading list",
       "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अपना पहला ओडोमीटर जोड़ें"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -718,6 +730,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Farbe"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रंग"
           }
         },
         "ko" : {
@@ -1165,6 +1183,12 @@
     },
     "Distance" : {
       "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दूरी"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1685,6 +1709,12 @@
             "value" : "Filter"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "फ़िल्टर"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1711,6 +1741,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Für %@"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ के लिए"
           }
         },
         "ko" : {
@@ -1807,6 +1843,12 @@
     "It's open source and anyone can contribute to it." : {
       "comment" : "Tells the user they can contribute to the codebase.",
       "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "यह खुला स्रोत है और कोई भी इसमें योगदान दे सकता है।"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1817,6 +1859,12 @@
     },
     "Kilometers" : {
       "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "किलोमीटर"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1843,6 +1891,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Autokennzeichen"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लाइसेंस प्लेट नंबर"
           }
         },
         "ko" : {
@@ -2001,6 +2055,12 @@
     },
     "Miles" : {
       "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मील"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2498,6 +2558,12 @@
     "Preferred units" : {
       "comment" : "Label for units selected when adding an odometer reading",
       "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पसंदीदा इकाइयाँ"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2518,6 +2584,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Палітыка прыватнасці"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गोपनीयता नीति"
           }
         },
         "pt-BR" : {
@@ -2744,6 +2816,12 @@
             "value" : "Wähle ein Fahrzeug"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "एक वाहन चुनें"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2966,6 +3044,12 @@
     "Thanks for using this app!" : {
       "comment" : "Thanks a user for using the app.",
       "localizations" : {
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इस ऐप का उपयोग करने के लिए धन्यवाद!"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3446,6 +3530,12 @@
             "value" : "Fahrzeug"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3486,6 +3576,12 @@
             "value" : "Fahrzeugfarbe"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन का रंग"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3524,6 +3620,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fahrzeug Kennzeichen"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन लाइसेंस प्लेट नंबर"
           }
         },
         "ko" : {
@@ -3758,6 +3860,12 @@
             "value" : "Fahrgestellnummer"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन पहचान संख्या"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3796,6 +3904,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Baujahr"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन निर्माण वर्ष"
           }
         },
         "ko" : {
@@ -3898,6 +4012,12 @@
             "value" : "Vehicle"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3991,6 +4111,12 @@
             "value" : "Fahrgestellnummer"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वाहन पहचान संख्या"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4029,6 +4155,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Baujahr"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वर्ष"
           }
         },
         "ko" : {
