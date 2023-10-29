@@ -5,6 +5,10 @@ on:
   pull_request:
     branches:
       - dev
+  push:
+    branches:
+      - main
+      - dev
   
 # Limit only the latest workflow created to run
 concurrency:
