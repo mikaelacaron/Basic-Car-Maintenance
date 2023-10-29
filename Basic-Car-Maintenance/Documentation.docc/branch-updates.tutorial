@@ -12,17 +12,24 @@
         @Steps {
             @Step {
                 Sync your forked repo with the latest changes from Dev branch.
+                
+                @Image(source: 9-sync.png, alt: "GitHub repository sync button" )
             }
             @Step {
                 In a command prompt, use `git checkout dev` to checkout the dev branch in your local repo.
+                @Image(source: 10-checkout-dev.png, alt: "Command prompt using git checkout dev")
             }
             
             @Step {
                 Update the remote tracking branches by using `git fetch`. This will 
                 Note - `git fetch` is optional as it is done within a `git pull`. For a more in-depth discussion on these commands, see [Git Pull GitHub Guide](https://github.com/git-guides/git-pull)
+                
+                @Image(source: 11-fetch.png, alt: "Command prompt using git fetch")
             }
             @Step {
                 Update your current local working branch by using `git pull`.
+                
+                @Image(source: 12-pull.png, alt: "Command prompt using git pull")
             }
         }
     }
@@ -35,14 +42,20 @@
         @Steps {
             @Step {
                 Switch to your local feature branch by using `git checkout feature-branch`. 
+                
+                @Image(source: 13-checkout-feature.png, alt: "Command promopt using git checkout with example feature branch")
             }
             
             @Step {
                 Merge your local dev branch into your local feature branch by using `git merge dev`
+                
+                @Image(source: 14-merge-dev.png, alt: "Command prompt using git merge dev")
             }
             
             @Step {
                 Push your local changes up the remote branch using `git push`. The PR in the original Basic-Car-Maintenance repo will receive the updates pushed.
+                
+                @Image(source: 15-push.png, alt: "Command prompt using git push")
             }
         }
     }
