@@ -66,12 +66,16 @@ struct DashboardView: View {
             .analyticsScreen(name: "\(Self.self)")
             .searchable(text: $viewModel.searchText)
             .overlay {
-                if viewModel.events.isEmpty {
-                    Text("Add your first maintenance")
-                } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
-                    ContentUnavailableView("No results",
-                                           systemImage: SFSymbol.magnifyingGlass,
-                                           description: noSearchResultsDescription)
+                if viewModel.isLoading {
+                    ProgressView("Loading...")
+                } else {
+                    if viewModel.events.isEmpty {
+                        Text("Add your first maintenance")
+                    } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
+                        ContentUnavailableView("No results",
+                                               systemImage: SFSymbol.magnifyingGlass,
+                                               description: noSearchResultsDescription)
+                    }
                 }
             }
             .animation(.linear, value: viewModel.searchedEvents)
