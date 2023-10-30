@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AlertView: View {
+    let alert: AlertItem
     @Environment(\.dismiss) var dismiss
     
     let placeholderText = """
@@ -25,25 +26,32 @@ struct AlertView: View {
             VStack {
                 ScrollView {
                     VStack(alignment: .center) {
-                        Text("🤠")
+                        Text(alert.emojiIcon)
                             .font(.system(size: 100))
                         
-                        Text("This is the title")
+                        Text(alert.title)
                             .font(.title)
+                            .minimumScaleFactor(0.7)
                             .lineLimit(2)
                             .bold()
                         
-                        Text(placeholderText)
-                            .multilineTextAlignment(.center)
+                        Text(alert.message.replacingOccurrences(of: "\\n", with: "\n"))
                     }
+                    .multilineTextAlignment(.center)
                 }
                 .scrollIndicators(.hidden)
                 .padding(.horizontal, 24)
                 
                 Button {
-                    UIApplication.shared.open(URL(string: "https://www.google.com")!)
+                    guard let url = URL(string: alert.actionURL),
+                          UIApplication.shared.canOpenURL(url) else {
+                        dismiss()
+                        return
+                    }
+                    
+                    UIApplication.shared.open(url)
                 } label: {
-                    Text("Read More...")
+                    Text(alert.actionText)
                         .font(.title3)
                         .foregroundStyle(.black)
                         .frame(maxWidth: .infinity)
@@ -61,7 +69,6 @@ struct AlertView: View {
                         dismiss()
                     } label: {
                         Text("Dismiss")
-                            .foregroundStyle(.black)
                             .bold()
                     }
                 }
@@ -72,5 +79,15 @@ struct AlertView: View {
 }
 
 #Preview {
-    AlertView()
+    AlertView(
+        alert: AlertItem(
+            id: nil,
+            actionText: "",
+            actionURL: "",
+            emojiIcon: "",
+            isOn: false,
+            message: "",
+            title: ""
+        )
+    )
 }

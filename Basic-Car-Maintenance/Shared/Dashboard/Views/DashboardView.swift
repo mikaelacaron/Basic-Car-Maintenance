@@ -5,6 +5,7 @@
 //  Created by Mikaela Caron on 8/19/23.
 //
 
+import FirebaseAnalyticsSwift
 import SwiftUI
 
 struct DashboardView: View {
@@ -49,7 +50,7 @@ struct DashboardView: View {
                                 await viewModel.deleteEvent(event)
                             }
                         } label: {
-                            Image(systemName: "trash")
+                            Image(systemName: SFSymbol.trash)
                         }
                         
                         Button {
@@ -58,7 +59,7 @@ struct DashboardView: View {
                         } label: {
                             VStack {
                                 Text("Edit")
-                                Image(systemName: "pencil")
+                                Image(systemName: SFSymbol.pencil)
                             }
                         }
                     }
@@ -69,14 +70,19 @@ struct DashboardView: View {
                 }
                 .listStyle(.inset)
             }
+            .analyticsScreen(name: "\(Self.self)")
             .searchable(text: $viewModel.searchText)
             .overlay {
-                if viewModel.events.isEmpty {
-                    Text("Add your first maintenance")
-                } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
-                    ContentUnavailableView("No results",
-                                           systemImage: "magnifyingglass",
-                                           description: noSearchResultsDescription)
+                if viewModel.isLoading {
+                    ProgressView("Loading...")
+                } else {
+                    if viewModel.events.isEmpty {
+                        Text("Add your first maintenance")
+                    } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
+                        ContentUnavailableView("No results",
+                                               systemImage: SFSymbol.magnifyingGlass,
+                                               description: noSearchResultsDescription)
+                    }
                 }
             }
             .animation(.linear, value: viewModel.searchedEvents)
@@ -93,16 +99,6 @@ struct DashboardView: View {
             }
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
-                    Button {
-                        viewModel.isShowingAddMaintenanceEvent = true
-                    } label: {
-                        Image(systemName: "plus")
-                    }
-                    .accessibilityShowsLargeContentViewer {
-                        Label("Add", systemImage: "plus")
-
-                    }
-                    
                     Menu {
                         Picker(selection: $viewModel.sortOption) {
                             ForEach(DashboardViewModel.SortOption.allCases) { option in
@@ -113,11 +109,19 @@ struct DashboardView: View {
                             EmptyView()
                         }
                     } label: {
-                        Image(systemName: "line.3.horizontal.decrease.circle")
+                        Image(systemName: SFSymbol.filter)
                     }
                     .accessibilityShowsLargeContentViewer {
-                        Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
-
+                        Label("Filter", systemImage: SFSymbol.filter)
+                    }
+                    
+                    Button {
+                        viewModel.isShowingAddMaintenanceEvent = true
+                    } label: {
+                        Image(systemName: SFSymbol.plus)
+                    }
+                    .accessibilityShowsLargeContentViewer {
+                        Label("Add", systemImage: SFSymbol.plus)
                     }
                 }
             }

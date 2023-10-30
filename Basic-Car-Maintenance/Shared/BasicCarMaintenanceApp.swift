@@ -7,6 +7,7 @@
 
 import FirebaseCore
 import SwiftUI
+import TipKit
 
 @main
 struct BasicCarMaintenanceApp: App {
@@ -17,6 +18,10 @@ struct BasicCarMaintenanceApp: App {
         WindowGroup {
             MainTabView()
                 .environment(actionService)
+                .modelContainer(for: [AcknowledgedAlert.self])
+                .task {
+                  try? Tips.configure()
+                }
         }
     }
 }

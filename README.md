@@ -7,7 +7,7 @@ Welcome to my open source app! It is ready for contributors for [Hacktoberfest](
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mikaelacaron/Basic-Car-Maintenance/dev?logo=github)
 ![GitHub contributors](https://img.shields.io/github/contributors/mikaelacaron/Basic-Car-Maintenance)
 [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](https://www.firsttimersonly.com/)
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/mikaelacaron/Basic-Car-Maintenance/swiftlint.yml)
+[![Unit Tests](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml/badge.svg?event=push)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml)
 
 * Read the [Code of Conduct](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CODE_OF_CONDUCT.md)
 * Read the [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md) guidelines
@@ -22,6 +22,8 @@ Welcome to my open source app! It is ready for contributors for [Hacktoberfest](
 cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
 ```
 
+* Open Xcode
+
 * In the `Basic-Car-Maintenance.xcconfig` file, fill in your `DEVELOPMENT_TEAM` and `PRODUCT_BUNDLE_IDENTIFIER`.
    * You can find this by logging into the Apple Developer Portal
    * This works with both free or paid Apple Developer accounts. Do **NOT** run this app on a real device due to issues with the Sign in With Apple capability.
@@ -29,7 +31,7 @@ cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
 DEVELOPMENT_TEAM = ABC123
 PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 ```
-* Open Xcode
+
 * Build the project ✅
 
 * **Checkout** a new branch (from the `dev` branch) to work on an issue
