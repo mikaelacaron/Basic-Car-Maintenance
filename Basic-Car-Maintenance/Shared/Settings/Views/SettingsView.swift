@@ -12,10 +12,11 @@ import TipKit
 
 struct SettingsView: View {
     @Environment(ActionService.self) var actionService
+    @Environment(AppSharedInfo.self) var sharedInfo
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.colorScheme) var colorScheme
     
-    @State private var viewModel: SettingsViewModel
+    @StateObject private var viewModel = SettingsViewModel()
     @State private var isShowingAddVehicle = false
     @State private var showDeleteVehicleError = false
     @State private var showAddVehicleError = false
@@ -23,11 +24,6 @@ struct SettingsView: View {
     @State private var copiedAppVersion: Bool = false
     
     private let appVersion = "Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))"
-    
-    init(authenticationViewModel: AuthenticationViewModel) {
-        let settingsViewModel = SettingsViewModel(authenticationViewModel: authenticationViewModel)
-        _viewModel = .init(initialValue: settingsViewModel)
-    }
     
     var body: some View {
         NavigationStack {
@@ -84,7 +80,7 @@ struct SettingsView: View {
                 }
                 
                 Section {
-                    ForEach(viewModel.vehicles) { vehicle in
+                    ForEach(sharedInfo.vehicles, id: \.self) { vehicle in
                         VStack {
                             Text(vehicle.name)
                                 .font(.headline)
@@ -128,7 +124,7 @@ struct SettingsView: View {
                 
                 Section {
                     NavigationLink {
-                        AuthenticationView(viewModel: viewModel.authenticationViewModel)
+                        AuthenticationView()
                     } label: {
                         Label {
                             Text("Profile", comment: "Link to view profile.")
@@ -177,7 +173,6 @@ struct SettingsView: View {
                     Task {
                         do {
                             try await viewModel.addVehicle(vehicle)
-                            await viewModel.getVehicles()
                             isShowingAddVehicle = false
                         } catch {
                             errorDetails = error
@@ -215,8 +210,10 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle(Text("Settings", comment: "Label to display settings."))
-            .task {
-                await viewModel.getVehicles()
+        }
+        .onChange(of: viewModel.vehicles) { oldVehicles, newVehicles in
+            if oldVehicles != newVehicles {
+                self.sharedInfo.vehicles = newVehicles
             }
         }
         .onChange(of: scenePhase) { _, newScenePhase in
@@ -243,6 +240,6 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView(authenticationViewModel: AuthenticationViewModel())
+    SettingsView()
         .environment(ActionService.shared)
 }

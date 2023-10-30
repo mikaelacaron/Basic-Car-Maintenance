@@ -10,17 +10,13 @@ import FirebaseFirestoreSwift
 import Foundation
 
 @Observable
-class DashboardViewModel {
-    
-    let authenticationViewModel: AuthenticationViewModel
-    
+class DashboardViewModel: ObservableObject {
     var events = [MaintenanceEvent]()
     var showAddErrorAlert = false
     var showErrorAlert = false
     var isShowingAddMaintenanceEvent = false
     var errorMessage: String = ""
     var sortOption: SortOption = .custom
-    var vehicles = [Vehicle]()
     var searchText: String = ""
     var isLoading = false
 
@@ -40,12 +36,8 @@ class DashboardViewModel {
         }
     }
     
-    init(authenticationViewModel: AuthenticationViewModel) {
-        self.authenticationViewModel = authenticationViewModel
-    }
-    
     func addEvent(_ maintenanceEvent: MaintenanceEvent) {
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = AppDefaults.getUserID() {
             var eventToAdd = maintenanceEvent
             eventToAdd.userID = uid
             
@@ -68,8 +60,7 @@ class DashboardViewModel {
     
     func getMaintenanceEvents() async {
         isLoading = true
-
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = AppDefaults.getUserID() {
             let db = Firestore.firestore()
             let docRef = db.collection(FirestoreCollection.maintenanceEvents)
                 .whereField(FirestoreField.userID, isEqualTo: uid)
@@ -92,7 +83,7 @@ class DashboardViewModel {
     
     func updateEvent(_ maintenanceEvent: MaintenanceEvent) async {
         
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = AppDefaults.getUserID() {
             guard let id = maintenanceEvent.id else { return }
             var eventToUpdate = maintenanceEvent
             eventToUpdate.userID = uid
@@ -129,28 +120,6 @@ class DashboardViewModel {
         } catch {
             showErrorAlert.toggle()
             errorMessage = error.localizedDescription
-        }
-    }
-    
-    /// Fetches the user's vehicles from Firestore based on their unique user ID.
-    func getVehicles() async {
-        if let uid = authenticationViewModel.user?.uid {
-            let db = Firestore.firestore()
-            let docRef = db.collection("vehicles").whereField("userID", isEqualTo: uid)
-            
-            let querySnapshot = try? await docRef.getDocuments()
-            
-            var vehicles = [Vehicle]()
-            
-            if let querySnapshot {
-                for document in querySnapshot.documents {
-                    if let vehicle = try? document.data(as: Vehicle.self) {
-                        vehicles.append(vehicle)
-                    }
-                }
-                
-                self.vehicles = vehicles
-            }
         }
     }
 }

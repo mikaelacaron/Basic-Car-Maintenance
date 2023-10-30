@@ -14,7 +14,6 @@ enum TabSelection: Int {
     case settings = 2
 }
 
-@MainActor
 struct MainTabView: View {
     @Query var acknowledgedAlerts: [AcknowledgedAlert]
     
@@ -24,29 +23,31 @@ struct MainTabView: View {
     
     @AppStorage("lastTabOpen") var selectedTab = TabSelection.dashboard
     
+    @StateObject private var sharedInfo = AppSharedInfo()
     @State var authenticationViewModel = AuthenticationViewModel()
-    @State var viewModel = MainTabViewModel()
+    @StateObject var viewModel = MainTabViewModel()
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            DashboardView(authenticationViewModel: authenticationViewModel)
+            DashboardView()
                 .tag(TabSelection.dashboard)
                 .tabItem {
                     Label("Dashboard", systemImage: SFSymbol.dashboard)
                 }
             
-            OdometerView(authenticationViewModel: authenticationViewModel)
+            OdometerView()
                 .tag(TabSelection.odometer)
                 .tabItem {
                     Label("Odometer", systemImage: SFSymbol.gauge)
                 }
             
-            SettingsView(authenticationViewModel: authenticationViewModel)
+            SettingsView()
                 .tag(TabSelection.settings)
                 .tabItem {
                     Label("Settings", systemImage: SFSymbol.gear)
                 }
         }
+        .environment(sharedInfo)
         .sheet(item: $viewModel.alert) { alert in
             AlertView(alert: alert)
                 .presentationDetents([.medium])
@@ -72,6 +73,9 @@ struct MainTabView: View {
         .onChange(of: viewModel.alert) { _, newValue in
             guard let id = newValue?.id else { return }
             saveNewAlert(id)
+        }
+        .task {
+            self.sharedInfo.vehicles = await viewModel.getVehicles()
         }
     }
     

@@ -10,15 +10,12 @@ import SwiftUI
 
 struct DashboardView: View {
     @Environment(ActionService.self) var actionService
+    @Environment(AppSharedInfo.self) var sharedInfo
     @Environment(\.scenePhase) var scenePhase
     @State private var isShowingAddView = false
-    @Bindable private var viewModel: DashboardViewModel
+    @StateObject private var viewModel = DashboardViewModel()
     @State private var isShowingEditView = false
     @State private var selectedMaintenanceEvent: MaintenanceEvent?
-    
-    init(authenticationViewModel: AuthenticationViewModel) {
-        viewModel = DashboardViewModel(authenticationViewModel: authenticationViewModel)
-    }
     
     var body: some View {
         NavigationStack {
@@ -120,7 +117,6 @@ struct DashboardView: View {
             }
             .task {
                 await viewModel.getMaintenanceEvents()
-                await viewModel.getVehicles()
             }
             .sheet(isPresented: $isShowingAddView) {
                 makeAddMaintenanceView()
@@ -148,7 +144,7 @@ struct DashboardView: View {
     }
     
     private func makeAddMaintenanceView() -> some View {
-        AddMaintenanceView(vehicles: viewModel.vehicles) { event in
+        AddMaintenanceView() { event in
             viewModel.addEvent(event)
             Task {
                 await viewModel.getMaintenanceEvents()
@@ -167,6 +163,6 @@ struct DashboardView: View {
 }
 
 #Preview {
-    DashboardView(authenticationViewModel: AuthenticationViewModel())
+    DashboardView()
         .environment(ActionService.shared)
 }

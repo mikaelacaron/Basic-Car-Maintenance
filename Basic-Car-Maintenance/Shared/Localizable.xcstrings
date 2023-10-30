@@ -264,6 +264,9 @@
         }
       }
     },
+    "Add Odometer reading" : {
+
+    },
     "Add Reading" : {
       "comment" : "Title for form when adding an odometer reading",
       "localizations" : {
@@ -286,6 +289,9 @@
           }
         }
       }
+    },
+    "Add reading Successfully" : {
+
     },
     "Add Vehicle" : {
       "comment" : "Label to add a vehicle.",
@@ -1202,6 +1208,12 @@
           }
         }
       }
+    },
+    "Distance Type" : {
+
+    },
+    "Distance Unit" : {
+
     },
     "Edit" : {
       "localizations" : {
@@ -2316,6 +2328,9 @@
           }
         }
       }
+    },
+    "No vehicles available, please add a vehicle in the app and try again" : {
+
     },
     "Notes" : {
       "comment" : "Maintenance event notes text field label",
@@ -4191,6 +4206,12 @@
           }
         }
       }
+    },
+    "You can not select a past date" : {
+
+    },
+    "You can not select distance number less than 1 km or mi" : {
+
     }
   },
   "version" : "1.0"

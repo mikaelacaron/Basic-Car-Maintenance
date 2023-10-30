@@ -23,25 +23,23 @@ enum AuthenticationFlow {
 }
 
 @Observable
-final class AuthenticationViewModel {
-    
+final class AuthenticationViewModel: ObservableObject {
     var email = ""
     var password = ""
     var confirmPassword = ""
     var authenticationState: AuthenticationState = .unauthenticated
-    
     var user: User?
-    
     var flow: AuthenticationFlow = .signUp
     
     private var authStateHandler: AuthStateDidChangeListenerHandle?
     private var currentNonce: String?
     
-    @MainActor
     init() {
-        registerAuthStateHandler()
-        verifySignInWithAppleAuthenticationState()
-        signIn()
+            registerAuthStateHandler()
+            verifySignInWithAppleAuthenticationState()
+        Task {
+            user = await signIn()
+        }
     }
     
     func signInAnonymously() {
@@ -50,23 +48,27 @@ final class AuthenticationViewModel {
         }
     }
     
-    @MainActor
-    func signIn() {
+    func signIn() async -> User? {
+        var currentUser: User?
         if Auth.auth().currentUser == nil {
             print("No user signed in. Trying to sign in anonymously.")
-            Task {
-                do {
-                    try await Auth.auth().signInAnonymously()
-                } catch {
-                    print(error.localizedDescription)
-                }
+            do {
+                try await Auth.auth().signInAnonymously()
+                currentUser = Auth.auth().currentUser
+            } catch {
+                print(error.localizedDescription)
             }
         } else {
             print("User is signed in")
             if let user = Auth.auth().currentUser {
-                self.user = user
+                currentUser = user
             }
         }
+        
+        if let currentUser {
+            AppDefaults.saveUser(id: currentUser.uid)
+        }
+        return currentUser
     }
     
     func signOut() {
@@ -91,11 +93,13 @@ final class AuthenticationViewModel {
         }
     }
     
-    @MainActor
     private func registerAuthStateHandler() {
         if authStateHandler == nil {
             authStateHandler = Auth.auth().addStateDidChangeListener { _, user in
                 self.user = user
+                if let id = user?.uid {
+                    AppDefaults.saveUser(id: id)
+                }
                 self.authenticationState = user == nil ? .unauthenticated : .authenticated
             }
         }
@@ -135,6 +139,9 @@ extension AuthenticationViewModel {
                 Task {
                     do {
                         _ = try await Auth.auth().signIn(with: credential)
+                        if let userId = credential.idToken {
+                            AppDefaults.saveUser(id: userId)
+                        }
                         authenticationState = .authenticated
                     } catch {
                         print("Error authenticating: \(error.localizedDescription)")
@@ -144,8 +151,7 @@ extension AuthenticationViewModel {
         }
     }
     
-    @MainActor
-    func verifySignInWithAppleAuthenticationState() {
+    private func verifySignInWithAppleAuthenticationState() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let providerData = Auth.auth().currentUser?.providerData
         if let appleProviderData = providerData?.first(where: { $0.providerID == "apple.com" }) {
@@ -212,4 +218,15 @@ private func sha256(_ input: String) -> String {
     }.joined()
     
     return hashString
+}
+
+// find a better way to save user's ID
+enum AppDefaults {
+    static func saveUser(id: String) {
+        UserDefaults.standard.setValue(id, forKey: "UserID")
+    }
+    
+    static func getUserID() -> String? {
+        UserDefaults.standard.value(forKey: "UserID") as? String
+    }
 }

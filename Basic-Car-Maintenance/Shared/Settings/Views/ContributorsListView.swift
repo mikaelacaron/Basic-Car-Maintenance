@@ -36,6 +36,6 @@ struct ContributorsListView: View {
 }
 
 #Preview {
-    let viewModel = SettingsViewModel(authenticationViewModel: AuthenticationViewModel())
+    let viewModel = SettingsViewModel()
     return ContributorsListView(viewModel: viewModel)
 }

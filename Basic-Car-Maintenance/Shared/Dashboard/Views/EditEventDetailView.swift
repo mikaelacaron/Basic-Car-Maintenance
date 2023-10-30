@@ -16,6 +16,7 @@ struct EditMaintenanceEventView: View {
     @State private var selectedVehicle: Vehicle?
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
+    @Environment(AppSharedInfo.self) var sharedInfo
     
     var body: some View {
         NavigationStack {
@@ -28,7 +29,7 @@ struct EditMaintenanceEventView: View {
                 
                 Section {
                     Picker(selection: $selectedVehicle) {
-                        ForEach(viewModel.vehicles) { vehicle in
+                        ForEach(sharedInfo.vehicles, id: \.self) { vehicle in
                             Text(vehicle.name).tag(vehicle as Vehicle)
                         }
                     } label: {
@@ -97,10 +98,14 @@ struct EditMaintenanceEventView: View {
 }
 
 #Preview {
-    EditMaintenanceEventView(selectedEvent:
-            .constant(MaintenanceEvent(title: "", date: Date(), notes: "",
-                                       vehicle: Vehicle(name: "", make: "", model: ""))),
-                             viewModel:
-                                DashboardViewModel(authenticationViewModel: AuthenticationViewModel())
+    EditMaintenanceEventView(
+        selectedEvent:
+                .constant(
+                    MaintenanceEvent(
+                        title: "", date: Date(), notes: "",
+                        vehicle: Vehicle(name: "", make: "", model: "")
+                    )
+                ),
+        viewModel: DashboardViewModel()
     )
 }

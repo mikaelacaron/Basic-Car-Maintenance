@@ -12,11 +12,7 @@ import SwiftUI
 struct AuthenticationView: View {
     @Environment(\.colorScheme) var colorScheme
     
-    var viewModel: AuthenticationViewModel
-    
-    init(viewModel: AuthenticationViewModel) {
-        self.viewModel = viewModel
-    }
+    @StateObject var viewModel = AuthenticationViewModel()
     
     var body: some View {
         Form {
@@ -63,6 +59,6 @@ struct AuthenticationView: View {
 
 #Preview {
     NavigationStack {
-        AuthenticationView(viewModel: AuthenticationViewModel())
+        AuthenticationView()
     }
 }

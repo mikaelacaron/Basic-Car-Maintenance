@@ -9,10 +9,10 @@ import SwiftUI
 
 struct AddOdometerReadingView: View {
     
-    let vehicles: [Vehicle]
     let addTapped: (OdometerReading) -> Void
     
     @Environment(\.dismiss) var dismiss
+    @Environment(AppSharedInfo.self) var sharedInfo
     
     @State private var date = Date()
     @State private var selectedVehicleID: String?
@@ -39,9 +39,9 @@ struct AddOdometerReadingView: View {
                 
                 Section {
                     Picker(selection: $selectedVehicleID) {
-                        ForEach(vehicles) { vehicle in
+                        ForEach(sharedInfo.vehicles, id: \.self) { vehicle in
                             Text(vehicle.name)
-                                .tag(vehicle.id)
+                                .tag(vehicle.documentID)
                         }
                     } label: {
                         Text("Select a vehicle",
@@ -59,8 +59,8 @@ struct AddOdometerReadingView: View {
                 .dynamicTypeSize(...DynamicTypeSize.accessibility2)
             }
             .onAppear {
-                if !vehicles.isEmpty {
-                    selectedVehicleID = vehicles[0].id
+                if let firstVehicle = sharedInfo.vehicles.first {
+                    selectedVehicleID = firstVehicle.documentID
                 }
             }
             .navigationTitle(Text("Add Reading",
@@ -68,7 +68,7 @@ struct AddOdometerReadingView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        let selectedVehicle = vehicles.first { $0.id == selectedVehicleID }
+                        let selectedVehicle = sharedInfo.vehicles.first { $0.documentID == selectedVehicleID }
                         if let selectedVehicle {
                             let reading = OdometerReading(date: date,
                                                           distance: distance,
@@ -88,7 +88,7 @@ struct AddOdometerReadingView: View {
 }
 
 #Preview {
-    AddOdometerReadingView(vehicles: sampleVehicles) { _ in }
+    AddOdometerReadingView() { _ in }
 }
 
 let sampleVehicle = [

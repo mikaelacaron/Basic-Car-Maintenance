@@ -10,14 +10,11 @@ import FirebaseFirestoreSwift
 import Foundation
 
 @Observable
-final class SettingsViewModel {
-    let authenticationViewModel: AuthenticationViewModel
+final class SettingsViewModel: ObservableObject, VehiclesProtocol {
     let privacyURL = URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance-Privacy")
 
     var contributors: [Contributor]?
-    
     var vehicles = [Vehicle]()
-    
     var sortedContributors: [Contributor] {
         guard let contributors = contributors, !contributors.isEmpty else {
             return []
@@ -33,10 +30,6 @@ final class SettingsViewModel {
                 return contributor1.login < contributor2.login
             }
         }
-    }
-    
-    init(authenticationViewModel: AuthenticationViewModel) {
-        self.authenticationViewModel = authenticationViewModel
     }
     
     let urls: [String: URL] = [
@@ -70,7 +63,7 @@ final class SettingsViewModel {
     /// - Parameter vehicle: The vehicle to be added.
     /// - Throws: An error if there's an issue adding the vehicle to Firestore.
     func addVehicle(_ vehicle: Vehicle) async throws {
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = AppDefaults.getUserID() {
             var vehicleToAdd = vehicle
             vehicleToAdd.userID = uid
             
@@ -79,32 +72,9 @@ final class SettingsViewModel {
                     .firestore()
                     .collection(FirestoreCollection.vehicles)
                     .addDocument(from: vehicleToAdd)
-                vehicles.append(vehicleToAdd)
+                vehicles = await getVehicles()
             } catch {
                 throw error
-            }
-        }
-    }
-    
-    /// Fetches the user's vehicles from Firestore based on their unique user ID.
-    func getVehicles() async {
-        if let uid = authenticationViewModel.user?.uid {
-            let db = Firestore.firestore()
-            let docRef = db.collection(FirestoreCollection.vehicles)
-                .whereField(FirestoreField.userID, isEqualTo: uid)
-            
-            let querySnapshot = try? await docRef.getDocuments()
-            
-            var vehicles = [Vehicle]()
-            
-            if let querySnapshot {
-                for document in querySnapshot.documents {
-                    if let vehicle = try? document.data(as: Vehicle.self) {
-                        vehicles.append(vehicle)
-                    }
-                }
-                
-                self.vehicles = vehicles
             }
         }
     }
@@ -114,7 +84,9 @@ final class SettingsViewModel {
     /// - Parameter vehicle: The vehicle to be deleted.
     /// - Throws: An error if there's an issue deleting the vehicle from Firestore.
     func deleteVehicle(_ vehicle: Vehicle) async throws {
-        guard let documentId = vehicle.id else {
+        guard let documentID = vehicle.documentID,
+              !documentID.isEmpty
+        else {
             fatalError("Event \(vehicle.name) has no document ID.")
         }
         
@@ -122,10 +94,10 @@ final class SettingsViewModel {
             try await Firestore
                 .firestore()
                 .collection(FirestoreCollection.vehicles)
-                .document(documentId)
+                .document(documentID)
                 .delete()
             
-            vehicles.removeAll { $0.id == vehicle.id }
+            vehicles = await getVehicles()
         } catch {
             throw error
         }

@@ -10,7 +10,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 @Observable
-class MainTabViewModel {
+final class MainTabViewModel: ObservableObject, VehiclesProtocol {
     @MainActor var alert: AlertItem?
     
     /// Update the UI once a new alert is sent
@@ -51,5 +51,29 @@ class MainTabViewModel {
                 }
             }
         }
+    }
+}
+
+/// Share common UI items across the views
+@Observable
+final class AppSharedInfo: ObservableObject {
+    var vehicles = [Vehicle]()
+}
+
+protocol VehiclesProtocol {
+    func getVehicles() async -> [Vehicle]
+}
+
+extension VehiclesProtocol {
+    func getVehicles() async -> [Vehicle] {
+        guard let uid = AppDefaults.getUserID() else { return [] }
+        let db = Firestore.firestore()
+        let docRef = db.collection(FirestoreCollection.vehicles)
+            .whereField(FirestoreField.userID, isEqualTo: uid)
+        
+        guard let querySnapshot = try? await docRef.getDocuments() else { return [] }
+        
+        let vehicles = querySnapshot.documents.compactMap { try? $0.data(as: Vehicle.self) }
+        return vehicles
     }
 }

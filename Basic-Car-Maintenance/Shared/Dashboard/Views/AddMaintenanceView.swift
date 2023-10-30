@@ -9,8 +9,6 @@ import FirebaseAnalyticsSwift
 import SwiftUI
 
 struct AddMaintenanceView: View {
-    
-    let vehicles: [Vehicle]
     let addTapped: (MaintenanceEvent) -> Void
     
     @State private var title = ""
@@ -18,6 +16,7 @@ struct AddMaintenanceView: View {
     @State private var selectedVehicleID: String?
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
+    @Environment(AppSharedInfo.self) var sharedInfo
     
     var body: some View {
         NavigationStack {
@@ -36,8 +35,8 @@ struct AddMaintenanceView: View {
                 
                 Section {
                     Picker(selection: $selectedVehicleID) {
-                        ForEach(vehicles) { vehicle in
-                            Text(vehicle.name).tag(vehicle.id)
+                        ForEach(sharedInfo.vehicles, id: \.self) { vehicle in
+                            Text(vehicle.name).tag(vehicle.documentID)
                         }
                     } label: {
                         Text("Select a vehicle",
@@ -76,11 +75,14 @@ struct AddMaintenanceView: View {
                     Button {
                         
                         if let selectedVehicleID {
-                            if let vehicle = vehicles.filter({ $0.id == selectedVehicleID }).first {
-                                let event = MaintenanceEvent(title: title,
-                                                             date: date,
-                                                             notes: notes,
-                                                             vehicle: vehicle)
+                            if let vehicle = sharedInfo.vehicles
+                                .first(where: { $0.documentID == selectedVehicleID }) {
+                                let event = MaintenanceEvent(
+                                    title: title,
+                                    date: date,
+                                    notes: notes,
+                                    vehicle: vehicle
+                                )
                                 addTapped(event)
                             }
                             dismiss()
@@ -97,7 +99,7 @@ struct AddMaintenanceView: View {
 }
 
 #Preview {
-    AddMaintenanceView(vehicles: sampleVehicles) { _ in }
+    AddMaintenanceView() { _ in }
 }
 
 let sampleVehicles = [

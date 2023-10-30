@@ -10,12 +10,9 @@ import SwiftUI
 
 struct OdometerView: View {
     @Environment(ActionService.self) var actionService
+    @Environment(AppSharedInfo.self) var sharedInfo
     
-    @State private var viewModel: OdometerViewModel
-
-    init(authenticationViewModel: AuthenticationViewModel) {
-        viewModel = OdometerViewModel(authenticationViewModel: authenticationViewModel)
-    }
+    @StateObject private var viewModel = OdometerViewModel()
 
     var body: some View {
         NavigationStack {
@@ -53,14 +50,13 @@ struct OdometerView: View {
             }
             .task {
                 await viewModel.getOdometerReadings()
-                await viewModel.getVehicles()
             }
         }
         .analyticsScreen(name: "\(Self.self)")
     }
     
     private func makeAddOdometerView() -> some View {
-        AddOdometerReadingView(vehicles: viewModel.vehicles) { reading in
+        AddOdometerReadingView() { reading in
             do {
                 try viewModel.addReading(reading)
                 viewModel.isShowingAddOdometerReading = false
@@ -81,6 +77,6 @@ struct OdometerView: View {
 }
 
 #Preview {
-    OdometerView(authenticationViewModel: AuthenticationViewModel())
+    OdometerView()
         .environment(ActionService.shared)
 }
