@@ -29,6 +29,15 @@ struct OdometerView: View {
                         
                         Text("\(reading.date.formatted(date: .abbreviated, time: .omitted))")
                     }
+                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                        Button(role: .destructive) {
+                            Task {
+                                await viewModel.deleteReading(reading)
+                            }
+                        } label: {
+                            Image(systemName: SFSymbol.trash)
+                        }
+                    }
                 }
                 .listStyle(.inset)
             }
