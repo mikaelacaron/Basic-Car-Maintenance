@@ -41,20 +41,14 @@ class OdometerViewModel {
             fatalError("Reading Entry has no document ID.")
         }
         
-        do {
-            try await Firestore
-                .firestore()
-                .collection(FirestoreCollection.odometerReadings)
-                .document(documentId)
-                .delete()
-            errorMessage = ""
-            
-            if let eventIndex = readings.firstIndex(of: reading) {
-                readings.remove(at: eventIndex)
-            }
-        } catch {
-            errorMessage = error.localizedDescription
-            showAddErrorAlert = true
+        try? await Firestore
+            .firestore()
+            .collection(FirestoreCollection.odometerReadings)
+            .document(documentId)
+            .delete()
+        
+        if let eventIndex = readings.firstIndex(of: reading) {
+            readings.remove(at: eventIndex)
         }
     }
         
