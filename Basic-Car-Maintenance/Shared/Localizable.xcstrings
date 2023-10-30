@@ -18,7 +18,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "%@"
           }
         },
         "es-419" : {
@@ -61,6 +61,12 @@
     },
     "%lld %@" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld %2$@"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -267,6 +273,12 @@
     "Add Reading" : {
       "comment" : "Title for form when adding an odometer reading",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KM-Stand hinzufügen"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -419,6 +431,12 @@
     "Add your first odometer" : {
       "comment" : "Placeholder text for empty odometer reading list",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ersten Kilometerstand hinzufügen"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1183,6 +1201,12 @@
     },
     "Distance" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entfernung"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1843,6 +1867,12 @@
     "It's open source and anyone can contribute to it." : {
       "comment" : "Tells the user they can contribute to the codebase.",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es ist Open Source und Jede/Jeder kann mitwirken."
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1859,6 +1889,12 @@
     },
     "Kilometers" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kilometer"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1926,7 +1962,14 @@
       }
     },
     "Loading..." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lade…"
+          }
+        }
+      }
     },
     "Logged in anonymously with ID: %@" : {
       "localizations" : {
@@ -2058,6 +2101,12 @@
     },
     "Miles" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meilen"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2561,6 +2610,12 @@
     "Preferred units" : {
       "comment" : "Label for units selected when adding an odometer reading",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2587,6 +2642,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Палітыка прыватнасці"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datenschutzrichtlinie"
           }
         },
         "hi" : {
@@ -3047,6 +3108,12 @@
     "Thanks for using this app!" : {
       "comment" : "Thanks a user for using the app.",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danke, dass Sie diese App verwenden!"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4009,6 +4076,12 @@
     "VehicleSectionHeader" : {
       "comment" : "Label for Picker for selecting a vehicle",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fahrzeug"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
