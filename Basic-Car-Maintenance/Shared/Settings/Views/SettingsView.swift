@@ -5,7 +5,6 @@
 //  Created by Mikaela Caron on 8/19/23.
 //
 
-import FirebaseAnalyticsSwift
 import SwiftUI
 import UniformTypeIdentifiers
 import TipKit
@@ -171,7 +170,7 @@ struct SettingsView: View {
                             .animation(.linear(duration: 0.2), value: copiedAppVersion)
                     }
             }
-            .analyticsScreen(name: "\(Self.self)")
+            .analyticsView()
             .navigationDestination(isPresented: $isShowingAddVehicle) {
                 AddVehicleView() { vehicle in
                     Task {

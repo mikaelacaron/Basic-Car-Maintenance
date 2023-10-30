@@ -5,7 +5,6 @@
 //  Created by Mikaela Caron on 10/11/23.
 //
 
-import FirebaseAnalyticsSwift
 import SwiftUI
 
 struct OdometerView: View {
@@ -65,7 +64,7 @@ struct OdometerView: View {
                 await viewModel.getVehicles()
             }
         }
-        .analyticsScreen(name: "\(Self.self)")
+        .analyticsView()
     }
     
     private func makeAddOdometerView() -> some View {
