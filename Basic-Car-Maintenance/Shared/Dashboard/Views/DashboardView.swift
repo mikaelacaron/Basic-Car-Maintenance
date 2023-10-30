@@ -20,9 +20,9 @@ struct DashboardView: View {
         viewModel = DashboardViewModel(authenticationViewModel: authenticationViewModel)
     }
     
-    var eventDateFormat: DateFormatter {
+    private var eventDateFormatter: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM-dd-yy"
+        formatter.dateStyle = .short
         return formatter
     }
     
@@ -35,7 +35,7 @@ struct DashboardView: View {
                             .font(.title3)
                             .foregroundStyle(.primary)
                         
-                        Text("\(event.vehicle.name) on \(eventDateFormat.string(from: event.date))")
+                        Text("\(event.vehicle.name) on \(eventDateFormatter.string(from: event.date))")
                             .foregroundStyle(.secondary)
                         
                         if !event.notes.isEmpty {

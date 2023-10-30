@@ -2,7 +2,6 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@" : {
-      "extractionState" : "stale",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -60,6 +59,16 @@
         }
       }
     },
+    "%@ on %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ on %2$@"
+          }
+        }
+      }
+    },
     "%lld %@" : {
       "localizations" : {
         "en" : {
@@ -75,9 +84,6 @@
           }
         }
       }
-    },
-    "🤠" : {
-
     },
     "🦄 Mikaela Caron - Maintainer" : {
       "comment" : "Link to maintainer Github account.",
