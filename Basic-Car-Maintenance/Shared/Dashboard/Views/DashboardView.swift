@@ -20,11 +20,11 @@ struct DashboardView: View {
         viewModel = DashboardViewModel(authenticationViewModel: authenticationViewModel)
     }
     
-    private var eventDateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        return formatter
-    }
+    private var eventDateFormat: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .short
+            return formatter
+        }()
     
     var body: some View {
         NavigationStack {
@@ -33,10 +33,8 @@ struct DashboardView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(event.title)
                             .font(.title3)
-                            .foregroundStyle(.primary)
                         
-                        Text("\(event.vehicle.name) on \(eventDateFormatter.string(from: event.date))")
-                            .foregroundStyle(.secondary)
+                        Text("\(event.vehicle.name) on \(event.date, formatter: self.eventDateFormat)")
                         
                         if !event.notes.isEmpty {
                             Text(event.notes)
