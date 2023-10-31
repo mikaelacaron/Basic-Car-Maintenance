@@ -51,6 +51,12 @@
             "value" : "%@"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -70,6 +76,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : "%1$lld %2$@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "%1$lld %2$@"
           }
         },
@@ -130,6 +142,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🦄 Микаэла Карон - администратор"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 Mikaela Caron - Sorumlu"
           }
         },
         "uk" : {
@@ -197,6 +215,12 @@
             "value" : "Добавить"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ekle"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -262,6 +286,12 @@
             "value" : "Добавить обслуживание"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bakım Ekle"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -289,6 +319,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Adicionar leitura"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okuma Ekle"
           }
         },
         "uk" : {
@@ -356,6 +392,12 @@
             "value" : "Добавить машину"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Ekle"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -420,6 +462,12 @@
             "value" : "Добавить свое первое обслуживание"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlk bakımını ekle"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -447,6 +495,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Adicionar primeiro odometro"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlk kilometre ölçümünü ekle"
           }
         },
         "uk" : {
@@ -514,6 +568,12 @@
             "value" : "Дополнительные заметки"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ek Notlar"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -578,6 +638,12 @@
             "value" : "Произошла ошибка"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bir Hata Oluştu"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -636,6 +702,12 @@
             "value" : "Отменить"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İptal"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -680,6 +752,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сменить иконку"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikasyon İkonunu Değiştir"
           }
         },
         "uk" : {
@@ -728,6 +806,12 @@
             "value" : "Выбрать иконку"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikasyon İkonunu Seç"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -772,6 +856,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Цвет"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Renk"
           }
         },
         "uk" : {
@@ -839,6 +929,12 @@
             "value" : "Участники"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Katılımcılar"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -884,6 +980,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скопировано!"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopyalandı!"
           }
         },
         "uk" : {
@@ -951,6 +1053,12 @@
             "value" : "Изменить"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kişisel"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1013,6 +1121,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дэшборд"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gösterge Paneli"
           }
         },
         "uk" : {
@@ -1080,6 +1194,12 @@
             "value" : "Дата"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tarih"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1145,6 +1265,12 @@
             "value" : "Удалить"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sil"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1191,6 +1317,12 @@
             "value" : "Отклонить"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bırak"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1217,6 +1349,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Distancia"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mesafe"
           }
         },
         "uk" : {
@@ -1277,6 +1415,12 @@
             "value" : "Редактировать"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Düzenle"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1335,6 +1479,12 @@
             "value" : "Не удалось добавить авто"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Eklenemedi"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1391,6 +1541,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не удалось добавить авто\nДетали:%@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Detayları Eklenemedi: %@"
           }
         },
         "uk" : {
@@ -1458,6 +1614,12 @@
             "value" : "Не удалось добавить авто. Неизвестная ошибка"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Eklenemedi. Bilinmeyen Hata"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1520,6 +1682,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Удаление невозможно"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Bilgisi Silinememesi"
           }
         },
         "uk" : {
@@ -1587,6 +1755,12 @@
             "value" : "Удаление авто невозможно"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Bilgisi Silinemedi"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1652,6 +1826,12 @@
             "value" : "Удаление авто невозможно\nДетали:%@"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Bilgisi Silinemedi. Detay: %@"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1711,6 +1891,12 @@
             "value" : "Удаление авто невозможно. Ошибка неизвестна"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Bilgisi Silinemedi. Bilinmeyen Hata"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1743,6 +1929,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Filtro"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtrele"
           }
         },
         "uk" : {
@@ -1789,6 +1981,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Для %@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For %@"
           }
         },
         "uk" : {
@@ -1856,6 +2054,12 @@
             "value" : "GitHub репозиторий"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Github Repo"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1884,6 +2088,12 @@
             "state" : "translated",
             "value" : "Esse é um projeto open source todos podem contribuir"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Açık kaynak kodludur ve herkes katkıda bulunabilir."
+          }
         }
       }
     },
@@ -1905,6 +2115,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kilometros"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kilometre"
           }
         },
         "uk" : {
@@ -1953,6 +2169,12 @@
             "value" : "Номер лицензии"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plaka"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1962,14 +2184,20 @@
       }
     },
     "Loading..." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lade…"
-          }
+        "localizations" : {
+            "de" : {
+                "stringUnit" : {
+                    "state" : "translated",
+                    "value" : "Lade…"
+                }
+            },
+            "tr" : {
+                "stringUnit" : {
+                    "state" : "translated",
+                    "value" : "Yükleniyor..."
+                }
+            }
         }
-      }
     },
     "Logged in anonymously with ID: %@" : {
       "localizations" : {
@@ -2025,6 +2253,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Включен анонимный режим с ID: %@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ olarak anonim olarak giriş yapıldı."
           }
         },
         "uk" : {
@@ -2091,6 +2325,12 @@
             "value" : "Производитель"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marka"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2117,6 +2357,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Milhas"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mil"
           }
         },
         "uk" : {
@@ -2183,6 +2429,12 @@
             "value" : "Модель"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2245,6 +2497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Имя"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İsim"
           }
         },
         "uk" : {
@@ -2312,6 +2570,12 @@
             "value" : "От нового к предыдущим"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeniden Eskiye"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2356,6 +2620,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Результата нет"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonuç yok"
           }
         },
         "uk" : {
@@ -2423,6 +2693,12 @@
             "value" : "Заметки"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notlar"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2467,6 +2743,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Одометр"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kilometre ölçer"
           }
         },
         "uk" : {
@@ -2534,6 +2816,12 @@
             "value" : "ОК"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2599,6 +2887,12 @@
             "value" : "От предыдущих до новых"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eskiden Yeniye"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2626,6 +2920,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Unidades preferenciais"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tercih edilen birim"
           }
         },
         "uk" : {
@@ -2660,6 +2960,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Politica de privacidade"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gizlilik Politikası"
           }
         },
         "uk" : {
@@ -2727,6 +3033,12 @@
             "value" : "Профиль"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2790,6 +3102,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Уведомление об ошибке"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hata Raporla"
           }
         },
         "uk" : {
@@ -2857,6 +3175,12 @@
             "value" : "Отправить запрос на новую функцию"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni Özellik Talep Et"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2902,6 +3226,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выбрать авто"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç seç"
           }
         },
         "uk" : {
@@ -2969,6 +3299,12 @@
             "value" : "Настройки"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayarlar"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3031,6 +3367,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выйти"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çıkış Yap"
           }
         },
         "uk" : {
@@ -3097,6 +3439,12 @@
             "value" : "Зарегистрироваться как %@"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ olarak giriş yapıldı"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3124,6 +3472,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Obrigado por usar nosso App"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikasyonu kullandığınız için teşekkürler."
           }
         }
       }
@@ -3183,6 +3537,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Спасибо что скачали это приложение! Оно находиться в открытом доступе и каждый может участвовать в его развитии и разработке."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikasyonu kullandığınız için teşekkürler! Bu aplikasyon açık kaynak kodludur ve herkes katkıda bulunabilir."
           }
         },
         "uk" : {
@@ -3250,6 +3610,12 @@
             "value" : "Название события"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bakım dosyası adı"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3296,6 +3662,12 @@
             "value" : "Тех обслуживания не было для '%@'. Попробуйте новый поиск."
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ için bakım dosyası bulunamadı. Yeni bir arama yapın."
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3340,6 +3712,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Эта иконка появится на экране Home."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu Aplikasyon İkonu Ana Ekranda yer alacak."
           }
         },
         "uk" : {
@@ -3407,6 +3785,12 @@
             "value" : "Название"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Başlık"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3472,6 +3856,12 @@
             "value" : "Название обслуживания"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bakım Başlık Adı"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3530,6 +3920,12 @@
             "value" : "Обновить"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Güncelle"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3575,6 +3971,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Обновить тех обслуживание"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bakım Güncelle"
           }
         },
         "uk" : {
@@ -3624,6 +4026,12 @@
             "value" : "Авто"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3670,6 +4078,12 @@
             "value" : "Цвет авто"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Rengi"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3714,6 +4128,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Номер лицензии авто"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Plakası"
           }
         },
         "uk" : {
@@ -3780,6 +4200,12 @@
             "value" : "Производитель авто"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Markası"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3842,6 +4268,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Модель авто"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Modeli"
           }
         },
         "uk" : {
@@ -3908,6 +4340,12 @@
             "value" : "Название авто"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Adı"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3954,6 +4392,12 @@
             "value" : "VIN номер"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç VIN Kodu"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3998,6 +4442,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Год производства"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araş Yaşı"
           }
         },
         "uk" : {
@@ -4065,6 +4515,12 @@
             "value" : "Авто"
           }
         },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araçlar"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4098,6 +4554,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Veiculo"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AraçBölümBaşlığı"
           }
         },
         "uk" : {
@@ -4170,6 +4632,12 @@
             "state" : "translated",
             "value" : "Версия %@ (%@)"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versiyon: %@ (%@)"
+          }
         }
       }
     },
@@ -4209,6 +4677,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "VIN"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VIN Kodu"
           }
         },
         "uk" : {
@@ -4255,6 +4729,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Год"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yıl"
           }
         },
         "uk" : {
