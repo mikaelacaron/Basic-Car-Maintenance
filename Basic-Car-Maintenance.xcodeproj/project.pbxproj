@@ -13,6 +13,7 @@
 		57CDD99E2ADC3173002EFED0 /* OdometerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD99D2ADC3173002EFED0 /* OdometerViewModel.swift */; };
 		57CDD9A02ADC31A8002EFED0 /* AddOdometerReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */; };
 		57CDD9A42ADC320F002EFED0 /* OdometerReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD9A32ADC320F002EFED0 /* OdometerReading.swift */; };
+		637505482AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637505472AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift */; };
 		8014A4CF2AD75928005B51F6 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4CE2AD75928005B51F6 /* AppIcon.swift */; };
 		8014A4D12AD76034005B51F6 /* ChooseAppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */; };
 		8014A4D32AD77C92005B51F6 /* ChooseAppIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */; };
@@ -107,6 +108,7 @@
 		57CDD99D2ADC3173002EFED0 /* OdometerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdometerViewModel.swift; sourceTree = "<group>"; };
 		57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOdometerReadingView.swift; sourceTree = "<group>"; };
 		57CDD9A32ADC320F002EFED0 /* OdometerReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdometerReading.swift; sourceTree = "<group>"; };
+		637505472AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseAnalytics+Extension.swift"; sourceTree = "<group>"; };
 		8014A4CE2AD75928005B51F6 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
 		8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppIconView.swift; sourceTree = "<group>"; };
 		8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppIconViewModel.swift; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 			children = (
 				FF755B452A90969D00F49A13 /* Bundle+extension.swift */,
 				154984A92AD9CAEE0015594C /* Constants.swift */,
+				637505472AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -687,6 +690,7 @@
 				FF755B492A909A0000F49A13 /* AddMaintenanceView.swift in Sources */,
 				FF09FC912AB6FF44006BE61A /* AuthenticationView.swift in Sources */,
 				023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */,
+				637505482AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift in Sources */,
 				8A3D74862AD6D9A10000FEEB /* AlertView.swift in Sources */,
 				57CDD9A02ADC31A8002EFED0 /* AddOdometerReadingView.swift in Sources */,
 				57CDD99E2ADC3173002EFED0 /* OdometerViewModel.swift in Sources */,

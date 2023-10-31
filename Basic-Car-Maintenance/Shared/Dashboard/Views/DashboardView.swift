@@ -5,7 +5,6 @@
 //  Created by Mikaela Caron on 8/19/23.
 //
 
-import FirebaseAnalyticsSwift
 import SwiftUI
 
 struct DashboardView: View {
@@ -63,7 +62,7 @@ struct DashboardView: View {
                 }
                 .listStyle(.inset)
             }
-            .analyticsScreen(name: "\(Self.self)")
+            .analyticsView()
             .searchable(text: $viewModel.searchText)
             .overlay {
                 if viewModel.isLoading {
