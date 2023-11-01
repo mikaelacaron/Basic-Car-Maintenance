@@ -132,6 +132,12 @@
             "value" : "🦄 Mikaela Caron - 유지관리자"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 Mikaela Caron - Maintainer"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -201,6 +207,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "추가"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toevogen"
           }
         },
         "pt-BR" : {
@@ -274,6 +286,12 @@
             "value" : "유지 추가"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onderhoud toevogen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -313,6 +331,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "दूरी दर्ज करें"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meterstand toevogen"
           }
         },
         "pt-BR" : {
@@ -378,6 +402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량 추가"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voertuig toevogen"
           }
         },
         "pt-BR" : {
@@ -450,6 +480,12 @@
             "value" : "첫번째 유지관리 추가"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voeg uw eerste onderhoud toe"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -489,6 +525,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "अपना पहला ओडोमीटर जोड़ें"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voeg uw eerste kilometertellerstand toe"
           }
         },
         "pt-BR" : {
@@ -554,6 +596,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "추가 노트"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aanvullende opmerkingen"
           }
         },
         "pt-BR" : {
@@ -626,6 +674,12 @@
             "value" : "에러 발생"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er is een fout opgetreden"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -690,6 +744,12 @@
             "value" : " 취소"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuleren"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -740,6 +800,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "앱아이콘 변경"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App-pictogram wijzigen"
           }
         },
         "pt-BR" : {
@@ -794,6 +860,12 @@
             "value" : "앱아이콘 선택"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kies App-pictogram"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -844,6 +916,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "색깔"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kleur"
           }
         },
         "pt-BR" : {
@@ -917,6 +995,12 @@
             "value" : "기여자들"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bijdragers"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -968,6 +1052,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "복사완료!"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gekopieerd!"
           }
         },
         "pt-BR" : {
@@ -1041,6 +1131,12 @@
             "value" : "커스텀"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aangepast"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1109,6 +1205,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "대시보드"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dashboard"
           }
         },
         "pt-BR" : {
@@ -1182,6 +1284,12 @@
             "value" : "날짜"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datum"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1253,6 +1361,12 @@
             "value" : "삭제"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwijderen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1305,6 +1419,12 @@
             "value" : "닫기"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sluiten"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1343,6 +1463,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "दूरी"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afstand"
           }
         },
         "pt-BR" : {
@@ -1401,6 +1527,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "편집"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewerken"
           }
         },
         "pt-BR" : {
@@ -1467,6 +1599,12 @@
             "value" : "차량 추가 실패"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niet gelukt om voertuig toe te voegen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1529,6 +1667,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량 세부 정보를 불러오지 못했습니다: %@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niet gelukt om voertuiggegevens toe te voegen:%@"
           }
         },
         "pt-BR" : {
@@ -1602,6 +1746,12 @@
             "value" : "차량 추가에 실패했습니다. 알 수 없는 오류입니다."
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niet gelukt om voertuig toe te voegen. Onbekende fout."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1670,6 +1820,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이벤트 삭제에 실패했습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niet gelukt om evenement te verwijderen"
           }
         },
         "pt-BR" : {
@@ -1743,6 +1899,12 @@
             "value" : "차량 삭제에 실패했습니다."
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niet gelukt om voertuig te verwijderen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1814,6 +1976,12 @@
             "value" : "차량 세부 정보 삭제에 실패했습니다: %@"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niet gelukt om voertuiggegevens te verwijderen:%@"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1879,6 +2047,12 @@
             "value" : "차량 삭제에 실패했습니다. 알 수 없는 오류입니다."
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niet gelukt om voertuig te verwijderen. Onbekende fout."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1925,6 +2099,12 @@
             "value" : "फ़िल्टर"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filteren"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1969,6 +2149,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "대상 차량: %@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voor %@"
           }
         },
         "pt-BR" : {
@@ -2042,6 +2228,12 @@
             "value" : "GitHub 저장소"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub Repo"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2083,6 +2275,12 @@
             "value" : "यह खुला स्रोत है और कोई भी इसमें योगदान दे सकता है।"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Het is open source en iedereen kan eraan bijdragen."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2109,6 +2307,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "किलोमीटर"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kilometers"
           }
         },
         "pt-BR" : {
@@ -2157,6 +2361,12 @@
             "value" : "차량 번호판"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kentekennummer"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2191,6 +2401,12 @@
                     "value" : "Lade…"
                 }
             },
+            "nl" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Laden..."
+                  }
+                },
             "tr" : {
                 "stringUnit" : {
                     "state" : "translated",
@@ -2241,6 +2457,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "익명으로 로그인되었습니다. ID: %@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anoniem ingelogd met ID: %@"
           }
         },
         "pt-BR" : {
@@ -2313,6 +2535,12 @@
             "value" : "제조사"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merk"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2351,6 +2579,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "मील"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mijlen"
           }
         },
         "pt-BR" : {
@@ -2415,6 +2649,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "모델"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model"
           }
         },
         "pt-BR" : {
@@ -2485,6 +2725,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량명"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naam"
           }
         },
         "pt-BR" : {
@@ -2558,6 +2804,12 @@
             "value" : "최신순에서 오래된 순"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nieuwste naar oudste"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2608,6 +2860,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "결과 없음"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen resultaten"
           }
         },
         "pt-BR" : {
@@ -2681,6 +2939,12 @@
             "value" : "노트"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notities"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2731,6 +2995,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "주행거리 계기"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kilometerteller"
           }
         },
         "pt-BR" : {
@@ -2804,6 +3074,12 @@
             "value" : "확인"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2875,6 +3151,12 @@
             "value" : "오래된 순에서 최신순으로"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oudste naar nieuwste"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2916,6 +3198,12 @@
             "value" : "पसंदीदा इकाइयाँ"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voorkeurseenheden"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2954,6 +3242,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "गोपनीयता नीति"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacybeleid"
           }
         },
         "pt-BR" : {
@@ -3019,6 +3313,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "프로필"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profiel"
           }
         },
         "pt-BR" : {
@@ -3092,6 +3392,12 @@
             "value" : "버그 신고"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een bug melden"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3163,6 +3469,12 @@
             "value" : "새로운 기능 요청"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een nieuwe functie aanvragen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3214,6 +3526,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량 선택"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecteer een voertuig"
           }
         },
         "pt-BR" : {
@@ -3287,6 +3605,12 @@
             "value" : "설정"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instellingen"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3355,6 +3679,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "로그아웃"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afmelden"
           }
         },
         "pt-BR" : {
@@ -3427,6 +3757,12 @@
             "value" : "%@으로 로그인되었습니다"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aangemeld als %@"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3466,6 +3802,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "इस ऐप का उपयोग करने के लिए धन्यवाद!"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedankt voor het gebruik van deze app!"
           }
         },
         "pt-BR" : {
@@ -3525,6 +3867,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이 앱을 사용해 주셔서 감사합니다! 이 앱은 오픈 소스로 누구나 기여할 수 있습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedankt voor het gebruik van deze app! Het is open source en iedereen kan eraan bijdragen."
           }
         },
         "pt-BR" : {
@@ -3598,6 +3946,12 @@
             "value" : "이벤트 제목"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De titel van het evenement"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3650,6 +4004,12 @@
             "value" : "%@에 대한 유지 보수 이벤트가 없습니다. 새로운 검색을 시도하세요."
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er waren geen onderhoudsevenementen voor '%@'. Probeer een nieuwe zoekopdracht."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3700,6 +4060,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이 앱 아이콘이 홈 화면에 나타납니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit app-pictogram zal verschijnen op je startscherm."
           }
         },
         "pt-BR" : {
@@ -3773,6 +4139,12 @@
             "value" : "제목"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titel"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3844,6 +4216,12 @@
             "value" : "유지 보수 이벤트 제목"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titel van het onderhoudsevenement"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3908,6 +4286,12 @@
             "value" : "업데이트"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bijwerken"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3959,6 +4343,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "유지 보수 업데이트"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onderhoud bijwerken"
           }
         },
         "pt-BR" : {
@@ -4014,6 +4404,12 @@
             "value" : "차량"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voertuig"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4066,6 +4462,12 @@
             "value" : "차량 색상"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voertuigkleur"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4116,6 +4518,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량 번호판 번호"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kentekennummer"
           }
         },
         "pt-BR" : {
@@ -4188,6 +4596,12 @@
             "value" : "차량 제조사"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voertuigmerk"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4256,6 +4670,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량 모델"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voertuigmodel"
           }
         },
         "pt-BR" : {
@@ -4328,6 +4748,12 @@
             "value" : "차량 이름"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voertuignaam"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4380,6 +4806,12 @@
             "value" : "차량 VIN"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voertuigidentificatienummer"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4430,6 +4862,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "차량 연도"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voertuigjaar"
           }
         },
         "pt-BR" : {
@@ -4503,6 +4941,12 @@
             "value" : "차량"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voertuig"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4548,6 +4992,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "वाहन"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voertuigen"
           }
         },
         "pt-BR" : {
@@ -4667,6 +5117,12 @@
             "value" : "VIN"
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VIN"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4717,6 +5173,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "연도"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jaar"
           }
         },
         "pt-BR" : {
