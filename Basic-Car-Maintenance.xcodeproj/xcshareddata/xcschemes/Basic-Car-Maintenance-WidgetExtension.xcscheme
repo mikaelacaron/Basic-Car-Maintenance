@@ -34,6 +34,13 @@
                BlueprintName = "Basic-Car-Maintenance"
                ReferencedContainer = "container:Basic-Car-Maintenance.xcodeproj">
             </BuildableReference>
+             <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FF5D13A22A86C2D600BC9BD6"
+               BuildableName = "Basic-Car-Maintenance.app"
+               BlueprintName = "Basic-Car-Maintenance"
+               ReferencedContainer = "container:Basic-Car-Maintenance.xcodeproj">
+            </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
