@@ -5,7 +5,6 @@
 //  Created by Mikaela Caron on 8/19/23.
 //
 
-import FirebaseAnalyticsSwift
 import SwiftUI
 import UniformTypeIdentifiers
 import TipKit
@@ -14,6 +13,8 @@ struct SettingsView: View {
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.colorScheme) var colorScheme
+   
+    @ScaledMetric(relativeTo: .largeTitle) var iconDimension = 20.0
     
     @State private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
@@ -42,7 +43,7 @@ struct SettingsView: View {
                         } icon: {
                             Image("github-logo")
                                 .resizable()
-                                .frame(width: 20, height: 20)
+                                .frame(width: iconDimension, height: iconDimension)
                         }
                     }
                     .popoverTip(ContributionTip(), arrowEdge: .bottom)
@@ -58,7 +59,7 @@ struct SettingsView: View {
                         } icon: {
                             Image(systemName: SFSymbol.document)
                                 .resizable()
-                                .frame(width: 20, height: 20)
+                                .frame(width: iconDimension, height: iconDimension)
                         }
                     }
                     // swiftlint:disable:next line_length
@@ -68,7 +69,7 @@ struct SettingsView: View {
                         } icon: {
                             Image(systemName: SFSymbol.ladybug)
                                 .resizable()
-                                .frame(width: 20, height: 20)
+                                .frame(width: iconDimension, height: iconDimension)
                         }
                     }
                     
@@ -171,7 +172,7 @@ struct SettingsView: View {
                             .animation(.linear(duration: 0.2), value: copiedAppVersion)
                     }
             }
-            .analyticsScreen(name: "\(Self.self)")
+            .analyticsView()
             .navigationDestination(isPresented: $isShowingAddVehicle) {
                 AddVehicleView() { vehicle in
                     Task {

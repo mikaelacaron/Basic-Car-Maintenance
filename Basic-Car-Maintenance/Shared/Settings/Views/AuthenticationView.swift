@@ -6,7 +6,6 @@
 //
 
 import AuthenticationServices
-import FirebaseAnalyticsSwift
 import SwiftUI
 
 struct AuthenticationView: View {
@@ -57,7 +56,7 @@ struct AuthenticationView: View {
                 }
             }
         }
-        .analyticsScreen(name: "\(Self.self)")
+        .analyticsView()
     }
 }
 

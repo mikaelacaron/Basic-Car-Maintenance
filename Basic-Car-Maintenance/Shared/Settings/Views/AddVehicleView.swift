@@ -5,7 +5,6 @@
 //  Created by Mikaela Caron on 8/25/23.
 //
 
-import FirebaseAnalyticsSwift
 import SwiftUI
 
 struct AddVehicleView: View {
@@ -73,7 +72,7 @@ struct AddVehicleView: View {
                     Text("License Plate Number")
                 }
             }
-            .analyticsScreen(name: "\(Self.self)")
+            .analyticsView()
             .toolbar {
                 ToolbarItem {
                     Button {
