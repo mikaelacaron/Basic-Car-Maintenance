@@ -2403,10 +2403,10 @@
             },
             "nl" : {
                 "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Laden..."
-                  }
-                },
+                    "state" : "translated",
+                    "value" : "Laden..."
+                }
+            },
             "tr" : {
                 "stringUnit" : {
                     "state" : "translated",
@@ -2416,8 +2416,8 @@
         }
     },
     "Logged in anonymously with ID: %@" : {
-      "localizations" : {
-        "be" : {
+        "localizations" : {
+            "be" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ананімны ўваход з ідэнтыфікатарам: %@"
