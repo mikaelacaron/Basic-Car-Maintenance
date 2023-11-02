@@ -20,10 +20,10 @@ struct DashboardView: View {
     }
     
     private var eventDateFormat: DateFormatter = {
-            let formatter = DateFormatter()
-            formatter.dateStyle = .short
-            return formatter
-        }()
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        return formatter
+    }()
     
     var body: some View {
         NavigationStack {
