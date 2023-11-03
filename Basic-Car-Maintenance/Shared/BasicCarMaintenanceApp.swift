@@ -12,15 +12,16 @@ import TipKit
 @main
 struct BasicCarMaintenanceApp: App {
     @State private var actionService = ActionService.shared
+    @State private var appIconViewModel = ChooseAppIconViewModel()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+            LaunchView(appIconViewModel: appIconViewModel)
                 .environment(actionService)
                 .modelContainer(for: [AcknowledgedAlert.self])
                 .task {
-                  try? Tips.configure()
+                    try? Tips.configure()
                 }
         }
     }
