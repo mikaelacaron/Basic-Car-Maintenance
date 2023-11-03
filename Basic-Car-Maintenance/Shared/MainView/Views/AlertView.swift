@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AlertView: View {
+    let alert: AlertItem
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -15,25 +16,32 @@ struct AlertView: View {
             VStack {
                 ScrollView {
                     VStack(alignment: .center) {
-                        Text("🤠")
+                        Text(alert.emojiIcon)
                             .font(.system(size: 100))
                         
-                        Text("This is the title")
+                        Text(alert.title)
                             .font(.title)
+                            .minimumScaleFactor(0.7)
                             .lineLimit(2)
                             .bold()
                         
-                        Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
-                            .multilineTextAlignment(.center)
+                        Text(alert.message.replacingOccurrences(of: "\\n", with: "\n"))
                     }
+                    .multilineTextAlignment(.center)
                 }
                 .scrollIndicators(.hidden)
                 .padding(.horizontal, 24)
                 
                 Button {
-                    UIApplication.shared.open(URL(string: "https://www.google.com")!)
+                    guard let url = URL(string: alert.actionURL),
+                          UIApplication.shared.canOpenURL(url) else {
+                        dismiss()
+                        return
+                    }
+                    
+                    UIApplication.shared.open(url)
                 } label: {
-                    Text("Read More...")
+                    Text(alert.actionText)
                         .font(.title3)
                         .foregroundStyle(.black)
                         .frame(maxWidth: .infinity)
@@ -51,7 +59,6 @@ struct AlertView: View {
                         dismiss()
                     } label: {
                         Text("Dismiss")
-                            .foregroundStyle(.black)
                             .bold()
                     }
                 }
@@ -62,5 +69,15 @@ struct AlertView: View {
 }
 
 #Preview {
-    AlertView()
+    AlertView(
+        alert: AlertItem(
+            id: nil,
+            actionText: "",
+            actionURL: "",
+            emojiIcon: "",
+            isOn: false,
+            message: "",
+            title: ""
+        )
+    )
 }

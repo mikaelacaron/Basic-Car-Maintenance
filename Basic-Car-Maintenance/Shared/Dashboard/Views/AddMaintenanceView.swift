@@ -14,7 +14,7 @@ struct AddMaintenanceView: View {
     
     @State private var title = ""
     @State private var date = Date()
-    @State private var selectedVehicle: Vehicle?
+    @State private var selectedVehicleID: String?
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
     
@@ -34,13 +34,13 @@ struct AddMaintenanceView: View {
                 }
                 
                 Section {
-                    Picker(selection: $selectedVehicle) {
+                    Picker(selection: $selectedVehicleID) {
                         ForEach(vehicles) { vehicle in
-                            Text(vehicle.name).tag(vehicle as Vehicle)
+                            Text(vehicle.name).tag(vehicle.id)
                         }
                     } label: {
                         Text("Select a vehicle",
-                             comment: "Maintenance event vehicle picker label")
+                             comment: "Picker for selecting a vehicle")
                     }
                     .pickerStyle(.menu)
                 } header: {
@@ -67,28 +67,26 @@ struct AddMaintenanceView: View {
                          comment: "Notes text field header")
                 }
             }
-            .onAppear {
-                if !vehicles.isEmpty {
-                    selectedVehicle = vehicles[0]
-                }
-            }
+            .analyticsView()
             .navigationTitle(Text("Add Maintenance",
                                   comment: "Nagivation title for Add Maintenance view"))
             .toolbar {
                 ToolbarItem {
                     Button {
                         
-                        if let selectedVehicle {
-                            let event = MaintenanceEvent(title: title,
-                                                         date: date,
-                                                         notes: notes,
-                                                         vehicle: selectedVehicle)
-                            addTapped(event)
+                        if let selectedVehicleID {
+                            if let vehicle = vehicles.filter({ $0.id == selectedVehicleID }).first {
+                                let event = MaintenanceEvent(title: title,
+                                                             date: date,
+                                                             notes: notes,
+                                                             vehicle: vehicle)
+                                addTapped(event)
+                            }
                             dismiss()
                         }
                     } label: {
                         Text("Add",
-                             comment: "Label for button to add data")
+                             comment: "Label for submit button on form to add an entry")
                     }
                     .disabled(title.isEmpty)
                 }

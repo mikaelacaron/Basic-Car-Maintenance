@@ -56,6 +56,7 @@ struct AuthenticationView: View {
                 }
             }
         }
+        .analyticsView()
     }
 }
 

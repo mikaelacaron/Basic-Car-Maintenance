@@ -45,6 +45,7 @@ struct AddVehicleView: View {
 
                 Section {
                     TextField("Vehicle Year", text: $year, prompt: Text("Vehicle Year"))
+                        .keyboardType(.numberPad)
                 } header: {
                     Text("Year")
                 }
@@ -57,20 +58,31 @@ struct AddVehicleView: View {
 
                 Section {
                     TextField("Vehicle VIN", text: $VIN, prompt: Text("Vehicle VIN"))
+                        .textInputAutocapitalization(.characters)
                 } header: {
                     Text("VIN")
                 }
 
                 Section {
-                    TextField("Vehicle License Plate Number", text: $licensePlateNumber, prompt: Text("Vehicle License Plate Number"))
+                    TextField("Vehicle License Plate Number",
+                              text: $licensePlateNumber,
+                              prompt: Text("Vehicle License Plate Number"))
+                    .textInputAutocapitalization(.characters)
                 } header: {
                     Text("License Plate Number")
                 }
             }
+            .analyticsView()
             .toolbar {
                 ToolbarItem {
                     Button {
-                        let vehicle = Vehicle(name: name, make: make, model: model, year: year, color: color, vin: VIN, licensePlateNumber: licensePlateNumber)
+                        let vehicle = Vehicle(name: name, 
+                                              make: make,
+                                              model: model,
+                                              year: year,
+                                              color: color,
+                                              vin: VIN,
+                                              licensePlateNumber: licensePlateNumber)
                         addTapped(vehicle)
                     } label: {
                         Text("Add")

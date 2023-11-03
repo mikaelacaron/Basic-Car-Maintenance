@@ -24,6 +24,7 @@ struct ContributorsListView: View {
                 ProgressView()
             }
         }
+        .analyticsView()
         .task {
             Task {
                 await viewModel.getContributors()
