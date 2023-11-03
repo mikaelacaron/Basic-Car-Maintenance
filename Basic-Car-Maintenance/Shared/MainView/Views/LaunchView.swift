@@ -8,14 +8,8 @@
 import SwiftUI
 
 struct LaunchView: View {
-    
+    @State private var appIconViewModel = ChooseAppIconViewModel()
     @State var isActive: Bool = false
-    
-    let appIconViewModel: ChooseAppIconViewModel
-    
-    init(appIconViewModel: ChooseAppIconViewModel) {
-        self.appIconViewModel = ChooseAppIconViewModel()
-    }
     
     var body: some View {
         VStack {
@@ -30,7 +24,7 @@ struct LaunchView: View {
             }
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 withAnimation {
                     self.isActive = true
                 }
@@ -40,5 +34,5 @@ struct LaunchView: View {
 }
 
 #Preview {
-    LaunchView(appIconViewModel: ChooseAppIconViewModel())
+    LaunchView()
 }
