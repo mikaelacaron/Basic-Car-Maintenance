@@ -33,7 +33,8 @@ struct DashboardView: View {
                         Text(event.title)
                             .font(.title3)
                         
-                        Text("\(event.vehicle.name) on \(event.date, formatter: self.eventDateFormat)")
+                        Text("\(event.vehicle.name) on \(event.date, formatter: self.eventDateFormat)",
+                             comment: "Maintenance list item for a vehicle on a date")
                         
                         if !event.notes.isEmpty {
                             Text(event.notes)
@@ -55,7 +56,8 @@ struct DashboardView: View {
                             isShowingEditView = true
                         } label: {
                             VStack {
-                                Text("Edit")
+                                Text("Edit",
+                                     comment: "Button label to edit this maintenance")
                                 Image(systemName: SFSymbol.pencil)
                             }
                         }
@@ -74,7 +76,8 @@ struct DashboardView: View {
                     ProgressView("Loading...")
                 } else {
                     if viewModel.events.isEmpty {
-                        Text("Add your first maintenance")
+                        Text("Add your first maintenance",
+                             comment: "Placeholder text for empty maintenance list prompting the user to add a maintenance event") // swiftlint:disable:this line_length
                     } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
                         ContentUnavailableView("No results",
                                                systemImage: SFSymbol.magnifyingGlass,
@@ -83,10 +86,15 @@ struct DashboardView: View {
                 }
             }
             .animation(.linear, value: viewModel.searchedEvents)
-            .navigationTitle(Text("Dashboard"))
-            .alert("Failed To Delete Event", isPresented: $viewModel.showErrorAlert) {
-                Button("OK") {
+            .navigationTitle(Text("Dashboard",
+                                  comment: "Title label for Dashboard view"))
+            .alert(Text("Failed To Delete Event",
+                        comment: "Title for alert shown when deleting maintenance event fails"),
+                   isPresented: $viewModel.showErrorAlert) {
+                Button {
                     viewModel.showErrorAlert = false
+                } label: {
+                    Text("OK", comment: "Label to dismiss alert")
                 }
             } message: {
                 Text(viewModel.errorMessage).padding()
@@ -109,7 +117,11 @@ struct DashboardView: View {
                         Image(systemName: SFSymbol.filter)
                     }
                     .accessibilityShowsLargeContentViewer {
-                        Label("Filter", systemImage: SFSymbol.filter)
+                        Label {
+                            Text("Filter", comment: "Label for filtering on Dashboard view")
+                        } icon: {
+                            Image(systemName: SFSymbol.filter)
+                        }
                     }
                     
                     Button {
@@ -118,7 +130,11 @@ struct DashboardView: View {
                         Image(systemName: SFSymbol.plus)
                     }
                     .accessibilityShowsLargeContentViewer {
-                        Label("Add", systemImage: SFSymbol.plus)
+                        Label {
+                            Text("AddEvent", comment: "Label for adding maintenance event on Dashboard view")
+                        } icon: {
+                            Image(systemName: SFSymbol.plus)
+                        }
                     }
                 }
             }
@@ -158,15 +174,20 @@ struct DashboardView: View {
                 await viewModel.getMaintenanceEvents()
             }
         }
-        .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
-            Button("OK", role: .cancel) {}
+        .alert(Text("An Error Occurred",
+                    comment: "Title for alert shown when adding maintenance event fails"),
+               isPresented: $viewModel.showAddErrorAlert) {
+            Button(role: .cancel) {} label: {
+                Text("OK", comment: "Label to dismiss alert")
+            }
         } message: {
             Text(viewModel.errorMessage)
         }
     }
     
     private var noSearchResultsDescription: Text {
-        Text("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.")
+        Text("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.",
+             comment: "Text shwon when there are no results for maintenance search")
     }
 }
 

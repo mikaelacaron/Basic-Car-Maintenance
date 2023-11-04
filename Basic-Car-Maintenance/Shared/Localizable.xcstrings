@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@" : {
+      "comment" : "Maintenance list item description 'Date' formatted",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -66,6 +67,7 @@
       }
     },
     "%@ on %@" : {
+      "comment" : "Maintenance list item for a vehicle on a date",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -447,6 +449,7 @@
       }
     },
     "Add your first maintenance" : {
+      "comment" : "Placeholder text for empty maintenance list prompting the user to add a maintenance event",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -563,6 +566,17 @@
         }
       }
     },
+    "AddEvent" : {
+      "comment" : "Label for adding maintenance event on Dashboard view",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add"
+          }
+        }
+      }
+    },
     "Additional Notes" : {
       "comment" : "Notes text field placeholder",
       "localizations" : {
@@ -641,6 +655,7 @@
       }
     },
     "An Error Occurred" : {
+      "comment" : "Title for alert shown when adding maintenance event fails",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -1174,6 +1189,7 @@
       }
     },
     "Dashboard" : {
+      "comment" : "Title label for Dashboard view",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -1502,6 +1518,7 @@
       }
     },
     "Edit" : {
+      "comment" : "Button label to edit this maintenance",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -1789,6 +1806,7 @@
       }
     },
     "Failed To Delete Event" : {
+      "comment" : "Title for alert shown when deleting maintenance event fails",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -2090,6 +2108,7 @@
       }
     },
     "Filter" : {
+      "comment" : "Label for filtering on Dashboard view",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -2136,6 +2155,7 @@
       }
     },
     "For %@" : {
+      "comment" : "Maintenance list item description 'For which vehicle'",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -2404,30 +2424,30 @@
       }
     },
     "Loading..." : {
-        "localizations" : {
-            "de" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Lade…"
-                }
-            },
-            "nl" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Laden..."
-                }
-            },
-            "tr" : {
-                "stringUnit" : {
-                    "state" : "translated",
-                    "value" : "Yükleniyor..."
-                }
-            }
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lade…"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laden..."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yükleniyor..."
+          }
         }
+      }
     },
     "Logged in anonymously with ID: %@" : {
-        "localizations" : {
-            "be" : {
+      "localizations" : {
+        "be" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ананімны ўваход з ідэнтыфікатарам: %@"
@@ -3989,6 +4009,7 @@
       }
     },
     "There were no maintenance events for '%@'. Try a new search." : {
+      "comment" : "Text shwon when there are no results for maintenance search",
       "localizations" : {
         "be" : {
           "stringUnit" : {
