@@ -36,6 +36,22 @@ class OdometerViewModel {
         }
     }
     
+    func deleteReading(_ reading: OdometerReading) async {
+        guard let documentId = reading.id else {
+            fatalError("Reading Entry has no document ID.")
+        }
+        
+        try? await Firestore
+            .firestore()
+            .collection(FirestoreCollection.odometerReadings)
+            .document(documentId)
+            .delete()
+        
+        if let eventIndex = readings.firstIndex(of: reading) {
+            readings.remove(at: eventIndex)
+        }
+    }
+        
     func getOdometerReadings() async {
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()

@@ -5,7 +5,6 @@
 //  Created by Mikaela Caron on 8/19/23.
 //
 
-import FirebaseAnalyticsSwift
 import SwiftUI
 
 struct DashboardView: View {
@@ -20,6 +19,12 @@ struct DashboardView: View {
         viewModel = DashboardViewModel(authenticationViewModel: authenticationViewModel)
     }
     
+    private var eventDateFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        return formatter
+    }()
+    
     var body: some View {
         NavigationStack {
             List {
@@ -28,15 +33,13 @@ struct DashboardView: View {
                       Text(event.title)
                             .font(.title3)
                         
-                        Text("For \(event.vehicle.name)",
-                             comment: "Maintenance list item description 'For which vehicle'")
-                        
-                        Text("\(event.date.formatted(date: .abbreviated, time: .omitted))",
-                             comment: "Maintenance list item description 'Date' formatted")
+                        Text("\(event.vehicle.name) on \(event.date, formatter: self.eventDateFormat)",
+                            comment: "Maintenance list item for a vehicle on a date")
                         
                         if !event.notes.isEmpty {
                           Text(event.notes)
                                 .lineLimit(0)
+                                .foregroundStyle(.secondary)
                         }
                     }
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
@@ -66,16 +69,20 @@ struct DashboardView: View {
                 }
                 .listStyle(.inset)
             }
-            .analyticsScreen(name: "\(Self.self)")
+            .analyticsView()
             .searchable(text: $viewModel.searchText)
             .overlay {
-                if viewModel.events.isEmpty {
-                    Text("Add your first maintenance",
+                if viewModel.isLoading {
+                    ProgressView("Loading...")
+                } else {
+                    if viewModel.events.isEmpty {
+                        Text("Add your first maintenance",
                          comment: "Placeholder text for empty maintenance list")
-                } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
-                    ContentUnavailableView("No results",
-                                           systemImage: SFSymbol.magnifyingGlass,
-                                           description: noSearchResultsDescription)
+                    } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
+                        ContentUnavailableView("No results",
+                                               systemImage: SFSymbol.magnifyingGlass,
+                                               description: noSearchResultsDescription)
+                    }
                 }
             }
             .animation(.linear, value: viewModel.searchedEvents)

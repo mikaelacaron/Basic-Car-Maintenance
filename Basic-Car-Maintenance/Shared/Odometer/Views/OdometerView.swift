@@ -5,7 +5,6 @@
 //  Created by Mikaela Caron on 10/11/23.
 //
 
-import FirebaseAnalyticsSwift
 import SwiftUI
 
 struct OdometerView: View {
@@ -28,6 +27,15 @@ struct OdometerView: View {
                         Text("For \(reading.vehicle.name)")
                         
                         Text("\(reading.date.formatted(date: .abbreviated, time: .omitted))")
+                    }
+                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                        Button(role: .destructive) {
+                            Task {
+                                await viewModel.deleteReading(reading)
+                            }
+                        } label: {
+                            Image(systemName: SFSymbol.trash)
+                        }
                     }
                 }
                 .listStyle(.inset)
@@ -56,7 +64,7 @@ struct OdometerView: View {
                 await viewModel.getVehicles()
             }
         }
-        .analyticsScreen(name: "\(Self.self)")
+        .analyticsView()
     }
     
     private func makeAddOdometerView() -> some View {
