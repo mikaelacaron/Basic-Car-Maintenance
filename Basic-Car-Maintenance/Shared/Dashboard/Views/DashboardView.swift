@@ -30,14 +30,14 @@ struct DashboardView: View {
             List {
                 ForEach(viewModel.searchedEvents) { event in
                     VStack(alignment: .leading, spacing: 8) {
-                      Text(event.title)
+                        Text(event.title)
                             .font(.title3)
                         
                         Text("\(event.vehicle.name) on \(event.date, formatter: self.eventDateFormat)",
                             comment: "Maintenance list item for a vehicle on a date")
                         
                         if !event.notes.isEmpty {
-                          Text(event.notes)
+                            Text(event.notes)
                                 .lineLimit(0)
                                 .foregroundStyle(.secondary)
                         }
@@ -57,7 +57,7 @@ struct DashboardView: View {
                         } label: {
                             VStack {
                                 Text("Edit",
-                                     comment: "Button label to start editing maintenance")
+                                     comment: "Button label to edit this maintenance")
                                 Image(systemName: SFSymbol.pencil)
                             }
                         }
@@ -77,7 +77,7 @@ struct DashboardView: View {
                 } else {
                     if viewModel.events.isEmpty {
                         Text("Add your first maintenance",
-                         comment: "Placeholder text for empty maintenance list")
+                         comment: "Placeholder text for empty maintenance list prompting the user to add a maintenance event")
                     } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
                         ContentUnavailableView("No results",
                                                systemImage: SFSymbol.magnifyingGlass,
