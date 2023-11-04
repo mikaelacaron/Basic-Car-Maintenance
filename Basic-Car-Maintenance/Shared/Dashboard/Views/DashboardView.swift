@@ -34,7 +34,7 @@ struct DashboardView: View {
                             .font(.title3)
                         
                         Text("\(event.vehicle.name) on \(event.date, formatter: self.eventDateFormat)",
-                            comment: "Maintenance list item for a vehicle on a date")
+                             comment: "Maintenance list item for a vehicle on a date")
                         
                         if !event.notes.isEmpty {
                             Text(event.notes)
@@ -77,7 +77,7 @@ struct DashboardView: View {
                 } else {
                     if viewModel.events.isEmpty {
                         Text("Add your first maintenance",
-                         comment: "Placeholder text for empty maintenance list prompting the user to add a maintenance event")
+                             comment: "Placeholder text for empty maintenance list prompting the user to add a maintenance event")
                     } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
                         ContentUnavailableView("No results",
                                                systemImage: SFSymbol.magnifyingGlass,
