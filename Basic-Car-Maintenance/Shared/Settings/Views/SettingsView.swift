@@ -86,7 +86,7 @@ struct SettingsView: View {
                 
                 Section {
                     ForEach(viewModel.vehicles) { vehicle in
-                        VStack {
+                        VStack(alignment: .leading) {
                             Text(vehicle.name)
                                 .font(.headline)
                             
@@ -97,12 +97,15 @@ struct SettingsView: View {
                             if let year = vehicle.year, !year.isEmpty {
                                 Text(year)
                             }
+                            
                             if let color = vehicle.color, !color.isEmpty {
                                 Text(color)
                             }
+                            
                             if let vin = vehicle.vin, !vin.isEmpty {
                                 Text(vin)
                             }
+                            
                             if let licensePlateNumber = vehicle.licensePlateNumber, !licensePlateNumber.isEmpty {
                                 Text(licensePlateNumber)
                             }
