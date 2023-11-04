@@ -77,7 +77,7 @@ struct DashboardView: View {
                 } else {
                     if viewModel.events.isEmpty {
                         Text("Add your first maintenance",
-                             comment: "Placeholder text for empty maintenance list prompting the user to add a maintenance event")
+                             comment: "Placeholder text for empty maintenance list prompting the user to add a maintenance event") // swiftlint:disable:this line_length
                     } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
                         ContentUnavailableView("No results",
                                                systemImage: SFSymbol.magnifyingGlass,
@@ -131,7 +131,7 @@ struct DashboardView: View {
                     }
                     .accessibilityShowsLargeContentViewer {
                         Label {
-                            Text("Add", comment: "Label for adding maintenance event on Dashboard view")
+                            Text("AddEvent", comment: "Label for adding maintenance event on Dashboard view")
                         } icon: {
                             Image(systemName: SFSymbol.plus)
                         }
