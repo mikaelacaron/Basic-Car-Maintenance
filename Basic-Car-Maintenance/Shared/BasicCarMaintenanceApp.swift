@@ -5,7 +5,9 @@
 //  Created by Mikaela Caron on 8/11/23.
 //
 
+import FirebaseAuth
 import FirebaseCore
+import FirebaseFirestore
 import SwiftUI
 import TipKit
 
@@ -34,6 +36,17 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
         FirebaseApp.configure()
+        
+        let useEmulator = UserDefaults.standard.bool(forKey: "useEmulator")
+        if useEmulator {
+            let settings = Firestore.firestore().settings
+            settings.host = "127.0.0.1:8080"
+            settings.isSSLEnabled = false
+            Firestore.firestore().settings = settings
+            
+            Auth.auth().useEmulator(withHost: "127.0.0.1", port: 9099)
+        }
+        
         return true
     }
     
