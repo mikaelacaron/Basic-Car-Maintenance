@@ -42,6 +42,7 @@
 		FF755B462A90969D00F49A13 /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B452A90969D00F49A13 /* Bundle+extension.swift */; };
 		FF755B492A909A0000F49A13 /* AddMaintenanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */; };
 		FFAA56ED2AC8905C000120EE /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = FFAA56EC2AC8905C000120EE /* Documentation.docc */; };
+		FFAD4ACD2AF74D3300AD277A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAD4ACC2AF74D3300AD277A /* OnboardingView.swift */; };
 		FFBFE0912A98EFEC000A9BEB /* MaintenanceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */; };
 		FFBFE0932A98F212000A9BEB /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0922A98F212000A9BEB /* Vehicle.swift */; };
 		FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */; };
@@ -142,6 +143,7 @@
 		FF755B452A90969D00F49A13 /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
 		FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMaintenanceView.swift; sourceTree = "<group>"; };
 		FFAA56EC2AC8905C000120EE /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
+		FFAD4ACC2AF74D3300AD277A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FFBE79BB2AD0A57D0005524E /* UnitTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UnitTests.xcconfig; sourceTree = "<group>"; };
 		FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceEvent.swift; sourceTree = "<group>"; };
 		FFBFE0922A98F212000A9BEB /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			children = (
 				8AEE81712ACF384D00FC0C2A /* MainTabView.swift */,
 				8A3D74852AD6D9A10000FEEB /* AlertView.swift */,
+				FFAD4ACC2AF74D3300AD277A /* OnboardingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -705,6 +708,7 @@
 				8A3D748A2AD9C3E00000FEEB /* MainTabViewModel.swift in Sources */,
 				E584996A2ACDDAFF00634660 /* Contributor.swift in Sources */,
 				8014A4D32AD77C92005B51F6 /* ChooseAppIconViewModel.swift in Sources */,
+				FFAD4ACD2AF74D3300AD277A /* OnboardingView.swift in Sources */,
 				8014A4CF2AD75928005B51F6 /* AppIcon.swift in Sources */,
 				FFC67D1D2AAEF7920073B338 /* SettingsViewModel.swift in Sources */,
 				FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */,
