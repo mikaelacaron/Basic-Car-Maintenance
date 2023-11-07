@@ -10,12 +10,15 @@ import SwiftUI
 
 struct EditOdometerReadingView: View {
     
+    let vehicles: [Vehicle]
+    
     @Binding var selectedOdometerReading: OdometerReading?
     var viewModel: OdometerViewModel
     @State private var date = Date()
     @State private var selectedVehicle: Vehicle?
     @State private var isMetric = false
     @State private var distance = 0
+    @State private var selectedVehicleID: String?
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -34,28 +37,34 @@ struct EditOdometerReadingView: View {
                         .pickerStyle(.segmented)
                     }
                 }
-                        Section {
-                            Picker(selection: $selectedVehicle) {
-                                ForEach(viewModel.vehicles) { vehicle in
-                                    Text(vehicle.name).tag(vehicle as Vehicle)
-                                }
-                            } label: {
-                                Text("Select a vehicle", comment: "Picker for selecting a vehicle")
-                            }
-                            .pickerStyle(.menu)
-                        } header: {
-                            Text("Vehicle",
-                                 comment: "Odometer reading vehicle picker header")
+                Section {
+                    Picker(selection: $selectedVehicleID) {
+                        ForEach(vehicles) { vehicle in
+                            Text(vehicle.name).tag(vehicle.id)
                         }
-                        DatePicker(selection: $date, displayedComponents: .date) {
-                            Text("Date")
-                        }
+                    } label: {
+                        Text("Select a vehicle",
+                             comment: "Picker for selecting a vehicle")
+                    }
+                    .pickerStyle(.menu)
+                    
+                }  header: {
+                    Text("VehicleSectionHeader",
+                         comment: "Label for Picker for selecting a vehicle")
+                }
+                
+                DatePicker(selection: $date, displayedComponents: .date) {
+                    Text("Date")
+                }
             }
             .analyticsScreen(name: "\(Self.self)")
+            
             .onAppear {
-                // MARK: need to add appear
                 guard let selectedOdometerReading = selectedOdometerReading else { return }
                 setOdometerReadingValues(reading: selectedOdometerReading)
+                if let selectedVehicleID = selectedOdometerReading.vehicle.id {
+                    self.selectedVehicleID = selectedVehicleID
+                }
             }
             .navigationTitle(Text("Update Odometer"))
             .toolbar {
@@ -69,12 +78,10 @@ struct EditOdometerReadingView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        // MARK: Need to add update action
                         if let selectedVehicle, let selectedOdometerReading {
                             var reading = OdometerReading(date: date, distance: distance, isMetric: isMetric, vehicle: selectedVehicle)
                             reading.id = selectedOdometerReading.id
                             Task {
-                                // MARK: need to add update to viewmodel
                                 await viewModel.updateReading(reading)
                                 dismiss()
                             }
@@ -84,7 +91,7 @@ struct EditOdometerReadingView: View {
                     }
                 }
             }
-
+            
         }
     }
     
@@ -97,5 +104,10 @@ struct EditOdometerReadingView: View {
 }
 
 #Preview {
-    EditOdometerReadingView(selectedOdometerReading: .constant(OdometerReading(date: Date(), distance: 0, isMetric: false, vehicle: Vehicle(name: "", make: "", model: ""))), viewModel: OdometerViewModel(authenticationViewModel: AuthenticationViewModel()))
+    EditOdometerReadingView(vehicles: testVehicles, selectedOdometerReading: .constant(OdometerReading(date: Date(), distance: 0, isMetric: false, vehicle: Vehicle(name: "", make: "", model: ""))), viewModel: OdometerViewModel(authenticationViewModel: AuthenticationViewModel()))
 }
+
+let testVehicles = [
+    Vehicle(name: "Lexus", make: "Lexus", model: "White"),
+    Vehicle(name: "Test", make: "Lexus", model: "White")
+]

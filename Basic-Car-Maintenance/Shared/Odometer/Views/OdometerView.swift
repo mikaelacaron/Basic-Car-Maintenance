@@ -13,11 +13,11 @@ struct OdometerView: View {
     @State private var viewModel: OdometerViewModel
     @State private var isShowingEditView = false
     @State private var selectedOdometerReading: OdometerReading?
-
+    
     init(authenticationViewModel: AuthenticationViewModel) {
         _viewModel = State(initialValue: OdometerViewModel(authenticationViewModel: authenticationViewModel))
     }
-
+    
     var body: some View {
         NavigationStack {
             List {
@@ -48,10 +48,12 @@ struct OdometerView: View {
                             }
                         }
                     }
-                .sheet(isPresented: $isShowingEditView) {
-                    EditOdometerReadingView(selectedOdometerReading: $selectedOdometerReading, viewModel: viewModel)
+                    .sheet(isPresented: $isShowingEditView) {
+                        EditOdometerReadingView(vehicles: viewModel.vehicles,
+                                                selectedOdometerReading: $selectedOdometerReading,
+                                                viewModel: viewModel)
+                    }
                 }
-            }
                 .listStyle(.inset)
             }
             .overlay {
