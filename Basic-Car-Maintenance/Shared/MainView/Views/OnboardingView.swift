@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    
+    @State private var name = ""
+    @State private var make = ""
+    @State private var model = ""
+    
     var body: some View {
-        Text("Hello, World!")
+        Form {
+            Section {
+                Text("Welcome to Basic Car Maintenance!")
+                    .font(.title)
+                
+                Text("Get started by adding a vehicle")
+            }
+            
+            Section {
+                TextField("Name", text: $name)
+                TextField("Make", text: $make)
+                TextField("Model", text: $model)
+            }
+        }
     }
 }
 

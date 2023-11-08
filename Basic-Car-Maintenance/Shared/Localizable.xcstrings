@@ -2213,6 +2213,9 @@
         }
       }
     },
+    "Get started by adding a vehicle" : {
+
+    },
     "GitHub Repo" : {
       "comment" : "Link to the Basic Car Maintenance GitHub repo.",
       "localizations" : {
@@ -5179,6 +5182,9 @@
           }
         }
       }
+    },
+    "Welcome to Basic Car Maintenance!" : {
+
     },
     "Year" : {
       "localizations" : {
