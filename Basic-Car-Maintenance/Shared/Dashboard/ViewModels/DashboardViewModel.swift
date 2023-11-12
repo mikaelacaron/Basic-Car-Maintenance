@@ -63,6 +63,8 @@ class DashboardViewModel {
                 showAddErrorAlert.toggle()
                 errorMessage = error.localizedDescription
             }
+            
+            AnalyticsService.shared.logEvent(.maintenanceCreate)
         }
     }
     
@@ -107,6 +109,9 @@ class DashboardViewModel {
                 errorMessage = error.localizedDescription
             }
         }
+        
+        AnalyticsService.shared.logEvent(.maintenanceUpdate)
+        
         await self.getMaintenanceEvents()
     }
     
@@ -130,6 +135,8 @@ class DashboardViewModel {
             showErrorAlert.toggle()
             errorMessage = error.localizedDescription
         }
+        
+        AnalyticsService.shared.logEvent(.maintenanceDelete)
     }
     
     /// Fetches the user's vehicles from Firestore based on their unique user ID.
