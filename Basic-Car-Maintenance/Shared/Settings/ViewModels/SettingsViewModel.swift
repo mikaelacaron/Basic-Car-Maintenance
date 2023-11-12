@@ -83,6 +83,8 @@ final class SettingsViewModel {
             } catch {
                 throw error
             }
+            
+            AnalyticsService.shared.logEvent(.vehicleCreate)
         }
     }
     
@@ -129,5 +131,7 @@ final class SettingsViewModel {
         } catch {
             throw error
         }
+        
+        AnalyticsService.shared.logEvent(.vehicleDelete)
     }
 }

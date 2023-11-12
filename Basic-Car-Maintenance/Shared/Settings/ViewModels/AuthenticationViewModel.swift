@@ -65,6 +65,7 @@ final class AuthenticationViewModel {
             print("User is signed in")
             if let user = Auth.auth().currentUser {
                 self.user = user
+                AnalyticsService.shared.setUserID(user.uid)
             }
         }
     }
