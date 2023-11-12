@@ -33,6 +33,8 @@ class OdometerViewModel {
                 .firestore()
                 .collection("odometer_readings")
                 .addDocument(from: readingToAdd)
+            
+            AnalyticsService.shared.logEvent(.odometerCreate)
         }
     }
     
@@ -50,6 +52,8 @@ class OdometerViewModel {
         if let eventIndex = readings.firstIndex(of: reading) {
             readings.remove(at: eventIndex)
         }
+        
+        AnalyticsService.shared.logEvent(.odometerDelete)
     }
         
     func getOdometerReadings() async {
