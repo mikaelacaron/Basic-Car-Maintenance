@@ -8,6 +8,7 @@ Welcome to my open source app! It is ready for contributors for [Hacktoberfest](
 ![GitHub contributors](https://img.shields.io/github/contributors/mikaelacaron/Basic-Car-Maintenance)
 [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](https://www.firsttimersonly.com/)
 [![Unit Tests](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml/badge.svg?event=push)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml)
+[![Deploy DocC Documentation](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml/badge.svg?branch=dev)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml)
 
 * Read the [Code of Conduct](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CODE_OF_CONDUCT.md)
 * Read the [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md) guidelines
