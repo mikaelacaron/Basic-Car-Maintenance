@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "86F59DA3-DDFC-4F2B-A8CE-19C34C8A817B",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Basic-Car-Maintenance.xcodeproj",
+        "identifier" : "FF5D13B32A86C2D800BC9BD6",
+        "name" : "Basic-Car-Maintenance-Tests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Basic-Car-Maintenance.xcodeproj",
+        "identifier" : "FF5D13BD2A86C2D800BC9BD6",
+        "name" : "Basic-Car-Maintenance-UITests"
+      }
+    }
+  ],
+  "version" : 1
+}
