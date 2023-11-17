@@ -123,6 +123,18 @@ struct SettingsView: View {
                             } label: {
                                 Text("Delete", comment: "Label to delete a vehicle")
                             }
+                            Button(role: .edit) {
+                                Task {
+                                    do {
+                                        try await viewModel.getVehicles(vehicle)
+                                    } catch {
+                                        errorDetails = error
+                                        showDeleteVehicleError = true
+                                    }
+                                }
+                            } label: {
+                                Text("Edit", comment: "Edit current vehicle")
+                            }
                         }
                     }
                     
