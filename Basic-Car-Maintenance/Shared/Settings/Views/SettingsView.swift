@@ -128,6 +128,8 @@ struct SettingsView: View {
                     }
                     
                     Button {
+                        // TODO: Show Paywall
+                        // Show paywall if adding more than 1 vehicle, or show the `isShowingAddVehicle` view
                         isShowingAddVehicle = true
                     } label: {
                         Text("Add Vehicle", comment: "Label to add a vehicle.")
@@ -231,6 +233,8 @@ struct SettingsView: View {
         }
         .onChange(of: scenePhase) { _, newScenePhase in
             guard case .active = newScenePhase else { return }
+            
+            // TODO: Show Paywall
             
             guard let action = actionService.action,
                   action == .addVehicle

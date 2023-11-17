@@ -53,6 +53,8 @@ struct OdometerView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
                     Button {
+                        // TODO: Show Paywall
+                        // if adding a 4th odometer reading, show paywall
                         viewModel.isShowingAddOdometerReading = true
                     } label: {
                         Image(systemName: SFSymbol.plus)
