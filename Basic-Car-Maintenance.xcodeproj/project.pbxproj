@@ -27,6 +27,7 @@
 		E58499682ACDDA9A00634660 /* ContributorsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */; };
 		E584996A2ACDDAFF00634660 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499692ACDDAFF00634660 /* Contributor.swift */; };
 		FF09FC912AB6FF44006BE61A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */; };
+		FF153AFF2B07C3E000D0BA30 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */; };
 		FF218EF62B00865F0025A533 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF218EF52B00865F0025A533 /* AnalyticsService.swift */; };
 		FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3DDF512AA4D28F009D91C4 /* DashboardViewModel.swift */; };
 		FF4E82BE2AD39863004949AF /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */; };
@@ -175,6 +176,7 @@
 				FFC8CDAB2AA3867A00D129A6 /* FirebaseAuth in Frameworks */,
 				FFC8CDA72AA3867A00D129A6 /* FirebaseAnalytics in Frameworks */,
 				FF4E82C02AD39863004949AF /* FirebaseRemoteConfigSwift in Frameworks */,
+				FF153AFF2B07C3E000D0BA30 /* FirebaseCrashlytics in Frameworks */,
 				FF4E82C22AD39863004949AF /* FirebaseStorage in Frameworks */,
 				FFC8CDB32AA4226900D129A6 /* AdSupport.framework in Frameworks */,
 			);
@@ -506,6 +508,7 @@
 				FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */,
 				FF4E82BF2AD39863004949AF /* FirebaseRemoteConfigSwift */,
 				FF4E82C12AD39863004949AF /* FirebaseStorage */,
+				FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */,
 			);
 			productName = "Basic-Car-Maintenance";
 			productReference = FF5D13A32A86C2D600BC9BD6 /* Basic-Car-Maintenance.app */;
@@ -1161,6 +1164,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
 		FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
