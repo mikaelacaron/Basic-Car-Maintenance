@@ -106,7 +106,8 @@ struct SettingsView: View {
                                 Text(vin)
                             }
                             
-                            if let licensePlateNumber = vehicle.licensePlateNumber, !licensePlateNumber.isEmpty {
+                            if let licensePlateNumber = vehicle.licensePlateNumber,
+                               !licensePlateNumber.isEmpty {
                                 Text(licensePlateNumber)
                             }
                         }
