@@ -26,8 +26,16 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      shouldAutocreateTestPlan = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <TestPlans>
+         <TestPlanReference
+            reference = "container:Screenshots.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:Tests.xctestplan"
+            default = "YES">
+         </TestPlanReference>
+      </TestPlans>
       <Testables>
          <TestableReference
             skipped = "NO"
@@ -48,6 +56,17 @@
                BlueprintIdentifier = "FF5D13BD2A86C2D800BC9BD6"
                BuildableName = "Basic-Car-Maintenance-UITests.xctest"
                BlueprintName = "Basic-Car-Maintenance-UITests"
+               ReferencedContainer = "container:Basic-Car-Maintenance.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E99CF7452B07C66D0053C4DB"
+               BuildableName = "Basic-Car-Maintenance-ScreenshotsTests.xctest"
+               BlueprintName = "Basic-Car-Maintenance-ScreenshotsTests"
                ReferencedContainer = "container:Basic-Car-Maintenance.xcodeproj">
             </BuildableReference>
          </TestableReference>

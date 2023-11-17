@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "3FFF7A5C-A82D-45C1-839A-CAB3DC430ADA",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Basic-Car-Maintenance.xcodeproj",
+        "identifier" : "E99CF7452B07C66D0053C4DB",
+        "name" : "Basic-Car-Maintenance-ScreenshotsTests"
+      }
+    }
+  ],
+  "version" : 1
+}
