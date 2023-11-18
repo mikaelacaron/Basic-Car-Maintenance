@@ -10,6 +10,8 @@ Use this app to gain experience getting started in open source for iOS and macOS
 
 More documentation to be added soon!
 
+Explore the essentials with the <doc:Tutorial-Table-of-Contents> Tutorial!
+
 ## New Icon
 The app icon contains a Car, Tools, and Gear
 
