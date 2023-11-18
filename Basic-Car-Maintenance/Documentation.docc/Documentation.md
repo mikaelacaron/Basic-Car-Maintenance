@@ -8,9 +8,10 @@ This app is open source for [Hacktoberfest 2023](https://hacktoberfest.com/)!
 
 Use this app to gain experience getting started in open source for iOS and macOS development using Swift and SwiftUI.
 
-More documentation to be added soon!
+Explore contribution essentials with the <doc:Tutorial-Table-of-Contents> Tutorial.
 
-Explore the essentials with the <doc:Tutorial-Table-of-Contents> Tutorial!
+
+More documentation to be added soon!
 
 ## New Icon
 The app icon contains a Car, Tools, and Gear
