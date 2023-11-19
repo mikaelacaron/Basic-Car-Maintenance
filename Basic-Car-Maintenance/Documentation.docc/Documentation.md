@@ -10,7 +10,6 @@ Use this app to gain experience getting started in open source for iOS and macOS
 
 Explore contribution essentials with the <doc:Tutorial-Table-of-Contents> Tutorial.
 
-
 More documentation to be added soon!
 
 ## New Icon
