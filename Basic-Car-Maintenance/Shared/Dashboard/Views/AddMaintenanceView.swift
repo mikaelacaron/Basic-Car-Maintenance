@@ -73,15 +73,12 @@ struct AddMaintenanceView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        
                         if let selectedVehicleID {
-                            if let vehicle = vehicles.filter({ $0.id == selectedVehicleID }).first {
-                                let event = MaintenanceEvent(title: title,
-                                                             date: date,
-                                                             notes: notes,
-                                                             vehicle: vehicle)
-                                addTapped(event)
-                            }
+                            let event = MaintenanceEvent(vehicleID: selectedVehicleID,
+                                                         title: title,
+                                                         date: date,
+                                                         notes: notes)
+                            addTapped(event)
                             dismiss()
                         }
                     } label: {

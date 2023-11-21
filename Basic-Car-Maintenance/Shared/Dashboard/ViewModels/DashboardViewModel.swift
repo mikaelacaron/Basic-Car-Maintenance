@@ -52,7 +52,7 @@ class DashboardViewModel {
             do {
                 try Firestore
                     .firestore()
-                    .collection(FirestoreCollection.maintenanceEvents)
+                    .collection(FirestoreCollection.vehicles + "/\(eventToAdd.vehicleID)/" + FirestoreCollection.maintenanceEvents)
                     .addDocument(from: eventToAdd)
                 
                 events.append(maintenanceEvent)

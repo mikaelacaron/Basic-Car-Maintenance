@@ -33,8 +33,10 @@ struct DashboardView: View {
                         Text(event.title)
                             .font(.title3)
                         
-                        Text("\(event.vehicle.name) on \(event.date, formatter: self.eventDateFormat)",
-                             comment: "Maintenance list item for a vehicle on a date")
+                        Text("DISPLAY THE VEHICLE AND DATE HERE!!!!!")
+                        // FIXME: FIX THIS!!!
+//                        Text("\(event.vehicle.name) on \(event.date, formatter: self.eventDateFormat)",
+//                             comment: "Maintenance list item for a vehicle on a date")
                         
                         if !event.notes.isEmpty {
                             Text(event.notes)
