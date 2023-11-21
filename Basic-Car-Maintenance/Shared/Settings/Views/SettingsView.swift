@@ -24,7 +24,7 @@ struct SettingsView: View {
     @State private var copiedAppVersion: Bool = false
     
     @State private var selectedVehicleEvent: EditVehicleEvent?
-    @Binding private var isEditingVehicle: Bool
+    @State private var isEditingVehicle: Bool = false
     @State var editViewModel: EditVehicleView?
     @State private var vehicleToEdit: Vehicle?
     
@@ -129,24 +129,38 @@ struct SettingsView: View {
                             } label: {
                                 Text("Delete", comment: "Label to delete a vehicle")
                             }
+//                            Button {
+//                                Task {
+//                                    selectedVehicleEvent = vehicle
+//                                    isEditingVehicle = true
+//                                }
+//                            }
+//                        } label: {
+//                            VStack {
+//                                Text("Edit", comment: "Button label to edit this vehicle")
+//                                Image(systemName: SFSymbol.pencil)
+//                            }
+//                            .sheet(isPresented: $isEditingVehicle) {
+//                                EditVehicleView(
+//                                    selectedEvent: $selectedVehicleEvent, viewModel: viewModel)
+//                            }
+                            
                             Button {
                                 Task {
-                                    selectedVehicleEvent = vehicle
+//                                    selectedVehicleEvent = vehicle
                                     isEditingVehicle = true
+                                    EditVehicleView(selectedEvent: $selectedVehicleEvent, viewModel: viewModel)
                                 }
-                            }
-                        } label: {
-                            VStack {
+                            } label: {
                                 Text("Edit", comment: "Button label to edit this vehicle")
                                 Image(systemName: SFSymbol.pencil)
                             }
                             .sheet(isPresented: $isEditingVehicle) {
-                                EditVehicleView(
-                                    selectedEvent: $selectedVehicleEvent, viewModel: viewModel)
+                                                EditVehicleView(
+                            selectedEvent: $selectedVehicleEvent, viewModel: viewModel)
                             }
                         }
                     }
-
                     Button {
                         isShowingAddVehicle = true
                     } label: {
@@ -227,7 +241,6 @@ struct SettingsView: View {
                     }
                 }
             }
-                        
             // swiftlint:disable:next line_length
             .alert(Text("Failed To Delete Vehicle", comment: "Label to dsplay title of the delete vehicle alert"),
                    isPresented: $showDeleteVehicleError) {

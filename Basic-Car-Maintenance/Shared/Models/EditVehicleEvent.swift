@@ -18,5 +18,5 @@ struct EditVehicleEvent: Codable, Identifiable, Hashable {
     let color: String
     let VIN: String
     let licenseplatenumber: String
-    var vehicle: Vehicle
+    var vehicle: Vehicle?
 }
