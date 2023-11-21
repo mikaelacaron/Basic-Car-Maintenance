@@ -122,11 +122,11 @@ extension AuthenticationViewModel {
                     fatalError("Invalid state: a login callback was received, but no login request was sent.")
                 }
                 guard let appleIDToken = appleIDCredential.identityToken else {
-                    print("Unable to fetdch identify token.")
+                    print("Unable to fetch identify token.")
                     return
                 }
                 guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
-                    print("Unable to serialise token string from data: \(appleIDToken.debugDescription)")
+                    print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
                     return
                 }
                 
