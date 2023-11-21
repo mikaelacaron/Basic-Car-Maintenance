@@ -50,7 +50,7 @@ struct EditMaintenanceEventView: View {
                     Text("Notes")
                 }
             }
-            .analyticsView()
+            .analyticsView("\(Self.self)")
             .onAppear {
                 guard let selectedEvent = selectedEvent else { return }
                 setMaintenanceEventValues(event: selectedEvent)
