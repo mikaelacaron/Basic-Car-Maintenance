@@ -69,7 +69,7 @@ struct DashboardView: View {
                 }
                 .listStyle(.inset)
             }
-            .analyticsView()
+            .analyticsView("\(Self.self)")
             .searchable(text: $viewModel.searchText)
             .overlay {
                 if viewModel.isLoading {

@@ -40,6 +40,7 @@ struct ChooseAppIconView: View {
             }
         }
         .navigationTitle("Choose App Icon")
+        .analyticsView("\(Self.self)")
     }
 }
 
