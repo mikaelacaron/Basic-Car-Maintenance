@@ -84,6 +84,7 @@ struct AddOdometerReadingView: View {
                 }
             }
         }
+        .analyticsView("\(Self.self)")
     }
 }
 

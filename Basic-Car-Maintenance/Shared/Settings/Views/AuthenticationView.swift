@@ -56,7 +56,7 @@ struct AuthenticationView: View {
                 }
             }
         }
-        .analyticsView()
+        .analyticsView("\(Self.self)")
     }
 }
 

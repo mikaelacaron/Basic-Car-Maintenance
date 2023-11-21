@@ -66,7 +66,7 @@ struct OdometerView: View {
                 await viewModel.getVehicles()
             }
         }
-        .analyticsView()
+        .analyticsView("\(Self.self)")
     }
     
     private func makeAddOdometerView() -> some View {

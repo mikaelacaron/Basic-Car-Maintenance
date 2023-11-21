@@ -183,7 +183,7 @@ struct SettingsView: View {
                             .animation(.linear(duration: 0.2), value: copiedAppVersion)
                     }
             }
-            .analyticsView()
+            .analyticsView("\(Self.self)")
             .navigationDestination(isPresented: $isShowingAddVehicle) {
                 AddVehicleView() { vehicle in
                     Task {
