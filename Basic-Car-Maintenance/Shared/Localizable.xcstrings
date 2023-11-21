@@ -4280,6 +4280,7 @@
       }
     },
     "Update" : {
+      "comment" : "Label to update vehicle information.",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -4407,6 +4408,9 @@
           }
         }
       }
+    },
+    "Update Vehicle" : {
+
     },
     "Vehicle" : {
       "comment" : "Maintenance event vehicle picker header",

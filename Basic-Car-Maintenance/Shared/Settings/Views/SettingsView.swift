@@ -23,6 +23,11 @@ struct SettingsView: View {
     @State private var errorDetails: Error?
     @State private var copiedAppVersion: Bool = false
     
+    @State private var selectedVehicleEvent: EditVehicleEvent?
+    @Binding private var isEditingVehicle: Bool
+    @State var editViewModel: EditVehicleView?
+    @State private var vehicleToEdit: Vehicle?
+    
     private let appVersion = "Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))"
     
     init(authenticationViewModel: AuthenticationViewModel) {
@@ -93,7 +98,7 @@ struct SettingsView: View {
                             Text(vehicle.make)
                             
                             Text(vehicle.model)
-
+                            
                             if let year = vehicle.year, !year.isEmpty {
                                 Text(year)
                             }
@@ -106,7 +111,8 @@ struct SettingsView: View {
                                 Text(vin)
                             }
                             
-                            if let licensePlateNumber = vehicle.licensePlateNumber, !licensePlateNumber.isEmpty {
+                            if let licensePlateNumber = vehicle.licensePlateNumber,
+                               !licensePlateNumber.isEmpty {
                                 Text(licensePlateNumber)
                             }
                         }
@@ -123,21 +129,24 @@ struct SettingsView: View {
                             } label: {
                                 Text("Delete", comment: "Label to delete a vehicle")
                             }
-                            Button(role: .edit) {
+                            Button {
                                 Task {
-                                    do {
-                                        try await viewModel.getVehicles(vehicle)
-                                    } catch {
-                                        errorDetails = error
-                                        showDeleteVehicleError = true
-                                    }
+                                    selectedVehicleEvent = vehicle
+                                    isEditingVehicle = true
                                 }
-                            } label: {
-                                Text("Edit", comment: "Edit current vehicle")
+                            }
+                        } label: {
+                            VStack {
+                                Text("Edit", comment: "Button label to edit this vehicle")
+                                Image(systemName: SFSymbol.pencil)
+                            }
+                            .sheet(isPresented: $isEditingVehicle) {
+                                EditVehicleView(
+                                    selectedEvent: $selectedVehicleEvent, viewModel: viewModel)
                             }
                         }
                     }
-                    
+
                     Button {
                         isShowingAddVehicle = true
                     } label: {
@@ -218,6 +227,7 @@ struct SettingsView: View {
                     }
                 }
             }
+                        
             // swiftlint:disable:next line_length
             .alert(Text("Failed To Delete Vehicle", comment: "Label to dsplay title of the delete vehicle alert"),
                    isPresented: $showDeleteVehicleError) {

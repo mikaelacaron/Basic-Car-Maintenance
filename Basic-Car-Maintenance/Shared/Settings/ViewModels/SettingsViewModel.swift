@@ -110,7 +110,7 @@ final class SettingsViewModel {
             }
         }
     }
-    
+        
     /// Deletes a vehicle from both Firestore and the local ``SettingsViewModel/vehicles`` array.
     ///
     /// - Parameter vehicle: The vehicle to be deleted.
