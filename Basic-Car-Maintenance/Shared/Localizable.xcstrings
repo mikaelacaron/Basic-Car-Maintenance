@@ -1518,7 +1518,7 @@
       }
     },
     "Edit" : {
-      "comment" : "Button label to edit this maintenance\nButton label to edit this vehicle",
+      "comment" : "Button label to edit this vehicle\nButton label to edit this maintenance",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -4409,7 +4409,7 @@
         }
       }
     },
-    "Update Vehicle" : {
+    "Update Vehicle Info" : {
 
     },
     "Vehicle" : {

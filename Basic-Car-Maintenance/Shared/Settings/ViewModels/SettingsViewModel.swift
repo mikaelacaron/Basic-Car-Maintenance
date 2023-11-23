@@ -17,6 +17,8 @@ final class SettingsViewModel {
     var contributors: [Contributor]?
     
     var vehicles = [Vehicle]()
+    var errorMessage: String = ""
+    var showErrorAlert = false
     
     var sortedContributors: [Contributor] {
         guard let contributors = contributors, !contributors.isEmpty else {
@@ -86,6 +88,30 @@ final class SettingsViewModel {
             
             AnalyticsService.shared.logEvent(.vehicleCreate)
         }
+    }
+    
+    ///Updates users vehicle that is being edited. Fetches selected vehicle from Firestore and saves to that selected vehicle.
+    func updateEvent(_ editVehicleEvent: EditVehicleEvent) async {
+        
+        if let uid = authenticationViewModel.user?.uid {
+            guard let id = editVehicleEvent.id else { return }
+            var eventToUpdate = editVehicleEvent
+            eventToUpdate.userID = uid
+            do {
+                try Firestore
+                    .firestore()
+                    .collection(FirestoreCollection.vehicles)
+                    .document(id)
+                    .setData(from: eventToUpdate)
+            } catch {
+                showErrorAlert.toggle()
+                errorMessage = error.localizedDescription
+            }
+        }
+        
+        AnalyticsService.shared.logEvent(.maintenanceUpdate)
+        
+        await self.getVehicles()
     }
     
     /// Fetches the user's vehicles from Firestore based on their unique user ID.

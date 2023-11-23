@@ -138,12 +138,12 @@ struct SettingsView: View {
                                 }
                             }
                         }
-                            .sheet(isPresented: $isEditingVehicle) {
-                                                EditVehicleView(
-                            selectedEvent: $selectedVehicleEvent, viewModel: viewModel)
-                            }
+                        .sheet(isPresented: $isEditingVehicle) {
+                                            EditVehicleView(
+                        selectedEvent: $selectedVehicleEvent, viewModel: viewModel)
                         }
-                    
+                    }
+                
                     Button {
                         // TODO: Show Paywall
                         // Show paywall if adding more than 1 vehicle, or show the `isShowingAddVehicle` view

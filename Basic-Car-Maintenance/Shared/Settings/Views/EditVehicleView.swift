@@ -62,12 +62,12 @@ struct EditVehicleView: View, Observable {
                     Text("License Plate Number")
                 }
             }
-            .analyticsView()
+            .analyticsView("\(Self.self)")
             .onAppear {
                 guard let selectedEvent = selectedEvent else { return }
                 setEditVehicleEventValues(event: selectedEvent)
             }
-            .navigationTitle(Text("Update Vehicle"))
+            .navigationTitle(Text("Update Vehicle Info"))
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
@@ -90,7 +90,7 @@ struct EditVehicleView: View, Observable {
                             vehicle: selectedVehicle)
                             event.id = selectedEvent.id
                             Task {
-//                                await viewModel.updateEvent(event)
+                                await viewModel.updateEvent(event)
                                 dismiss()
                             }
                         }
@@ -115,10 +115,10 @@ struct EditVehicleView: View, Observable {
     }
 }
 
-//#Preview {
-//    EditVehicleView(selectedEvent:
-//            .constant(EditVehicleEvent(name: "", make: "", model: "", year: "", color: "", VIN: "", licenseplatenumber: "", vehicle: vehicle)),
-//                             viewModel:
-//                                SettingsViewModel(authenticationViewModel: AuthenticationViewModel())
-//    )
-//}
+#Preview {
+    EditVehicleView(selectedEvent:
+            .constant(EditVehicleEvent(name: "", make: "", model: "", year: "", color: "", VIN: "", licenseplatenumber: "")),
+                             viewModel:
+                                SettingsViewModel(authenticationViewModel: AuthenticationViewModel())
+    )
+}
