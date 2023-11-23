@@ -33,10 +33,11 @@ struct DashboardView: View {
                         Text(event.title)
                             .font(.title3)
                         
-                        Text("DISPLAY THE VEHICLE AND DATE HERE!!!!!")
-                        // FIXME: FIX THIS!!!
-//                        Text("\(event.vehicle.name) on \(event.date, formatter: self.eventDateFormat)",
-//                             comment: "Maintenance list item for a vehicle on a date")
+                        let vehicleName = viewModel.vehicles.first { $0.id == event.vehicleID }?.name
+                        if let vehicleName {
+                            Text("\(vehicleName) on \(event.date, formatter: self.eventDateFormat)",
+                                 comment: "Maintenance list item for a vehicle on a date")
+                        }
                         
                         if !event.notes.isEmpty {
                             Text(event.notes)
