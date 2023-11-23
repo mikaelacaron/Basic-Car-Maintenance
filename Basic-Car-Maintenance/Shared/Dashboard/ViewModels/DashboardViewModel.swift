@@ -55,7 +55,7 @@ class DashboardViewModel {
             do {
                 try Firestore
                     .firestore()
-                    .collection(FirestoreCollection.vehicles + "/\(eventToAdd.vehicleID)/" + FirestoreCollection.maintenanceEvents) // swiftlint:disable:this line_length
+                    .collection(FirestorePath.maintenanceEvents(vehicleID: eventToAdd.vehicleID).path)
                     .addDocument(from: eventToAdd)
                 
                 events.append(maintenanceEvent)
@@ -106,7 +106,7 @@ class DashboardViewModel {
             do {
                 try Firestore
                     .firestore()
-                    .collection(FirestoreCollection.vehicles + "/\(eventToUpdate.vehicleID)/" + FirestoreCollection.maintenanceEvents) // swiftlint:disable:this line_length
+                    .collection(FirestorePath.maintenanceEvents(vehicleID: eventToUpdate.vehicleID).path)
                     .document(id)
                     .setData(from: eventToUpdate)
             } catch {
@@ -128,7 +128,7 @@ class DashboardViewModel {
         do {
             try await Firestore
                 .firestore()
-                .collection(FirestoreCollection.vehicles + "/\(event.vehicleID)/" + FirestoreCollection.maintenanceEvents) // swiftlint:disable:this line_length
+                .collection(FirestorePath.maintenanceEvents(vehicleID: event.vehicleID).path)
                 .document(documentId)
                 .delete()
             errorMessage = ""

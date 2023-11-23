@@ -7,6 +7,19 @@
 
 import Foundation
 
+enum FirestorePath {
+    
+    /// `vehicles/{ vehicleDocumentID }/maintenance_events/{ maintenceEventDocumentID }`
+    case maintenanceEvents(vehicleID: String)
+    
+    var path: String {
+        switch self {
+        case let .maintenanceEvents(vehicleID):
+            return "\(FirestoreCollection.vehicles)/" + "\(vehicleID)/" + FirestoreCollection.maintenanceEvents // swiftlint:disable:this line_length
+        }
+    }
+}
+
 enum FirestoreCollection {
     static let maintenanceEvents = "maintenance_events"
     static let vehicles = "vehicles"
