@@ -8,15 +8,18 @@
 import SwiftUI
 import FirebaseAnalyticsSwift
 
-struct FireBaseAnalyticsModifier: ViewModifier {
+struct FirebaseAnalyticsModifier: ViewModifier {
+    
+    let screenName: String
+    
     func body(content: Content) -> some View {
         content
-            .analyticsScreen(name: "\(Self.self)")
+            .analyticsScreen(name: screenName)
     }
 }
 
 extension View {
-    func analyticsView() -> some View {
-        modifier(FireBaseAnalyticsModifier())
+    func analyticsView(_ name: String) -> some View {
+        modifier(FirebaseAnalyticsModifier(screenName: name))
     }
 }

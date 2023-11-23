@@ -67,7 +67,7 @@ struct AddMaintenanceView: View {
                          comment: "Notes text field header")
                 }
             }
-            .analyticsView()
+            .analyticsView("\(Self.self)")
             .navigationTitle(Text("Add Maintenance",
                                   comment: "Nagivation title for Add Maintenance view"))
             .toolbar {

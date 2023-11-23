@@ -44,6 +44,9 @@ To start contributing, review [CONTRIBUTING.md](https://github.com/mikaelacaron/
 
 Checkout any issue labeled `hacktoberfest` to start contributing.
 
+> [!IMPORTANT]
+> View the [GitHub Discussions](https://github.com/mikaelacaron/Basic-Car-Maintenance/discussions) for the latest information about the repo.
+
 ## Issue Labels
 * `first-timers-only` is only for someone who has **not** contributed to the repo yet! (and is new to open source and iOS development)
 * `good-first-issue` is an issue that's beginner level
