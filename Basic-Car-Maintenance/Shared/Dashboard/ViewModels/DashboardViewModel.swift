@@ -44,6 +44,9 @@ class DashboardViewModel {
         self.authenticationViewModel = authenticationViewModel
     }
     
+    /// Adding a `MaintenanceEvent` in Firestore at:
+    /// `vehicles/{vehicleDocumentID}/maintenance_events/{maintenceEventDocumentID}`
+    /// - Parameter maintenanceEvent: The `MaintenanceEvent` to save
     func addEvent(_ maintenanceEvent: MaintenanceEvent) {
         if let uid = authenticationViewModel.user?.uid {
             var eventToAdd = maintenanceEvent
