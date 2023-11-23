@@ -55,7 +55,7 @@ class DashboardViewModel {
             do {
                 try Firestore
                     .firestore()
-                    .collection(FirestoreCollection.vehicles + "/\(eventToAdd.vehicleID)/" + FirestoreCollection.maintenanceEvents)
+                    .collection(FirestoreCollection.vehicles + "/\(eventToAdd.vehicleID)/" + FirestoreCollection.maintenanceEvents) // swiftlint:disable:this line_length
                     .addDocument(from: eventToAdd)
                 
                 events.append(maintenanceEvent)
@@ -74,10 +74,11 @@ class DashboardViewModel {
     func getMaintenanceEvents() async {
         isLoading = true
 
-        if let uid = authenticationViewModel.user?.uid {
+        if let userUID = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
-            let docRef = db.collection(FirestoreCollection.maintenanceEvents)
-                .whereField(FirestoreField.userID, isEqualTo: uid)
+            
+            let docRef = db.collectionGroup(FirestoreCollection.maintenanceEvents)
+                .whereField(FirestoreField.userID, in: [userUID])
             
             let querySnapshot = try? await docRef.getDocuments()
             
@@ -89,6 +90,7 @@ class DashboardViewModel {
                         events.append(event)
                     }
                 }
+                
                 self.isLoading = false
                 self.events = events
             }
