@@ -102,10 +102,11 @@ class DashboardViewModel {
             guard let id = maintenanceEvent.id else { return }
             var eventToUpdate = maintenanceEvent
             eventToUpdate.userID = uid
+            
             do {
                 try Firestore
                     .firestore()
-                    .collection(FirestoreCollection.maintenanceEvents)
+                    .collection(FirestoreCollection.vehicles + "/\(eventToUpdate.vehicleID)/" + FirestoreCollection.maintenanceEvents) // swiftlint:disable:this line_length
                     .document(id)
                     .setData(from: eventToUpdate)
             } catch {

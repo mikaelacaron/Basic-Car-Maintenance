@@ -12,7 +12,7 @@ struct EditMaintenanceEventView: View {
     var viewModel: DashboardViewModel
     @State private var title = ""
     @State private var date = Date()
-    @State private var selectedVehicle: Vehicle?
+    @State private var selectedVehicleID: String?
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
     
@@ -26,9 +26,10 @@ struct EditMaintenanceEventView: View {
                 }
                 
                 Section {
-                    Picker(selection: $selectedVehicle) {
+                    Picker(selection: $selectedVehicleID) {
                         ForEach(viewModel.vehicles) { vehicle in
-                            Text(vehicle.name).tag(vehicle as Vehicle)
+                            Text(vehicle.name)
+                                .tag(vehicle.id)
                         }
                     } label: {
                         Text("Select a vehicle",
@@ -67,8 +68,8 @@ struct EditMaintenanceEventView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        if let selectedVehicle, let selectedEvent {
-                            var event = MaintenanceEvent(vehicleID: selectedVehicle.id!,
+                        if let selectedVehicleID, let selectedEvent {
+                            var event = MaintenanceEvent(vehicleID: selectedVehicleID,
                                                          title: title,
                                                          date: date,
                                                          notes: notes)
@@ -91,12 +92,18 @@ struct EditMaintenanceEventView: View {
         self.title = event.title
         self.date = event.date
         self.notes = event.notes
+        self.selectedVehicleID = viewModel.vehicles.filter { $0.id == selectedEvent?.vehicleID }.first?.id
     }
 }
 
 #Preview {
     EditMaintenanceEventView(selectedEvent:
-            .constant(MaintenanceEvent(id: "", userID: "", vehicleID: "", title: "", date: Date(), notes: "")),
+            .constant(MaintenanceEvent(id: "",
+                                       userID: "",
+                                       vehicleID: "",
+                                       title: "",
+                                       date: Date(),
+                                       notes: "")),
                              viewModel:
                                 DashboardViewModel(authenticationViewModel: AuthenticationViewModel())
     )
