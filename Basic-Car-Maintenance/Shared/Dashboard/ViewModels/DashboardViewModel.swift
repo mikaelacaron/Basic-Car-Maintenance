@@ -128,7 +128,7 @@ class DashboardViewModel {
         do {
             try await Firestore
                 .firestore()
-                .collection(FirestoreCollection.maintenanceEvents)
+                .collection(FirestoreCollection.vehicles + "/\(event.vehicleID)/" + FirestoreCollection.maintenanceEvents) // swiftlint:disable:this line_length
                 .document(documentId)
                 .delete()
             errorMessage = ""
