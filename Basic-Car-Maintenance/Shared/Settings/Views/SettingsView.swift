@@ -24,7 +24,7 @@ struct SettingsView: View {
     @State private var copiedAppVersion: Bool = false
     
     @State private var selectedVehicleEvent: EditVehicleEvent?
-    @State private var isEditingVehicle: Bool = false
+    @State private var isEditingVehicle = false
     @State var editViewModel: EditVehicleView?
     @State private var vehicleToEdit: Vehicle?
     
@@ -129,38 +129,21 @@ struct SettingsView: View {
                             } label: {
                                 Text("Delete", comment: "Label to delete a vehicle")
                             }
-//                            Button {
-//                                Task {
-//                                    selectedVehicleEvent = vehicle
-//                                    isEditingVehicle = true
-//                                }
-//                            }
-//                        } label: {
-//                            VStack {
-//                                Text("Edit", comment: "Button label to edit this vehicle")
-//                                Image(systemName: SFSymbol.pencil)
-//                            }
-//                            .sheet(isPresented: $isEditingVehicle) {
-//                                EditVehicleView(
-//                                    selectedEvent: $selectedVehicleEvent, viewModel: viewModel)
-//                            }
-                            
                             Button {
-                                Task {
-//                                    selectedVehicleEvent = vehicle
-                                    isEditingVehicle = true
-                                    EditVehicleView(selectedEvent: $selectedVehicleEvent, viewModel: viewModel)
-                                }
+                                isEditingVehicle = true
                             } label: {
-                                Text("Edit", comment: "Button label to edit this vehicle")
-                                Image(systemName: SFSymbol.pencil)
+                                VStack {
+                                    Text("Edit", comment: "Button label to edit this vehicle")
+                                    Image(systemName: SFSymbol.pencil)
+                                }
                             }
+                        }
                             .sheet(isPresented: $isEditingVehicle) {
                                                 EditVehicleView(
                             selectedEvent: $selectedVehicleEvent, viewModel: viewModel)
                             }
                         }
-                    }
+                    
                     Button {
                         isShowingAddVehicle = true
                     } label: {
