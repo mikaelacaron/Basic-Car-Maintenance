@@ -12,7 +12,6 @@ import Foundation
 @Observable
 final class SettingsViewModel {
     let authenticationViewModel: AuthenticationViewModel
-    let privacyURL = URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance-Privacy")
 
     var contributors: [Contributor]?
     
@@ -39,20 +38,10 @@ final class SettingsViewModel {
         self.authenticationViewModel = authenticationViewModel
     }
     
-    let urls: [String: URL] = [
-        "mikaelacaronProfile": URL(string: "https://github.com/mikaelacaron")!,
-        "Basic-Car-MaintenanceRepo": URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance")!,
-        "bugReport": URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues")!
-    ]
-    
     // swiftlint:disable:next line_length
     /// Fetches the list of contributors for the GitHub repository [Basic-Car-Maintenance](https://github.com/mikaelacaron/Basic-Car-Maintenance).
     func getContributors() async {
-        guard let url =
-                URL(string: "https://api.github.com/repos/mikaelacaron/Basic-Car-Maintenance/contributors")
-        else {
-            return
-        }
+        let url = GitHubURL.apiContributors
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)

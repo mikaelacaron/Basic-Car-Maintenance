@@ -7,6 +7,8 @@
 
 import Foundation
 
+// swiftlint:disable line_length
+
 enum FirestorePath {
     
     /// `vehicles/{ vehicleDocumentID }/maintenance_events/{ maintenceEventDocumentID }`
@@ -15,7 +17,7 @@ enum FirestorePath {
     var path: String {
         switch self {
         case let .maintenanceEvents(vehicleID):
-            return "\(FirestoreCollection.vehicles)/" + "\(vehicleID)/" + FirestoreCollection.maintenanceEvents // swiftlint:disable:this line_length
+            return "\(FirestoreCollection.vehicles)/" + "\(vehicleID)/" + FirestoreCollection.maintenanceEvents
         }
     }
 }
@@ -31,6 +33,20 @@ enum FirestoreField {
     static let userID = "userID"
     static let isOn = "isOn"
     static let id = "_id"
+}
+
+enum GitHubURL {
+    static let mikaelaCaronProfile = URL(string: "https://github.com/mikaelacaron")!
+    
+    static let repo = URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance")!
+    
+    static let apiContributors = URL(string: "https://api.github.com/repos/mikaelacaron/Basic-Car-Maintenance/contributors")!
+    
+    static let featureRequest = URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=feature+request&projects=&template=feature-request.md&title=FEATURE+-")!
+    
+    static let bugReport = URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=bug&projects=&template=bug-report.md&title=BUG+-")!
+    
+    static let privacy = URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance-Privacy")!
 }
 
 enum SFSymbol {
@@ -63,3 +79,5 @@ enum SFSymbol {
     static let personCircle = "person.circle.fill"
   
 }
+
+// swiftlint:enable line_length
