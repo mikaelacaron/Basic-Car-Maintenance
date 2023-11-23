@@ -59,6 +59,7 @@ class DashboardViewModel {
                     .addDocument(from: eventToAdd)
                 
                 events.append(maintenanceEvent)
+                AnalyticsService.shared.logEvent(.maintenanceCreate)
                 
                 errorMessage = ""
                 isShowingAddMaintenanceEvent = false
@@ -66,8 +67,6 @@ class DashboardViewModel {
                 showAddErrorAlert.toggle()
                 errorMessage = error.localizedDescription
             }
-            
-            AnalyticsService.shared.logEvent(.maintenanceCreate)
         }
     }
     
