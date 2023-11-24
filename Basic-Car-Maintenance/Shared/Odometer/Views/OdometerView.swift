@@ -12,8 +12,8 @@ struct OdometerView: View {
     
     @State private var viewModel: OdometerViewModel
 
-    init(authenticationViewModel: AuthenticationViewModel) {
-        viewModel = OdometerViewModel(authenticationViewModel: authenticationViewModel)
+    init(userUID: String?) {
+        viewModel = OdometerViewModel(userUID: userUID)
     }
 
     var body: some View {
@@ -24,7 +24,10 @@ struct OdometerView: View {
                         Text("\(reading.distance) \(reading.isMetric ? "km" : "mi")")
                             .font(.title3)
                         
-                        Text("For \(reading.vehicle.name)")
+                        let vehicleName = viewModel.vehicles.first { $0.id == reading.vehicleID }?.name
+                        if let vehicleName {
+                            Text("For \(vehicleName)")
+                        }
                         
                         Text("\(reading.date.formatted(date: .abbreviated, time: .omitted))")
                     }
@@ -91,6 +94,6 @@ struct OdometerView: View {
 }
 
 #Preview {
-    OdometerView(authenticationViewModel: AuthenticationViewModel())
+    OdometerView(userUID: "")
         .environment(ActionService.shared)
 }

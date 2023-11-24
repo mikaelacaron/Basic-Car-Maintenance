@@ -12,7 +12,7 @@ import Foundation
 @Observable
 class OdometerViewModel {
     
-    let authenticationViewModel: AuthenticationViewModel
+    let userUID: String?
     
     var readings = [OdometerReading]()
     var showAddErrorAlert = false
@@ -20,18 +20,18 @@ class OdometerViewModel {
     var errorMessage: String = ""
     var vehicles = [Vehicle]()
 
-    init(authenticationViewModel: AuthenticationViewModel) {
-        self.authenticationViewModel = authenticationViewModel
+    init(userUID: String?) {
+        self.userUID = userUID
     }
     
     func addReading(_ odometerReading: OdometerReading) throws {
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = userUID {
             var readingToAdd = odometerReading
             readingToAdd.userID = uid
             
-            _ = try Firestore
+            try Firestore
                 .firestore()
-                .collection("odometer_readings")
+                .collection(FirestorePath.odometerReadings(vehicleID: readingToAdd.vehicleID).path)
                 .addDocument(from: readingToAdd)
             
             AnalyticsService.shared.logEvent(.odometerCreate)
@@ -45,7 +45,7 @@ class OdometerViewModel {
         
         try? await Firestore
             .firestore()
-            .collection(FirestoreCollection.odometerReadings)
+            .collection(FirestorePath.odometerReadings(vehicleID: reading.vehicleID).path)
             .document(documentId)
             .delete()
         
@@ -57,10 +57,10 @@ class OdometerViewModel {
     }
         
     func getOdometerReadings() async {
-        if let uid = authenticationViewModel.user?.uid {
+        if let userUID = userUID {
             let db = Firestore.firestore()
-            let docRef = db.collection(FirestoreCollection.odometerReadings)
-                .whereField(FirestoreField.userID, isEqualTo: uid)
+            let docRef = db.collectionGroup(FirestoreCollection.odometerReadings)
+                .whereField(FirestoreField.userID, isEqualTo: userUID)
             
             let querySnapshot = try? await docRef.getDocuments()
             
@@ -78,7 +78,7 @@ class OdometerViewModel {
     }
     
     func getVehicles() async {
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = userUID {
             let db = Firestore.firestore()
             let docRef = db.collection(FirestoreCollection.vehicles)
                 .whereField(FirestoreField.userID, isEqualTo: uid)

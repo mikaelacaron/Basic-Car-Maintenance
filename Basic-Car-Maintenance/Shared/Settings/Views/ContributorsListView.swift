@@ -16,7 +16,7 @@ struct ContributorsListView: View {
                 ForEach(viewModel.sortedContributors) { contributor in
                     Link(
                         destination: URL(string: contributor.htmlURL) ??
-                        viewModel.urls["Basic-Car-Maintenance"]!) {
+                        GitHubURL.repo) {
                             ContributorsProfileView(name: contributor.login, url: contributor.avatarURL)
                         }
                 }

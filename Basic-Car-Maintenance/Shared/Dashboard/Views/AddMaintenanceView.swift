@@ -70,18 +70,20 @@ struct AddMaintenanceView: View {
             .analyticsView("\(Self.self)")
             .navigationTitle(Text("Add Maintenance",
                                   comment: "Nagivation title for Add Maintenance view"))
+            .onAppear {
+                if !vehicles.isEmpty {
+                    selectedVehicleID = vehicles[0].id
+                }
+            }
             .toolbar {
                 ToolbarItem {
                     Button {
-                        
                         if let selectedVehicleID {
-                            if let vehicle = vehicles.filter({ $0.id == selectedVehicleID }).first {
-                                let event = MaintenanceEvent(title: title,
-                                                             date: date,
-                                                             notes: notes,
-                                                             vehicle: vehicle)
-                                addTapped(event)
-                            }
+                            let event = MaintenanceEvent(vehicleID: selectedVehicleID,
+                                                         title: title,
+                                                         date: date,
+                                                         notes: notes)
+                            addTapped(event)
                             dismiss()
                         }
                     } label: {
