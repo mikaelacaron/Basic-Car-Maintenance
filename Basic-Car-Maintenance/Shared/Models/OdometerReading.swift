@@ -14,5 +14,5 @@ struct OdometerReading: Codable, Identifiable, Hashable {
     let date: Date
     let distance: Int
     let isMetric: Bool
-    let vehicle: Vehicle
+    let vehicleID: String
 }

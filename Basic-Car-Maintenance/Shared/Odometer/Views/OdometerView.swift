@@ -24,7 +24,7 @@ struct OdometerView: View {
                         Text("\(reading.distance) \(reading.isMetric ? "km" : "mi")")
                             .font(.title3)
                         
-                        Text("For \(reading.vehicle.name)")
+//                        Text("For \(reading.vehicle.name)")
                         
                         Text("\(reading.date.formatted(date: .abbreviated, time: .omitted))")
                     }

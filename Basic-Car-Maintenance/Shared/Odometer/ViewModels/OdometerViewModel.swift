@@ -29,9 +29,9 @@ class OdometerViewModel {
             var readingToAdd = odometerReading
             readingToAdd.userID = uid
             
-            _ = try Firestore
+            try Firestore
                 .firestore()
-                .collection("odometer_readings")
+                .collection(FirestorePath.odometerReadings(vehicleID: readingToAdd.vehicleID).path)
                 .addDocument(from: readingToAdd)
             
             AnalyticsService.shared.logEvent(.odometerCreate)
@@ -59,7 +59,7 @@ class OdometerViewModel {
     func getOdometerReadings() async {
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
-            let docRef = db.collection(FirestoreCollection.odometerReadings)
+            let docRef = db.collectionGroup(FirestoreCollection.odometerReadings)
                 .whereField(FirestoreField.userID, isEqualTo: uid)
             
             let querySnapshot = try? await docRef.getDocuments()

@@ -14,10 +14,15 @@ enum FirestorePath {
     /// `vehicles/{ vehicleDocumentID }/maintenance_events/{ maintenceEventDocumentID }`
     case maintenanceEvents(vehicleID: String)
     
+    /// `vehicles/{ vehicleDocumentID }/odometer_readings/{ maintenceEventDocumentID }`
+    case odometerReadings(vehicleID: String)
+    
     var path: String {
         switch self {
         case let .maintenanceEvents(vehicleID):
             return "\(FirestoreCollection.vehicles)/" + "\(vehicleID)/" + FirestoreCollection.maintenanceEvents
+        case let .odometerReadings(vehicleID):
+            return "\(FirestoreCollection.vehicles)/" + "\(vehicleID)/" + FirestoreCollection.odometerReadings
         }
     }
 }
