@@ -23,6 +23,11 @@ struct SettingsView: View {
     @State private var errorDetails: Error?
     @State private var copiedAppVersion: Bool = false
     
+    @State private var selectedVehicleEvent: EditVehicleEvent?
+    @State private var isEditingVehicle = false
+    @State var editViewModel: EditVehicleView?
+    @State private var vehicleToEdit: Vehicle?
+    
     private let appVersion = "Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))"
     
     init(authenticationViewModel: AuthenticationViewModel) {
@@ -92,7 +97,7 @@ struct SettingsView: View {
                             Text(vehicle.make)
                             
                             Text(vehicle.model)
-
+                            
                             if let year = vehicle.year, !year.isEmpty {
                                 Text(year)
                             }
@@ -123,9 +128,21 @@ struct SettingsView: View {
                             } label: {
                                 Text("Delete", comment: "Label to delete a vehicle")
                             }
+                            Button {
+                                isEditingVehicle = true
+                            } label: {
+                                VStack {
+                                    Text("Edit", comment: "Button label to edit this vehicle")
+                                    Image(systemName: SFSymbol.pencil)
+                                }
+                            }
+                        }
+                        .sheet(isPresented: $isEditingVehicle) {
+                                            EditVehicleView(
+                        selectedEvent: $selectedVehicleEvent, viewModel: viewModel)
                         }
                     }
-                    
+                
                     Button {
                         // TODO: Show Paywall
                         // Show paywall if adding more than 1 vehicle, or show the `isShowingAddVehicle` view

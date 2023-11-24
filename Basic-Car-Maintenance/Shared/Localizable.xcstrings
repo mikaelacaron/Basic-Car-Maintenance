@@ -1518,7 +1518,7 @@
       }
     },
     "Edit" : {
-      "comment" : "Button label to edit this maintenance",
+      "comment" : "Button label to edit this vehicle\nButton label to edit this maintenance",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -4280,6 +4280,7 @@
       }
     },
     "Update" : {
+      "comment" : "Label to update vehicle information.",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -4407,6 +4408,9 @@
           }
         }
       }
+    },
+    "Update Vehicle Info" : {
+
     },
     "Vehicle" : {
       "comment" : "Maintenance event vehicle picker header",
