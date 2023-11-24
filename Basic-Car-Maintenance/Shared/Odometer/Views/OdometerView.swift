@@ -24,7 +24,10 @@ struct OdometerView: View {
                         Text("\(reading.distance) \(reading.isMetric ? "km" : "mi")")
                             .font(.title3)
                         
-//                        Text("For \(reading.vehicle.name)")
+                        let vehicleName = viewModel.vehicles.first { $0.id == reading.vehicleID }?.name
+                        if let vehicleName {
+                            Text("For \(vehicleName)")
+                        }
                         
                         Text("\(reading.date.formatted(date: .abbreviated, time: .omitted))")
                     }
