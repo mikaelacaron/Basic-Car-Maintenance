@@ -45,7 +45,7 @@ class OdometerViewModel {
         
         try? await Firestore
             .firestore()
-            .collection(FirestoreCollection.odometerReadings)
+            .collection(FirestorePath.odometerReadings(vehicleID: reading.vehicleID).path)
             .document(documentId)
             .delete()
         
