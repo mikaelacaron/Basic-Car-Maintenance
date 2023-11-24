@@ -70,6 +70,11 @@ struct AddMaintenanceView: View {
             .analyticsView("\(Self.self)")
             .navigationTitle(Text("Add Maintenance",
                                   comment: "Nagivation title for Add Maintenance view"))
+            .onAppear {
+                if !vehicles.isEmpty {
+                    selectedVehicleID = vehicles[0].id
+                }
+            }
             .toolbar {
                 ToolbarItem {
                     Button {
