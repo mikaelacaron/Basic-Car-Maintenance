@@ -73,7 +73,7 @@ struct EditVehicleView: View, Observable {
                 guard let selectedVehicle else { return }
                 setEditVehicleValues(selectedVehicle)
             }
-            .navigationTitle(Text("Update Vehicle Info"))
+            .navigationTitle("Update Vehicle Info")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
@@ -121,5 +121,6 @@ struct EditVehicleView: View, Observable {
 }
 
 #Preview {
-    EditVehicleView(selectedVehicle: .constant(nil), viewModel: SettingsViewModel(authenticationViewModel: AuthenticationViewModel()))
+    EditVehicleView(selectedVehicle: .constant(nil),
+                    viewModel: SettingsViewModel(authenticationViewModel: AuthenticationViewModel()))
 }
