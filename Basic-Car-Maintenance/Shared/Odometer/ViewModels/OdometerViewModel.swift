@@ -12,7 +12,7 @@ import Foundation
 @Observable
 class OdometerViewModel {
     
-    let authenticationViewModel: AuthenticationViewModel
+    let userUID: String?
     
     var readings = [OdometerReading]()
     var showAddErrorAlert = false
@@ -20,12 +20,12 @@ class OdometerViewModel {
     var errorMessage: String = ""
     var vehicles = [Vehicle]()
 
-    init(authenticationViewModel: AuthenticationViewModel) {
-        self.authenticationViewModel = authenticationViewModel
+    init(userUID: String?) {
+        self.userUID = userUID
     }
     
     func addReading(_ odometerReading: OdometerReading) throws {
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = userUID {
             var readingToAdd = odometerReading
             readingToAdd.userID = uid
             
@@ -57,7 +57,7 @@ class OdometerViewModel {
     }
         
     func getOdometerReadings() async {
-        if let userUID = authenticationViewModel.user?.uid {
+        if let userUID = userUID {
             let db = Firestore.firestore()
             let docRef = db.collectionGroup(FirestoreCollection.odometerReadings)
                 .whereField(FirestoreField.userID, isEqualTo: userUID)
@@ -78,7 +78,7 @@ class OdometerViewModel {
     }
     
     func getVehicles() async {
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = userUID {
             let db = Firestore.firestore()
             let docRef = db.collection(FirestoreCollection.vehicles)
                 .whereField(FirestoreField.userID, isEqualTo: uid)

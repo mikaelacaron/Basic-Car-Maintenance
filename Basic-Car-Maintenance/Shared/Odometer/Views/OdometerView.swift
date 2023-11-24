@@ -12,8 +12,8 @@ struct OdometerView: View {
     
     @State private var viewModel: OdometerViewModel
 
-    init(authenticationViewModel: AuthenticationViewModel) {
-        viewModel = OdometerViewModel(authenticationViewModel: authenticationViewModel)
+    init(userUID: String?) {
+        viewModel = OdometerViewModel(userUID: userUID)
     }
 
     var body: some View {
@@ -94,6 +94,6 @@ struct OdometerView: View {
 }
 
 #Preview {
-    OdometerView(authenticationViewModel: AuthenticationViewModel())
+    OdometerView(userUID: "")
         .environment(ActionService.shared)
 }

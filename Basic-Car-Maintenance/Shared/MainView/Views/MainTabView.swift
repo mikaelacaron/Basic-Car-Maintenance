@@ -35,7 +35,7 @@ struct MainTabView: View {
                     Label("Dashboard", systemImage: SFSymbol.dashboard)
                 }
             
-            OdometerView(authenticationViewModel: authenticationViewModel)
+            OdometerView(userUID: authenticationViewModel.user?.uid)
                 .tag(TabSelection.odometer)
                 .tabItem {
                     Label("Odometer", systemImage: SFSymbol.gauge)
