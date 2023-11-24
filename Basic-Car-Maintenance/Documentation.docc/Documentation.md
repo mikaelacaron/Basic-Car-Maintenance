@@ -12,6 +12,11 @@ Explore contribution essentials with the <doc:Tutorial-Table-of-Contents> Tutori
 
 More documentation to be added soon!
 
+## Topics
+
+### Essentials
+- <doc:Tutorial-Table-of-Contents>
+
 ## New Icon
 The app icon contains a Car, Tools, and Gear
 
