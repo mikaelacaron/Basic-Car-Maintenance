@@ -77,7 +77,7 @@ class DashboardViewModel {
             let db = Firestore.firestore()
             
             let docRef = db.collectionGroup(FirestoreCollection.maintenanceEvents)
-                .whereField(FirestoreField.userID, in: [userUID])
+                .whereField(FirestoreField.userID, isEqualTo: userUID)
             
             let querySnapshot = try? await docRef.getDocuments()
             
