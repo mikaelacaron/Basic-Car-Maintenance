@@ -79,28 +79,27 @@ final class SettingsViewModel {
         }
     }
     
-    ///Updates users vehicle that is being edited. Fetches selected vehicle from Firestore and saves to that selected vehicle.
-    func updateEvent(_ editVehicleEvent: EditVehicleEvent) async {
+    func updateVehicle(_ vehicle: Vehicle) async {
         
-        if let uid = authenticationViewModel.user?.uid {
-            guard let id = editVehicleEvent.id else { return }
-            var eventToUpdate = editVehicleEvent
-            eventToUpdate.userID = uid
-            do {
-                try Firestore
-                    .firestore()
-                    .collection(FirestoreCollection.vehicles)
-                    .document(id)
-                    .setData(from: eventToUpdate)
-            } catch {
-                showErrorAlert.toggle()
-                errorMessage = error.localizedDescription
-            }
-        }
-        
-        AnalyticsService.shared.logEvent(.maintenanceUpdate)
-        
-        await self.getVehicles()
+//        if let uid = authenticationViewModel.user?.uid {
+//            guard let id = editVehicleEvent.id else { return }
+//            var eventToUpdate = editVehicleEvent
+//            eventToUpdate.userID = uid
+//            do {
+//                try Firestore
+//                    .firestore()
+//                    .collection(FirestoreCollection.vehicles)
+//                    .document(id)
+//                    .setData(from: eventToUpdate)
+//            } catch {
+//                showErrorAlert.toggle()
+//                errorMessage = error.localizedDescription
+//            }
+//        }
+//        
+//        AnalyticsService.shared.logEvent(.maintenanceUpdate)
+//        
+//        await self.getVehicles()
     }
     
     /// Fetches the user's vehicles from Firestore based on their unique user ID.

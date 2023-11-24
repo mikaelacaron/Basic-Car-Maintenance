@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct EditVehicleView: View, Observable {
-    @Binding var selectedEvent: EditVehicleEvent?
+    @Binding var selectedVehicle: Vehicle?
     var viewModel: SettingsViewModel
-    @State private var selectedVehicle: Vehicle?
+    
+    @Environment(\.dismiss) var dismiss
+    
     @State private var name = ""
     @State private var make = ""
     @State private var model = ""
@@ -18,7 +20,10 @@ struct EditVehicleView: View, Observable {
     @State private var color = ""
     @State private var VIN = ""
     @State private var licensePlateNumber = ""
-    @Environment(\.dismiss) var dismiss
+    
+    private var isVehicleValid: Bool {
+        !name.isEmpty && !make.isEmpty && !model.isEmpty
+    }
     
     var body: some View {
         NavigationStack {
@@ -28,6 +33,7 @@ struct EditVehicleView: View, Observable {
                 } header: {
                     Text("Name")
                 }
+                
                 Section {
                     TextField("Make", text: $make)
                 } header: {
@@ -64,8 +70,8 @@ struct EditVehicleView: View, Observable {
             }
             .analyticsView("\(Self.self)")
             .onAppear {
-                guard let selectedEvent = selectedEvent else { return }
-                setEditVehicleEventValues(event: selectedEvent)
+                guard let selectedVehicle else { return }
+                setEditVehicleValues(selectedVehicle)
             }
             .navigationTitle(Text("Update Vehicle Info"))
             .toolbar {
@@ -79,46 +85,41 @@ struct EditVehicleView: View, Observable {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        if let selectedVehicle, let selectedEvent {
-                            var event = EditVehicleEvent(name: name,
-                                                         make: make,
-                                                         model: model,
-                                                         year: year,
-                                                         color: color,
-                                                         VIN: VIN,
-                                                         licenseplatenumber: licensePlateNumber,
-                            vehicle: selectedVehicle)
-                            event.id = selectedEvent.id
+                        if let selectedVehicle {
+                            var vehicle = Vehicle(
+                                name: name,
+                                make: make,
+                                model: model,
+                                year: year,
+                                color: color,
+                                vin: VIN,
+                                licensePlateNumber: licensePlateNumber)
+                            vehicle.id = selectedVehicle.id
                             Task {
-                                await viewModel.updateEvent(event)
+                                await viewModel.updateVehicle(vehicle)
                                 dismiss()
                             }
                         }
                     } label: {
                         Text("Update")
                     }
-                    .disabled(name.isEmpty)
+                    .disabled(!isVehicleValid)
                 }
             }
         }
     }
     
-    func setEditVehicleEventValues(event: EditVehicleEvent) {
-        self.name = event.name
-        self.make = event.make
-        self.model = event.model
-        self.year = event.year
-        self.color = event.color
-        self.VIN = event.VIN
-        self.licensePlateNumber = event.licenseplatenumber
-        self.selectedVehicle = event.vehicle
+    func setEditVehicleValues(_ vehicle: Vehicle) {
+        self.name = vehicle.name
+        self.make = vehicle.make
+        self.model = vehicle.model
+        self.year = vehicle.year ?? ""
+        self.color = vehicle.color ?? ""
+        self.VIN = vehicle.vin ?? ""
+        self.licensePlateNumber = vehicle.licensePlateNumber ?? ""
     }
 }
 
 #Preview {
-    EditVehicleView(selectedEvent:
-            .constant(EditVehicleEvent(name: "", make: "", model: "", year: "", color: "", VIN: "", licenseplatenumber: "")),
-                             viewModel:
-                                SettingsViewModel(authenticationViewModel: AuthenticationViewModel())
-    )
+    EditVehicleView(selectedVehicle: .constant(nil), viewModel: SettingsViewModel(authenticationViewModel: AuthenticationViewModel()))
 }

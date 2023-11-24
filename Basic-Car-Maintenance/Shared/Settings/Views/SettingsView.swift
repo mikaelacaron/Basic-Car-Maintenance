@@ -23,10 +23,8 @@ struct SettingsView: View {
     @State private var errorDetails: Error?
     @State private var copiedAppVersion: Bool = false
     
-    @State private var selectedVehicleEvent: EditVehicleEvent?
-    @State private var isEditingVehicle = false
-    @State var editViewModel: EditVehicleView?
-    @State private var vehicleToEdit: Vehicle?
+    @State private var selectedVehicle: Vehicle?
+    @State private var isShowingEditVehicleView = false
     
     private let appVersion = "Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))"
     
@@ -128,18 +126,17 @@ struct SettingsView: View {
                             } label: {
                                 Text("Delete", comment: "Label to delete a vehicle")
                             }
+                            
                             Button {
-                                isEditingVehicle = true
+                                selectedVehicle = vehicle
+                                isShowingEditVehicleView = true
                             } label: {
-                                VStack {
-                                    Text("Edit", comment: "Button label to edit this vehicle")
+                                Label {
+                                    Text("Edit")
+                                } icon: {
                                     Image(systemName: SFSymbol.pencil)
                                 }
                             }
-                        }
-                        .sheet(isPresented: $isEditingVehicle) {
-                                            EditVehicleView(
-                        selectedEvent: $selectedVehicleEvent, viewModel: viewModel)
                         }
                     }
                 
@@ -222,6 +219,9 @@ struct SettingsView: View {
                         Text("Failed To Add Vehicle. Unknown Error.")
                     }
                 }
+            }
+            .sheet(isPresented: $isShowingEditVehicleView) {
+                EditVehicleView(selectedVehicle: $selectedVehicle, viewModel: viewModel)
             }
             // swiftlint:disable:next line_length
             .alert(Text("Failed To Delete Vehicle", comment: "Label to dsplay title of the delete vehicle alert"),
