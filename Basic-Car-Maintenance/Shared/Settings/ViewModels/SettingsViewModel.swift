@@ -105,21 +105,21 @@ final class SettingsViewModel {
     /// - Parameter vehicle: The vehicle to be deleted.
     /// - Throws: An error if there's an issue deleting the vehicle from Firestore.
     func deleteVehicle(_ vehicle: Vehicle) async throws {
-        guard let documentId = vehicle.id else {
-            fatalError("Event \(vehicle.name) has no document ID.")
-        }
-        
-        do {
-            try await Firestore
-                .firestore()
-                .collection(FirestoreCollection.vehicles)
-                .document(documentId)
-                .delete()
-            
-            vehicles.removeAll { $0.id == vehicle.id }
-        } catch {
-            throw error
-        }
+//        guard let documentId = vehicle.id else {
+//            fatalError("Event \(vehicle.name) has no document ID.")
+//        }
+//        
+//        do {
+//            try await Firestore
+//                .firestore()
+//                .collection(FirestoreCollection.vehicles)
+//                .document(documentId)
+//                .delete()
+//            
+//            vehicles.removeAll { $0.id == vehicle.id }
+//        } catch {
+//            throw error
+//        }
         
         AnalyticsService.shared.logEvent(.vehicleDelete)
     }
