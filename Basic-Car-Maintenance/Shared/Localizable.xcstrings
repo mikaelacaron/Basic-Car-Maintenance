@@ -4280,7 +4280,6 @@
       }
     },
     "Update" : {
-      "comment" : "Label to update vehicle information.",
       "localizations" : {
         "be" : {
           "stringUnit" : {
