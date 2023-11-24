@@ -15,8 +15,8 @@ struct DashboardView: View {
     @State private var isShowingEditView = false
     @State private var selectedMaintenanceEvent: MaintenanceEvent?
     
-    init(authenticationViewModel: AuthenticationViewModel) {
-        viewModel = DashboardViewModel(authenticationViewModel: authenticationViewModel)
+    init(userUID: String?) {
+        viewModel = DashboardViewModel(userUID: userUID)
     }
     
     private var eventDateFormat: DateFormatter = {
@@ -199,6 +199,6 @@ struct DashboardView: View {
 }
 
 #Preview {
-    DashboardView(authenticationViewModel: AuthenticationViewModel())
+    DashboardView(userUID: "")
         .environment(ActionService.shared)
 }

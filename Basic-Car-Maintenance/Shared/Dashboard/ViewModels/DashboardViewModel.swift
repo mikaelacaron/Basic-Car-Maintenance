@@ -12,7 +12,7 @@ import Foundation
 @Observable
 class DashboardViewModel {
     
-    let authenticationViewModel: AuthenticationViewModel
+    let userUID: String?
     
     var events = [MaintenanceEvent]()
     var showAddErrorAlert = false
@@ -40,15 +40,15 @@ class DashboardViewModel {
         }
     }
     
-    init(authenticationViewModel: AuthenticationViewModel) {
-        self.authenticationViewModel = authenticationViewModel
+    init(userUID: String?) {
+        self.userUID = userUID
     }
     
     /// Adding a `MaintenanceEvent` in Firestore at:
     /// `vehicles/{vehicleDocumentID}/maintenance_events/{maintenceEventDocumentID}`
     /// - Parameter maintenanceEvent: The `MaintenanceEvent` to save
     func addEvent(_ maintenanceEvent: MaintenanceEvent) {
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = userUID {
             var eventToAdd = maintenanceEvent
             eventToAdd.userID = uid
             
@@ -73,7 +73,7 @@ class DashboardViewModel {
     func getMaintenanceEvents() async {
         isLoading = true
 
-        if let userUID = authenticationViewModel.user?.uid {
+        if let userUID = userUID {
             let db = Firestore.firestore()
             
             let docRef = db.collectionGroup(FirestoreCollection.maintenanceEvents)
@@ -98,7 +98,7 @@ class DashboardViewModel {
     
     func updateEvent(_ maintenanceEvent: MaintenanceEvent) async {
         
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = userUID {
             guard let id = maintenanceEvent.id else { return }
             var eventToUpdate = maintenanceEvent
             eventToUpdate.userID = uid
@@ -146,7 +146,7 @@ class DashboardViewModel {
     
     /// Fetches the user's vehicles from Firestore based on their unique user ID.
     func getVehicles() async {
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = userUID {
             let db = Firestore.firestore()
             let docRef = db.collection("vehicles").whereField("userID", isEqualTo: uid)
             

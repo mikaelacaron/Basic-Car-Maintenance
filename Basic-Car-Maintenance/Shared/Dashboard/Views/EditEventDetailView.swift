@@ -97,6 +97,6 @@ struct EditMaintenanceEventView: View {
                                        date: Date(),
                                        notes: "")),
                              viewModel:
-                                DashboardViewModel(authenticationViewModel: AuthenticationViewModel())
+                                DashboardViewModel(userUID: "")
     )
 }
