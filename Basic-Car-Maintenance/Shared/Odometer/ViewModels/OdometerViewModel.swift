@@ -19,6 +19,7 @@ class OdometerViewModel {
     var isShowingAddOdometerReading = false
     var errorMessage: String = ""
     
+    var showEditErrorAlert = false
     var selectedReading: OdometerReading?
     var isShowingEditReadingView = false
     
@@ -83,7 +84,24 @@ class OdometerViewModel {
     
     func updateOdometerReading(_ reading: OdometerReading) {
         
-        isShowingEditReadingView = false
+        if let userUID = userUID {
+            guard let id = reading.id else { return }
+            
+            var readingToUpdate = reading
+            readingToUpdate.userID = userUID
+            
+            do {
+                try Firestore.firestore()
+                    .collection(FirestorePath.odometerReadings(vehicleID: readingToUpdate.vehicleID).path)
+                    .document(id)
+                    .setData(from: readingToUpdate)
+                
+                isShowingEditReadingView = false
+            } catch {
+                errorMessage = error.localizedDescription
+                showEditErrorAlert = true
+            }
+        }
     }
     
     func getVehicles() async {

@@ -81,9 +81,13 @@ struct OdometerView: View {
             }
             .sheet(isPresented: $viewModel.isShowingEditReadingView) {
                 if let selectedReading = viewModel.selectedReading {
-                    EditOdometerReadingView(selectedReading: selectedReading,
-                                            vehicles: viewModel.vehicles) { updatedReading in
+                    EditOdometerReadingView(selectedReading: selectedReading, vehicles: viewModel.vehicles) { updatedReading in
                         viewModel.updateOdometerReading(updatedReading)
+                    }
+                    .alert("An Error Occurred", isPresented: $viewModel.showEditErrorAlert) {
+                        Button("OK", role: .cancel) { }
+                    } message: {
+                        Text(viewModel.errorMessage)
                     }
                 }
             }

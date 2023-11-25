@@ -14,7 +14,6 @@ struct EditOdometerReadingView: View {
     let updateTapped: (OdometerReading) -> Void
     
     @State private var date = Date()
-    @State private var selectedVehicleID: String?
     @State private var isMetric = false
     @State private var distance = 0
     
@@ -69,13 +68,12 @@ struct EditOdometerReadingView: View {
                 
                 ToolbarItem {
                     Button {
-                        if let selectedVehicleID {
-                            let reading = OdometerReading(date: date,
-                                                          distance: distance,
-                                                          isMetric: isMetric,
-                                                          vehicleID: selectedVehicleID)
-                            updateTapped(reading)
-                        }
+                        let reading = OdometerReading(id: selectedReading.id,
+                                                      date: date,
+                                                      distance: distance,
+                                                      isMetric: isMetric,
+                                                      vehicleID: selectedReading.vehicleID)
+                        updateTapped(reading)
                     } label: {
                         Text("Update",
                              comment: "Label for submit button on form to add an entry")
@@ -89,7 +87,6 @@ struct EditOdometerReadingView: View {
     
     func setEditReadingValues(_ reading: OdometerReading) {
         self.date = reading.date
-        self.selectedVehicleID = reading.vehicleID
         self.isMetric = reading.isMetric
         self.distance = reading.distance
     }
