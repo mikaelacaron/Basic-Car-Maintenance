@@ -18,6 +18,8 @@ struct EditOdometerReadingView: View {
     @State private var isMetric = false
     @State private var distance = 0
     
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         NavigationStack {
             Form {
@@ -37,19 +39,13 @@ struct EditOdometerReadingView: View {
                 }
                 
                 Section {
-                    Picker(selection: $selectedVehicleID) {
-                        ForEach(vehicles) { vehicle in
-                            Text(vehicle.name)
-                                .tag(vehicle.id)
-                        }
-                    } label: {
-                        Text("Select a vehicle",
-                             comment: "Picker for selecting a vehicle")
+                    if let vehicleName = vehicles
+                        .filter({ $0.id == selectedReading.vehicleID }).first?.name {
+                        Text(vehicleName)
+                            .opacity(0.3)
                     }
-                    .pickerStyle(.menu)
                 } header: {
-                    Text("VehicleSectionHeader",
-                         comment: "Label for Picker for selecting a vehicle")
+                    Text("Vehicle")
                 }
                 
                 DatePicker(selection: $date, displayedComponents: .date) {
@@ -60,9 +56,17 @@ struct EditOdometerReadingView: View {
             .onAppear {
                 setEditReadingValues(selectedReading)
             }
-            .navigationTitle(Text("Add Reading",
-                                  comment: "Title for form when adding an odometer reading"))
+            .navigationTitle(Text("Edit Reading",
+                                  comment: "Title for form when editing an odometer reading"))
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Text("Cancel")
+                    }
+                }
+                
                 ToolbarItem {
                     Button {
                         if let selectedVehicleID {
