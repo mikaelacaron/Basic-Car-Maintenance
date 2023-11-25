@@ -29,13 +29,13 @@ struct MainTabView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            DashboardView(authenticationViewModel: authenticationViewModel)
+            DashboardView(userUID: authenticationViewModel.user?.uid)
                 .tag(TabSelection.dashboard)
                 .tabItem {
                     Label("Dashboard", systemImage: SFSymbol.dashboard)
                 }
             
-            OdometerView(authenticationViewModel: authenticationViewModel)
+            OdometerView(userUID: authenticationViewModel.user?.uid)
                 .tag(TabSelection.odometer)
                 .tabItem {
                     Label("Odometer", systemImage: SFSymbol.gauge)

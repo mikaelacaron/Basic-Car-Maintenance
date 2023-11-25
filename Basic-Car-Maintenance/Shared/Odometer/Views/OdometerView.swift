@@ -12,8 +12,8 @@ struct OdometerView: View {
     
     @State private var viewModel: OdometerViewModel
 
-    init(authenticationViewModel: AuthenticationViewModel) {
-        viewModel = OdometerViewModel(authenticationViewModel: authenticationViewModel)
+    init(userUID: String?) {
+        viewModel = OdometerViewModel(userUID: userUID)
     }
 
     var body: some View {
@@ -24,7 +24,10 @@ struct OdometerView: View {
                         Text("\(reading.distance) \(reading.isMetric ? "km" : "mi")")
                             .font(.title3)
                         
-                        Text("For \(reading.vehicle.name)")
+                        let vehicleName = viewModel.vehicles.first { $0.id == reading.vehicleID }?.name
+                        if let vehicleName {
+                            Text("For \(vehicleName)")
+                        }
                         
                         Text("\(reading.date.formatted(date: .abbreviated, time: .omitted))")
                     }
@@ -35,6 +38,17 @@ struct OdometerView: View {
                             }
                         } label: {
                             Image(systemName: SFSymbol.trash)
+                        }
+                        
+                        Button {
+                            viewModel.selectedReading = reading
+                            viewModel.isShowingEditReadingView = true
+                        } label: {
+                            Label {
+                                Text("Edit")
+                            } icon: {
+                                Image(systemName: SFSymbol.pencil)
+                            }
                         }
                     }
                 }
@@ -53,6 +67,8 @@ struct OdometerView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
                     Button {
+                        // TODO: Show Paywall
+                        // if adding a 4th odometer reading, show paywall
                         viewModel.isShowingAddOdometerReading = true
                     } label: {
                         Image(systemName: SFSymbol.plus)
@@ -63,8 +79,21 @@ struct OdometerView: View {
                 await viewModel.getOdometerReadings()
                 await viewModel.getVehicles()
             }
+            .sheet(isPresented: $viewModel.isShowingEditReadingView) {
+                if let selectedReading = viewModel.selectedReading {
+                    EditOdometerReadingView(selectedReading: selectedReading, vehicles: viewModel.vehicles) { updatedReading in
+                        viewModel.updateOdometerReading(updatedReading)
+                    }
+                    .alert("An Error Occurred", isPresented: $viewModel.showEditErrorAlert) {
+                        Button("OK", role: .cancel) { }
+                    } message: {
+                        Text(viewModel.errorMessage)
+                    }
+                }
+            }
+
         }
-        .analyticsView()
+        .analyticsView("\(Self.self)")
     }
     
     private func makeAddOdometerView() -> some View {
@@ -89,6 +118,6 @@ struct OdometerView: View {
 }
 
 #Preview {
-    OdometerView(authenticationViewModel: AuthenticationViewModel())
+    OdometerView(userUID: "")
         .environment(ActionService.shared)
 }

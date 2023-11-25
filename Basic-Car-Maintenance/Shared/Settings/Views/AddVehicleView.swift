@@ -72,7 +72,7 @@ struct AddVehicleView: View {
                     Text("License Plate Number")
                 }
             }
-            .analyticsView()
+            .analyticsView("\(Self.self)")
             .toolbar {
                 ToolbarItem {
                     Button {

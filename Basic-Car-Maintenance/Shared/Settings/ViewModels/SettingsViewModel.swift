@@ -12,11 +12,12 @@ import Foundation
 @Observable
 final class SettingsViewModel {
     let authenticationViewModel: AuthenticationViewModel
-    let privacyURL = URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance-Privacy")
 
     var contributors: [Contributor]?
     
     var vehicles = [Vehicle]()
+    var errorMessage: String = ""
+    var showErrorAlert = false
     
     var sortedContributors: [Contributor] {
         guard let contributors = contributors, !contributors.isEmpty else {
@@ -39,20 +40,10 @@ final class SettingsViewModel {
         self.authenticationViewModel = authenticationViewModel
     }
     
-    let urls: [String: URL] = [
-        "mikaelacaronProfile": URL(string: "https://github.com/mikaelacaron")!,
-        "Basic-Car-MaintenanceRepo": URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance")!,
-        "bugReport": URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues")!
-    ]
-    
     // swiftlint:disable:next line_length
     /// Fetches the list of contributors for the GitHub repository [Basic-Car-Maintenance](https://github.com/mikaelacaron/Basic-Car-Maintenance).
     func getContributors() async {
-        guard let url =
-                URL(string: "https://api.github.com/repos/mikaelacaron/Basic-Car-Maintenance/contributors")
-        else {
-            return
-        }
+        let url = GitHubURL.apiContributors
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
@@ -88,6 +79,29 @@ final class SettingsViewModel {
         }
     }
     
+    func updateVehicle(_ vehicle: Vehicle) async {
+        
+        if let userUID = authenticationViewModel.user?.uid {
+            guard let vehicleID = vehicle.id else { return }
+            var vehicleToUpdate = vehicle
+            vehicleToUpdate.userID = userUID
+            
+            do {
+                try Firestore.firestore()
+                    .collection(FirestoreCollection.vehicles)
+                    .document(vehicleID)
+                    .setData(from: vehicleToUpdate)
+                
+                AnalyticsService.shared.logEvent(.vehicleUpdate)
+                
+                await getVehicles()
+            } catch {
+                errorMessage = error.localizedDescription
+                showErrorAlert = true
+            }
+        }
+    }
+    
     /// Fetches the user's vehicles from Firestore based on their unique user ID.
     func getVehicles() async {
         if let uid = authenticationViewModel.user?.uid {
@@ -110,27 +124,27 @@ final class SettingsViewModel {
             }
         }
     }
-    
+        
     /// Deletes a vehicle from both Firestore and the local ``SettingsViewModel/vehicles`` array.
     ///
     /// - Parameter vehicle: The vehicle to be deleted.
     /// - Throws: An error if there's an issue deleting the vehicle from Firestore.
     func deleteVehicle(_ vehicle: Vehicle) async throws {
-        guard let documentId = vehicle.id else {
-            fatalError("Event \(vehicle.name) has no document ID.")
-        }
-        
-        do {
-            try await Firestore
-                .firestore()
-                .collection(FirestoreCollection.vehicles)
-                .document(documentId)
-                .delete()
-            
-            vehicles.removeAll { $0.id == vehicle.id }
-        } catch {
-            throw error
-        }
+//        guard let documentId = vehicle.id else {
+//            fatalError("Event \(vehicle.name) has no document ID.")
+//        }
+//        
+//        do {
+//            try await Firestore
+//                .firestore()
+//                .collection(FirestoreCollection.vehicles)
+//                .document(documentId)
+//                .delete()
+//            
+//            vehicles.removeAll { $0.id == vehicle.id }
+//        } catch {
+//            throw error
+//        }
         
         AnalyticsService.shared.logEvent(.vehicleDelete)
     }

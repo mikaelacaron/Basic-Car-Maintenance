@@ -15,8 +15,8 @@ struct DashboardView: View {
     @State private var isShowingEditView = false
     @State private var selectedMaintenanceEvent: MaintenanceEvent?
     
-    init(authenticationViewModel: AuthenticationViewModel) {
-        viewModel = DashboardViewModel(authenticationViewModel: authenticationViewModel)
+    init(userUID: String?) {
+        viewModel = DashboardViewModel(userUID: userUID)
     }
     
     private var eventDateFormat: DateFormatter = {
@@ -33,8 +33,11 @@ struct DashboardView: View {
                         Text(event.title)
                             .font(.title3)
                         
-                        Text("\(event.vehicle.name) on \(event.date, formatter: self.eventDateFormat)",
-                             comment: "Maintenance list item for a vehicle on a date")
+                        let vehicleName = viewModel.vehicles.first { $0.id == event.vehicleID }?.name
+                        if let vehicleName {
+                            Text("\(vehicleName) on \(event.date, formatter: self.eventDateFormat)",
+                                 comment: "Maintenance list item for a vehicle on a date")
+                        }
                         
                         if !event.notes.isEmpty {
                             Text(event.notes)
@@ -69,7 +72,7 @@ struct DashboardView: View {
                 }
                 .listStyle(.inset)
             }
-            .analyticsView()
+            .analyticsView("\(Self.self)")
             .searchable(text: $viewModel.searchText)
             .overlay {
                 if viewModel.isLoading {
@@ -125,6 +128,8 @@ struct DashboardView: View {
                     }
                     
                     Button {
+                        // TODO: Show Paywall
+                        // Can only add 3 events, adding the 4th triggers the paywall
                         viewModel.isShowingAddMaintenanceEvent = true
                     } label: {
                         Image(systemName: SFSymbol.plus)
@@ -148,6 +153,8 @@ struct DashboardView: View {
         }
         .onChange(of: scenePhase) { _, newScenePhase in
             guard case .active = newScenePhase else { return }
+            
+            // TODO: Show Paywall
             
             guard let action = actionService.action,
                   action == .newMaintenance
@@ -192,6 +199,6 @@ struct DashboardView: View {
 }
 
 #Preview {
-    DashboardView(authenticationViewModel: AuthenticationViewModel())
+    DashboardView(userUID: "")
         .environment(ActionService.shared)
 }
