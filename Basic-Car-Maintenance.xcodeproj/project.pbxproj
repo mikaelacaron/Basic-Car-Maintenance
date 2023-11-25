@@ -34,6 +34,7 @@
 		FF4E82BE2AD39863004949AF /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */; };
 		FF4E82C02AD39863004949AF /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BF2AD39863004949AF /* FirebaseRemoteConfigSwift */; };
 		FF4E82C22AD39863004949AF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82C12AD39863004949AF /* FirebaseStorage */; };
+		FF50DDFB2B12944900E87362 /* EditOdometerReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50DDFA2B12944900E87362 /* EditOdometerReadingView.swift */; };
 		FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */; };
 		FF5D13AB2A86C2D800BC9BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */; };
 		FF5D13AF2A86C2D800BC9BD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5D13AE2A86C2D800BC9BD6 /* Preview Assets.xcassets */; };
@@ -132,6 +133,7 @@
 		FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		FF218EF52B00865F0025A533 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		FF3DDF512AA4D28F009D91C4 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		FF50DDFA2B12944900E87362 /* EditOdometerReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOdometerReadingView.swift; sourceTree = "<group>"; };
 		FF5D13A32A86C2D600BC9BD6 /* Basic-Car-Maintenance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic-Car-Maintenance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceApp.swift; sourceTree = "<group>"; };
 		FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			children = (
 				FFE0AF552AD66C3500AB46F8 /* OdometerView.swift */,
 				57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */,
+				FF50DDFA2B12944900E87362 /* EditOdometerReadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -723,6 +726,7 @@
 				E58499682ACDDA9A00634660 /* ContributorsProfileView.swift in Sources */,
 				FF755B492A909A0000F49A13 /* AddMaintenanceView.swift in Sources */,
 				FF09FC912AB6FF44006BE61A /* AuthenticationView.swift in Sources */,
+				FF50DDFB2B12944900E87362 /* EditOdometerReadingView.swift in Sources */,
 				023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */,
 				637505482AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift in Sources */,
 				8A3D74862AD6D9A10000FEEB /* AlertView.swift in Sources */,
