@@ -39,6 +39,17 @@ struct OdometerView: View {
                         } label: {
                             Image(systemName: SFSymbol.trash)
                         }
+                        
+                        Button {
+                            viewModel.selectedReading = reading
+                            viewModel.isShowingEditReadingView = true
+                        } label: {
+                            Label {
+                                Text("Edit")
+                            } icon: {
+                                Image(systemName: SFSymbol.pencil)
+                            }
+                        }
                     }
                 }
                 .listStyle(.inset)
@@ -68,6 +79,15 @@ struct OdometerView: View {
                 await viewModel.getOdometerReadings()
                 await viewModel.getVehicles()
             }
+            .sheet(isPresented: $viewModel.isShowingEditReadingView) {
+                if let selectedReading = viewModel.selectedReading {
+                    EditOdometerReadingView(selectedReading: selectedReading,
+                                            vehicles: viewModel.vehicles) { updatedReading in
+                        viewModel.updateOdometerReading(updatedReading)
+                    }
+                }
+            }
+
         }
         .analyticsView("\(Self.self)")
     }

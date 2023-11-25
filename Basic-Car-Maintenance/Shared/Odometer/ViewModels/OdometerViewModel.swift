@@ -18,6 +18,10 @@ class OdometerViewModel {
     var showAddErrorAlert = false
     var isShowingAddOdometerReading = false
     var errorMessage: String = ""
+    
+    var selectedReading: OdometerReading?
+    var isShowingEditReadingView = false
+    
     var vehicles = [Vehicle]()
 
     init(userUID: String?) {
@@ -75,6 +79,11 @@ class OdometerViewModel {
                 self.readings = readings
             }
         }
+    }
+    
+    func updateOdometerReading(_ reading: OdometerReading) {
+        
+        isShowingEditReadingView = false
     }
     
     func getVehicles() async {
