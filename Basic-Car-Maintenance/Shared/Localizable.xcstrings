@@ -4283,7 +4283,7 @@
       }
     },
     "Update" : {
-      "comment" : "Label for submit button on form to add an entry",
+      "comment" : "Label for submit button on form to update an existing entry",
       "localizations" : {
         "be" : {
           "stringUnit" : {

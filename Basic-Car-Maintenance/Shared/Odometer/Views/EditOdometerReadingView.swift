@@ -76,7 +76,7 @@ struct EditOdometerReadingView: View {
                         updateTapped(reading)
                     } label: {
                         Text("Update",
-                             comment: "Label for submit button on form to add an entry")
+                             comment: "Label for submit button on form to update an existing entry")
                     }
                     .disabled(distance < 0)
                 }
