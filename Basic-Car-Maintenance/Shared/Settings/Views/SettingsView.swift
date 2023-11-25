@@ -23,6 +23,9 @@ struct SettingsView: View {
     @State private var errorDetails: Error?
     @State private var copiedAppVersion: Bool = false
     
+    @State private var selectedVehicle: Vehicle?
+    @State private var isShowingEditVehicleView = false
+    
     private let appVersion = "Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))"
     
     init(authenticationViewModel: AuthenticationViewModel) {
@@ -37,7 +40,7 @@ struct SettingsView: View {
                     // swiftlint:disable:next line_length
                     Text("Thanks for using this app! It's open source and anyone can contribute to it.", comment: "Thanks a user for using the app and tells the user they can contribute to the codebase")
                     
-                    Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance")!) {
+                    Link(destination: GitHubURL.repo) {
                         Label {
                             Text("GitHub Repo", comment: "Link to the Basic Car Maintenance GitHub repo.")
                         } icon: {
@@ -48,12 +51,11 @@ struct SettingsView: View {
                     }
                     .popoverTip(ContributionTip(), arrowEdge: .bottom)
                     
-                    Link(destination: URL(string: "https://github.com/mikaelacaron")!) {
+                    Link(destination: GitHubURL.mikaelaCaronProfile) {
                         Text("🦄 Mikaela Caron - Maintainer", comment: "Link to maintainer Github account.")
                     }
                     
-                    // swiftlint:disable:next line_length
-                    Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=feature+request&projects=&template=feature-request.md&title=FEATURE+-")!) {
+                    Link(destination: GitHubURL.featureRequest) {
                         Label {
                             Text("Request a New Feature", comment: "Link to request a new feature.")
                         } icon: {
@@ -62,8 +64,8 @@ struct SettingsView: View {
                                 .frame(width: iconDimension, height: iconDimension)
                         }
                     }
-                    // swiftlint:disable:next line_length
-                    Link(destination: URL(string: "https://github.com/mikaelacaron/Basic-Car-Maintenance/issues/new?assignees=&labels=bug&projects=&template=bug-report.md&title=BUG+-")!) {
+                    
+                    Link(destination: GitHubURL.bugReport) {
                         Label {
                             Text("Report a Bug", comment: "Link to report a bug")
                         } icon: {
@@ -93,7 +95,7 @@ struct SettingsView: View {
                             Text(vehicle.make)
                             
                             Text(vehicle.model)
-
+                            
                             if let year = vehicle.year, !year.isEmpty {
                                 Text(year)
                             }
@@ -124,9 +126,20 @@ struct SettingsView: View {
                             } label: {
                                 Text("Delete", comment: "Label to delete a vehicle")
                             }
+                            
+                            Button {
+                                selectedVehicle = vehicle
+                                isShowingEditVehicleView = true
+                            } label: {
+                                Label {
+                                    Text("Edit")
+                                } icon: {
+                                    Image(systemName: SFSymbol.pencil)
+                                }
+                            }
                         }
                     }
-                    
+                
                     Button {
                         // TODO: Show Paywall
                         // Show paywall if adding more than 1 vehicle, or show the `isShowingAddVehicle` view
@@ -156,9 +169,7 @@ struct SettingsView: View {
                     }
                 }
                 
-                if let privacyURL = viewModel.privacyURL, !privacyURL.absoluteString.isEmpty {
-                    Link("Privacy Policy", destination: privacyURL)
-                }
+                Link("Privacy Policy", destination: GitHubURL.privacy)
                 
                 Text(LocalizedStringKey(appVersion),
                      comment: "Label to display version and build number.")
@@ -208,6 +219,9 @@ struct SettingsView: View {
                         Text("Failed To Add Vehicle. Unknown Error.")
                     }
                 }
+            }
+            .sheet(isPresented: $isShowingEditVehicleView) {
+                EditVehicleView(selectedVehicle: $selectedVehicle, viewModel: viewModel)
             }
             // swiftlint:disable:next line_length
             .alert(Text("Failed To Delete Vehicle", comment: "Label to dsplay title of the delete vehicle alert"),

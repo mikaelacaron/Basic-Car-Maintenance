@@ -68,12 +68,11 @@ struct AddOdometerReadingView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        let selectedVehicle = vehicles.first { $0.id == selectedVehicleID }
-                        if let selectedVehicle {
+                        if let selectedVehicleID {
                             let reading = OdometerReading(date: date,
                                                           distance: distance,
                                                           isMetric: isMetric,
-                                                          vehicle: selectedVehicle)
+                                                          vehicleID: selectedVehicleID)
                             addTapped(reading)
                         }
                     } label: {

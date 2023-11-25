@@ -12,7 +12,7 @@ import Foundation
 @Observable
 class DashboardViewModel {
     
-    let authenticationViewModel: AuthenticationViewModel
+    let userUID: String?
     
     var events = [MaintenanceEvent]()
     var showAddErrorAlert = false
@@ -40,22 +40,26 @@ class DashboardViewModel {
         }
     }
     
-    init(authenticationViewModel: AuthenticationViewModel) {
-        self.authenticationViewModel = authenticationViewModel
+    init(userUID: String?) {
+        self.userUID = userUID
     }
     
+    /// Adding a `MaintenanceEvent` in Firestore at:
+    /// `vehicles/{vehicleDocumentID}/maintenance_events/{maintenceEventDocumentID}`
+    /// - Parameter maintenanceEvent: The `MaintenanceEvent` to save
     func addEvent(_ maintenanceEvent: MaintenanceEvent) {
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = userUID {
             var eventToAdd = maintenanceEvent
             eventToAdd.userID = uid
             
             do {
                 try Firestore
                     .firestore()
-                    .collection(FirestoreCollection.maintenanceEvents)
+                    .collection(FirestorePath.maintenanceEvents(vehicleID: eventToAdd.vehicleID).path)
                     .addDocument(from: eventToAdd)
                 
                 events.append(maintenanceEvent)
+                AnalyticsService.shared.logEvent(.maintenanceCreate)
                 
                 errorMessage = ""
                 isShowingAddMaintenanceEvent = false
@@ -63,18 +67,17 @@ class DashboardViewModel {
                 showAddErrorAlert.toggle()
                 errorMessage = error.localizedDescription
             }
-            
-            AnalyticsService.shared.logEvent(.maintenanceCreate)
         }
     }
     
     func getMaintenanceEvents() async {
         isLoading = true
 
-        if let uid = authenticationViewModel.user?.uid {
+        if let userUID = userUID {
             let db = Firestore.firestore()
-            let docRef = db.collection(FirestoreCollection.maintenanceEvents)
-                .whereField(FirestoreField.userID, isEqualTo: uid)
+            
+            let docRef = db.collectionGroup(FirestoreCollection.maintenanceEvents)
+                .whereField(FirestoreField.userID, isEqualTo: userUID)
             
             let querySnapshot = try? await docRef.getDocuments()
             
@@ -86,6 +89,7 @@ class DashboardViewModel {
                         events.append(event)
                     }
                 }
+                
                 self.isLoading = false
                 self.events = events
             }
@@ -94,14 +98,15 @@ class DashboardViewModel {
     
     func updateEvent(_ maintenanceEvent: MaintenanceEvent) async {
         
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = userUID {
             guard let id = maintenanceEvent.id else { return }
             var eventToUpdate = maintenanceEvent
             eventToUpdate.userID = uid
+            
             do {
                 try Firestore
                     .firestore()
-                    .collection(FirestoreCollection.maintenanceEvents)
+                    .collection(FirestorePath.maintenanceEvents(vehicleID: eventToUpdate.vehicleID).path)
                     .document(id)
                     .setData(from: eventToUpdate)
             } catch {
@@ -123,7 +128,7 @@ class DashboardViewModel {
         do {
             try await Firestore
                 .firestore()
-                .collection(FirestoreCollection.maintenanceEvents)
+                .collection(FirestorePath.maintenanceEvents(vehicleID: event.vehicleID).path)
                 .document(documentId)
                 .delete()
             errorMessage = ""
@@ -141,7 +146,7 @@ class DashboardViewModel {
     
     /// Fetches the user's vehicles from Firestore based on their unique user ID.
     func getVehicles() async {
-        if let uid = authenticationViewModel.user?.uid {
+        if let uid = userUID {
             let db = Firestore.firestore()
             let docRef = db.collection("vehicles").whereField("userID", isEqualTo: uid)
             

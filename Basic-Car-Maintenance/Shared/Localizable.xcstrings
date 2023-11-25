@@ -4408,6 +4408,9 @@
         }
       }
     },
+    "Update Vehicle Info" : {
+
+    },
     "Vehicle" : {
       "comment" : "Maintenance event vehicle picker header",
       "localizations" : {

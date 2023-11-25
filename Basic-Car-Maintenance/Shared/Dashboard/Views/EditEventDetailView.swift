@@ -12,7 +12,6 @@ struct EditMaintenanceEventView: View {
     var viewModel: DashboardViewModel
     @State private var title = ""
     @State private var date = Date()
-    @State private var selectedVehicle: Vehicle?
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
     
@@ -26,18 +25,13 @@ struct EditMaintenanceEventView: View {
                 }
                 
                 Section {
-                    Picker(selection: $selectedVehicle) {
-                        ForEach(viewModel.vehicles) { vehicle in
-                            Text(vehicle.name).tag(vehicle as Vehicle)
-                        }
-                    } label: {
-                        Text("Select a vehicle",
-                             comment: "Picker for selecting a vehicle")
+                    if let vehicleName = viewModel.vehicles
+                        .filter({ $0.id == selectedEvent?.vehicleID }).first?.name {
+                        Text(vehicleName)
+                            .opacity(0.3)
                     }
-                    .pickerStyle(.menu)
                 } header: {
-                    Text("Vehicle",
-                         comment: "Maintenance event vehicle picker header")
+                    Text("Vehicle")
                 }
                 
                 DatePicker(selection: $date, displayedComponents: .date) {
@@ -67,11 +61,11 @@ struct EditMaintenanceEventView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        if let selectedVehicle, let selectedEvent {
-                            var event = MaintenanceEvent(title: title,
+                        if let selectedEvent {
+                            var event = MaintenanceEvent(vehicleID: selectedEvent.vehicleID,
+                                                         title: title,
                                                          date: date,
-                                                         notes: notes,
-                                                         vehicle: selectedVehicle)
+                                                         notes: notes)
                             event.id = selectedEvent.id
                             Task {
                                 await viewModel.updateEvent(event)
@@ -91,15 +85,18 @@ struct EditMaintenanceEventView: View {
         self.title = event.title
         self.date = event.date
         self.notes = event.notes
-        self.selectedVehicle = event.vehicle
     }
 }
 
 #Preview {
     EditMaintenanceEventView(selectedEvent:
-            .constant(MaintenanceEvent(title: "", date: Date(), notes: "",
-                                       vehicle: Vehicle(name: "", make: "", model: ""))),
+            .constant(MaintenanceEvent(id: "",
+                                       userID: "",
+                                       vehicleID: "",
+                                       title: "",
+                                       date: Date(),
+                                       notes: "")),
                              viewModel:
-                                DashboardViewModel(authenticationViewModel: AuthenticationViewModel())
+                                DashboardViewModel(userUID: "")
     )
 }
