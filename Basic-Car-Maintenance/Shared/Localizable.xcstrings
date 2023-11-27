@@ -1588,6 +1588,9 @@
         }
       }
     },
+    "Edit Reading" : {
+      "comment" : "Title for form when editing an odometer reading"
+    },
     "Failed To Add Vehicle" : {
       "localizations" : {
         "be" : {
@@ -4280,6 +4283,7 @@
       }
     },
     "Update" : {
+      "comment" : "Label for submit button on form to update an existing entry",
       "localizations" : {
         "be" : {
           "stringUnit" : {
