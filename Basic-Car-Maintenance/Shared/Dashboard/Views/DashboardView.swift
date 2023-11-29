@@ -16,7 +16,7 @@ struct DashboardView: View {
     @State private var selectedMaintenanceEvent: MaintenanceEvent?
     
     init(userUID: String?) {
-        self._viewModel = State(initialValue: DashboardViewModel(userUID: userUID))
+        _viewModel = State(initialValue: DashboardViewModel(userUID: userUID))
     }
     
     private var eventDateFormat: DateFormatter = {
