@@ -1,5 +1,6 @@
 # App Design
 
+This app should follow the [Human Interface Guidelines](https://developer.apple.com/go/?id=higs) by Apple.
 
 ## App Icon
 The app icon contains a Car, Tools, and Gear
