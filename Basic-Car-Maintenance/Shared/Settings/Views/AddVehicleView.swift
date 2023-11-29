@@ -18,6 +18,7 @@ struct AddVehicleView: View {
     @State private var color = ""
     @State private var VIN = ""
     @State private var licensePlateNumber = ""
+
     private var isVehicleValid: Bool {
         !name.isEmpty && !make.isEmpty && !model.isEmpty
     }
@@ -44,14 +45,14 @@ struct AddVehicleView: View {
                 }
 
                 Section {
-                    TextField("Vehicle Year", text: $year, prompt: Text("Vehicle Year"))
-                        .keyboardType(.numberPad)
+                   DatePickerView()
                 } header: {
                     Text("Year")
                 }
 
                 Section {
-                    TextField("Vehicle Color", text: $color, prompt: Text("Vehicle Color"))
+                    ColorPickerView()
+                        
                 } header: {
                     Text("Color")
                 }
