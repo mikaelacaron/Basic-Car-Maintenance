@@ -19,6 +19,7 @@ struct SettingsView: View {
     @State private var viewModel: SettingsViewModel
     @State private var isShowingAddVehicle = false
     @State private var showDeleteVehicleError = false
+    @State private var showDeleteVehicleAlert = false
     @State private var showAddVehicleError = false
     @State private var errorDetails: Error?
     @State private var copiedAppVersion: Bool = false
@@ -117,7 +118,11 @@ struct SettingsView: View {
                             Button(role: .destructive) {
                                 Task {
                                     do {
-                                        try await viewModel.deleteVehicle(vehicle)
+                                        if viewModel.vehicles.count > 1 {
+                                            try await viewModel.deleteVehicle(vehicle)
+                                        } else {
+                                            showDeleteVehicleAlert = true
+                                        }
                                     } catch {
                                         errorDetails = error
                                         showDeleteVehicleError = true
@@ -239,6 +244,13 @@ struct SettingsView: View {
                     Text("Failed To Delete Vehicle. Unknown Error.",
                          comment: "Label to display error details.")
                 }
+            }
+            .alert("Can't Delete Last Vehicle", isPresented: $showDeleteVehicleAlert) {
+                Button("OK", role: .cancel) {
+                    showDeleteVehicleAlert = false
+                }
+            } message: {
+                Text("The last vehicle can't be deleted", comment: "Alert message preventing users from deleting their last vehicle")
             }
             .navigationTitle(Text("Settings", comment: "Label to display settings."))
             .task {
