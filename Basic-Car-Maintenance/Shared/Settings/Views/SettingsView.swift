@@ -250,7 +250,7 @@ struct SettingsView: View {
                     showDeleteVehicleAlert = false
                 }
             } message: {
-                Text("The last vehicle can't be deleted", comment: "Alert message preventing users from deleting their last vehicle")
+                Text("The last vehicle can't be deleted. Please add a new vehicle before removing this one.", comment: "Alert message preventing users from deleting their last vehicle")
             }
             .navigationTitle(Text("Settings", comment: "Label to display settings."))
             .task {
