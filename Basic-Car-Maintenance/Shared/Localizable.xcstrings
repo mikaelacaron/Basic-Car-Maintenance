@@ -3950,22 +3950,8 @@
         }
       }
     },
-    "The last vehicle can't be deleted" : {
-      "comment" : "Alert message preventing users from deleting their last vehicle",
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Последний автомобиль удалить невозможно."
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Son araç silinemez"
-          }
-        }
-      }
+    "The last vehicle can't be deleted. Please add a new vehicle before removing this one." : {
+      "comment" : "Alert message preventing users from deleting their last vehicle"
     },
     "The title of the event" : {
       "comment" : "Maintenance event title text field label placeholder",
