@@ -731,6 +731,22 @@
         }
       }
     },
+    "Can't Delete Last Vehicle" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Невозможно удалить последний автомобиль"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son Araç Silinemiyor"
+          }
+        }
+      }
+    },
     "Cancel" : {
       "localizations" : {
         "be" : {
@@ -3934,6 +3950,9 @@
         }
       }
     },
+    "The last vehicle can't be deleted. Please add a new vehicle before removing this one." : {
+      "comment" : "Alert message preventing users from deleting their last vehicle"
+    },
     "The title of the event" : {
       "comment" : "Maintenance event title text field label placeholder",
       "localizations" : {
@@ -4413,7 +4432,14 @@
       }
     },
     "Update Vehicle Info" : {
-
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Bilgilerini Güncelle"
+          }
+        }
+      }
     },
     "Vehicle" : {
       "comment" : "Maintenance event vehicle picker header",
