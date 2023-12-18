@@ -8,10 +8,38 @@
 import SwiftUI
 import SwiftData
 
-enum TabSelection: Int {
+enum TabSelection: Int, Identifiable, CaseIterable {
+    var id: Self { self }
+    
     case dashboard = 0
     case odometer = 1
     case settings = 2
+}
+
+extension TabSelection {
+    // you can make TabSelection :String
+    // insteaf of :Int too and remove label
+    var label: String {
+        switch self {
+        case .dashboard:
+            return "Dashboard"
+        case .odometer:
+            return "Odometer"
+        case .settings:
+            return "Settings"
+        }
+    }
+    
+    var image: String {
+        switch self {
+        case .dashboard:
+            return SFSymbol.dashboard
+        case .odometer:
+            return SFSymbol.gauge
+        case .settings:
+            return SFSymbol.gear
+        }
+    }
 }
 
 @MainActor
@@ -24,28 +52,23 @@ struct MainTabView: View {
     
     @AppStorage("lastTabOpen") var selectedTab = TabSelection.dashboard
     
+    @State private var selectedTabId: TabSelection.ID? = .dashboard
+    @State private var columnVisibility = NavigationSplitViewVisibility.automatic
+    
     @State var authenticationViewModel = AuthenticationViewModel()
     @State var viewModel = MainTabViewModel()
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            DashboardView(userUID: authenticationViewModel.user?.uid)
-                .tag(TabSelection.dashboard)
-                .tabItem {
-                    Label("Dashboard", systemImage: SFSymbol.dashboard)
-                }
-            
-            OdometerView(userUID: authenticationViewModel.user?.uid)
-                .tag(TabSelection.odometer)
-                .tabItem {
-                    Label("Odometer", systemImage: SFSymbol.gauge)
-                }
-            
-            SettingsView(authenticationViewModel: authenticationViewModel)
-                .tag(TabSelection.settings)
-                .tabItem {
-                    Label("Settings", systemImage: SFSymbol.gear)
-                }
+        Group {
+#if os(iOS)
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                navigationSplitView()
+            } else {
+                tabView()
+            }
+#else
+            navigationSplitView()
+#endif
         }
         .sheet(item: $viewModel.alert) { alert in
             AlertView(alert: alert)
@@ -80,6 +103,65 @@ struct MainTabView: View {
     private func saveNewAlert(_ id: String) {
         let acknowledgedAlert = AcknowledgedAlert(id: id)
         context.insert(acknowledgedAlert)
+    }
+}
+
+extension MainTabView {
+    private func tabItem(for selection: TabSelection) -> some View {
+        Label(selection.label, systemImage: selection.image)
+    }
+    
+    /// Save screen content for specific selection
+    /// - Parameter selection: tab selection enum value
+    @ViewBuilder
+    private func selectionContent(for selection: TabSelection) -> some View {
+        switch selection {
+        case .dashboard:
+            DashboardView(userUID: authenticationViewModel.user?.uid)
+        case .odometer:
+            OdometerView(userUID: authenticationViewModel.user?.uid)
+        case .settings:
+            SettingsView(authenticationViewModel: authenticationViewModel)
+        }
+    }
+    
+    /// Returns last column of NavigationSplitView - detail content
+    @ViewBuilder
+    private func splitViewDetailContent() -> some View {
+        if let tabSelection = selectedTabId {
+            selectionContent(for: tabSelection)
+                .tag(tabSelection)
+        } else {
+            Text("Unexpected error occured.")
+        }
+    }
+    
+    /// Returns NavigationSplitView navigation
+    /// primarily used on iPad and Mac devices
+    @ViewBuilder
+    private func navigationSplitView() -> some View {
+        NavigationSplitView(columnVisibility: $columnVisibility) {
+            List(TabSelection.allCases, selection: $selectedTabId) { tabSelection in
+                Label(tabSelection.label, systemImage: tabSelection.image)
+            }
+            .navigationTitle("Sidebar")
+        } detail: {
+            splitViewDetailContent()
+        }
+    }
+    
+    /// Returns TabView navigation
+    /// primarily used on iPhone devices
+    @ViewBuilder func tabView() -> some View {
+        TabView(selection: $selectedTab) {
+            ForEach(TabSelection.allCases) { tabSelection in
+                selectionContent(for: tabSelection)
+                    .tag(tabSelection)
+                    .tabItem {
+                        tabItem(for: tabSelection)
+                    }
+            }
+        }
     }
 }
 

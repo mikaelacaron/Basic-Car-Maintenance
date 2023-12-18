@@ -3686,6 +3686,16 @@
         }
       }
     },
+    "Sidebar" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Боковая панель"
+          }
+        }
+      }
+    },
     "Sign Out" : {
       "localizations" : {
         "be" : {
@@ -4297,6 +4307,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Назва обслуговування"
+          }
+        }
+      }
+    },
+    "Unexpected error occured." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Произошла ошибка."
           }
         }
       }
