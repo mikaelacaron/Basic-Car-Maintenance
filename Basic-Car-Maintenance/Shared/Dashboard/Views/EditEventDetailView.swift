@@ -20,8 +20,10 @@ struct EditMaintenanceEventView: View {
             Form {
                 Section {
                     TextField("Title", text: $title)
+                        .accessibilityLabel(title)
                 } header: {
                     Text("Title")
+                        .accessibilityLabel("Title")
                 }
                 
                 Section {
@@ -29,19 +31,24 @@ struct EditMaintenanceEventView: View {
                         .filter({ $0.id == selectedEvent?.vehicleID }).first?.name {
                         Text(vehicleName)
                             .opacity(0.3)
+                            .accessibilityLabel(vehicleName)
                     }
                 } header: {
                     Text("Vehicle")
+                        .accessibilityLabel("Vehicle")
                 }
                 
                 DatePicker(selection: $date, displayedComponents: .date) {
                     Text("Date")
+                        .accessibilityLabel("Date")
                 }
                 
                 Section {
                     TextField("Notes", text: $notes, prompt: Text("Additional Notes"), axis: .vertical)
+                        .accessibilityLabel(notes)
                 } header: {
                     Text("Notes")
+                        .accessibilityLabel("Notes")
                 }
             }
             .analyticsView("\(Self.self)")
@@ -49,13 +56,17 @@ struct EditMaintenanceEventView: View {
                 guard let selectedEvent = selectedEvent else { return }
                 setMaintenanceEventValues(event: selectedEvent)
             }
-            .navigationTitle(Text("Update Maintenance"))
+            .navigationTitle(
+                Text("Update Maintenance")
+                    .accessibilityLabel("Update Maintenance")
+            )
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
                         dismiss()
                     } label: {
                         Text("Cancel")
+                            .accessibilityLabel("Cancel")
                     }
                 }
                 
@@ -74,6 +85,7 @@ struct EditMaintenanceEventView: View {
                         }
                     } label: {
                         Text("Update")
+                            .accessibilityLabel("Update")
                     }
                     .disabled(title.isEmpty)
                 }
