@@ -22,7 +22,7 @@ struct DashboardView: View {
     private var noSearchResultsDescription: Text {
         Text("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.",
              comment: "Text shown when there are no results for maintenance search")
-        .accessibilityLabel("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.")
+        .accessibilityLabel("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.") // swiftlint:disable:this line_length
     }
 
     private var eventDateFormat: DateFormatter = {
@@ -38,19 +38,15 @@ struct DashboardView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(event.title)
                             .font(.title3)
-                        
                         let vehicleName = viewModel.vehicles.first { $0.id == event.vehicleID }?.name
                         if let vehicleName {
                             Text("\(vehicleName) on \(event.date, formatter: self.eventDateFormat)",
                                  comment: "Maintenance list item for a vehicle on a date")
-                            .accessibilityLabel("\(vehicleName) on \(event.date, formatter: self.eventDateFormat)")
                         }
-                        
                         if !event.notes.isEmpty {
                             Text(event.notes)
                                 .lineLimit(0)
                                 .foregroundStyle(.secondary)
-                                .accessibilityLabel(event.notes)
                         }
                     }
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
@@ -59,25 +55,29 @@ struct DashboardView: View {
                                 await viewModel.deleteEvent(event)
                             }
                         } label: {
-                            Image(systemName: SFSymbol.trash)
+                            VStack {
+                                Text("Delete")
+                                Image(systemName: SFSymbol.trash)
+                            }
                         }
-                        
+
                         Button {
                             selectedMaintenanceEvent = event
                             isShowingEditView = true
                         } label: {
                             VStack {
-                                Text("Edit",
-                                     comment: "Button label to edit this maintenance")
-                                .accessibilityLabel("Edit")
+                                Text("Edit", comment: "Button label to edit this maintenance")
                                 Image(systemName: SFSymbol.pencil)
                             }
                         }
                     }
                     .sheet(isPresented: $isShowingEditView) {
                         EditMaintenanceEventView(
-                            selectedEvent: $selectedMaintenanceEvent, viewModel: viewModel)
+                            selectedEvent: $selectedMaintenanceEvent, 
+                            viewModel: viewModel
+                        )
                     }
+                    .accessibilityElement(children: .combine)
                 }
                 .listStyle(.inset)
             }
@@ -104,7 +104,7 @@ struct DashboardView: View {
                     .accessibilityLabel("Dashboard")
             )
             .alert(
-                Text("Failed To Delete Event", comment: "Title for alert shown when deleting maintenance event fails")
+                Text("Failed To Delete Event", comment: "Title for alert shown when deleting maintenance event fails") // swiftlint:disable:this line_length
                     .accessibilityLabel("Failed to delete event."),
                 isPresented: $viewModel.showErrorAlert
             ) {
@@ -114,6 +114,7 @@ struct DashboardView: View {
                     Text("OK", comment: "Label to dismiss alert")
                         .accessibilityLabel("OK")
                 }
+                .accessibilityInputLabels(["Dismiss alert"])
             } message: {
                 Text(viewModel.errorMessage)
                     .padding()
@@ -127,7 +128,6 @@ struct DashboardView: View {
                     Menu {
                         Picker(selection: $viewModel.sortOption) {
                             ForEach(DashboardViewModel.SortOption.allCases) { option in
-                                // TODO: Unable to add voice-over feature here
                                 Text(option.label)
                                     .tag(option)
                             }
@@ -145,7 +145,8 @@ struct DashboardView: View {
                             Image(systemName: SFSymbol.filter)
                         }
                     }
-                    
+                    .accessibilityInputLabels(["Show filter"])
+
                     Button {
                         // TODO: Show Paywall
                         // Can only add 3 events, adding the 4th triggers the paywall
@@ -161,6 +162,7 @@ struct DashboardView: View {
                             Image(systemName: SFSymbol.plus)
                         }
                     }
+                    .accessibilityInputLabels(["Add event"])
                 }
             }
             .task {
@@ -210,6 +212,7 @@ struct DashboardView: View {
                 Text("OK", comment: "Label to dismiss alert")
                     .accessibilityLabel("OK")
             }
+            .accessibilityInputLabels(["Dismiss"])
         } message: {
             Text(viewModel.errorMessage)
                 .accessibilityLabel(viewModel.errorMessage)

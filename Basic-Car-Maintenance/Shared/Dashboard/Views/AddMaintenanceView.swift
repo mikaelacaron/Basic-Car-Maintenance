@@ -108,6 +108,7 @@ struct AddMaintenanceView: View {
                         .accessibilityLabel("Add.")
                     }
                     .disabled(title.isEmpty)
+                    .accessibilityInputLabels(["Add event"])
                 }
             }
         }
