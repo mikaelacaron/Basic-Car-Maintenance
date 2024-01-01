@@ -24,12 +24,6 @@ struct DashboardView: View {
              comment: "Text shown when there are no results for maintenance search")
         .accessibilityLabel("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.") // swiftlint:disable:this line_length
     }
-
-    private var eventDateFormat: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        return formatter
-    }()
     
     var body: some View {
         NavigationStack {
@@ -40,7 +34,7 @@ struct DashboardView: View {
                             .font(.title3)
                         let vehicleName = viewModel.vehicles.first { $0.id == event.vehicleID }?.name
                         if let vehicleName {
-                            Text("\(vehicleName) on \(event.date, formatter: self.eventDateFormat)",
+                            Text("\(vehicleName) on \(event.date.toString())",
                                  comment: "Maintenance list item for a vehicle on a date")
                         }
                         if !event.notes.isEmpty {

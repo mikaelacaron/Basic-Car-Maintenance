@@ -253,6 +253,15 @@
         }
       }
     },
+    "Add a vehicle." : {
+
+    },
+    "Add an event." : {
+
+    },
+    "Add event" : {
+
+    },
     "Add Maintenance" : {
       "comment" : "Nagivation title for Add Maintenance view",
       "localizations" : {
@@ -329,6 +338,9 @@
           }
         }
       }
+    },
+    "Add maintenance." : {
+
     },
     "Add Reading" : {
       "comment" : "Title for form when adding an odometer reading",
@@ -525,6 +537,9 @@
         }
       }
     },
+    "Add your first maintenance." : {
+
+    },
     "Add your first odometer" : {
       "comment" : "Placeholder text for empty odometer reading list",
       "localizations" : {
@@ -565,6 +580,9 @@
           }
         }
       }
+    },
+    "Add." : {
+
     },
     "AddEvent" : {
       "comment" : "Label for adding maintenance event on Dashboard view",
@@ -654,6 +672,9 @@
         }
       }
     },
+    "Additional Notes." : {
+
+    },
     "An Error Occurred" : {
       "comment" : "Title for alert shown when adding maintenance event fails",
       "localizations" : {
@@ -730,6 +751,12 @@
           }
         }
       }
+    },
+    "An error occurred." : {
+
+    },
+    "App version is %@" : {
+
     },
     "Can't Delete Last Vehicle" : {
       "localizations" : {
@@ -874,6 +901,12 @@
           }
         }
       }
+    },
+    "Change app icon menu." : {
+
+    },
+    "Change date" : {
+
     },
     "Choose App Icon" : {
       "localizations" : {
@@ -1358,6 +1391,12 @@
         }
       }
     },
+    "Date: %@" : {
+
+    },
+    "Date." : {
+
+    },
     "Delete" : {
       "comment" : "Label to delete a vehicle",
       "localizations" : {
@@ -1492,6 +1531,9 @@
           }
         }
       }
+    },
+    "Dismiss alert" : {
+
     },
     "Distance" : {
       "localizations" : {
@@ -1901,6 +1943,9 @@
         }
       }
     },
+    "Failed to delete event." : {
+
+    },
     "Failed To Delete Vehicle" : {
       "comment" : "Label to dsplay title of the delete vehicle alert",
       "localizations" : {
@@ -2173,6 +2218,9 @@
         }
       }
     },
+    "Filter." : {
+
+    },
     "For %@" : {
       "comment" : "Maintenance list item description 'For which vehicle'",
       "localizations" : {
@@ -2441,6 +2489,27 @@
           }
         }
       }
+    },
+    "Link to contributors list." : {
+
+    },
+    "Link to maintainer Github account." : {
+
+    },
+    "Link to privacy policy." : {
+
+    },
+    "Link to report a bug." : {
+
+    },
+    "Link to request a new feature." : {
+
+    },
+    "Link to the Basic Car Maintenance GitHub repo." : {
+
+    },
+    "Link to view profile." : {
+
     },
     "Loading..." : {
       "localizations" : {
@@ -3019,6 +3088,9 @@
           }
         }
       }
+    },
+    "Notes." : {
+
     },
     "Odometer" : {
       "localizations" : {
@@ -3609,6 +3681,9 @@
         }
       }
     },
+    "Select a vehicle." : {
+
+    },
     "Settings" : {
       "comment" : "Label to display settings.",
       "localizations" : {
@@ -3685,6 +3760,9 @@
           }
         }
       }
+    },
+    "Show filter" : {
+
     },
     "Sign Out" : {
       "localizations" : {
@@ -4030,8 +4108,11 @@
         }
       }
     },
+    "The title of the event." : {
+
+    },
     "There were no maintenance events for '%@'. Try a new search." : {
-      "comment" : "Text shwon when there are no results for maintenance search",
+      "comment" : "Text shown when there are no results for maintenance search",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -4300,6 +4381,12 @@
           }
         }
       }
+    },
+    "Title of the maintenance event." : {
+
+    },
+    "Title: %@" : {
+
     },
     "Update" : {
       "comment" : "Label for submit button on form to update an existing entry",
@@ -4959,6 +5046,12 @@
           }
         }
       }
+    },
+    "Vehicle: %@" : {
+
+    },
+    "Vehicle." : {
+
     },
     "Vehicles" : {
       "comment" : "Label to display header title.",

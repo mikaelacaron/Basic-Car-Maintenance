@@ -51,10 +51,12 @@ struct SettingsView: View {
                         }
                     }
                     .popoverTip(ContributionTip(), arrowEdge: .bottom)
+                    .accessibilityLabel("Link to the Basic Car Maintenance GitHub repo.")
                     
                     Link(destination: GitHubURL.mikaelaCaronProfile) {
                         Text("🦄 Mikaela Caron - Maintainer", comment: "Link to maintainer Github account.")
                     }
+                    .accessibilityLabel("Link to maintainer Github account.")
                     
                     Link(destination: GitHubURL.featureRequest) {
                         Label {
@@ -65,6 +67,7 @@ struct SettingsView: View {
                                 .frame(width: iconDimension, height: iconDimension)
                         }
                     }
+                    .accessibilityLabel("Link to request a new feature.")
                     
                     Link(destination: GitHubURL.bugReport) {
                         Label {
@@ -75,6 +78,7 @@ struct SettingsView: View {
                                 .frame(width: iconDimension, height: iconDimension)
                         }
                     }
+                    .accessibilityLabel("Link to report a bug.")
                     
                     NavigationLink {
                         ContributorsListView(viewModel: viewModel)
@@ -85,6 +89,7 @@ struct SettingsView: View {
                         }
                     }
                     .foregroundStyle(.blue)
+                    .accessibilityLabel("Link to contributors list.")
                 }
                 
                 Section {
@@ -92,6 +97,7 @@ struct SettingsView: View {
                         VStack(alignment: .leading) {
                             Text(vehicle.name)
                                 .font(.headline)
+                                .accessibilityLabel(vehicle.name)
                             
                             Text(vehicle.make)
                             
@@ -151,6 +157,7 @@ struct SettingsView: View {
                         isShowingAddVehicle = true
                     } label: {
                         Text("Add Vehicle", comment: "Label to add a vehicle.")
+                            .accessibilityLabel("Add a vehicle.")
                     }
                 } header: {
                     Text("Vehicles", comment: "Label to display header title.")
@@ -165,6 +172,7 @@ struct SettingsView: View {
                         } icon: {
                             Image(systemName: SFSymbol.person)
                         }
+                        .accessibilityLabel("Link to view profile.")
                     }
                     
                     NavigationLink {
@@ -172,9 +180,11 @@ struct SettingsView: View {
                     } label: {
                         Label("Change App Icon", systemImage: SFSymbol.iPhoneWithApps)
                     }
+                    .accessibilityLabel("Change app icon menu.")
                 }
                 
                 Link("Privacy Policy", destination: GitHubURL.privacy)
+                    .accessibilityLabel("Link to privacy policy.")
                 
                 Text(LocalizedStringKey(appVersion),
                      comment: "Label to display version and build number.")
@@ -198,6 +208,7 @@ struct SettingsView: View {
                             .opacity(copiedAppVersion ? 1 : 0)
                             .animation(.linear(duration: 0.2), value: copiedAppVersion)
                     }
+                    .accessibilityLabel("App version is \(appVersion)")
             }
             .analyticsView("\(Self.self)")
             .navigationDestination(isPresented: $isShowingAddVehicle) {
@@ -250,6 +261,7 @@ struct SettingsView: View {
                     showDeleteVehicleAlert = false
                 }
             } message: {
+                // swiftlint:disable:next line_length
                 Text("The last vehicle can't be deleted. Please add a new vehicle before removing this one.", comment: "Alert message preventing users from deleting their last vehicle")
             }
             .navigationTitle(Text("Settings", comment: "Label to display settings."))

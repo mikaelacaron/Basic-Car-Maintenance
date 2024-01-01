@@ -14,41 +14,46 @@ struct EditMaintenanceEventView: View {
     @State private var date = Date()
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
-    
+
+    private var vehicleName: String {
+        viewModel.vehicles
+            .filter { $0.id == selectedEvent?.vehicleID }
+            .first?
+            .name ?? ""
+    }
+
     var body: some View {
         NavigationStack {
             Form {
                 Section {
                     TextField("Title", text: $title)
-                        .accessibilityLabel(title)
                 } header: {
                     Text("Title")
-                        .accessibilityLabel("Title")
                 }
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("Title: \(title)")
                 
                 Section {
-                    if let vehicleName = viewModel.vehicles
-                        .filter({ $0.id == selectedEvent?.vehicleID }).first?.name {
+                    if !vehicleName.isEmpty {
                         Text(vehicleName)
                             .opacity(0.3)
-                            .accessibilityLabel(vehicleName)
                     }
                 } header: {
                     Text("Vehicle")
-                        .accessibilityLabel("Vehicle")
                 }
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("Vehicle: \(vehicleName)")
                 
                 DatePicker(selection: $date, displayedComponents: .date) {
                     Text("Date")
-                        .accessibilityLabel("Date")
+                        .accessibilityLabel("Date: \(date.toString())")
                 }
+                .accessibilityInputLabels(["Change date"])
                 
                 Section {
                     TextField("Notes", text: $notes, prompt: Text("Additional Notes"), axis: .vertical)
-                        .accessibilityLabel(notes)
                 } header: {
                     Text("Notes")
-                        .accessibilityLabel("Notes")
                 }
             }
             .analyticsView("\(Self.self)")
