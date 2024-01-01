@@ -27,11 +27,12 @@ struct EditMaintenanceEventView: View {
             Form {
                 Section {
                     TextField("Title", text: $title)
+                        .accessibilityInputLabels(["Edit title"])
                 } header: {
                     Text("Title")
                 }
                 .accessibilityElement(children: .combine)
-                .accessibilityLabel("Title: \(title)")
+                .accessibilityValue("\(title)")
                 
                 Section {
                     if !vehicleName.isEmpty {
@@ -42,7 +43,7 @@ struct EditMaintenanceEventView: View {
                     Text("Vehicle")
                 }
                 .accessibilityElement(children: .combine)
-                .accessibilityLabel("Vehicle: \(vehicleName)")
+                .accessibilityValue("\(vehicleName)")
                 
                 DatePicker(selection: $date, displayedComponents: .date) {
                     Text("Date")
@@ -51,10 +52,15 @@ struct EditMaintenanceEventView: View {
                 .accessibilityInputLabels(["Change date"])
                 
                 Section {
+                    // FIXME: not igniting first responder when saying "Notes"
+                    // unlike the Title section
                     TextField("Notes", text: $notes, prompt: Text("Additional Notes"), axis: .vertical)
+                        .accessibilityInputLabels(["Edit notes"])
                 } header: {
                     Text("Notes")
                 }
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("Notes: \(notes)")
             }
             .analyticsView("\(Self.self)")
             .onAppear {

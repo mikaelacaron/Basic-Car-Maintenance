@@ -1819,6 +1819,9 @@
         }
       }
     },
+    "Edit title" : {
+
+    },
     "Failed To Add Vehicle" : {
       "localizations" : {
         "be" : {
@@ -3391,6 +3394,9 @@
         }
       }
     },
+    "Notes: %@" : {
+
+    },
     "Notes." : {
 
     },
@@ -4809,9 +4815,6 @@
     "Title of the maintenance event." : {
 
     },
-    "Title: %@" : {
-
-    },
     "Update" : {
       "comment" : "Label for submit button on form to update an existing entry",
       "localizations" : {
@@ -5536,9 +5539,6 @@
           }
         }
       }
-    },
-    "Vehicle: %@" : {
-
     },
     "Vehicle." : {
 
