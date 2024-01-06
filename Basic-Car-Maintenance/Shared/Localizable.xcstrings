@@ -46,6 +46,12 @@
             "value" : "%@"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -74,6 +80,12 @@
             "state" : "new",
             "value" : "%1$@ on %2$@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ z datą %2$@"
+          }
         }
       }
     },
@@ -88,6 +100,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : "%1$lld %2$@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "%1$lld %2$@"
           }
         },
@@ -148,6 +166,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "🦄 Mikaela Caron - Maintainer"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 Mikaela Caron - Opiekun"
           }
         },
         "pt-BR" : {
@@ -227,6 +251,12 @@
             "value" : "Toevogen"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodaj"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -304,6 +334,12 @@
             "value" : "Onderhoud toevogen"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodaj serwis"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -349,6 +385,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Meterstand toevogen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodaj przebieg"
           }
         },
         "pt-BR" : {
@@ -420,6 +462,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voertuig toevogen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodaj pojazd"
           }
         },
         "pt-BR" : {
@@ -499,6 +547,12 @@
             "value" : "Voeg uw eerste onderhoud toe"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodaj swój pierwszy serwis"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -546,6 +600,12 @@
             "value" : "Voeg uw eerste kilometertellerstand toe"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodaj swój pierwszy przebieg"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -573,6 +633,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodaj"
           }
         }
       }
@@ -626,6 +692,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aanvullende opmerkingen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodatkowe notatki"
           }
         },
         "pt-BR" : {
@@ -705,6 +777,12 @@
             "value" : "Er is een fout opgetreden"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wystąpił błąd"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -727,6 +805,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сталася помилка"
+          }
+        }
+      }
+    },
+    "Can't Delete Last Vehicle" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie można usunąć ostatniego pojazdu"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Невозможно удалить последний автомобиль"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son Araç Silinemiyor"
           }
         }
       }
@@ -773,6 +873,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annuleren"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anuluj"
           }
         },
         "pt-BR" : {
@@ -833,6 +939,12 @@
             "value" : "App-pictogram wijzigen"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zmień ikonę aplikacji"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -891,6 +1003,12 @@
             "value" : "Kies App-pictogram"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wybierz ikonę aplikacji"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -947,6 +1065,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kleur"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kolor"
           }
         },
         "pt-BR" : {
@@ -1026,6 +1150,12 @@
             "value" : "Bijdragers"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Współautorzy"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1083,6 +1213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gekopieerd!"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skopiowane!"
           }
         },
         "pt-BR" : {
@@ -1162,6 +1298,12 @@
             "value" : "Aangepast"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niestandardowy"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1237,6 +1379,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dashboard"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pulpit nawigacyjny"
           }
         },
         "pt-BR" : {
@@ -1316,6 +1464,12 @@
             "value" : "Datum"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1393,6 +1547,12 @@
             "value" : "Verwijderen"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usuń"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1451,6 +1611,12 @@
             "value" : "Sluiten"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odrzuć"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1495,6 +1661,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Afstand"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dystans"
           }
         },
         "pt-BR" : {
@@ -1562,6 +1734,12 @@
             "value" : "Bewerken"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edytuj"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1589,7 +1767,15 @@
       }
     },
     "Edit Reading" : {
-      "comment" : "Title for form when editing an odometer reading"
+      "comment" : "Title for form when editing an odometer reading",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edytuj przebieg"
+          }
+        }
+      }
     },
     "Failed To Add Vehicle" : {
       "localizations" : {
@@ -1633,6 +1819,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Niet gelukt om voertuig toe te voegen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie udało się dodać pojazdu"
           }
         },
         "pt-BR" : {
@@ -1703,6 +1895,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Niet gelukt om voertuiggegevens toe te voegen:%@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie udało się dodać pojazdu\nSzczegóły:%@"
           }
         },
         "pt-BR" : {
@@ -1782,6 +1980,12 @@
             "value" : "Niet gelukt om voertuig toe te voegen. Onbekende fout."
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie udało się dodać pojazdu. Nieznany błąd."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1857,6 +2061,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Niet gelukt om evenement te verwijderen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie udało się usunąć zdarzenia"
           }
         },
         "pt-BR" : {
@@ -1936,6 +2146,12 @@
             "value" : "Niet gelukt om voertuig te verwijderen"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie udało się usunąć pojazdu"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2013,6 +2229,12 @@
             "value" : "Niet gelukt om voertuiggegevens te verwijderen:%@"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie udało się usunąć pojazdu\nSzczegóły:%@"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2084,6 +2306,12 @@
             "value" : "Niet gelukt om voertuig te verwijderen. Onbekende fout."
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie udało się usunąć pojazdu. Nieznany błąd."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2137,6 +2365,12 @@
             "value" : "Filteren"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtr"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2188,6 +2422,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voor %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dla %@"
           }
         },
         "pt-BR" : {
@@ -2270,6 +2510,12 @@
             "value" : "GitHub Repo"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repozytorium GitHub"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2317,6 +2563,12 @@
             "value" : "Het is open source en iedereen kan eraan bijdragen."
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jest to oprogramowanie open source i każdy może wnieść do niego swój wkład."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2349,6 +2601,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kilometers"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kilometry"
           }
         },
         "pt-BR" : {
@@ -2403,6 +2661,12 @@
             "value" : "Kentekennummer"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numer tablicy rejestracyjnej"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2441,6 +2705,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Laden..."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ładowanie..."
           }
         },
         "tr" : {
@@ -2499,6 +2769,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Anoniem ingelogd met ID: %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zalogowano się anonimowo przy użyciu ID: %@"
           }
         },
         "pt-BR" : {
@@ -2577,6 +2853,12 @@
             "value" : "Merk"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marka"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2621,6 +2903,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mijlen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mile"
           }
         },
         "pt-BR" : {
@@ -2688,6 +2976,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Model"
@@ -2769,6 +3063,12 @@
             "value" : "Naam"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nazwa"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2846,6 +3146,12 @@
             "value" : "Nieuwste naar oudste"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Od najnowszego do najstarszego"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2902,6 +3208,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geen resultaten"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brak wyników"
           }
         },
         "pt-BR" : {
@@ -2981,6 +3293,12 @@
             "value" : "Notities"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notatki"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3037,6 +3355,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kilometerteller"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Licznik przebiegu"
           }
         },
         "pt-BR" : {
@@ -3111,6 +3435,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
@@ -3193,6 +3523,12 @@
             "value" : "Oudste naar nieuwste"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Od najstarszego do najnowszego"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3240,6 +3576,12 @@
             "value" : "Voorkeurseenheden"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jednostki preferowane"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3284,6 +3626,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Privacybeleid"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Polityka prywatności"
           }
         },
         "pt-BR" : {
@@ -3355,6 +3703,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profiel"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil"
           }
         },
         "pt-BR" : {
@@ -3434,6 +3788,12 @@
             "value" : "Een bug melden"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zgłoś błąd"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3511,6 +3871,12 @@
             "value" : "Een nieuwe functie aanvragen"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wniosek o nową funkcję"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3568,6 +3934,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Selecteer een voertuig"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wybierz pojazd"
           }
         },
         "pt-BR" : {
@@ -3647,6 +4019,12 @@
             "value" : "Instellingen"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ustawienia"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3721,6 +4099,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Afmelden"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wyloguj się"
           }
         },
         "pt-BR" : {
@@ -3799,6 +4183,12 @@
             "value" : "Aangemeld als %@"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zalogowany jako %@"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3844,6 +4234,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bedankt voor het gebruik van deze app!"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dziękujemy za korzystanie z tej aplikacji!"
           }
         },
         "pt-BR" : {
@@ -3911,6 +4307,12 @@
             "value" : "Bedankt voor het gebruik van deze app! Het is open source en iedereen kan eraan bijdragen."
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dziękujemy za korzystanie z tej aplikacji! Jest ona open source i każdy może ją współtworzyć."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3933,6 +4335,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дякуємо за використання цього додатку! Він має відкритий вихідний код і будь-хто може долучитися у його розвиток."
+          }
+        }
+      }
+    },
+    "The last vehicle can't be deleted. Please add a new vehicle before removing this one." : {
+      "comment" : "Alert message preventing users from deleting their last vehicle",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ostatni pojazd nie może zostać usunięty. Dodaj nowy pojazd przed usunięciem tego."
           }
         }
       }
@@ -3986,6 +4399,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De titel van het evenement"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tytuł zdarzenia"
           }
         },
         "pt-BR" : {
@@ -4047,6 +4466,12 @@
             "value" : "Er waren geen onderhoudsevenementen voor '%@'. Probeer een nieuwe zoekopdracht."
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie było żadnych zdarzeń serwisowych dla \"%@\". Spróbuj nowego wyszukiwania."
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4103,6 +4528,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dit app-pictogram zal verschijnen op je startscherm."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikona aplikacji pojawi się na ekranie głównym."
           }
         },
         "pt-BR" : {
@@ -4182,6 +4613,12 @@
             "value" : "Titel"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tytuł"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4259,6 +4696,12 @@
             "value" : "Titel van het onderhoudsevenement"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nazwa zdarzenia serwisowego"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4330,6 +4773,12 @@
             "value" : "Bijwerken"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uaktualnij"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4389,6 +4838,12 @@
             "value" : "Onderhoud bijwerken"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uaktualnij serwis"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4416,7 +4871,20 @@
       }
     },
     "Update Vehicle Info" : {
-
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uaktualnij informacje o pojeździe"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Araç Bilgilerini Güncelle"
+          }
+        }
+      }
     },
     "Vehicle" : {
       "comment" : "Maintenance event vehicle picker header",
@@ -4449,6 +4917,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voertuig"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pojazd"
           }
         },
         "pt-BR" : {
@@ -4509,6 +4983,12 @@
             "value" : "Voertuigkleur"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kolor pojazdu"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4565,6 +5045,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kentekennummer"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numer rejestracyjny pojazdu"
           }
         },
         "pt-BR" : {
@@ -4643,6 +5129,12 @@
             "value" : "Voertuigmerk"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marka pojazdu"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4717,6 +5209,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voertuigmodel"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model pojazdu"
           }
         },
         "pt-BR" : {
@@ -4795,6 +5293,12 @@
             "value" : "Voertuignaam"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nazwa pojazdu"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4853,6 +5357,12 @@
             "value" : "Voertuigidentificatienummer"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VIN pojazdu"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4909,6 +5419,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voertuigjaar"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rok pojazdu"
           }
         },
         "pt-BR" : {
@@ -4988,6 +5504,12 @@
             "value" : "Voertuig"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pojazdy"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5039,6 +5561,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voertuigen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pojazd"
           }
         },
         "pt-BR" : {
@@ -5112,6 +5640,12 @@
             "value" : "버전 %@ (%@)"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5159,6 +5693,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VIN"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "VIN"
@@ -5223,6 +5763,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jaar"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rok"
           }
         },
         "pt-BR" : {

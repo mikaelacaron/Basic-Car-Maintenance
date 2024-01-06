@@ -96,6 +96,8 @@ class OdometerViewModel {
                     .document(id)
                     .setData(from: readingToUpdate)
                 
+                AnalyticsService.shared.logEvent(.odometerUpdate)
+                
                 isShowingEditReadingView = false
             } catch {
                 errorMessage = error.localizedDescription

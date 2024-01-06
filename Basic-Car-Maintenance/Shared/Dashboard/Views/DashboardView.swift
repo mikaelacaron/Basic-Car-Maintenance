@@ -11,12 +11,12 @@ struct DashboardView: View {
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @State private var isShowingAddView = false
-    @Bindable private var viewModel: DashboardViewModel
+    @State private var viewModel: DashboardViewModel
     @State private var isShowingEditView = false
     @State private var selectedMaintenanceEvent: MaintenanceEvent?
     
     init(userUID: String?) {
-        viewModel = DashboardViewModel(userUID: userUID)
+        _viewModel = State(initialValue: DashboardViewModel(userUID: userUID))
     }
     
     private var eventDateFormat: DateFormatter = {
