@@ -731,6 +731,9 @@
         }
       }
     },
+    "Basic Car" : {
+
+    },
     "Can't Delete Last Vehicle" : {
       "localizations" : {
         "ru" : {
@@ -3687,6 +3690,7 @@
       }
     },
     "Sidebar" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
@@ -4312,6 +4316,7 @@
       }
     },
     "Unexpected error occured." : {
+      "extractionState" : "stale",
       "localizations" : {
         "ru" : {
           "stringUnit" : {

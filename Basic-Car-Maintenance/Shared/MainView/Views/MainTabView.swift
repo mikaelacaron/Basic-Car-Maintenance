@@ -17,9 +17,7 @@ enum TabSelection: Int, Identifiable, CaseIterable {
 }
 
 extension TabSelection {
-    // you can make TabSelection :String
-    // insteaf of :Int too and remove label
-    var label: String {
+    var label: LocalizedStringKey {
         switch self {
         case .dashboard:
             return "Dashboard"
@@ -60,15 +58,15 @@ struct MainTabView: View {
     
     var body: some View {
         Group {
-#if os(iOS)
+            #if os(iOS)
             if UIDevice.current.userInterfaceIdiom == .pad {
                 navigationSplitView()
             } else {
                 tabView()
             }
-#else
+            #else
             navigationSplitView()
-#endif
+            #endif
         }
         .sheet(item: $viewModel.alert) { alert in
             AlertView(alert: alert)
@@ -104,12 +102,6 @@ struct MainTabView: View {
         let acknowledgedAlert = AcknowledgedAlert(id: id)
         context.insert(acknowledgedAlert)
     }
-}
-
-extension MainTabView {
-    private func tabItem(for selection: TabSelection) -> some View {
-        Label(selection.label, systemImage: selection.image)
-    }
     
     /// Save screen content for specific selection
     /// - Parameter selection: tab selection enum value
@@ -124,41 +116,33 @@ extension MainTabView {
             SettingsView(authenticationViewModel: authenticationViewModel)
         }
     }
-    
-    /// Returns last column of NavigationSplitView - detail content
-    @ViewBuilder
-    private func splitViewDetailContent() -> some View {
-        if let tabSelection = selectedTabId {
-            selectionContent(for: tabSelection)
-                .tag(tabSelection)
-        } else {
-            Text("Unexpected error occured.")
-        }
-    }
-    
-    /// Returns NavigationSplitView navigation
-    /// primarily used on iPad and Mac devices
+        
+    /// Primarily used on iPad and Mac devices
+    /// - Returns: `NavigationSplitView` navigation
     @ViewBuilder
     private func navigationSplitView() -> some View {
         NavigationSplitView(columnVisibility: $columnVisibility) {
             List(TabSelection.allCases, selection: $selectedTabId) { tabSelection in
                 Label(tabSelection.label, systemImage: tabSelection.image)
             }
-            .navigationTitle("Sidebar")
+            .navigationTitle("Basic Car")
         } detail: {
-            splitViewDetailContent()
+            if let tabSelection = selectedTabId {
+                selectionContent(for: tabSelection)
+                    .tag(tabSelection)
+            }
         }
     }
     
-    /// Returns TabView navigation
-    /// primarily used on iPhone devices
+    /// Primarily used on iPhone devices
+    /// - Returns: `TabView` navigation
     @ViewBuilder func tabView() -> some View {
         TabView(selection: $selectedTab) {
             ForEach(TabSelection.allCases) { tabSelection in
                 selectionContent(for: tabSelection)
                     .tag(tabSelection)
                     .tabItem {
-                        tabItem(for: tabSelection)
+                        Label(tabSelection.label, systemImage: tabSelection.image)
                     }
             }
         }
