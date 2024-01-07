@@ -56,6 +56,10 @@ struct MainTabView: View {
     @State var authenticationViewModel = AuthenticationViewModel()
     @State var viewModel = MainTabViewModel()
     
+    init() {
+        _selectedTabId = State(initialValue: selectedTab)
+    }
+    
     var body: some View {
         Group {
             #if os(iOS)
@@ -93,6 +97,9 @@ struct MainTabView: View {
         .onChange(of: viewModel.alert) { _, newValue in
             guard let id = newValue?.id else { return }
             saveNewAlert(id)
+        }
+        .onChange(of: selectedTabId ?? TabSelection.dashboard) { _, newValue in
+            selectedTab = newValue
         }
     }
     
