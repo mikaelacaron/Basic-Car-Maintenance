@@ -41,6 +41,7 @@ struct DashboardView: View {
                             Text(event.notes)
                                 .lineLimit(0)
                                 .foregroundStyle(.secondary)
+                                .accessibilityLabel("Notes: \(event.notes)")
                         }
                     }
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {

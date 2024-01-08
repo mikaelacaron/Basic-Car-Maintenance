@@ -28,7 +28,7 @@ struct AddMaintenanceView: View {
                             "The title of the event",
                             comment: "Maintenance event title text field label placeholder"
                         )
-                        .accessibilityLabel("The title of the event.")
+                        .accessibilityLabel("Event title.")
                     ) {
                         Text("Title of the maintenance event",
                              comment: "Maintenance event title text field label")

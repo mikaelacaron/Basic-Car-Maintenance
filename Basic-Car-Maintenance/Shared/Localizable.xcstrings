@@ -1808,6 +1808,9 @@
         }
       }
     },
+    "Edit notes" : {
+
+    },
     "Edit Reading" : {
       "comment" : "Title for form when editing an odometer reading",
       "localizations" : {
@@ -1820,6 +1823,9 @@
       }
     },
     "Edit title" : {
+
+    },
+    "Event title." : {
 
     },
     "Failed To Add Vehicle" : {
@@ -4513,9 +4519,6 @@
           }
         }
       }
-    },
-    "The title of the event." : {
-
     },
     "There were no maintenance events for '%@'. Try a new search." : {
       "comment" : "Text shown when there are no results for maintenance search",
