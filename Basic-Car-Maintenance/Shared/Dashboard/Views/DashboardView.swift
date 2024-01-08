@@ -18,12 +18,12 @@ struct DashboardView: View {
     init(userUID: String?) {
         _viewModel = State(initialValue: DashboardViewModel(userUID: userUID))
     }
-    
-    private var eventDateFormat: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        return formatter
-    }()
+
+    private var noSearchResultsDescription: Text {
+        Text("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.",
+             comment: "Text shown when there are no results for maintenance search")
+        .accessibilityLabel("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.") // swiftlint:disable:this line_length
+    }
     
     var body: some View {
         NavigationStack {
@@ -32,17 +32,16 @@ struct DashboardView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(event.title)
                             .font(.title3)
-                        
                         let vehicleName = viewModel.vehicles.first { $0.id == event.vehicleID }?.name
                         if let vehicleName {
-                            Text("\(vehicleName) on \(event.date, formatter: self.eventDateFormat)",
+                            Text("\(vehicleName) on \(event.date.toString())",
                                  comment: "Maintenance list item for a vehicle on a date")
                         }
-                        
                         if !event.notes.isEmpty {
                             Text(event.notes)
                                 .lineLimit(0)
                                 .foregroundStyle(.secondary)
+                                .accessibilityLabel("Notes: \(event.notes)")
                         }
                     }
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
@@ -51,24 +50,29 @@ struct DashboardView: View {
                                 await viewModel.deleteEvent(event)
                             }
                         } label: {
-                            Image(systemName: SFSymbol.trash)
+                            VStack {
+                                Text("Delete")
+                                Image(systemName: SFSymbol.trash)
+                            }
                         }
-                        
+
                         Button {
                             selectedMaintenanceEvent = event
                             isShowingEditView = true
                         } label: {
                             VStack {
-                                Text("Edit",
-                                     comment: "Button label to edit this maintenance")
+                                Text("Edit", comment: "Button label to edit this maintenance")
                                 Image(systemName: SFSymbol.pencil)
                             }
                         }
                     }
                     .sheet(isPresented: $isShowingEditView) {
                         EditMaintenanceEventView(
-                            selectedEvent: $selectedMaintenanceEvent, viewModel: viewModel)
+                            selectedEvent: $selectedMaintenanceEvent, 
+                            viewModel: viewModel
+                        )
                     }
+                    .accessibilityElement(children: .combine)
                 }
                 .listStyle(.inset)
             }
@@ -81,6 +85,7 @@ struct DashboardView: View {
                     if viewModel.events.isEmpty {
                         Text("Add your first maintenance",
                              comment: "Placeholder text for empty maintenance list prompting the user to add a maintenance event") // swiftlint:disable:this line_length
+                        .accessibilityLabel("Add your first maintenance.")
                     } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
                         ContentUnavailableView("No results",
                                                systemImage: SFSymbol.magnifyingGlass,
@@ -89,18 +94,26 @@ struct DashboardView: View {
                 }
             }
             .animation(.linear, value: viewModel.searchedEvents)
-            .navigationTitle(Text("Dashboard",
-                                  comment: "Title label for Dashboard view"))
-            .alert(Text("Failed To Delete Event",
-                        comment: "Title for alert shown when deleting maintenance event fails"),
-                   isPresented: $viewModel.showErrorAlert) {
+            .navigationTitle(
+                Text("Dashboard", comment: "Title label for Dashboard view")
+                    .accessibilityLabel("Dashboard")
+            )
+            .alert(
+                Text("Failed To Delete Event", comment: "Title for alert shown when deleting maintenance event fails") // swiftlint:disable:this line_length
+                    .accessibilityLabel("Failed to delete event."),
+                isPresented: $viewModel.showErrorAlert
+            ) {
                 Button {
                     viewModel.showErrorAlert = false
                 } label: {
                     Text("OK", comment: "Label to dismiss alert")
+                        .accessibilityLabel("OK")
                 }
+                .accessibilityInputLabels(["Dismiss alert"])
             } message: {
-                Text(viewModel.errorMessage).padding()
+                Text(viewModel.errorMessage)
+                    .padding()
+                    .accessibilityLabel(viewModel.errorMessage)
             }
             .navigationDestination(isPresented: $viewModel.isShowingAddMaintenanceEvent) {
                 makeAddMaintenanceView()
@@ -122,11 +135,13 @@ struct DashboardView: View {
                     .accessibilityShowsLargeContentViewer {
                         Label {
                             Text("Filter", comment: "Label for filtering on Dashboard view")
+                                .accessibilityLabel("Filter.")
                         } icon: {
                             Image(systemName: SFSymbol.filter)
                         }
                     }
-                    
+                    .accessibilityInputLabels(["Show filter"])
+
                     Button {
                         // TODO: Show Paywall
                         // Can only add 3 events, adding the 4th triggers the paywall
@@ -137,10 +152,12 @@ struct DashboardView: View {
                     .accessibilityShowsLargeContentViewer {
                         Label {
                             Text("AddEvent", comment: "Label for adding maintenance event on Dashboard view")
+                                .accessibilityLabel("Add an event.")
                         } icon: {
                             Image(systemName: SFSymbol.plus)
                         }
                     }
+                    .accessibilityInputLabels(["Add event"])
                 }
             }
             .task {
@@ -181,20 +198,20 @@ struct DashboardView: View {
                 await viewModel.getMaintenanceEvents()
             }
         }
-        .alert(Text("An Error Occurred",
-                    comment: "Title for alert shown when adding maintenance event fails"),
-               isPresented: $viewModel.showAddErrorAlert) {
+        .alert(
+            Text("An Error Occurred", comment: "Title for alert shown when adding maintenance event fails")
+                .accessibilityLabel("An error occurred."),
+            isPresented: $viewModel.showAddErrorAlert
+        ) {
             Button(role: .cancel) {} label: {
                 Text("OK", comment: "Label to dismiss alert")
+                    .accessibilityLabel("OK")
             }
+            .accessibilityInputLabels(["Dismiss"])
         } message: {
             Text(viewModel.errorMessage)
+                .accessibilityLabel(viewModel.errorMessage)
         }
-    }
-    
-    private var noSearchResultsDescription: Text {
-        Text("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.",
-             comment: "Text shwon when there are no results for maintenance search")
     }
 }
 

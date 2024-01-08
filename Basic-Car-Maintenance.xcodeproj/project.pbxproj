@@ -14,6 +14,10 @@
 		57CDD9A02ADC31A8002EFED0 /* AddOdometerReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */; };
 		57CDD9A42ADC320F002EFED0 /* OdometerReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD9A32ADC320F002EFED0 /* OdometerReading.swift */; };
 		637505482AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637505472AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift */; };
+		6D7232312B42F7D400E0EEC8 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7232302B42F7D400E0EEC8 /* Date+extension.swift */; };
+		6D7232322B42F7D400E0EEC8 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7232302B42F7D400E0EEC8 /* Date+extension.swift */; };
+		6D7232332B42F7D400E0EEC8 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7232302B42F7D400E0EEC8 /* Date+extension.swift */; };
+		6D7232342B42F7D400E0EEC8 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7232302B42F7D400E0EEC8 /* Date+extension.swift */; };
 		8014A4CF2AD75928005B51F6 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4CE2AD75928005B51F6 /* AppIcon.swift */; };
 		8014A4D12AD76034005B51F6 /* ChooseAppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */; };
 		8014A4D32AD77C92005B51F6 /* ChooseAppIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */; };
@@ -113,6 +117,7 @@
 		57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOdometerReadingView.swift; sourceTree = "<group>"; };
 		57CDD9A32ADC320F002EFED0 /* OdometerReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdometerReading.swift; sourceTree = "<group>"; };
 		637505472AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseAnalytics+Extension.swift"; sourceTree = "<group>"; };
+		6D7232302B42F7D400E0EEC8 /* Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		8014A4CE2AD75928005B51F6 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
 		8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppIconView.swift; sourceTree = "<group>"; };
 		8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppIconViewModel.swift; sourceTree = "<group>"; };
@@ -398,6 +403,7 @@
 		FF755B442A90968D00F49A13 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6D7232302B42F7D400E0EEC8 /* Date+extension.swift */,
 				FF755B452A90969D00F49A13 /* Bundle+extension.swift */,
 				154984A92AD9CAEE0015594C /* Constants.swift */,
 				637505472AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift */,
@@ -721,6 +727,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				154984AA2AD9CAEE0015594C /* Constants.swift in Sources */,
+				6D7232312B42F7D400E0EEC8 /* Date+extension.swift in Sources */,
 				FFBFE0912A98EFEC000A9BEB /* MaintenanceEvent.swift in Sources */,
 				57CDD9A42ADC320F002EFED0 /* OdometerReading.swift in Sources */,
 				E58499682ACDDA9A00634660 /* ContributorsProfileView.swift in Sources */,
@@ -763,6 +770,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				898009792AD1899700604E7C /* ContributorTests.swift in Sources */,
+				6D7232322B42F7D400E0EEC8 /* Date+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,6 +779,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF5D13C32A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift in Sources */,
+				6D7232332B42F7D400E0EEC8 /* Date+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,6 +788,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFDADF842ACD35A100DDEF79 /* BasicCarMaintenanceWidgetBundle.swift in Sources */,
+				6D7232342B42F7D400E0EEC8 /* Date+extension.swift in Sources */,
 				FFDADF862ACD35A100DDEF79 /* BasicCarMaintenanceWidget.swift in Sources */,
 				FFDADF882ACD35A100DDEF79 /* AppIntent.swift in Sources */,
 			);

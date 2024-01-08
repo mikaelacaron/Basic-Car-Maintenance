@@ -14,48 +14,70 @@ struct EditMaintenanceEventView: View {
     @State private var date = Date()
     @State private var notes = ""
     @Environment(\.dismiss) var dismiss
-    
+
+    private var vehicleName: String {
+        viewModel.vehicles
+            .filter { $0.id == selectedEvent?.vehicleID }
+            .first?
+            .name ?? ""
+    }
+
     var body: some View {
         NavigationStack {
             Form {
                 Section {
                     TextField("Title", text: $title)
+                        .accessibilityInputLabels(["Edit title"])
                 } header: {
                     Text("Title")
                 }
+                .accessibilityElement(children: .combine)
+                .accessibilityValue("\(title)")
                 
                 Section {
-                    if let vehicleName = viewModel.vehicles
-                        .filter({ $0.id == selectedEvent?.vehicleID }).first?.name {
+                    if !vehicleName.isEmpty {
                         Text(vehicleName)
                             .opacity(0.3)
                     }
                 } header: {
                     Text("Vehicle")
                 }
+                .accessibilityElement(children: .combine)
+                .accessibilityValue("\(vehicleName)")
                 
                 DatePicker(selection: $date, displayedComponents: .date) {
                     Text("Date")
+                        .accessibilityLabel("Date: \(date.toString())")
                 }
+                .accessibilityInputLabels(["Change date"])
                 
                 Section {
+                    // FIXME: not igniting first responder when saying "Notes"
+                    // unlike the Title section
                     TextField("Notes", text: $notes, prompt: Text("Additional Notes"), axis: .vertical)
+                        .accessibilityInputLabels(["Edit notes"])
                 } header: {
                     Text("Notes")
                 }
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel("Notes: \(notes)")
             }
             .analyticsView("\(Self.self)")
             .onAppear {
                 guard let selectedEvent = selectedEvent else { return }
                 setMaintenanceEventValues(event: selectedEvent)
             }
-            .navigationTitle(Text("Update Maintenance"))
+            .navigationTitle(
+                Text("Update Maintenance")
+                    .accessibilityLabel("Update Maintenance")
+            )
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
                         dismiss()
                     } label: {
                         Text("Cancel")
+                            .accessibilityLabel("Cancel")
                     }
                 }
                 
@@ -74,6 +96,7 @@ struct EditMaintenanceEventView: View {
                         }
                     } label: {
                         Text("Update")
+                            .accessibilityLabel("Update")
                     }
                     .disabled(title.isEmpty)
                 }
