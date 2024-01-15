@@ -6,6 +6,7 @@
 //
 
 import FirebaseCore
+import RevenueCat
 import SwiftUI
 import TipKit
 
@@ -34,6 +35,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
         FirebaseApp.configure()
+        
+        Purchases.logLevel = .debug
+        Purchases.configure(withAPIKey: "", appUserID: nil)
+        
         return true
     }
     
