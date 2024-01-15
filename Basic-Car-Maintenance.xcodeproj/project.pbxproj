@@ -32,6 +32,7 @@
 		FF199E922B4A123B00EBA229 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = FF199E912B4A123B00EBA229 /* RevenueCat */; };
 		FF199E942B4A123B00EBA229 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = FF199E932B4A123B00EBA229 /* RevenueCatUI */; };
 		FF199E962B4A130600EBA229 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF199E952B4A130600EBA229 /* StoreKit.framework */; };
+		FF199E982B54D7AC00EBA229 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF199E972B54D7AC00EBA229 /* PaywallView.swift */; };
 		FF218EF62B00865F0025A533 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF218EF52B00865F0025A533 /* AnalyticsService.swift */; };
 		FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3DDF512AA4D28F009D91C4 /* DashboardViewModel.swift */; };
 		FF4E82BE2AD39863004949AF /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */; };
@@ -135,6 +136,7 @@
 		FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Basic-Car-Maintenance.xcconfig"; sourceTree = SOURCE_ROOT; };
 		FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		FF199E952B4A130600EBA229 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FF199E972B54D7AC00EBA229 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		FF218EF52B00865F0025A533 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		FF3DDF512AA4D28F009D91C4 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		FF50DDFA2B12944900E87362 /* EditOdometerReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOdometerReadingView.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			children = (
 				8AEE81712ACF384D00FC0C2A /* MainTabView.swift */,
 				8A3D74852AD6D9A10000FEEB /* AlertView.swift */,
+				FF199E972B54D7AC00EBA229 /* PaywallView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -732,6 +735,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				154984AA2AD9CAEE0015594C /* Constants.swift in Sources */,
+				FF199E982B54D7AC00EBA229 /* PaywallView.swift in Sources */,
 				FFBFE0912A98EFEC000A9BEB /* MaintenanceEvent.swift in Sources */,
 				57CDD9A42ADC320F002EFED0 /* OdometerReading.swift in Sources */,
 				E58499682ACDDA9A00634660 /* ContributorsProfileView.swift in Sources */,
