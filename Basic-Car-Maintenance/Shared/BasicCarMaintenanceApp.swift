@@ -37,7 +37,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         FirebaseApp.configure()
         
         Purchases.logLevel = .debug
-        Purchases.configure(withAPIKey: "", appUserID: nil)
+        Purchases.configure(withAPIKey: "appl_BqTYVwuYfpNREubAynBZHjcQdGK", appUserID: nil)
         
         return true
     }
