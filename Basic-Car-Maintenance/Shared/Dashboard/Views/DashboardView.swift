@@ -45,6 +45,7 @@ struct DashboardView: View {
                                 .foregroundStyle(.secondary)
                         }
                     }
+                    .accessibilityElement(children: .combine)
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                         Button(role: .destructive) {
                             Task {
