@@ -809,6 +809,9 @@
         }
       }
     },
+    "Basic Car" : {
+
+    },
     "Can't Delete Last Vehicle" : {
       "localizations" : {
         "pl" : {
@@ -4048,6 +4051,17 @@
         }
       }
     },
+    "Sidebar" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Боковая панель"
+          }
+        }
+      }
+    },
     "Sign Out" : {
       "localizations" : {
         "be" : {
@@ -4721,6 +4735,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Назва обслуговування"
+          }
+        }
+      }
+    },
+    "Unexpected error occured." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Произошла ошибка."
           }
         }
       }
