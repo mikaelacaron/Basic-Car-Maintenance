@@ -821,6 +821,9 @@
     "Basic" : {
 
     },
+    "Built collaboratively with contributors, enhancing the app functionality." : {
+
+    },
     "Can't Delete Last Vehicle" : {
       "localizations" : {
         "pl" : {
@@ -3570,6 +3573,9 @@
         }
       }
     },
+    "Open Source" : {
+
+    },
     "Preferred units" : {
       "comment" : "Label for units selected when adding an odometer reading",
       "localizations" : {
@@ -4743,6 +4749,9 @@
         }
       }
     },
+    "Tracks & displays total mileage, aiding timely maintenance planning." : {
+
+    },
     "Update" : {
       "comment" : "Label for submit button on form to update an existing entry",
       "localizations" : {
@@ -4900,6 +4909,9 @@
           }
         }
       }
+    },
+    "User-friendly interface for controlling car maintenance tasks." : {
+
     },
     "Vehicle" : {
       "comment" : "Maintenance event vehicle picker header",

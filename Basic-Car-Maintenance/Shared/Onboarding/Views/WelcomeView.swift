@@ -73,7 +73,7 @@ struct WelcomeView: View {
     }
     
     @ViewBuilder
-    func pointView(symbol: String, title: String, subTitle: String) -> some View {
+    func pointView(symbol: String, title: LocalizedStringKey, subTitle: LocalizedStringKey) -> some View {
         HStack(spacing: 20) {
             Image(systemName: symbol)
                 .font(.largeTitle)
