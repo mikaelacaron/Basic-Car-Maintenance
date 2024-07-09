@@ -821,6 +821,9 @@
     "Basic" : {
 
     },
+    "Basic Car" : {
+
+    },
     "Built collaboratively with contributors, enhancing the app functionality." : {
 
     },
@@ -4072,6 +4075,17 @@
         }
       }
     },
+    "Sidebar" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Боковая панель"
+          }
+        }
+      }
+    },
     "Sign Out" : {
       "localizations" : {
         "be" : {
@@ -4751,6 +4765,17 @@
     },
     "Tracks & displays total mileage, aiding timely maintenance planning." : {
 
+    },
+    "Unexpected error occured." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Произошла ошибка."
+          }
+        }
+      }
     },
     "Update" : {
       "comment" : "Label for submit button on form to update an existing entry",
