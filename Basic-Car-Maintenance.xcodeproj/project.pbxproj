@@ -23,6 +23,8 @@
 		8A3D748C2AD9C41D0000FEEB /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D748B2AD9C41D0000FEEB /* AlertItem.swift */; };
 		8AEE816F2ACF37F800FC0C2A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE816E2ACF37F800FC0C2A /* Action.swift */; };
 		8AEE81722ACF384D00FC0C2A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE81712ACF384D00FC0C2A /* MainTabView.swift */; };
+		E4345E622B4CDA7B0086D04B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4345E612B4CDA7B0086D04B /* WelcomeView.swift */; };
+		E4345E642B4CE0500086D04B /* WelcomeViewAddVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4345E632B4CE0500086D04B /* WelcomeViewAddVehicle.swift */; };
 		E55B630D2B079E5A006BDDDF /* EditVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55B630C2B079E5A006BDDDF /* EditVehicleView.swift */; };
 		E58499662ACDDA8B00634660 /* ContributorsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499652ACDDA8B00634660 /* ContributorsListView.swift */; };
 		E58499682ACDDA9A00634660 /* ContributorsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */; };
@@ -123,6 +125,8 @@
 		8AEE816E2ACF37F800FC0C2A /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		8AEE81712ACF384D00FC0C2A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8AEE81732ACF394E00FC0C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4345E612B4CDA7B0086D04B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		E4345E632B4CE0500086D04B /* WelcomeViewAddVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewAddVehicle.swift; sourceTree = "<group>"; };
 		E55B630C2B079E5A006BDDDF /* EditVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVehicleView.swift; sourceTree = "<group>"; };
 		E58499652ACDDA8B00634660 /* ContributorsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsListView.swift; sourceTree = "<group>"; };
 		E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsProfileView.swift; sourceTree = "<group>"; };
@@ -280,6 +284,23 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		E4345E602B4CDA4F0086D04B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E474A3A12B5953A40015DF51 /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E474A3A12B5953A40015DF51 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4345E612B4CDA7B0086D04B /* WelcomeView.swift */,
+				E4345E632B4CE0500086D04B /* WelcomeViewAddVehicle.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FF3DDF492AA4386C009D91C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +405,7 @@
 				FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */,
 				8AEE81732ACF394E00FC0C2A /* Info.plist */,
 				FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */,
+				E4345E602B4CDA4F0086D04B /* Onboarding */,
 				8A3D74832AD6D9870000FEEB /* MainView */,
 				FFBFE08F2A98EFDD000A9BEB /* Models */,
 				FF755B3F2A908EC400F49A13 /* Dashboard */,
@@ -732,6 +754,7 @@
 				8A3D74862AD6D9A10000FEEB /* AlertView.swift in Sources */,
 				57CDD9A02ADC31A8002EFED0 /* AddOdometerReadingView.swift in Sources */,
 				57CDD99E2ADC3173002EFED0 /* OdometerViewModel.swift in Sources */,
+				E4345E642B4CE0500086D04B /* WelcomeViewAddVehicle.swift in Sources */,
 				E55B630D2B079E5A006BDDDF /* EditVehicleView.swift in Sources */,
 				FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */,
 				FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */,
@@ -750,6 +773,7 @@
 				E58499662ACDDA8B00634660 /* ContributorsListView.swift in Sources */,
 				FFBFE0932A98F212000A9BEB /* Vehicle.swift in Sources */,
 				FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */,
+				E4345E622B4CDA7B0086D04B /* WelcomeView.swift in Sources */,
 				8014A4D12AD76034005B51F6 /* ChooseAppIconView.swift in Sources */,
 				FF218EF62B00865F0025A533 /* AnalyticsService.swift in Sources */,
 				FF748B5E2AB3589C004748A5 /* AuthenticationViewModel.swift in Sources */,

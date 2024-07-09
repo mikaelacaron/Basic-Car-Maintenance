@@ -200,6 +200,9 @@
         }
       }
     },
+    "about" : {
+
+    },
     "Add" : {
       "comment" : "Label for submit button on form to add an entry",
       "localizations" : {
@@ -412,6 +415,9 @@
           }
         }
       }
+    },
+    "Add the details below" : {
+
     },
     "Add Vehicle" : {
       "comment" : "Label to add a vehicle.",
@@ -809,7 +815,16 @@
         }
       }
     },
+    "Back" : {
+
+    },
+    "Basic" : {
+
+    },
     "Basic Car" : {
+
+    },
+    "Built collaboratively with contributors, enhancing the app functionality." : {
 
     },
     "Can't Delete Last Vehicle" : {
@@ -909,6 +924,9 @@
           }
         }
       }
+    },
+    "Car Maintenance" : {
+
     },
     "Change App Icon" : {
       "localizations" : {
@@ -1101,6 +1119,9 @@
           }
         }
       }
+    },
+    "Continue" : {
+
     },
     "Contributors" : {
       "comment" : "Link to contributors list.",
@@ -3555,6 +3576,9 @@
         }
       }
     },
+    "Open Source" : {
+
+    },
     "Preferred units" : {
       "comment" : "Label for units selected when adding an odometer reading",
       "localizations" : {
@@ -4739,6 +4763,9 @@
         }
       }
     },
+    "Tracks & displays total mileage, aiding timely maintenance planning." : {
+
+    },
     "Unexpected error occured." : {
       "extractionState" : "stale",
       "localizations" : {
@@ -4907,6 +4934,9 @@
           }
         }
       }
+    },
+    "User-friendly interface for controlling car maintenance tasks." : {
+
     },
     "Vehicle" : {
       "comment" : "Maintenance event vehicle picker header",
@@ -5752,6 +5782,12 @@
         }
       }
     },
+    "Welcome 🥳" : {
+
+    },
+    "Welcome to" : {
+
+    },
     "Year" : {
       "localizations" : {
         "be" : {
@@ -5815,6 +5851,12 @@
           }
         }
       }
+    },
+    "You can edit more data about the vehicle in the 'Settings' tab." : {
+
+    },
+    "your vehicle" : {
+
     }
   },
   "version" : "1.0"
