@@ -26,7 +26,7 @@ struct BasicCarMaintenanceApp: App {
                   try? Tips.configure()
                 }
 //                .sheet(isPresented: $isFirstTime) {
-//                    WelcomeScreen()
+//                    WelcomeView()
 //                        .interactiveDismissDisabled()
 //                }
         }

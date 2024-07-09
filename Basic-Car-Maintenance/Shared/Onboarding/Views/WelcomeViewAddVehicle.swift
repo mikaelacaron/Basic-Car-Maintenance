@@ -1,5 +1,5 @@
 //
-//  WelcomeScreenDetails.swift
+//  WelcomeViewAddVehicle.swift
 //  Basic-Car-Maintenance
 //
 //  Created by Marcin Jędrzejak on 09/01/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WelcomeScreenDetails: View {
+struct WelcomeViewAddVehicle: View {
     
     // Logic to remember Onboarding screen to not load again when app is launched
 //    @AppStorage("isFirstTime") private var isFirstTime: Bool = true
@@ -106,5 +106,5 @@ struct WelcomeScreenDetails: View {
 }
 
 #Preview {
-    WelcomeScreenDetails()
+    WelcomeViewAddVehicle()
 }

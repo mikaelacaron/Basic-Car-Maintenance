@@ -1,5 +1,5 @@
 //
-//  WelcomeScreen.swift
+//  WelcomeView.swift
 //  Basic-Car-Maintenance
 //
 //  Created by Marcin Jędrzejak on 09/01/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WelcomeScreen: View {
+struct WelcomeView: View {
     
     var body: some View {
         NavigationView {
@@ -21,11 +21,11 @@ struct WelcomeScreen: View {
                     Text("Car Maintenance")
                         .foregroundStyle(Color("basicGreen"))
                 }
-                    .font(.largeTitle.bold())
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 65)
-                    .padding(.bottom, 35)
-                    .padding(15)
+                .font(.largeTitle.bold())
+                .multilineTextAlignment(.center)
+                .padding(.top, 65)
+                .padding(.bottom, 35)
+                .padding(15)
                 
                 VStack(alignment: .leading, spacing: 25) {
                     pointView(
@@ -52,7 +52,7 @@ struct WelcomeScreen: View {
                 
                 Spacer(minLength: 10)
                 
-                NavigationLink(destination: WelcomeScreenDetails()) {
+                NavigationLink(destination: WelcomeViewAddVehicle()) {
                     Text("Continue")
                         .fontWeight(.bold)
                         .foregroundStyle(.white)
@@ -93,5 +93,5 @@ struct WelcomeScreen: View {
 }
 
 #Preview {
-    WelcomeScreen()
+    WelcomeView()
 }

@@ -200,6 +200,9 @@
         }
       }
     },
+    "about" : {
+
+    },
     "Add" : {
       "comment" : "Label for submit button on form to add an entry",
       "localizations" : {
@@ -412,6 +415,9 @@
           }
         }
       }
+    },
+    "Add the details below" : {
+
     },
     "Add Vehicle" : {
       "comment" : "Label to add a vehicle.",
@@ -809,6 +815,12 @@
         }
       }
     },
+    "Back" : {
+
+    },
+    "Basic" : {
+
+    },
     "Can't Delete Last Vehicle" : {
       "localizations" : {
         "pl" : {
@@ -906,6 +918,9 @@
           }
         }
       }
+    },
+    "Car Maintenance" : {
+
     },
     "Change App Icon" : {
       "localizations" : {
@@ -1098,6 +1113,9 @@
           }
         }
       }
+    },
+    "Continue" : {
+
     },
     "Contributors" : {
       "comment" : "Link to contributors list.",
@@ -5727,6 +5745,12 @@
         }
       }
     },
+    "Welcome 🥳" : {
+
+    },
+    "Welcome to" : {
+
+    },
     "Year" : {
       "localizations" : {
         "be" : {
@@ -5790,6 +5814,12 @@
           }
         }
       }
+    },
+    "You can edit more data about the vehicle in the 'Settings' tab." : {
+
+    },
+    "your vehicle" : {
+
     }
   },
   "version" : "1.0"
