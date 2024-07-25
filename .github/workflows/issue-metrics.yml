@@ -102,3 +102,27 @@ jobs:
         assignees: mikaelacaron
         labels: |
           weekly-report
+
+    - name: Collect metrics for issues and PRs last week
+      run: |
+        # Placeholder for script to collect metrics for opened and closed issues and PRs
+        # and write them to issue_metrics.md
+        echo "Metrics for last week" > issue_metrics.md
+        echo "Opened Issues:" >> issue_metrics.md
+        # Add opened issues metrics
+        echo "Closed Issues:" >> issue_metrics.md
+        # Add closed issues metrics
+        echo "Opened PRs:" >> issue_metrics.md
+        # Add opened PRs metrics
+        echo "Closed PRs:" >> issue_metrics.md
+        # Add closed PRs metrics
+
+    - name: Create comprehensive issue for last week's metrics
+      uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: "Weekly Metrics: ${{ env.prev_week }}"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        content-filepath: ./issue_metrics.md
+        assignees: mikaelacaron
+        labels: |
+          weekly-report
