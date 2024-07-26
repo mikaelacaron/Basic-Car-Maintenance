@@ -80,8 +80,11 @@ struct DashboardView: View {
                     ProgressView("Loading...")
                 } else {
                     if viewModel.events.isEmpty {
-                        Text("Add your first maintenance",
-                             comment: "Placeholder text for empty maintenance list prompting the user to add a maintenance event") // swiftlint:disable:this line_length
+                        ContentUnavailableView(
+                            "Tap the + to begin",
+                            systemImage: "wrench",
+                            description: Text("Add your first maintenance")
+                        )
                     } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
                         ContentUnavailableView("No results",
                                                systemImage: SFSymbol.magnifyingGlass,

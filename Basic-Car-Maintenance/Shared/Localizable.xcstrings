@@ -4250,6 +4250,9 @@
         }
       }
     },
+    "Tap the + to begin" : {
+
+    },
     "Thanks for using this app!" : {
       "comment" : "Thanks a user for using the app.",
       "localizations" : {
