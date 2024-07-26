@@ -19,11 +19,13 @@ jobs:
         ##########################################################
         # Get the current date
         current_date=$(date +'%Y-%m-%d')
-        # Calculate the previous week
-        previous_date=$(date -d "$current_date -1 week" +'%Y-%m-%d')
-        
-        echo "$previous_date..$current_date"
-        echo "prev_week=$previous_date..$current_date" >> "$GITHUB_ENV"
+        # Calculate the start of the previous week (last Sunday)
+        start_of_week=$(date -d "last-sunday - 1 week" +'%Y-%m-%d')
+        # Calculate the end of the previous week (last Saturday)
+        end_of_week=$(date -d "last-saturday" +'%Y-%m-%d')
+
+        echo "$start_of_week..$end_of_week"
+        echo "prev_week=$start_of_week..$end_of_week" >> "$GITHUB_ENV"
 
     - name: Run issue-metrics tool for issues and PRs opened last week
       uses: github/issue-metrics@v3
@@ -49,7 +51,7 @@ jobs:
     - name: Create issue for closed issues and prs
       uses: peter-evans/create-issue-from-file@v5
       with:
-        title: Monthly issue metrics report for closed issues and prs
+        title: Weekly issue metrics report for closed issues and prs
         content-filepath: ./issue_metrics.md
         assignees: mikaelacaron
         labels: weekly-report
