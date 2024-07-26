@@ -29,10 +29,10 @@ jobs:
       uses: github/issue-metrics@v3
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SEARCH_QUERY: 'repo:owner/repo created:${{ env.prev_week }}'
+        SEARCH_QUERY: 'mikaelacaron/Basic-Car-Maintenance created:${{ env.prev_week }}'
 
     - name: Create issue for opened issues and PRs last week
-      uses: peter-evans/create-issue-from-file@v4
+      uses: peter-evans/create-issue-from-file@v5
       with:
           title: Weekly issue metrics report for opened issues and PRs
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -44,10 +44,10 @@ jobs:
       uses: github/issue-metrics@v3
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SEARCH_QUERY: 'repo:owner/repo closed:${{ env.prev_week }}'
+        SEARCH_QUERY: 'mikaelacaron/Basic-Car-Maintenance closed:${{ env.prev_week }}'
 
     - name: Create issue for closed issues and prs
-      uses: peter-evans/create-issue-from-file@v4
+      uses: peter-evans/create-issue-from-file@v5
       with:
         title: Monthly issue metrics report for closed issues and prs
         content-filepath: ./issue_metrics.md
