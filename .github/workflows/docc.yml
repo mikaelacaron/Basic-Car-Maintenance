@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0
       - uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: "15.0.1"
+          xcode-version: latest
       - name: Setup Config file
         run: |
           cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
@@ -29,9 +29,9 @@ jobs:
         run: ./build-docc.sh
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .docs
   deploy:
@@ -40,7 +40,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
