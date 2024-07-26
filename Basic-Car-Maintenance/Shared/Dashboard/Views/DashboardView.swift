@@ -13,7 +13,6 @@ struct DashboardView: View {
     @State private var isShowingAddView = false
     @State private var viewModel: DashboardViewModel
     @State private var isShowingEditView = false
-    @State private var isShowingAddVehicleView = false
     @State private var selectedMaintenanceEvent: MaintenanceEvent?
     
     init(userUID: String?) {
@@ -81,14 +80,12 @@ struct DashboardView: View {
                     ProgressView("Loading...")
                 } else {
                     if viewModel.events.isEmpty {
-                // Blank Dashboard view starts
-                        VStack(spacing:20){
 
+                            
                             ContentUnavailableView("Tap the + to begin",
-                            systemImage: "wrench",
-                            description: Text("Add your first maintenance"))
-                        }
-                // Blank Dashboard view ends
+                                                   systemImage: "wrench",
+                                                   description: Text("Add your first maintenance"))
+
                         
                     } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
                         ContentUnavailableView("No results",
