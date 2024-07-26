@@ -16,7 +16,7 @@ jobs:
       run: |
 
         ##########################################################
-        Create report for the previous week
+        # Create report for the previous week
         ##########################################################
         # Get the current date
         current_date=$(date +'%Y-%m-%d')
@@ -28,7 +28,7 @@ jobs:
         echo "prev_week=$previous_date..$current_date" >> "$GITHUB_ENV"
         
         ##########################################################
-        Create report for the previous month
+        # Create report for the previous month
         ##########################################################
         
         # Calculate the first day of the previous month
