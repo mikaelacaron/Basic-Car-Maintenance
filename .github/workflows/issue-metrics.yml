@@ -14,115 +14,42 @@ jobs:
     - name: Get dates for last week
       shell: bash
       run: |
-
         ##########################################################
         # Create report for the previous week
         ##########################################################
         # Get the current date
         current_date=$(date +'%Y-%m-%d')
-
         # Calculate the previous week
         previous_date=$(date -d "$current_date -1 week" +'%Y-%m-%d')
         
         echo "$previous_date..$current_date"
         echo "prev_week=$previous_date..$current_date" >> "$GITHUB_ENV"
-        
-        ##########################################################
-        # Create report for the previous month
-        ##########################################################
-        
-        # Calculate the first day of the previous month
-        #first_day=$(date -d "last month" +%Y-%m-01)
 
-        # Calculate the last day of the previous month
-        #last_day=$(date -d "$first_day +1 month -1 day" +%Y-%m-%d)
-
-        #Set an environment variable with the date range
-        #echo "$first_day..$last_day"
-        #echo "last_month=$first_day..$last_day" >> "$GITHUB_ENV"
-
-    - name: Run issue-metrics tool for opened issues last week
-      uses: github/issue-metrics@v2
+    - name: Run issue-metrics tool for issues and PRs opened last week
+      uses: github/issue-metrics@v3
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SEARCH_QUERY: 'repo:mikaelacaron/Basic-Car-Maintenance is:issue created:${{ env.prev_week }}'
+        SEARCH_QUERY: 'repo:owner/repo created:${{ env.prev_week }}'
 
-    - name: Create issue for opened issues
+    - name: Create issue for opened issues and PRs last week
       uses: peter-evans/create-issue-from-file@v4
       with:
-        title: ${{ env.prev_week }} opened issues
-        token: ${{ secrets.GITHUB_TOKEN }}
-        content-filepath: ./issue_metrics.md
-        assignees: mikaelacaron
-        labels: |
-          weekly-report
-
-    - name: Run issue-metrics tool for closed issues last week
-      uses: github/issue-metrics@v2
+          title: Weekly issue metrics report for opened issues and PRs
+          token: ${{ secrets.GITHUB_TOKEN }}
+          content-filepath: ./issue_metrics.md
+          assignees: mikaelacaron
+          labels: weekly-report
+    
+    - name: Run issue-metrics tool for issues and PRs closed last week
+      uses: github/issue-metrics@v3
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SEARCH_QUERY: 'repo:mikaelacaron/Basic-Car-Maintenance is:issue closed:${{ env.prev_week }}'
+        SEARCH_QUERY: 'repo:owner/repo closed:${{ env.prev_week }}'
 
-    - name: Create issue for closed issues
+    - name: Create issue for closed issues and prs
       uses: peter-evans/create-issue-from-file@v4
       with:
-        title: ${{ env.prev_week }} closed issues
+        title: Monthly issue metrics report for closed issues and prs
         content-filepath: ./issue_metrics.md
         assignees: mikaelacaron
-        labels: |
-          weekly-report
-
-    - name: Run issue-metrics tool for prs opened last week
-      uses: github/issue-metrics@v2
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SEARCH_QUERY: 'repo:mikaelacaron/Basic-Car-Maintenance is:pr created:${{ env.prev_week }}'
-
-    - name: Create issue for opened prs
-      uses: peter-evans/create-issue-from-file@v4
-      with:
-        title: ${{ env.prev_week }} opened prs
-        token: ${{ secrets.GITHUB_TOKEN }}
-        content-filepath: ./issue_metrics.md
-        assignees: mikaelacaron
-        labels: |
-          weekly-report
-
-    - name: Run issue-metrics tool for prs closed last week
-      uses: github/issue-metrics@v2
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SEARCH_QUERY: 'repo:mikaelacaron/Basic-Car-Maintenance is:pr closed:${{ env.prev_week }}'
-
-    - name: Create issue for closed prs last week
-      uses: peter-evans/create-issue-from-file@v4
-      with:
-        title: ${{ env.prev_week }} closed prs
-        content-filepath: ./issue_metrics.md
-        assignees: mikaelacaron
-        labels: |
-          weekly-report
-
-    - name: Collect metrics for issues and PRs last week
-      run: |
-        # Placeholder for script to collect metrics for opened and closed issues and PRs
-        # and write them to issue_metrics.md
-        echo "Metrics for last week" > issue_metrics.md
-        echo "Opened Issues:" >> issue_metrics.md
-        # Add opened issues metrics
-        echo "Closed Issues:" >> issue_metrics.md
-        # Add closed issues metrics
-        echo "Opened PRs:" >> issue_metrics.md
-        # Add opened PRs metrics
-        echo "Closed PRs:" >> issue_metrics.md
-        # Add closed PRs metrics
-
-    - name: Create comprehensive issue for last week's metrics
-      uses: peter-evans/create-issue-from-file@v4
-      with:
-        title: "Weekly Metrics: ${{ env.prev_week }}"
-        token: ${{ secrets.GITHUB_TOKEN }}
-        content-filepath: ./issue_metrics.md
-        assignees: mikaelacaron
-        labels: |
-          weekly-report
+        labels: weekly-report
