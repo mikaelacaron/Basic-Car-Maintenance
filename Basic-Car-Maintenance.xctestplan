@@ -1,0 +1,50 @@
+{
+  "configurations" : [
+    {
+      "id" : "08E17716-2F5B-4C05-8BAB-0A770FE99DCF",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "commandLineArgumentEntries" : [
+      {
+        "argument" : "-FIRAnalyticsDebugEnabled",
+        "enabled" : false
+      },
+      {
+        "argument" : "-FIRDebugEnabled",
+        "enabled" : false
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Basic-Car-Maintenance.xcodeproj",
+      "identifier" : "FF5D13A22A86C2D600BC9BD6",
+      "name" : "Basic-Car-Maintenance"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Basic-Car-Maintenance.xcodeproj",
+        "identifier" : "FF5D13B32A86C2D800BC9BD6",
+        "name" : "Basic-Car-Maintenance-Tests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "skippedTests" : [
+        "BasicCarMaintenanceUITests"
+      ],
+      "target" : {
+        "containerPath" : "container:Basic-Car-Maintenance.xcodeproj",
+        "identifier" : "FF5D13BD2A86C2D800BC9BD6",
+        "name" : "Basic-Car-Maintenance-UITests"
+      }
+    }
+  ],
+  "version" : 1
+}
