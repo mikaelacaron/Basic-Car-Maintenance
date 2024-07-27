@@ -153,6 +153,7 @@
 		FF755B452A90969D00F49A13 /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
 		FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMaintenanceView.swift; sourceTree = "<group>"; };
 		FFA392762C54738E00A0AD6D /* Basic-Car-Maintenance.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basic-Car-Maintenance.xctestplan"; sourceTree = "<group>"; };
+		FFA392772C547CA300A0AD6D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		FFAA56EC2AC8905C000120EE /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		FFBE79BB2AD0A57D0005524E /* UnitTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UnitTests.xcconfig; sourceTree = "<group>"; };
 		FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceEvent.swift; sourceTree = "<group>"; };
@@ -406,6 +407,7 @@
 				FF755B422A90915E00F49A13 /* Localizable.xcstrings */,
 				FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */,
 				8AEE81732ACF394E00FC0C2A /* Info.plist */,
+				FFA392772C547CA300A0AD6D /* PrivacyInfo.xcprivacy */,
 				FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */,
 				E4345E602B4CDA4F0086D04B /* Onboarding */,
 				8A3D74832AD6D9870000FEEB /* MainView */,
