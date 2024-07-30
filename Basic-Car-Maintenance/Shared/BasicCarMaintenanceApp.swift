@@ -54,6 +54,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             Firestore.firestore().settings = settings
             
             Auth.auth().useEmulator(withHost: "127.0.0.1", port: 9099)
+        } else {
+            fatalError("Must Use Firebase Emulators")
         }
         
         return true

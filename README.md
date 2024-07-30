@@ -1,8 +1,4 @@
 # Basic Car Maintenance
-Welcome to my open source app! It is ready for contributors for [Hacktoberfest](https://hacktoberfest.com/)! Use this app to gain experience getting started in open source for iOS and macOS development using Swift and SwiftUI.
-
-# Getting Started
-
 ![Static Badge](https://img.shields.io/badge/status-active-brightgreen)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mikaelacaron/Basic-Car-Maintenance/dev?logo=github)
 ![GitHub contributors](https://img.shields.io/github/contributors/mikaelacaron/Basic-Car-Maintenance)
@@ -10,6 +6,9 @@ Welcome to my open source app! It is ready for contributors for [Hacktoberfest](
 [![Unit Tests](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml/badge.svg?event=push)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml)
 [![Deploy DocC Documentation](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml/badge.svg?branch=dev)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml)
 
+Welcome to my open source app! It is ready for contributors for [Hacktoberfest](https://hacktoberfest.com/)! Use this app to gain experience getting started in open source for iOS and macOS development using Swift and SwiftUI.
+
+# Getting Started
 * Read the [Code of Conduct](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CODE_OF_CONDUCT.md)
 * Read the [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md) guidelines
 * Download Xcode 15 or later
@@ -34,6 +33,11 @@ PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 ```
 
 * Build the project ✅
+
+* Setup the Firebase emulator, following the steps in [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md#setup-the-firebase-Emulator)
+
+> [!WARNING]
+> DO **NOT** skip setting up the emulators! or your app won't work
 
 * **Checkout** a new branch (from the `dev` branch) to work on an issue
 
