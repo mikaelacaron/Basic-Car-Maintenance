@@ -39,6 +39,8 @@ PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 > [!WARNING]
 > DO **NOT** skip setting up the emulators! or your app won't work
 
+* Start the emulator with: `firebase emulators:start --import=./local-data --export-on-exit`
+
 * **Checkout** a new branch (from the `dev` branch) to work on an issue
 
 # Contributing
