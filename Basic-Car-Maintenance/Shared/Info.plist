@@ -4,6 +4,10 @@
 <dict>
 	<key>FirebaseAutomaticScreenReportingEnabled</key>
 	<false/>
+	<key>FIREBASE_ANALYTICS_COLLECTION_ENABLED</key>
+	<false/>
+	<key>FirebaseCrashlyticsCollectionEnabled</key>
+	<false/>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
