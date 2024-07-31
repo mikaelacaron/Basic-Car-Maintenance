@@ -50,13 +50,15 @@ PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 We are going to set up the Firebase emulator to be able to load the data locally and not affect production. Please do not skip this step.
 * Install [Homebrew](https://brew.sh/)
    * Package manager for macOS, to install more things
+* Install Xcode command line tools with `xcode-select --install`
 * `brew install nvm`
    * Installs node version manager, so you don't need to update the system node version
+   * Add the executable to the $PATH via .zshrc or .bashrc file as prompted after installation, do **NOT** forget this! (and then restart your Terminal)
 * `nvm install stable`
 * `nvm use stable`
    * to download and use the latest stable version of node
 * `brew install openjdk`
-   * Add the executable to the $PATH via .zshrc or .bashrc file as prompted after installation, do **NOT** forget this!
+   * Add the executable to the $PATH via .zshrc or .bashrc file as prompted after installation, do **NOT** forget this! (and then restart your Terminal)
 * `npm install -g firebase-tools`
    * Installs the Firebase tools for running the emulator
 
