@@ -82,14 +82,13 @@ final class SettingsViewModel {
     func updateVehicle(_ vehicle: Vehicle) async {
         
         if let userUID = authenticationViewModel.user?.uid {
-            guard let vehicleID = vehicle.id else { return }
             var vehicleToUpdate = vehicle
             vehicleToUpdate.userID = userUID
             
             do {
                 try Firestore.firestore()
                     .collection(FirestoreCollection.vehicles)
-                    .document(vehicleID)
+                    .document(vehicle.id)
                     .setData(from: vehicleToUpdate)
                 
                 AnalyticsService.shared.logEvent(.vehicleUpdate)

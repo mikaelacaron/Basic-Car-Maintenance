@@ -21,6 +21,7 @@
 		8A3D74862AD6D9A10000FEEB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D74852AD6D9A10000FEEB /* AlertView.swift */; };
 		8A3D748A2AD9C3E00000FEEB /* MainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D74892AD9C3E00000FEEB /* MainTabViewModel.swift */; };
 		8A3D748C2AD9C41D0000FEEB /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D748B2AD9C41D0000FEEB /* AlertItem.swift */; };
+		8AD8735D2C788BD800C89945 /* AddOdometerReadingAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD8735C2C788BD800C89945 /* AddOdometerReadingAppIntent.swift */; };
 		8AEE816F2ACF37F800FC0C2A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE816E2ACF37F800FC0C2A /* Action.swift */; };
 		8AEE81722ACF384D00FC0C2A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE81712ACF384D00FC0C2A /* MainTabView.swift */; };
 		E4345E622B4CDA7B0086D04B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4345E612B4CDA7B0086D04B /* WelcomeView.swift */; };
@@ -122,6 +123,7 @@
 		8A3D74852AD6D9A10000FEEB /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		8A3D74892AD9C3E00000FEEB /* MainTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewModel.swift; sourceTree = "<group>"; };
 		8A3D748B2AD9C41D0000FEEB /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		8AD8735C2C788BD800C89945 /* AddOdometerReadingAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOdometerReadingAppIntent.swift; sourceTree = "<group>"; };
 		8AEE816E2ACF37F800FC0C2A /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		8AEE81712ACF384D00FC0C2A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		8AEE81732ACF394E00FC0C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -285,6 +287,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		8AD8735B2C788BC500C89945 /* AppIntents */ = {
+			isa = PBXGroup;
+			children = (
+				8AD8735C2C788BD800C89945 /* AddOdometerReadingAppIntent.swift */,
+			);
+			path = AppIntents;
+			sourceTree = "<group>";
+		};
 		E4345E602B4CDA4F0086D04B /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +417,7 @@
 				FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */,
 				8AEE81732ACF394E00FC0C2A /* Info.plist */,
 				FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */,
+				8AD8735B2C788BC500C89945 /* AppIntents */,
 				E4345E602B4CDA4F0086D04B /* Onboarding */,
 				8A3D74832AD6D9870000FEEB /* MainView */,
 				FFBFE08F2A98EFDD000A9BEB /* Models */,
@@ -757,6 +768,7 @@
 				57CDD9A02ADC31A8002EFED0 /* AddOdometerReadingView.swift in Sources */,
 				57CDD99E2ADC3173002EFED0 /* OdometerViewModel.swift in Sources */,
 				E4345E642B4CE0500086D04B /* WelcomeViewAddVehicle.swift in Sources */,
+				8AD8735D2C788BD800C89945 /* AddOdometerReadingAppIntent.swift in Sources */,
 				E55B630D2B079E5A006BDDDF /* EditVehicleView.swift in Sources */,
 				FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */,
 				FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */,
