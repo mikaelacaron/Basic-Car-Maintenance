@@ -9,10 +9,7 @@ import FirebaseFirestoreSwift
 import Foundation
 import AppIntents
 
-struct Vehicle: Codable, Identifiable, Hashable, AppEntity {
-    var id: String {
-        documentID ?? ""
-    }
+struct Vehicle: Codable, Identifiable, Hashable {
     @DocumentID private var documentID: String?
     var userID: String?
     let name: String
@@ -28,7 +25,7 @@ struct Vehicle: Codable, Identifiable, Hashable, AppEntity {
     static var typeDisplayRepresentation = TypeDisplayRepresentation(name: "Vehicle")
     
     init(
-        id: String = "",
+        id: String? = nil,
         userID: String? = nil,
         name: String,
         make: String,
@@ -59,5 +56,11 @@ struct Vehicle: Codable, Identifiable, Hashable, AppEntity {
         case color
         case vin
         case licensePlateNumber
+    }
+}
+
+extension Vehicle: AppEntity {
+    var id: String {
+        documentID ?? UUID().uuidString
     }
 }

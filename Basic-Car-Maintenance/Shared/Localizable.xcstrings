@@ -370,7 +370,7 @@
       }
     },
     "Add Odometer Reading" : {
-
+      "comment" : "Title for the app intent when adding an odometer reading"
     },
     "Add Reading" : {
       "comment" : "Title for form when adding an odometer reading",
@@ -636,7 +636,7 @@
       }
     },
     "Added reading successfully" : {
-
+      "comment" : "The message shown when successfully adding an odometer reading using the app intent"
     },
     "AddEvent" : {
       "comment" : "Label for adding maintenance event on Dashboard view",
@@ -1723,7 +1723,7 @@
 
     },
     "Distance Unit" : {
-
+      "comment" : "The distance unit in miles or kilometers"
     },
     "Edit" : {
       "comment" : "Button label to edit this maintenance",
@@ -3276,7 +3276,7 @@
       }
     },
     "No vehicles available, please add a vehicle using the app and try again" : {
-
+      "comment" : "an error shown when attempting to add an odometer while there are no vehicles added"
     },
     "Notes" : {
       "comment" : "Maintenance event notes text field label",
@@ -5873,11 +5873,8 @@
     "You can edit more data about the vehicle in the 'Settings' tab." : {
 
     },
-    "You can not select a past date" : {
-
-    },
     "You can not select distance number less than 1 km or mi" : {
-
+      "comment" : "an error shown when entering a zero or negative value for distance"
     },
     "your vehicle" : {
 
