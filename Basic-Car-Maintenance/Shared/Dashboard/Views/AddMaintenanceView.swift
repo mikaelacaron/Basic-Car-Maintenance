@@ -64,7 +64,7 @@ struct AddMaintenanceView: View {
                     }
                 } header: {
                     Text("Notes",
-                         comment: "Notes text field header")
+                         comment: "Maintenance event notes text field label")
                 }
             }
             .analyticsView("\(Self.self)")
