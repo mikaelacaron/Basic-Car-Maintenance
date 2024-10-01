@@ -40,8 +40,9 @@ PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 > DO **NOT** skip setting up the emulators! or your app won't work
 
 * Start the emulator with: `firebase emulators:start --import=./local-data --export-on-exit`
+  * Be sure to be in the `backend` folder that contains the `firebase.json` file.
 
-* **Checkout** a new branch (from the `dev` branch) to work on an issue
+* **Checkout** a new branch, from the `dev` branch, to work on an issue
 
 # Contributing
 To start contributing, review [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md). New contributors are always welcome to support this project.
