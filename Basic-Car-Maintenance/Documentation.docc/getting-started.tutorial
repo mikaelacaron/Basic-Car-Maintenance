@@ -111,43 +111,40 @@
 
     @Section(title: "Setting Up Firebase Local Emulator") {
         @ContentAndMedia {
-            Follow these steps to set up the Firebase Local Emulator to run the project without affecting production.
+            Follow these steps to set up the Firebase Local Emulator to load data locally and not affect production. Please do not skip this step.
         }
 
         @Steps {
             @Step {
-                Install Homebrew, a package manager for macOS, if you haven't already.
+                Install Homebrew, a package manager for macOS, if you haven't already:
                 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+            }
+            @Step {
+                Install Xcode command line tools:
+                `xcode-select --install`
             }
             @Step {
                 Install Node Version Manager (NVM):
                 `brew install nvm`
+                Installs node version manager, so you don't need to update the system node version.
             }
             @Step {
-                Add NVM to your shell profile by following the instructions shown after installation. Restart your terminal after adding.
+                Add the executable to the `$PATH` via `.zshrc` or `.bashrc` file as prompted after installation. Do NOT forget this! (and then restart your Terminal)
             }
             @Step {
-                Install the latest stable version of Node.js:
+                Download and use the latest stable version of Node.js:
                 `nvm install stable`
+                `nvm use stable`
+            }
+            @Step {
+                Install OpenJDK:
+                `brew install openjdk`
+                Add the executable to the `$PATH` via `.zshrc` or `.bashrc` file as prompted after installation. Do NOT forget this! (and then restart your Terminal)
             }
             @Step {
                 Install Firebase Tools globally:
                 `npm install -g firebase-tools`
-            }
-            @Step {
-                Navigate to the backend directory of the project:
-                `cd backend`
-            }
-            @Step {
-                Start the Firebase Emulator with:
-                `firebase emulators:start --import=./local-data --export-on-exit`
-                
-                This command will load your local data and ensure that it persists between emulator sessions.
-            }
-            @Step {
-                Run the app in your simulator or emulator.
-                Ensure that you can see your anonymous user in the Authentication section.
-                @Image(source: 10-run-emulator.png, alt: "Running the app with Emulator")
+                Installs the Firebase tools for running the emulator.
             }
         }
     }
