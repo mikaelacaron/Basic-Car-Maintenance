@@ -132,8 +132,6 @@ struct DashboardView: View {
                     }
                     
                     Button {
-                        // TODO: Show Paywall
-                        // Can only add 3 events, adding the 4th triggers the paywall
                         viewModel.isShowingAddMaintenanceEvent = true
                     } label: {
                         Image(systemName: SFSymbol.plus)
@@ -157,8 +155,6 @@ struct DashboardView: View {
         }
         .onChange(of: scenePhase) { _, newScenePhase in
             guard case .active = newScenePhase else { return }
-            
-            // TODO: Show Paywall
             
             guard let action = actionService.action,
                   action == .newMaintenance

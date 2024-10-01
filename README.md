@@ -1,8 +1,4 @@
 # Basic Car Maintenance
-Welcome to my open source app! It is ready for contributors for [Hacktoberfest](https://hacktoberfest.com/)! Use this app to gain experience getting started in open source for iOS and macOS development using Swift and SwiftUI.
-
-# Getting Started
-
 ![Static Badge](https://img.shields.io/badge/status-active-brightgreen)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mikaelacaron/Basic-Car-Maintenance/dev?logo=github)
 ![GitHub contributors](https://img.shields.io/github/contributors/mikaelacaron/Basic-Car-Maintenance)
@@ -10,9 +6,12 @@ Welcome to my open source app! It is ready for contributors for [Hacktoberfest](
 [![Unit Tests](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml/badge.svg?event=push)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml)
 [![Deploy DocC Documentation](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml/badge.svg?branch=dev)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml)
 
-* Read the [Code of Conduct](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CODE_OF_CONDUCT.md)
-* Read the [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md) guidelines
-* Download Xcode 15 or later
+Welcome to my open source app! It is ready for contributors for [Hacktoberfest](https://hacktoberfest.com/)! Use this app to gain experience getting started in open source for iOS and macOS development using Swift and SwiftUI.
+
+# Getting Started
+* Read the [Code of Conduct](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/dev/CODE_OF_CONDUCT.md)
+* Read the [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/dev/CONTRIBUTING.md) guidelines
+* Download Xcode 15 or later (preferred to use Xcode 16 or later)
 * Browse the open [issues](https://github.com/mikaelacaron/Basic-Car-Maintenance/issues) and **comment** which you would like to work on
    * It is only one person per issue, except where noted.
 * **Fork** this repo
@@ -35,7 +34,15 @@ PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 
 * Build the project ✅
 
-* **Checkout** a new branch (from the `dev` branch) to work on an issue
+* Setup the Firebase emulator, following the steps in [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/dev/CONTRIBUTING.md#setup-the-firebase-Emulator)
+
+> [!WARNING]
+> DO **NOT** skip setting up the emulators! or your app won't work
+
+* Start the emulator with: `firebase emulators:start --import=./local-data --export-on-exit`
+  * Be sure to be in the `backend` folder that contains the `firebase.json` file.
+
+* **Checkout** a new branch, from the `dev` branch, to work on an issue
 
 # Contributing
 To start contributing, review [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md). New contributors are always welcome to support this project.

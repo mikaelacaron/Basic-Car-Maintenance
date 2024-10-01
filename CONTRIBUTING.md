@@ -11,7 +11,7 @@ This app will be deployed on the Apple App Store, available for iOS 17.0 or late
 
 # Getting Started
 ## Prerequisites
-* Download Xcode 15.0 or later
+* Download Xcode 15.0 or later (preferred to use Xcode 16 or later)
 * Install [SwiftLint](https://github.com/realm/SwiftLint) onto your machine via [Homebrew](https://brew.sh/)
    * This is not a requirement, but is preferred.
 ```sh
@@ -24,6 +24,8 @@ brew install swiftlint
    * Prefer Indent using Spaces
    * Tab Width: 4
    * Indent Width: 4
+   * Xcode 16+
+      * Check "Prefer Settings from EditorConfig"
 
 ## Start Here
 * **Fork** this repo
@@ -46,8 +48,33 @@ PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 
 * Build the project ✅
 
+## Setup the Firebase Emulator
+We are going to set up the Firebase emulator to be able to load the data locally and not affect production. Please do not skip this step.
+* Install [Homebrew](https://brew.sh/)
+   * Package manager for macOS, to install more things
+* Install Xcode command line tools with `xcode-select --install`
+* `brew install nvm`
+   * Installs node version manager, so you don't need to update the system node version
+   * Add the executable to the $PATH via .zshrc or .bashrc file as prompted after installation, do **NOT** forget this! (and then restart your Terminal)
+* `nvm install stable`
+* `nvm use stable`
+   * to download and use the latest stable version of node
+* `brew install openjdk`
+   * Add the executable to the $PATH via .zshrc or .bashrc file as prompted after installation, do **NOT** forget this! (and then restart your Terminal)
+* `npm install -g firebase-tools`
+   * Installs the Firebase tools for running the emulator
+
+
+## Start Working on an Issue
+* Anytime you run the project, first in Terminal `cd` to `backend` in the `Basic-Car-Maintenance` directory
+   * this is the directory with the `firebase.json` file, you should see that if you type `ls`
+* Run `firebase emulators:start --import=./local-data --export-on-exit`, which will start the emulators, and keep your data in `local-data` directory.
+   * Meaning when you start and stop the emulator your data will persist.
+* Run the app
+   * You should see your anonymous user in Authentication, and once you add new data, see it in Firestore emulator UI at: http://127.0.0.1:4000/firestore
+   * If you don't see your user, delete the app from the simulator, and in the menu go to Device > Erase All Content and Settings (which resets your simulator), and try to run again
 * **Checkout** a new branch (from the `dev` branch) to work on an issue
-* When your feature/fix is complete open a pull request, PR, from your feature branch to the `dev` branch
+* When your feature / fix is complete open a pull request, PR, from your feature branch to the `dev` branch
    * Use a descriptive PR title and fill out the entire PR template, do not delete any sections.
 
 # Branches and PRs

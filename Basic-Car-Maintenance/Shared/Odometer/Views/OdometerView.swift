@@ -67,8 +67,6 @@ struct OdometerView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
                     Button {
-                        // TODO: Show Paywall
-                        // if adding a 4th odometer reading, show paywall
                         viewModel.isShowingAddOdometerReading = true
                     } label: {
                         Image(systemName: SFSymbol.plus)
@@ -81,6 +79,7 @@ struct OdometerView: View {
             }
             .sheet(isPresented: $viewModel.isShowingEditReadingView) {
                 if let selectedReading = viewModel.selectedReading {
+                    // swiftlint:disable:next line_length
                     EditOdometerReadingView(selectedReading: selectedReading, vehicles: viewModel.vehicles) { updatedReading in
                         viewModel.updateOdometerReading(updatedReading)
                     }

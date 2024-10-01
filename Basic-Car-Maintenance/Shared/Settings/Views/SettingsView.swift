@@ -146,8 +146,6 @@ struct SettingsView: View {
                     }
                 
                     Button {
-                        // TODO: Show Paywall
-                        // Show paywall if adding more than 1 vehicle, or show the `isShowingAddVehicle` view
                         isShowingAddVehicle = true
                     } label: {
                         Text("Add Vehicle", comment: "Label to add a vehicle.")
@@ -250,6 +248,7 @@ struct SettingsView: View {
                     showDeleteVehicleAlert = false
                 }
             } message: {
+                // swiftlint:disable:next line_length
                 Text("The last vehicle can't be deleted. Please add a new vehicle before removing this one.", comment: "Alert message preventing users from deleting their last vehicle")
             }
             .navigationTitle(Text("Settings", comment: "Label to display settings."))
@@ -259,8 +258,6 @@ struct SettingsView: View {
         }
         .onChange(of: scenePhase) { _, newScenePhase in
             guard case .active = newScenePhase else { return }
-            
-            // TODO: Show Paywall
             
             guard let action = actionService.action,
                   action == .addVehicle
