@@ -88,6 +88,53 @@
             }
         }
     }
+
+     @Section(title: "Setting Up Firebase Local Emulator") {
+        @ContentAndMedia {
+            Follow these steps to set up the Firebase Local Emulator to load data locally and not affect production. Please do not skip this step.
+        }
+
+        @Steps {
+            @Step {
+                Install Homebrew, a package manager for macOS, if you haven't already:
+                `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+            }
+            @Step {
+                Install Xcode command line tools:
+                ---
+                `xcode-select --install`
+            }
+            @Step {
+                Install Node Version Manager (NVM):
+                ---
+                `brew install nvm`
+                ---
+                Installs node version manager, so you don't need to update the system node version.
+            }
+            @Step {
+                Add the executable to the `$PATH` via `.zshrc` or `.bashrc` file as prompted after installation. Do NOT forget this! (and then restart your Terminal)
+            }
+            @Step {
+                Download and use the latest stable version of Node.js:
+                ---
+                `nvm install stable`
+                ---
+                `nvm use stable`
+            }
+            @Step {
+                Install OpenJDK:
+                ---
+                `brew install openjdk`
+                ---
+                Add the executable to the `$PATH` via `.zshrc` or `.bashrc` file as prompted after installation. Do NOT forget this! (and then restart your Terminal)
+            }
+            @Step {
+                Install Firebase Tools globally:
+                ----
+                `npm install -g firebase-tools`
+            }
+        }
+    }
     
     @Section(title: "Starting on an issue") {
         @ContentAndMedia {
@@ -105,46 +152,6 @@
                 The `feature-name` part of the branch can be shortened or omitted and you add your username instead. No commits should be made to the `main` branch directly. The `main` branch shall only consist of the deployed code. Developers are expected to work on feature branches, and upon successful development and testing, a PR (pull request) must be opened to merge with `dev`. `git checkout -b issueNumber-feature-name`
                 
                 @Image(source: 8-checkout.png, alt: "Checkout issue locally")
-            }
-        }
-    }
-
-    @Section(title: "Setting Up Firebase Local Emulator") {
-        @ContentAndMedia {
-            Follow these steps to set up the Firebase Local Emulator to load data locally and not affect production. Please do not skip this step.
-        }
-
-        @Steps {
-            @Step {
-                Install Homebrew, a package manager for macOS, if you haven't already:
-                `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-            }
-            @Step {
-                Install Xcode command line tools:
-                `xcode-select --install`
-            }
-            @Step {
-                Install Node Version Manager (NVM):
-                `brew install nvm`
-                Installs node version manager, so you don't need to update the system node version.
-            }
-            @Step {
-                Add the executable to the `$PATH` via `.zshrc` or `.bashrc` file as prompted after installation. Do NOT forget this! (and then restart your Terminal)
-            }
-            @Step {
-                Download and use the latest stable version of Node.js:
-                `nvm install stable`
-                `nvm use stable`
-            }
-            @Step {
-                Install OpenJDK:
-                `brew install openjdk`
-                Add the executable to the `$PATH` via `.zshrc` or `.bashrc` file as prompted after installation. Do NOT forget this! (and then restart your Terminal)
-            }
-            @Step {
-                Install Firebase Tools globally:
-                `npm install -g firebase-tools`
-                Installs the Firebase tools for running the emulator.
             }
         }
     }
