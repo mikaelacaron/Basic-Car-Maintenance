@@ -36,32 +36,33 @@ PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 
 * Setup the Firebase emulator:
   * Install Homebrew
-      *  ```bash
-         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-         ```
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
   * Install Xcode command line tools
-      *  ```bash
-         xcode-select --install
-         ```
+```
+xcode-select --install
+```
   * Install Node Version Manager (NVM)
-      *  ```bash
-         brew install nvm
-         ```
-      *  After installation, add the executable to your ```$PATH``` via your ```.zshrc``` or ```.bashrc``` file, and restart your Terminal as prompted.
+```
+brew install nvm
+```
+  *  After installation, add the executable to your ```$PATH``` via your ```.zshrc``` or ```.bashrc``` file, and restart your Terminal as prompted.
   * Install the latest stable version of Node
-      *  ```bash
-         nvm install stable
-         nvm use stable
-         ```
+```
+nvm install stable
+nvm use stable
+```
   * Install OpenJDK
-      *  ```bash
-         brew install openjdk
-         ```
+```bash
+brew install openjdk
+ ```
   * Install Firebase tools
-      *   ```bash
-          npm install -g firebase-tools
-          ```
-      * This installs the Firebase tools necessary for running the emulator.
+ ```bash
+ npm install -g firebase-tools
+ ```
+  * This installs the Firebase tools necessary for running the emulator.
+
 > [!WARNING]
 > DO **NOT** skip setting up the emulators! or your app won't work
 
