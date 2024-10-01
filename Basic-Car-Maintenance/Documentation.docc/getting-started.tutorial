@@ -136,7 +136,7 @@
         }
     }
     
-    @Section(title: "Starting on an issue") {
+    @Section(title: "Start Working on an Issue") {
         @ContentAndMedia {
             **BEFORE** starting on an issue, comment on the issue you want to work on.
 
@@ -152,6 +152,19 @@
                 The `feature-name` part of the branch can be shortened or omitted and you add your username instead. No commits should be made to the `main` branch directly. The `main` branch shall only consist of the deployed code. Developers are expected to work on feature branches, and upon successful development and testing, a PR (pull request) must be opened to merge with `dev`. `git checkout -b issueNumber-feature-name`
                 
                 @Image(source: 8-checkout.png, alt: "Checkout issue locally")
+            }
+            @Step {
+                Anytime you run the project, first navigate in Terminal to the `backend` directory (the directory with the `firebase.json` file) before starting the Firebase Emulator.
+                ___
+                `cd backend`
+            }
+            @Step {
+                Start the Firebase Emulator:
+                ___
+                `firebase emulators:start --import=./local-data --export-on-exit`
+            }
+            @Step {
+                When your feature or fix is complete, open a pull request (PR) from your feature branch to the `dev` branch. Make sure to use a descriptive PR title and fill out the entire PR template without deleting any sections.
             }
         }
     }
