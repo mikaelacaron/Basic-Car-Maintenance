@@ -75,23 +75,23 @@ class DashboardViewModel {
 
         if let userUID = userUID {
             let db = Firestore.firestore()
-            
-            let docRef = db.collectionGroup(FirestoreCollection.maintenanceEvents)
-                .whereField(FirestoreField.userID, isEqualTo: userUID)
-            
-            let querySnapshot = try? await docRef.getDocuments()
-            
-            var events = [MaintenanceEvent]()
-            
-            if let querySnapshot {
+            do {
+                let docRef = db.collectionGroup(FirestoreCollection.maintenanceEvents)
+                    .whereField(FirestoreField.userID, isEqualTo: userUID)
+                
+                let querySnapshot = try await docRef.getDocuments()
+                
+                var events = [MaintenanceEvent]()
+                
                 for document in querySnapshot.documents {
                     if let event = try? document.data(as: MaintenanceEvent.self) {
                         events.append(event)
                     }
                 }
-                
                 self.isLoading = false
                 self.events = events
+            } catch {
+                self.isLoading = false
             }
         }
     }
