@@ -3,7 +3,7 @@
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mikaelacaron/Basic-Car-Maintenance/dev?logo=github)
 ![GitHub contributors](https://img.shields.io/github/contributors/mikaelacaron/Basic-Car-Maintenance)
 [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](https://www.firsttimersonly.com/)
-[![Unit Tests](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml/badge.svg?event=push)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml)
+[![Unit Tests]()](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml)
 [![Deploy DocC Documentation](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml/badge.svg?branch=dev)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml)
 
 Welcome to my open source app! It is ready for contributors for [Hacktoberfest](https://hacktoberfest.com/)! Use this app to gain experience getting started in open source for iOS and macOS development using Swift and SwiftUI.
@@ -34,34 +34,7 @@ PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 
 * Build the project ✅
 
-* Setup the Firebase emulator:
-  * Install Homebrew
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-  * Install Xcode command line tools
-```
-xcode-select --install
-```
-  * Install Node Version Manager (NVM)
-```
-brew install nvm
-```
-  *  After installation, add the executable to your ```$PATH``` via your ```.zshrc``` or ```.bashrc``` file, and restart your Terminal as prompted.
-  * Install the latest stable version of Node
-```
-nvm install stable
-nvm use stable
-```
-  * Install OpenJDK
-```bash
-brew install openjdk
- ```
-  * Install Firebase tools
- ```bash
- npm install -g firebase-tools
- ```
-  * This installs the Firebase tools necessary for running the emulator.
+* Setup the Firebase emulator, following the steps in [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/dev/CONTRIBUTING.md#setup-the-firebase-Emulator)
 
 > [!WARNING]
 > DO **NOT** skip setting up the emulators! or your app won't work
