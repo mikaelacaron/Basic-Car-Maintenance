@@ -97,18 +97,19 @@
         @Steps {
             @Step {
                 Install Homebrew, a package manager for macOS, if you haven't already:
+                ___
                 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
             }
             @Step {
                 Install Xcode command line tools:
-                ---
+                ___
                 `xcode-select --install`
             }
             @Step {
                 Install Node Version Manager (NVM):
-                ---
+                ___
                 `brew install nvm`
-                ---
+                ___
                 Installs node version manager, so you don't need to update the system node version.
             }
             @Step {
@@ -116,21 +117,21 @@
             }
             @Step {
                 Download and use the latest stable version of Node.js:
-                ---
+                ___
                 `nvm install stable`
-                ---
+                ___
                 `nvm use stable`
             }
             @Step {
                 Install OpenJDK:
-                ---
+                ___
                 `brew install openjdk`
-                ---
+                ___
                 Add the executable to the `$PATH` via `.zshrc` or `.bashrc` file as prompted after installation. Do NOT forget this! (and then restart your Terminal)
             }
             @Step {
                 Install Firebase Tools globally:
-                ----
+                ___
                 `npm install -g firebase-tools`
             }
         }
