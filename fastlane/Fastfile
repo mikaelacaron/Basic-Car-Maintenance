@@ -33,7 +33,7 @@ platform :ios do
 			only_testing: "Basic-Car-Maintenance-Tests",
 			clean: true,
 			code_coverage: true,
-			device: "iPhone 15 Pro",
+			device: "iPhone 16 Pro",
 			skip_build: true,
 			xcodebuild_formatter: 'xcbeautify -qq --is-ci --renderer github-actions',
 			output_types: 'junit',
