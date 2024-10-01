@@ -14,6 +14,7 @@ opt_in_rules: # some rules are turned off by default, so you need to opt-in
   - for_where
   - force_try
   - private_over_fileprivate
+  - private_swiftui_state
 
 # Alternatively, specify all rules explicitly by uncommenting this option:
 # only_rules: # delete `disabled_rules` & `opt_in_rules` if using this

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChooseAppIconView: View {
-    @State var viewModel: ChooseAppIconViewModel = .init()
+    @State private var viewModel: ChooseAppIconViewModel = .init()
     
     private func isSelected(_ icon: AppIcon) -> Bool {
         return viewModel.selectedAppIcon == icon
@@ -18,6 +18,11 @@ struct ChooseAppIconView: View {
         GridItem(.flexible(minimum: 30, maximum: 300)),
         GridItem(.flexible(minimum: 30, maximum: 300))
     ]
+    
+    init(viewModel: ChooseAppIconViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
         Form {
             Section {

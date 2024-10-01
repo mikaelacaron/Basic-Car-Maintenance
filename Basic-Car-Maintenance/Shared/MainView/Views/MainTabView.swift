@@ -53,8 +53,8 @@ struct MainTabView: View {
     @State private var selectedTabId: TabSelection.ID? = .dashboard
     @State private var columnVisibility = NavigationSplitViewVisibility.automatic
     
-    @State var authenticationViewModel = AuthenticationViewModel()
-    @State var viewModel = MainTabViewModel()
+    @State private var authenticationViewModel = AuthenticationViewModel()
+    @State private var viewModel = MainTabViewModel()
     
     init() {
         _selectedTabId = State(initialValue: selectedTab)
