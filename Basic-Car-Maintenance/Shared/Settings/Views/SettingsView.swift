@@ -248,6 +248,7 @@ struct SettingsView: View {
                     showDeleteVehicleAlert = false
                 }
             } message: {
+                // swiftlint:disable:next line_length
                 Text("The last vehicle can't be deleted. Please add a new vehicle before removing this one.", comment: "Alert message preventing users from deleting their last vehicle")
             }
             .navigationTitle(Text("Settings", comment: "Label to display settings."))

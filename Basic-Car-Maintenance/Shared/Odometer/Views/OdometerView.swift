@@ -79,6 +79,7 @@ struct OdometerView: View {
             }
             .sheet(isPresented: $viewModel.isShowingEditReadingView) {
                 if let selectedReading = viewModel.selectedReading {
+                    // swiftlint:disable:next line_length
                     EditOdometerReadingView(selectedReading: selectedReading, vehicles: viewModel.vehicles) { updatedReading in
                         viewModel.updateOdometerReading(updatedReading)
                     }
