@@ -86,15 +86,16 @@ struct EditVehicleView: View, Observable {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         if let selectedVehicle {
-                            var vehicle = Vehicle(
+                            let vehicle = Vehicle(
+                                id: selectedVehicle.id,
                                 name: name,
                                 make: make,
                                 model: model,
                                 year: year,
                                 color: color,
                                 vin: VIN,
-                                licensePlateNumber: licensePlateNumber)
-                            vehicle.id = selectedVehicle.id
+                                licensePlateNumber: licensePlateNumber
+                            )
                             Task {
                                 await viewModel.updateVehicle(vehicle)
                                 dismiss()
