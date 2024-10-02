@@ -11,7 +11,7 @@ This app will be deployed on the Apple App Store, available for iOS 17.0 or late
 
 # Getting Started
 ## Prerequisites
-* Download Xcode 15.0 or later (preferred to use Xcode 16 or later)
+* Download Xcode 16.0 or later
 * Install [SwiftLint](https://github.com/realm/SwiftLint) onto your machine via [Homebrew](https://brew.sh/)
    * This is not a requirement, but is preferred.
 ```sh

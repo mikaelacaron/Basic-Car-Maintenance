@@ -4,7 +4,7 @@ All about the Firebase Firestore data structure
 
 ![Firestore Diagram with sub-collections](FirestoreDiagram.png)
 
-### _alerts_
+### alerts
 
 The alerts collection contains system level alerts that will be visible to all users. The alerts
 will only be displayed to the user once.
