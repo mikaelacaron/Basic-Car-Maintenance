@@ -1,4 +1,4 @@
-@Tutorial(time: 15) {
+@Tutorial(time: 20) {
     @Intro(title: "How to Contribute to this Project") {
         Here's instructions on how to prepare, fork, clone, configure, build and contribute to this project. This tutorial uses the [GitHub CLI](https://cli.github.com/)
         
@@ -20,7 +20,7 @@
                 Read the CONTRIBUTING guidelines
             }
             @Step {
-                Download [Xcode 15.0](https://developer.apple.com/xcode/resources/) or later.
+                Download [Xcode 16.0](https://developer.apple.com/xcode/resources/) or later.
                 
             }
             @Step {
