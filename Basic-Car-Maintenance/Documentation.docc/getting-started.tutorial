@@ -89,7 +89,7 @@
         }
     }
 
-         @Section(title: "Setting Up Firebase Local Emulator") {
+    @Section(title: "Setting Up Firebase Local Emulator") {
         @ContentAndMedia {
             Follow these steps to set up the Firebase Local Emulator to load data locally and not affect production. Please do not skip this step.
         }
@@ -97,41 +97,41 @@
         @Steps {
             @Step {
                 Install Homebrew, a package manager for macOS, if you haven't already:
-                
-                ` /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" `
+
+                `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
             }
             @Step {
                 Install Xcode command line tools:
-                
+
                 `xcode-select --install`
             }
             @Step {
                 Install Node Version Manager (NVM):
-                
+
                 `brew install nvm`
-                
-                Installs Node Version Manager, so you don't need to update the system node version.
+
+                Installs node version manager, so you don't need to update the system node version.
             }
             @Step {
-                Add the executable to the `$PATH` via `.zshrc` or `.bashrc` file as prompted after installation. Do NOT forget this! (Restart your Terminal afterward.)
+                Add the executable to the `$PATH` via `.zshrc` or `.bashrc` file as prompted after installation. Do NOT forget this! (and then restart your Terminal)
             }
             @Step {
                 Download and use the latest stable version of Node.js:
-                
+
                 `nvm install stable`
-                
+
                 `nvm use stable`
             }
             @Step {
                 Install OpenJDK:
-                
+
                 `brew install openjdk`
-                
-                Add the executable to the `$PATH` via `.zshrc` or `.bashrc` file as prompted after installation. Do NOT forget this! (Restart your Terminal afterward.)
+
+                Add the executable to the `$PATH` via `.zshrc` or `.bashrc` file as prompted after installation. Do NOT forget this! (and then restart your Terminal)
             }
             @Step {
                 Install Firebase Tools globally:
-                
+
                 `npm install -g firebase-tools`
             }
         }
@@ -142,24 +142,26 @@
             **BEFORE** starting on an issue, comment on the issue you want to work on.
 
             This prevents two people from working on the same issue. [Mikaela](https://github.com/mikaelacaron) (the maintainer) will assign you that issue, and you can get started on it.
+
+            @Image(source: 7-issue.png, alt: "GitHub issue")
         }
         
         @Steps {
             @Step {
                 Checkout a new branch (from the `dev` branch) to work on an issue. 
                 
-                The `feature-name` part of the branch can be shortened or omitted, and you can add your username instead. No commits should be made to the `main` branch directly. The `main` branch shall only consist of the deployed code. Developers are expected to work on feature branches, and upon successful development and testing, a PR (pull request) must be opened to merge with `dev`.
+                The `feature-name` part of the branch can be shortened or omitted and you add your username instead. No commits should be made to the `main` branch directly. The `main` branch shall only consist of the deployed code. Developers are expected to work on feature branches, and upon successful development and testing, a PR (pull request) must be opened to merge with `dev`. `git checkout -b issueNumber-feature-name`
                 
-                `git checkout -b issueNumber-feature-name`
+                @Image(source: 8-checkout.png, alt: "Checkout issue locally")
             }
             @Step {
                 Anytime you run the project, first navigate in Terminal to the `backend` directory (the directory with the `firebase.json` file) before starting the Firebase Emulator.
-                
+
                 `cd backend`
             }
             @Step {
                 Start the Firebase Emulator:
-                
+
                 `firebase emulators:start --import=./local-data --export-on-exit`
             }
             @Step {
