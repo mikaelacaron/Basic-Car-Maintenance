@@ -9,7 +9,7 @@ import XCTest
 
 final class BasicCarMaintenanceUITests: XCTestCase {
     
-    let app = XCUIApplication()
+    private let app = XCUIApplication()
     
     override func setUp() {
         continueAfterFailure = false
