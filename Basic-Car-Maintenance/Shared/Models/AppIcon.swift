@@ -9,11 +9,11 @@ import UIKit
 
 enum AppIcon: String, CaseIterable, Identifiable {
     case primary = "AppIcon"
-    case carDark = "AppIcon-car-dark"
-    case carRed = "AppIcon-car-red"
-    case carYellow = "AppIcon-car-yellow"
-    case carBlack = "AppIcon-car-black"
-    case carOrange = "AppIcon-car-orange"
+    case carDark = "AppIcon-Car-Dark"
+    case carRed = "AppIcon-Car-Red"
+    case carYellow = "AppIcon-Car-Yellow"
+    case carBlack = "AppIcon-Car-Black"
+    case carOrange = "AppIcon-Car-Orange"
     
     var id: String { rawValue }
     
@@ -46,7 +46,20 @@ enum AppIcon: String, CaseIterable, Identifiable {
         }
     }
     
-    var preview: UIImage {
-        UIImage(named: rawValue) ?? UIImage()
+    var imageResource: ImageResource {
+        switch self {
+        case .primary:
+            return .appIcon
+        case .carDark:
+            return .appIconImageCarDark
+        case .carRed:
+            return .appIconImageCarRed
+        case .carYellow:
+            return .appIconImageCarYellow
+        case .carBlack:
+            return .appIconImageCarBlack
+        case .carOrange:
+            return .appIconImageCarOrange
+        }
     }
 }
