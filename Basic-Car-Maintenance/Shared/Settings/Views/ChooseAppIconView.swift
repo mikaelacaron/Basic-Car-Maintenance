@@ -63,9 +63,8 @@ extension ChooseAppIconView {
                 }
                 Image(uiImage: icon.preview)
                     .resizable()
-                    .frame(width: 64, height: 64)
                     .aspectRatio(contentMode: .fit)
-                    .clipShape(.rect(cornerRadius: 14))
+                    .clipShape(.rect(cornerRadius: 20))
             }
         }
     }
