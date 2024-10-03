@@ -61,7 +61,7 @@ extension ChooseAppIconView {
                     Text(icon.description)
                     Spacer()
                 }
-                Image(icon.imageResource)
+                Image(uiImage: icon.preview)
                     .resizable()
                     .frame(width: 64, height: 64)
                     .aspectRatio(contentMode: .fit)
