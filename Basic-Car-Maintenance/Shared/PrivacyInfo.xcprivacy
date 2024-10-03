@@ -1,12 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   PrivacyInfo.xcprivacy
-   Basic-Car-Maintenance
-
-   Created by Mikaela Caron on 7/26/24.
-   Copyright (c) 2024 Icy App Studio LLC. All rights reserved.
--->
 <plist version="1.0">
-<dict/>
+    <dict>
+        <key>NSPrivacyAccessedAPITypes</key>
+        <array>
+            <dict>
+                <key>NSPrivacyAccessedAPIType</key>
+                <string>NSPrivacyAccessedAPICategoryUserDefaults</string>
+                <key>NSPrivacyAccessedAPITypeReasons</key>
+                <array>
+                     <string>CA92.1</string>
+                </array>
+            </dict>
+        </array>
+        <key>NSPrivacyCollectedDataTypes</key>
+        <array>
+            <dict>
+                <key>NSPrivacyCollectedDataType</key>
+                <string>NSPrivacyCollectedDataTypeName</string>
+                 <key>NSPrivacyCollectedDataTypeLinked</key>
+                 <false />
+                <key>NSPrivacyCollectedDataTypePurposes</key>
+                <array>
+                    <string>
+                        NSPrivacyCollectedDataTypePurposeAppFunctionality
+                    </string>
+                </array>
+            </dict>
+            <dict>
+                <key>NSPrivacyCollectedDataType</key>
+                <string>NSPrivacyCollectedDataTypeEmailAddress</string>
+                 <key>NSPrivacyCollectedDataTypeLinked</key>
+                 <false />
+                <key>NSPrivacyCollectedDataTypePurposes</key>
+                <array>
+                    <string>
+                        NSPrivacyCollectedDataTypePurposeAppFunctionality
+                    </string>
+                </array>
+            </dict>
+            <dict>
+                <key>NSPrivacyCollectedDataType</key>
+                <string>NSPrivacyCollectedDataTypePhoneNumber</string>
+                 <key>NSPrivacyCollectedDataTypeLinked</key>
+                 <false />
+                <key>NSPrivacyCollectedDataTypePurposes</key>
+                <array>
+                    <string>
+                        NSPrivacyCollectedDataTypePurposeAppFunctionality
+                    </string>
+                </array>
+            </dict>
+            <dict>
+                <key>NSPrivacyCollectedDataType</key>
+                <string>NSPrivacyCollectedDataTypePhotosorVideos</string>
+                 <key>NSPrivacyCollectedDataTypeLinked</key>
+                 <false />
+                <key>NSPrivacyCollectedDataTypePurposes</key>
+                <array>
+                </array>
+            </dict>
+            <dict>
+                <key>NSPrivacyCollectedDataType</key>
+                <string>NSPrivacyCollectedDataTypeUserID</string>
+                 <key>NSPrivacyCollectedDataTypeLinked</key>
+                 <false />
+                <key>NSPrivacyCollectedDataTypePurposes</key>
+                <array>
+                    <string>
+                        NSPrivacyCollectedDataTypePurposeAppFunctionality
+                    </string>
+                </array>
+            </dict>
+        </array>
+      
+    </dict>
 </plist>
