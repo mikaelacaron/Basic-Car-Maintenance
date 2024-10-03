@@ -166,7 +166,7 @@ struct SettingsView: View {
                     }
                     
                     NavigationLink {
-                        ChooseAppIconView(viewModel: ChooseAppIconViewModel())
+                        ChooseAppIconView()
                     } label: {
                         Label("Change App Icon", systemImage: SFSymbol.iPhoneWithApps)
                     }

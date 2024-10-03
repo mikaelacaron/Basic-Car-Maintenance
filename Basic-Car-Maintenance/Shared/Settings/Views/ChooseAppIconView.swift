@@ -19,10 +19,6 @@ struct ChooseAppIconView: View {
         GridItem(.flexible(minimum: 30, maximum: 300))
     ]
     
-    init(viewModel: ChooseAppIconViewModel) {
-        self.viewModel = viewModel
-    }
-    
     var body: some View {
         Form {
             Section {
@@ -76,5 +72,5 @@ extension ChooseAppIconView {
 }
 
 #Preview {
-    ChooseAppIconView(viewModel: .init())
+    ChooseAppIconView()
 }
