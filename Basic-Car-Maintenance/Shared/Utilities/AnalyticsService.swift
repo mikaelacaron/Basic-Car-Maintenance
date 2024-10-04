@@ -2,7 +2,8 @@
 //  AnalyticsService.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Mikaela Caron on 11/11/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import Foundation
