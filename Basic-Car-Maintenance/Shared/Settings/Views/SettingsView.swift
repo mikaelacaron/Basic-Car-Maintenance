@@ -2,7 +2,8 @@
 //  SettingsView.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Mikaela Caron on 8/19/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import SwiftUI

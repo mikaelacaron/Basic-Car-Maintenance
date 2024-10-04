@@ -2,7 +2,8 @@
 //  OdometerReading.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Nate Schaffner on 10/15/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import Foundation

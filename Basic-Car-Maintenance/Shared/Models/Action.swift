@@ -2,7 +2,8 @@
 //  Action.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Omar Hegazy on 05/10/2023.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import UIKit

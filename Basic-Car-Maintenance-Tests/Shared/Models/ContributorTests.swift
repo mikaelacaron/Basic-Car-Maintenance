@@ -2,7 +2,8 @@
 //  ContributorTests.swift
 //  Basic-Car-Maintenance-Tests
 //
-//  Created by Drag0ndust on 07.10.23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import Foundation

@@ -2,7 +2,8 @@
 //  WelcomeViewAddVehicle.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Marcin Jędrzejak on 09/01/2024.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import SwiftUI
