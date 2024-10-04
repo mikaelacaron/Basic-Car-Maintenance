@@ -2,7 +2,8 @@
 //  Contributor.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Yashraj jadhav on 01/10/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import Foundation
