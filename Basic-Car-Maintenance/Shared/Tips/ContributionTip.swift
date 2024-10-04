@@ -2,7 +2,8 @@
 //  ContributionTip.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Sandro Dahl on 24.10.23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import TipKit

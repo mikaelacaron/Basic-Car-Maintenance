@@ -2,7 +2,8 @@
 //  EditVehicleView.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Traton Gossink on 11/6/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import SwiftUI
