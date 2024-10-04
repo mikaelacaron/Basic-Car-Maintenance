@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import FirebaseFirestoreSwift
+import FirebaseFirestore
 import SwiftData
 
 struct AlertItem: Codable, Identifiable {

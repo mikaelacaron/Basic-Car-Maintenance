@@ -93,10 +93,15 @@ struct EditOdometerReadingView: View {
 }
 
 #Preview {
+    @Previewable @State var sampleVehicles = [
+        Vehicle(id: "1", name: "Nate Forester", make: "Subaru", model: "Forester")
+    ]
+    @Previewable @State var sampleReading = OdometerReading(date: Date(),
+                                               distance: 100,
+                                               isMetric: false,
+                                               vehicleID: "1")
+
     EditOdometerReadingView(
-        selectedReading: OdometerReading(date: Date(),
-                                         distance: 0,
-                                         isMetric: false,
-                                         vehicleID: ""),
-        vehicles: []) { _ in }
+        selectedReading: sampleReading,
+        vehicles: sampleVehicles) { _ in }
 }

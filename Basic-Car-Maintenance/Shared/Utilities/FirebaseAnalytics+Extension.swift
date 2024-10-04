@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import FirebaseAnalyticsSwift
+import FirebaseAnalytics
 
 struct FirebaseAnalyticsModifier: ViewModifier {
     

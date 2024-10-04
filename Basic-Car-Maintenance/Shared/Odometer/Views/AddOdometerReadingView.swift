@@ -88,10 +88,11 @@ struct AddOdometerReadingView: View {
 }
 
 #Preview {
-    AddOdometerReadingView(vehicles: sampleVehicles) { _ in }
+    @Previewable @State var sampleVehicle = [
+        Vehicle(id : "1" , name: "Nate Forester", make: "Subaru", model: "Forester"),
+        Vehicle( id : "2" , name: "Dani Impreza", make: "Subaru", model: "Impreza")
+    ]
+
+    AddOdometerReadingView(vehicles: sampleVehicle) { _ in }
 }
 
-let sampleVehicle = [
-    Vehicle(name: "Nate Forester", make: "Subaru", model: "Forester"),
-    Vehicle(name: "Dani Impreza", make: "Subaru", model: "Impreza")
-]
