@@ -37,6 +37,7 @@ opt_in_rules: # some rules are turned off by default, so you need to opt-in
   - overridden_super_call
   - period_spacing
   - private_over_fileprivate
+  - private_swiftui_state
   - syntactic_sugar
   - test_case_accessibility
   - trailing_comma
