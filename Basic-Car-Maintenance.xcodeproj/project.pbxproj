@@ -188,7 +188,6 @@
 				FF5D139F2A86C2D600BC9BD6 /* Sources */,
 				FF5D13A02A86C2D600BC9BD6 /* Frameworks */,
 				FF5D13A12A86C2D600BC9BD6 /* Resources */,
-				FF748B5A2AB34A61004748A5 /* SwiftLintScript */,
 				FFDADF8F2ACD35A200DDEF79 /* Embed Foundation Extensions */,
 				FF50DDC22B07DF0C00E87362 /* ShellScript */,
 			);
@@ -394,25 +393,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
-		};
-		FF748B5A2AB34A61004748A5 /* SwiftLintScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLintScript;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
