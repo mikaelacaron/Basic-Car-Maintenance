@@ -98,10 +98,9 @@ struct AddMaintenanceView: View {
 }
 
 #Preview {
-    AddMaintenanceView(vehicles: sampleVehicles) { _ in }
+    @Previewable @State var sampleVehicle = [
+        Vehicle(id : "1" , name: "Lexus", make: "Lexus", model: "White"),
+        Vehicle( id : "2" , name: "Dani Impreza", make: "Subaru", model: "Impreza")
+    ]
+    AddMaintenanceView(vehicles: sampleVehicle) { _ in }
 }
-
-let sampleVehicles = [
-    Vehicle(name: "Lexus", make: "Lexus", model: "White"),
-    Vehicle(name: "Test", make: "Lexus", model: "White")
-]
