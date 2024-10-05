@@ -127,6 +127,7 @@
                 `brew install openjdk` 
             }
             @Step {
+                The latest version of firebase-tools requires a JDK of 11 or greater. You can download the latest version here [JDK23](https://www.oracle.com/java/technologies/downloads/#jdk23-mac)
                 Install Firebase Tools for running the emulator.
 
                 `npm install -g firebase-tools`
