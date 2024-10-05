@@ -3,61 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 71;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */; };
-		0CA7ED092AE82BF100609019 /* ContributionTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA7ED082AE82BF100609019 /* ContributionTip.swift */; };
-		154984AA2AD9CAEE0015594C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154984A92AD9CAEE0015594C /* Constants.swift */; };
-		57CDD99E2ADC3173002EFED0 /* OdometerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD99D2ADC3173002EFED0 /* OdometerViewModel.swift */; };
-		57CDD9A02ADC31A8002EFED0 /* AddOdometerReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */; };
-		57CDD9A42ADC320F002EFED0 /* OdometerReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDD9A32ADC320F002EFED0 /* OdometerReading.swift */; };
-		637505482AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637505472AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift */; };
-		8014A4CF2AD75928005B51F6 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4CE2AD75928005B51F6 /* AppIcon.swift */; };
-		8014A4D12AD76034005B51F6 /* ChooseAppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */; };
-		8014A4D32AD77C92005B51F6 /* ChooseAppIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */; };
-		898009792AD1899700604E7C /* ContributorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898009782AD1899700604E7C /* ContributorTests.swift */; };
-		8A3D74862AD6D9A10000FEEB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D74852AD6D9A10000FEEB /* AlertView.swift */; };
-		8A3D748A2AD9C3E00000FEEB /* MainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D74892AD9C3E00000FEEB /* MainTabViewModel.swift */; };
-		8A3D748C2AD9C41D0000FEEB /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3D748B2AD9C41D0000FEEB /* AlertItem.swift */; };
-		8AEE816F2ACF37F800FC0C2A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE816E2ACF37F800FC0C2A /* Action.swift */; };
-		8AEE81722ACF384D00FC0C2A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE81712ACF384D00FC0C2A /* MainTabView.swift */; };
-		E4345E622B4CDA7B0086D04B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4345E612B4CDA7B0086D04B /* WelcomeView.swift */; };
-		E4345E642B4CE0500086D04B /* WelcomeViewAddVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4345E632B4CE0500086D04B /* WelcomeViewAddVehicle.swift */; };
-		E55B630D2B079E5A006BDDDF /* EditVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55B630C2B079E5A006BDDDF /* EditVehicleView.swift */; };
-		E58499662ACDDA8B00634660 /* ContributorsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499652ACDDA8B00634660 /* ContributorsListView.swift */; };
-		E58499682ACDDA9A00634660 /* ContributorsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */; };
-		E584996A2ACDDAFF00634660 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499692ACDDAFF00634660 /* Contributor.swift */; };
-		FF09FC912AB6FF44006BE61A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */; };
-		FF218EF62B00865F0025A533 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF218EF52B00865F0025A533 /* AnalyticsService.swift */; };
-		FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3DDF512AA4D28F009D91C4 /* DashboardViewModel.swift */; };
-		FF50DDFB2B12944900E87362 /* EditOdometerReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50DDFA2B12944900E87362 /* EditOdometerReadingView.swift */; };
-		FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */; };
-		FF5D13AB2A86C2D800BC9BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */; };
-		FF5D13AF2A86C2D800BC9BD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5D13AE2A86C2D800BC9BD6 /* Preview Assets.xcassets */; };
-		FF5D13C32A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13C22A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift */; };
-		FF748B5E2AB3589C004748A5 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF748B5D2AB3589C004748A5 /* AuthenticationViewModel.swift */; };
-		FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B3B2A908E3E00F49A13 /* DashboardView.swift */; };
-		FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B3D2A908E7A00F49A13 /* SettingsView.swift */; };
-		FF755B432A90915E00F49A13 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FF755B422A90915E00F49A13 /* Localizable.xcstrings */; };
-		FF755B462A90969D00F49A13 /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B452A90969D00F49A13 /* Bundle+extension.swift */; };
-		FF755B492A909A0000F49A13 /* AddMaintenanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */; };
-		FFAA56ED2AC8905C000120EE /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = FFAA56EC2AC8905C000120EE /* Documentation.docc */; };
-		FFBFE0912A98EFEC000A9BEB /* MaintenanceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */; };
-		FFBFE0932A98F212000A9BEB /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0922A98F212000A9BEB /* Vehicle.swift */; };
-		FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */; };
-		FFC67D1D2AAEF7920073B338 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC67D1C2AAEF7920073B338 /* SettingsViewModel.swift */; };
-		FFC8CDA42AA385E800D129A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */; };
+		FF153AFF2B07C3E000D0BA30 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */; };
+		FF4E82BE2AD39863004949AF /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */; };
+		FF4E82C02AD39863004949AF /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BF2AD39863004949AF /* FirebaseRemoteConfigSwift */; };
+		FF4E82C22AD39863004949AF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82C12AD39863004949AF /* FirebaseStorage */; };
+		FFC8CDA72AA3867A00D129A6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDA62AA3867A00D129A6 /* FirebaseAnalytics */; };
+		FFC8CDA92AA3867A00D129A6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDA82AA3867A00D129A6 /* FirebaseAnalyticsSwift */; };
+		FFC8CDAB2AA3867A00D129A6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDAA2AA3867A00D129A6 /* FirebaseAuth */; };
+		FFC8CDAD2AA3867A00D129A6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDAC2AA3867A00D129A6 /* FirebaseFirestore */; };
+		FFC8CDAF2AA3867A00D129A6 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDAE2AA3867A00D129A6 /* FirebaseFirestoreSwift */; };
 		FFC8CDB32AA4226900D129A6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC8CDB22AA4226900D129A6 /* AdSupport.framework */; };
 		FFDADF7F2ACD35A100DDEF79 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDADF7E2ACD35A100DDEF79 /* WidgetKit.framework */; };
 		FFDADF812ACD35A100DDEF79 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDADF802ACD35A100DDEF79 /* SwiftUI.framework */; };
-		FFDADF842ACD35A100DDEF79 /* BasicCarMaintenanceWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDADF832ACD35A100DDEF79 /* BasicCarMaintenanceWidgetBundle.swift */; };
-		FFDADF862ACD35A100DDEF79 /* BasicCarMaintenanceWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDADF852ACD35A100DDEF79 /* BasicCarMaintenanceWidget.swift */; };
-		FFDADF882ACD35A100DDEF79 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDADF872ACD35A100DDEF79 /* AppIntent.swift */; };
-		FFDADF8A2ACD35A200DDEF79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFDADF892ACD35A200DDEF79 /* Assets.xcassets */; };
 		FFDADF8E2ACD35A200DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FFDADF7D2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FFE0AF562AD66C3500AB46F8 /* OdometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0AF552AD66C3500AB46F8 /* OdometerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,83 +61,57 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventDetailView.swift; sourceTree = "<group>"; };
-		0CA7ED082AE82BF100609019 /* ContributionTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionTip.swift; sourceTree = "<group>"; };
-		154984A92AD9CAEE0015594C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		57CDD99D2ADC3173002EFED0 /* OdometerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdometerViewModel.swift; sourceTree = "<group>"; };
-		57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOdometerReadingView.swift; sourceTree = "<group>"; };
-		57CDD9A32ADC320F002EFED0 /* OdometerReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdometerReading.swift; sourceTree = "<group>"; };
-		637505472AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseAnalytics+Extension.swift"; sourceTree = "<group>"; };
-		8014A4CE2AD75928005B51F6 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
-		8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppIconView.swift; sourceTree = "<group>"; };
-		8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAppIconViewModel.swift; sourceTree = "<group>"; };
-		898009782AD1899700604E7C /* ContributorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorTests.swift; sourceTree = "<group>"; };
-		8A3D74852AD6D9A10000FEEB /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
-		8A3D74892AD9C3E00000FEEB /* MainTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewModel.swift; sourceTree = "<group>"; };
-		8A3D748B2AD9C41D0000FEEB /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
-		8AEE816E2ACF37F800FC0C2A /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		8AEE81712ACF384D00FC0C2A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		8AEE81732ACF394E00FC0C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E4345E612B4CDA7B0086D04B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		E4345E632B4CE0500086D04B /* WelcomeViewAddVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewAddVehicle.swift; sourceTree = "<group>"; };
-		E55B630C2B079E5A006BDDDF /* EditVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVehicleView.swift; sourceTree = "<group>"; };
-		E58499652ACDDA8B00634660 /* ContributorsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsListView.swift; sourceTree = "<group>"; };
-		E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsProfileView.swift; sourceTree = "<group>"; };
-		E58499692ACDDAFF00634660 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
-		FF0813562AD0A83000910EFA /* UITests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UITests.xcconfig; sourceTree = "<group>"; };
-		FF0813572AD0A92700910EFA /* Widget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Widget.xcconfig; sourceTree = "<group>"; };
 		FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Basic-Car-Maintenance.xcconfig"; sourceTree = SOURCE_ROOT; };
-		FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
-		FF218EF52B00865F0025A533 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
-		FF3DDF512AA4D28F009D91C4 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
-		FF50DDFA2B12944900E87362 /* EditOdometerReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOdometerReadingView.swift; sourceTree = "<group>"; };
 		FF5D13A32A86C2D600BC9BD6 /* Basic-Car-Maintenance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic-Car-Maintenance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceApp.swift; sourceTree = "<group>"; };
-		FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FF5D13AC2A86C2D800BC9BD6 /* Basic_Car_Maintenance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Basic_Car_Maintenance.entitlements; sourceTree = "<group>"; };
-		FF5D13AE2A86C2D800BC9BD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FF5D13B42A86C2D800BC9BD6 /* Basic-Car-Maintenance-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Basic-Car-Maintenance-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5D13BE2A86C2D800BC9BD6 /* Basic-Car-Maintenance-UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Basic-Car-Maintenance-UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF5D13C22A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceUITests.swift; sourceTree = "<group>"; };
-		FF748B5D2AB3589C004748A5 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
-		FF755B3B2A908E3E00F49A13 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		FF755B3D2A908E7A00F49A13 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		FF755B422A90915E00F49A13 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		FF755B452A90969D00F49A13 /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
-		FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMaintenanceView.swift; sourceTree = "<group>"; };
 		FFA392762C54738E00A0AD6D /* Basic-Car-Maintenance.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basic-Car-Maintenance.xctestplan"; sourceTree = "<group>"; };
-		FFA392772C547CA300A0AD6D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		FFAA56EC2AC8905C000120EE /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
-		FFBE79BB2AD0A57D0005524E /* UnitTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UnitTests.xcconfig; sourceTree = "<group>"; };
-		FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceEvent.swift; sourceTree = "<group>"; };
-		FFBFE0922A98F212000A9BEB /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
-		FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
-		FFC67D1C2AAEF7920073B338 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFC8CDB22AA4226900D129A6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
-		FFDADF5D2ACCE9AB00DDEF79 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		FFDADF7D2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Basic-Car-Maintenance-WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFDADF7E2ACD35A100DDEF79 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		FFDADF802ACD35A100DDEF79 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		FFDADF832ACD35A100DDEF79 /* BasicCarMaintenanceWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceWidgetBundle.swift; sourceTree = "<group>"; };
-		FFDADF852ACD35A100DDEF79 /* BasicCarMaintenanceWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceWidget.swift; sourceTree = "<group>"; };
-		FFDADF872ACD35A100DDEF79 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
-		FFDADF892ACD35A200DDEF79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FFDADF8B2ACD35A200DDEF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFE0AF552AD66C3500AB46F8 /* OdometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdometerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FF52DEBC2CADE9EF0023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Shared/Info.plist,
+				Shared/PrivacyInfo.xcprivacy,
+			);
+			target = FF5D13A22A86C2D600BC9BD6 /* Basic-Car-Maintenance */;
+		};
+		FF52DEC82CADEA000023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FFDADF7C2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FF52DE902CADE9EF0023F8DE /* Basic-Car-Maintenance */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FF52DEBC2CADE9EF0023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance"; sourceTree = "<group>"; };
+		FF52DEC22CADEA000023F8DE /* Basic-Car-Maintenance-Widget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FF52DEC82CADEA000023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance-Widget"; sourceTree = "<group>"; };
+		FF52DECC2CADEA030023F8DE /* Basic-Car-Maintenance-Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance-Tests"; sourceTree = "<group>"; };
+		FF52DECF2CADEA060023F8DE /* Basic-Car-Maintenance-UITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance-UITests"; sourceTree = "<group>"; };
+		FF52DED52CADEA150023F8DE /* Configurations */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Configurations; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FF5D13A02A86C2D600BC9BD6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80EAB5962CAD85B10035321F /* FirebaseAnalytics in Frameworks */,
-				80EAB59A2CAD85B10035321F /* FirebaseCrashlytics in Frameworks */,
-				80EAB5982CAD85B10035321F /* FirebaseAuth in Frameworks */,
-				80EAB59E2CAD85B10035321F /* FirebaseRemoteConfig in Frameworks */,
-				80EAB5A02CAD85B10035321F /* FirebaseStorage in Frameworks */,
-				80EAB59C2CAD85B10035321F /* FirebaseFirestore in Frameworks */,
+				FF4E82BE2AD39863004949AF /* FirebaseRemoteConfig in Frameworks */,
+				FFC8CDAF2AA3867A00D129A6 /* FirebaseFirestoreSwift in Frameworks */,
+				FFC8CDA92AA3867A00D129A6 /* FirebaseAnalyticsSwift in Frameworks */,
+				FFC8CDAD2AA3867A00D129A6 /* FirebaseFirestore in Frameworks */,
+				FFC8CDAB2AA3867A00D129A6 /* FirebaseAuth in Frameworks */,
+				FFC8CDA72AA3867A00D129A6 /* FirebaseAnalytics in Frameworks */,
+				FF4E82C02AD39863004949AF /* FirebaseRemoteConfigSwift in Frameworks */,
+				FF153AFF2B07C3E000D0BA30 /* FirebaseCrashlytics in Frameworks */,
+				FF4E82C22AD39863004949AF /* FirebaseStorage in Frameworks */,
 				FFC8CDB32AA4226900D129A6 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,119 +142,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CA7ED072AE82BD100609019 /* Tips */ = {
-			isa = PBXGroup;
-			children = (
-				0CA7ED082AE82BF100609019 /* ContributionTip.swift */,
-			);
-			path = Tips;
-			sourceTree = "<group>";
-		};
-		57CDD99B2ADC3150002EFED0 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				FFE0AF552AD66C3500AB46F8 /* OdometerView.swift */,
-				57CDD99F2ADC31A8002EFED0 /* AddOdometerReadingView.swift */,
-				FF50DDFA2B12944900E87362 /* EditOdometerReadingView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		57CDD99C2ADC3159002EFED0 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				57CDD99D2ADC3173002EFED0 /* OdometerViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		898009762AD1897B00604E7C /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				898009772AD1897F00604E7C /* Models */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		898009772AD1897F00604E7C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				898009782AD1899700604E7C /* ContributorTests.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		8A3D74832AD6D9870000FEEB /* MainView */ = {
-			isa = PBXGroup;
-			children = (
-				8A3D74842AD6D9920000FEEB /* Views */,
-				8A3D74882AD9C3B10000FEEB /* ViewModels */,
-			);
-			path = MainView;
-			sourceTree = "<group>";
-		};
-		8A3D74842AD6D9920000FEEB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8AEE81712ACF384D00FC0C2A /* MainTabView.swift */,
-				8A3D74852AD6D9A10000FEEB /* AlertView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		8A3D74882AD9C3B10000FEEB /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				8A3D74892AD9C3E00000FEEB /* MainTabViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		E4345E602B4CDA4F0086D04B /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				E474A3A12B5953A40015DF51 /* Views */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		E474A3A12B5953A40015DF51 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				E4345E612B4CDA7B0086D04B /* WelcomeView.swift */,
-				E4345E632B4CE0500086D04B /* WelcomeViewAddVehicle.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		FF3DDF492AA4386C009D91C4 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				FF755B3B2A908E3E00F49A13 /* DashboardView.swift */,
-				FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */,
-				023057F12ACFAD79006C5A73 /* EditEventDetailView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		FF3DDF502AA4D282009D91C4 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				FF3DDF512AA4D28F009D91C4 /* DashboardViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		FF5D139A2A86C2D500BC9BD6 = {
 			isa = PBXGroup;
 			children = (
 				FFA392762C54738E00A0AD6D /* Basic-Car-Maintenance.xctestplan */,
-				FFBE79BA2AD0A48C0005524E /* Configurations */,
+				FF52DED52CADEA150023F8DE /* Configurations */,
 				FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */,
-				FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */,
-				FFDADF822ACD35A100DDEF79 /* Basic-Car-Maintenance-Widget */,
-				FF5D13B72A86C2D800BC9BD6 /* Basic-Car-Maintenance-Tests */,
-				FF5D13C12A86C2D800BC9BD6 /* Basic-Car-Maintenance-UITests */,
+				FF52DE902CADE9EF0023F8DE /* Basic-Car-Maintenance */,
+				FF52DEC22CADEA000023F8DE /* Basic-Car-Maintenance-Widget */,
+				FF52DECC2CADEA030023F8DE /* Basic-Car-Maintenance-Tests */,
+				FF52DECF2CADEA060023F8DE /* Basic-Car-Maintenance-UITests */,
 				FF5D13A42A86C2D600BC9BD6 /* Products */,
 				FFC8CDB12AA4226900D129A6 /* Frameworks */,
 			);
@@ -335,140 +168,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */ = {
-			isa = PBXGroup;
-			children = (
-				FFAA56EC2AC8905C000120EE /* Documentation.docc */,
-				FF755B412A908F4100F49A13 /* Shared */,
-				FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */,
-				FF5D13AC2A86C2D800BC9BD6 /* Basic_Car_Maintenance.entitlements */,
-				FF5D13AD2A86C2D800BC9BD6 /* Preview Content */,
-			);
-			path = "Basic-Car-Maintenance";
-			sourceTree = "<group>";
-		};
-		FF5D13AD2A86C2D800BC9BD6 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				FF5D13AE2A86C2D800BC9BD6 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		FF5D13B72A86C2D800BC9BD6 /* Basic-Car-Maintenance-Tests */ = {
-			isa = PBXGroup;
-			children = (
-				898009762AD1897B00604E7C /* Shared */,
-			);
-			path = "Basic-Car-Maintenance-Tests";
-			sourceTree = "<group>";
-		};
-		FF5D13C12A86C2D800BC9BD6 /* Basic-Car-Maintenance-UITests */ = {
-			isa = PBXGroup;
-			children = (
-				FF5D13C22A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift */,
-			);
-			path = "Basic-Car-Maintenance-UITests";
-			sourceTree = "<group>";
-		};
-		FF755B3F2A908EC400F49A13 /* Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-				FF3DDF492AA4386C009D91C4 /* Views */,
-				FF3DDF502AA4D282009D91C4 /* ViewModels */,
-			);
-			path = Dashboard;
-			sourceTree = "<group>";
-		};
-		FF755B402A908EC900F49A13 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				FFC67D1E2AAEF7960073B338 /* Views */,
-				FFC67D1F2AAEF7A00073B338 /* ViewModels */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		FF755B412A908F4100F49A13 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				FF755B422A90915E00F49A13 /* Localizable.xcstrings */,
-				FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */,
-				8AEE81732ACF394E00FC0C2A /* Info.plist */,
-				FFA392772C547CA300A0AD6D /* PrivacyInfo.xcprivacy */,
-				FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */,
-				E4345E602B4CDA4F0086D04B /* Onboarding */,
-				8A3D74832AD6D9870000FEEB /* MainView */,
-				FFBFE08F2A98EFDD000A9BEB /* Models */,
-				FF755B3F2A908EC400F49A13 /* Dashboard */,
-				FFE0AF542AD66C1E00AB46F8 /* Odometer */,
-				FF755B402A908EC900F49A13 /* Settings */,
-				0CA7ED072AE82BD100609019 /* Tips */,
-				FF755B442A90968D00F49A13 /* Utilities */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		FF755B442A90968D00F49A13 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				FF755B452A90969D00F49A13 /* Bundle+extension.swift */,
-				154984A92AD9CAEE0015594C /* Constants.swift */,
-				637505472AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift */,
-				FF218EF52B00865F0025A533 /* AnalyticsService.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		FFBE79BA2AD0A48C0005524E /* Configurations */ = {
-			isa = PBXGroup;
-			children = (
-				FFDADF5D2ACCE9AB00DDEF79 /* Project.xcconfig */,
-				FFBE79BB2AD0A57D0005524E /* UnitTests.xcconfig */,
-				FF0813562AD0A83000910EFA /* UITests.xcconfig */,
-				FF0813572AD0A92700910EFA /* Widget.xcconfig */,
-			);
-			path = Configurations;
-			sourceTree = "<group>";
-		};
-		FFBFE08F2A98EFDD000A9BEB /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */,
-				E58499692ACDDAFF00634660 /* Contributor.swift */,
-				FFBFE0922A98F212000A9BEB /* Vehicle.swift */,
-				8AEE816E2ACF37F800FC0C2A /* Action.swift */,
-				8014A4CE2AD75928005B51F6 /* AppIcon.swift */,
-				57CDD9A32ADC320F002EFED0 /* OdometerReading.swift */,
-				8A3D748B2AD9C41D0000FEEB /* AlertItem.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		FFC67D1E2AAEF7960073B338 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				FF755B3D2A908E7A00F49A13 /* SettingsView.swift */,
-				8014A4D02AD76034005B51F6 /* ChooseAppIconView.swift */,
-				FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */,
-				E58499652ACDDA8B00634660 /* ContributorsListView.swift */,
-				E58499672ACDDA9A00634660 /* ContributorsProfileView.swift */,
-				FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */,
-				E55B630C2B079E5A006BDDDF /* EditVehicleView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		FFC67D1F2AAEF7A00073B338 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				FFC67D1C2AAEF7920073B338 /* SettingsViewModel.swift */,
-				FF748B5D2AB3589C004748A5 /* AuthenticationViewModel.swift */,
-				8014A4D22AD77C92005B51F6 /* ChooseAppIconViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		FFC8CDB12AA4226900D129A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,27 +176,6 @@
 				FFDADF802ACD35A100DDEF79 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FFDADF822ACD35A100DDEF79 /* Basic-Car-Maintenance-Widget */ = {
-			isa = PBXGroup;
-			children = (
-				FFDADF832ACD35A100DDEF79 /* BasicCarMaintenanceWidgetBundle.swift */,
-				FFDADF852ACD35A100DDEF79 /* BasicCarMaintenanceWidget.swift */,
-				FFDADF872ACD35A100DDEF79 /* AppIntent.swift */,
-				FFDADF892ACD35A200DDEF79 /* Assets.xcassets */,
-				FFDADF8B2ACD35A200DDEF79 /* Info.plist */,
-			);
-			path = "Basic-Car-Maintenance-Widget";
-			sourceTree = "<group>";
-		};
-		FFE0AF542AD66C1E00AB46F8 /* Odometer */ = {
-			isa = PBXGroup;
-			children = (
-				57CDD99B2ADC3150002EFED0 /* Views */,
-				57CDD99C2ADC3159002EFED0 /* ViewModels */,
-			);
-			path = Odometer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -519,14 +197,20 @@
 			dependencies = (
 				FFDADF8D2ACD35A200DDEF79 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				FF52DE902CADE9EF0023F8DE /* Basic-Car-Maintenance */,
+			);
 			name = "Basic-Car-Maintenance";
 			packageProductDependencies = (
-				80EAB5952CAD85B10035321F /* FirebaseAnalytics */,
-				80EAB5972CAD85B10035321F /* FirebaseAuth */,
-				80EAB5992CAD85B10035321F /* FirebaseCrashlytics */,
-				80EAB59B2CAD85B10035321F /* FirebaseFirestore */,
-				80EAB59D2CAD85B10035321F /* FirebaseRemoteConfig */,
-				80EAB59F2CAD85B10035321F /* FirebaseStorage */,
+				FFC8CDA62AA3867A00D129A6 /* FirebaseAnalytics */,
+				FFC8CDA82AA3867A00D129A6 /* FirebaseAnalyticsSwift */,
+				FFC8CDAA2AA3867A00D129A6 /* FirebaseAuth */,
+				FFC8CDAC2AA3867A00D129A6 /* FirebaseFirestore */,
+				FFC8CDAE2AA3867A00D129A6 /* FirebaseFirestoreSwift */,
+				FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */,
+				FF4E82BF2AD39863004949AF /* FirebaseRemoteConfigSwift */,
+				FF4E82C12AD39863004949AF /* FirebaseStorage */,
+				FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */,
 			);
 			productName = "Basic-Car-Maintenance";
 			productReference = FF5D13A32A86C2D600BC9BD6 /* Basic-Car-Maintenance.app */;
@@ -544,6 +228,9 @@
 			);
 			dependencies = (
 				FF5D13B62A86C2D800BC9BD6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FF52DECC2CADEA030023F8DE /* Basic-Car-Maintenance-Tests */,
 			);
 			name = "Basic-Car-Maintenance-Tests";
 			productName = "Basic-Car-MaintenanceTests";
@@ -563,6 +250,9 @@
 			dependencies = (
 				FF5D13C02A86C2D800BC9BD6 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				FF52DECF2CADEA060023F8DE /* Basic-Car-Maintenance-UITests */,
+			);
 			name = "Basic-Car-Maintenance-UITests";
 			productName = "Basic-Car-MaintenanceUITests";
 			productReference = FF5D13BE2A86C2D800BC9BD6 /* Basic-Car-Maintenance-UITests.xctest */;
@@ -579,6 +269,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FF52DEC22CADEA000023F8DE /* Basic-Car-Maintenance-Widget */,
 			);
 			name = "Basic-Car-Maintenance-WidgetExtension";
 			productName = "Basic-Car-Maintenance-WidgetExtension";
@@ -631,7 +324,7 @@
 			);
 			mainGroup = FF5D139A2A86C2D500BC9BD6;
 			packageReferences = (
-				8028219F2CAD786200548B6A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = FF5D13A42A86C2D600BC9BD6 /* Products */;
 			projectDirPath = "";
@@ -650,10 +343,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF5D13AF2A86C2D800BC9BD6 /* Preview Assets.xcassets in Resources */,
-				FFC8CDA42AA385E800D129A6 /* GoogleService-Info.plist in Resources */,
-				FF5D13AB2A86C2D800BC9BD6 /* Assets.xcassets in Resources */,
-				FF755B432A90915E00F49A13 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,7 +364,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFDADF8A2ACD35A200DDEF79 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,43 +419,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				154984AA2AD9CAEE0015594C /* Constants.swift in Sources */,
-				FFBFE0912A98EFEC000A9BEB /* MaintenanceEvent.swift in Sources */,
-				57CDD9A42ADC320F002EFED0 /* OdometerReading.swift in Sources */,
-				E58499682ACDDA9A00634660 /* ContributorsProfileView.swift in Sources */,
-				FF755B492A909A0000F49A13 /* AddMaintenanceView.swift in Sources */,
-				FF09FC912AB6FF44006BE61A /* AuthenticationView.swift in Sources */,
-				FF50DDFB2B12944900E87362 /* EditOdometerReadingView.swift in Sources */,
-				023057F22ACFAD79006C5A73 /* EditEventDetailView.swift in Sources */,
-				637505482AEFFBAC00AA5D0B /* FirebaseAnalytics+Extension.swift in Sources */,
-				8A3D74862AD6D9A10000FEEB /* AlertView.swift in Sources */,
-				57CDD9A02ADC31A8002EFED0 /* AddOdometerReadingView.swift in Sources */,
-				57CDD99E2ADC3173002EFED0 /* OdometerViewModel.swift in Sources */,
-				E4345E642B4CE0500086D04B /* WelcomeViewAddVehicle.swift in Sources */,
-				E55B630D2B079E5A006BDDDF /* EditVehicleView.swift in Sources */,
-				FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */,
-				FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */,
-				FFE0AF562AD66C3500AB46F8 /* OdometerView.swift in Sources */,
-				8AEE816F2ACF37F800FC0C2A /* Action.swift in Sources */,
-				0CA7ED092AE82BF100609019 /* ContributionTip.swift in Sources */,
-				FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */,
-				8A3D748C2AD9C41D0000FEEB /* AlertItem.swift in Sources */,
-				8A3D748A2AD9C3E00000FEEB /* MainTabViewModel.swift in Sources */,
-				E584996A2ACDDAFF00634660 /* Contributor.swift in Sources */,
-				8014A4D32AD77C92005B51F6 /* ChooseAppIconViewModel.swift in Sources */,
-				8014A4CF2AD75928005B51F6 /* AppIcon.swift in Sources */,
-				FFC67D1D2AAEF7920073B338 /* SettingsViewModel.swift in Sources */,
-				FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */,
-				8AEE81722ACF384D00FC0C2A /* MainTabView.swift in Sources */,
-				E58499662ACDDA8B00634660 /* ContributorsListView.swift in Sources */,
-				FFBFE0932A98F212000A9BEB /* Vehicle.swift in Sources */,
-				FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */,
-				E4345E622B4CDA7B0086D04B /* WelcomeView.swift in Sources */,
-				8014A4D12AD76034005B51F6 /* ChooseAppIconView.swift in Sources */,
-				FF218EF62B00865F0025A533 /* AnalyticsService.swift in Sources */,
-				FF748B5E2AB3589C004748A5 /* AuthenticationViewModel.swift in Sources */,
-				FF755B462A90969D00F49A13 /* Bundle+extension.swift in Sources */,
-				FFAA56ED2AC8905C000120EE /* Documentation.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,7 +426,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				898009792AD1899700604E7C /* ContributorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,7 +433,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF5D13C32A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,9 +440,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFDADF842ACD35A100DDEF79 /* BasicCarMaintenanceWidgetBundle.swift in Sources */,
-				FFDADF862ACD35A100DDEF79 /* BasicCarMaintenanceWidget.swift in Sources */,
-				FFDADF882ACD35A100DDEF79 /* AppIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,7 +466,8 @@
 /* Begin XCBuildConfiguration section */
 		FF5D13C62A86C2D800BC9BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFDADF5D2ACCE9AB00DDEF79 /* Project.xcconfig */;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = Project.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -884,7 +531,8 @@
 		};
 		FF5D13C72A86C2D800BC9BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFDADF5D2ACCE9AB00DDEF79 /* Project.xcconfig */;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = Project.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1020,7 +668,8 @@
 		};
 		FF5D13CC2A86C2D800BC9BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFBE79BB2AD0A57D0005524E /* UnitTests.xcconfig */;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = UnitTests.xcconfig;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1040,7 +689,8 @@
 		};
 		FF5D13CD2A86C2D800BC9BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFBE79BB2AD0A57D0005524E /* UnitTests.xcconfig */;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = UnitTests.xcconfig;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1060,7 +710,8 @@
 		};
 		FF5D13CF2A86C2D800BC9BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF0813562AD0A83000910EFA /* UITests.xcconfig */;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = UITests.xcconfig;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
@@ -1079,7 +730,8 @@
 		};
 		FF5D13D02A86C2D800BC9BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF0813562AD0A83000910EFA /* UITests.xcconfig */;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = UITests.xcconfig;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
@@ -1098,7 +750,8 @@
 		};
 		FFDADF902ACD35A200DDEF79 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF0813572AD0A92700910EFA /* Widget.xcconfig */;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = Widget.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -1125,7 +778,8 @@
 		};
 		FFDADF912ACD35A200DDEF79 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF0813572AD0A92700910EFA /* Widget.xcconfig */;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = Widget.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -1202,46 +856,61 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8028219F2CAD786200548B6A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 11.3.0;
+				minimumVersion = 10.14.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		80EAB5952CAD85B10035321F /* FirebaseAnalytics */ = {
+		FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8028219F2CAD786200548B6A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		80EAB5972CAD85B10035321F /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8028219F2CAD786200548B6A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		80EAB5992CAD85B10035321F /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8028219F2CAD786200548B6A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
 		};
-		80EAB59B2CAD85B10035321F /* FirebaseFirestore */ = {
+		FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8028219F2CAD786200548B6A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		80EAB59D2CAD85B10035321F /* FirebaseRemoteConfig */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8028219F2CAD786200548B6A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
 		};
-		80EAB59F2CAD85B10035321F /* FirebaseStorage */ = {
+		FF4E82BF2AD39863004949AF /* FirebaseRemoteConfigSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8028219F2CAD786200548B6A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+		FF4E82C12AD39863004949AF /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		FFC8CDA62AA3867A00D129A6 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		FFC8CDA82AA3867A00D129A6 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		FFC8CDAA2AA3867A00D129A6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FFC8CDAC2AA3867A00D129A6 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		FFC8CDAE2AA3867A00D129A6 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
