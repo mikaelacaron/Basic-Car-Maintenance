@@ -17,7 +17,6 @@ This app will be deployed on the Apple App Store, available for iOS 17.0 or late
 ```sh
 brew install swiftlint
 ```
-
 * Set your Xcode settings correctly:
    * Open Xcode Settings `Cmd + ,`
    * Text Editing
@@ -26,7 +25,7 @@ brew install swiftlint
    * Tab Width: 4
    * Indent Width: 4
    * Xcode 16+
-    * Check "Prefer Settings from EditorConfig"
+      * Check "Prefer Settings from EditorConfig"
 
 ## Start Here
 * **Fork** this repo
@@ -42,7 +41,6 @@ cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
 * In the `Basic-Car-Maintenance.xcconfig` file, fill in your `DEVELOPMENT_TEAM` and `PRODUCT_BUNDLE_IDENTIFIER`.
    * You can find this by logging into the Apple Developer Portal
    * This works with both free or paid Apple Developer accounts. Do **NOT** run this app on a real device due to issues with the Sign in With Apple capability.
-
 ```
 DEVELOPMENT_TEAM = ABC123
 PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
@@ -65,6 +63,7 @@ We are going to set up the Firebase emulator to be able to load the data locally
    * Add the executable to the $PATH via .zshrc or .bashrc file as prompted after installation, do **NOT** forget this! (and then restart your Terminal)
 * `npm install -g firebase-tools`
    * Installs the Firebase tools for running the emulator
+
 
 ## Start Working on an Issue
 * Anytime you run the project, first in Terminal `cd` to `backend` in the `Basic-Car-Maintenance` directory
