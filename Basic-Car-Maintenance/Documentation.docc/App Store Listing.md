@@ -36,3 +36,13 @@ Enter the following metadata on the version information page, which appears unde
 You have 100 characters of keyword space, which get combined with the Name and Subtitle fields discussed above when a user searches the App Store. Ariel Michaeli of Appfigures recently advised to put the more important keywords closer to the start of this field. Separate keywords with commas; omit spaces. 
 
 Suggested: `car,van,electric,bike,care,repair,manage,easy,simple,oil,change,tire,rotation,record,fuel,gas,charge`
+
+#### Privacy Info
+For Privacy info I checked User Defaults APIs with the usage reason CA92.1
+Collected Data Types: 
+Name - linked to identity and app functionality
+Email Address - linked to identity and app functionality
+Phone number - linked to identity and app functionality
+Photos or videos - linked to identity
+User ID - linked to identity and app functionality
+
