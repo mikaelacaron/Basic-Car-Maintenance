@@ -73,6 +73,7 @@ We are going to set up the Firebase emulator to be able to load the data locally
 * Run the app
    * You should see your anonymous user in Authentication, and once you add new data, see it in Firestore emulator UI at: http://127.0.0.1:4000/firestore
    * If you don't see your user, delete the app from the simulator, and in the menu go to Device > Erase All Content and Settings (which resets your simulator), and try to run again
+   * If you receive the following error when you launch the emulator: _'firebase-tools no longer supports Java version before 11. Please upgrade to Java version 11 or above to continue using the emulators.'_ The openJDK install failed and you will have to install the latest JDK manually. You can download the latest version here [JDK23](https://www.oracle.com/java/technologies/downloads/#jdk23-mac)
 * **Checkout** a new branch (from the `dev` branch) to work on an issue
 * When your feature / fix is complete open a pull request, PR, from your feature branch to the `dev` branch
    * Use a descriptive PR title and fill out the entire PR template, do not delete any sections.
@@ -84,7 +85,7 @@ We are going to set up the Firebase emulator to be able to load the data locally
 ✅ **Examples of valid branch names:**
    * 8123-fix-title-of-issue (issue number)
    * 8123-feature-name (issue number)
-  
+
 ❌ **Examples of invalid branch names**:
    * username-testing
    * attemptToFixAuth
