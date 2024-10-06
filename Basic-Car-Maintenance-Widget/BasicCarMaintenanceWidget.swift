@@ -40,15 +40,22 @@ struct SimpleEntry: TimelineEntry {
 }
 
 struct BasicCarMaintenanceWidgetEntryView: View {
+    @Environment(\.widgetFamily) var widgetFamily
+    
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
+        switch widgetFamily {
+        case .systemMedium:
+            MediumMaintenanceView(entry: entry)
+        default:
+            VStack {
+                Text("Time:")
+                Text(entry.date, style: .time)
 
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
+                Text("Favorite Emoji:")
+                Text(entry.configuration.favoriteEmoji)
+            }
         }
     }
 }
