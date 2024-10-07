@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%@" : {
       "comment" : "Maintenance list item description 'Date' formatted",
       "localizations" : {
@@ -926,6 +929,9 @@
       }
     },
     "Car Maintenance" : {
+
+    },
+    "Car Maintenance Configuration" : {
 
     },
     "Change App Icon" : {
@@ -2824,6 +2830,9 @@
         }
       }
     },
+    "Maintenance Vehicle" : {
+
+    },
     "Make" : {
       "localizations" : {
         "be" : {
@@ -3991,6 +4000,9 @@
           }
         }
       }
+    },
+    "Selected Vehicle" : {
+
     },
     "Settings" : {
       "comment" : "Label to display settings.",

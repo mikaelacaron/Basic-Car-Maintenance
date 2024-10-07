@@ -46,7 +46,7 @@ struct Provider: AppIntentTimelineProvider {
         let currentDate = Date()
         let nextUpdate = Calendar.current.date(byAdding: .hour, value: 1, to: currentDate)!
         
-        let result = await fetchFromDatabase()
+        let result = await fetchFromDatabase(for: configuration.selectedVehicle?.id)
         let entry = switch result {
         case .success(let events):
             MaintenanceEntry(date: currentDate, configuration: configuration, maintenanceEvents: events)
@@ -57,18 +57,21 @@ struct Provider: AppIntentTimelineProvider {
         return Timeline(entries: [entry], policy: .after(nextUpdate))
     }
     
-    func fetchFromDatabase() async -> Result<[MaintenanceEvent], Error> {
+    func fetchFromDatabase(for vehichleID: String?) async -> Result<[MaintenanceEvent], Error> {
         // TODO: Add proper user id
         // TODO: Add vehicle id
         guard let userID = Optional("vb0owfUaNFxPHUTtGYN4jBo0fPdt") else {
             return .failure(FirestoreError.unauthenticated)
         }
         
+        guard let vehichleID else {
+            return .failure(FirestoreError.noVehicleSelected)
+        }
+        
         do {
             let docRef = Firestore
                             .firestore()
-                            .collectionGroup(FirestoreCollection.maintenanceEvents)
-                            .whereField(FirestoreField.userID, isEqualTo: userID)
+                            .collection("\(FirestoreCollection.vehicles)/\(vehichleID)/\(FirestoreCollection.maintenanceEvents)")
             
             let snapshot = try await docRef.getDocuments()
             let events = snapshot.documents.compactMap {
@@ -83,11 +86,14 @@ struct Provider: AppIntentTimelineProvider {
     
 enum FirestoreError: LocalizedError {
     case unauthenticated
+    case noVehicleSelected
     
     var errorDescription: String {
         switch self {
         case .unauthenticated:
             "User is not authenticated. Please sign in to the app to continue."
+        case .noVehicleSelected:
+            "No vehicle selected. Please select a vehicle to continue."
         }
     }
 }
@@ -149,22 +155,18 @@ struct BasicCarMaintenanceWidget: Widget {
 }
 
 extension ConfigurationAppIntent {
-    fileprivate static var smiley: ConfigurationAppIntent {
+    fileprivate static var demo: ConfigurationAppIntent {
         let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "😀"
-        return intent
-    }
-    
-    fileprivate static var starEyes: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "🤩"
+        intent.selectedVehicle = MaintenanceVehicleAppEntity(id: "", displayString: "Kia Soul")
         return intent
     }
 }
 
-#Preview(as: .systemSmall) {
+#Preview(as: .systemMedium) {
     BasicCarMaintenanceWidget()
 } timeline: {
-    MaintenanceEntry(date: .now, configuration: .smiley, maintenanceEvents: [])
-    MaintenanceEntry(date: .now, configuration: .starEyes, maintenanceEvents: [])
+    MaintenanceEntry(date: .now, configuration: .demo, maintenanceEvents: [
+        MaintenanceEvent(vehicleID: "", title: "Oil Change", date: .now, notes: "Test Notes"),
+        MaintenanceEvent(vehicleID: "", title: "Oil Change", date: .now, notes: "Test Notes")
+    ])
 }
