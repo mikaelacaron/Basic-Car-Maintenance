@@ -15,7 +15,9 @@ struct MaintenanceVehicleAppEntity: AppEntity {
     static var typeDisplayRepresentation = TypeDisplayRepresentation(name: "Maintenance Vehicle")
 
     struct MaintenanceVehicleAppEntityQuery: EntityQuery {
-        func entities(for identifiers: [MaintenanceVehicleAppEntity.ID]) async throws -> [MaintenanceVehicleAppEntity] {
+        func entities(
+            for identifiers: [MaintenanceVehicleAppEntity.ID]
+        ) async throws -> [MaintenanceVehicleAppEntity] {
             guard let userID = Optional("vb0owfUaNFxPHUTtGYN4jBo0fPdt") else {
              throw NSError(domain: "Unauthenticated", code: 1)
             }
@@ -29,7 +31,9 @@ struct MaintenanceVehicleAppEntity: AppEntity {
             let vehicles = snapshot.documents.compactMap {
                 try? $0.data(as: Vehicle.self)
             }
-            return vehicles.map { MaintenanceVehicleAppEntity(id: $0.id ?? UUID().uuidString, displayString: $0.name) }
+            return vehicles.map { 
+                MaintenanceVehicleAppEntity(id: $0.id ?? UUID().uuidString, displayString: $0.name)
+            }
         }
 
         func suggestedEntities() async throws -> [MaintenanceVehicleAppEntity] {

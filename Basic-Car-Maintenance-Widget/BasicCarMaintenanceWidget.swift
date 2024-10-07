@@ -58,12 +58,6 @@ struct Provider: AppIntentTimelineProvider {
     }
     
     func fetchFromDatabase(for vehichleID: String?) async -> Result<[MaintenanceEvent], Error> {
-        // TODO: Add proper user id
-        // TODO: Add vehicle id
-        guard let userID = Optional("vb0owfUaNFxPHUTtGYN4jBo0fPdt") else {
-            return .failure(FirestoreError.unauthenticated)
-        }
-        
         guard let vehichleID else {
             return .failure(FirestoreError.noVehicleSelected)
         }
