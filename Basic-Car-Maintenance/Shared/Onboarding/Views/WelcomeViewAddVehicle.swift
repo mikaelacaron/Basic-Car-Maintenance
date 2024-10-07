@@ -7,77 +7,127 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct WelcomeViewAddVehicle: View {
-    
-    // Logic to remember OnboardingScreen to not load again when app is launched
-    @AppStorage("isFirstTime") private var isFirstTime: Bool = true
-    @AppStorage("vehicleName") private var vehicleName: String = ""
-    @AppStorage("vehicleMake") private var vehicleMake: String = ""
-    @AppStorage("vehicleModel") private var vehicleModel: String = ""
     @Environment(\.dismiss) var dismiss
-    @State private var validationAlertName: Bool = false
-    @State private var validationAlertMake: Bool = false
-    @State private var validationAlertModel: Bool = false
-    @State private var onboardingViewCompletedAlert: Bool = false
+    @State private var viewModel: SettingsViewModel
     
+    // Existing properties
+    @AppStorage("isFirstTime") private var isFirstTime: Bool = true
+    @State private var vehicleName: String = ""
+    @State private var vehicleMake: String = ""
+    @State private var vehicleModel: String = ""
+
+    // New alert-related properties
+    @State private var showAlert: Bool = false
+    @State private var alertType: AlertType?
+
+    // Define an enum for different alert types
+    enum AlertType {
+        case emptyName
+        case emptyMake
+        case emptyModel
+        case vehicleAdded(name: String)
+        case error(message: String)
+        
+        var title: String {
+            switch self {
+            case .emptyName, .emptyMake, .emptyModel:
+                return "Validation Error"
+            case .vehicleAdded(let name):
+                return "\(name) added successfully! 🎉"
+            case .error:
+                return "Error"
+            }
+        }
+        
+        var message: String? {
+            switch self {
+            case .emptyName:
+                return "Vehicle Name cannot be empty! 🚗"
+            case .emptyMake:
+                return "Vehicle Make cannot be empty! 🚗"
+            case .emptyModel:
+                return "Vehicle Model cannot be empty! 🚗"
+            case .vehicleAdded:
+                return nil
+            case .error(let message):
+                return message
+            }
+        }
+    }
+
+    init(authenticationViewModel: AuthenticationViewModel) {
+        _viewModel = State(initialValue: SettingsViewModel(authenticationViewModel: authenticationViewModel))
+    }
+
     var body: some View {
-        VStack(spacing: 15) {
-            VStack {
+        ScrollView {
+            VStack(spacing: 15) {
                 headerView
                 vehicleDetailsView
                 bottomText
                 Spacer(minLength: 10)
                 addVehicleButton
             }
+            .padding(.horizontal)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(UIColor.secondarySystemBackground).ignoresSafeArea())
-        .navigationBarBackButtonHidden(true)
-        .toolbar { backButton }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text(alertType?.title ?? ""),
+                message: alertType?.message.map { Text($0) },
+                dismissButton: .default(Text("OK")) {
+                    if case .vehicleAdded = alertType {
+                        isFirstTime = false
+                        dismiss()
+                    }
+                }
+            )
+        }
     }
     
     private var headerView: some View {
         VStack {
-            Text("Add the details below")
-            HStack(spacing: 5) {
-                Text("about")
-                Text("your vehicle")
-                    .foregroundStyle(Color("basicGreen"))
-            }
+            Text("Add the details below about ") +
+            Text("your vehicle")
+                .foregroundStyle(Color("basicGreen"))
         }
-        .font(.largeTitle.bold())
+        .font(.largeTitle)
+        .bold()
         .multilineTextAlignment(.center)
         .padding(.top, 65)
         .padding(.bottom, 15)
     }
     
     private var vehicleDetailsView: some View {
-        VStack {
+        VStack(spacing: 20) {
             Image(systemName: "car.side.lock.open")
                 .font(.system(size: 45))
                 .foregroundStyle(Color("basicGreen"))
             
-            List {
-                vehicleDetailRow(title: "Name", text: $vehicleName, alert: $validationAlertName)
-                vehicleDetailRow(title: "Make", text: $vehicleMake, alert: $validationAlertMake)
-                vehicleDetailRow(title: "Model", text: $vehicleModel, alert: $validationAlertModel)
+            VStack(spacing: 0) {
+                vehicleDetailRow(title: "Name", text: $vehicleName)
+                    .padding(.bottom, 10)
+                Divider()
+                vehicleDetailRow(title: "Make", text: $vehicleMake)
+                    .padding(.vertical, 10)
+                Divider()
+                vehicleDetailRow(title: "Model", text: $vehicleModel)
+                    .padding(.top, 10)
             }
-            .frame(maxHeight: 200)
-            .scrollContentBackground(.hidden)
+            .padding()
+            .background(Color(UIColor.systemBackground))
+            .cornerRadius(12)
         }
         .padding(.horizontal, 15)
     }
     
-    private func vehicleDetailRow(title: String, text: Binding<String>, alert: Binding<Bool>) -> some View {
+    private func vehicleDetailRow(title: String, text: Binding<String>) -> some View {
         LabeledContent {
             TextField("Vehicle \(title)", text: text)
-                .alert(
-                    "Vehicle \(title) cannot be empty! 🚗",
-                    isPresented: alert
-                ) {
-                    Button("OK", role: .cancel) {}
-                }
                 .frame(width: 200)
         } label: {
             HStack {
@@ -108,48 +158,31 @@ struct WelcomeViewAddVehicle: View {
         }
         .padding(15)
         .padding(.horizontal, 15)
-        .alert(
-            Text("Congratulations! 🎉 🚙"),
-            isPresented: $onboardingViewCompletedAlert
-        ) {
-            Button("OK", role: .cancel, action: {
-                isFirstTime = false
-            })
-        } message: {
-            Text(
-                "From now on, next screen will be the main app screen.",
-                comment: "Shows popup when completed Onboarding tutorial"
-            )
-        }
     }
     
-    func addVehicle() {
+    private func addVehicle() {
         if vehicleName.isEmpty {
-            validationAlertName = true
+            alertType = .emptyName
+            showAlert = true
         } else if vehicleMake.isEmpty {
-            validationAlertMake = true
+            alertType = .emptyMake
+            showAlert = true
         } else if vehicleModel.isEmpty {
-            validationAlertModel = true
+            alertType = .emptyModel
+            showAlert = true
         } else {
-            UserDefaults.standard.set(vehicleName, forKey: "vehicleName")
-            UserDefaults.standard.set(vehicleMake, forKey: "vehicleMake")
-            UserDefaults.standard.set(vehicleModel, forKey: "vehicleModel")
             
-//            isFirstTime = false
-            onboardingViewCompletedAlert = true
-        }
-    }
-    
-    private var backButton: some ToolbarContent {
-        ToolbarItem(placement: .topBarLeading) {
-            Button {
-                dismiss()
-            } label: {
-                HStack {
-                    Image(systemName: "arrow.left.circle")
-                    Text("Back")
+            let newVehicle = Vehicle(name: vehicleName, make: vehicleMake, model: vehicleModel)
+            
+            Task {
+                do {
+                    try await viewModel.addVehicle(newVehicle)
+                    alertType = .vehicleAdded(name: vehicleName)
+                    showAlert = true
+                } catch {
+                    alertType = .error(message: "Failed to add vehicle. Please try again.")
+                    showAlert = true
                 }
-                .tint(Color("basicGreen"))
             }
         }
     }
@@ -185,5 +218,6 @@ extension View {
 }
 
 #Preview {
-    WelcomeViewAddVehicle()
+    WelcomeViewAddVehicle(authenticationViewModel: AuthenticationViewModel())
+        .environment(ActionService.shared)
 }

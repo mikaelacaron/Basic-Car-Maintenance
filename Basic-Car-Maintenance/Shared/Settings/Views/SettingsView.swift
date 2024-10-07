@@ -11,9 +11,6 @@ import UniformTypeIdentifiers
 import TipKit
 
 struct SettingsView: View {
-    @AppStorage("vehicleName") private var savedVehicleName: String = ""
-    @AppStorage("vehicleMake") private var savedVehicleMake: String = ""
-    @AppStorage("vehicleModel") private var savedVehicleModel: String = ""
     
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
@@ -93,23 +90,6 @@ struct SettingsView: View {
                 }
                 
                 Section {
-                    if !savedVehicleName.isEmpty {
-                        VStack(alignment: .leading) {
-                            Text("Locally Saved Vehicle")
-                                .font(.headline)
-                            Text(savedVehicleName)
-                            Text(savedVehicleMake)
-                            Text(savedVehicleModel)
-                        }
-                        .swipeActions {
-                            Button(role: .destructive) {
-                                deleteLocallySavedVehicle()
-                            } label: {
-                                Text("Delete")
-                            }
-                        }
-                    }
-                    
                     ForEach(viewModel.vehicles) { vehicle in
                         VStack(alignment: .leading) {
                             Text(vehicle.name)
@@ -298,21 +278,6 @@ struct SettingsView: View {
                 isShowingAddVehicle = true
             }
         }
-    }
-    
-    func deleteLocallySavedVehicle() {
-        // Clear the AppStorage values
-        UserDefaults.standard.removeObject(forKey: "vehicleName")
-        UserDefaults.standard.removeObject(forKey: "vehicleMake")
-        UserDefaults.standard.removeObject(forKey: "vehicleModel")
-        
-        // Reset the @AppStorage properties
-        savedVehicleName = ""
-        savedVehicleMake = ""
-        savedVehicleModel = ""
-        
-        // Force UserDefaults to save the changes immediately
-        UserDefaults.standard.synchronize()
     }
 }
 

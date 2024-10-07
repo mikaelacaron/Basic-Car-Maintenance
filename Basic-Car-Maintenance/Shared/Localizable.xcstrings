@@ -200,9 +200,6 @@
         }
       }
     },
-    "about" : {
-
-    },
     "Add" : {
       "comment" : "Label for submit button on form to add an entry",
       "localizations" : {
@@ -416,7 +413,7 @@
         }
       }
     },
-    "Add the details below" : {
+    "Add the details below about " : {
 
     },
     "Add Vehicle" : {
@@ -815,9 +812,6 @@
         }
       }
     },
-    "Back" : {
-
-    },
     "Basic" : {
 
     },
@@ -1119,9 +1113,6 @@
           }
         }
       }
-    },
-    "Congratulations! 🎉 🚙" : {
-
     },
     "Continue" : {
 
@@ -1804,6 +1795,9 @@
         }
       }
     },
+    "Error" : {
+
+    },
     "Failed To Add Vehicle" : {
       "localizations" : {
         "be" : {
@@ -2483,9 +2477,6 @@
         }
       }
     },
-    "From now on, next screen will be the main app screen." : {
-      "comment" : "Shows popup when completed Onboarding tutorial"
-    },
     "GitHub Repo" : {
       "comment" : "Link to the Basic Car Maintenance GitHub repo.",
       "localizations" : {
@@ -2747,9 +2738,6 @@
           }
         }
       }
-    },
-    "Locally Saved Vehicle" : {
-
     },
     "Logged in anonymously with ID: %@" : {
       "localizations" : {
@@ -5016,9 +5004,6 @@
       }
     },
     "Vehicle %@" : {
-
-    },
-    "Vehicle %@ cannot be empty! 🚗" : {
 
     },
     "Vehicle Color" : {
