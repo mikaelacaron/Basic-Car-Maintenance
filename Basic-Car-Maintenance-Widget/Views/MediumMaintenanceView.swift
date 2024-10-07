@@ -14,6 +14,14 @@ struct MediumMaintenanceView: View {
     var entry: Provider.Entry
     
     var body: some View {
-        Text("Medium Maintenance")
+        if let error = entry.error {
+            Text("Error: \(error)")
+        } else {
+            VStack {
+                ForEach(entry.maintenanceEvents) { event in
+                    Text("\(event.vehicleID) - \(event.title)")
+                }
+            }
+        }
     }
 }

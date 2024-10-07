@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED42FB452CB360FA00C5CC56 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = ED42FB442CB360FA00C5CC56 /* FirebaseFirestore */; };
 		FF153AFF2B07C3E000D0BA30 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */; };
 		FF4E82BE2AD39863004949AF /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */; };
 		FF4E82C02AD39863004949AF /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BF2AD39863004949AF /* FirebaseRemoteConfigSwift */; };
@@ -73,6 +74,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		ED42FB492CB3621B00C5CC56 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Shared/GoogleService-Info.plist",
+				Shared/Models/MaintenanceEvent.swift,
+				Shared/Utilities/Constants.swift,
+			);
+			target = FFDADF7C2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension */;
+		};
 		FF52DEBC2CADE9EF0023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -91,7 +101,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		FF52DE902CADE9EF0023F8DE /* Basic-Car-Maintenance */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FF52DEBC2CADE9EF0023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance"; sourceTree = "<group>"; };
+		FF52DE902CADE9EF0023F8DE /* Basic-Car-Maintenance */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FF52DEBC2CADE9EF0023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ED42FB492CB3621B00C5CC56 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance"; sourceTree = "<group>"; };
 		FF52DEC22CADEA000023F8DE /* Basic-Car-Maintenance-Widget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FF52DEC82CADEA000023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance-Widget"; sourceTree = "<group>"; };
 		FF52DECC2CADEA030023F8DE /* Basic-Car-Maintenance-Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance-Tests"; sourceTree = "<group>"; };
 		FF52DECF2CADEA060023F8DE /* Basic-Car-Maintenance-UITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance-UITests"; sourceTree = "<group>"; };
@@ -136,6 +146,7 @@
 			files = (
 				FFDADF812ACD35A100DDEF79 /* SwiftUI.framework in Frameworks */,
 				FFDADF7F2ACD35A100DDEF79 /* WidgetKit.framework in Frameworks */,
+				ED42FB452CB360FA00C5CC56 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,6 +876,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C90C058A2CB0FC5800046C42 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
 			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+		ED42FB442CB360FA00C5CC56 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 		FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
