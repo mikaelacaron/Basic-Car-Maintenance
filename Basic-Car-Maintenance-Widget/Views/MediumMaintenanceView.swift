@@ -14,7 +14,7 @@ struct MediumMaintenanceView: View {
     var entry: Provider.Entry
     
     var body: some View {
-        if let error = entry.error {
+        if let error = entry.error, entry.configuration.selectedVehicle != nil {
             ErrorView(error: error)
         } else if let selectedVehicle = entry.configuration.selectedVehicle {
                 HStack(spacing: 16) {
@@ -23,7 +23,7 @@ struct MediumMaintenanceView: View {
                     Spacer()
             }
         } else {
-            Text("No vehicle selected")
+            Text("No vehicle selected.")
         }
     }
 }

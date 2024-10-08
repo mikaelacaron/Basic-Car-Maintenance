@@ -8,7 +8,6 @@
 
 import Foundation
 import AppIntents
-import Firebase
 
 struct VehicleAppEntity: AppEntity {
     var id: String 
@@ -33,20 +32,9 @@ struct VehicleAppEntityQuery: EntityQuery {
     func entities(
         for identifiers: [VehicleAppEntity.ID]
     ) async throws -> [VehicleAppEntity] {
-        guard let userID = Optional("vb0owfUaNFxPHUTtGYN4jBo0fPdt") else {
-            return []
-        }
-
-        // Retrieve all vehicles for a given user id.
-        let docRef = Firestore
-                         .firestore()
-                         .collectionGroup(FirestoreCollection.vehicles)
-                         .whereField(FirestoreField.userID, isEqualTo: userID)
-         
-        let snapshot = try await docRef.getDocuments()
-        let vehicles = snapshot.documents.compactMap {
-            try? $0.data(as: Vehicle.self)
-        }
+        let result = await DataService.fetchVehicles(for: Optional("vb0owfUaNFxPHUTtGYN4jBo0fPdt"))
+        
+        let vehicles = try result.get()
         return vehicles.map { 
             VehicleAppEntity(
                 id: $0.id ?? UUID().uuidString, 

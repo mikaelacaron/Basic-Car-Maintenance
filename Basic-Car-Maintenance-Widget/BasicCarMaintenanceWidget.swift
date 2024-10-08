@@ -18,7 +18,7 @@ struct Provider: AppIntentTimelineProvider {
             maintenanceEvents: .demo
         )
     }
-
+    
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> MaintenanceEntry {
         MaintenanceEntry(
             date: Date(), 
@@ -32,7 +32,7 @@ struct Provider: AppIntentTimelineProvider {
         let currentDate = Date()
         let nextUpdate = Calendar.current.date(byAdding: .hour, value: 1, to: currentDate)!
         
-        let result = await fetchMaintenanceEvents(for: configuration.selectedVehicle?.id)
+        let result = await DataService.fetchMaintenanceEvents(for: configuration.selectedVehicle?.id)
         let entry = switch result {
         case .success(let events):
             MaintenanceEntry(date: currentDate, configuration: configuration, maintenanceEvents: events)
@@ -42,38 +42,6 @@ struct Provider: AppIntentTimelineProvider {
         }
         
         return Timeline(entries: [entry], policy: .after(nextUpdate))
-    }
-    
-    /// Fetches maintenance events for the selected vehicle from Firestore.
-    /// - Parameter vehichleID: The ID of the selected vehicle.
-    /// - Returns: A list of maintenance events or an error if the fetch fails.
-    private func fetchMaintenanceEvents(for vehichleID: String?) async -> Result<[MaintenanceEvent], Error> {
-        guard let vehichleID else {
-            return .failure(FetchError.noVehicleSelected)
-        }
-        
-        do {
-            let docRef = Firestore.firestore().collection("\(FirestoreCollection.vehicles)/\(vehichleID)/\(FirestoreCollection.maintenanceEvents)")
-            let snapshot = try await docRef.getDocuments()
-            let events = snapshot.documents.compactMap {
-                try? $0.data(as: MaintenanceEvent.self)
-            }
-            return .success(events)
-        } catch {
-            return .failure(error)
-        }
-    }
-}
-    
-/// Errors that can occur when fetching maintenance events.
-enum FetchError: LocalizedError {
-    case noVehicleSelected
-    
-    var errorDescription: String {
-        switch self {
-        case .noVehicleSelected:
-            "No vehicle selected. Please select a vehicle to continue."
-        }
     }
 }
 
