@@ -46,7 +46,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        let useEmulator = UserDefaults.standard.bool(forKey: "useEmulator")
+        let useEmulator = UserDefaults.shared.bool(forKey: "useEmulator")
         if useEmulator {
             let settings = Firestore.firestore().settings
             settings.host = "localhost:8080"
@@ -55,6 +55,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             Firestore.firestore().settings = settings
             
             Auth.auth().useEmulator(withHost: "127.0.0.1", port: 9099)
+            UserDefaults.shared.set(true, forKey: "useEmulator")
         }
         
         return true

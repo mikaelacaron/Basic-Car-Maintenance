@@ -45,14 +45,13 @@ enum DataService {
         }
     }
     
-    /// Fetches vehicles for the given user id from Firestore.
-    /// - Parameter userID: The ID of the user.
+    /// Fetches vehicles for the current user from Firestore.
     /// - Returns: A list of vehicles or an error if the fetch fails.
     /// 
     /// Example usage:
     /// ```swift
     /// Task {
-    ///     let result = await DataService.fetchVehicles(for: "user123")
+    ///     let result = await DataService.fetchVehicles()
     ///     
     ///     switch result {
     ///     case .success(let vehicles):
@@ -62,8 +61,8 @@ enum DataService {
     ///     }
     /// }
     /// ```
-    static func fetchVehicles(for userID: String?) async -> Result<[Vehicle], Error> {
-        guard let userID = Optional("vb0owfUaNFxPHUTtGYN4jBo0fPdt") else {
+    static func fetchVehicles() async -> Result<[Vehicle], Error> {
+        guard let userID = UserDefaults.shared.string(forKey: "userID") else {
             return .failure(FetchError.unauthenticated)
         }
 

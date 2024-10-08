@@ -32,7 +32,7 @@ struct VehicleAppEntityQuery: EntityQuery {
     func entities(
         for identifiers: [VehicleAppEntity.ID]
     ) async throws -> [VehicleAppEntity] {
-        let result = await DataService.fetchVehicles(for: Optional("vb0owfUaNFxPHUTtGYN4jBo0fPdt"))
+        let result = await DataService.fetchVehicles()
         
         let vehicles = try result.get()
         return vehicles.map { 

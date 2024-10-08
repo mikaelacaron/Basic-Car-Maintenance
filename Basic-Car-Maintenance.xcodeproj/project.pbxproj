@@ -82,6 +82,7 @@
 				"Shared/GoogleService-Info.plist",
 				Shared/Models/MaintenanceEvent.swift,
 				Shared/Models/Vehicle.swift,
+				"Shared/UserDefaults/UserDefaults+Shared.swift",
 				Shared/Utilities/Constants.swift,
 			);
 			target = FFDADF7C2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension */;

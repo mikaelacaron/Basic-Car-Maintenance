@@ -65,8 +65,7 @@ struct BasicCarMaintenanceWidget: Widget {
     init() {
         FirebaseApp.configure()
         
-        // TODO: Share app defaults
-        let useEmulator = true // UserDefaults.standard.bool(forKey: "useEmulator")
+        let useEmulator = UserDefaults.shared.bool(forKey: "useEmulator")
         if useEmulator {
             let settings = Firestore.firestore().settings
             settings.host = "localhost:8080"
