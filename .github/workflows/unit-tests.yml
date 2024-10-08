@@ -22,9 +22,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-
-    - name: Enable Build Tools
-      run: cp fastlane/enable-build-tool-plugins.json ~/Library/org.swift.swiftpm/security/plugins.json
       
     - name: Prepare xcconfig 
       run: cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig
@@ -33,6 +30,12 @@ jobs:
       uses: maxim-lobanov/setup-xcode@v1
       with:
         xcode-version: latest-stable
+
+    - name: Install packages
+      run: xcodebuild -resolvePackageDependencies
+
+    - name: Enable Build Tools
+      run: cp fastlane/enable-build-tool-plugins.json ~/Library/org.swift.swiftpm/security/plugins.json
     
     - name: Update dependencies
       run: bundle install
