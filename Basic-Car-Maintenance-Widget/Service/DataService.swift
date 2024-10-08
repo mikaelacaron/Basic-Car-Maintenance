@@ -38,7 +38,8 @@ enum DataService {
             let snapshot = try await docRef.getDocuments()
             let events = snapshot.documents.compactMap {
                 try? $0.data(as: MaintenanceEvent.self)
-            }
+            }.sorted { $0.date > $1.date }
+            
             return .success(events)
         } catch {
             return .failure(error)
