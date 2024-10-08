@@ -13,11 +13,27 @@ struct MaintenanceList: View {
     
     var body: some View {
         VStack {
-            ForEach(events.indices.prefix(2), id: \.self) { index in
-                MaintenanceRow(
-                    entry: events[index], 
-                    borderColor: index.isMultiple(of: 2) ? .mint : .teal
-                )
+            if !events.isEmpty {
+                ForEach(events.indices.prefix(2), id: \.self) { index in
+                    MaintenanceRow(
+                        entry: events[index], 
+                        borderColor: index.isMultiple(of: 2) ? .mint : .teal
+                    )
+                }
+            } else {
+                HStack {
+                    RoundedRectangle(cornerRadius: 5)
+                        .frame(width: 3)
+                        .foregroundStyle(.secondary)
+                    
+                    VStack(spacing: 10) {
+                        Image(systemName: "exclamationmark.triangle")
+                        Text("No maintenance events recorded for this vehicle.")
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .multilineTextAlignment(.center)
+                    }
+                }
             }
         }
     }

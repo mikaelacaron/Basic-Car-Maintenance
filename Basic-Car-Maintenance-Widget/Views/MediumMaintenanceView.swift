@@ -44,6 +44,13 @@ struct MediumMaintenanceView: View {
     )
 }
 
+#Preview("General View (0 entries)", as: .systemMedium) {
+    BasicCarMaintenanceWidget()
+} timeline: {
+    MaintenanceEntry(
+        date: .now, configuration: .demo, maintenanceEvents: [])
+}
+
 #Preview("Error View", as: .systemMedium) {
     BasicCarMaintenanceWidget()
 } timeline: {
