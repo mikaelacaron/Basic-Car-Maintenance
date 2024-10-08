@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED1FE7692CB4BEDC006F861F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ED1FE7682CB4BEDC006F861F /* FirebaseFirestoreSwift */; };
 		ED42FB452CB360FA00C5CC56 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = ED42FB442CB360FA00C5CC56 /* FirebaseFirestore */; };
 		FF153AFF2B07C3E000D0BA30 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */; };
 		FF4E82BE2AD39863004949AF /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */; };
@@ -77,8 +78,7 @@
 		ED1FE6962CB4936E006F861F /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				CarMaintenanceConfiguration.swift,
-				MaintenanceVehicleAppEntity.swift,
+				VehicleAppEntity.swift,
 			);
 			target = FF5D13A22A86C2D600BC9BD6 /* Basic-Car-Maintenance */;
 		};
@@ -156,6 +156,7 @@
 				FFDADF812ACD35A100DDEF79 /* SwiftUI.framework in Frameworks */,
 				FFDADF7F2ACD35A100DDEF79 /* WidgetKit.framework in Frameworks */,
 				ED42FB452CB360FA00C5CC56 /* FirebaseFirestore in Frameworks */,
+				ED1FE7692CB4BEDC006F861F /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -885,6 +886,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C90C058A2CB0FC5800046C42 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
 			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+		ED1FE7682CB4BEDC006F861F /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 		ED42FB442CB360FA00C5CC56 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;

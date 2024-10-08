@@ -931,9 +931,6 @@
     "Car Maintenance" : {
 
     },
-    "Car Maintenance Configuration" : {
-
-    },
     "Change App Icon" : {
       "localizations" : {
         "be" : {
@@ -4000,9 +3997,6 @@
           }
         }
       }
-    },
-    "Selected Vehicle" : {
-
     },
     "Settings" : {
       "comment" : "Label to display settings.",

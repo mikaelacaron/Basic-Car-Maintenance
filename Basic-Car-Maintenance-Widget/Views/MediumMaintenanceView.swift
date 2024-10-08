@@ -14,18 +14,38 @@ struct MediumMaintenanceView: View {
     var entry: Provider.Entry
     
     var body: some View {
-        if entry.configuration.selectedVehicle != nil {
-            if let error = entry.error {
-                Text("Error: \(error)")
-            } else {
-                VStack {
-                    ForEach(entry.maintenanceEvents) { event in
-                        Text("\(event.date.formatted(date: .abbreviated, time: .omitted)) - \(event.title)")
-                    }
-                }
+        if let error = entry.error {
+            ErrorView(error: error)
+        } else if let selectedVehicle = entry.configuration.selectedVehicle {
+                HStack(spacing: 16) {
+                    CarInfo(vehicle: selectedVehicle)
+                    MaintenanceList(events: entry.maintenanceEvents)
+                    Spacer()
             }
         } else {
-            Text("Select a vehicle first to see maintenance events.")
+            Text("No vehicle selected")
         }
     }
+}
+
+#Preview("General View (2 entries)", as: .systemMedium) {
+    BasicCarMaintenanceWidget()
+} timeline: {
+    MaintenanceEntry(date: .now, configuration: .demo, maintenanceEvents: .demo)
+}
+
+#Preview("General View (1 entry)", as: .systemMedium) {
+    BasicCarMaintenanceWidget()
+} timeline: {
+    MaintenanceEntry(
+        date: .now, 
+        configuration: .demo, 
+        maintenanceEvents: Array([MaintenanceEvent].demo.prefix(1)) 
+    )
+}
+
+#Preview("Error View", as: .systemMedium) {
+    BasicCarMaintenanceWidget()
+} timeline: {
+    MaintenanceEntry(date: .now, configuration: .demo, maintenanceEvents: .demo, error: "Unexpected error occurred.")
 }

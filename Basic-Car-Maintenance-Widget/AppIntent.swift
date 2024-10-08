@@ -13,7 +13,6 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     static var title: LocalizedStringResource = "Current Vehicle"
     static var description = IntentDescription("See the current vehicle's maintenance events")
 
-    // An example configurable parameter.
     @Parameter(title: "Vehichle")
-    var selectedVehicle: MaintenanceVehicleAppEntity?
+    var selectedVehicle: VehicleAppEntity?
 }

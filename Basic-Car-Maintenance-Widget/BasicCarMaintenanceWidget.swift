@@ -14,15 +14,8 @@ struct Provider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> MaintenanceEntry {
         MaintenanceEntry(
             date: Date(), 
-            configuration: ConfigurationAppIntent(),
-            maintenanceEvents: [
-                MaintenanceEvent(
-                    vehicleID: "2014 Ford Focus", 
-                    title: "Oil Change", 
-                    date: .now, 
-                    notes: "The cabin air filter was also replaced."
-                )
-            ]
+            configuration: .demo,
+            maintenanceEvents: .demo
         )
     }
 
@@ -30,14 +23,7 @@ struct Provider: AppIntentTimelineProvider {
         MaintenanceEntry(
             date: Date(), 
             configuration: configuration,
-            maintenanceEvents: [
-                MaintenanceEvent(
-                    vehicleID: "2014 Ford Focus", 
-                    title: "Oil Change", 
-                    date: .now, 
-                    notes: "The cabin air filter was also replaced."
-                )
-            ]
+            maintenanceEvents: .demo
         )
     }
     
@@ -46,27 +32,28 @@ struct Provider: AppIntentTimelineProvider {
         let currentDate = Date()
         let nextUpdate = Calendar.current.date(byAdding: .hour, value: 1, to: currentDate)!
         
-        let result = await fetchFromDatabase(for: configuration.selectedVehicle?.id)
+        let result = await fetchMaintenanceEvents(for: configuration.selectedVehicle?.id)
         let entry = switch result {
         case .success(let events):
             MaintenanceEntry(date: currentDate, configuration: configuration, maintenanceEvents: events)
         case .failure(let error):
+            // Returns an empty list of options
             MaintenanceEntry(date: currentDate, configuration: configuration, maintenanceEvents: [], error: error.localizedDescription)
         }
         
         return Timeline(entries: [entry], policy: .after(nextUpdate))
     }
     
-    func fetchFromDatabase(for vehichleID: String?) async -> Result<[MaintenanceEvent], Error> {
+    /// Fetches maintenance events for the selected vehicle from Firestore.
+    /// - Parameter vehichleID: The ID of the selected vehicle.
+    /// - Returns: A list of maintenance events or an error if the fetch fails.
+    private func fetchMaintenanceEvents(for vehichleID: String?) async -> Result<[MaintenanceEvent], Error> {
         guard let vehichleID else {
-            return .failure(FirestoreError.noVehicleSelected)
+            return .failure(FetchError.noVehicleSelected)
         }
         
         do {
-            let docRef = Firestore
-                            .firestore()
-                            .collection("\(FirestoreCollection.vehicles)/\(vehichleID)/\(FirestoreCollection.maintenanceEvents)")
-            
+            let docRef = Firestore.firestore().collection("\(FirestoreCollection.vehicles)/\(vehichleID)/\(FirestoreCollection.maintenanceEvents)")
             let snapshot = try await docRef.getDocuments()
             let events = snapshot.documents.compactMap {
                 try? $0.data(as: MaintenanceEvent.self)
@@ -78,14 +65,12 @@ struct Provider: AppIntentTimelineProvider {
     }
 }
     
-enum FirestoreError: LocalizedError {
-    case unauthenticated
+/// Errors that can occur when fetching maintenance events.
+enum FetchError: LocalizedError {
     case noVehicleSelected
     
     var errorDescription: String {
         switch self {
-        case .unauthenticated:
-            "User is not authenticated. Please sign in to the app to continue."
         case .noVehicleSelected:
             "No vehicle selected. Please select a vehicle to continue."
         }
@@ -103,21 +88,6 @@ struct MaintenanceEntry: TimelineEntry {
         self.configuration = configuration
         self.maintenanceEvents = maintenanceEvents
         self.error = error
-    }
-}
-
-struct BasicCarMaintenanceWidgetEntryView: View {
-    @Environment(\.widgetFamily) var widgetFamily
-    
-    var entry: Provider.Entry
-
-    var body: some View {
-        switch widgetFamily {
-        case .systemMedium:
-            MediumMaintenanceView(entry: entry)
-        default:
-            Text("Unimplemented widget family: \(widgetFamily.rawValue)")
-        }
     }
 }
 
@@ -148,19 +118,8 @@ struct BasicCarMaintenanceWidget: Widget {
     }
 }
 
-extension ConfigurationAppIntent {
-    fileprivate static var demo: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.selectedVehicle = MaintenanceVehicleAppEntity(id: "", displayString: "Kia Soul")
-        return intent
-    }
-}
-
 #Preview(as: .systemMedium) {
     BasicCarMaintenanceWidget()
 } timeline: {
-    MaintenanceEntry(date: .now, configuration: .demo, maintenanceEvents: [
-        MaintenanceEvent(vehicleID: "", title: "Oil Change", date: .now, notes: "Test Notes"),
-        MaintenanceEvent(vehicleID: "", title: "Oil Change", date: .now, notes: "Test Notes")
-    ])
+    MaintenanceEntry(date: .now, configuration: .demo, maintenanceEvents: .demo)
 }
