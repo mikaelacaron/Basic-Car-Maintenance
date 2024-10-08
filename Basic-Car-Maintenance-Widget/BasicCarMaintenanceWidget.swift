@@ -27,8 +27,7 @@ struct Provider: AppIntentTimelineProvider {
         )
     }
     
-    func timeline(for configuration: ConfigurationAppIntent,
-                  in context: Context) async -> Timeline<MaintenanceEntry> {
+    func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<MaintenanceEntry> {
         let currentDate = Date()
         let nextUpdate = Calendar.current.date(byAdding: .hour, value: 1, to: currentDate)!
         
