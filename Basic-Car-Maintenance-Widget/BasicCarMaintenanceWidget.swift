@@ -22,7 +22,7 @@ struct Provider: AppIntentTimelineProvider {
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> MaintenanceEntry {
         MaintenanceEntry(
             date: Date(), 
-            configuration: configuration,
+            configuration: .demo,
             maintenanceEvents: .demo
         )
     }
