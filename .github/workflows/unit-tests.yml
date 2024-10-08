@@ -37,11 +37,11 @@ jobs:
     - name: Enable Build Tools
       run: cp fastlane/enable-build-tool-plugins.json ~/Library/org.swift.swiftpm/security/plugins.json
     
-    - name: Update dependencies
+    - name: Install dependencies
       run: bundle install
 
     - name: Install build log formatter
       run: brew install xcbeautify
       
     - name: Run Unit Tests
-      run: bundle exec fastlane unit_tests
+      run: FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT=60 bundle exec fastlane unit_tests
