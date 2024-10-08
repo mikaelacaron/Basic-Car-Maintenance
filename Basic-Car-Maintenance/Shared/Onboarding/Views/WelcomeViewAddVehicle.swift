@@ -177,6 +177,7 @@ struct WelcomeViewAddVehicle: View {
             Task {
                 do {
                     try await viewModel.addVehicle(newVehicle)
+                    print("Vehicle \(newVehicle.name) added to firebase successfully!")
                     alertType = .vehicleAdded(name: vehicleName)
                     showAlert = true
                 } catch {
