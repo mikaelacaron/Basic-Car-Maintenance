@@ -53,27 +53,22 @@ The vehicles collection contains all the vehicles associated with a specific use
 
 **alerts** : read-only for all users
 
-**maintenance_events** : Authorized users can read and write to the maintenance events collection that is associated with their `userID`.
-
-**vehicles**: Authorized users can ready and write to vehicles collection that is associated with their `userID`.
+**vehicles**: Authorized users can ready and write to vehicles collection that is associated with their `userID`. With `rules_version` set to `2`, the subcollections (`maintenance_events` and `odometer_readings`) will automatically have the same rules 
 
 ```
-rules_version = '1';
+rules_version = '2';
+
 service cloud.firestore {
-match /databases/{database}/documents {
+  match /databases/{database}/documents {
 
-    match /alerts/{document=\*\*} {
-    allow read;
+    match /alerts/{document=**} {
+      allow read; 
     }
 
-    match /maintenance_events/{allPaths=**} {
-    allow read, write: if request.auth != null && request.auth.uid == userId;
+    match /vehicles/{vehicleId}/{document=**} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userID;
+      allow write: if request.auth != null && request.auth.uid == request.resource.data.userID;
     }
-
-    match /vehicles/{allPaths=**} {
-    allow read, write: if request.auth != null && request.auth.uid == userId;
-        }
-    }
-
+  }
 }
 ```
