@@ -38,11 +38,14 @@ You have 100 characters of keyword space, which get combined with the Name and S
 Suggested: `car,van,electric,bike,care,repair,manage,easy,simple,oil,change,tire,rotation,record,fuel,gas,charge`
 
 #### Privacy Info
-For Privacy info I checked User Defaults APIs with the usage reason CA92.1
-Collected Data Types: 
-Name - linked to identity and app functionality
-Email Address - linked to identity and app functionality
-Phone number - linked to identity and app functionality
-Photos or videos - linked to identity
-User ID - linked to identity and app functionality
+The `PrivacyInfo.xcprivacy` file was created with https://www.privacymanifest.dev/
+
+Checked APIs:
+* User Defaults APIs with the usage reason CA92.1
+* Collected Data Types: 
+    * Name - linked to identity and app functionality
+    * Email Address - linked to identity and app functionality
+    * Phone number - linked to identity and app functionality
+    * Photos or videos - linked to identity
+    * User ID - linked to identity and app functionality
 
