@@ -62,6 +62,7 @@ struct BasicCarMaintenanceWidget: Widget {
     let kind: String = "BasicCarMaintenanceWidget"
     
     init() {
+        // Since this widget access Firebase, the same configuration as the main application is needed. 
         FirebaseApp.configure()
         
         let useEmulator = UserDefaults.shared.bool(forKey: "useEmulator")

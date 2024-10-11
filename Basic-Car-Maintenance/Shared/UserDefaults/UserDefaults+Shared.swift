@@ -9,10 +9,10 @@
 import Foundation
 
 extension UserDefaults {
+    /// Returns a UserDefaults instance associtated with an app group.
     static var shared: UserDefaults {
-        // Not sure of a great way to grab the group id here
         guard let shared = UserDefaults(suiteName: "group.com.<your-company>.Basic-Car-Maintenance") else {
-            fatalError("Ensure that your app is properly configured for sharing user defaults.")
+            fatalError("Ensure that your app/extension is properly configured for sharing user defaults.")
         }
         
         return shared
