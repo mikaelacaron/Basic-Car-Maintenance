@@ -2,11 +2,12 @@
 //  MainTabView.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Omar Hegazy on 05/10/2023.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 enum TabSelection: Int, Identifiable, CaseIterable {
     var id: Self { self }
@@ -53,8 +54,8 @@ struct MainTabView: View {
     @State private var selectedTabId: TabSelection.ID? = .dashboard
     @State private var columnVisibility = NavigationSplitViewVisibility.automatic
     
-    @State var authenticationViewModel = AuthenticationViewModel()
-    @State var viewModel = MainTabViewModel()
+    @State private var authenticationViewModel = AuthenticationViewModel()
+    @State private var viewModel = MainTabViewModel()
     
     init() {
         _selectedTabId = State(initialValue: selectedTab)

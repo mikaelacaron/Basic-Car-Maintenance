@@ -2,7 +2,8 @@
 //  FirebaseAnalytics+Extension.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Jessica Linden on 10/30/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import SwiftUI

@@ -2,7 +2,8 @@
 //  EditMaintenanceEventView.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Aaron Wilson on 10/5/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import SwiftUI

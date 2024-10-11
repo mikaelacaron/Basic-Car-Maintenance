@@ -11,7 +11,7 @@ Welcome to my open source app! It is ready for contributors for [Hacktoberfest](
 # Getting Started
 * Read the [Code of Conduct](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/dev/CODE_OF_CONDUCT.md)
 * Read the [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/dev/CONTRIBUTING.md) guidelines
-* Download Xcode 15 or later (preferred to use Xcode 16 or later)
+* Download Xcode 16.0 or later
 * Browse the open [issues](https://github.com/mikaelacaron/Basic-Car-Maintenance/issues) and **comment** which you would like to work on
    * It is only one person per issue, except where noted.
 * **Fork** this repo

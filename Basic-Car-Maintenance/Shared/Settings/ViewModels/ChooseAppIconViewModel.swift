@@ -1,8 +1,9 @@
 //
-//  ChooseAppIconView.swift
+//  ChooseAppIconViewModel.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Daniel Lyons on 10/11/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import UIKit

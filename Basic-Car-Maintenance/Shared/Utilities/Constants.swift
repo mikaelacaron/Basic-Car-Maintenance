@@ -2,7 +2,8 @@
 //  Constants.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Justin Seal on 10/13/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import Foundation

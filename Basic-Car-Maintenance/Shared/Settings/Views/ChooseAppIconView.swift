@@ -2,13 +2,14 @@
 //  ChooseAppIconView.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Daniel Lyons on 10/11/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import SwiftUI
 
 struct ChooseAppIconView: View {
-    @State var viewModel: ChooseAppIconViewModel = .init()
+    @State private var viewModel: ChooseAppIconViewModel = .init()
     
     private func isSelected(_ icon: AppIcon) -> Bool {
         return viewModel.selectedAppIcon == icon
@@ -18,6 +19,7 @@ struct ChooseAppIconView: View {
         GridItem(.flexible(minimum: 30, maximum: 300)),
         GridItem(.flexible(minimum: 30, maximum: 300))
     ]
+    
     var body: some View {
         Form {
             Section {
@@ -71,5 +73,5 @@ extension ChooseAppIconView {
 }
 
 #Preview {
-    ChooseAppIconView(viewModel: .init())
+    ChooseAppIconView()
 }

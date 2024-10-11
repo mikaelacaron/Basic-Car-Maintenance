@@ -2,14 +2,15 @@
 //  Basic_Car_Maintenance-UITests.swift
 //  Basic-Car-Maintenance-UITests
 //
-//  Created by Mikaela Caron on 8/11/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import XCTest
 
 final class BasicCarMaintenanceUITests: XCTestCase {
     
-    let app = XCUIApplication()
+    private let app = XCUIApplication()
     
     override func setUp() {
         continueAfterFailure = false

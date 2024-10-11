@@ -2,14 +2,14 @@
 //  ChooseAppIconView.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Daniel Lyons on 10/11/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import UIKit
 
 enum AppIcon: String, CaseIterable, Identifiable {
     case primary = "AppIcon"
-    case carDark = "AppIcon-car-dark"
     case carRed = "AppIcon-car-red"
     case carYellow = "AppIcon-car-yellow"
     case carBlack = "AppIcon-car-black"
@@ -33,8 +33,6 @@ enum AppIcon: String, CaseIterable, Identifiable {
         switch self {
         case .primary:
             return "Default"
-        case .carDark:
-            return "Dark Mode"
         case .carRed:
             return "Red Car"
         case .carYellow:

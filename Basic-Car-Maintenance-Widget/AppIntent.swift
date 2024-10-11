@@ -2,7 +2,8 @@
 //  AppIntent.swift
 //  Basic-Car-Maintenance-Widget
 //
-//  Created by Mikaela Caron on 10/4/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import WidgetKit

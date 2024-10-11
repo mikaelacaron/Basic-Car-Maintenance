@@ -2,7 +2,8 @@
 //  AlertView.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Omar Hegazy on 11/10/2023.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import SwiftUI
