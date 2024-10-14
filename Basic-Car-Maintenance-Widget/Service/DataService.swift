@@ -70,7 +70,7 @@ enum DataService {
 
         let docRef = Firestore
                          .firestore()
-                         .collectionGroup(FirestoreCollection.vehicles)
+                         .collection(FirestoreCollection.vehicles)
                          .whereField(FirestoreField.userID, isEqualTo: userID)
          
         do {

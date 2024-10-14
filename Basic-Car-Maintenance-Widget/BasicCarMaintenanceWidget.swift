@@ -67,7 +67,7 @@ struct BasicCarMaintenanceWidget: Widget {
         FirebaseApp.configure()
         
         try? Auth.auth().useUserAccessGroup(Bundle.main.keychainAccessGroup)
-        let useEmulator = UserDefaults.standard.bool(forKey: "useEmulator")
+        let useEmulator = true // Process arguments aren't respected here from the main app
         if useEmulator {
             let settings = Firestore.firestore().settings
             settings.host = "localhost:8080"
