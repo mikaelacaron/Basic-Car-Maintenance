@@ -76,7 +76,6 @@ final class AuthenticationViewModel {
             try Auth.auth().signOut()
             authenticationState = .unauthenticated
             flow = .signUp
-            
             signInAnonymously()
         } catch {
             print(error)
