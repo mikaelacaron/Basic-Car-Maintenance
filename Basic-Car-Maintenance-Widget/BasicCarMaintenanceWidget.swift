@@ -7,6 +7,7 @@
 //
 
 import Firebase
+import FirebaseAuth
 import WidgetKit
 import SwiftUI
 
@@ -65,7 +66,8 @@ struct BasicCarMaintenanceWidget: Widget {
         // Since this widget access Firebase, the same configuration as the main application is needed. 
         FirebaseApp.configure()
         
-        let useEmulator = UserDefaults.shared.bool(forKey: "useEmulator")
+        try? Auth.auth().useUserAccessGroup(Bundle.main.keychainAccessGroup)
+        let useEmulator = UserDefaults.standard.bool(forKey: "useEmulator")
         if useEmulator {
             let settings = Firestore.firestore().settings
             settings.host = "localhost:8080"

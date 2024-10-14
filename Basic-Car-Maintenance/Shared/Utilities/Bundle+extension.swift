@@ -16,4 +16,8 @@ extension Bundle {
     var buildNumber: String {
         return infoDictionary?["CFBundleVersion"] as? String ?? "1"
     }
+    
+    var keychainAccessGroup: String? {
+        return infoDictionary?["KeychainAccessGroup"] as? String
+    }
 }

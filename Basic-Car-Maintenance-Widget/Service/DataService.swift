@@ -7,6 +7,7 @@
 //
 
 import Firebase
+import FirebaseAuth
 
 enum DataService {
     /// Fetches maintenance events for the selected vehicle from Firestore.
@@ -63,7 +64,7 @@ enum DataService {
     /// }
     /// ```
     static func fetchVehicles() async -> Result<[Vehicle], Error> {
-        guard let userID = UserDefaults.shared.string(forKey: "userID") else {
+        guard let userID = Auth.auth().currentUser?.uid else {
             return .failure(FetchError.unauthenticated)
         }
 

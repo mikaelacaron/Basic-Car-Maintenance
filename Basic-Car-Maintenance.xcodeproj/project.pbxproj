@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED1FE7692CB4BEDC006F861F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ED1FE7682CB4BEDC006F861F /* FirebaseFirestoreSwift */; };
 		ED42FB452CB360FA00C5CC56 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = ED42FB442CB360FA00C5CC56 /* FirebaseFirestore */; };
+		EDB19B472CBD5D6D00E881E6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EDB19B462CBD5D6D00E881E6 /* FirebaseAuth */; };
 		FF153AFF2B07C3E000D0BA30 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */; };
 		FF4E82BE2AD39863004949AF /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */; };
 		FF4E82C02AD39863004949AF /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BF2AD39863004949AF /* FirebaseRemoteConfigSwift */; };
@@ -81,7 +82,7 @@
 				"Shared/GoogleService-Info.plist",
 				Shared/Models/MaintenanceEvent.swift,
 				Shared/Models/Vehicle.swift,
-				"Shared/UserDefaults/UserDefaults+Shared.swift",
+				"Shared/Utilities/Bundle+extension.swift",
 				Shared/Utilities/Constants.swift,
 			);
 			target = FFDADF7C2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension */;
@@ -148,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFDADF812ACD35A100DDEF79 /* SwiftUI.framework in Frameworks */,
+				EDB19B472CBD5D6D00E881E6 /* FirebaseAuth in Frameworks */,
 				FFDADF7F2ACD35A100DDEF79 /* WidgetKit.framework in Frameworks */,
 				ED42FB452CB360FA00C5CC56 /* FirebaseFirestore in Frameworks */,
 				ED1FE7692CB4BEDC006F861F /* FirebaseFirestoreSwift in Frameworks */,
@@ -893,6 +895,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		EDB19B462CBD5D6D00E881E6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 		FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
