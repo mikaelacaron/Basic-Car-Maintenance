@@ -91,7 +91,7 @@ struct SettingsView: View {
                 Section {
                     ForEach(viewModel.vehicles) { vehicle in
                         VStack(alignment: .leading, spacing: 2) {
-                            Text("Display Name: \(vehicle.name)")
+                            Text("\(vehicle.name)")
                                 .fontWeight(.bold)
                                 .font(.headline)
                             
