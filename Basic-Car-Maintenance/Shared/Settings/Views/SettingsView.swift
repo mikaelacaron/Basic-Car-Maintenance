@@ -91,19 +91,21 @@ struct SettingsView: View {
                 Section {
                     ForEach(viewModel.vehicles) { vehicle in
                         VStack(alignment: .leading, spacing: 2) {
-                            HStack {
-                                if let year = vehicle.year, !year.isEmpty {
-                                    Text(year)
-                                }
-                                
-                                Text(vehicle.make)
-                                
-                                Text(vehicle.model)
-                            }
-                            .fontWeight(.bold)
-                            .font(.headline)
+                            Text("Display Name: \(vehicle.name)")
+                                .fontWeight(.bold)
+                                .font(.headline)
                             
                             Group {
+                                HStack {
+                                    if let year = vehicle.year, !year.isEmpty {
+                                        Text(year)
+                                    }
+                                    
+                                    Text(vehicle.make)
+                                    
+                                    Text(vehicle.model)
+                                }
+                                
                                 if let licensePlateNumber =
                                     vehicle.licensePlateNumber,
                                    !licensePlateNumber.isEmpty {
@@ -116,9 +118,7 @@ struct SettingsView: View {
                                 
                                 if let color = vehicle.color, !color.isEmpty {
                                     Text("Color: \(color)")
-                                }
-                                
-                                Text("Display Name: \(vehicle.name)")
+                                } 
                             }
                             .font(.callout)
                             .foregroundStyle(.secondary)
