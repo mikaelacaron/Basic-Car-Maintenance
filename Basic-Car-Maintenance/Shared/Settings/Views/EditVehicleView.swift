@@ -124,9 +124,9 @@ struct EditVehicleView: View, Observable {
     
     @Previewable @State var selectedVehicle: Vehicle? = Vehicle(
         id: UUID().uuidString,
-        name: "Tesla Model S",
-        make: "Tesla",
-        model: "Model S",
+        name: "My Car",
+        make: "Ford",
+        model: "F-150",
         year: "2020",
         color: "Red",
         vin: "5YJSA1E26JF123456",
