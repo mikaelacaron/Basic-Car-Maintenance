@@ -122,6 +122,19 @@ struct EditVehicleView: View, Observable {
 }
 
 #Preview {
-    EditVehicleView(selectedVehicle: .constant(nil),
-                    viewModel: SettingsViewModel(authenticationViewModel: AuthenticationViewModel()))
+    
+    @Previewable @State var selectedVehicle: Vehicle? = Vehicle(
+        id: UUID().uuidString,
+        name: "My Car",
+        make: "Ford",
+        model: "F-150",
+        year: "2020",
+        color: "Red",
+        vin: "5YJSA1E26JF123456",
+        licensePlateNumber: "ABC123"
+    )
+    var viewModel = SettingsViewModel(authenticationViewModel: AuthenticationViewModel())
+
+    EditVehicleView(selectedVehicle: $selectedVehicle, viewModel: viewModel)
+    
 }

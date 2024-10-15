@@ -89,15 +89,21 @@ struct EditMaintenanceEventView: View {
     }
 }
 
-#Preview {
-    EditMaintenanceEventView(selectedEvent:
-            .constant(MaintenanceEvent(id: "",
-                                       userID: "",
-                                       vehicleID: "",
-                                       title: "",
-                                       date: Date(),
-                                       notes: "")),
-                             viewModel:
-                                DashboardViewModel(userUID: "")
+#Preview() {
+      
+    @Previewable @State var selectedEvent: MaintenanceEvent? = MaintenanceEvent(
+        id: UUID().uuidString,
+        userID: "user123",
+        vehicleID: "vehicle123",
+        title: "Oil Change",
+        date: Date(),
+        notes: "Changed engine oil"
+    )
+    
+    var viewModel = DashboardViewModel(userUID: "user123")
+    
+    EditMaintenanceEventView(
+        selectedEvent: $selectedEvent,
+        viewModel: viewModel
     )
 }
