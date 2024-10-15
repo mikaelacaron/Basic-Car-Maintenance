@@ -1,17 +1,18 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
       "filename" : "AppIcon.png",
-      "idiom" : "universal",
-      "scale" : "2x"
+      "idiom" : "universal"
     },
     {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "AppIcon-Original-Dark.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {
