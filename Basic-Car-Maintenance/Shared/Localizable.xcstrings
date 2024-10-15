@@ -89,16 +89,6 @@
         }
       }
     },
-    "%@: %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@: %2$@"
-          }
-        }
-      }
-    },
     "%lld %@" : {
       "localizations" : {
         "de" : {
@@ -1130,6 +1120,9 @@
         }
       }
     },
+    "Color: %@" : {
+
+    },
     "Continue" : {
 
     },
@@ -1676,6 +1669,9 @@
           }
         }
       }
+    },
+    "Display Name: %@" : {
+
     },
     "Distance" : {
       "localizations" : {
@@ -3587,6 +3583,9 @@
       }
     },
     "Open Source" : {
+
+    },
+    "Plate: %@" : {
 
     },
     "Preferred units" : {
@@ -5794,6 +5793,9 @@
           }
         }
       }
+    },
+    "VIN: %@" : {
+
     },
     "Welcome 🥳" : {
 

@@ -29,15 +29,6 @@ struct SettingsView: View {
     @State private var isShowingEditVehicleView = false
     
     private let appVersion = "Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))"
-
-    private func vehicleDetails(for vehicle: Vehicle) -> [(label: String, value: String?)] {
-        [
-            ("Plate", vehicle.licensePlateNumber),
-            ("VIN", vehicle.vin),
-            ("Color", vehicle.color),
-            ("Display Name", vehicle.name)
-        ]
-    }
     
     init(authenticationViewModel: AuthenticationViewModel) {
         let settingsViewModel = SettingsViewModel(authenticationViewModel: authenticationViewModel)
@@ -99,27 +90,38 @@ struct SettingsView: View {
                 
                 Section {
                     ForEach(viewModel.vehicles) { vehicle in
-                        VStack(alignment: .leading, spacing: 4) {
-                            HStack(spacing: 4) {
-                                ForEach(
-                                    [
-                                        vehicle.year,
-                                        vehicle.make,
-                                        vehicle.model
-                                    ].compactMap { $0 }, id: \.self) { info in
-                                    Text(info)
-                                        .fontWeight(.bold)
-                                        .font(.headline)
+                        VStack(alignment: .leading, spacing: 2) {
+                            HStack {
+                                if let year = vehicle.year, !year.isEmpty {
+                                    Text(year)
                                 }
+                                
+                                Text(vehicle.make)
+                                
+                                Text(vehicle.model)
                             }
+                            .fontWeight(.bold)
+                            .font(.headline)
                             
-                            ForEach(vehicleDetails(for: vehicle), id: \.label) { detail in
-                                if let value = detail.value, !value.isEmpty {
-                                    Text("\(detail.label): \(value)")
-                                        .font(.callout)
-                                        .foregroundStyle(.secondary)
+                            Group {
+                                if let licensePlateNumber =
+                                    vehicle.licensePlateNumber,
+                                   !licensePlateNumber.isEmpty {
+                                    Text("Plate: \(licensePlateNumber)")
                                 }
+                                
+                                if let vin = vehicle.vin, !vin.isEmpty {
+                                    Text("VIN: \(vin)")
+                                }
+                                
+                                if let color = vehicle.color, !color.isEmpty {
+                                    Text("Color: \(color)")
+                                }
+                                
+                                Text("Display Name: \(vehicle.name)")
                             }
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
                         }
                         .swipeActions {
                             Button(role: .destructive) {
