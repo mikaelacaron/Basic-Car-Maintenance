@@ -200,9 +200,6 @@
         }
       }
     },
-    "about" : {
-
-    },
     "Add" : {
       "comment" : "Label for submit button on form to add an entry",
       "localizations" : {
@@ -416,7 +413,7 @@
         }
       }
     },
-    "Add the details below" : {
+    "Add the details below about " : {
 
     },
     "Add Vehicle" : {
@@ -814,9 +811,6 @@
           }
         }
       }
-    },
-    "Back" : {
-
     },
     "Basic" : {
 
@@ -1800,6 +1794,9 @@
           }
         }
       }
+    },
+    "Error" : {
+
     },
     "Failed To Add Vehicle" : {
       "localizations" : {
@@ -5006,6 +5003,9 @@
         }
       }
     },
+    "Vehicle %@" : {
+
+    },
     "Vehicle Color" : {
       "localizations" : {
         "be" : {
@@ -5784,9 +5784,6 @@
           }
         }
       }
-    },
-    "Welcome 🥳" : {
-
     },
     "Welcome to" : {
 
