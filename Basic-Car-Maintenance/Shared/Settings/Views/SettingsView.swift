@@ -90,30 +90,38 @@ struct SettingsView: View {
                 
                 Section {
                     ForEach(viewModel.vehicles) { vehicle in
-                        VStack(alignment: .leading) {
-                            Text(vehicle.name)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("\(vehicle.name)")
+                                .fontWeight(.bold)
                                 .font(.headline)
                             
-                            Text(vehicle.make)
-                            
-                            Text(vehicle.model)
-                            
-                            if let year = vehicle.year, !year.isEmpty {
-                                Text(year)
+                            Group {
+                                HStack {
+                                    if let year = vehicle.year, !year.isEmpty {
+                                        Text(year)
+                                    }
+                                    
+                                    Text(vehicle.make)
+                                    
+                                    Text(vehicle.model)
+                                }
+                                
+                                if let licensePlateNumber =
+                                    vehicle.licensePlateNumber,
+                                   !licensePlateNumber.isEmpty {
+                                    Text("Plate: \(licensePlateNumber)")
+                                }
+                                
+                                if let vin = vehicle.vin, !vin.isEmpty {
+                                    Text("VIN: \(vin)")
+                                }
+                                
+                                if let color = vehicle.color, !color.isEmpty {
+                                    Text("Color: \(color)")
+                                } 
                             }
-                            
-                            if let color = vehicle.color, !color.isEmpty {
-                                Text(color)
-                            }
-                            
-                            if let vin = vehicle.vin, !vin.isEmpty {
-                                Text(vin)
-                            }
-                            
-                            if let licensePlateNumber = vehicle.licensePlateNumber,
-                               !licensePlateNumber.isEmpty {
-                                Text(licensePlateNumber)
-                            }
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
                         }
                         .swipeActions {
                             Button(role: .destructive) {

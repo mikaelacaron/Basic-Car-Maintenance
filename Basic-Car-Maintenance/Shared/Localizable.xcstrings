@@ -1120,6 +1120,9 @@
         }
       }
     },
+    "Color: %@" : {
+
+    },
     "Continue" : {
 
     },
@@ -3579,6 +3582,9 @@
     "Open Source" : {
 
     },
+    "Plate: %@" : {
+
+    },
     "Preferred units" : {
       "comment" : "Label for units selected when adding an odometer reading",
       "localizations" : {
@@ -5784,6 +5790,9 @@
           }
         }
       }
+    },
+    "VIN: %@" : {
+
     },
     "Welcome 🥳" : {
 
