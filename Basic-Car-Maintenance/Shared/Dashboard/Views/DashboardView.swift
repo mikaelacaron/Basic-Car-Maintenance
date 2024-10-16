@@ -75,7 +75,10 @@ struct DashboardView: View {
                 .listStyle(.inset)
             }
             .analyticsView("\(Self.self)")
-            .searchable(text: $viewModel.searchText)
+            .searchable(
+                text: $viewModel.searchText,
+                prompt: Text("Search", comment: "Prompt to search maintenance events")
+            )
             .overlay {
                 if viewModel.isLoading {
                     ProgressView("Loading...")

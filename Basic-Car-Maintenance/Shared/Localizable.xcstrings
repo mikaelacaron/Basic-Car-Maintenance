@@ -4332,6 +4332,9 @@
         }
       }
     },
+    "Search" : {
+      "comment" : "Prompt to search maintenance events"
+    },
     "Select a vehicle" : {
       "comment" : "Picker for selecting a vehicle",
       "localizations" : {
@@ -4488,23 +4491,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Налаштування"
-          }
-        }
-      }
-    },
-    "Sidebar" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "fa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "نوار کناری"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Боковая панель"
           }
         }
       }
@@ -5262,23 +5248,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "کل مسافت پیموده شده را ردیابی و نمایش می‌دهد و به نگهداری به موقع کمک می‌کند."
-          }
-        }
-      }
-    },
-    "Unexpected error occured." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "fa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "خطای غیرمنتظره رخ داد."
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Произошла ошибка."
           }
         }
       }
