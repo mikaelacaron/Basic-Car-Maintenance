@@ -4,12 +4,8 @@
 <dict>
 	<key>com.apple.developer.applesignin</key>
 	<array>
-		<string>Default</string>
+		<string></string>
 	</array>
-	<key>com.apple.security.app-sandbox</key>
-	<true/>
-	<key>com.apple.security.files.user-selected.read-only</key>
-	<true/>
 	<key>keychain-access-groups</key>
 	<array>
 		<string>$(AppIdentifierPrefix)com.mikaelacaron.Shared</string>

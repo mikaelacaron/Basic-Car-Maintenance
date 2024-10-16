@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED1FE7692CB4BEDC006F861F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ED1FE7682CB4BEDC006F861F /* FirebaseFirestoreSwift */; };
+		ED42FB452CB360FA00C5CC56 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = ED42FB442CB360FA00C5CC56 /* FirebaseFirestore */; };
+		EDB19B472CBD5D6D00E881E6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EDB19B462CBD5D6D00E881E6 /* FirebaseAuth */; };
 		FF153AFF2B07C3E000D0BA30 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */; };
 		FF4E82BE2AD39863004949AF /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */; };
 		FF4E82C02AD39863004949AF /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BF2AD39863004949AF /* FirebaseRemoteConfigSwift */; };
@@ -73,6 +76,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		ED42FB492CB3621B00C5CC56 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Shared/GoogleService-Info.plist",
+				Shared/Models/MaintenanceEvent.swift,
+				Shared/Models/Vehicle.swift,
+				"Shared/Utilities/Bundle+extension.swift",
+				Shared/Utilities/Constants.swift,
+			);
+			target = FFDADF7C2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension */;
+		};
 		FF52DEBC2CADE9EF0023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -91,7 +105,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		FF52DE902CADE9EF0023F8DE /* Basic-Car-Maintenance */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FF52DEBC2CADE9EF0023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance"; sourceTree = "<group>"; };
+		FF52DE902CADE9EF0023F8DE /* Basic-Car-Maintenance */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FF52DEBC2CADE9EF0023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ED42FB492CB3621B00C5CC56 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance"; sourceTree = "<group>"; };
 		FF52DEC22CADEA000023F8DE /* Basic-Car-Maintenance-Widget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FF52DEC82CADEA000023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance-Widget"; sourceTree = "<group>"; };
 		FF52DECC2CADEA030023F8DE /* Basic-Car-Maintenance-Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance-Tests"; sourceTree = "<group>"; };
 		FF52DECF2CADEA060023F8DE /* Basic-Car-Maintenance-UITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance-UITests"; sourceTree = "<group>"; };
@@ -135,7 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFDADF812ACD35A100DDEF79 /* SwiftUI.framework in Frameworks */,
+				EDB19B472CBD5D6D00E881E6 /* FirebaseAuth in Frameworks */,
 				FFDADF7F2ACD35A100DDEF79 /* WidgetKit.framework in Frameworks */,
+				ED42FB452CB360FA00C5CC56 /* FirebaseFirestore in Frameworks */,
+				ED1FE7692CB4BEDC006F861F /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,6 +760,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Basic-Car-Maintenance-Widget/Basic-Car-Maintenance-WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -771,6 +789,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Basic-Car-Maintenance-Widget/Basic-Car-Maintenance-WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -867,6 +886,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C90C058A2CB0FC5800046C42 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
 			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+		ED1FE7682CB4BEDC006F861F /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		ED42FB442CB360FA00C5CC56 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		EDB19B462CBD5D6D00E881E6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 		FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -6,55 +6,76 @@
 //  See LICENSE for license information.
 //
 
+import Firebase
+import FirebaseAuth
 import WidgetKit
 import SwiftUI
 
 struct Provider: AppIntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationAppIntent())
-    }
-
-    func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: configuration)
+    func placeholder(in context: Context) -> MaintenanceEntry {
+        MaintenanceEntry(
+            date: Date(), 
+            configuration: .demo,
+            maintenanceEvents: .demo
+        )
     }
     
-    func timeline(for configuration: ConfigurationAppIntent,
-                  in context: Context) async -> Timeline<SimpleEntry> {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+    func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> MaintenanceEntry {
+        MaintenanceEntry(
+            date: Date(), 
+            configuration: .demo,
+            maintenanceEvents: .demo
+        )
+    }
+    
+    func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<MaintenanceEntry> {
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
+        let nextUpdate = Calendar.current.date(byAdding: .hour, value: 1, to: currentDate)!
+        
+        let result = await DataService.fetchMaintenanceEvents(for: configuration.selectedVehicle?.id)
+        let entry = switch result {
+        case .success(let events):
+            MaintenanceEntry(date: currentDate, configuration: configuration, maintenanceEvents: events)
+        case .failure(let error):
+            // Returns an empty list of options
+            MaintenanceEntry(date: currentDate, configuration: configuration, maintenanceEvents: [], error: error.localizedDescription)
         }
-
-        return Timeline(entries: entries, policy: .atEnd)
+        
+        return Timeline(entries: [entry], policy: .after(nextUpdate))
     }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct MaintenanceEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationAppIntent
-}
-
-struct BasicCarMaintenanceWidgetEntryView: View {
-    var entry: Provider.Entry
-
-    var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
-        }
+    let maintenanceEvents: [MaintenanceEvent]
+    let error: String?
+    
+    init(date: Date, configuration: ConfigurationAppIntent, maintenanceEvents: [MaintenanceEvent], error: String? = nil) {
+        self.date = date
+        self.configuration = configuration
+        self.maintenanceEvents = maintenanceEvents
+        self.error = error
     }
 }
 
 struct BasicCarMaintenanceWidget: Widget {
     let kind: String = "BasicCarMaintenanceWidget"
+    
+    init() {
+        // Since this widget access Firebase, the same configuration as the main application is needed. 
+        FirebaseApp.configure()
+        
+        try? Auth.auth().useUserAccessGroup(Bundle.main.keychainAccessGroup)
+        let useEmulator = true // Process arguments aren't respected here from the main app
+        if useEmulator {
+            let settings = Firestore.firestore().settings
+            settings.host = "localhost:8080"
+            settings.cacheSettings = MemoryCacheSettings()
+            settings.isSSLEnabled = false
+            Firestore.firestore().settings = settings
+        }
+    }
 
     var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind,
@@ -66,23 +87,8 @@ struct BasicCarMaintenanceWidget: Widget {
     }
 }
 
-extension ConfigurationAppIntent {
-    fileprivate static var smiley: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "😀"
-        return intent
-    }
-    
-    fileprivate static var starEyes: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "🤩"
-        return intent
-    }
-}
-
-#Preview(as: .systemSmall) {
+#Preview(as: .systemMedium) {
     BasicCarMaintenanceWidget()
 } timeline: {
-    SimpleEntry(date: .now, configuration: .smiley)
-    SimpleEntry(date: .now, configuration: .starEyes)
+    MaintenanceEntry(date: .now, configuration: .demo, maintenanceEvents: .demo)
 }

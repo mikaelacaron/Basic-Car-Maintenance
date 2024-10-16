@@ -46,6 +46,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        try? Auth.auth().useUserAccessGroup(Bundle.main.keychainAccessGroup)
         let useEmulator = UserDefaults.standard.bool(forKey: "useEmulator")
         if useEmulator {
             let settings = Firestore.firestore().settings
