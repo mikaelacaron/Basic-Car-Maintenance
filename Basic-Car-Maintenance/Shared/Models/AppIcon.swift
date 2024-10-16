@@ -44,7 +44,7 @@ enum AppIcon: String, CaseIterable, Identifiable {
         }
     }
     
-    var preview: UIImage {
-        UIImage(named: rawValue) ?? UIImage()
+    var preview: String {
+        return rawValue
     }
 }
