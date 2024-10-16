@@ -81,6 +81,12 @@
             "value" : "%1$@ on %2$@"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ در %2$@"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -144,6 +150,12 @@
             "value" : "🦄 Mikaela Caron - Maintainer"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🦄 Mikaela Caron - نگهدارنده"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -201,7 +213,14 @@
       }
     },
     "about" : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "درباره"
+          }
+        }
+      }
     },
     "Add" : {
       "comment" : "Label for submit button on form to add an entry",
@@ -228,6 +247,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Agregar"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضافه کردن"
           }
         },
         "fr" : {
@@ -313,6 +338,12 @@
             "value" : "Agregar Mantenimiento"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضافه کردن نگهداری"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -378,6 +409,12 @@
             "value" : "KM-Stand hinzufügen"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضافه کردن کیلومتر شمار"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -417,7 +454,14 @@
       }
     },
     "Add the details below" : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جزئیات زیر را اضافه کنید"
+          }
+        }
+      }
     },
     "Add Vehicle" : {
       "comment" : "Label to add a vehicle.",
@@ -444,6 +488,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Añadir Vehículo"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضافه کردن وسیله نقلیه"
           }
         },
         "fr" : {
@@ -529,6 +579,12 @@
             "value" : "Agrega tu primer mantenimiento"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضافه کردن اولین رویداد نگهداری"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -594,6 +650,12 @@
             "value" : "Ersten Kilometerstand hinzufügen"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضافه کردن اولین کیلومتر شمار"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -641,6 +703,12 @@
             "value" : "Add"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضافه کردن"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -674,6 +742,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notas Adicionales"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "یادداشت‌ های اضافی"
           }
         },
         "fr" : {
@@ -759,6 +833,12 @@
             "value" : "Ocurrió un Error"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "یک خطا رخ داد"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -816,19 +896,53 @@
       }
     },
     "Back" : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بازگشت"
+          }
+        }
+      }
     },
     "Basic" : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پایه"
+          }
+        }
+      }
     },
     "Basic Car" : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ماشین پایه"
+          }
+        }
+      }
     },
     "Built collaboratively with contributors, enhancing the app functionality." : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ساخته شده با همکاری مشارکت‌کنندگان که به عملکرد بهتر برنامه کمک می‌کند."
+          }
+        }
+      }
     },
     "Can't Delete Last Vehicle" : {
       "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آخرین وسیله نقلیه را نمی‌توان حذف کرد"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -867,6 +981,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abbrechen"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لغو"
           }
         },
         "fr" : {
@@ -926,7 +1046,14 @@
       }
     },
     "Car Maintenance" : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نگهداری ماشین"
+          }
+        }
+      }
     },
     "Change App Icon" : {
       "localizations" : {
@@ -940,6 +1067,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "App Icon wechseln"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تغییر آیکون برنامه"
           }
         },
         "hi" : {
@@ -1006,6 +1139,12 @@
             "value" : "Wähle ein App Icon"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انتخاب آیکون برنامه"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1070,6 +1209,12 @@
             "value" : "Farbe"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رنگ"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1124,7 +1269,14 @@
 
     },
     "Continue" : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ادامه"
+          }
+        }
+      }
     },
     "Contributors" : {
       "comment" : "Link to contributors list.",
@@ -1151,6 +1303,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Contribuyentes"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مشارکت کنندگان"
           }
         },
         "fr" : {
@@ -1222,6 +1380,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kopiert!"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "کپی شد!"
           }
         },
         "hi" : {
@@ -1299,6 +1463,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Personalizado"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سفارشی"
           }
         },
         "fr" : {
@@ -1384,6 +1554,12 @@
             "value" : "Panel"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "داشبورد"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1465,6 +1641,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fecha"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تاریخ"
           }
         },
         "fr" : {
@@ -1550,6 +1732,12 @@
             "value" : "Borrar"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حذف"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1620,6 +1808,12 @@
             "value" : "Verwerfen"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بستن"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1676,6 +1870,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Entfernung"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فاصله"
           }
         },
         "hi" : {
@@ -1737,6 +1937,12 @@
             "value" : "Bearbeiten"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ویرایش"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1796,6 +2002,12 @@
     "Edit Reading" : {
       "comment" : "Title for form when editing an odometer reading",
       "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ویرایش شمارش کیلومتر شمار"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1822,6 +2034,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fahrzeug konnte nicht hinzugefügt werden"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وسیله نقلیه اضافه نشد"
           }
         },
         "fr" : {
@@ -1898,6 +2116,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fahrzeug konnte nicht hinzugefügt werden\nDetails:%@"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وسیله نقلیه اضافه نشد. جزئیات: %@"
           }
         },
         "fr" : {
@@ -1983,6 +2207,12 @@
             "value" : "No se pudo Agregar el Vehículo. Error Desconocido."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وسیله نقلیه اضافه نشد. خطای ناشناخته."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2064,6 +2294,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se pudo Eliminar el Evento"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رویداد حذف نشد"
           }
         },
         "fr" : {
@@ -2149,6 +2385,12 @@
             "value" : "No se pudo Eliminar el Vehículo"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وسیله نقلیه حذف نشد"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2232,6 +2474,12 @@
             "value" : "No se pudieron Eliminar los Detalles del Vehículo: %@"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وسیله نقلیه حذف نشد. جزئیات: %@"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2309,6 +2557,12 @@
             "value" : "Fahrzeug konnte nicht gelöscht werden. Unbekannter Fehler."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وسیله نقلیه حذف نشد. خطای ناشناخته."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2380,6 +2634,12 @@
             "value" : "Filter"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فیلتر"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2431,6 +2691,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Für %@"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "برای %@"
           }
         },
         "hi" : {
@@ -2510,6 +2776,12 @@
             "value" : "Repositorio de GitHub"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مخزن گیت‌هاب"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2575,6 +2847,12 @@
             "value" : "Es ist Open Source und Jede/Jeder kann mitwirken."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "این متن‌باز است و هرکسی می‌تواند مشارکت کند."
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2613,6 +2891,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kilometer"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "کیلومتر"
           }
         },
         "hi" : {
@@ -2665,6 +2949,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Autokennzeichen"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شماره پلاک"
           }
         },
         "hi" : {
@@ -2725,6 +3015,12 @@
             "value" : "Lade…"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "درحال بارگذاری…"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2769,6 +3065,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Iniciar sesión de forma anónima con ID: %@"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وارد شده به شکل ناشناس با آیدی: %@"
           }
         },
         "fr" : {
@@ -2853,6 +3155,12 @@
             "value" : "Marca"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ایجاد"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2917,6 +3225,12 @@
             "value" : "Meilen"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مایل"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2979,6 +3293,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Modelo"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مدل"
           }
         },
         "fr" : {
@@ -3061,6 +3381,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nombre"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نام"
           }
         },
         "fr" : {
@@ -3146,6 +3472,12 @@
             "value" : "Más Nuevo a Más Antiguo"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جدیدترین به قدیمی‌ترین"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3214,6 +3546,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kein Ergebnis"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بدون نتیجه"
           }
         },
         "hi" : {
@@ -3293,6 +3631,12 @@
             "value" : "Notas"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "یادداشت‌ها"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3361,6 +3705,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kilometerzähler"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "کیلومتر شمار"
           }
         },
         "hi" : {
@@ -3438,6 +3788,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فهمیدم"
           }
         },
         "fr" : {
@@ -3523,6 +3879,12 @@
             "value" : "Más Antiguo a Más Nuevo "
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قدیمی‌ترین به جدیدترین"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3580,7 +3942,14 @@
       }
     },
     "Open Source" : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متن باز"
+          }
+        }
+      }
     },
     "Plate: %@" : {
 
@@ -3592,6 +3961,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : ""
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "واحد‌های مورد نظر"
           }
         },
         "hi" : {
@@ -3644,6 +4019,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Datenschutzrichtlinie"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سیاست‌ حریم شخصی"
           }
         },
         "hi" : {
@@ -3709,6 +4090,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perfil"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پروفایل"
           }
         },
         "fr" : {
@@ -3794,6 +4181,12 @@
             "value" : "Reportar un Error"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "گزارش مشکل"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3877,6 +4270,12 @@
             "value" : "Solicitar una Nueva Característica"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "درخواست قابلیت جدید"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3946,6 +4345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wähle ein Fahrzeug"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انتخاب وسیله نقلیه"
           }
         },
         "hi" : {
@@ -4025,6 +4430,12 @@
             "value" : "Configuración"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنظیمات"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4084,6 +4495,12 @@
     "Sidebar" : {
       "extractionState" : "stale",
       "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نوار کناری"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4116,6 +4533,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Desconectar"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خروج"
           }
         },
         "fr" : {
@@ -4200,6 +4623,12 @@
             "value" : "Registrado como %@"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وارد شده به عنوان %@"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4257,7 +4686,14 @@
       }
     },
     "Tap the + to begin" : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جهت شروع روی + تپ کنید"
+          }
+        }
+      }
     },
     "Thanks for using this app!" : {
       "comment" : "Thanks a user for using the app.",
@@ -4266,6 +4702,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Danke, dass Sie diese App verwenden!"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ممنون از اینکه از این برنامه استفاده می‌کنید!"
           }
         },
         "hi" : {
@@ -4327,6 +4769,12 @@
             "value" : "¡Gracias por usar esta aplicación! Es de código abierto y cualquiera puede contribuir."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ممنون از اینکه از این برنامه استفاده می‌کنید! این برنامه متن باز است و همه می‌توانند در آن مشارکت کنند."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4386,6 +4834,12 @@
     "The last vehicle can't be deleted. Please add a new vehicle before removing this one." : {
       "comment" : "Alert message preventing users from deleting their last vehicle",
       "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آخرین وسیله نقلیه را نمی‌توان حذف کرد. لطفا قبل از حدف آن، یک وسیله نقلیه جدید اضافه کنید."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4419,6 +4873,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "El título del evento"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عنوان رویداد"
           }
         },
         "fr" : {
@@ -4492,6 +4952,12 @@
             "value" : "Es gibt keine Wartung für '%@'. Versuche eine neue Suche"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هیچ رویداد نگهداری‌ برای ‌’%@’ وجود ندارد. یک جستجو جدید را امتحان کنید."
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4554,6 +5020,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Das App Icon wird auf deinem Home Screen erscheinen"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "این آیکون در صفحه اصلی شما ظاهر خواهد شد."
           }
         },
         "hi" : {
@@ -4631,6 +5103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Título"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عنوان"
           }
         },
         "fr" : {
@@ -4716,6 +5194,12 @@
             "value" : "El Título del evento de mantenimiento"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عنوان رویداد نگهداری"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4773,11 +5257,24 @@
       }
     },
     "Tracks & displays total mileage, aiding timely maintenance planning." : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "کل مسافت پیموده شده را ردیابی و نمایش می‌دهد و به نگهداری به موقع کمک می‌کند."
+          }
+        }
+      }
     },
     "Unexpected error occured." : {
       "extractionState" : "stale",
       "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خطای غیرمنتظره رخ داد."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4805,6 +5302,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aktualisierung"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "به‌روزرسانی"
           }
         },
         "fr" : {
@@ -4878,6 +5381,12 @@
             "value" : "Wartung aktualisieren"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "به‌روزرسانی نگهداری"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4930,6 +5439,12 @@
     },
     "Update Vehicle Info" : {
       "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "به‌روزرسانی اطلاعات وسیله نقلیه"
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4945,7 +5460,14 @@
       }
     },
     "User-friendly interface for controlling car maintenance tasks." : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رابط کاربری دوستانه جهت کنترل کار های نگهداری ماشین"
+          }
+        }
+      }
     },
     "Vehicle" : {
       "comment" : "Maintenance event vehicle picker header",
@@ -4960,6 +5482,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fahrzeug"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وسیله نقلیه"
           }
         },
         "hi" : {
@@ -5026,6 +5554,12 @@
             "value" : "Fahrzeugfarbe"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رنگ وسیله نقلیه"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5088,6 +5622,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fahrzeug Kennzeichen"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شماره پلاک وسیله نقلیه"
           }
         },
         "hi" : {
@@ -5164,6 +5704,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marca del Vehículo"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ایجاد وسیله نقلیه"
           }
         },
         "fr" : {
@@ -5248,6 +5794,12 @@
             "value" : "Modelo vehículo"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مدل وسیله نقلیه"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5330,6 +5882,12 @@
             "value" : "Nombre del Vehículo"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نام وسیله نقلیه"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5400,6 +5958,12 @@
             "value" : "Fahrgestellnummer"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شماره VIN وسیله نقلیه"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5462,6 +6026,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Baujahr"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سال وسیله نقلیه"
           }
         },
         "hi" : {
@@ -5541,6 +6111,12 @@
             "value" : "Vehículos"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وسایل نقلیه"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5610,6 +6186,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vehicle"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وسیله نقلیه"
           }
         },
         "hi" : {
@@ -5683,6 +6265,12 @@
             "value" : "Versión %@ (%@)"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نسخه %@ (%@)"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5741,6 +6329,12 @@
             "value" : "Fahrgestellnummer"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VIN"
+          }
+        },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5795,10 +6389,24 @@
 
     },
     "Welcome 🥳" : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خوش آمدید 🥳"
+          }
+        }
+      }
     },
     "Welcome to" : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خوش آمدید به"
+          }
+        }
+      }
     },
     "Year" : {
       "localizations" : {
@@ -5812,6 +6420,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Baujahr"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سال"
           }
         },
         "hi" : {
@@ -5865,10 +6479,24 @@
       }
     },
     "You can edit more data about the vehicle in the 'Settings' tab." : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شما می‌توانید اطلاعات بیشتری را درباره وسیله نقلیه در بخش ‘تنظیمات’ ویرایش کنید."
+          }
+        }
+      }
     },
     "your vehicle" : {
-
+      "localizations" : {
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وسیله نقلیه شما"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
