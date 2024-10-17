@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    @State private var authenticationViewModel = AuthenticationViewModel()
+    var authenticationViewModel: AuthenticationViewModel
     
     var body: some View {
         NavigationView {
@@ -55,7 +55,7 @@ struct WelcomeView: View {
                 Spacer(minLength: 10)
                 
                 NavigationLink(
-                    destination: WelcomeViewAddVehicle(authenticationViewModel: authenticationViewModel)) {
+                    destination: WelcomeViewAddVehicle()) {
                     Text("Continue")
                         .fontWeight(.bold)
                         .foregroundStyle(.white)
@@ -96,5 +96,5 @@ struct WelcomeView: View {
 }
 
 #Preview {
-    WelcomeView()
+    WelcomeView(authenticationViewModel: AuthenticationViewModel())
 }

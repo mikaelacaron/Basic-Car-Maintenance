@@ -11,7 +11,6 @@ import UniformTypeIdentifiers
 import TipKit
 
 struct SettingsView: View {
-    
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.colorScheme) var colorScheme

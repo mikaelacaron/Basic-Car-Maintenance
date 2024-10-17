@@ -7,68 +7,31 @@
 //
 
 import SwiftUI
-import FirebaseFirestore
 
 struct WelcomeViewAddVehicle: View {
     @Environment(\.dismiss) var dismiss
-    @State private var viewModel: SettingsViewModel
     
-    // Existing properties
     @AppStorage("isFirstTime") private var isFirstTime: Bool = true
     @State private var vehicleName: String = ""
     @State private var vehicleMake: String = ""
     @State private var vehicleModel: String = ""
-
-    // New alert-related properties
+    
     @State private var showAlert: Bool = false
     @State private var alertType: AlertType?
-
-    // Define an enum for different alert types
-    enum AlertType {
-        case emptyName
-        case emptyMake
-        case emptyModel
-        case vehicleAdded(name: String)
-        case error(message: String)
-        
-        var title: String {
-            switch self {
-            case .emptyName, .emptyMake, .emptyModel:
-                return "Validation Error"
-            case .vehicleAdded(let name):
-                return "\(name) added successfully! 🎉"
-            case .error:
-                return "Error"
-            }
-        }
-        
-        var message: String? {
-            switch self {
-            case .emptyName:
-                return "Vehicle Name cannot be empty! 🚗"
-            case .emptyMake:
-                return "Vehicle Make cannot be empty! 🚗"
-            case .emptyModel:
-                return "Vehicle Model cannot be empty! 🚗"
-            case .vehicleAdded:
-                return nil
-            case .error(let message):
-                return message
-            }
-        }
-    }
-
-    init(authenticationViewModel: AuthenticationViewModel) {
-        _viewModel = State(initialValue: SettingsViewModel(authenticationViewModel: authenticationViewModel))
-    }
 
     var body: some View {
         ScrollView {
             VStack(spacing: 15) {
                 headerView
+                
                 vehicleDetailsView
-                bottomText
+                
+                Text("You can edit more data about the vehicle in the 'Settings' tab.")
+                    .foregroundStyle(.gray)
+                    .padding(.horizontal, 25)
+                
                 Spacer(minLength: 10)
+                
                 addVehicleButton
             }
             .padding(.horizontal)
@@ -78,7 +41,7 @@ struct WelcomeViewAddVehicle: View {
         .alert(isPresented: $showAlert) {
             Alert(
                 title: Text(alertType?.title ?? ""),
-                message: alertType?.message.map { Text($0) },
+                message: Text(alertType?.message ?? ""),
                 dismissButton: .default(Text("OK")) {
                     if case .vehicleAdded = alertType {
                         isFirstTime = false
@@ -106,7 +69,7 @@ struct WelcomeViewAddVehicle: View {
         VStack(spacing: 20) {
             Image(systemName: "car.side.lock.open")
                 .font(.system(size: 45))
-                .foregroundStyle(Color("basicGreen"))
+                .foregroundStyle(.basicGreen)
             
             VStack(spacing: 0) {
                 vehicleDetailRow(title: "Name", text: $vehicleName)
@@ -130,18 +93,9 @@ struct WelcomeViewAddVehicle: View {
             TextField("Vehicle \(title)", text: text)
                 .frame(width: 200)
         } label: {
-            HStack {
-                Text(title)
-                Spacer()
-            }
+            Text(title)
         }
         .showClearButton(text)
-    }
-    
-    private var bottomText: some View {
-        Text("You can edit more data about the vehicle in the 'Settings' tab.")
-            .foregroundStyle(.gray)
-            .padding(.horizontal, 25)
     }
     
     private var addVehicleButton: some View {
@@ -153,7 +107,7 @@ struct WelcomeViewAddVehicle: View {
                 .foregroundStyle(.white)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 14)
-                .background(Color("basicGreen").gradient, in: .rect(cornerRadius: 12))
+                .background(.basicGreen.gradient, in: .rect(cornerRadius: 12))
                 .contentShape(.rect)
         }
         .padding(15)
@@ -176,8 +130,8 @@ struct WelcomeViewAddVehicle: View {
             
             Task {
                 do {
-                    try await viewModel.addVehicle(newVehicle)
-                    print("Vehicle \(newVehicle.name) added to firebase successfully!")
+                    // add new vehicle here
+                    
                     alertType = .vehicleAdded(name: vehicleName)
                     showAlert = true
                 } catch {
@@ -189,36 +143,44 @@ struct WelcomeViewAddVehicle: View {
     }
 }
 
-struct TextFieldClearButton: ViewModifier {
-    @Binding var text: String
-    
-    func body(content: Content) -> some View {
-        content
-            .overlay {
-                if !text.isEmpty {
-                    HStack {
-                        Spacer()
-                        Button {
-                            text = ""
-                        } label: {
-                            Image(systemName: "multiply.circle.fill")
-                                .imageScale(.medium)
-                        }
-                        .foregroundColor(.secondary)
-                        .padding(.trailing, 4)
-                    }
-                }
-            }
-    }
-}
-
-extension View {
-    func showClearButton(_ text: Binding<String>) -> some View {
-        self.modifier(TextFieldClearButton(text: text))
-    }
-}
-
 #Preview {
-    WelcomeViewAddVehicle(authenticationViewModel: AuthenticationViewModel())
+    WelcomeViewAddVehicle()
         .environment(ActionService.shared)
+}
+
+extension WelcomeViewAddVehicle {
+    /// Types of alerts to be shown on the `WelcomeViewAddVehicle`
+    enum AlertType {
+        case emptyName
+        case emptyMake
+        case emptyModel
+        case vehicleAdded(name: String)
+        case error(message: String)
+        
+        var title: LocalizedStringResource {
+            switch self {
+            case .emptyName, .emptyMake, .emptyModel:
+                return "Validation Error"
+            case .vehicleAdded(let name):
+                return "\(name) added successfully! 🎉"
+            case .error:
+                return "Error"
+            }
+        }
+        
+        var message: LocalizedStringResource? {
+            switch self {
+            case .emptyName:
+                return "Vehicle Name cannot be empty! 🚗"
+            case .emptyMake:
+                return "Vehicle Make cannot be empty! 🚗"
+            case .emptyModel:
+                return "Vehicle Model cannot be empty! 🚗"
+            case .vehicleAdded:
+                return nil
+            case .error(let message):
+                return LocalizedStringResource(stringLiteral: message)
+            }
+        }
+    }
 }

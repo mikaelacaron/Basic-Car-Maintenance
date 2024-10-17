@@ -57,6 +57,9 @@ struct MainTabView: View {
     @State private var authenticationViewModel = AuthenticationViewModel()
     @State private var viewModel = MainTabViewModel()
     
+    // Logic to load `WelcomeView` when app is first launched
+    @AppStorage("isFirstTime") private var isFirstTime: Bool = true
+    
     init() {
         _selectedTabId = State(initialValue: selectedTab)
     }
@@ -76,6 +79,10 @@ struct MainTabView: View {
         .sheet(item: $viewModel.alert) { alert in
             AlertView(alert: alert)
                 .presentationDetents([.medium])
+        }
+        .sheet(isPresented: $isFirstTime) {
+            WelcomeView(authenticationViewModel: authenticationViewModel)
+                .interactiveDismissDisabled()
         }
         .onChange(of: scenePhase) { _, newScenePhase in
             guard

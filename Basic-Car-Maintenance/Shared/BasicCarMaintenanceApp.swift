@@ -17,9 +17,6 @@ struct BasicCarMaintenanceApp: App {
     @State private var actionService = ActionService.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    // Logic to load OnboardingScreen when app first launch
-    @AppStorage("isFirstTime") private var isFirstTime: Bool = true
-    
     var body: some Scene {
         WindowGroup {
             MainTabView()
@@ -27,10 +24,6 @@ struct BasicCarMaintenanceApp: App {
                 .modelContainer(for: [AcknowledgedAlert.self])
                 .task {
                   try? Tips.configure()
-                }
-                .sheet(isPresented: $isFirstTime) {
-                    WelcomeView()
-                        .interactiveDismissDisabled()
                 }
         }
     }

@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%@" : {
       "comment" : "Maintenance list item description 'Date' formatted",
       "localizations" : {
@@ -71,6 +74,9 @@
           }
         }
       }
+    },
+    "%@ added successfully! 🎉" : {
+
     },
     "%@ on %@" : {
       "comment" : "Maintenance list item for a vehicle on a date",
@@ -4938,6 +4944,9 @@
     "User-friendly interface for controlling car maintenance tasks." : {
 
     },
+    "Validation Error" : {
+
+    },
     "Vehicle" : {
       "comment" : "Maintenance event vehicle picker header",
       "localizations" : {
@@ -5216,6 +5225,9 @@
         }
       }
     },
+    "Vehicle Make cannot be empty! 🚗" : {
+
+    },
     "Vehicle Model" : {
       "localizations" : {
         "be" : {
@@ -5298,6 +5310,9 @@
         }
       }
     },
+    "Vehicle Model cannot be empty! 🚗" : {
+
+    },
     "Vehicle Name" : {
       "localizations" : {
         "be" : {
@@ -5379,6 +5394,9 @@
           }
         }
       }
+    },
+    "Vehicle Name cannot be empty! 🚗" : {
+
     },
     "Vehicle VIN" : {
       "localizations" : {
