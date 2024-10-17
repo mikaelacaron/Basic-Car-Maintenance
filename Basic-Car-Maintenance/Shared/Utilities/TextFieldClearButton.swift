@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+/// An overlay of a button that is used to clear a TextField.
 struct TextFieldClearButton: ViewModifier {
     @Binding var text: String
     
@@ -32,6 +33,8 @@ struct TextFieldClearButton: ViewModifier {
 }
 
 extension View {
+    
+    /// Add a `TextFieldClearButton` to a view.
     func showClearButton(_ text: Binding<String>) -> some View {
         self.modifier(TextFieldClearButton(text: text))
     }

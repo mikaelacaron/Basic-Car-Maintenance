@@ -18,10 +18,10 @@ struct WelcomeView: View {
                     HStack(spacing: 5) {
                         Text("Welcome to")
                         Text("Basic")
-                            .foregroundStyle(Color("basicGreen"))
+                            .foregroundStyle(.basicGreen)
                     }
                     Text("Car Maintenance")
-                        .foregroundStyle(Color("basicGreen"))
+                        .foregroundStyle(.basicGreen)
                 }
                 .font(.largeTitle.bold())
                 .multilineTextAlignment(.center)
@@ -33,19 +33,19 @@ struct WelcomeView: View {
                     pointView(
                         symbol: "car",
                         title: "Dashboard",
-                        subTitle: "User-friendly interface for controlling car maintenance tasks."
+                        subtitle: "User-friendly interface for controlling car maintenance tasks."
                     )
                     
                     pointView(
                         symbol: "gauge.with.dots.needle.bottom.50percent.badge.plus",
                         title: "Odometer",
-                        subTitle: "Tracks & displays total mileage, aiding timely maintenance planning."
+                        subtitle: "Tracks & displays total mileage, aiding timely maintenance planning."
                     )
                     
                     pointView(
                         symbol: "lock.open",
                         title: "Open Source",
-                        subTitle: "Built collaboratively with contributors, enhancing the app functionality."
+                        subtitle: "Built collaboratively with contributors, enhancing the app functionality."
                     )
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -76,11 +76,12 @@ struct WelcomeView: View {
     }
     
     @ViewBuilder
-    func pointView(symbol: String, title: LocalizedStringKey, subTitle: LocalizedStringKey) -> some View {
+    // swiftlint:disable:next line_length
+    func pointView(symbol: String, title: LocalizedStringResource, subtitle: LocalizedStringResource) -> some View {
         HStack(spacing: 20) {
             Image(systemName: symbol)
                 .font(.largeTitle)
-                .foregroundStyle(Color("basicGreen"))
+                .foregroundStyle(.basicGreen)
                 .frame(width: 45)
             
             VStack(alignment: .leading, spacing: 6) {
@@ -88,7 +89,7 @@ struct WelcomeView: View {
                     .font(.title3)
                     .fontWeight(.semibold)
                 
-                Text(subTitle)
+                Text(subtitle)
                     .foregroundStyle(.gray)
             }
         }
