@@ -6,7 +6,7 @@
 //  See LICENSE for license information.
 //
 
-import FirebaseFirestoreSwift
+import FirebaseFirestore
 import Foundation
 
 struct MaintenanceEvent: Codable, Identifiable, Hashable {

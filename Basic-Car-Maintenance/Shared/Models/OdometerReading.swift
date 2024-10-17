@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import FirebaseFirestoreSwift
+import FirebaseFirestore
 
 struct OdometerReading: Codable, Identifiable, Hashable {
     @DocumentID var id: String?
