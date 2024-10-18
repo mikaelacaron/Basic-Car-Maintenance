@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "AppIcon-Image-Car-Orange@3x.png",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "AppIcon-Image-Car-Dark@3x.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
