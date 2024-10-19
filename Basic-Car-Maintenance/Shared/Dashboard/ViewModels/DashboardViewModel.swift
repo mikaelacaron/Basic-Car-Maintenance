@@ -11,7 +11,7 @@ import FirebaseFirestoreSwift
 import Foundation
 
 @Observable
-class DashboardViewModel {
+class DashboardViewModel: MaintenanceEventsFetcher {
     
     let userUID: String?
     
@@ -165,6 +165,12 @@ class DashboardViewModel {
                 self.vehicles = vehicles
             }
         }
+    }
+    
+    func fetchEvents(for vehicle: Vehicle) -> [MaintenanceEvent] {
+        events
+            .filter { $0.vehicleID == vehicle.id }
+            .sorted(by: { $0.date < $1.date })
     }
 }
 
