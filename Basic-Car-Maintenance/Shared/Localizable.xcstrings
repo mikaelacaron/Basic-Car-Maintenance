@@ -96,6 +96,7 @@
       }
     },
     "%lld %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2678,77 +2679,6 @@
         }
       }
     },
-    "For %@" : {
-      "comment" : "Maintenance list item description 'For which vehicle'",
-      "localizations" : {
-        "be" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Для %@"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Für %@"
-          }
-        },
-        "fa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "برای %@"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ के लिए"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "대상 차량: %@"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voor %@"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dla %@"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Para %@"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Для %@"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "For %@"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Для %@"
-          }
-        }
-      }
-    },
     "GitHub Repo" : {
       "comment" : "Link to the Basic Car Maintenance GitHub repo.",
       "localizations" : {
@@ -2884,6 +2814,9 @@
           }
         }
       }
+    },
+    "Key" : {
+      "extractionState" : "manual"
     },
     "Kilometers" : {
       "localizations" : {
@@ -3217,6 +3150,16 @@
         }
       }
     },
+    "Mileage: %lld %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mileage: %1$lld %2$@"
+          }
+        }
+      }
+    },
     "Miles" : {
       "localizations" : {
         "de" : {
@@ -3533,6 +3476,9 @@
           }
         }
       }
+    },
+    "No Name" : {
+      "extractionState" : "manual"
     },
     "No results" : {
       "localizations" : {
@@ -4153,6 +4099,9 @@
           }
         }
       }
+    },
+    "Recorded On: %@" : {
+
     },
     "Report a Bug" : {
       "comment" : "Link to report a bug",
