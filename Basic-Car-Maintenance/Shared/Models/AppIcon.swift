@@ -44,7 +44,18 @@ enum AppIcon: String, CaseIterable, Identifiable {
         }
     }
     
-    var preview: UIImage {
-        UIImage(named: rawValue) ?? UIImage()
+    var previewImage: String {
+        switch self {
+        case .primary:
+            return "Preview-appIcon"
+        case .carRed:
+            return "Preview-car-red"
+        case .carYellow:
+            return "Preview-car-yellow"
+        case .carBlack:
+            return "Preview-car-black"
+        case .carOrange:
+            return "Preview-car-orange"
+        }
     }
 }
