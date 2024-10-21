@@ -21,37 +21,28 @@ struct OdometerView: View {
         NavigationStack {
             List {
                 ForEach(viewModel.readings) { reading in
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("\(reading.distance) \(reading.isMetric ? "km" : "mi")")
-                            .font(.title3)
-                        
-                        let vehicleName = viewModel.vehicles.first { $0.id == reading.vehicleID }?.name
-                        if let vehicleName {
-                            Text("For \(vehicleName)")
-                        }
-                        
-                        Text("\(reading.date.formatted(date: .abbreviated, time: .omitted))")
-                    }
-                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-                        Button(role: .destructive) {
-                            Task {
-                                await viewModel.deleteReading(reading)
+                    let vehicleName = viewModel.vehicles.first { $0.id == reading.vehicleID }?.name
+                    OdometerRowView(reading: reading, vehicleName: vehicleName)
+                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                            Button(role: .destructive) {
+                                Task {
+                                    await viewModel.deleteReading(reading)
+                                }
+                            } label: {
+                                Image(systemName: SFSymbol.trash)
                             }
-                        } label: {
-                            Image(systemName: SFSymbol.trash)
-                        }
-                        
-                        Button {
-                            viewModel.selectedReading = reading
-                            viewModel.isShowingEditReadingView = true
-                        } label: {
-                            Label {
-                                Text("Edit")
-                            } icon: {
-                                Image(systemName: SFSymbol.pencil)
+                            
+                            Button {
+                                viewModel.selectedReading = reading
+                                viewModel.isShowingEditReadingView = true
+                            } label: {
+                                Label {
+                                    Text("Edit")
+                                } icon: {
+                                    Image(systemName: SFSymbol.pencil)
+                                }
                             }
                         }
-                    }
                 }
                 .listStyle(.inset)
             }
