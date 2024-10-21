@@ -22,8 +22,7 @@ struct OdometerView: View {
             List {
                 ForEach(viewModel.readings) { reading in
                     let vehicleName = viewModel.vehicles.first { $0.id == reading.vehicleID }?.name
-                    ReadingView(odometerReading: reading, vehicleName: vehicleName)
-                        .listRowInsets(.init(top: 16, leading: 24, bottom: 16, trailing: 24))
+                    OdometerRowView(reading: reading, vehicleName: vehicleName)
                         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                             Button(role: .destructive) {
                                 Task {
