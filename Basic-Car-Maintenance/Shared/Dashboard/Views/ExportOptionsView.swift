@@ -7,28 +7,19 @@
 //
 
 import SwiftUI
-
-protocol MaintenanceEventsFetcher {
-    func fetchEvents(for vehicle: Vehicle) -> [MaintenanceEvent]
-}
+import PDFKit
 
 struct ExportOptionsView: View {
     @Environment(\.dismiss) var dismiss
     @State private var selectedVehicle: Vehicle?
     @State private var isShowingShareSheet = false
-    private let eventsFetcher: MaintenanceEventsFetcher
-    private let onExport: (URL) -> Void
-    private let vehicles: [Vehicle]
+    @State private var pdfDoc: PDFDocument?
     
-    init(
-        vehicles: [Vehicle],
-        eventsFetcher: MaintenanceEventsFetcher,
-        onExport: @escaping (URL) -> Void
-    ) {
-        self.vehicles = vehicles
-        self.eventsFetcher = eventsFetcher
-        self.onExport = onExport
-        self._selectedVehicle = State(initialValue: vehicles.first)
+    private let dataSource: [Vehicle: [MaintenanceEvent]]
+    
+    init(dataSource: [Vehicle: [MaintenanceEvent]]) {
+        self.dataSource = dataSource
+        self._selectedVehicle = State(initialValue: dataSource.first?.key)
     }
     
     var body: some View {
@@ -39,30 +30,48 @@ struct ExportOptionsView: View {
                     .padding(.top, 20)
                 
                 Picker("Select a Vehicle", selection: $selectedVehicle) {
-                    ForEach(vehicles, id: \.id) { vehicle in
+                    ForEach(dataSource.map(\.key)) { vehicle in
                         Text(vehicle.name)
-                            .tag(vehicle as Vehicle?)
+                            .tag(vehicle)
                     }
                 }
-                .pickerStyle(InlinePickerStyle())
+                .pickerStyle(.inline)
             }
             .padding(.horizontal)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Export") { 
-                        if let selectedVehicle {
-                            let events = eventsFetcher.fetchEvents(for: selectedVehicle)
+                        if let selectedVehicle,
+                           let events = self.dataSource[selectedVehicle] {
                             let pdfGenerator = CarMaintenancePDFGenerator(
                                 vehicleName: selectedVehicle.name,
                                 events: events
                             )
-                            if let pdfURL = pdfGenerator.generatePDF() {
-                                onExport(pdfURL)
-                                dismiss()
-                            }
+                            self.pdfDoc = pdfGenerator.generatePDF() 
+                            isShowingShareSheet = true
                         }
                     }
-                    .disabled(selectedVehicle == nil)
+                }
+            }
+            .sheet(isPresented: $isShowingShareSheet) {
+                if let pdfDoc,
+                   let url = pdfDoc.documentURL,
+                   let thumbnail = pdfDoc
+                    .page(at: .zero)?
+                    .thumbnail(
+                        of: CGSize(
+                            width: UIScreen.main.bounds.width,
+                            height: UIScreen.main.bounds.height / 2),
+                        for: .mediaBox
+                    ) {
+                    ShareLink(item: url) {
+                        VStack {
+                            Image(uiImage: thumbnail)
+                            Label("Share", image: SFSymbol.share)
+                        }
+                        .safeAreaPadding(.bottom)
+                    }
+                    .presentationDetents([.medium])
                 }
             }
         }

@@ -11,7 +11,7 @@ import FirebaseFirestoreSwift
 import Foundation
 
 @Observable
-class DashboardViewModel: MaintenanceEventsFetcher {
+class DashboardViewModel {
     
     let userUID: String?
     
@@ -30,6 +30,15 @@ class DashboardViewModel: MaintenanceEventsFetcher {
         case .oldestToNewest: events.sorted { $0.date < $1.date }
         case .newestToOldest: events.sorted { $0.date > $1.date }
         case .custom: events
+        }
+    }
+    
+    var vehiclesWithSortedEventsDict: [Vehicle: [MaintenanceEvent]] {
+        vehicles.reduce(into: [Vehicle: [MaintenanceEvent]]()) { result, currentVehicle in
+            result[currentVehicle] = events
+                .filter { $0.vehicleID == currentVehicle.id }
+                .sorted(by: { $0.date < $1.date })
+            
         }
     }
     
@@ -165,12 +174,6 @@ class DashboardViewModel: MaintenanceEventsFetcher {
                 self.vehicles = vehicles
             }
         }
-    }
-    
-    func fetchEvents(for vehicle: Vehicle) -> [MaintenanceEvent] {
-        events
-            .filter { $0.vehicleID == vehicle.id }
-            .sorted(by: { $0.date < $1.date })
     }
 }
 

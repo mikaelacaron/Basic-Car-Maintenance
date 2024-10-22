@@ -7,20 +7,11 @@
 //
 
 import UIKit
-import SwiftUI
+import PDFKit
 
-protocol PDFGeneratable {
-    func generatePDF() -> URL?
-}
-
-final class CarMaintenancePDFGenerator: PDFGeneratable {
-    private let title = "Basic Car Maintenance" 
+final class CarMaintenancePDFGenerator {
     private let vehicleName: String
     private let events: [MaintenanceEvent]
-    // Define the PDF page size (A4 size in points)
-    private let pageWidth: CGFloat = 595.2
-    private let pageHeight: CGFloat = 841.8
-    private var pageSize: CGSize
     
     // Define page margins
     private let topMargin: CGFloat = 50
@@ -36,78 +27,47 @@ final class CarMaintenancePDFGenerator: PDFGeneratable {
     init(vehicleName: String, events: [MaintenanceEvent]) {
         self.vehicleName = vehicleName
         self.events = events
-        self.pageSize = CGSize(width: pageWidth, height: pageHeight)
-        self.columnWidth = (pageWidth - leftMargin - rightMargin) / 3 
+        self.columnWidth = (PageDimension.A4.pageWidth - leftMargin - rightMargin) / 3 
     }
     
-    func generatePDF() -> URL? {
+    func generatePDF() -> PDFDocument? {
         guard !events.isEmpty else { return nil }
-        let fileName = "\(vehicleName)MaintenanceReport.pdf"
-        
-        // Get the path to the documents directory
-        let fileURL = documentsDirectory?.appendingPathComponent(fileName)
-        
-        // Create a PDF renderer
-        let pdfRenderer = UIGraphicsPDFRenderer(bounds: CGRect(origin: .zero, size: pageSize))
-        
-        // Render content to the PDF file
-        let pdfData = pdfRenderer.pdfData { context in
-            
-            // Initialize the y-position (start after the headers)
+        let pdfRenderer = UIGraphicsPDFRenderer(bounds: CGRect(origin: .zero, size: PageDimension.A4.size))
+        let pdfData = pdfRenderer.pdfData { context in            
             var yPosition: CGFloat = topMargin
             
-            // Function to begin a new page
-            func beginNewPage(isFirstPage: Bool) {
-                context.beginPage()
-                
-                // Reset yPosition to start after the headers
-                yPosition = topMargin
-                
-                // Draw headers for the first page
-                if isFirstPage {
-                    drawHeader(
-                        context: context,
-                        yPosition: &yPosition
-                    )
-                }
-            }
+            beginNewPage(
+                context: context,
+                yPosition: &yPosition,
+                isFirstPage: true
+            )
             
-            // Start the first page
-            beginNewPage(isFirstPage: true)
-            
-            // Draw the content of the PDF
             let tableRowAttributes: [NSAttributedString.Key: Any] = [
                 .font: UIFont.systemFont(ofSize: 14),
                 .foregroundColor: UIColor.black
             ]
                         
             for (index, event) in events.enumerated() {
-                // Check if yPosition is close to the bottom of the page and create a new page if necessary
-                if yPosition + 60 > pageHeight - bottomMargin {  // 60 is the estimated height of one row
-                    beginNewPage(isFirstPage: index == 0)
+                if yPosition + 60 > PageDimension.A4.pageHeight - bottomMargin {
+                    beginNewPage(
+                        context: context,
+                        yPosition: &yPosition,
+                        isFirstPage: index == 0
+                    )
                 }
                 
-                // Draw Date and Vehicle Name as single-line text
                 event.date
                     .formatted()
                     .draw(
-                        at: CGPoint(
-                            x: leftMargin,
-                            y: yPosition
-                        ),
+                        at: CGPoint(x: leftMargin, y: yPosition),
                         withAttributes: tableRowAttributes
                     )
                 
-                vehicleName
-                    .draw(
-                        at: CGPoint(
-                            x: leftMargin + columnWidth,
-                            y: yPosition
-                        ),
-                        withAttributes: tableRowAttributes
-                    )
+                vehicleName.draw(
+                    at: CGPoint(x: leftMargin + columnWidth, y: yPosition),
+                    withAttributes: tableRowAttributes
+                )
                 
-                // Draw Notes with text wrapping within a bounding rectangle
                 let notesRect = CGRect(
                     x: leftMargin + 2 * columnWidth,
                     y: yPosition,
@@ -116,27 +76,28 @@ final class CarMaintenancePDFGenerator: PDFGeneratable {
                 )
                 event.notes.draw(in: notesRect, withAttributes: tableRowAttributes)
                 
-                // Adjust the spacing for the next row
                 yPosition += 60
             }
         }
         
-        // Save the PDF data to the file URL
         do {
-            try pdfData.write(to: fileURL!)
-            print("PDF saved to: \(fileURL!.path)")
-            return fileURL
+            guard let fileURL = documentsDirectory?
+                .appendingPathComponent("\(vehicleName)-MaintenanceReport.pdf") 
+            else { return nil }
+            if FileManager.default.fileExists(atPath: fileURL.absoluteString) {
+                try FileManager.default.removeItem(at: fileURL)
+            }
+            try pdfData.write(to: fileURL)
+            print("PDF saved to: \(fileURL.path)")
+            return PDFDocument(url: fileURL)
         } catch {
             print("Could not save the PDF: \(error)")
             return nil
         }
     }
     
-    // Helper function to draw header
-    private func drawHeader(
-        context: UIGraphicsPDFRendererContext,
-        yPosition: inout CGFloat
-    ) {
+    // Draw the center header and header columns
+    private func drawHeader(context: UIGraphicsPDFRendererContext, yPosition: inout CGFloat) {
         let titleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.boldSystemFont(ofSize: 20),
             .foregroundColor: UIColor.black
@@ -159,35 +120,40 @@ final class CarMaintenancePDFGenerator: PDFGeneratable {
         let eventTitleSize = eventTitleString.size(withAttributes: subtitleAttributes)
         let dateRangeSize = dateRangeString.size(withAttributes: subtitleAttributes)
         
-        // Center the headers
-        let titleX = (pageWidth - titleSize.width) / 2
-        let vehicleX = (pageWidth - vehicleSize.width) / 2
-        let eventTitleX = (pageWidth - eventTitleSize.width) / 2
-        let dateRangeX = (pageWidth - dateRangeSize.width) / 2
+        let titleX = (PageDimension.A4.pageWidth - titleSize.width) / 2
+        let vehicleX = (PageDimension.A4.pageWidth - vehicleSize.width) / 2
+        let eventTitleX = (PageDimension.A4.pageWidth - eventTitleSize.width) / 2
+        let dateRangeX = (PageDimension.A4.pageWidth - dateRangeSize.width) / 2
         
-        // Draw the main title centered
         titleString.draw(at: CGPoint(x: titleX, y: yPosition), withAttributes: titleAttributes)
         yPosition += 30
         
-        // Draw the vehicle name centered
         vehicleName.draw(at: CGPoint(x: vehicleX, y: yPosition), withAttributes: subtitleAttributes)
         yPosition += 30
         
-        // Draw the maintenance event title centered
         eventTitleString.draw(at: CGPoint(x: eventTitleX, y: yPosition), withAttributes: subtitleAttributes)
         yPosition += 30
         
-        // Draw date range centered
         dateRangeString.draw(at: CGPoint(x: dateRangeX, y: yPosition), withAttributes: subtitleAttributes)
-        yPosition += 50  // Add more space after the headers
+        yPosition += 50
         
         drawColumnsHeaders(yPosition: &yPosition)
     }
     
-    private func drawColumnsHeaders(
-        yPosition: inout CGFloat
+    private func beginNewPage(
+        context: UIGraphicsPDFRendererContext,
+        yPosition: inout CGFloat,
+        isFirstPage: Bool
     ) {
-        // Draw the headers of each column
+        context.beginPage()
+        yPosition = topMargin
+        
+        if isFirstPage {
+            drawHeader(context: context, yPosition: &yPosition)
+        }
+    }
+    
+    private func drawColumnsHeaders(yPosition: inout CGFloat) {
         let dateColumnHeader = "Date"
         let vehicleColumnHeader = "Vehicle Name"
         let noteColumnHeader = "Notes"
@@ -197,25 +163,16 @@ final class CarMaintenancePDFGenerator: PDFGeneratable {
             .foregroundColor: UIColor.black
         ]
         
-        dateColumnHeader
-            .draw(
-                at: CGPoint(
-                    x: leftMargin,
-                    y: yPosition
-                ),
-                withAttributes: subtitleAttributes
-            )
+        dateColumnHeader.draw(
+            at: CGPoint(x: leftMargin, y: yPosition),
+            withAttributes: subtitleAttributes
+        )
         
-        vehicleColumnHeader
-            .draw(
-                at: CGPoint(
-                    x: leftMargin + columnWidth,
-                    y: yPosition
-                ),
-                withAttributes: subtitleAttributes
-            )
+        vehicleColumnHeader.draw(
+            at: CGPoint(x: leftMargin + columnWidth, y: yPosition),
+            withAttributes: subtitleAttributes
+        )
         
-        // Draw Notes with text wrapping within a bounding rectangle
         let notesRect = CGRect(
             x: leftMargin + 2 * columnWidth,
             y: yPosition,
@@ -224,7 +181,6 @@ final class CarMaintenancePDFGenerator: PDFGeneratable {
         )
         noteColumnHeader.draw(in: notesRect, withAttributes: subtitleAttributes)
         
-        // Adjust the spacing for the next row
         yPosition += 30
     } 
 }

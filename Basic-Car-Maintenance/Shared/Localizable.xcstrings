@@ -2019,7 +2019,7 @@
     "Export" : {
 
     },
-    "ExportEvent" : {
+    "Export Event" : {
       "comment" : "Label for exporting maintenance events"
     },
     "Failed To Add Vehicle" : {
@@ -4506,6 +4506,9 @@
           }
         }
       }
+    },
+    "Share" : {
+
     },
     "Sign Out" : {
       "localizations" : {
