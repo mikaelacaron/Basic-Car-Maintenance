@@ -6,6 +6,8 @@
 [![Unit Tests](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml/badge.svg?event=push)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml)
 [![Deploy DocC Documentation](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml/badge.svg?branch=dev)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml)
 
+![Alt](https://repobeats.axiom.co/api/embed/889ac81d440c882bb217c6ee7dda4601e0d8d6d9.svg "Repobeats analytics image")
+
 Welcome to my open source app! It is ready for contributors for [Hacktoberfest](https://hacktoberfest.com/)! Use this app to gain experience getting started in open source for iOS and macOS development using Swift and SwiftUI.
 
 # Getting Started
