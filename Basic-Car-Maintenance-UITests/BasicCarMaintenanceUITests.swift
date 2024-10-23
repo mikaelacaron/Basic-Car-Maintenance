@@ -18,6 +18,8 @@ final class BasicCarMaintenanceUITests: XCTestCase {
     }
     
     func testAddVehicle() {
+        // Dismiss "Thanks for using this app!" popup
+        app.dismissPopup()
         // Navigate to the AddVehicleView
         app.buttons["Settings"].tap()
         app.collectionViews.buttons["Add Vehicle"].tap()
