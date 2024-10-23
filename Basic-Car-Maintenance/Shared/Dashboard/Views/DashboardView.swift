@@ -14,6 +14,7 @@ struct DashboardView: View {
     @State private var isShowingAddView = false
     @State private var viewModel: DashboardViewModel
     @State private var isShowingEditView = false
+    @State private var isShowingExportOptionsView = false
     @State private var selectedMaintenanceEvent: MaintenanceEvent?
     
     init(userUID: String?) {
@@ -149,12 +150,35 @@ struct DashboardView: View {
                     }
                 }
             }
+            .toolbar {
+                if !viewModel.events.isEmpty {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button {
+                            isShowingExportOptionsView = true
+                        } label: {
+                            Image(systemName: SFSymbol.share)
+                        }
+                        .accessibilityShowsLargeContentViewer {
+                            Label {
+                                Text("Export Event", comment: "Label for exporting maintenance events")
+                            } icon: {
+                                Image(systemName: SFSymbol.share)
+                            }
+                        }
+                    }
+                }
+            }
             .task {
                 await viewModel.getMaintenanceEvents()
                 await viewModel.getVehicles()
             }
             .sheet(isPresented: $isShowingAddView) {
                 makeAddMaintenanceView()
+            }
+            .sheet(isPresented: $isShowingExportOptionsView) {
+                ExportOptionsView(dataSource: viewModel.vehiclesWithSortedEventsDict)
+                .presentationDetents([.fraction(0.35)])
+                .presentationCornerRadius(10)
             }
         }
         .onChange(of: scenePhase) { _, newScenePhase in

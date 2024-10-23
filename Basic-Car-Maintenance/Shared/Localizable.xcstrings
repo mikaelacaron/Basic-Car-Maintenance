@@ -2017,6 +2017,12 @@
         }
       }
     },
+    "Export" : {
+
+    },
+    "Export Event" : {
+      "comment" : "Label for exporting maintenance events"
+    },
     "Failed To Add Vehicle" : {
       "localizations" : {
         "be" : {
@@ -4355,6 +4361,12 @@
         }
       }
     },
+    "Select a Vehicle" : {
+
+    },
+    "Select the vehicle you want to export the maintenance events for:" : {
+
+    },
     "Settings" : {
       "comment" : "Label to display settings.",
       "localizations" : {
@@ -4443,6 +4455,9 @@
           }
         }
       }
+    },
+    "Share" : {
+
     },
     "Sign Out" : {
       "localizations" : {

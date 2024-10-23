@@ -33,6 +33,15 @@ class DashboardViewModel {
         }
     }
     
+    var vehiclesWithSortedEventsDict: [Vehicle: [MaintenanceEvent]] {
+        vehicles.reduce(into: [Vehicle: [MaintenanceEvent]]()) { result, currentVehicle in
+            result[currentVehicle] = events
+                .filter { $0.vehicleID == currentVehicle.id }
+                .sorted(by: { $0.date < $1.date })
+            
+        }
+    }
+    
     var searchedEvents: [MaintenanceEvent] {
         if searchText.isEmpty {
             sortedEvents
