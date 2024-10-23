@@ -14,7 +14,11 @@ struct OdometerView: View {
     @State private var viewModel: OdometerViewModel
 
     init(userUID: String?) {
-        viewModel = OdometerViewModel(userUID: userUID)
+        self.init(viewModel: OdometerViewModel(userUID: userUID))
+    }
+    
+    fileprivate init(viewModel: OdometerViewModel) {
+        self.viewModel = viewModel
     }
 
     var body: some View {
@@ -109,6 +113,52 @@ struct OdometerView: View {
 }
 
 #Preview {
-    OdometerView(userUID: "")
+    var viewModel = OdometerViewModel(userUID: nil)
+    let firstCar = createVehicle(id: "id1", name: "My 1st car")
+    viewModel.vehicles.append(firstCar)
+
+    let secondCar = createVehicle(id: "id2", name: "2nd Car")
+    viewModel.vehicles.append(secondCar)
+    
+    let firstReading = createReading(vehicleID: secondCar.id!,
+                                     date: "2024/10/18",
+                                     distance: 20)
+    viewModel.readings.append(firstReading)
+    
+    let secondReading = createReading(vehicleID: firstCar.id!,
+                                     date: "2024/10/15",
+                                     distance: 1000)
+    viewModel.readings.append(secondReading)
+    
+    let thirdReading = createReading(vehicleID: firstCar.id!,
+                                     date: "2024/10/13",
+                                     distance: 10)
+    viewModel.readings.append(thirdReading)
+
+    return OdometerView(viewModel: viewModel)
         .environment(ActionService.shared)
+}
+
+private func createVehicle(id: String, name: String) -> Vehicle {
+    Vehicle(id: id, 
+            userID: nil, 
+            name: name, 
+            make: "", 
+            model: "", 
+            year: nil, 
+            color: nil, 
+            vin: nil, 
+            licensePlateNumber: nil)
+}
+
+private func createReading(vehicleID: String, date: String, distance: Int) -> OdometerReading {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy/MM/dd"
+    let firstDate = formatter.date(from: date)!
+    return OdometerReading(id: UUID().uuidString,
+                           userID: "", 
+                           date: firstDate, 
+                           distance: distance, 
+                           isMetric: false, 
+                           vehicleID: vehicleID)
 }
