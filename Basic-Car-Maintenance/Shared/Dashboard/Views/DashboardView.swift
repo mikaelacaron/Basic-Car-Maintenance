@@ -177,8 +177,7 @@ struct DashboardView: View {
             }
             .sheet(isPresented: $isShowingExportOptionsView) {
                 ExportOptionsView(dataSource: viewModel.vehiclesWithSortedEventsDict)
-                .presentationDetents([.fraction(0.35)])
-                .presentationCornerRadius(10)
+                    .presentationDetents([.medium])
             }
         }
         .onChange(of: scenePhase) { _, newScenePhase in

@@ -4508,7 +4508,7 @@
       }
     },
     "Share" : {
-
+      "comment" : "Share the exported file in the share sheet"
     },
     "Sign Out" : {
       "localizations" : {

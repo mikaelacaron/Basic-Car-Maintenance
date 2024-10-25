@@ -38,7 +38,6 @@ class DashboardViewModel {
             result[currentVehicle] = events
                 .filter { $0.vehicleID == currentVehicle.id }
                 .sorted(by: { $0.date < $1.date })
-            
         }
     }
     

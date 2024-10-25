@@ -12,7 +12,7 @@ import PDFKit
 struct ExportOptionsView: View {
     @Environment(\.dismiss) var dismiss
     @State private var selectedVehicle: Vehicle?
-    @State private var isShowingShareSheet = false
+    @State private var isShowingThumbnail = false
     @State private var pdfDoc: PDFDocument?
     
     private let dataSource: [Vehicle: [MaintenanceEvent]]
@@ -35,7 +35,7 @@ struct ExportOptionsView: View {
                             .tag(vehicle)
                     }
                 }
-                .pickerStyle(.inline)
+                .pickerStyle(.wheel)
             }
             .padding(.horizontal)
             .toolbar {
@@ -48,12 +48,12 @@ struct ExportOptionsView: View {
                                 events: events
                             )
                             self.pdfDoc = pdfGenerator.generatePDF() 
-                            isShowingShareSheet = true
+                            isShowingThumbnail = true
                         }
                     }
                 }
             }
-            .sheet(isPresented: $isShowingShareSheet) {
+            .sheet(isPresented: $isShowingThumbnail) {
                 if let pdfDoc,
                    let url = pdfDoc.documentURL,
                    let thumbnail = pdfDoc
@@ -67,7 +67,7 @@ struct ExportOptionsView: View {
                     ShareLink(item: url) {
                         VStack {
                             Image(uiImage: thumbnail)
-                            Label("Share", image: SFSymbol.share)
+                            Label("Share", systemImage: SFSymbol.share)
                         }
                         .safeAreaPadding(.bottom)
                     }

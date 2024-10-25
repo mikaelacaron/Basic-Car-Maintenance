@@ -27,7 +27,7 @@ final class CarMaintenancePDFGenerator {
     init(vehicleName: String, events: [MaintenanceEvent]) {
         self.vehicleName = vehicleName
         self.events = events
-        self.columnWidth = (PageDimension.A4.pageWidth - leftMargin - rightMargin) / 3 
+        self.columnWidth = (PageDimension.A4.pageWidth - leftMargin - rightMargin) / 3
     }
     
     func generatePDF() -> PDFDocument? {
@@ -58,10 +58,7 @@ final class CarMaintenancePDFGenerator {
                 
                 event.date
                     .formatted()
-                    .draw(
-                        at: CGPoint(x: leftMargin, y: yPosition),
-                        withAttributes: tableRowAttributes
-                    )
+                    .draw(at: CGPoint(x: leftMargin, y: yPosition), withAttributes: tableRowAttributes)
                 
                 vehicleName.draw(
                     at: CGPoint(x: leftMargin + columnWidth, y: yPosition),
@@ -84,9 +81,11 @@ final class CarMaintenancePDFGenerator {
             guard let fileURL = documentsDirectory?
                 .appendingPathComponent("\(vehicleName)-MaintenanceReport.pdf") 
             else { return nil }
+            
             if FileManager.default.fileExists(atPath: fileURL.absoluteString) {
                 try FileManager.default.removeItem(at: fileURL)
             }
+            
             try pdfData.write(to: fileURL)
             print("PDF saved to: \(fileURL.path)")
             return PDFDocument(url: fileURL)
@@ -96,7 +95,7 @@ final class CarMaintenancePDFGenerator {
         }
     }
     
-    // Draw the center header and header columns
+    /// Draw the center header and header columns
     private func drawHeader(context: UIGraphicsPDFRendererContext, yPosition: inout CGFloat) {
         let titleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.boldSystemFont(ofSize: 20),
