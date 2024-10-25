@@ -74,6 +74,7 @@
     },
     "%@ on %@" : {
       "comment" : "Maintenance list item for a vehicle on a date",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2679,6 +2680,9 @@
         }
       }
     },
+    "For: %@" : {
+
+    },
     "GitHub Repo" : {
       "comment" : "Link to the Basic Car Maintenance GitHub repo.",
       "localizations" : {
@@ -3638,6 +3642,9 @@
           }
         }
       }
+    },
+    "Notes:" : {
+
     },
     "Odometer" : {
       "localizations" : {
