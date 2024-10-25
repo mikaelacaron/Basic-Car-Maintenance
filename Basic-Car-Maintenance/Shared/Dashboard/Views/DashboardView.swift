@@ -48,7 +48,6 @@ struct DashboardView: View {
                             Text("Notes:")
                                 .foregroundStyle(.secondary)
                             Text(event.notes)
-//                                .lineLimit(0)
                         }
                     }
                     .accessibilityElement(children: .combine)
