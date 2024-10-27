@@ -11,6 +11,8 @@ import UniformTypeIdentifiers
 import TipKit
 
 struct SettingsView: View {
+    @AppStorage(AppStorageKeys.measurementSystem) private var defaultUnitSystem: MeasurementSystem = .default
+    
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.colorScheme) var colorScheme
@@ -86,6 +88,18 @@ struct SettingsView: View {
                         }
                     }
                     .foregroundStyle(.blue)
+                }
+                
+                Section {
+                    Picker("Preferred System", selection: $defaultUnitSystem) { 
+                        ForEach(MeasurementSystem.allCases) { unit in
+                            Text(unit.title)
+                                .tag(unit)
+                        }
+                    }
+                    .foregroundStyle(.blue)
+                } header: {
+                    Text("Units", comment: "Label to represent the options for measurement units")
                 }
                 
                 Section {

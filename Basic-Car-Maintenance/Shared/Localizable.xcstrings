@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%@" : {
       "comment" : "Maintenance list item description 'Date' formatted",
       "localizations" : {
@@ -2719,6 +2722,9 @@
         }
       }
     },
+    "Imperial" : {
+      "comment" : "Imperial unit system"
+    },
     "It's open source and anyone can contribute to it." : {
       "comment" : "Tells the user they can contribute to the codebase.",
       "localizations" : {
@@ -3100,6 +3106,9 @@
           }
         }
       }
+    },
+    "Metric" : {
+      "comment" : "Metric unit system"
     },
     "Mileage: %lld %@" : {
       "localizations" : {
@@ -3852,6 +3861,9 @@
       }
     },
     "Plate: %@" : {
+
+    },
+    "Preferred System" : {
 
     },
     "Preferred units" : {
@@ -5163,6 +5175,9 @@
           }
         }
       }
+    },
+    "Units" : {
+      "comment" : "Label to represent the options for measurement units"
     },
     "Update" : {
       "comment" : "Label for submit button on form to update an existing entry",
