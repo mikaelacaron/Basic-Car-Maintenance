@@ -2681,7 +2681,7 @@
       }
     },
     "For: %@" : {
-
+      "comment" : "the vehcile name is filled in here"
     },
     "GitHub Repo" : {
       "comment" : "Link to the Basic Car Maintenance GitHub repo.",

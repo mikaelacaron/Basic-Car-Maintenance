@@ -30,7 +30,7 @@ struct DashboardView: View {
         NavigationStack {
             List {
                 ForEach(viewModel.searchedEvents) { event in
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 4) {
                         Text(event.title)
                             .font(.title3)
                             .fontWeight(.bold)
@@ -40,7 +40,7 @@ struct DashboardView: View {
                         
                         let vehicleName = viewModel.vehicles.first { $0.id == event.vehicleID }?.name
                         if let vehicleName {
-                            Text("For: \(vehicleName)")
+                            Text("For: \(vehicleName)", comment: "the vehcile name is filled in here")
                                 .foregroundStyle(.secondary)
                         }
                         
