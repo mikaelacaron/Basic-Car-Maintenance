@@ -6,23 +6,30 @@
 //  See LICENSE for license information.
 //
 
-import Foundation
+import SwiftUI
 
 enum MeasurementSystem: String, Identifiable, CaseIterable {
     case imperial
     case metric
     
-    var id: UUID { UUID() }
-    var title: String {
+    var id: String {
+        return rawValue
+    }
+    
+    var title: LocalizedStringResource {
         switch self {
         case .imperial:
-            return NSLocalizedString("Imperial", comment: "Imperial unit system")
+            return LocalizedStringResource(
+                "Imperial",
+                defaultValue: "Imperial",
+                comment: "Imperial unit system"
+            )
         case .metric:
-            return NSLocalizedString("Metric", comment: "Metric unit system")
+            return LocalizedStringResource("Metric", defaultValue: "Metric", comment: "Metric unit system")
         }
     }    
     
-    static var `default`: MeasurementSystem {
+    static var userDefault: MeasurementSystem {
         switch Locale.current.measurementSystem {
         case .uk:
             return .metric

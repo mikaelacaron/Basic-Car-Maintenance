@@ -14,13 +14,13 @@ struct AddOdometerReadingView: View {
     let addTapped: (OdometerReading) -> Void
     
     @AppStorage(AppStorageKeys.measurementSystem) 
-    private var defaultUnitSystem: MeasurementSystem = .default
+    private var defaultUnitSystem: MeasurementSystem = .userDefault
     
     @Environment(\.dismiss) var dismiss
     
     @State private var date = Date()
     @State private var selectedVehicleID: String?
-    @State private var isMetric: Bool
+    @State private var isMetric = false
     @State private var distance = 0
     
     init(
@@ -94,9 +94,6 @@ struct AddOdometerReadingView: View {
                     }
                     .disabled(distance < 0)
                 }
-            }
-            .onChange(of: defaultUnitSystem) { _, newValue in
-                isMetric = newValue == .metric
             }
         }
         .analyticsView("\(Self.self)")

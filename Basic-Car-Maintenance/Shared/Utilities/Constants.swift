@@ -87,4 +87,8 @@ enum SFSymbol {
   
 }
 
+enum AppStorageKeys {
+    static let measurementSystem = "defaultMeasurementSystem"
+}
+
 // swiftlint:enable line_length
