@@ -11,12 +11,17 @@ import FirebaseCore
 import FirebaseFirestore
 import SwiftUI
 import TipKit
+import AppIntents
 
 @main
 struct BasicCarMaintenanceApp: App {
     @State private var actionService = ActionService.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    init() {
+        FirebaseApp.configure()
+        AppDependencyManager.shared.add(dependency: AuthenticationViewModel())
+    }
     // Logic to load Onboarding screen when app was first launched
 //    @AppStorage("isFirstTime") private var isFirstTime: Bool = true
     
@@ -43,9 +48,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
-        
-        FirebaseApp.configure()
-        
         let useEmulator = UserDefaults.standard.bool(forKey: "useEmulator")
         if useEmulator {
             let settings = Firestore.firestore().settings

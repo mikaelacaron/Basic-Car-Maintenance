@@ -20,7 +20,9 @@ struct Vehicle: Codable, Identifiable, Hashable {
     let color: String?
     let vin: String?
     let licensePlateNumber: String?
-    var displayRepresentation: DisplayRepresentation { DisplayRepresentation(title: "\(name)") }
+    var displayRepresentation: DisplayRepresentation {
+        DisplayRepresentation(title: "\(name)")
+    }
     
     static var defaultQuery = VehicleQuery()
     static var typeDisplayRepresentation = TypeDisplayRepresentation(name: "Vehicle")

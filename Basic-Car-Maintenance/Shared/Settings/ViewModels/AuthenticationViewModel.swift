@@ -24,7 +24,7 @@ enum AuthenticationFlow {
 }
 
 @Observable
-final class AuthenticationViewModel {
+final class AuthenticationViewModel: @unchecked Sendable {
     
     var email = ""
     var password = ""

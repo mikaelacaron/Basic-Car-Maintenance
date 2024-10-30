@@ -116,45 +116,36 @@ struct OdometerView: View {
     let viewModel = OdometerViewModel(userUID: nil)
     let firstCar = createVehicle(id: "id1", name: "My 1st car")
     let secondCar = createVehicle(id: "id2", name: "2nd Car")
-    
     viewModel.vehicles.append(contentsOf: [firstCar, secondCar])
     
-    let firstReading = createReading(vehicleID: secondCar.id!,
-                                     date: "2024/10/18",
-                                     distance: 20)
-    let secondReading = createReading(vehicleID: firstCar.id!,
-                                     date: "2024/10/15",
-                                     distance: 1000)
+    let readings = [firstCar, secondCar]
+        .map {
+            OdometerReading(
+                id: UUID().uuidString,
+                userID: "",
+                date: .now,
+                distance: Int.random(in: 10...1000),
+                isMetric: false,
+                vehicleID: $0.id
+            )
+        }
     
-    let thirdReading = createReading(vehicleID: firstCar.id!,
-                                     date: "2024/10/13",
-                                     distance: 10)
-    viewModel.readings.append(contentsOf: [firstReading, secondReading, thirdReading])
+    viewModel.readings.append(contentsOf: readings)
 
+    func createVehicle(id: String, name: String) -> Vehicle {
+        Vehicle(
+            id: id,
+            userID: nil,
+            name: name,
+            make: "",
+            model: "",
+            year: nil,
+            color: nil,
+            vin: nil,
+            licensePlateNumber: nil
+        )
+    }
+    
     return OdometerView(viewModel: viewModel)
         .environment(ActionService.shared)
-    
-    func createVehicle(id: String, name: String) -> Vehicle {
-        Vehicle(id: id, 
-                userID: nil, 
-                name: name, 
-                make: "", 
-                model: "", 
-                year: nil, 
-                color: nil, 
-                vin: nil, 
-                licensePlateNumber: nil)
-    }
-
-    func createReading(vehicleID: String, date: String, distance: Int) -> OdometerReading {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd"
-        let firstDate = formatter.date(from: date)!
-        return OdometerReading(id: UUID().uuidString,
-                               userID: "", 
-                               date: firstDate, 
-                               distance: distance, 
-                               isMetric: false, 
-                               vehicleID: vehicleID)
-    }
 }
