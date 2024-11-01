@@ -14,6 +14,7 @@ struct ExportOptionsView: View {
     @State private var selectedVehicle: Vehicle?
     @State private var isShowingThumbnail = false
     @State private var pdfDoc: PDFDocument?
+    @State private var showingErrorAlert = false
     
     private let dataSource: [Vehicle: [MaintenanceEvent]]
     
@@ -43,12 +44,17 @@ struct ExportOptionsView: View {
                     Button("Export") { 
                         if let selectedVehicle,
                            let events = self.dataSource[selectedVehicle] {
-                            let pdfGenerator = CarMaintenancePDFGenerator(
-                                vehicleName: selectedVehicle.name,
-                                events: events
-                            )
-                            self.pdfDoc = pdfGenerator.generatePDF() 
-                            isShowingThumbnail = true
+                            
+                            if !events.isEmpty {
+                                let pdfGenerator = CarMaintenancePDFGenerator(
+                                    vehicleName: selectedVehicle.name,
+                                    events: events
+                                )
+                                self.pdfDoc = pdfGenerator.generatePDF() 
+                                isShowingThumbnail = true
+                            } else {
+                                showingErrorAlert = true
+                            }
                         }
                     }
                 }
@@ -73,6 +79,17 @@ struct ExportOptionsView: View {
                     }
                     .presentationDetents([.medium])
                 }
+            }
+            .alert(Text("Failed to export events",
+                        comment: "Title for alert shown when there are no events to export for a vehicle"),
+                   isPresented: $showingErrorAlert) {
+                Button {
+                    showingErrorAlert = false
+                } label: {
+                    Text("OK", comment: "Label to dismiss alert")
+                }
+            } message: {
+                Text("No events to export for this vehicle").padding()
             }
         }
     }

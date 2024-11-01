@@ -2571,6 +2571,9 @@
         }
       }
     },
+    "Failed to export events" : {
+      "comment" : "Title for alert shown when there are no events to export for a vehicle."
+    },
     "Filter" : {
       "comment" : "Label for filtering on Dashboard view",
       "localizations" : {
@@ -3436,6 +3439,9 @@
           }
         }
       }
+    },
+    "No events to export for this vehicle." : {
+
     },
     "No Name" : {
       "extractionState" : "manual"
