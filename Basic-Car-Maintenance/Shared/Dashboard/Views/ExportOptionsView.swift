@@ -80,17 +80,20 @@ struct ExportOptionsView: View {
                     .presentationDetents([.medium])
                 }
             }
-            .alert(Text("Failed to export events",
-                        comment: "Title for alert shown when there are no events to export for a vehicle"),
-                   isPresented: $showingErrorAlert) {
-                Button {
-                    showingErrorAlert = false
-                } label: {
-                    Text("OK", comment: "Label to dismiss alert")
+            .alert(
+                Text(
+                    "Failed to Export Events",
+                    comment: "Title for alert shown when there are no events to export for a vehicle"
+                ),
+                isPresented: $showingErrorAlert) {
+                    Button {
+                        showingErrorAlert = false
+                    } label: {
+                        Text("OK", comment: "Label to dismiss alert")
+                    }
+                } message: {
+                    Text("No events to export for this vehicle.")
                 }
-            } message: {
-                Text("No events to export for this vehicle").padding()
-            }
         }
     }
 }

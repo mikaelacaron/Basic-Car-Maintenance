@@ -2571,8 +2571,8 @@
         }
       }
     },
-    "Failed to export events" : {
-      "comment" : "Title for alert shown when there are no events to export for a vehicle."
+    "Failed to Export Events" : {
+      "comment" : "Title for alert shown when there are no events to export for a vehicle"
     },
     "Filter" : {
       "comment" : "Label for filtering on Dashboard view",
