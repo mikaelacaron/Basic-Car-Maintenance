@@ -9,12 +9,22 @@
 import SwiftUI
 import PDFKit
 
+enum ExportOption: String, Identifiable, CaseIterable {
+    case pdf = "PDF"
+    case csv = "CSV"
+    var id: Self { self }
+}
+
 struct ExportOptionsView: View {
     @Environment(\.dismiss) var dismiss
     @State private var selectedVehicle: Vehicle?
     @State private var isShowingThumbnail = false
     @State private var pdfDoc: PDFDocument?
     @State private var showingErrorAlert = false
+    @State private var selectedOption: ExportOption?
+    @State private var showingExporter = false
+    @State private var csvFile: CSVFile?
+    @State private var csvFileURL: URL? 
     
     private let dataSource: [Vehicle: [MaintenanceEvent]]
     
@@ -41,22 +51,41 @@ struct ExportOptionsView: View {
             .padding(.horizontal)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button("Export") { 
+                    Menu(content: {
+                        Picker("Export", selection: $selectedOption) {
+                            ForEach(ExportOption.allCases, id: \.self) { option in
+                                Text(option.rawValue).tag(option)
+                            }
+                        }
+                    }, label: {
+                        Text("Export")
+                    })
+                    .onChange(of: selectedOption, { _, _ in
                         if let selectedVehicle,
                            let events = self.dataSource[selectedVehicle] {
-                            
                             if !events.isEmpty {
-                                let pdfGenerator = CarMaintenancePDFGenerator(
-                                    vehicleName: selectedVehicle.name,
-                                    events: events
-                                )
-                                self.pdfDoc = pdfGenerator.generatePDF() 
-                                isShowingThumbnail = true
+                                switch selectedOption {
+                                case .pdf:
+                                    selectedOption = nil
+                                    let pdfGenerator = CarMaintenancePDFGenerator(
+                                        vehicleName: selectedVehicle.name,
+                                        events: events
+                                    )
+                                    self.pdfDoc = pdfGenerator.generatePDF() 
+                                    isShowingThumbnail = true
+                                case .csv:
+                                    selectedOption = nil
+                                    showingExporter = true
+                                    let csv: CSVFile = CSVFile(events: events)
+                                    csvFileURL = csv.generateCSVFile(vehicle: selectedVehicle.name)
+                                case .none:
+                                    print("No option selected")
+                                }
                             } else {
                                 showingErrorAlert = true
                             }
                         }
-                    }
+                    })
                 }
             }
             .sheet(isPresented: $isShowingThumbnail) {
@@ -78,6 +107,15 @@ struct ExportOptionsView: View {
                         .safeAreaPadding(.bottom)
                     }
                     .presentationDetents([.medium])
+                }
+            }
+            .sheet(isPresented: $showingExporter) { 
+                if let selectedVehicle,
+                   let events = self.dataSource[selectedVehicle] {
+                    CSVGeneratorView(
+                        events: events, 
+                        csvFileURL: $csvFileURL
+                    ).presentationDetents([.medium])
                 }
             }
             .alert(
