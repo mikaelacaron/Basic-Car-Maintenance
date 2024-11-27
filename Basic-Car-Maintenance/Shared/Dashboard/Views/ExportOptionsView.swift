@@ -23,8 +23,6 @@ struct ExportOptionsView: View {
     @State private var showingErrorAlert = false
     @State private var selectedOption: ExportOption?
     @State private var showingExporter = false
-    @State private var csvFile: CSVFile?
-    @State private var csvFileURL: URL? 
     
     private let dataSource: [Vehicle: [MaintenanceEvent]]
     
@@ -76,8 +74,6 @@ struct ExportOptionsView: View {
                                 case .csv:
                                     selectedOption = nil
                                     showingExporter = true
-                                    let csv: CSVFile = CSVFile(events: events)
-                                    csvFileURL = csv.generateCSVFile(vehicle: selectedVehicle.name)
                                 case .none:
                                     print("No option selected")
                                 }
@@ -114,7 +110,7 @@ struct ExportOptionsView: View {
                    let events = self.dataSource[selectedVehicle] {
                     CSVGeneratorView(
                         events: events, 
-                        csvFileURL: $csvFileURL
+                        vehicleName: selectedVehicle.name
                     ).presentationDetents([.medium])
                 }
             }

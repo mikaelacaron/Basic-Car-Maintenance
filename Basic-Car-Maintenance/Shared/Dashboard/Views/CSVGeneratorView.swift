@@ -10,46 +10,96 @@ import Foundation
 import SwiftUI
 
 struct CSVGeneratorView: View {
+    @Environment(\.dismiss) var dismiss
+    
     let events: [MaintenanceEvent]
-    @Binding var csvFileURL: URL?
+    let vehicleName: String
+    
+    func csvData() -> String {
+        let table = CSVTable<MaintenanceEvent>(
+            columns: [
+                CSVColumn("Date") { $0.date.formatted() },
+                CSVColumn("Vehicle Name", \.title),
+                CSVColumn("Notes", \.notes)
+            ], 
+            configuration: CSVEncoderConfiguration(dateEncodingStrategy: .iso8601) 
+        )
+        return table.export(rows: events)
+    }
+    
+    func generateCSVFile(vehicle: String) -> URL? {
+        // Get the path to the Documents Directory
+        let fileManager = FileManager.default
+        guard let documentsDirectory = fileManager.urls(
+            for: .documentDirectory, in: .userDomainMask).first else {
+            print("Failed to locate the Documents Directory.")
+            return nil
+        }
+        
+        // Create the file URL
+        let fileName = "\(vehicle)-MaintenanceReport"
+        let fileURL = documentsDirectory.appendingPathComponent(fileName).appendingPathExtension("csv")
+        
+        do {
+            // Save the CSV content to the file
+            try csvData().write(to: fileURL, atomically: true, encoding: .utf8)
+            print("File saved to \(fileURL)")
+            return fileURL
+        } catch {
+            print("Failed to save CSV file: \(error.localizedDescription)")
+            return nil
+        }
+    }
     
     var body: some View {
-        VStack {
-            List {
-                Grid {
-                    GridRow {
-                        Text("Date")
-                        Text("Vehicle Name")
-                        Text("Notes")
-                    }
-                    .bold()
-                    .frame(height: 40)
-                    Divider()
-                    ForEach(events) { event in
+        NavigationStack {
+            VStack(spacing: 0) {
+                List {
+                    Grid(alignment: .leading, verticalSpacing: 5) {
                         GridRow {
-                            Text(event.date.formatted())
-                                .frame(maxWidth: 100, maxHeight: .infinity)
-                            Text(event.title)
-                            Text(event.notes)
+                            Text("Date")
+                            Text("Vehicle Name")
+                            Text("Notes")
                         }
-                        if event != events.last {
-                            Divider()
+                        .font(.headline)
+                        .frame(height: 50)
+                        
+                        Divider()
+                        
+                        ForEach(events) { event in
+                            GridRow(alignment: .firstTextBaseline) {
+                                Text(event.date.formatted())
+                                    .frame(maxWidth: 100, maxHeight: .infinity)
+                                Text(event.title)
+                                Text(event.notes)
+                            }
+                            .font(.subheadline)
+                            if event != events.last {
+                                Divider()
+                            }
                         }
                     }
                 }
-            }
-            VStack {
-                if let fileURL = csvFileURL {
-                    ShareLink(item: fileURL) {
-                        Label("Share", systemImage: SFSymbol.share)
+                VStack {
+                    if let fileURL = generateCSVFile(vehicle: vehicleName) {
+                        ShareLink(item: fileURL) {
+                            Label("Share", systemImage: SFSymbol.share)
+                        }
+                    } else {
+                        Text("Error: Failed to save CSV file.")
+                            .foregroundColor(.red)
+                            .font(.subheadline)
                     }
-                } else {
-                    Text("Error: Failed to save CSV file.")
-                        .foregroundColor(.red)
-                        .font(.subheadline)
+                }
+                .safeAreaPadding(.bottom)
+            }
+            .toolbar { 
+                ToolbarItem(placement: .topBarLeading) { 
+                    Button("Close") {
+                        dismiss()
+                    }
                 }
             }
-            .safeAreaPadding(.bottom)
         }
     }
 }
@@ -59,16 +109,10 @@ struct CSVGeneratorView: View {
         events: [
             .init(
                 vehicleID: "1", 
-                title: "Creta", 
+                title: "1st service", 
                 date: .now, 
-                notes: "Service"
-            ), 
-            .init(
-                vehicleID: "1", 
-                title: "Creta", 
-                date: .now,
-                notes: "Service")
-        ], 
-        csvFileURL: .constant(nil)
+                notes: "Maintenance and service"
+            )], 
+        vehicleName: ""
     )
 }
