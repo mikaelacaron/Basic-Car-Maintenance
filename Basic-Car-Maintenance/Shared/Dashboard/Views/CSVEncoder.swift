@@ -8,18 +8,18 @@
 
 import Foundation
 
-internal extension BidirectionalCollection where Element == String {
+extension BidirectionalCollection where Element == String {
     var commaDelimited: String { joined(separator: ",") }
     var newlineDelimited: String { joined(separator: "\r\n") }
 }
 
-public struct CSVColumn<Record> {
+struct CSVColumn<Record> {
     /// The header name to use for the column in the CSV file's first row.
-    public private(set) var header: String
+    private(set) var header: String
    
-    public private(set) var attribute: (Record) -> CSVEncodable
+    private(set) var attribute: (Record) -> CSVEncodable
     
-    public init(
+    init(
         _ header: String,
         attribute: @escaping (Record) -> CSVEncodable
     ) {
@@ -29,7 +29,7 @@ public struct CSVColumn<Record> {
 }
 
 extension CSVColumn {
-    public init<T: CSVEncodable> (
+    init<T: CSVEncodable> (
         _ header: String,
         _ keyPath: KeyPath<Record, T>
     ) {
@@ -40,13 +40,13 @@ extension CSVColumn {
     }
 }
 
-public protocol CSVEncodable {
+protocol CSVEncodable {
     /// Derive the string representation to be used in the exported CSV.
     func encode(configuration: CSVEncoderConfiguration) -> String
 }
 
 extension String: CSVEncodable {
-    public func encode(configuration: CSVEncoderConfiguration) -> String {
+    func encode(configuration: CSVEncoderConfiguration) -> String {
         self
     }
 }
@@ -93,7 +93,7 @@ extension Bool: CSVEncodable {
 }
 
 extension Optional: CSVEncodable where Wrapped: CSVEncodable {
-    public func encode(configuration: CSVEncoderConfiguration) -> String {
+    func encode(configuration: CSVEncoderConfiguration) -> String {
         switch self {
         case .none:
             ""
@@ -104,7 +104,7 @@ extension Optional: CSVEncodable where Wrapped: CSVEncodable {
 }
 
 extension CSVEncodable {
-    internal func escapedOutput(configuration: CSVEncoderConfiguration) -> String {
+    func escapedOutput(configuration: CSVEncoderConfiguration) -> String {
         let output = self.encode(configuration: configuration)
         if output.contains(",") || output.contains("\"") || output.contains(#"\n"#)
             || output.hasPrefix(" ") || output.hasSuffix(" ") {
@@ -174,14 +174,14 @@ internal extension CSVEncoderConfiguration.BoolEncodingStrategy {
     }
 }
 
-public struct CSVTable<Record> {
+struct CSVTable<Record> {
     /// A description of all the columns of the CSV file, order from left to right.
-    public private(set) var columns: [CSVColumn<Record>]
+    private(set) var columns: [CSVColumn<Record>]
     /// The set of configuration parameters to use while encoding attributes and the whole file.
-    public private(set) var configuration: CSVEncoderConfiguration
+    private(set) var configuration: CSVEncoderConfiguration
     
     /// Create a CSV table definition.
-    public init(
+    init(
         columns: [CSVColumn<Record>],
         configuration: CSVEncoderConfiguration = .default
     ) {
@@ -190,7 +190,7 @@ public struct CSVTable<Record> {
     }
     
     /// Constructs a CSV text file structure from the given rows of data.
-    public func export(
+    func export(
         rows: any Sequence<Record>
     ) -> String {
         ([headers] + allRows(rows: rows)).newlineDelimited
