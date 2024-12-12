@@ -19,24 +19,13 @@ struct CSVColumn<Record> {
    
     private(set) var attribute: (Record) -> CSVEncodable
     
-    init(
-        _ header: String,
-        attribute: @escaping (Record) -> CSVEncodable
-    ) {
+    init( _ header: String, attribute: @escaping (Record) -> CSVEncodable) {
         self.header = header
         self.attribute = attribute
     }
-}
-
-extension CSVColumn {
-    init<T: CSVEncodable> (
-        _ header: String,
-        _ keyPath: KeyPath<Record, T>
-    ) {
-        self.init(
-            header,
-            attribute: { $0[keyPath: keyPath] }
-        )
+    
+    init<T: CSVEncodable> (_ header: String, _ keyPath: KeyPath<Record, T>) {
+        self.init(header, attribute: { $0[keyPath: keyPath] })
     }
 }
 
@@ -52,7 +41,7 @@ extension String: CSVEncodable {
 }
 
 extension Date: CSVEncodable {
-    public func encode(configuration: CSVEncoderConfiguration) -> String {
+    func encode(configuration: CSVEncoderConfiguration) -> String {
         switch configuration.dateEncodingStrategy {
         case .deferredToDate:
             String(self.timeIntervalSinceReferenceDate)
@@ -67,26 +56,26 @@ extension Date: CSVEncodable {
 }
 
 extension UUID: CSVEncodable {
-    public func encode(configuration: CSVEncoderConfiguration) -> String {
+    func encode(configuration: CSVEncoderConfiguration) -> String {
         uuidString
     }
 }
 
 extension Int: CSVEncodable {
-    public func encode(configuration: CSVEncoderConfiguration) -> String {
+    func encode(configuration: CSVEncoderConfiguration) -> String {
         String(self)
     }
 }
 
 extension Double: CSVEncodable {
-    public func encode(configuration: CSVEncoderConfiguration) -> String {
+    func encode(configuration: CSVEncoderConfiguration) -> String {
         String(self)
     }
 }
 
 extension Bool: CSVEncodable {
-    public func encode(configuration: CSVEncoderConfiguration) -> String {
-        let (trueValue, falseValue) = configuration.boolEncodingStrategy.encodingValues
+    func encode(configuration: CSVEncoderConfiguration) -> String {
+        let (trueValue, falseValue) = configuration.encodingValues
 
         return self == true ? trueValue : falseValue
     }
@@ -120,14 +109,14 @@ extension CSVEncodable {
     }
 }
 
-public struct CSVEncoderConfiguration {
+struct CSVEncoderConfiguration {
     /// The strategy to use when encoding dates.
-    public private(set) var dateEncodingStrategy: DateEncodingStrategy = .iso8601
+    private(set) var dateEncodingStrategy: DateEncodingStrategy = .iso8601
     
     /// The strategy to use when encoding Boolean values.
-    public private(set) var boolEncodingStrategy: BoolEncodingStrategy = .trueFalse
+    private(set) var boolEncodingStrategy: BoolEncodingStrategy = .trueFalse
 
-    public init(
+    init(
         dateEncodingStrategy: DateEncodingStrategy = .iso8601,
         boolEncodingStrategy: BoolEncodingStrategy = .trueFalse
     ) {
@@ -136,7 +125,7 @@ public struct CSVEncoderConfiguration {
     }
     
     /// The strategy to use when encoding `Date` objects for CSV output.
-    public enum DateEncodingStrategy {
+    enum DateEncodingStrategy {
         case deferredToDate
         case iso8601
         case formatted(DateFormatter)
@@ -144,7 +133,7 @@ public struct CSVEncoderConfiguration {
     }
 
     /// The strategy to use when encoding `Bool` objects for CSV output.
-    public enum BoolEncodingStrategy {
+    enum BoolEncodingStrategy {
         case trueFalse
         case trueFalseUppercase
         case yesNo
@@ -152,12 +141,9 @@ public struct CSVEncoderConfiguration {
         case integer
         case custom(true: String, false: String)
     }
-    public static var `default`: CSVEncoderConfiguration = CSVEncoderConfiguration()
-}
-
-internal extension CSVEncoderConfiguration.BoolEncodingStrategy {
+    
     var encodingValues: (String, String) {
-        switch self {
+        switch boolEncodingStrategy {
         case .trueFalse:
             return ("true", "false")
         case .trueFalseUppercase:
@@ -172,13 +158,20 @@ internal extension CSVEncoderConfiguration.BoolEncodingStrategy {
             return (trueValue, falseValue)
         }
     }
+    
+    static var `default`: CSVEncoderConfiguration = CSVEncoderConfiguration()
 }
 
 struct CSVTable<Record> {
     /// A description of all the columns of the CSV file, order from left to right.
     private(set) var columns: [CSVColumn<Record>]
+    
     /// The set of configuration parameters to use while encoding attributes and the whole file.
     private(set) var configuration: CSVEncoderConfiguration
+    
+    private var headers: String {
+        columns.map { $0.header.escapedOutput(configuration: configuration) }.commaDelimited
+    }
     
     /// Create a CSV table definition.
     init(
@@ -190,16 +183,8 @@ struct CSVTable<Record> {
     }
     
     /// Constructs a CSV text file structure from the given rows of data.
-    func export(
-        rows: any Sequence<Record>
-    ) -> String {
+    func export(rows: any Sequence<Record>) -> String {
         ([headers] + allRows(rows: rows)).newlineDelimited
-    }
-
-    // MARK: -
-
-    private var headers: String {
-        columns.map { $0.header.escapedOutput(configuration: configuration) }.commaDelimited
     }
 
     private func allRows(rows: any Sequence<Record>) -> [String] {

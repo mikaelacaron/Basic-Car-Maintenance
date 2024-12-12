@@ -22,7 +22,7 @@ struct ExportOptionsView: View {
     @State private var pdfDoc: PDFDocument?
     @State private var showingErrorAlert = false
     @State private var selectedOption: ExportOption?
-    @State private var showingExporter = false
+    @State private var showingCSVExporter = false
     
     private let dataSource: [Vehicle: [MaintenanceEvent]]
     
@@ -73,7 +73,7 @@ struct ExportOptionsView: View {
                                     isShowingThumbnail = true
                                 case .csv:
                                     selectedOption = nil
-                                    showingExporter = true
+                                    showingCSVExporter = true
                                 case .none:
                                     print("No option selected, do nothing")
                                 }
@@ -105,13 +105,11 @@ struct ExportOptionsView: View {
                     .presentationDetents([.medium])
                 }
             }
-            .sheet(isPresented: $showingExporter) { 
+            .sheet(isPresented: $showingCSVExporter) { 
                 if let selectedVehicle,
                    let events = self.dataSource[selectedVehicle] {
-                    CSVGeneratorView(
-                        events: events, 
-                        vehicleName: selectedVehicle.name
-                    ).presentationDetents([.medium])
+                    CSVGeneratorView(events: events, vehicleName: selectedVehicle.name)
+                        .presentationDetents([.medium])
                 }
             }
             .alert(

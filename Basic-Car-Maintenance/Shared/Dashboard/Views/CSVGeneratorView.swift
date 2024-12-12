@@ -74,7 +74,7 @@ struct CSVGeneratorView: View {
                 CSVColumn("Vehicle Name", \.title),
                 CSVColumn("Notes", \.notes)
             ], 
-            configuration: CSVEncoderConfiguration(dateEncodingStrategy: .iso8601) 
+            configuration: CSVEncoderConfiguration() 
         )
         return table.export(rows: events)
     }
