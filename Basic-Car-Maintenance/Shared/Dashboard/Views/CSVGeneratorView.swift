@@ -15,42 +15,6 @@ struct CSVGeneratorView: View {
     let events: [MaintenanceEvent]
     let vehicleName: String
     
-    func csvData() -> String {
-        let table = CSVTable<MaintenanceEvent>(
-            columns: [
-                CSVColumn("Date") { $0.date.formatted() },
-                CSVColumn("Vehicle Name", \.title),
-                CSVColumn("Notes", \.notes)
-            ], 
-            configuration: CSVEncoderConfiguration(dateEncodingStrategy: .iso8601) 
-        )
-        return table.export(rows: events)
-    }
-    
-    func generateCSVFile(vehicle: String) -> URL? {
-        // Get the path to the Documents Directory
-        let fileManager = FileManager.default
-        guard let documentsDirectory = fileManager.urls(
-            for: .documentDirectory, in: .userDomainMask).first else {
-            print("Failed to locate the Documents Directory.")
-            return nil
-        }
-        
-        // Create the file URL
-        let fileName = "\(vehicle)-MaintenanceReport"
-        let fileURL = documentsDirectory.appendingPathComponent(fileName).appendingPathExtension("csv")
-        
-        do {
-            // Save the CSV content to the file
-            try csvData().write(to: fileURL, atomically: true, encoding: .utf8)
-            print("File saved to \(fileURL)")
-            return fileURL
-        } catch {
-            print("Failed to save CSV file: \(error.localizedDescription)")
-            return nil
-        }
-    }
-    
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
@@ -100,6 +64,39 @@ struct CSVGeneratorView: View {
                     }
                 }
             }
+        }
+    }
+    
+    private func csvData() -> String {
+        let table = CSVTable<MaintenanceEvent>(
+            columns: [
+                CSVColumn("Date") { $0.date.formatted() },
+                CSVColumn("Vehicle Name", \.title),
+                CSVColumn("Notes", \.notes)
+            ], 
+            configuration: CSVEncoderConfiguration(dateEncodingStrategy: .iso8601) 
+        )
+        return table.export(rows: events)
+    }
+    
+    private func generateCSVFile(vehicle: String) -> URL? {
+        let fileManager = FileManager.default
+        guard let documentsDirectory = fileManager.urls(
+            for: .documentDirectory, in: .userDomainMask).first else {
+            print("Failed to locate the Documents Directory.")
+            return nil
+        }
+        
+        let fileName = "\(vehicle)-MaintenanceReport"
+        let fileURL = documentsDirectory.appendingPathComponent(fileName).appendingPathExtension("csv")
+        
+        do {
+            try csvData().write(to: fileURL, atomically: true, encoding: .utf8)
+            print("File saved to \(fileURL)")
+            return fileURL
+        } catch {
+            print("Failed to save CSV file: \(error.localizedDescription)")
+            return nil
         }
     }
 }
