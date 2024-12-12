@@ -49,15 +49,15 @@ struct ExportOptionsView: View {
             .padding(.horizontal)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Menu(content: {
+                    Menu {
                         Picker("Export", selection: $selectedOption) {
-                            ForEach(ExportOption.allCases, id: \.self) { option in
+                            ForEach(ExportOption.allCases) { option in
                                 Text(option.rawValue).tag(option)
                             }
                         }
-                    }, label: {
+                    } label: {
                         Text("Export")
-                    })
+                    }
                     .onChange(of: selectedOption, { _, _ in
                         if let selectedVehicle,
                            let events = self.dataSource[selectedVehicle] {
@@ -75,7 +75,7 @@ struct ExportOptionsView: View {
                                     selectedOption = nil
                                     showingExporter = true
                                 case .none:
-                                    print("No option selected")
+                                    print("No option selected, do nothing")
                                 }
                             } else {
                                 showingErrorAlert = true
