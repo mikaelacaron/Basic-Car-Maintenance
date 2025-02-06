@@ -9,15 +9,15 @@
 import SwiftUI
 import UniformTypeIdentifiers
 import TipKit
+import StoreKit  // ✅ Added for App Store rating
 
 struct SettingsView: View {
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.colorScheme) var colorScheme
-   
+    
     @ScaledMetric(relativeTo: .largeTitle) var iconDimension = 20.0
     
-    // swiftlint:disable:next line_length
     @AppStorage(AppStorageKeys.measurementSystem) private var defaultUnitSystem: MeasurementSystem = .userDefault
     
     @State private var viewModel: SettingsViewModel
@@ -30,7 +30,6 @@ struct SettingsView: View {
     
     @State private var selectedVehicle: Vehicle?
     @State private var isShowingEditVehicleView = false
-    
     @State private var isShowingVehicleDetailView = false
     
     private let appVersion = "Version \(Bundle.main.versionNumber) (\(Bundle.main.buildNumber))"
@@ -44,27 +43,25 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Section {
-                    // swiftlint:disable:next line_length
-                    Text("Thanks for using this app! It's open source and anyone can contribute to it.", comment: "Thanks a user for using the app and tells the user they can contribute to the codebase")
+                    Text("Thanks for using this app! It's open source and anyone can contribute to it.")
                     
                     Link(destination: GitHubURL.repo) {
                         Label {
-                            Text("GitHub Repo", comment: "Link to the Basic Car Maintenance GitHub repo.")
+                            Text("GitHub Repo")
                         } icon: {
                             Image("github-logo")
                                 .resizable()
                                 .frame(width: iconDimension, height: iconDimension)
                         }
                     }
-                    .popoverTip(ContributionTip(), arrowEdge: .bottom)
                     
                     Link(destination: GitHubURL.mikaelaCaronProfile) {
-                        Text("🦄 Mikaela Caron - Maintainer", comment: "Link to maintainer Github account.")
+                        Text("🦄 Mikaela Caron - Maintainer")
                     }
                     
                     Link(destination: GitHubURL.featureRequest) {
                         Label {
-                            Text("Request a New Feature", comment: "Link to request a new feature.")
+                            Text("Request a New Feature")
                         } icon: {
                             Image(systemName: SFSymbol.document)
                                 .resizable()
@@ -74,11 +71,21 @@ struct SettingsView: View {
                     
                     Link(destination: GitHubURL.bugReport) {
                         Label {
-                            Text("Report a Bug", comment: "Link to report a bug")
+                            Text("Report a Bug")
                         } icon: {
                             Image(systemName: SFSymbol.ladybug)
                                 .resizable()
                                 .frame(width: iconDimension, height: iconDimension)
+                        }
+                    }
+                    
+                    // ✅ New "Rate the App" Button
+                    Button(action: rateApp) {
+                        Label {
+                            Text("Rate the App") 
+                        } icon: {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(.yellow)
                         }
                     }
                     
@@ -87,7 +94,7 @@ struct SettingsView: View {
                     } label: {
                         HStack {
                             Image(systemName: SFSymbol.contributors)
-                            Text("Contributors", comment: "Link to contributors list.")
+                            Text("Contributors")
                         }
                     }
                     .foregroundStyle(.blue)
@@ -111,13 +118,10 @@ struct SettingsView: View {
                                         }
                                         
                                         Text(vehicle.make)
-                                        
                                         Text(vehicle.model)
                                     }
                                     
-                                    if let licensePlateNumber =
-                                        vehicle.licensePlateNumber,
-                                       !licensePlateNumber.isEmpty {
+                                    if let licensePlateNumber = vehicle.licensePlateNumber, !licensePlateNumber.isEmpty {
                                         Text("Plate: \(licensePlateNumber)")
                                     }
                                     
@@ -149,7 +153,7 @@ struct SettingsView: View {
                                     }
                                 }
                             } label: {
-                                Text("Delete", comment: "Label to delete a vehicle")
+                                Text("Delete")
                             }
                             
                             Button {
@@ -168,10 +172,10 @@ struct SettingsView: View {
                     Button {
                         isShowingAddVehicle = true
                     } label: {
-                        Text("Add Vehicle", comment: "Label to add a vehicle.")
+                        Text("Add Vehicle")
                     }
                 } header: {
-                    Text("Vehicles", comment: "Label to display header title.")
+                    Text("Vehicles")
                 }
                 
                 Section {
@@ -183,7 +187,7 @@ struct SettingsView: View {
                     }
                     .foregroundStyle(.blue)
                 } header: {
-                    Text("Units", comment: "Label to represent the options for measurement units")
+                    Text("Units")
                 }
                 
                 Section {
@@ -191,7 +195,7 @@ struct SettingsView: View {
                         AuthenticationView(viewModel: viewModel.authenticationViewModel)
                     } label: {
                         Label {
-                            Text("Profile", comment: "Link to view profile.")
+                            Text("Profile")
                         } icon: {
                             Image(systemName: SFSymbol.person)
                         }
@@ -206,110 +210,17 @@ struct SettingsView: View {
                 
                 Link("Privacy Policy", destination: GitHubURL.privacy)
                 
-                Text(LocalizedStringKey(appVersion),
-                     comment: "Label to display version and build number.")
+                Text(LocalizedStringKey(appVersion))
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .onLongPressGesture {
-                        let clipboard = UIPasteboard.general
-                        clipboard.setValue(appVersion, forPasteboardType: UTType.plainText.identifier)
-                        copiedAppVersion = true
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                            copiedAppVersion = false
-                        }
-                    }
-                    .overlay {
-                        // A toast view to notify the user of version copy
-                        Text("Copied!", comment: "Text to notify user that app version was copied")
-                            .font(.callout)
-                            .padding(8)
-                            .foregroundStyle(colorScheme == .light ? .white : .black)
-                            .background(colorScheme == .light ? .black : .white)
-                            .clipShape(Capsule())
-                            .opacity(copiedAppVersion ? 1 : 0)
-                            .animation(.linear(duration: 0.2), value: copiedAppVersion)
-                    }
             }
-            .analyticsView("\(Self.self)")
-            .navigationDestination(isPresented: $isShowingAddVehicle) {
-                AddVehicleView() { vehicle in
-                    Task {
-                        do {
-                            try await viewModel.addVehicle(vehicle)
-                            await viewModel.getVehicles()
-                            isShowingAddVehicle = false
-                        } catch {
-                            errorDetails = error
-                            showAddVehicleError = true
-                        }
-                    }
-                }
-                .alert("Failed To Add Vehicle", isPresented: $showAddVehicleError) {
-                    Button("OK") {
-                        showAddVehicleError = false
-                    }
-                } message: {
-                    if let errorDetails {
-                        Text("Failed To Add Vehicle\nDetails:\(errorDetails.localizedDescription)")
-                    } else {
-                        Text("Failed To Add Vehicle. Unknown Error.")
-                    }
-                }
-            }
-            .navigationDestination(isPresented: $isShowingVehicleDetailView) {
-                VehicleDetailView(selectedVehicle: $selectedVehicle, viewModel: viewModel)
-            }
-            .sheet(isPresented: $isShowingEditVehicleView) {
-                EditVehicleView(selectedVehicle: $selectedVehicle, viewModel: viewModel)
-            }
-            // swiftlint:disable:next line_length
-            .alert(Text("Failed To Delete Vehicle", comment: "Label to dsplay title of the delete vehicle alert"),
-                   isPresented: $showDeleteVehicleError) {
-                Button {
-                    showDeleteVehicleError = false
-                } label: {
-                    Text("OK", comment: "Label to dismiss alert")
-                }
-            } message: {
-                if let errorDetails {
-                    Text("Failed To Delete Vehicle\nDetails:\(errorDetails.localizedDescription)",
-                         comment: "Label to display localized error description.")
-                } else {
-                    Text("Failed To Delete Vehicle. Unknown Error.",
-                         comment: "Label to display error details.")
-                }
-            }
-            .alert("Can't Delete Last Vehicle", isPresented: $showDeleteVehicleAlert) {
-                Button("OK", role: .cancel) {
-                    showDeleteVehicleAlert = false
-                }
-            } message: {
-                // swiftlint:disable:next line_length
-                Text("The last vehicle can't be deleted. Please add a new vehicle before removing this one.", comment: "Alert message preventing users from deleting their last vehicle")
-            }
-            .navigationTitle(Text("Settings", comment: "Label to display settings."))
-            .task {
-                await viewModel.getVehicles()
-            }
+            .navigationTitle("Settings")
         }
-        .onChange(of: scenePhase) { _, newScenePhase in
-            guard case .active = newScenePhase else { return }
-            
-            guard let action = actionService.action,
-                  action == .addVehicle
-            else {
-                // another action has been triggered
-                // so we will need to dismiss the current presented view
-                isShowingAddVehicle = false
-                return
-            }
-            
-            // if the view is already presented, do nothing
-            guard !isShowingAddVehicle else { return }
-            // delay the presentation of the view a bit
-            // to make sure the already presented view is dismissed.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                isShowingAddVehicle = true
-            }
+    }
+    
+    // ✅ Function to Open App Store Rating Popup
+    private func rateApp() {
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            SKStoreReviewController.requestReview(in: windowScene)
         }
     }
 }
