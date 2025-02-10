@@ -9,6 +9,9 @@
 import SwiftUI
 import UniformTypeIdentifiers
 import TipKit
+import StoreKit
+
+
 
 struct SettingsView: View {
     @Environment(ActionService.self) var actionService
@@ -79,6 +82,18 @@ struct SettingsView: View {
                             Image(systemName: SFSymbol.ladybug)
                                 .resizable()
                                 .frame(width: iconDimension, height: iconDimension)
+                        }
+                    }
+                    
+                    // rate app button
+                    Button( action:{requestAppReview()} ) {
+                        Label {
+                            Text("Rate this app", comment: "Link to rate the app.")
+                        } icon: {
+                            Image(systemName: "star.fill")
+                                .resizable()
+                                .frame(width: iconDimension, height: iconDimension)
+                                .foregroundStyle(.yellow)
                         }
                     }
                     
@@ -312,7 +327,18 @@ struct SettingsView: View {
             }
         }
     }
-}
+    private func requestAppReview() {
+            if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                if #available(iOS 18.0, *) {
+                    // Use AppStore.requestReview for iOS 18+
+                    AppStore.requestReview(in: scene)
+                } else {
+                    // Fallback for earlier iOS versions
+                    SKStoreReviewController.requestReview(in: scene)
+                }
+            }
+        }
+    }
 
 #Preview {
     SettingsView(authenticationViewModel: AuthenticationViewModel())
