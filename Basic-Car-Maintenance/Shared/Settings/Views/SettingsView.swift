@@ -9,12 +9,14 @@
 import SwiftUI
 import UniformTypeIdentifiers
 import TipKit
+import StoreKit
+
 
 struct SettingsView: View {
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.colorScheme) var colorScheme
-   
+    
     @ScaledMetric(relativeTo: .largeTitle) var iconDimension = 20.0
     
     // swiftlint:disable:next line_length
@@ -79,6 +81,19 @@ struct SettingsView: View {
                             Image(systemName: SFSymbol.ladybug)
                                 .resizable()
                                 .frame(width: iconDimension, height: iconDimension)
+                        }
+                    }
+                    
+                    Button {
+                        requestAppReview()
+                    } label: {
+                        Label {
+                            Text("Rate this app", comment: "Link to rate the app.")
+                        } icon: {
+                            Image(systemName: "star.fill")
+                                .resizable()
+                                .frame(width: iconDimension, height: iconDimension)
+                                .foregroundStyle(.yellow)
                         }
                     }
                     
@@ -164,7 +179,7 @@ struct SettingsView: View {
                             }
                         }
                     }
-                
+                    
                     Button {
                         isShowingAddVehicle = true
                     } label: {
@@ -208,26 +223,26 @@ struct SettingsView: View {
                 
                 Text(LocalizedStringKey(appVersion),
                      comment: "Label to display version and build number.")
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .onLongPressGesture {
-                        let clipboard = UIPasteboard.general
-                        clipboard.setValue(appVersion, forPasteboardType: UTType.plainText.identifier)
-                        copiedAppVersion = true
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                            copiedAppVersion = false
-                        }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .onLongPressGesture {
+                    let clipboard = UIPasteboard.general
+                    clipboard.setValue(appVersion, forPasteboardType: UTType.plainText.identifier)
+                    copiedAppVersion = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        copiedAppVersion = false
                     }
-                    .overlay {
-                        // A toast view to notify the user of version copy
-                        Text("Copied!", comment: "Text to notify user that app version was copied")
-                            .font(.callout)
-                            .padding(8)
-                            .foregroundStyle(colorScheme == .light ? .white : .black)
-                            .background(colorScheme == .light ? .black : .white)
-                            .clipShape(Capsule())
-                            .opacity(copiedAppVersion ? 1 : 0)
-                            .animation(.linear(duration: 0.2), value: copiedAppVersion)
-                    }
+                }
+                .overlay {
+                    // A toast view to notify the user of version copy
+                    Text("Copied!", comment: "Text to notify user that app version was copied")
+                        .font(.callout)
+                        .padding(8)
+                        .foregroundStyle(colorScheme == .light ? .white : .black)
+                        .background(colorScheme == .light ? .black : .white)
+                        .clipShape(Capsule())
+                        .opacity(copiedAppVersion ? 1 : 0)
+                        .animation(.linear(duration: 0.2), value: copiedAppVersion)
+                }
             }
             .analyticsView("\(Self.self)")
             .navigationDestination(isPresented: $isShowingAddVehicle) {
@@ -310,6 +325,11 @@ struct SettingsView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 isShowingAddVehicle = true
             }
+        }
+    }
+    private func requestAppReview() {
+        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            AppStore.requestReview(in: scene)
         }
     }
 }
