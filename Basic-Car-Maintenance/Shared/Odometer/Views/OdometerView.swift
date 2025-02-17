@@ -1,10 +1,10 @@
-//
-//  OdometerView.swift
-//  Basic-Car-Maintenance
-//
-//  https://github.com/mikaelacaron/Basic-Car-Maintenance
-//  See LICENSE for license information.
-//
+///
+///  OdometerView.swift
+///  Basic-Car-Maintenance
+///
+///  https://github.com/mikaelacaron/Basic-Car-Maintenance
+///  See LICENSE for license information.
+///
 
 import SwiftUI
 import Charts
@@ -12,15 +12,11 @@ import Charts
 struct OdometerView: View {
     @Environment(ActionService.self) var actionService
     
-    @State private var viewModel: OdometerViewModel
+    @StateObject private var viewModel: OdometerViewModel
     @State private var selectedTimeRange: TimeRange = .all
     
     init(userUID: String?) {
-        self.init(viewModel: OdometerViewModel(userUID: userUID))
-    }
-    
-    fileprivate init(viewModel: OdometerViewModel) {
-        self.viewModel = viewModel
+        _viewModel = StateObject(wrappedValue: OdometerViewModel(userUID: userUID))
     }
     
     var body: some View {
@@ -76,11 +72,7 @@ struct OdometerView: View {
                                     viewModel.selectedReading = reading
                                     viewModel.isShowingEditReadingView = true
                                 } label: {
-                                    Label {
-                                        Text("Edit")
-                                    } icon: {
-                                        Image(systemName: SFSymbol.pencil)
-                                    }
+                                    Label("Edit", systemImage: SFSymbol.pencil)
                                 }
                             }
                     }
@@ -89,11 +81,10 @@ struct OdometerView: View {
             }
             .overlay {
                 if viewModel.readings.isEmpty {
-                    Text("Add your first odometer",
-                         comment: "Placeholder text for empty odometer reading list")
+                    Text("Add your first odometer")
                 }
             }
-            .navigationTitle(Text("Odometer"))
+            .navigationTitle("Odometer")
             .navigationDestination(isPresented: $viewModel.isShowingAddOdometerReading) {
                 makeAddOdometerView()
             }
@@ -112,9 +103,10 @@ struct OdometerView: View {
             }
             .sheet(isPresented: $viewModel.isShowingEditReadingView) {
                 if let selectedReading = viewModel.selectedReading {
-                    // swiftlint:disable:next line_length
                     EditOdometerReadingView(selectedReading: selectedReading, vehicles: viewModel.vehicles) { updatedReading in
-                        viewModel.updateOdometerReading(updatedReading)
+                        Task {
+                            await viewModel.updateOdometerReading(updatedReading)
+                        }
                     }
                     .alert("An Error Occurred", isPresented: $viewModel.showEditErrorAlert) {
                         Button("OK", role: .cancel) { }
@@ -127,9 +119,6 @@ struct OdometerView: View {
         .analyticsView("\(Self.self)")
     }
     
-    /// Filter the readins based on the selected time range, and if there are no readings in the last 30 days, just show the last reading.
-    /// - Parameter vehicle: The vehicle for these readings.
-    /// - Returns: The `[OdometerReading]`s for this vehicle in the time range.
     private func filteredReadings(for vehicle: Vehicle) -> [OdometerReading] {
         let vehicleReadings = viewModel.readings.filter { $0.vehicleID == vehicle.id }
         
@@ -137,35 +126,22 @@ struct OdometerView: View {
         case .all:
             return vehicleReadings
         case .last30Days:
-            guard let lastReadingDate = vehicleReadings.map({ $0.date }).max() else {
-                return []
-            }
             let thirtyDaysAgo = Calendar.current.date(byAdding: .day, value: -30, to: Date()) ?? Date()
-            
-            // If the last reading is older than 30 days, include only the last reading
-            if lastReadingDate < thirtyDaysAgo {
-                if let lastReading = vehicleReadings.max(by: { $0.date < $1.date }) {
-                    return [lastReading]
-                } else {
-                    return []
-                }
-            } else {
-                return vehicleReadings.filter { $0.date >= thirtyDaysAgo }
-            }
+            return vehicleReadings.filter { $0.date >= thirtyDaysAgo } + (vehicleReadings.max(by: { $0.date < $1.date }).map { [$0] } ?? [])
         }
     }
     
     private func makeAddOdometerView() -> some View {
         AddOdometerReadingView(vehicles: viewModel.vehicles) { reading in
-            do {
-                try viewModel.addReading(reading)
-                viewModel.isShowingAddOdometerReading = false
-                Task {
+            Task {
+                do {
+                    try await viewModel.addReading(reading)
+                    viewModel.isShowingAddOdometerReading = false
                     await viewModel.getOdometerReadings()
+                } catch {
+                    viewModel.errorMessage = error.localizedDescription
+                    viewModel.showAddErrorAlert = true
                 }
-            } catch {
-                viewModel.errorMessage = error.localizedDescription
-                viewModel.showAddErrorAlert = true
             }
         }
         .alert("An Error Occurred", isPresented: $viewModel.showAddErrorAlert) {
@@ -184,68 +160,3 @@ enum TimeRange: String, CaseIterable, Identifiable {
     var id: String { self.rawValue }
 }
 
-#Preview {
-    let viewModel = OdometerViewModel(userUID: nil)
-    let firstCar = createVehicle(id: "id1", name: "My 1st car")
-    let secondCar = createVehicle(id: "id2", name: "2nd Car")
-    
-    viewModel.vehicles.append(contentsOf: [firstCar, secondCar])
-    
-    let firstReading = createReading(vehicleID: firstCar.id!,
-                                     date: "2024/10/18",
-                                     distance: 35)
-    let secondReading = createReading(vehicleID: firstCar.id!,
-                                      date: "2024/10/19",
-                                      distance: 564)
-    let thirdReading = createReading(vehicleID: firstCar.id!,
-                                      date: "2024/11/23",
-                                      distance: 1000)
-    
-    let fourthReading = createReading(vehicleID: firstCar.id!,
-                                     date: "2024/11/30",
-                                     distance: 1024)
-    let fifthReading = createReading(vehicleID: secondCar.id!,
-                                      date: "2024/10/1",
-                                      distance: 1000)
-    
-    let sixthReading = createReading(vehicleID: secondCar.id!,
-                                     date: "2024/10/13",
-                                     distance: 1144)
-    let seventhReading = createReading(vehicleID: secondCar.id!,
-                                      date: "2024/10/15",
-                                      distance: 1412)
-    
-    let eighthReading = createReading(vehicleID: secondCar.id!,
-                                     date: "2024/11/13",
-                                     distance: 1542)
-    
-    // swiftlint:disable:next line_length
-    viewModel.readings.append(contentsOf: [firstReading, secondReading, thirdReading, fourthReading, fifthReading, sixthReading, seventhReading, eighthReading])
-    
-    return OdometerView(viewModel: viewModel)
-        .environment(ActionService.shared)
-    
-    func createVehicle(id: String, name: String) -> Vehicle {
-        Vehicle(id: id, 
-                userID: nil, 
-                name: name, 
-                make: "", 
-                model: "", 
-                year: nil, 
-                color: nil, 
-                vin: nil, 
-                licensePlateNumber: nil)
-    }
-    
-    func createReading(vehicleID: String, date: String, distance: Int) -> OdometerReading {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd"
-        let firstDate = formatter.date(from: date)!
-        return OdometerReading(id: UUID().uuidString,
-                               userID: "", 
-                               date: firstDate, 
-                               distance: distance, 
-                               isMetric: false, 
-                               vehicleID: vehicleID)
-    }
-}
