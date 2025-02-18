@@ -11,8 +11,6 @@ import UniformTypeIdentifiers
 import TipKit
 import StoreKit
 
-
-
 struct SettingsView: View {
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
@@ -224,26 +222,26 @@ struct SettingsView: View {
                 
                 Text(LocalizedStringKey(appVersion),
                      comment: "Label to display version and build number.")
-                .frame(maxWidth: .infinity, alignment: .center)
-                .onLongPressGesture {
-                    let clipboard = UIPasteboard.general
-                    clipboard.setValue(appVersion, forPasteboardType: UTType.plainText.identifier)
-                    copiedAppVersion = true
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                        copiedAppVersion = false
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .onLongPressGesture {
+                        let clipboard = UIPasteboard.general
+                        clipboard.setValue(appVersion, forPasteboardType: UTType.plainText.identifier)
+                        copiedAppVersion = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            copiedAppVersion = false
+                        }
                     }
-                }
-                .overlay {
-                    // A toast view to notify the user of version copy
-                    Text("Copied!", comment: "Text to notify user that app version was copied")
-                        .font(.callout)
-                        .padding(8)
-                        .foregroundStyle(colorScheme == .light ? .white : .black)
-                        .background(colorScheme == .light ? .black : .white)
-                        .clipShape(Capsule())
-                        .opacity(copiedAppVersion ? 1 : 0)
-                        .animation(.linear(duration: 0.2), value: copiedAppVersion)
-                }
+                    .overlay {
+                        // A toast view to notify the user of version copy
+                        Text("Copied!", comment: "Text to notify user that app version was copied")
+                            .font(.callout)
+                            .padding(8)
+                            .foregroundStyle(colorScheme == .light ? .white : .black)
+                            .background(colorScheme == .light ? .black : .white)
+                            .clipShape(Capsule())
+                            .opacity(copiedAppVersion ? 1 : 0)
+                            .animation(.linear(duration: 0.2), value: copiedAppVersion)
+                    }
             }
             .analyticsView("\(Self.self)")
             .navigationDestination(isPresented: $isShowingAddVehicle) {
