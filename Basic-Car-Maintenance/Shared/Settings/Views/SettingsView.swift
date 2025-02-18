@@ -84,16 +84,18 @@ struct SettingsView: View {
                         }
                     }
                     
-                    Button {
-                        requestAppReview()
-                    } label: {
-                        Label {
-                            Text("Rate this app", comment: "Link to rate the app.")
-                        } icon: {
-                            Image(systemName: "star.fill")
-                                .resizable()
-                                .frame(width: iconDimension, height: iconDimension)
-                                .foregroundStyle(.yellow)
+                    if false {
+                        Button {
+                            requestAppReview()
+                        } label: {
+                            Label {
+                                Text("Rate this app", comment: "Link to rate the app.")
+                            } icon: {
+                                Image(systemName: "star.fill")
+                                    .resizable()
+                                    .frame(width: iconDimension, height: iconDimension)
+                                    .foregroundStyle(.yellow)
+                            }
                         }
                     }
                     
