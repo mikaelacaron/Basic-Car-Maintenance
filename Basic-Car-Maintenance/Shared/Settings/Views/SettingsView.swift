@@ -9,7 +9,6 @@
 import SwiftUI
 import UniformTypeIdentifiers
 import TipKit
-import StoreKit
 
 struct SettingsView: View {
     @Environment(ActionService.self) var actionService
