@@ -4268,6 +4268,9 @@
         }
       }
     },
+    "Rate this app" : {
+      "comment" : "Link to rate the app."
+    },
     "Recorded On: %@" : {
       "localizations" : {
         "nl" : {
