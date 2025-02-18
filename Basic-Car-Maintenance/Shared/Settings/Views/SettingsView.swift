@@ -15,6 +15,7 @@ struct SettingsView: View {
     @Environment(ActionService.self) var actionService
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.openURL) private var openURL
     
     @ScaledMetric(relativeTo: .largeTitle) var iconDimension = 20.0
     
@@ -327,9 +328,13 @@ struct SettingsView: View {
         }
     }
     private func requestAppReview() {
-        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-            AppStore.requestReview(in: scene)
+        let url = "https://apps.apple.com/app/idYOURAPPSTOREID?action=write-review"
+        
+        guard let writeReviewURL = URL(string: url) else {
+            fatalError("Expected a valid URL")
         }
+        
+        openURL(writeReviewURL)
     }
 }
 
