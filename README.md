@@ -16,12 +16,19 @@ It's made so users can efficiently track & manage their vehicle's maintenance sc
 
 ## Features
 **Maintenance Tracking** - Log & monitor oil changes, tire rotations, brake checks, etc.
+
 **Service Reminders** - Get notifications for upcoming service tasks/appointments based on mileage or time
+
 **Expense Tracking** - Keep track of fuel costs, repairs, and other expenses.
+
 **Fuel Efficiency Logs** - Record fuel consumption and calculate MPG to enhance your car's performance.
+
 **Parts & Service History** - Store details on previous service tasks done to your vehicle.
+
 **Multiple Vehicle Support** - Manage maintenance records for all your vehicles in one place.
+
 **Dark Mode Support** - Sleek dark theme for better nighttime usability. 
+
 
 ## Tech Stack
 **Swift** - main programming langauge for IOS/macOS development
