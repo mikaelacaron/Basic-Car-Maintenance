@@ -32,10 +32,15 @@ It's made so users can efficiently track & manage their vehicle's maintenance sc
 
 ## Tech Stack
 **Swift** - main programming langauge for IOS/macOS development
+
 **SwiftUI** - UI framework for building modern interfaces
+
 **Firebase** - Backend for user auth & data storage
+
 **Xcode** - IDE used for app development & testing
+
 **Github Actions** - CI/CD for automated testing & builds
+
 
 ### Prerequisites
 - Install **Xcode 16.0 or later**
