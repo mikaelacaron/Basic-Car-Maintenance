@@ -11,8 +11,7 @@
 Welcome to Basic Car Maintenance, an open-source app designed to help you get started with iOS and macOS development using Swift and Swift UI. 
 This project is beginner-friendly and open to contributions, especially during [Hacktoberfest](https://hacktoberfest.com/)!
 
-Basic Car Maintenance is an open-source iOS and macOS application developed in Swift. 
-It's made so users can efficiently track & manage their vehicle's maintenance schedules, ensuring timely services and extending the life span of their vehicles. 
+Keeping up with car maintenance can be challenging, especially with a busy schedule. Forgetting routine services can lead to unexpected issues and costly repairs. Basic Car Maintenance helps users effortlessly track and manage their vehicle’s maintenance schedules, ensuring timely service and prolonging the lifespan of their cars.
 
 ## Features
 **Maintenance Tracking** - Log & monitor oil changes, tire rotations, brake checks, etc.
