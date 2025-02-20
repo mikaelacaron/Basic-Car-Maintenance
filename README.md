@@ -8,9 +8,35 @@
 
 ![Alt](https://repobeats.axiom.co/api/embed/889ac81d440c882bb217c6ee7dda4601e0d8d6d9.svg "Repobeats analytics image")
 
-Welcome to my open source app! It is ready for contributors for [Hacktoberfest](https://hacktoberfest.com/)! Use this app to gain experience getting started in open source for iOS and macOS development using Swift and SwiftUI.
+Welcome to Basic Car Maintenance, an open-source app designed to help you get started with iOS and macOS development using Swift and Swift UI. 
+This project is beginner-friendly and open to contributions, especially during [Hacktoberfest](https://hacktoberfest.com/)!
 
+Basic Car Maintenance is an open-source iOS and macOS application developed in Swift. 
+It's made so users can efficiently track & manage their vehicle's maintenance schedules, ensuring timely services and extending the life span of their vehicles. 
+
+## Features
+**Maintenance Tracking** - Log & monitor oil changes, tire rotations, brake checks, etc.
+**Service Reminders** - Get notifications for upcoming service tasks/appointments based on mileage or time
+**Expense Tracking** - Keep track of fuel costs, repairs, and other expenses.
+**Fuel Efficiency Logs** - Record fuel consumption and calculate MPG to enhance your car's performance.
+**Parts & Service History** - Store details on previous service tasks done to your vehicle.
+**Multiple Vehicle Support** - Manage maintenance records for all your vehicles in one place.
+**Dark Mode Support** - Sleek dark theme for better nighttime usability. 
+
+## Tech Stack
+**Swift** - main programming langauge for IOS/macOS development
+**SwiftUI** - UI framework for building modern interfaces
+**Firebase** - Backend for user auth & data storage
+**Xcode** - IDE used for app development & testing
+**Github Actions** - CI/CD for automated testing & builds
+
+### Prerequisites
+- Install **Xcode 16.0 or later**
+- Have a **free or paid Apple Developer Account**
+  
 # Getting Started
+Before contributing, follow these steps:
+
 * Read the [Code of Conduct](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/dev/CODE_OF_CONDUCT.md)
 * Read the [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/dev/CONTRIBUTING.md) guidelines
 * Download Xcode 16.0 or later
@@ -82,3 +108,5 @@ Made with [contrib.rocks](https://contrib.rocks).
 
 # License
 This project is licensed under [Apache 2.0](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/LICENSE).
+
+*Happy coding!*
