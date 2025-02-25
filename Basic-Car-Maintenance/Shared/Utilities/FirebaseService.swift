@@ -1,5 +1,5 @@
 //
-//  FirebaseServices.swift
+//  FirebaseService.swift
 //  Basic-Car-Maintenance
 //
 //  https://github.com/mikaelacaron/Basic-Car-Maintenance
@@ -9,10 +9,11 @@
 import FirebaseFirestore
 import Foundation
 
-class FirebaseService {
-    private init() { }
+class FirebaseService: FirebaseServiceProtocol {
     
     static let shared = FirebaseService()
+    
+    private init() { }
     
     func addReading(_ reading: OdometerReading) throws {
         try Firestore
