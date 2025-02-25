@@ -29,16 +29,12 @@ class OdometerViewModel {
         self.userUID = userUID
     }
     
-    func addReading(_ odometerReading: OdometerReading) throws {
+    func addReading(_ reading: OdometerReading) throws {
         if let uid = userUID {
-            var readingToAdd = odometerReading
+            var readingToAdd = reading
             readingToAdd.userID = uid
             
-            try Firestore
-                .firestore()
-                .collection(FirestorePath.odometerReadings(vehicleID: readingToAdd.vehicleID).path)
-                .addDocument(from: readingToAdd)
-            
+            try FirebaseService.shared.addReading(readingToAdd)
             AnalyticsService.shared.logEvent(.odometerCreate)
         }
     }
@@ -48,37 +44,17 @@ class OdometerViewModel {
             fatalError("Reading Entry has no document ID.")
         }
         
-        try? await Firestore
-            .firestore()
-            .collection(FirestorePath.odometerReadings(vehicleID: reading.vehicleID).path)
-            .document(documentId)
-            .delete()
-        
         if let eventIndex = readings.firstIndex(of: reading) {
             readings.remove(at: eventIndex)
         }
         
+        await FirebaseService.shared.deleteReading(reading: reading, documentId: documentId)
         AnalyticsService.shared.logEvent(.odometerDelete)
     }
         
     func getOdometerReadings() async {
         if let userUID = userUID {
-            let db = Firestore.firestore()
-            let docRef = db.collectionGroup(FirestoreCollection.odometerReadings)
-                .whereField(FirestoreField.userID, isEqualTo: userUID)
-            
-            let querySnapshot = try? await docRef.getDocuments()
-            
-            var readings = [OdometerReading]()
-            
-            if let querySnapshot {
-                for document in querySnapshot.documents {
-                    if let reading = try? document.data(as: OdometerReading.self) {
-                        readings.append(reading)
-                    }
-                }
-                self.readings = readings
-            }
+            self.readings = await FirebaseService.shared.getReadings(userUID: userUID)   
         }
     }
     
@@ -87,14 +63,8 @@ class OdometerViewModel {
         if let userUID = userUID {
             guard let id = reading.id else { return }
             
-            var readingToUpdate = reading
-            readingToUpdate.userID = userUID
-            
             do {
-                try Firestore.firestore()
-                    .collection(FirestorePath.odometerReadings(vehicleID: readingToUpdate.vehicleID).path)
-                    .document(id)
-                    .setData(from: readingToUpdate)
+                try FirebaseService.shared.updateReading(reading: reading, documentId: id, userUID: userUID)
                 
                 AnalyticsService.shared.logEvent(.odometerUpdate)
                 
@@ -108,23 +78,7 @@ class OdometerViewModel {
     
     func getVehicles() async {
         if let uid = userUID {
-            let db = Firestore.firestore()
-            let docRef = db.collection(FirestoreCollection.vehicles)
-                .whereField(FirestoreField.userID, isEqualTo: uid)
-            
-            let querySnapshot = try? await docRef.getDocuments()
-            
-            var vehicles = [Vehicle]()
-            
-            if let querySnapshot {
-                for document in querySnapshot.documents {
-                    if let vehicle = try? document.data(as: Vehicle.self) {
-                        vehicles.append(vehicle)
-                    }
-                }
-                
-                self.vehicles = vehicles
-            }
+            self.vehicles = await FirebaseService.shared.getVehicles(uid: uid)
         }
     }
 }
