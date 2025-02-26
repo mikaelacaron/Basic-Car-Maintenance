@@ -24,9 +24,12 @@ class OdometerViewModel {
     var isShowingEditReadingView = false
     
     var vehicles = [Vehicle]()
+    
+    let firebaseService: FirebaseServiceProtocol
 
-    init(userUID: String?) {
+    init(userUID: String?, firebaseService: FirebaseServiceProtocol) {
         self.userUID = userUID
+        self.firebaseService = firebaseService
     }
     
     func addReading(_ reading: OdometerReading) throws {
@@ -34,7 +37,7 @@ class OdometerViewModel {
             var readingToAdd = reading
             readingToAdd.userID = uid
             
-            try FirebaseService.shared.addReading(readingToAdd)
+            try firebaseService.addReading(readingToAdd)
             AnalyticsService.shared.logEvent(.odometerCreate)
         }
     }
@@ -48,13 +51,13 @@ class OdometerViewModel {
             readings.remove(at: eventIndex)
         }
         
-        await FirebaseService.shared.deleteReading(reading: reading, documentId: documentId)
+        await firebaseService.deleteReading(reading: reading, documentId: documentId)
         AnalyticsService.shared.logEvent(.odometerDelete)
     }
         
     func getOdometerReadings() async {
         if let userUID = userUID {
-            self.readings = await FirebaseService.shared.getReadings(userUID: userUID)   
+            self.readings = await firebaseService.getReadings(userUID: userUID)   
         }
     }
     
@@ -64,7 +67,7 @@ class OdometerViewModel {
             guard let id = reading.id else { return }
             
             do {
-                try FirebaseService.shared.updateReading(reading: reading, documentId: id, userUID: userUID)
+                try firebaseService.updateReading(reading: reading, documentId: id, userUID: userUID)
                 
                 AnalyticsService.shared.logEvent(.odometerUpdate)
                 
@@ -78,7 +81,7 @@ class OdometerViewModel {
     
     func getVehicles() async {
         if let uid = userUID {
-            self.vehicles = await FirebaseService.shared.getVehicles(uid: uid)
+            self.vehicles = await firebaseService.getVehicles(uid: uid)
         }
     }
 }
