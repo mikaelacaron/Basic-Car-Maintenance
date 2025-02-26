@@ -13,32 +13,33 @@ class MockFirebaseService: FirebaseServiceProtocol {
     
     var readings: [OdometerReading] = [
         OdometerReading(id: "reading1", 
-            userID: "user1", 
-            date: Date.now, 
-            distance: 12500, 
-            isMetric: true, 
-            vehicleID: "LA8585"),
+                        userID: "testUser1", 
+                        date: Date.now, 
+                        distance: 12500, 
+                        isMetric: true, 
+                        vehicleID: "LA8585"),
         OdometerReading(id: "reading2", 
-            userID: "user2", 
-            date: Date.now, 
-            distance: 56410, 
-            isMetric: true,
-            vehicleID: "SF2222"),
+                        userID: "testUser2", 
+                        date: Date.now, 
+                        distance: 56410, 
+                        isMetric: true,
+                        vehicleID: "SF2222"),
     ]
     
     var vehicles: [Vehicle] = []
     
     let newReading = 
         OdometerReading(id: "reading3", 
-            userID: "user2", 
+            userID: "testUser1", 
             date: Date.now, 
             distance: 138542, 
             isMetric: true, 
             vehicleID: "LV0000")
+    
     let testVehicles = [
         Vehicle(
             id: "LA8585", 
-            userID: "user1", 
+            userID: "testUser1", 
             name: "Car1", 
             make: "Toyota", 
             model: "Corolla", 
@@ -48,7 +49,7 @@ class MockFirebaseService: FirebaseServiceProtocol {
             licensePlateNumber: "PLATE1"),
         Vehicle(
             id: "SF2222", 
-            userID: "user2", 
+            userID: "testUser2", 
             name: "Car2", 
             make: "Lexus", 
             model: "RX", 
@@ -59,7 +60,7 @@ class MockFirebaseService: FirebaseServiceProtocol {
     ]
     
     func addReading(_ reading: OdometerReading) throws {
-        readings.append(newReading)
+        readings.append(reading)
     }
     
     func deleteReading(reading: OdometerReading, documentId: String) async {
