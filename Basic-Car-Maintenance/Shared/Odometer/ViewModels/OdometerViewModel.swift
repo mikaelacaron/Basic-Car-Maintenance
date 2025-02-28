@@ -22,8 +22,9 @@ class OdometerViewModel {
     var showEditErrorAlert = false
     var selectedReading: OdometerReading?
     var isShowingEditReadingView = false
-    
+    var filterOption: String = "No vehicles found"
     var vehicles = [Vehicle]()
+    var selectedVehicle: Vehicle?
 
     init(userUID: String?) {
         self.userUID = userUID
