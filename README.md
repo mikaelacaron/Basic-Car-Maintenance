@@ -8,42 +8,25 @@
 
 ![Alt](https://repobeats.axiom.co/api/embed/889ac81d440c882bb217c6ee7dda4601e0d8d6d9.svg "Repobeats analytics image")
 
-Welcome to Basic Car Maintenance, an open-source app designed to help you get started with iOS and macOS development using Swift and Swift UI. 
+Welcome to Basic Car Maintenance, an open-source app designed to help you get started with iOS development using Swift and SwiftUI. 
 This project is beginner-friendly and open to contributions, especially during [Hacktoberfest](https://hacktoberfest.com/)!
 
-Keeping up with car maintenance can be challenging, especially with a busy schedule. Forgetting routine services can lead to unexpected issues and costly repairs. Basic Car Maintenance helps users effortlessly manage their vehicle’s maintenance schedules, ensuring timely service and prolonging the lifespan of their cars!
+## App Features and Tech Stack
+<details>
+<summary>Features and Tech Stack</summary>
 
-## Features
-**Maintenance Tracking** - Log & monitor oil changes, tire rotations, brake checks, etc.
+* Maintenance Tracking - Log & monitor oil changes, tire rotations, brake checks, etc.
+* Multiple Vehicle Support - Manage maintenance records for all your vehicles in one place.
+* Dark Mode Support - Sleek dark theme for better nighttime usability. 
 
-**Service Reminders** - Get notifications for upcoming service tasks/appointments based on mileage or time
+### Tech Stack
 
-**Expense Tracking** - Keep track of fuel costs, repairs, and other expenses.
+* Swift and SwiftUI - the programming language and UI framework
+* Firebase and Firestore - backend for user authentication and data storage
+* GitHub Actions - CI/CD for automated unit testing and deploying the DocC documentation
+* Fastlane - running the unit tests
 
-**Fuel Efficiency Logs** - Record fuel consumption and calculate MPG to enhance your car's performance.
-
-**Parts & Service History** - Store details on previous service tasks done to your vehicle.
-
-**Multiple Vehicle Support** - Manage maintenance records for all your vehicles in one place.
-
-**Dark Mode Support** - Sleek dark theme for better nighttime usability. 
-
-
-## Tech Stack
-**Swift** - main programming langauge for IOS/macOS development
-
-**SwiftUI** - UI framework for building modern interfaces
-
-**Firebase** - Backend for user auth & data storage
-
-**Xcode** - IDE used for app development & testing
-
-**Github Actions** - CI/CD for automated testing & builds
-
-
-### Prerequisites
-- Install **Xcode 16.0 or later**
-- Have a **free or paid Apple Developer Account**
+</details>
   
 # Getting Started
 Before contributing, follow these steps:
@@ -119,5 +102,3 @@ Made with [contrib.rocks](https://contrib.rocks).
 
 # License
 This project is licensed under [Apache 2.0](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/LICENSE).
-
-*Happy coding!*
