@@ -18,7 +18,11 @@ class FirebaseService: FirebaseServiceProtocol {
             .addDocument(from: reading)
     }
     
-    func deleteReading(reading: OdometerReading, documentId: String) async {
+    func deleteReading(reading: OdometerReading) async {
+        guard let documentId = reading.id else {
+            fatalError("Reading Entry has no document ID.")
+        }
+        
         try? await Firestore
             .firestore()
             .collection(FirestorePath.odometerReadings(vehicleID: reading.vehicleID).path)
