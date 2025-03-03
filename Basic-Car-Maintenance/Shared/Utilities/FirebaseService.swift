@@ -50,14 +50,16 @@ class FirebaseService: FirebaseServiceProtocol {
         return readings
     }
     
-    func updateReading(reading: OdometerReading, documentId: String, userUID: String) throws {
-        var readingToUpdate = reading
-        readingToUpdate.userID = userUID
-        
-        try Firestore.firestore()
-            .collection(FirestorePath.odometerReadings(vehicleID: readingToUpdate.vehicleID).path)
-            .document(documentId)
-            .setData(from: readingToUpdate)
+    func updateReading(reading: OdometerReading) throws {
+        if let documentId = reading.id, let userUID = reading.userID {
+            var readingToUpdate = reading
+            readingToUpdate.userID = userUID
+            
+            try Firestore.firestore()
+                .collection(FirestorePath.odometerReadings(vehicleID: readingToUpdate.vehicleID).path)
+                .document(documentId)
+                .setData(from: readingToUpdate)
+        }
     }
     
     func getVehicles(uid: String) async -> [Vehicle] {

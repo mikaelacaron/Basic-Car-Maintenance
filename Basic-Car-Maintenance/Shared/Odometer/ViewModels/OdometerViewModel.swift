@@ -62,10 +62,7 @@ class OdometerViewModel {
     }
     
     func updateOdometerReading(_ reading: OdometerReading) {
-        
-        if let userUID = userUID {
-            guard let id = reading.id else { return }
-            
+        if let userUID = userUID, let id = reading.id {
             do {
                 try firebaseService.updateReading(reading: reading, documentId: id, userUID: userUID)
                 
