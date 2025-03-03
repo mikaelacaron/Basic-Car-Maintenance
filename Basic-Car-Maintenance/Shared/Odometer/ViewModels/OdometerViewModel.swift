@@ -51,7 +51,7 @@ class OdometerViewModel {
             readings.remove(at: eventIndex)
         }
         
-        await firebaseService.deleteReading(reading: reading, documentId: documentId)
+        await firebaseService.deleteReading(reading)
         AnalyticsService.shared.logEvent(.odometerDelete)
     }
         
@@ -77,8 +77,8 @@ class OdometerViewModel {
     }
     
     func getVehicles() async {
-        if let userId = userUID {
-            self.vehicles = await firebaseService.getVehicles(uid: userId)
+        if let userUID = userUID {
+            self.vehicles = await firebaseService.getVehicles(userUID: userUID)
         }
     }
 }
