@@ -64,7 +64,7 @@ class OdometerViewModel {
     func updateOdometerReading(_ reading: OdometerReading) {
         if let userUID = userUID, let id = reading.id {
             do {
-                try firebaseService.updateReading(reading: reading, documentId: id, userUID: userUID)
+                try firebaseService.updateReading(reading: reading)
                 
                 AnalyticsService.shared.logEvent(.odometerUpdate)
                 
@@ -77,8 +77,8 @@ class OdometerViewModel {
     }
     
     func getVehicles() async {
-        if let uid = userUID {
-            self.vehicles = await firebaseService.getVehicles(uid: uid)
+        if let userId = userUID {
+            self.vehicles = await firebaseService.getVehicles(uid: userId)
         }
     }
 }
