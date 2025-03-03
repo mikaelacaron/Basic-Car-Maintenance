@@ -11,10 +11,6 @@ import Foundation
 
 class FirebaseService: FirebaseServiceProtocol {
     
-    static let shared = FirebaseService()
-    
-    private init() { }
-    
     func addReading(_ reading: OdometerReading) throws {
         try Firestore
             .firestore()
