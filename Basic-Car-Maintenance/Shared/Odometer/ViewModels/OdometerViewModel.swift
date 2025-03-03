@@ -32,9 +32,9 @@ class OdometerViewModel {
         self.firebaseService = firebaseService
     }
     
-    func addReading(_ reading: OdometerReading) throws {
+    func addReading(_ odometerReading: OdometerReading) throws {
         if let uid = userUID {
-            var readingToAdd = reading
+            var readingToAdd = odometerReading
             readingToAdd.userID = uid
             
             try firebaseService.addReading(readingToAdd)
