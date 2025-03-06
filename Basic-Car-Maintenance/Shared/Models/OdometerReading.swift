@@ -9,7 +9,7 @@
 import Foundation
 import FirebaseFirestore
 
-struct OdometerReading: Codable, Identifiable, Hashable {
+struct OdometerReading: Codable, Identifiable, Hashable, Equatable {
     @DocumentID var id: String?
     var userID: String?
     let date: Date
