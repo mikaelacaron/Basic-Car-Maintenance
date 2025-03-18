@@ -11,7 +11,7 @@ import Foundation
 protocol FirebaseServiceProtocol {
     func addReading(_ reading: OdometerReading) throws
     func deleteReading(_ reading: OdometerReading) async
+    func updateReading(_ reading: OdometerReading) throws
     func getReadings(userUID: String) async -> [OdometerReading]
-    func updateReading(reading: OdometerReading) throws
     func getVehicles(userUID: String) async -> [Vehicle]
 }

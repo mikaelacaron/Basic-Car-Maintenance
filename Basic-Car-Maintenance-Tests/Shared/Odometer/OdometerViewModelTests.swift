@@ -6,16 +6,54 @@
 //  See LICENSE for license information.
 //
 
+import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 import Foundation
 import Testing
 @testable import Basic_Car_Maintenance
 
-struct OdometerViewModelTests {
-
-    @Test func viewModelInitialState() throws {
-        let userUID = "testUser1"
-        let viewModel = OdometerViewModel(userUID: userUID, firebaseService: MockFirebaseService())
+class OdometerViewModelTests {
+    let userUID: String
+    let viewModel: OdometerViewModel
+    let newReading: OdometerReading
+    var dbReading: OdometerReading?
+    
+    init() {
+        UserDefaults.standard.set(true, forKey: "useEmulator")
         
+        self.userUID = UUID().uuidString
+        self.viewModel = OdometerViewModel(userUID: userUID, firebaseService: FirebaseService())
+        self.newReading = OdometerReading(userID: userUID, 
+                                          date: Date.now,
+                                          distance: 138542,
+                                          isMetric: true, 
+                                          vehicleID: "LV0000")
+    }
+    
+    // helper functions
+    private func dbContainsReading(reading: OdometerReading) async -> Bool {
+        let docRef = Firestore.firestore().collectionGroup(FirestoreCollection.odometerReadings)
+            .whereField(FirestoreField.userID, isEqualTo: userUID)
+        
+        let querySnapshot = try? await docRef.getDocuments()
+        
+        if let querySnapshot {
+            for document in querySnapshot.documents {
+                if let reading = try? document.data(as: OdometerReading.self) {
+                    dbReading = reading
+                    return dbReading?.userID == newReading.userID &&
+                    dbReading?.vehicleID == newReading.vehicleID &&
+                    dbReading?.distance == newReading.distance
+                }
+            }
+        }
+        
+        return false
+    }
+    
+    // tests
+    @Test func viewModelInitialState() throws {
         #expect(viewModel.userUID == userUID)
         #expect(viewModel.readings.isEmpty)
         #expect(viewModel.vehicles.isEmpty)
@@ -26,74 +64,57 @@ struct OdometerViewModelTests {
         #expect(viewModel.isShowingEditReadingView == false)
     }
 
-    @Test func addReading() {
-        let userUID = "testUser1"
-        let firebaseService = MockFirebaseService()
-        let viewModel = OdometerViewModel(userUID: userUID, firebaseService: firebaseService)
-        let newReading = OdometerReading(id: "reading3", 
-                                         userID: "testUser1", 
-                                         date: Date.now, 
-                                         distance: 138542, 
-                                         isMetric: true, 
-                                         vehicleID: "LV0000")
-        
-        try? viewModel.addReading(newReading)
-        
-        #expect(firebaseService.readings.contains(newReading) == true, "New reading should be added to database")
+    @Test func addReading() async {
+        try? viewModel.addReading(newReading);
+        let dbContainsNewReading = await dbContainsReading(reading: newReading)
+            
+        #expect(dbContainsNewReading == true, "New reading should be added to database")
     }
     
     @Test func deleteReading() async {
-        let userUID = "testUser1"
-        let firebaseService = MockFirebaseService()
-        let viewModel = OdometerViewModel(userUID: userUID, firebaseService: firebaseService)
-        let reading = OdometerReading(id: "reading3", 
-                                      userID: "testUser1", 
-                                      date: Date.now, 
-                                      distance: 138542, 
-                                      isMetric: true, 
-                                      vehicleID: "LV0000")
-        guard let documentId = reading.id else { return }
+        try? viewModel.addReading(newReading);
+        let dbContainsNewReading = await dbContainsReading(reading: newReading)
         
-        await viewModel.firebaseService.deleteReading(reading: reading, documentId: documentId)
-        
-        #expect(firebaseService.readings.contains(reading) == false, "Reading should be removed from database")
-    }
-
-    @Test func getOdometerReadings() async {
-        let userUID = "testUser1"
-        let firebaseService = MockFirebaseService()
-        let viewModel = OdometerViewModel(userUID: userUID, firebaseService: firebaseService)
-        
-        await viewModel.getOdometerReadings()
-        
-        #expect(viewModel.readings == firebaseService.readings.filter({ $0.userID == userUID }), "View model readings should match database readings for specified user")
+        if dbContainsNewReading, let dbReading {
+            await viewModel.firebaseService.deleteReading(dbReading);
+            let dbContainsDeletedReading = await dbContainsReading(reading: newReading)
+            
+            #expect(dbContainsDeletedReading == false, "New reading should be removed from database")
+        }
     }
     
-    @Test func updateOdometerReading() {
-        let userUID = "testUser1"
-        let firebaseService = MockFirebaseService()
-        let viewModel = OdometerViewModel(userUID: userUID, firebaseService: firebaseService)
-        let updatedReading = OdometerReading(id: "reading3", 
-                                             userID: "testUser1", 
-                                             date: Date.now, 
-                                             distance: 138543, 
+    @Test func updateOdometerReading() async {
+        try? viewModel.addReading(newReading);
+        let dbContainsNewReading = await dbContainsReading(reading: newReading)
+        
+        if let dbReading {
+            let updatedReading = OdometerReading(id: dbReading.id,
+                                             userID: userUID, 
+                                             date: Date.now,
+                                             distance: 138542,
                                              isMetric: true, 
                                              vehicleID: "LV0000")
-        guard let index = firebaseService.readings.firstIndex(where: { $0.id == updatedReading.id }) else { return }
+            
+            viewModel.updateOdometerReading(updatedReading)
+            let dbContainsUpdatedReading = await dbContainsReading(reading: updatedReading);
+            
+            #expect(dbContainsUpdatedReading == true, "Database reading should reflect updates")
+        }
+    }
+    
+    @Test func getReadings() async {
+        await viewModel.getOdometerReadings()
         
-        firebaseService.readings[index] = updatedReading
-        viewModel.updateOdometerReading(updatedReading)
+        let dbReadings = await viewModel.firebaseService.getReadings(userUID: userUID)
         
-        #expect(firebaseService.readings[index] == updatedReading, "Database reading should reflect updates")
+        #expect(viewModel.readings == dbReadings, "View model vehicles should match database readings")
     }
     
     @Test func getVehicles() async {
-        let userUID = "testUser1"
-        let firebaseService = MockFirebaseService()
-        let viewModel = OdometerViewModel(userUID: userUID, firebaseService: firebaseService)
-        
         await viewModel.getVehicles()
         
-        #expect(viewModel.vehicles == firebaseService.vehicles, "View model vehicles should match database readings")
+        let dbVehicles = await viewModel.firebaseService.getVehicles(userUID: userUID)
+        
+        #expect(viewModel.vehicles == dbVehicles, "View model vehicles should match database readings")
     }
 }

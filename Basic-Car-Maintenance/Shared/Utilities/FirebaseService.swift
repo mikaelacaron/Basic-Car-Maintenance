@@ -6,32 +6,31 @@
 //  See LICENSE for license information.
 //
 
+import Firebase
 import FirebaseFirestore
 import Foundation
 
 class FirebaseService: FirebaseServiceProtocol {
     
+    let db = Firestore.firestore()
+    
     func addReading(_ reading: OdometerReading) throws {
-        try Firestore
-            .firestore()
+        try db
             .collection(FirestorePath.odometerReadings(vehicleID: reading.vehicleID).path)
             .addDocument(from: reading)
     }
     
-    func deleteReading(reading: OdometerReading) async {
+    func deleteReading(_ reading: OdometerReading) async {
         guard let documentId = reading.id else {
             fatalError("Reading Entry has no document ID.")
         }
-        
-        try? await Firestore
-            .firestore()
+        try? await db
             .collection(FirestorePath.odometerReadings(vehicleID: reading.vehicleID).path)
             .document(documentId)
             .delete()
     }
     
     func getReadings(userUID: String) async -> [OdometerReading] {
-        let db = Firestore.firestore()
         let docRef = db.collectionGroup(FirestoreCollection.odometerReadings)
             .whereField(FirestoreField.userID, isEqualTo: userUID)
         
@@ -50,22 +49,21 @@ class FirebaseService: FirebaseServiceProtocol {
         return readings
     }
     
-    func updateReading(reading: OdometerReading) throws {
+    func updateReading(_ reading: OdometerReading) throws {
         if let documentId = reading.id, let userUID = reading.userID {
             var readingToUpdate = reading
             readingToUpdate.userID = userUID
             
-            try Firestore.firestore()
+            try db
                 .collection(FirestorePath.odometerReadings(vehicleID: readingToUpdate.vehicleID).path)
                 .document(documentId)
                 .setData(from: readingToUpdate)
         }
     }
     
-    func getVehicles(uid: String) async -> [Vehicle] {
-        let db = Firestore.firestore()
+    func getVehicles(userUID: String) async -> [Vehicle] {
         let docRef = db.collection(FirestoreCollection.vehicles)
-            .whereField(FirestoreField.userID, isEqualTo: uid)
+            .whereField(FirestoreField.userID, isEqualTo: userUID)
         
         let querySnapshot = try? await docRef.getDocuments()
         

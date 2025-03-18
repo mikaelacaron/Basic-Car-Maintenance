@@ -187,6 +187,70 @@ enum TimeRange: String, CaseIterable, Identifiable {
 }
 
 #Preview {
+//    let viewModel = OdometerViewModel(userUID: nil)
+//    let firstCar = createVehicle(id: "id1", name: "My 1st car")
+//    let secondCar = createVehicle(id: "id2", name: "2nd Car")
+//    
+//    viewModel.vehicles.append(contentsOf: [firstCar, secondCar])
+//    
+//    let firstReading = createReading(vehicleID: firstCar.id!,
+//                                     date: "2024/10/18",
+//                                     distance: 35)
+//    let secondReading = createReading(vehicleID: firstCar.id!,
+//                                      date: "2024/10/19",
+//                                      distance: 564)
+//    let thirdReading = createReading(vehicleID: firstCar.id!,
+//                                      date: "2024/11/23",
+//                                      distance: 1000)
+//    
+//    let fourthReading = createReading(vehicleID: firstCar.id!,
+//                                     date: "2024/11/30",
+//                                     distance: 1024)
+//    let fifthReading = createReading(vehicleID: secondCar.id!,
+//                                      date: "2024/10/1",
+//                                      distance: 1000)
+//    
+//    let sixthReading = createReading(vehicleID: secondCar.id!,
+//                                     date: "2024/10/13",
+//                                     distance: 1144)
+//    let seventhReading = createReading(vehicleID: secondCar.id!,
+//                                      date: "2024/10/15",
+//                                      distance: 1412)
+//    
+//    let eighthReading = createReading(vehicleID: secondCar.id!,
+//                                     date: "2024/11/13",
+//                                     distance: 1542)
+//    
+//    // swiftlint:disable:next line_length
+//    viewModel.readings.append(contentsOf: [firstReading, secondReading, thirdReading, fourthReading, fifthReading, sixthReading, seventhReading, eighthReading])
+//    
+//    OdometerView(viewModel: viewModel)
+//        .environment(ActionService.shared)
+//    
+//    func createVehicle(id: String, name: String) -> Vehicle {
+//        Vehicle(id: id, 
+//                userID: nil, 
+//                name: name, 
+//                make: "", 
+//                model: "", 
+//                year: nil, 
+//                color: nil, 
+//                vin: nil, 
+//                licensePlateNumber: nil)
+//    }
+//    
+//    func createReading(vehicleID: String, date: String, distance: Int) -> OdometerReading {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "yyyy/MM/dd"
+//        let firstDate = formatter.date(from: date)!
+//        return OdometerReading(id: UUID().uuidString,
+//                               userID: "", 
+//                               date: firstDate, 
+//                               distance: distance, 
+//                               isMetric: false, 
+//                               vehicleID: vehicleID)
+//    }
+    
     let viewModel = OdometerViewModel(userUID: nil, firebaseService: FirebaseService())
     
     viewModel.vehicles.append(contentsOf: [

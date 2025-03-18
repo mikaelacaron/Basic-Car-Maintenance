@@ -43,16 +43,12 @@ class OdometerViewModel {
     }
     
     func deleteReading(_ reading: OdometerReading) async {
-        guard let documentId = reading.id else {
-            fatalError("Reading Entry has no document ID.")
-        }
-        
         if let eventIndex = readings.firstIndex(of: reading) {
             readings.remove(at: eventIndex)
+            
+            await firebaseService.deleteReading(reading)
+            AnalyticsService.shared.logEvent(.odometerDelete)
         }
-        
-        await firebaseService.deleteReading(reading)
-        AnalyticsService.shared.logEvent(.odometerDelete)
     }
         
     func getOdometerReadings() async {
@@ -62,17 +58,15 @@ class OdometerViewModel {
     }
     
     func updateOdometerReading(_ reading: OdometerReading) {
-        if let userUID = userUID, let id = reading.id {
-            do {
-                try firebaseService.updateReading(reading: reading)
-                
-                AnalyticsService.shared.logEvent(.odometerUpdate)
-                
-                isShowingEditReadingView = false
-            } catch {
-                errorMessage = error.localizedDescription
-                showEditErrorAlert = true
-            }
+        do {
+            try firebaseService.updateReading(reading)
+            
+            AnalyticsService.shared.logEvent(.odometerUpdate)
+            
+            isShowingEditReadingView = false
+        } catch {
+            errorMessage = error.localizedDescription
+            showEditErrorAlert = true
         }
     }
     
@@ -82,3 +76,21 @@ class OdometerViewModel {
         }
     }
 }
+
+/* newReading
+ _id: FirebaseFirestore.DocumentID<Swift.String>(value: nil), 
+ userID: Optional("2E2814A4-1104-44E2-A6DF-DDC2AF6AD185"), 
+ date: 2025-03-06 00:45:37 +0000, 
+ distance: 138542, 
+ isMetric: true, 
+ vehicleID: "LV0000"
+ */
+
+/* viewModel.reading.fist
+ _id: FirebaseFirestore.DocumentID<Swift.String>(value: Optional("hkmecvIaYFYGHLelAp2N")), 
+ userID: Optional("2E2814A4-1104-44E2-A6DF-DDC2AF6AD185"), 
+ date: 2025-03-06 00:45:37 +0000, 
+ distance: 138542, 
+ isMetric: true, 
+ vehicleID: "LV0000")
+ */

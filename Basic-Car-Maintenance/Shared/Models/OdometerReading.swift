@@ -16,4 +16,11 @@ struct OdometerReading: Codable, Identifiable, Hashable, Equatable {
     let distance: Int
     let isMetric: Bool
     let vehicleID: String
+    
+    static func == (lhs: OdometerReading, rhs: OdometerReading) -> Bool {
+            return lhs.userID == rhs.userID &&
+                   lhs.date == rhs.date &&
+                   lhs.distance == rhs.distance &&
+                   lhs.vehicleID == rhs.vehicleID
+        }
 }
