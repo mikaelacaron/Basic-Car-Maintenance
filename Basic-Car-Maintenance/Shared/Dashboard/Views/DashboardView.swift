@@ -32,25 +32,48 @@ struct DashboardView: View {
         NavigationStack {
             List {
                 ForEach(viewModel.searchedEvents) { event in
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: 8) {
                         Text(event.title)
                             .font(.title3)
-                            .fontWeight(.bold)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(.primary)
                         
                         Text(event.date, formatter: self.eventDateFormat)
+                            .font(.subheadline)
                             .foregroundStyle(.secondary)
                         
                         let vehicleName = viewModel.vehicles.first { $0.id == event.vehicleID }?.name
                         if let vehicleName {
                             Text("For: \(vehicleName)", comment: "the vehcile name is filled in here")
+                                .font(.subheadline)
                                 .foregroundStyle(.secondary)
                         }
                         
                         if !event.notes.isEmpty {
-                            Text("Notes:")
-                                .foregroundStyle(.secondary)
-                            Text(event.notes)
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Notes:")
+                                    .font(.caption)
+                                    .fontWeight(.medium)
+                                    .foregroundStyle(.tertiary)
+                                Text(event.notes)
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                            }
+                            .padding(.top, 4)
                         }
+                    }
+                    .padding(.vertical, 8)
+                    .padding(.horizontal, 16)
+                    .background {
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(.regularMaterial)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 12)
+                                    .strokeBorder(.quaternary, lineWidth: 0.5)
+                            }
+                    }
+                    .containerRelativeFrame(.horizontal) { width, _ in
+                        width * 0.95
                     }
                     .accessibilityElement(children: .combine)
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
@@ -61,6 +84,7 @@ struct DashboardView: View {
                         } label: {
                             Image(systemName: SFSymbol.trash)
                         }
+                        .tint(.red.opacity(0.8))
                         
                         Button {
                             selectedMaintenanceEvent = event
@@ -72,13 +96,22 @@ struct DashboardView: View {
                                 Image(systemName: SFSymbol.pencil)
                             }
                         }
+                        .tint(.blue.opacity(0.8))
                     }
                     .sheet(isPresented: $isShowingEditView) {
                         EditMaintenanceEventView(
                             selectedEvent: $selectedMaintenanceEvent, viewModel: viewModel)
                     }
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                    .listRowInsets(EdgeInsets(top: 6, leading: 0, bottom: 6, trailing: 0))
                 }
-                .listStyle(.inset)
+            }
+            .listStyle(.plain)
+            .background {
+                Rectangle()
+                    .fill(.ultraThinMaterial)
+                    .ignoresSafeArea()
             }
             .analyticsView("\(Self.self)")
             .searchable(
@@ -87,7 +120,19 @@ struct DashboardView: View {
             )
             .overlay {
                 if viewModel.isLoading {
-                    ProgressView("Loading...")
+                    VStack(spacing: 16) {
+                        ProgressView()
+                            .scaleEffect(1.2)
+                        Text("Loading...")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
+                    .padding(24)
+                    .background {
+                        RoundedRectangle(cornerRadius: 16)
+                            .fill(.regularMaterial)
+                            .shadow(color: .black.opacity(0.1), radius: 8, x: 0, y: 4)
+                    }
                 } else {
                     if viewModel.events.isEmpty {
                         ContentUnavailableView(
@@ -95,163 +140,127 @@ struct DashboardView: View {
                             systemImage: "wrench",
                             description: Text("Add your first maintenance")
                         )
+                        .background {
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(.regularMaterial)
+                                .frame(width: 300, height: 200)
+                        }
                     } else if viewModel.sortedEvents.isEmpty && viewModel.sortOption == .byVehicle {
                         ContentUnavailableView(
                             "No Results",
                             systemImage: SFSymbol.magnifyingGlass,
                             description: Text("No maintenance events found for the selected vehicle.")
                         )
+                        .background {
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(.regularMaterial)
+                                .frame(width: 300, height: 200)
+                        }
                     } else if viewModel.searchedEvents.isEmpty && !viewModel.searchText.isEmpty {
                         ContentUnavailableView("No results",
                                                systemImage: SFSymbol.magnifyingGlass,
                                                description: noSearchResultsDescription)
+                        .background {
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(.regularMaterial)
+                                .frame(width: 300, height: 200)
+                        }
                     }
                 }
             }
-            .animation(.linear, value: viewModel.searchedEvents)
+            .animation(.easeInOut(duration: 0.3), value: viewModel.searchedEvents)
             .navigationTitle(Text("Dashboard",
-                                  comment: "Title label for Dashboard view"))
-            .alert(Text("Failed To Delete Event",
-                        comment: "Title for alert shown when deleting maintenance event fails"),
-                   isPresented: $viewModel.showErrorAlert) {
-                Button {
-                    viewModel.showErrorAlert = false
-                } label: {
-                    Text("OK", comment: "Label to dismiss alert")
-                }
-            } message: {
-                Text(viewModel.errorMessage).padding()
-            }
-            .navigationDestination(isPresented: $viewModel.isShowingAddMaintenanceEvent) {
-                makeAddMaintenanceView()
-            }
+                                comment: "Navigation title for the dashboard screen"))
+            .navigationBarTitleDisplayMode(.large)
             .toolbar {
-                ToolbarItemGroup(placement: .primaryAction) {
-                    Menu {
-                        Picker(selection: $viewModel.sortOption) {
-                            ForEach(DashboardViewModel.SortOption.allCases) { option in
-                                if option != .byVehicle {
-                                    Text(option.label)
-                                        .tag(option)
-                                }
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    if !viewModel.events.isEmpty {
+                        Menu {
+                            Button {
+                                isShowingExportOptionsView = true
+                            } label: {
+                                Label("Export", systemImage: SFSymbol.squareAndArrowUp)
+                            }
+                            
+                            Button {
+                                isShowingVehicleSelection = true
+                            } label: {
+                                Label("Sort", systemImage: SFSymbol.lineHorizontal3DecreaseCircle)
                             }
                         } label: {
-                            EmptyView()
+                            Image(systemName: SFSymbol.ellipsisCircle)
+                                .foregroundStyle(.primary)
                         }
-                        
-                        Button {
-                            viewModel.sortOption = .byVehicle
-                            isShowingVehicleSelection = true
-                        } label: {
-                            Text(DashboardViewModel.SortOption.byVehicle.label)
-                        }
-                    } label: {
-                        Image(systemName: SFSymbol.filter)
-                    }
-                    .accessibilityShowsLargeContentViewer {
-                        Label {
-                            Text("Filter", comment: "Label for filtering on Dashboard view")
-                        } icon: {
-                            Image(systemName: SFSymbol.filter)
+                        .background {
+                            Circle()
+                                .fill(.regularMaterial)
+                                .frame(width: 32, height: 32)
                         }
                     }
                     
                     Button {
-                        viewModel.isShowingAddMaintenanceEvent = true
+                        isShowingAddView = true
                     } label: {
                         Image(systemName: SFSymbol.plus)
+                            .fontWeight(.semibold)
                     }
-                    .accessibilityShowsLargeContentViewer {
-                        Label {
-                            Text("AddEvent", comment: "Label for adding maintenance event on Dashboard view")
-                        } icon: {
-                            Image(systemName: SFSymbol.plus)
-                        }
-                    }
-                }
-            }
-            .toolbar {
-                if !viewModel.events.isEmpty {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button {
-                            isShowingExportOptionsView = true
-                        } label: {
-                            Image(systemName: SFSymbol.share)
-                        }
-                        .accessibilityShowsLargeContentViewer {
-                            Label {
-                                Text("Export Event", comment: "Label for exporting maintenance events")
-                            } icon: {
-                                Image(systemName: SFSymbol.share)
-                            }
-                        }
+                    .background {
+                        Circle()
+                            .fill(.regularMaterial)
+                            .frame(width: 32, height: 32)
                     }
                 }
             }
-            .task {
-                await viewModel.getMaintenanceEvents()
-                await viewModel.getVehicles()
-            }
-            .sheet(isPresented: $isShowingAddView) {
-                makeAddMaintenanceView()
-            }
-            .sheet(isPresented: $isShowingExportOptionsView) {
-                ExportOptionsView(dataSource: viewModel.vehiclesWithSortedEventsDict)
-                    .presentationDetents([.medium])
-            }
-            .sheet(isPresented: $isShowingVehicleSelection) {
-                VehicleSelectionView(
-                    selectedVehicle: $viewModel.selectedVehicleToSort,
-                    vehicles: viewModel.vehicles
-                )
+        }
+        .sheet(isPresented: $isShowingAddView) {
+            AddMaintenanceEventView(viewModel: viewModel)
+        }
+        .sheet(isPresented: $isShowingExportOptionsView) {
+            ExportOptionsView(viewModel: viewModel)
+        }
+        .sheet(isPresented: $isShowingVehicleSelection) {
+            VehicleSelectionView(viewModel: viewModel)
+        }
+        .task {
+            await viewModel.getMaintenanceEvents()
+            await viewModel.getVehicles()
+        }
+        .onChange(of: scenePhase) { _, newPhase in
+            if newPhase == .active {
+                Task {
+                    await viewModel.getMaintenanceEvents()
+                }
             }
         }
-        .onChange(of: scenePhase) { _, newScenePhase in
-            guard case .active = newScenePhase else { return }
-            
-            guard let action = actionService.action,
-                  action == .newMaintenance
-            else {
-                // another action has been triggered, so we will need to dismiss the current presented view
-                isShowingAddView = false
-                return
-            }
-            
-            // if the view is already presented, do nothing
-            guard !isShowingAddView else { return }
-            // delay the presentation of the view a bit
-            // to make sure the already presented view is dismissed.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                isShowingAddView = true
-            }
+        .alert("Error", isPresented: $viewModel.showErrorAlert) {
+            Button("OK") { }
+        } message: {
+            Text(viewModel.errorMessage)
         }
-    }
-    
-    private func makeAddMaintenanceView() -> some View {
-        AddMaintenanceView(vehicles: viewModel.vehicles) { event in
-            viewModel.addEvent(event)
-            Task {
-                await viewModel.getMaintenanceEvents()
-            }
-        }
-        .alert(Text("An Error Occurred",
-                    comment: "Title for alert shown when adding maintenance event fails"),
-               isPresented: $viewModel.showAddErrorAlert) {
-            Button(role: .cancel) {} label: {
-                Text("OK", comment: "Label to dismiss alert")
-            }
+        .alert("Error Adding Event", isPresented: $viewModel.showAddErrorAlert) {
+            Button("OK") { }
         } message: {
             Text(viewModel.errorMessage)
         }
     }
     
     private var noSearchResultsDescription: Text {
-        Text("There were no maintenance events for '\(viewModel.searchText)'. Try a new search.",
-             comment: "Text shwon when there are no results for maintenance search")
+        Text("Try searching for something else or check your spelling.", 
+             comment: "Description when no search results are found")
     }
 }
 
-#Preview {
-    DashboardView(userUID: "")
-        .environment(ActionService.shared)
+#Preview("Dashboard with events") {
+    @Previewable @State var actionService = ActionService()
+    DashboardView(userUID: "test")
+        .environment(actionService)
+}
+
+#Preview("Dashboard no events") {
+    @Previewable @State var actionService = ActionService()
+    let viewModel = DashboardViewModel(userUID: "test")
+    viewModel.isLoading = false
+    
+    return DashboardView(userUID: "test")
+        .environment(actionService)
 }
