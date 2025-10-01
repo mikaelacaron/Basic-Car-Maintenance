@@ -7,3 +7,4 @@ Features and changes between released versions on the App Store (link coming soo
 * Add / edit / delete vehicles
 * Local persistence for vehicle data
 * Initial release with basic maintenance reminders
+
