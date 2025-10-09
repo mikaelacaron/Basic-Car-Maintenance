@@ -44,5 +44,5 @@ struct SmallMaintenanceEventsCountWidgetView: View {
 #Preview("Error View", as: .systemSmall) {
     BasicCarMaintenanceWidget()
 } timeline: {
-    MaintenanceEventsCountEntry(date:.now, configuration: .demo, error: "Unexpected error")
+    MaintenanceEventsCountEntry(date:.now, configuration: .demo, error: "Unnexpected error")
 }

@@ -28,3 +28,4 @@ struct BasicCarMaintenanceWidgetEntryView: View {
         }
     }
 }
+

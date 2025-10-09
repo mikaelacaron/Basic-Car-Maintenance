@@ -48,7 +48,7 @@ final class AuthenticationViewModel {
     func signInAnonymously() {
         Task {
             // TODO: remove that!!
-            try? await Auth.auth().signIn(withEmail: "tmaszko@example.com", password: "hello123")
+            try? await Auth.auth().signInAnonymously()
         }
     }
     
@@ -59,12 +59,13 @@ final class AuthenticationViewModel {
             Task {
                 do {
                     // TODO: remove that
-                    try await Auth.auth().signIn(withEmail: "tmaszko@example.com", password: "hello123")
+                    try await Auth.auth().signInAnonymously()
                 } catch {
                     print(error.localizedDescription)
                 }
             }
         } else {
+            print("User is signed in")
             if let user = Auth.auth().currentUser {
                 self.user = user
                 AnalyticsService.shared.setUserID(user.uid)
