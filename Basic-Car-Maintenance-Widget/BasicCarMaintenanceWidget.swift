@@ -34,12 +34,12 @@ struct Provider: AppIntentTimelineProvider {
         let entry = switch result {
         case .success(let maintenanceEventsCount):
             MaintenanceEventsCountEntry(date: currentDate, configuration: configuration, maintenanceEventsCount: maintenanceEventsCount)
-        case .failure(let error): MaintenanceEventsCountEntry(
-            date: currentDate,
-            configuration: configuration,
-            maintenanceEventsCount: 0,
-            error: error.localizedDescription
-        )
+        case .failure(let error): 
+            MaintenanceEventsCountEntry(
+                date: currentDate,
+                configuration: configuration,
+                error: error.localizedDescription
+            )
         }
         
         entries.append(entry)
@@ -75,7 +75,6 @@ struct BasicCarMaintenanceWidget: Widget {
         }
     }
 }
-
 
 
 #Preview(as: .systemSmall) {

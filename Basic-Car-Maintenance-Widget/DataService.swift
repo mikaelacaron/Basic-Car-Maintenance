@@ -34,8 +34,8 @@ enum DataService {
         
         do {
             let countRef = Firestore
-                            .firestore()
-                            .collection(FirestorePath.maintenanceEvents(vehicleID: vehicleID).path).count
+                .firestore()
+                .collection(FirestorePath.maintenanceEvents(vehicleID: vehicleID).path).count
             let snapshot = try await countRef.getAggregation(source: .server)
             return .success(snapshot.count.intValue)
         } catch {
@@ -63,12 +63,12 @@ enum DataService {
         guard let userID = Auth.auth().currentUser?.uid else {
             return .failure(FetchError.unauthenticated)
         }
-
+        
         let docRef = Firestore
-                         .firestore()
-                         .collection(FirestoreCollection.vehicles)
-                         .whereField(FirestoreField.userID, isEqualTo: userID)
-         
+            .firestore()
+            .collection(FirestoreCollection.vehicles)
+            .whereField(FirestoreField.userID, isEqualTo: userID)
+        
         do {
             let snapshot = try await docRef.getDocuments()
             let vehicles = snapshot.documents.compactMap {
@@ -81,17 +81,23 @@ enum DataService {
     }
 }
 
+
 /// Errors that can occur when fetching maintenance events.
 enum FetchError: LocalizedError {
     case unauthenticated
     case noVehicleSelected
-    
-    var errorDescription: String {
+    case unexpected
+    var errorDescription: String? {
         switch self {
         case .unauthenticated:
             "You are not logged in. Please log in to continue."
         case .noVehicleSelected:
             "No vehicle selected. Please select a vehicle to continue."
+        case .unexpected:
+            "An unexpected error occurred."
         }
     }
 }
+
+
+
