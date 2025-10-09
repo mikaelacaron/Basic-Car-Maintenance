@@ -84,6 +84,9 @@ enum SFSymbol {
 
     // ContributorsProfileView
     static let personCircle = "person.circle.fill"
+    
+    // SmallBasicCarMaintenanceWidget
+    static let wrenchAndScrewdriver = "wrench.and.screwdriver"
   
 }
 

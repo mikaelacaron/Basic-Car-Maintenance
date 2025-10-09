@@ -5,57 +5,67 @@
 //  https://github.com/mikaelacaron/Basic-Car-Maintenance
 //  See LICENSE for license information.
 //
-
+import Firebase
+import FirebaseAuth
 import WidgetKit
 import SwiftUI
 
 struct Provider: AppIntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationAppIntent())
+    func placeholder(in context: Context) -> MaintenanceEventsCountEntry {
+        return MaintenanceEventsCountEntry(
+            date: Date(),
+            configuration: .demo,
+            maintenanceEventsCount: 0
+        )
     }
-
-    func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: configuration)
+    
+    func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> MaintenanceEventsCountEntry {
+        MaintenanceEventsCountEntry.demo
     }
     
     func timeline(for configuration: ConfigurationAppIntent,
-                  in context: Context) async -> Timeline<SimpleEntry> {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+                  in context: Context) async -> Timeline<MaintenanceEventsCountEntry> {
+        var entries: [MaintenanceEventsCountEntry] = []
+        
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
+        let nextUpdate = Calendar.current.date(byAdding: .hour, value: 1, to: currentDate)!
+        let vehicleID = configuration.selectedVehicle?.id;
+        let result = await DataService.fetchMaintenanceEventsCount(for: vehicleID)
+        let entry = switch result {
+        case .success(let maintenanceEventsCount):
+            MaintenanceEventsCountEntry(date: currentDate, configuration: configuration, maintenanceEventsCount: maintenanceEventsCount)
+        case .failure(let error): MaintenanceEventsCountEntry(
+            date: currentDate,
+            configuration: configuration,
+            maintenanceEventsCount: 0,
+            error: error.localizedDescription
+        )
         }
-
-        return Timeline(entries: entries, policy: .atEnd)
+        
+        entries.append(entry)
+        
+        
+        return Timeline(entries: entries, policy: .after(nextUpdate))
     }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct MaintenanceEventsCountEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationAppIntent
-}
-
-struct BasicCarMaintenanceWidgetEntryView: View {
-    var entry: Provider.Entry
-
-    var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
-        }
+    let maintenanceEventsCount: Int?
+    let error: String?
+    
+    init(date: Date, configuration: ConfigurationAppIntent, maintenanceEventsCount: Int? = 0, error: String? = nil) {
+        self.date = date
+        self.configuration = configuration
+        self.maintenanceEventsCount = maintenanceEventsCount
+        self.error = error
     }
 }
 
 struct BasicCarMaintenanceWidget: Widget {
     let kind: String = "BasicCarMaintenanceWidget"
-
+    
     var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind,
                                intent: ConfigurationAppIntent.self,
@@ -66,23 +76,10 @@ struct BasicCarMaintenanceWidget: Widget {
     }
 }
 
-extension ConfigurationAppIntent {
-    fileprivate static var smiley: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "😀"
-        return intent
-    }
-    
-    fileprivate static var starEyes: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "🤩"
-        return intent
-    }
-}
+
 
 #Preview(as: .systemSmall) {
     BasicCarMaintenanceWidget()
 } timeline: {
-    SimpleEntry(date: .now, configuration: .smiley)
-    SimpleEntry(date: .now, configuration: .starEyes)
+    MaintenanceEventsCountEntry.demo
 }

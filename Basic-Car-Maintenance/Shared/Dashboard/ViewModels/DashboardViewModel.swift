@@ -8,6 +8,7 @@
 
 import FirebaseFirestore
 import Foundation
+import WidgetKit
 
 @Observable
 class DashboardViewModel {
@@ -71,7 +72,7 @@ class DashboardViewModel {
             eventToAdd.userID = uid
             
             do {
-                try Firestore
+             try Firestore
                     .firestore()
                     .collection(FirestorePath.maintenanceEvents(vehicleID: eventToAdd.vehicleID).path)
                     .addDocument(from: eventToAdd)
@@ -108,6 +109,7 @@ class DashboardViewModel {
                 }
                 self.isLoading = false
                 self.events = events
+                WidgetCenter.shared.reloadAllTimelines()
             } catch {
                 self.isLoading = false
             }
