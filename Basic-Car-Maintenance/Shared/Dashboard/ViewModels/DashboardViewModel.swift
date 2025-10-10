@@ -72,7 +72,7 @@ class DashboardViewModel {
             eventToAdd.userID = uid
             
             do {
-             try Firestore
+                try Firestore
                     .firestore()
                     .collection(FirestorePath.maintenanceEvents(vehicleID: eventToAdd.vehicleID).path)
                     .addDocument(from: eventToAdd)
