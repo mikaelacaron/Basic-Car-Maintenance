@@ -1,5 +1,5 @@
 //
-//  SmallMaintenanceView.swift
+//  SmallMaintenanceEventsCountWidgetView.swift
 //  Basic-Car-Maintenance
 //
 //  https://github.com/mikaelacaron/Basic-Car-Maintenance
@@ -18,9 +18,13 @@ struct SmallMaintenanceEventsCountWidgetView: View {
     var body: some View {
         if let error = entry.error, entry.configuration.selectedVehicle != nil {
             ErrorView(error: error)
-        } else if let selectedVehicle = entry.configuration.selectedVehicle, let maintenanceEventsCount = entry.maintenanceEventsCount {
+        } else if let selectedVehicle = entry.configuration.selectedVehicle,
+                  let maintenanceEventsCount = entry.maintenanceEventsCount {
             HStack(alignment: .center) {
-                CarInfoWithMaintenanceEventsCount(vehicle: selectedVehicle, maintenanceEventsCount: maintenanceEventsCount)
+                CarInfoWithMaintenanceEventsCount(
+                    vehicle: selectedVehicle,
+                    maintenanceEventsCount: maintenanceEventsCount
+                )
             }
         } else {
             Text("No vehicle selected.")
