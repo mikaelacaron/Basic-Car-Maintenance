@@ -81,7 +81,6 @@ enum DataService {
     }
 }
 
-
 /// Errors that can occur when fetching maintenance events.
 enum FetchError: LocalizedError {
     case unauthenticated
@@ -98,6 +97,3 @@ enum FetchError: LocalizedError {
         }
     }
 }
-
-
-
