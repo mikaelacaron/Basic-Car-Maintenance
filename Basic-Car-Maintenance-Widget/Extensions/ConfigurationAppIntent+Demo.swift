@@ -6,11 +6,13 @@
 //  See LICENSE for license information.
 //
 
+import Foundation
+
 extension ConfigurationAppIntent {
     static var demo: ConfigurationAppIntent {
         let intent = ConfigurationAppIntent()
         intent.selectedVehicle = VehicleAppEntity(
-            id: "",
+            id: UUID().uuidString,
             displayString: "Hot wheels",
             data: .init(name: "Kia Sportage", make: "Kia", model: "Sportage", year: "2022")
         )

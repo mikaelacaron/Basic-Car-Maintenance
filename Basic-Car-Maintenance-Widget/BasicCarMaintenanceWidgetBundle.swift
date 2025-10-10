@@ -17,9 +17,8 @@ struct BasicCarMaintenanceWidgetBundle: WidgetBundle {
     }
     
     init() {
-        // Since this widget access Firebase, the same configuration as the main application is needed. 
+        // Since this widget accesses Firebase, the same configuration as the main application is needed. 
         FirebaseApp.configure()
-                  
         
         try? Auth.auth().useUserAccessGroup(Bundle.main.keychainAccessGroup)
         let useEmulator = true

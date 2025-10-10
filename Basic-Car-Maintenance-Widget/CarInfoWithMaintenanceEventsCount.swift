@@ -1,5 +1,5 @@
 //
-//  CarInfo.swift
+//  CarInfoWithMaintenanceEventsCount.swift
 //  Basic-Car-Maintenance
 //
 //  https://github.com/mikaelacaron/Basic-Car-Maintenance

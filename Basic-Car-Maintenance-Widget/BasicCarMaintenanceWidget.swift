@@ -55,7 +55,12 @@ struct MaintenanceEventsCountEntry: TimelineEntry {
     let maintenanceEventsCount: Int?
     let error: String?
     
-    init(date: Date, configuration: ConfigurationAppIntent, maintenanceEventsCount: Int? = 0, error: String? = nil) {
+    init(
+        date: Date,
+        configuration: ConfigurationAppIntent,
+        maintenanceEventsCount: Int? = 0,
+        error: String? = nil
+    ) {
         self.date = date
         self.configuration = configuration
         self.maintenanceEventsCount = maintenanceEventsCount
