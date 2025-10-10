@@ -11,6 +11,7 @@ import AppIntents
 
 struct ConfigurationAppIntent: WidgetConfigurationIntent {
     static var title: LocalizedStringResource = "Select vehicle"
+    // swiftlint:disable:next line_length 
     static var description = IntentDescription("Selects the vehicle to display total number of maintenance events for.")
     
     @Parameter(title: "Selected vehicle")
