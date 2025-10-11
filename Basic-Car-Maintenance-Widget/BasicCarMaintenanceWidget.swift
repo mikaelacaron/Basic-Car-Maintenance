@@ -30,12 +30,12 @@ struct Provider: AppIntentTimelineProvider {
         let currentDate = Date()
         let nextUpdate = Calendar.current.date(byAdding: .hour, value: 1, to: currentDate)!
         let vehicleID = configuration.selectedVehicle?.id;
-        let result = await DataService.fetchMaintenanceEventsCount(for: vehicleID)
-        let entry = switch result {
-        case .success(let maintenanceEventsCount):
-            MaintenanceEventsCountEntry(date: currentDate, configuration: configuration, maintenanceEventsCount: maintenanceEventsCount)
-        case .failure(let error): 
-            MaintenanceEventsCountEntry(
+        var entry: MaintenanceEventsCountEntry;
+        do {
+            let maintenanceEventsCount = try await DataService.fetchMaintenanceEventsCount(for: vehicleID)
+            entry = MaintenanceEventsCountEntry(date: currentDate, configuration: configuration, maintenanceEventsCount: maintenanceEventsCount)
+        } catch {
+            entry = MaintenanceEventsCountEntry(
                 date: currentDate,
                 configuration: configuration,
                 error: error.localizedDescription
@@ -43,8 +43,7 @@ struct Provider: AppIntentTimelineProvider {
         }
         
         entries.append(entry)
-        
-        
+    
         return Timeline(entries: entries, policy: .after(nextUpdate))
     }
 }

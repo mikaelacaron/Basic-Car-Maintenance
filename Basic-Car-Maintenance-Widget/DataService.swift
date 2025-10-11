@@ -27,9 +27,9 @@ enum DataService {
     ///     }
     /// }
     /// ```
-    static func fetchMaintenanceEventsCount(for vehicleID: String?) async -> Result<Int, Error> {
+    static func fetchMaintenanceEventsCount(for vehicleID: String?) async throws -> Int {
         guard let vehicleID else {
-            return .failure(FetchError.noVehicleSelected)
+            throw FetchError.noVehicleSelected
         }
         
         do {
@@ -37,9 +37,9 @@ enum DataService {
                 .firestore()
                 .collection(FirestorePath.maintenanceEvents(vehicleID: vehicleID).path).count
             let snapshot = try await countRef.getAggregation(source: .server)
-            return .success(snapshot.count.intValue)
+            return snapshot.count.intValue
         } catch {
-            return .failure(error)
+            throw error
         }
     }
     
@@ -59,9 +59,9 @@ enum DataService {
     ///     }
     /// }
     /// ```
-    static func fetchVehicles() async -> Result<[Vehicle], Error> {
+    static func fetchVehicles() async throws -> [Vehicle] {
         guard let userID = Auth.auth().currentUser?.uid else {
-            return .failure(FetchError.unauthenticated)
+           throw FetchError.unauthenticated
         }
         
         let docRef = Firestore
@@ -74,9 +74,9 @@ enum DataService {
             let vehicles = snapshot.documents.compactMap {
                 try? $0.data(as: Vehicle.self)
             }
-            return .success(vehicles)
+            return vehicles
         } catch {
-            return .failure(error)
+            throw error
         }
     }
 }

@@ -47,7 +47,6 @@ final class AuthenticationViewModel {
     
     func signInAnonymously() {
         Task {
-            // TODO: remove that!!
             try? await Auth.auth().signInAnonymously()
         }
     }

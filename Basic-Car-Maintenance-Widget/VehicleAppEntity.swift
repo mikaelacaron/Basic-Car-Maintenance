@@ -12,14 +12,14 @@ struct VehicleAppEntity: AppEntity {
     var id: String 
     var displayString: String
     var data: Vehicle
-
+    
     var displayRepresentation: DisplayRepresentation {
         DisplayRepresentation(title: "\(displayString)")
     }
-
+    
     static var typeDisplayRepresentation = TypeDisplayRepresentation(name: "Maintenance Vehicle")
     static var defaultQuery = VehicleAppEntityQuery()
-
+    
     init(id: String, displayString: String, data: Vehicle) {
         self.id = id
         self.displayString = displayString
@@ -31,9 +31,7 @@ struct VehicleAppEntityQuery: EntityQuery {
     func entities(
         for identifiers: [VehicleAppEntity.ID]
     ) async throws -> [VehicleAppEntity] {
-        let result = await DataService.fetchVehicles()
-
-        let vehicles = try result.get()
+        let vehicles = try await DataService.fetchVehicles()
         return vehicles.map { 
             VehicleAppEntity(
                 id: $0.id ?? UUID().uuidString, 

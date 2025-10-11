@@ -46,7 +46,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         
         FirebaseApp.configure()
     
-
         let useEmulator = true
         if useEmulator {
             let settings = Firestore.firestore().settings
