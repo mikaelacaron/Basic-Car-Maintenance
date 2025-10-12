@@ -23,7 +23,7 @@ enum DataService {
     ///     case .success(let eventsCount):
     ///         print("Total maintenance events \(eventsCount).")
     ///     case .failure(let error):
-    ///         print("Failed to fetch total maintenance events count with error: \(error.localizedDescription)")
+    ///         print("Failed to fetch maintenance events count with error: \(error.localizedDescription)")
     ///     }
     /// }
     /// ```
