@@ -16,5 +16,4 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     
     @Parameter(title: "Selected vehicle")
     var selectedVehicle: VehicleAppEntity?
-    
 }

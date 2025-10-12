@@ -57,7 +57,6 @@ final class AuthenticationViewModel {
             print("No user signed in. Trying to sign in anonymously.")
             Task {
                 do {
-                    // TODO: remove that
                     try await Auth.auth().signInAnonymously()
                 } catch {
                     print(error.localizedDescription)
