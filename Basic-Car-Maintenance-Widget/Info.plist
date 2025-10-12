@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>KeychainAccessGroup</key>
-	<string>$(AppIdentifierPrefix)com.mycompany.Basic-Car-Maintenance.Shared</string>
+	<string>$(KEYCHAIN_SHARING_GROUP_IDENTIFIER)</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionPointIdentifier</key>
