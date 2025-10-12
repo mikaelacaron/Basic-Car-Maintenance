@@ -8,6 +8,7 @@
 
 import FirebaseFirestore
 import Foundation
+import WidgetKit
 
 @Observable
 class DashboardViewModel {
@@ -108,6 +109,7 @@ class DashboardViewModel {
                 }
                 self.isLoading = false
                 self.events = events
+                WidgetCenter.shared.reloadAllTimelines()
             } catch {
                 self.isLoading = false
             }
