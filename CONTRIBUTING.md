@@ -9,6 +9,126 @@ This app was created for [Hacktoberfest](https://hacktoberfest.com/), to help be
 ### Project Status
 This app will be deployed on the Apple App Store, available for iOS 17.0 or later, [Mikaela Caron](https://github.com/mikaelacaron) (the maintainer) will upload it to the App Store after Hacktoberfest.
 
+## 📁 Project Structure
+```
+Basic-Car-Maintenance/
+├── .github/                                               # GitHub-specific configurations and templates
+│   ├── CODEOWNERS                                         # Defines individuals responsible for code in repository
+│   ├── FUNDING.yml                                        # Configuration for GitHub Sponsors funding
+│   ├── ISSUE_TEMPLATE/                                    # Templates for creating GitHub issues
+│   │   ├── bug-report.md                                  # Template for reporting bugs
+│   │   ├── feature-request.md                             # Template for requesting new features
+│   │   └── improve.md                                     # Template for suggesting improvements
+│   ├── pull_request_template.md                           # Template for pull request submissions
+│   └── workflows/                                         # GitHub Actions workflow configurations
+│       ├── docc.yml                                       # Workflow for building DocC documentation
+│       ├── issue-metrics.yml                              # Workflow for tracking issue statistics
+│       ├── swiftlint.yml                                  # Workflow for Swift code linting
+│       └── unit-tests.yml                                 # Workflow for running unit tests
+├── .gitignore                                             # Specifies intentionally untracked files to ignore
+├── .swiftlint.yml                                         # Configuration for Swift linting rules
+├── Basic-Car-Maintenance-Tests/                           # Unit tests for the application
+│   └── Shared/
+│       └── Models/
+│           └── ContributorTests.swift                     # Tests for Contributor model
+├── Basic-Car-Maintenance-UITests/                         # UI tests for the application
+│   └── BasicCarMaintenanceUITests.swift                   # UI test suite for the app
+├── Basic-Car-Maintenance-Widget/                          # Widget extension for the app
+│   ├── AppIntent.swift                                    # Defines app intents for widget interactions
+│   ├── Assets.xcassets/                                   # Asset catalog for widget resources
+│   ├── BasicCarMaintenanceWidget.swift                    # Main widget implementation
+│   ├── BasicCarMaintenanceWidgetBundle.swift              # Widget bundle definition
+│   ├── BasicCarMaintenanceWidgetEntryView.swift           # Entry view for widget display
+│   ├── CarInfoWithMaintenanceEventsCount.swift            # View for showing maintenance count
+│   ├── DataService.swift                                  # Service for providing data to the widget
+│   ├── ErrorView.swift                                    # View for displaying errors in the widget
+│   ├── Extensions/                                        # Extensions for widget functionality
+│   │   ├── ConfigurationAppIntent+Demo.swift              # Demo data for configuration
+│   │   └── MaintenanceEventsCountEntry+Demo.swift         # Demo entries for widget
+│   ├── Info.plist                                         # Widget configuration information
+│   ├── SmallMaintenanceEventsCountWidgetView.swift        # Small widget view implementation
+│   └── VehicleAppEntity.swift                             # Entity representing vehicles in widgets
+├── Basic-Car-Maintenance-WidgetExtension.entitlements     # Permission definitions for widget
+├── Basic-Car-Maintenance.xcconfig.template                # Template for Xcode configuration
+├── Basic-Car-Maintenance.xcodeproj/                       # Xcode project file container
+├── Basic-Car-Maintenance.xctestplan                       # Test plan configuration
+├── Basic-Car-Maintenance/                                 # Main application source code
+│   ├── Assets.xcassets/                                   # Application asset catalog
+│   ├── Basic_Car_Maintenance.entitlements                 # App permissions and entitlements
+│   ├── Documentation.docc/                                # DocC documentation source files
+│   │   ├── AppDesign.md                                   # Documentation about app architecture
+│   │   ├── AppStoreListing.md                             # App Store description information
+│   │   ├── Documentation.md                               # Main documentation landing page
+│   │   ├── FirestoreCollections.md                        # Database structure documentation
+│   │   ├── Images/                                        # Images used in documentation
+│   │   ├── Tutorial Table of Contents.tutorial            # Structure of tutorials
+│   │   ├── branch-updates.tutorial                        # Tutorial for branch management
+│   │   └── getting-started.tutorial                       # Getting started tutorial
+│   ├── Preview Content/                                   # Resources for SwiftUI previews
+│   └── Shared/                                            # Shared code across the application
+│       ├── BasicCarMaintenanceApp.swift                   # Main app entry point
+│       ├── Dashboard/                                     # Dashboard feature module
+│       │   ├── CSVEncoder.swift                           # CSV export functionality
+│       │   ├── CarMaintenancePDFGenerator.swift           # PDF report generation
+│       │   ├── ViewModels/                                # Dashboard view models
+│       │   └── Views/                                     # Dashboard views
+│       ├── GoogleService-Info.plist                       # Firebase configuration
+│       ├── Info.plist                                     # App configuration information
+│       ├── Localizable.xcstrings                          # App localization strings
+│       ├── MainView/                                      # Main tab view feature module
+│       │   ├── ViewModels/                                # Main view models
+│       │   └── Views/                                     # Main view components
+│       ├── Models/                                        # Data models for the application
+│       │   ├── Action.swift                               # Model for user actions
+│       │   ├── AlertItem.swift                            # Model for alert notifications
+│       │   ├── AppIcon.swift                              # Model for customizable app icons
+│       │   ├── Contributor.swift                          # Model for project contributors
+│       │   ├── MaintenanceEvent.swift                     # Model for maintenance records
+│       │   ├── OdometerReading.swift                      # Model for odometer data
+│       │   └── Vehicle.swift                              # Model for vehicle information
+│       ├── Odometer/                                      # Odometer tracking feature module
+│       │   ├── ViewModels/                                # Odometer view models
+│       │   └── Views/                                     # Odometer view components
+│       ├── Onboarding/                                    # User onboarding feature module
+│       │   └── Views/                                     # Onboarding view components
+│       ├── PrivacyInfo.xcprivacy                          # Privacy declarations for App Store
+│       ├── Settings/                                      # Settings feature module
+│       │   ├── ViewModels/                                # Settings view models
+│       │   └── Views/                                     # Settings view components
+│       ├── Tips/                                          # In-app tips feature
+│       │   └── ContributionTip.swift                      # Tip for contributing to the project
+│       └── Utilities/                                     # Utility classes and extensions
+│           ├── AnalyticsService.swift                     # Service for tracking app analytics
+│           ├── Bundle+extension.swift                     # Extension for Bundle class
+│           ├── Constants.swift                            # App-wide constants
+│           ├── FirebaseAnalytics+Extension.swift          # Extensions for Firebase Analytics
+│           ├── MeasurementSystem.swift                    # Support for different measurement units
+│           └── PageDimension.swift                        # Utilities for page layout dimensions
+├── CODE_OF_CONDUCT.md                                     # Community conduct guidelines
+├── CONTRIBUTING.md                                        # Guidelines for contributing to the project
+├── Configurations/                                        # Build configurations
+│   ├── Project.xcconfig                                   # Main project configuration
+│   ├── UITests.xcconfig                                   # UI tests configuration
+│   ├── UnitTests.xcconfig                                 # Unit tests configuration
+│   └── Widget.xcconfig                                    # Widget configuration
+├── Gemfile                                                # Ruby dependencies for development tools
+├── Gemfile.lock                                           # Locked versions of Ruby dependencies
+├── LICENSE                                                # Project license information
+├── README.md                                              # Project overview and documentation
+├── backend/                                               # Backend infrastructure files
+│   ├── .firebaserc                                        # Firebase project configuration
+│   ├── .gitignore                                         # Backend-specific Git ignore rules
+│   ├── firebase.json                                      # Firebase service configuration
+│   ├── firestore.indexes.json                             # Firestore index definitions
+│   └── firestore.rules                                    # Firestore security rules
+├── build-docc.sh                                          # Script to build DocC documentation
+└── fastlane/                                              # CI/CD automation configuration
+    ├── .xcovignore                                        # Files to ignore in code coverage
+    ├── Appfile                                            # App-specific fastlane configuration
+    ├── Fastfile                                           # Fastlane workflow definitions
+    ├── README.md                                          # Fastlane documentation
+    └── enable-build-tool-plugins.json                     # Build tool plugin configuration
+```
 # Getting Started
 ## Prerequisites
 * Download Xcode 16.0 or later
