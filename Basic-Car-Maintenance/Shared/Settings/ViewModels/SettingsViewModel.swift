@@ -79,7 +79,6 @@ final class SettingsViewModel {
             } catch {
                 print("Error fetching or decoding contributors: \(error)")
             }
-            
         }
     }
     
