@@ -200,7 +200,7 @@ struct WelcomeView: View {
     WelcomeView()
 }
 
-private extension Color {
+extension Color {
     static let accentGreen = Color(red: 0.22, green: 1.0, blue: 0.56)
     static let darkBackground = Color(red: 0.05, green: 0.05, blue: 0.1)
     static let glassTint = Color.white.opacity(0.1)
