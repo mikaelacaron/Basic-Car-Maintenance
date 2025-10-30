@@ -11,7 +11,7 @@ import SwiftUI
 struct WelcomeViewAddVehicle: View {
     
     // Logic to remember Onboarding screen to not load again when app is launched
-    //    @AppStorage("isFirstTime") private var isFirstTime: Bool = true
+//    @AppStorage("isFirstTime") private var isFirstTime: Bool = true
     @Environment(\.dismiss) var dismiss
     
     @State private var vehicleName: String = ""
@@ -71,7 +71,7 @@ struct WelcomeViewAddVehicle: View {
             Spacer(minLength: 10)
             
             Button {
-                //                isFirstTime = false
+//                isFirstTime = false
             } label: {
                 Text("Welcome 🥳")
                     .fontWeight(.bold)

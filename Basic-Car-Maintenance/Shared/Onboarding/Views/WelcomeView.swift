@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 15) {
@@ -94,10 +95,4 @@ struct WelcomeView: View {
 
 #Preview {
     WelcomeView()
-}
-
-extension Color {
-    static let accentGreen = Color(red: 0.22, green: 1.0, blue: 0.56)
-    static let darkBackground = Color(red: 0.05, green: 0.05, blue: 0.1)
-    static let glassTint = Color.white.opacity(0.1)
 }
