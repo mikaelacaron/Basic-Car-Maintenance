@@ -2695,7 +2695,7 @@
       "comment" : "Title for alert shown when there are no events to export for a vehicle"
     },
     "Filter" : {
-      "comment" : "Label for filtering on Dashboard view",
+      "comment" : "Label for filtering on Dashboard view\nLabel for filtering on Odometer view",
       "localizations" : {
         "be" : {
           "stringUnit" : {

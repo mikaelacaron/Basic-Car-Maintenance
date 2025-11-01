@@ -14,8 +14,6 @@ struct OdometerView: View {
     
     @State private var viewModel: OdometerViewModel
     @State private var selectedTimeRange: TimeRange = .all
-    // start of my variables
-    @State private var selectedVehicleID: String?
     
     init(userUID: String?) {
         self.init(viewModel: OdometerViewModel(userUID: userUID))
@@ -23,6 +21,16 @@ struct OdometerView: View {
     
     fileprivate init(viewModel: OdometerViewModel) {
         self.viewModel = viewModel
+    }
+    
+    // swiftlint:disable:next line_length
+    /// Filter the readings based on the selected vehicle in the filter, and if no vehicle is selected, it shows all the vehicles' readings
+    private var filteredReadings: [OdometerReading] {
+        if viewModel.selectedVehicle == nil {
+            return viewModel.readings
+        } else {
+            return viewModel.readings.filter { $0.vehicleID == viewModel.selectedVehicle?.id }
+        }
     }
     
     var body: some View {
@@ -62,7 +70,7 @@ struct OdometerView: View {
                 }
                 
                 List {
-                    ForEach(filteredReadings()) { reading in
+                    ForEach(filteredReadings) { reading in
                         let vehicleName = viewModel.vehicles.first { $0.id == reading.vehicleID }?.name
                         OdometerRowView(reading: reading, vehicleName: vehicleName)
                             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
@@ -103,15 +111,13 @@ struct OdometerView: View {
                 ToolbarItemGroup(placement: .primaryAction) {
                     Menu {
                         Button("All") {
-                            selectedVehicleID = "nil"
+                            viewModel.selectedVehicle = nil
                             applyFilter()
-                            print(selectedVehicleID!)
                         }
-                        ForEach(viewModel.vehicles) { value in
-                            Button(value.name) {
-                                selectedVehicleID = value.id
+                        ForEach(viewModel.vehicles) { vehicle in
+                            Button(vehicle.name) {
+                                viewModel.selectedVehicle = vehicle
                                 applyFilter()
-                                print(selectedVehicleID!)
                             }
                         }
                     } label: {
@@ -119,7 +125,7 @@ struct OdometerView: View {
                     }
                     .accessibilityShowsLargeContentViewer {
                         Label {
-                            Text("Filter", comment: "Label for filtering on Dashboard view")
+                            Text("Filter", comment: "Label for filtering on Odometer view")
                         } icon: {
                             Image(systemName: SFSymbol.filter)
                         }
@@ -152,26 +158,10 @@ struct OdometerView: View {
         .analyticsView("\(Self.self)")
     }
     
-    // swiftlint:disable:next line_length
-    /// Filter the readings based on the selected vehicle , and if no vehicle is selected , it shows all the vehicle's readings
-    /// - Parameter : None
-    /// - Returns: The `[OdometerReading]`s for all the vehicles / only the filtered vehicle
-    /// 
-    private func filteredReadings() -> [OdometerReading] {
-        if viewModel.selectedVehicle == nil {
-            return viewModel.readings
-        }
-        return viewModel.readings.filter { $0.vehicleID == viewModel.selectedVehicle?.id }
-    }
-    
-    ///
     /// Checks if we have selected any vehicle for filtering the readings.
-    /// - Parameter : None
-    /// - Returns: None
-    /// 
     private func applyFilter() {
-        if let selectedID = selectedVehicleID {
-            viewModel.selectedVehicle = viewModel.vehicles.first(where: { $0.id == selectedID })
+        if let selectedVehicle = viewModel.selectedVehicle {
+            viewModel.selectedVehicle = viewModel.vehicles.first(where: { $0.id == selectedVehicle.id })
         } else {
             viewModel.selectedVehicle = nil
         }
