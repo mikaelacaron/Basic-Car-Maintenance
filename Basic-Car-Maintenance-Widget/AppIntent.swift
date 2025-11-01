@@ -10,10 +10,10 @@ import WidgetKit
 import AppIntents
 
 struct ConfigurationAppIntent: WidgetConfigurationIntent {
-    static var title: LocalizedStringResource = "Configuration"
-    static var description = IntentDescription("This is an example widget.")
-
-    // An example configurable parameter.
-    @Parameter(title: "Favorite Emoji", default: "😃")
-    var favoriteEmoji: String
+    static var title: LocalizedStringResource = "Select vehicle"
+    // swiftlint:disable:next line_length 
+    static var description = IntentDescription("Selects the vehicle to display total number of maintenance events for.")
+    
+    @Parameter(title: "Selected vehicle")
+    var selectedVehicle: VehicleAppEntity?
 }

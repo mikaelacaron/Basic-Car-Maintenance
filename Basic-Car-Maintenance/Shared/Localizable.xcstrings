@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-      "shouldTranslate" : false
-    },
     "%@" : {
       "comment" : "Maintenance list item description 'Date' formatted",
       "localizations" : {
@@ -3163,6 +3160,9 @@
         }
       }
     },
+    "Maintenance Vehicle" : {
+
+    },
     "Make" : {
       "localizations" : {
         "be" : {
@@ -4561,7 +4561,16 @@
         }
       }
     },
+    "Select vehicle" : {
+
+    },
     "Select Vehicle" : {
+
+    },
+    "Selected vehicle" : {
+
+    },
+    "Selects the vehicle to display total number of maintenance events for." : {
 
     },
     "Settings" : {
@@ -6427,6 +6436,7 @@
     },
     "Version %@ (%@)" : {
       "comment" : "Label to display version and build number.",
+      "extractionState" : "stale",
       "localizations" : {
         "be" : {
           "stringUnit" : {

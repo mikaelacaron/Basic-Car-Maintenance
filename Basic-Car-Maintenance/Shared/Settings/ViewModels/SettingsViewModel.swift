@@ -44,15 +44,41 @@ final class SettingsViewModel {
     /// Fetches the list of contributors for the GitHub repository [Basic-Car-Maintenance](https://github.com/mikaelacaron/Basic-Car-Maintenance).
     func getContributors() async {
         let url = GitHubURL.apiContributors
+        let decoder = JSONDecoder()
+        var page = 1
+        var allContributors: [Contributor] = []
         
-        do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            let contributors = try decoder.decode([Contributor].self, from: data)
-            self.contributors = contributors
-        } catch {
-            print("Error fetching or decoding contributors: \(error)")
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        while true {
+            guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+                fatalError("Failed to construct URLComponents for contributors API call.")
+            }
+            
+            urlComponents.queryItems = [
+                URLQueryItem(name: "page", value: "\(page)"),
+                URLQueryItem(name: "per_page", value: "100")
+            ]
+            
+            guard let updatedURL = urlComponents.url else {
+                fatalError("Failed to construct a valid URL for the contributors API call.")
+            }
+            
+            do {
+                let (data, _) = try await URLSession.shared.data(from: updatedURL)
+                print(data)
+                let contributorsForPage = try decoder.decode([Contributor].self, from: data)
+                
+                if contributorsForPage.isEmpty {
+                    break
+                }
+                
+                allContributors.append(contentsOf: contributorsForPage)
+                self.contributors = allContributors
+                page += 1
+            } catch {
+                print("Error fetching or decoding contributors: \(error)")
+            }
         }
     }
     
