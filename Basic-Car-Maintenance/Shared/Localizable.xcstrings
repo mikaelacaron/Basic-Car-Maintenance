@@ -784,6 +784,9 @@
         }
       }
     },
+    "All" : {
+
+    },
     "All Vehicles" : {
 
     },
@@ -2743,6 +2746,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Фільтр"
+          }
+        }
+      }
+    },
+    "Filter.Odometer" : {
+      "comment" : "Label for filtering on Odometer view",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filter"
           }
         }
       }
