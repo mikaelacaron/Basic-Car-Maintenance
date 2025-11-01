@@ -125,7 +125,7 @@ struct OdometerView: View {
                     }
                     .accessibilityShowsLargeContentViewer {
                         Label {
-                            Text("Filter", comment: "Label for filtering on Odometer view")
+                            Text("Filter.Odometer", comment: "Label for filtering on Odometer view")
                         } icon: {
                             Image(systemName: SFSymbol.filter)
                         }

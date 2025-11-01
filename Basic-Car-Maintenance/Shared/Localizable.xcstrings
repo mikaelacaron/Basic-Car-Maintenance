@@ -2695,7 +2695,7 @@
       "comment" : "Title for alert shown when there are no events to export for a vehicle"
     },
     "Filter" : {
-      "comment" : "Label for filtering on Dashboard view\nLabel for filtering on Odometer view",
+      "comment" : "Label for filtering on Dashboard view",
       "localizations" : {
         "be" : {
           "stringUnit" : {
@@ -2749,6 +2749,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Фільтр"
+          }
+        }
+      }
+    },
+    "Filter.Odometer" : {
+      "comment" : "Label for filtering on Odometer view",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filter"
           }
         }
       }
