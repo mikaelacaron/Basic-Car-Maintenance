@@ -211,7 +211,7 @@
 				FF5D13A02A86C2D600BC9BD6 /* Frameworks */,
 				FF5D13A12A86C2D600BC9BD6 /* Resources */,
 				FFDADF8F2ACD35A200DDEF79 /* Embed Foundation Extensions */,
-				FF50DDC22B07DF0C00E87362 /* ShellScript */,
+				FF50DDC22B07DF0C00E87362 /* CrashlyticsRunScript */,
 			);
 			buildRules = (
 			);
@@ -391,7 +391,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FF50DDC22B07DF0C00E87362 /* ShellScript */ = {
+		FF50DDC22B07DF0C00E87362 /* CrashlyticsRunScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -406,6 +406,7 @@
 				" $(SRCROOT)/$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
 				" $(SRCROOT)/$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
 			);
+			name = CrashlyticsRunScript;
 			outputFileListPaths = (
 			);
 			outputPaths = (
