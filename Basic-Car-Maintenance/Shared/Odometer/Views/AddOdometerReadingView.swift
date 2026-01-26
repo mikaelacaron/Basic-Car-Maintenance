@@ -34,52 +34,92 @@ struct AddOdometerReadingView: View {
     
     var body: some View {
         NavigationStack {
-            Form {
-                Section {
-                    HStack {
-                        TextField("Distance", value: $distance, format: .number)
+            ScrollView {
+                VStack(spacing: 24) {
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Reading Details")
+                            .font(.subheadline.bold())
+                            .foregroundStyle(.secondary)
+                            .padding(.leading, 4)
                         
-                        Picker(selection: $isMetric) {
-                            Text("Miles").tag(false)
-                            Text("Kilometers").tag(true)
-                        } label: {
-                            Text("Preferred units",
-                                 comment: "Label for units selected when adding an odometer reading")
+                        VStack(spacing: 16) {
+                            HStack {
+                                Image(systemName: "speedometer")
+                                    .foregroundStyle(.secondary)
+                                TextField("Distance", value: $distance, format: .number)
+                                    .keyboardType(.numberPad)
+                            }
+                            
+                            Divider()
+                            
+                            Picker(selection: $isMetric) {
+                                Text("Miles").tag(false)
+                                Text("Kilometers").tag(true)
+                            } label: {
+                                Text("Preferred units")
+                            }
+                            .pickerStyle(.segmented)
                         }
-                        .pickerStyle(.segmented)
+                        .padding()
+                        .liquidGlassSection()
+                        .accessibilityElement(children: .combine)
+                        .accessibilityLabel("Current mileage")
+                        .accessibilityValue("\(distance) \(isMetric ? "kilometers" : "miles")")
+                    }
+                    
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Vehicle")
+                            .font(.subheadline.bold())
+                            .foregroundStyle(.secondary)
+                            .padding(.leading, 4)
+                        
+                        HStack {
+                            Image(systemName: "car.fill")
+                                .foregroundStyle(.secondary)
+                            Picker(selection: $selectedVehicleID) {
+                                ForEach(vehicles) { vehicle in
+                                    Text(vehicle.name)
+                                        .tag(vehicle.id as String?)
+                                }
+                            } label: {
+                                Text("Select a vehicle")
+                            }
+                            .pickerStyle(.menu)
+                        }
+                        .padding()
+                        .liquidGlassSection()
+                        .accessibilityLabel("Selected vehicle")
+                        .accessibilityValue(vehicles.first { $0.id == selectedVehicleID }?.name ?? "None")
+                    }
+                    
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Date")
+                            .font(.subheadline.bold())
+                            .foregroundStyle(.secondary)
+                            .padding(.leading, 4)
+                        
+                        DatePicker(selection: $date, displayedComponents: .date) {
+                            Label("Date", systemImage: "calendar")
+                                .foregroundStyle(.secondary)
+                        }
+                        .padding()
+                        .liquidGlassSection()
+                        .dynamicTypeSize(...DynamicTypeSize.accessibility2)
+                        .accessibilityLabel("Recording date")
                     }
                 }
-                
-                Section {
-                    Picker(selection: $selectedVehicleID) {
-                        ForEach(vehicles) { vehicle in
-                            Text(vehicle.name)
-                                .tag(vehicle.id)
-                        }
-                    } label: {
-                        Text("Select a vehicle",
-                             comment: "Picker for selecting a vehicle")
-                    }
-                    .pickerStyle(.menu)
-                } header: {
-                    Text("VehicleSectionHeader",
-                         comment: "Label for Picker for selecting a vehicle")
-                }
-                
-                DatePicker(selection: $date, displayedComponents: .date) {
-                    Text("Date", comment: "Date picker label")
-                }
-                .dynamicTypeSize(...DynamicTypeSize.accessibility2)
+                .padding()
             }
+            .background(Color(UIColor.systemGroupedBackground).ignoresSafeArea())
             .onAppear {
-                if !vehicles.isEmpty {
+                if !vehicles.isEmpty && selectedVehicleID == nil {
                     selectedVehicleID = vehicles[0].id
                 }
             }
             .navigationTitle(Text("Add Reading",
                                   comment: "Title for form when adding an odometer reading"))
             .toolbar {
-                ToolbarItem {
+                ToolbarItem(placement: .confirmationAction) {
                     Button {
                         if let selectedVehicleID {
                             let reading = OdometerReading(date: date,
@@ -91,8 +131,15 @@ struct AddOdometerReadingView: View {
                     } label: {
                         Text("Add",
                              comment: "Label for submit button on form to add an entry")
+                            .bold()
                     }
                     .disabled(distance < 0)
+                }
+                
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
                 }
             }
         }

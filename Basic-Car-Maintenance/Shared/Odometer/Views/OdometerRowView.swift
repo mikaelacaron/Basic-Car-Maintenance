@@ -13,18 +13,42 @@ struct OdometerRowView: View {
     let vehicleName: String?
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("\(vehicleName ?? "No Name")")
-                .font(.title3)
-
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Mileage: \(reading.distance) \(reading.isMetric ? "km" : "mi")")
-                    .foregroundStyle(.gray)
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Text("\(vehicleName ?? "No Name")")
+                    .font(.headline)
+                    .foregroundStyle(.primary)
                 
-                Text("Recorded On: \(reading.date.formatted(date: .abbreviated, time: .omitted))")
-                    .foregroundStyle(.gray)
+                Spacer()
+                
+                Image(systemName: "car.fill")
+                    .foregroundStyle(.secondary)
+                    .font(.subheadline)
+                    .accessibilityHidden(true)
+            }
+
+            VStack(alignment: .leading, spacing: 8) {
+                Label {
+                    Text("Mileage: \(reading.distance) \(reading.isMetric ? "km" : "mi")")
+                } icon: {
+                    Image(systemName: "speedometer")
+                }
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+                
+                Label {
+                    Text("Recorded On: \(reading.date.formatted(date: .abbreviated, time: .omitted))")
+                } icon: {
+                    Image(systemName: "calendar")
+                }
+                .font(.caption)
+                .foregroundStyle(.tertiary)
             }
         }
+        .padding()
+        .liquidGlassCard()
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(vehicleName ?? "Vehicle"), \(reading.distance) \(reading.isMetric ? "kilometers" : "miles"), recorded on \(reading.date.formatted(date: .abbreviated, time: .omitted))")
     }
 }
 

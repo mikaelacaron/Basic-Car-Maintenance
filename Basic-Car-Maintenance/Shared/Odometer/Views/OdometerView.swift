@@ -65,14 +65,16 @@ struct OdometerView: View {
                         }
                         .frame(height: 200)
                     }
-                    .padding(.horizontal)
-                    .listRowSeparator(.hidden)
+                    .liquidGlassChart()
                 }
                 
                 List {
                     ForEach(filteredReadings) { reading in
                         let vehicleName = viewModel.vehicles.first { $0.id == reading.vehicleID }?.name
                         OdometerRowView(reading: reading, vehicleName: vehicleName)
+                            .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                            .listRowBackground(Color.clear)
+                            .listRowSeparator(.hidden)
                             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                                 Button(role: .destructive) {
                                     Task {
@@ -94,13 +96,23 @@ struct OdometerView: View {
                                 }
                             }
                     }
-                    .listStyle(.inset)
                 }
+                .listStyle(.plain)
+                .scrollContentBackground(.hidden)
+                .background(Color(UIColor.systemBackground).ignoresSafeArea())
             }
             .overlay {
                 if viewModel.readings.isEmpty {
-                    Text("Add your first odometer",
-                         comment: "Placeholder text for empty odometer reading list")
+                    VStack(spacing: 16) {
+                        Image(systemName: "speedometer")
+                            .font(.system(size: 64))
+                            .foregroundStyle(.secondary)
+                        
+                        Text("Add your first odometer",
+                             comment: "Placeholder text for empty odometer reading list")
+                            .font(.headline)
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
             .navigationTitle(Text("Odometer"))
