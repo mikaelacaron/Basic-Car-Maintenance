@@ -34,43 +34,67 @@ struct AddOdometerReadingView: View {
     
     var body: some View {
         NavigationStack {
-            Form {
-                Section {
-                    HStack {
-                        TextField("Distance", value: $distance, format: .number)
+            ScrollView {
+                VStack(spacing: 20) {
+                    VStack(spacing: 16) {
+                        HStack {
+                            Image(systemName: SFSymbol.speedometer)
+                                .foregroundStyle(.secondary)
+                            TextField("Distance", value: $distance, format: .number)
+                        }
                         
                         Picker(selection: $isMetric) {
-                            Text("Miles").tag(false)
-                            Text("Kilometers").tag(true)
+                            Text("Miles", comment: "Label for miles unit").tag(false)
+                            Text("Kilometers", comment: "Label for kilometers unit").tag(true)
                         } label: {
                             Text("Preferred units",
-                                 comment: "Label for units selected when adding an odometer reading")
+                                 comment: "Label for unit system picker")
                         }
                         .pickerStyle(.segmented)
                     }
-                }
-                
-                Section {
-                    Picker(selection: $selectedVehicleID) {
-                        ForEach(vehicles) { vehicle in
-                            Text(vehicle.name)
-                                .tag(vehicle.id)
+                    .padding()
+                    .liquidGlassSection()
+                    
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("VehicleSectionHeader",
+                             comment: "Label for Picker for selecting a vehicle")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                            .padding(.leading, 8)
+                        
+                        HStack {
+                            Image(systemName: SFSymbol.carFill)
+                                .foregroundStyle(.secondary)
+                            Picker(selection: $selectedVehicleID) {
+                                ForEach(vehicles) { vehicle in
+                                    Text(vehicle.name)
+                                        .tag(vehicle.id as String?)
+                                }
+                            } label: {
+                                Text("Select a vehicle",
+                                     comment: "Picker for selecting a vehicle")
+                            }
+                            .pickerStyle(.menu)
                         }
-                    } label: {
-                        Text("Select a vehicle",
-                             comment: "Picker for selecting a vehicle")
+                        .padding()
+                        .liquidGlassSection()
                     }
-                    .pickerStyle(.menu)
-                } header: {
-                    Text("VehicleSectionHeader",
-                         comment: "Label for Picker for selecting a vehicle")
+                    
+                    VStack {
+                        DatePicker(selection: $date, displayedComponents: .date) {
+                            Label {
+                                Text("Date", comment: "Date picker label")
+                            } icon: {
+                                Image(systemName: SFSymbol.calendar)
+                            }
+                        }
+                        .dynamicTypeSize(...DynamicTypeSize.accessibility2)
+                    }
+                    .padding()
+                    .liquidGlassSection()
                 }
-                
-                DatePicker(selection: $date, displayedComponents: .date) {
-                    Text("Date", comment: "Date picker label")
-                }
-                .dynamicTypeSize(...DynamicTypeSize.accessibility2)
             }
+            .background(Color(UIColor.systemGroupedBackground).ignoresSafeArea())
             .onAppear {
                 if !vehicles.isEmpty {
                     selectedVehicleID = vehicles[0].id

@@ -65,11 +65,14 @@ enum SFSymbol {
     static let filter = "line.3.horizontal.decrease"
     static let plus = "plus"
     static let share = "square.and.arrow.up"
+    static let carFill = "car.fill"
     
     // Dashboard
     static let trash = "trash"
     static let pencil = "pencil"
     static let magnifyingGlass = "magnifyingglass"
+    static let speedometer = "speedometer"
+    static let calendar = "calendar"
     
     // Settings
     static let document = "doc.badge.plus"
