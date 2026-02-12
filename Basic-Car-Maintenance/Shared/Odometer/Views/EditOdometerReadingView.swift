@@ -25,11 +25,15 @@ struct EditOdometerReadingView: View {
             Form {
                 Section {
                     HStack {
+                        Image(systemName: SFSymbol.gaugeWithNeedle)
+                            .foregroundStyle(.secondary)
                         TextField("Distance", value: $distance, format: .number)
                         
                         Picker(selection: $isMetric) {
-                            Text("Miles").tag(false)
-                            Text("Kilometers").tag(true)
+                            Text("Miles", comment: "Label for miles unit")
+                                .tag(false)
+                            Text("Kilometers", comment: "Label for kilometers unit")
+                                .tag(true)
                         } label: {
                             Text("Preferred units",
                                  comment: "Label for units selected when adding an odometer reading")
@@ -39,19 +43,29 @@ struct EditOdometerReadingView: View {
                 }
                 
                 Section {
-                    if let vehicleName = vehicles
-                        .filter({ $0.id == selectedReading.vehicleID }).first?.name {
-                        Text(vehicleName)
-                            .opacity(0.3)
+                    HStack {
+                        Image(systemName: SFSymbol.carFill)
+                            .foregroundStyle(.secondary)
+                        
+                        if let vehicleName = vehicles
+                            .filter({ $0.id == selectedReading.vehicleID }).first?.name {
+                            Text(vehicleName)
+                                .opacity(0.3)
+                        }
                     }
                 } header: {
                     Text("Vehicle")
                 }
                 
-                DatePicker(selection: $date, displayedComponents: .date) {
-                    Text("Date", comment: "Date picker label")
+                HStack {
+                    Image(systemName: SFSymbol.calendar)
+                        .foregroundStyle(.secondary)
+                    
+                    DatePicker(selection: $date, displayedComponents: .date) {
+                        Text("Date", comment: "Date picker label")
+                    }
+                    .dynamicTypeSize(...DynamicTypeSize.accessibility2)
                 }
-                .dynamicTypeSize(...DynamicTypeSize.accessibility2)
             }
             .onAppear {
                 setEditReadingValues(selectedReading)
@@ -60,15 +74,13 @@ struct EditOdometerReadingView: View {
                                   comment: "Title for form when editing an odometer reading"))
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button {
+                    Button(role: .cancel) {
                         dismiss()
-                    } label: {
-                        Text("Cancel")
                     }
                 }
                 
                 ToolbarItem {
-                    Button {
+                    Button(role: .confirm) {
                         let reading = OdometerReading(id: selectedReading.id,
                                                       date: date,
                                                       distance: distance,
@@ -76,8 +88,8 @@ struct EditOdometerReadingView: View {
                                                       vehicleID: selectedReading.vehicleID)
                         updateTapped(reading)
                     } label: {
-                        Text("Update",
-                             comment: "Label for submit button on form to update an existing entry")
+                        Label("Update", systemImage: "checkmark")
+                            .labelStyle(.iconOnly)
                     }
                     .disabled(distance < 0)
                 }
@@ -94,10 +106,15 @@ struct EditOdometerReadingView: View {
 }
 
 #Preview {
+    let sampleVehicles = [
+        Vehicle(id: UUID().uuidString, name: "Nate Forester", make: "Subaru", model: "Forester"),
+        Vehicle(id: UUID().uuidString, name: "Dani Impreza", make: "Subaru", model: "Impreza")
+    ]
+    
     EditOdometerReadingView(
         selectedReading: OdometerReading(date: Date(),
                                          distance: 0,
                                          isMetric: false,
-                                         vehicleID: ""),
-        vehicles: []) { _ in }
+                                         vehicleID: sampleVehicles[0].id!),
+        vehicles: sampleVehicles) { _ in }
 }

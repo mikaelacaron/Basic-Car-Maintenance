@@ -14,15 +14,25 @@ struct OdometerRowView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("\(vehicleName ?? "No Name")")
-                .font(.title3)
-
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Mileage: \(reading.distance) \(reading.isMetric ? "km" : "mi")")
-                    .foregroundStyle(.gray)
+            HStack {
+                Image(systemName: SFSymbol.carFill)
                 
-                Text("Recorded On: \(reading.date.formatted(date: .abbreviated, time: .omitted))")
-                    .foregroundStyle(.gray)
+                Text(vehicleName ?? "No Name")
+                    .font(.title3)
+            }
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Label {
+                    Text("\(reading.distance) \(reading.isMetric ? "km" : "mi")")
+                } icon: {
+                    Image(systemName: SFSymbol.gaugeWithNeedle)
+                }
+                
+                Label {
+                    Text(reading.date.formatted(date: .abbreviated, time: .omitted))
+                } icon: {
+                    Image(systemName: SFSymbol.calendar)
+                }
             }
         }
     }
@@ -30,5 +40,5 @@ struct OdometerRowView: View {
 
 #Preview {
     OdometerRowView(reading: .init(date: .now, distance: 1000, isMetric: true, vehicleID: "1234"), 
-                vehicleName: "Sample Vehicle Name")
+                    vehicleName: "Sample Vehicle Name")
 }

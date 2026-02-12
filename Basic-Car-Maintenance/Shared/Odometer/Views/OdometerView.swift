@@ -73,6 +73,7 @@ struct OdometerView: View {
                     ForEach(filteredReadings) { reading in
                         let vehicleName = viewModel.vehicles.first { $0.id == reading.vehicleID }?.name
                         OdometerRowView(reading: reading, vehicleName: vehicleName)
+                            .foregroundStyle(.primary)
                             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                                 Button(role: .destructive) {
                                     Task {
@@ -99,8 +100,17 @@ struct OdometerView: View {
             }
             .overlay {
                 if viewModel.readings.isEmpty {
-                    Text("Add your first odometer",
-                         comment: "Placeholder text for empty odometer reading list")
+                    ContentUnavailableView {
+                        Label {
+                            Text("Add your first odometer reading",
+                                 comment: "Placeholder text for empty odometer reading list")
+                        } icon: {
+                            Image(systemName: SFSymbol.gaugeWithNeedle)
+                        }
+                    } description: {
+                        Text("Tap the + tadd your firsst odometer reading",
+                             comment: "Placeholder description for empty odometer reading list")
+                    }
                 }
             }
             .navigationTitle(Text("Odometer"))
