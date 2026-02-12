@@ -71,7 +71,7 @@ enum SFSymbol {
     static let trash = "trash"
     static let pencil = "pencil"
     static let magnifyingGlass = "magnifyingglass"
-    static let speedometer = "speedometer"
+    static let gaugeWithNeedle = "gauge.with.needle"
     static let calendar = "calendar"
     
     // Settings

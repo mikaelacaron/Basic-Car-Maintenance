@@ -37,6 +37,8 @@ struct AddOdometerReadingView: View {
             Form {
                 Section {
                     HStack {
+                        Image(systemName: SFSymbol.gaugeWithNeedle)
+                            .foregroundStyle(.secondary)
                         TextField("Distance", value: $distance, format: .number)
                         
                         Picker(selection: $isMetric) {
@@ -51,25 +53,35 @@ struct AddOdometerReadingView: View {
                 }
                 
                 Section {
-                    Picker(selection: $selectedVehicleID) {
-                        ForEach(vehicles) { vehicle in
-                            Text(vehicle.name)
-                                .tag(vehicle.id)
+                    HStack {
+                        Image(systemName: SFSymbol.carFill)
+                            .foregroundStyle(.secondary)
+                        
+                        Picker(selection: $selectedVehicleID) {
+                            ForEach(vehicles) { vehicle in
+                                Text(vehicle.name)
+                                    .tag(vehicle.id)
+                            }
+                        } label: {
+                            Text("Select a vehicle",
+                                 comment: "Picker for selecting a vehicle")
                         }
-                    } label: {
-                        Text("Select a vehicle",
-                             comment: "Picker for selecting a vehicle")
+                        .pickerStyle(.menu)
                     }
-                    .pickerStyle(.menu)
                 } header: {
                     Text("VehicleSectionHeader",
                          comment: "Label for Picker for selecting a vehicle")
                 }
                 
-                DatePicker(selection: $date, displayedComponents: .date) {
-                    Text("Date", comment: "Date picker label")
+                HStack {
+                    Image(systemName: SFSymbol.calendar)
+                        .foregroundStyle(.secondary)
+                    
+                    DatePicker(selection: $date, displayedComponents: .date) {
+                        Text("Date", comment: "Date picker label")
+                    }
+                    .dynamicTypeSize(...DynamicTypeSize.accessibility2)
                 }
-                .dynamicTypeSize(...DynamicTypeSize.accessibility2)
             }
             .onAppear {
                 if !vehicles.isEmpty {
