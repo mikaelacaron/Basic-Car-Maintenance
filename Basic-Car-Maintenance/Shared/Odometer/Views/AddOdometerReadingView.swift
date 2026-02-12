@@ -34,67 +34,43 @@ struct AddOdometerReadingView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(spacing: 20) {
-                    VStack(spacing: 16) {
-                        HStack {
-                            Image(systemName: SFSymbol.speedometer)
-                                .foregroundStyle(.secondary)
-                            TextField("Distance", value: $distance, format: .number)
-                        }
+            Form {
+                Section {
+                    HStack {
+                        TextField("Distance", value: $distance, format: .number)
                         
                         Picker(selection: $isMetric) {
-                            Text("Miles", comment: "Label for miles unit").tag(false)
-                            Text("Kilometers", comment: "Label for kilometers unit").tag(true)
+                            Text("Miles").tag(false)
+                            Text("Kilometers").tag(true)
                         } label: {
                             Text("Preferred units",
-                                 comment: "Label for unit system picker")
+                                 comment: "Label for units selected when adding an odometer reading")
                         }
                         .pickerStyle(.segmented)
                     }
-                    .padding()
-                    .liquidGlassSection()
-                    
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("VehicleSectionHeader",
-                             comment: "Label for Picker for selecting a vehicle")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                            .padding(.leading, 8)
-                        
-                        HStack {
-                            Image(systemName: SFSymbol.carFill)
-                                .foregroundStyle(.secondary)
-                            Picker(selection: $selectedVehicleID) {
-                                ForEach(vehicles) { vehicle in
-                                    Text(vehicle.name)
-                                        .tag(vehicle.id as String?)
-                                }
-                            } label: {
-                                Text("Select a vehicle",
-                                     comment: "Picker for selecting a vehicle")
-                            }
-                            .pickerStyle(.menu)
-                        }
-                        .padding()
-                        .liquidGlassSection()
-                    }
-                    
-                    VStack {
-                        DatePicker(selection: $date, displayedComponents: .date) {
-                            Label {
-                                Text("Date", comment: "Date picker label")
-                            } icon: {
-                                Image(systemName: SFSymbol.calendar)
-                            }
-                        }
-                        .dynamicTypeSize(...DynamicTypeSize.accessibility2)
-                    }
-                    .padding()
-                    .liquidGlassSection()
                 }
+                
+                Section {
+                    Picker(selection: $selectedVehicleID) {
+                        ForEach(vehicles) { vehicle in
+                            Text(vehicle.name)
+                                .tag(vehicle.id)
+                        }
+                    } label: {
+                        Text("Select a vehicle",
+                             comment: "Picker for selecting a vehicle")
+                    }
+                    .pickerStyle(.menu)
+                } header: {
+                    Text("VehicleSectionHeader",
+                         comment: "Label for Picker for selecting a vehicle")
+                }
+                
+                DatePicker(selection: $date, displayedComponents: .date) {
+                    Text("Date", comment: "Date picker label")
+                }
+                .dynamicTypeSize(...DynamicTypeSize.accessibility2)
             }
-            .background(Color(UIColor.systemGroupedBackground).ignoresSafeArea())
             .onAppear {
                 if !vehicles.isEmpty {
                     selectedVehicleID = vehicles[0].id
@@ -104,7 +80,7 @@ struct AddOdometerReadingView: View {
                                   comment: "Title for form when adding an odometer reading"))
             .toolbar {
                 ToolbarItem {
-                    Button {
+                    Button(role: .confirm) {
                         if let selectedVehicleID {
                             let reading = OdometerReading(date: date,
                                                           distance: distance,
@@ -113,8 +89,8 @@ struct AddOdometerReadingView: View {
                             addTapped(reading)
                         }
                     } label: {
-                        Text("Add",
-                             comment: "Label for submit button on form to add an entry")
+                        Label("Add", systemImage: "checkmark")
+                            .labelStyle(.iconOnly)
                     }
                     .disabled(distance < 0)
                 }
@@ -125,10 +101,10 @@ struct AddOdometerReadingView: View {
 }
 
 #Preview {
+    let sampleVehicle = [
+        Vehicle(name: "Nate Forester", make: "Subaru", model: "Forester"),
+        Vehicle(name: "Dani Impreza", make: "Subaru", model: "Impreza")
+    ]
+
     AddOdometerReadingView(vehicles: sampleVehicles) { _ in }
 }
-
-let sampleVehicle = [
-    Vehicle(name: "Nate Forester", make: "Subaru", model: "Forester"),
-    Vehicle(name: "Dani Impreza", make: "Subaru", model: "Impreza")
-]
