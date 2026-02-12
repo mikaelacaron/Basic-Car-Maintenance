@@ -115,7 +115,7 @@ struct AddOdometerReadingView: View {
 }
 
 #Preview {
-    let sampleVehicle = [
+    let sampleVehicles = [
         Vehicle(name: "Nate Forester", make: "Subaru", model: "Forester"),
         Vehicle(name: "Dani Impreza", make: "Subaru", model: "Impreza")
     ]
