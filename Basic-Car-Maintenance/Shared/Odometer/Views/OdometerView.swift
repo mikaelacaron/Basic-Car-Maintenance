@@ -45,35 +45,35 @@ struct OdometerView: View {
                 .padding(.horizontal)
                 
                 if !viewModel.readings.isEmpty {
-                    Chart {
-                        ForEach(viewModel.vehicles) { vehicle in
-                            let vehicleReadings = filteredReadings(for: vehicle)
-                            
-                            if !vehicleReadings.isEmpty {
-                                ForEach(vehicleReadings) { reading in
-                                    LineMark(
-                                        x: .value("Date", reading.date, unit: .day),
-                                        y: .value("Odometer", reading.distance)
-                                    )
+                    GroupBox {
+                        Chart {
+                            ForEach(viewModel.vehicles) { vehicle in
+                                let vehicleReadings = filteredReadings(for: vehicle)
+                                
+                                if !vehicleReadings.isEmpty {
+                                    ForEach(vehicleReadings) { reading in
+                                        LineMark(
+                                            x: .value("Date", reading.date, unit: .day),
+                                            y: .value("Odometer", reading.distance)
+                                        )
+                                    }
+                                    .foregroundStyle(by: .value("Vehicle", vehicle.name))
+                                    .symbol(by: .value("Vehicle", vehicle.name))
+                                    .interpolationMethod(.monotone)
                                 }
-                                .foregroundStyle(by: .value("Vehicle", vehicle.name))
-                                .symbol(by: .value("Vehicle", vehicle.name))
-                                .interpolationMethod(.monotone)
                             }
                         }
+                        .frame(height: 200)
                     }
-                    .frame(height: 200)
-                    .liquidGlassChart()
+                    .padding(.horizontal)
+                    .listRowSeparator(.hidden)
                 }
                 
                 List {
                     ForEach(filteredReadings) { reading in
                         let vehicleName = viewModel.vehicles.first { $0.id == reading.vehicleID }?.name
                         OdometerRowView(reading: reading, vehicleName: vehicleName)
-                            .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
-                            .listRowBackground(Color.clear)
-                            .listRowSeparator(.hidden)
-                            .liquidGlassCard()
+                            .foregroundStyle(.primary)
                             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                                 Button(role: .destructive) {
                                     Task {
@@ -95,22 +95,20 @@ struct OdometerView: View {
                                 }
                             }
                     }
+                    .listStyle(.inset)
                 }
-                .listStyle(.plain)
-                .scrollContentBackground(.hidden)
-                .background(Color(UIColor.systemGroupedBackground).ignoresSafeArea())
             }
             .overlay {
                 if viewModel.readings.isEmpty {
                     ContentUnavailableView {
                         Label {
-                            Text("Tap the + to begin",
-                                 comment: "Empty odometer list prompt")
+                            Text("Add your first odometer reading",
+                                 comment: "Placeholder text for empty odometer reading list")
                         } icon: {
-                            Image(systemName: SFSymbol.speedometer)
+                            Image(systemName: SFSymbol.gaugeWithNeedle)
                         }
                     } description: {
-                        Text("Add your first odometer",
+                        Text("Tap the + tadd your firsst odometer reading",
                              comment: "Placeholder description for empty odometer reading list")
                     }
                 }
