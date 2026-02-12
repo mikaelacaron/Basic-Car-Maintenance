@@ -13,19 +13,19 @@ struct OdometerRowView: View {
     let vehicleName: String?
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Image(systemName: SFSymbol.carFill)
-                    .foregroundStyle(.secondary)
+                
                 Text(vehicleName ?? "No Name")
-                    .font(.headline)
+                    .font(.title3)
             }
-
-            VStack(alignment: .leading, spacing: 8) {
+            
+            VStack(alignment: .leading, spacing: 4) {
                 Label {
-                    Text("\(reading.distance) \(reading.isMetric ? "kilometers" : "miles")")
+                    Text("\(reading.distance) \(reading.isMetric ? "km" : "mi")")
                 } icon: {
-                    Image(systemName: SFSymbol.speedometer)
+                    Image(systemName: SFSymbol.gaugeWithNeedle)
                 }
                 
                 Label {
@@ -34,13 +34,11 @@ struct OdometerRowView: View {
                     Image(systemName: SFSymbol.calendar)
                 }
             }
-            .font(.subheadline)
-            .foregroundStyle(.secondary)
         }
     }
 }
 
 #Preview {
     OdometerRowView(reading: .init(date: .now, distance: 1000, isMetric: true, vehicleID: "1234"), 
-                vehicleName: "Sample Vehicle Name")
+                    vehicleName: "Sample Vehicle Name")
 }
