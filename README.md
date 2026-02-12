@@ -3,7 +3,7 @@
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mikaelacaron/Basic-Car-Maintenance/dev?logo=github)
 ![GitHub contributors](https://img.shields.io/github/contributors/mikaelacaron/Basic-Car-Maintenance)
 [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](https://www.firsttimersonly.com/)
-[![Unit Tests](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml/badge.svg?event=push)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml)
+[![Unit Tests](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml)
 [![Deploy DocC Documentation](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml/badge.svg?branch=dev)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml)
 
 ![Alt](https://repobeats.axiom.co/api/embed/889ac81d440c882bb217c6ee7dda4601e0d8d6d9.svg "Repobeats analytics image")
