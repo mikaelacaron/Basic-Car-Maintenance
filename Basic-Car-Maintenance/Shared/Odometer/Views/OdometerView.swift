@@ -24,6 +24,16 @@ struct OdometerView: View {
         self.viewModel = viewModel
     }
     
+    // swiftlint:disable:next line_length
+    /// Filter the readings based on the selected vehicle in the filter, and if no vehicle is selected, it shows all the vehicles' readings
+    private var filteredReadings: [OdometerReading] {
+        if viewModel.selectedVehicle == nil {
+            return viewModel.readings
+        } else {
+            return viewModel.readings.filter { $0.vehicleID == viewModel.selectedVehicle?.id }
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -61,9 +71,10 @@ struct OdometerView: View {
                 }
                 
                 List {
-                    ForEach(viewModel.readings) { reading in
+                    ForEach(filteredReadings) { reading in
                         let vehicleName = viewModel.vehicles.first { $0.id == reading.vehicleID }?.name
                         OdometerRowView(reading: reading, vehicleName: vehicleName)
+                            .foregroundStyle(.primary)
                             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                                 Button(role: .destructive) {
                                     Task {
@@ -90,8 +101,17 @@ struct OdometerView: View {
             }
             .overlay {
                 if viewModel.readings.isEmpty {
-                    Text("Add your first odometer",
-                         comment: "Placeholder text for empty odometer reading list")
+                    ContentUnavailableView {
+                        Label {
+                            Text("Add your first odometer reading",
+                                 comment: "Placeholder text for empty odometer reading list")
+                        } icon: {
+                            Image(systemName: SFSymbol.gaugeWithNeedle)
+                        }
+                    } description: {
+                        Text("Tap the + tadd your firsst odometer reading",
+                             comment: "Placeholder description for empty odometer reading list")
+                    }
                 }
             }
             .navigationTitle(Text("Odometer"))
@@ -100,6 +120,27 @@ struct OdometerView: View {
             }
             .toolbar {
                 ToolbarItemGroup(placement: .primaryAction) {
+                    Menu {
+                        Button("All") {
+                            viewModel.selectedVehicle = nil
+                            applyFilter()
+                        }
+                        ForEach(viewModel.vehicles) { vehicle in
+                            Button(vehicle.name) {
+                                viewModel.selectedVehicle = vehicle
+                                applyFilter()
+                            }
+                        }
+                    } label: {
+                        Image(systemName: SFSymbol.filter)
+                    }
+                    .accessibilityShowsLargeContentViewer {
+                        Label {
+                            Text("Filter.Odometer", comment: "Label for filtering on Odometer view")
+                        } icon: {
+                            Image(systemName: SFSymbol.filter)
+                        }
+                    }
                     Button {
                         viewModel.isShowingAddOdometerReading = true
                     } label: {
@@ -128,8 +169,17 @@ struct OdometerView: View {
         .analyticsView("\(Self.self)")
     }
     
+    /// Checks if we have selected any vehicle for filtering the readings.
+    private func applyFilter() {
+        if let selectedVehicle = viewModel.selectedVehicle {
+            viewModel.selectedVehicle = viewModel.vehicles.first(where: { $0.id == selectedVehicle.id })
+        } else {
+            viewModel.selectedVehicle = nil
+        }
+    }
+    
     // swiftlint:disable:next line_length
-    /// Filter the readins based on the selected time range, and if there are no readings in the last 30 days, just show the last reading.
+    /// Filter the readings based on the selected time range, and if there are no readings in the last 30 days, just show the last reading.
     /// - Parameter vehicle: The vehicle for these readings.
     /// - Returns: The `[OdometerReading]`s for this vehicle in the time range.
     private func filteredReadings(for vehicle: Vehicle) -> [OdometerReading] {
@@ -189,6 +239,7 @@ enum TimeRange: String, CaseIterable, Identifiable {
 #Preview {
     let firstCar = createVehicle(id: "id1", name: "My 1st car")
     let secondCar = createVehicle(id: "id2", name: "2nd Car")
+    let thirdCar = createVehicle(id: "id3", name: "3rd Car")
     
     let firstReading = createReading(vehicleID: firstCar.id!,
                                      date: "2024/10/18",
@@ -217,12 +268,14 @@ enum TimeRange: String, CaseIterable, Identifiable {
     let eighthReading = createReading(vehicleID: secondCar.id!,
                                      date: "2024/11/13",
                                      distance: 1542)
-    
+    let ninthReading = createReading(vehicleID: thirdCar.id!,
+                                     date: "2024/11/16",
+                                     distance: 1600)
+
     let viewModel = OdometerViewModel(userUID: nil, firebaseService: FirebaseService())
-    
-    viewModel.vehicles.append(contentsOf: [firstCar, secondCar])
+
     // swiftlint:disable:next line_length
-    viewModel.readings.append(contentsOf: [firstReading, secondReading, thirdReading, fourthReading, fifthReading, sixthReading, seventhReading, eighthReading])
+    viewModel.readings.append(contentsOf: [firstReading, secondReading, thirdReading, fourthReading, fifthReading, sixthReading, seventhReading, eighthReading, ninthReading])
     
     return OdometerView(viewModel: viewModel)
         .environment(ActionService.shared)

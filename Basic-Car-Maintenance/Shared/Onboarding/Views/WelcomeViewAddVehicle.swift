@@ -78,11 +78,12 @@ struct WelcomeViewAddVehicle: View {
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 14)
-                    .background(Color("basicGreen").gradient, in: .rect(cornerRadius: 12))
                     .contentShape(.rect)
             }
             .padding(15)
             .padding(.horizontal, 15)
+            .tint(.basicGreen)
+            .buttonStyle(.glassProminent)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background {

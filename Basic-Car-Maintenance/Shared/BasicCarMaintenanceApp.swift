@@ -45,8 +45,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     ) -> Bool {
         
         FirebaseApp.configure()
-        
-        let useEmulator = UserDefaults.standard.bool(forKey: "useEmulator")
+    
+        let useEmulator = true
         if useEmulator {
             let settings = Firestore.firestore().settings
             settings.host = "localhost:8080"
@@ -55,6 +55,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             Firestore.firestore().settings = settings
             
             Auth.auth().useEmulator(withHost: "127.0.0.1", port: 9099)
+            
+            let accessGroup = Bundle.main.keychainAccessGroup
+            do {
+              try Auth.auth().useUserAccessGroup(accessGroup)
+            } catch let error as NSError {
+              print("Error changing user access group: %@", error)
+            }
         }
         
         return true

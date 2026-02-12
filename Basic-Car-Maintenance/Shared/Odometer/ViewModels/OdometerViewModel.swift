@@ -22,8 +22,8 @@ class OdometerViewModel {
     var showEditErrorAlert = false
     var selectedReading: OdometerReading?
     var isShowingEditReadingView = false
-    
     var vehicles = [Vehicle]()
+    var selectedVehicle: Vehicle?
     
     let firebaseService: FirebaseServiceProtocol
 

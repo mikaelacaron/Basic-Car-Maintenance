@@ -37,11 +37,15 @@ struct AddOdometerReadingView: View {
             Form {
                 Section {
                     HStack {
+                        Image(systemName: SFSymbol.gaugeWithNeedle)
+                            .foregroundStyle(.secondary)
                         TextField("Distance", value: $distance, format: .number)
                         
                         Picker(selection: $isMetric) {
-                            Text("Miles").tag(false)
-                            Text("Kilometers").tag(true)
+                            Text("Miles", comment: "Label for miles unit")
+                                .tag(false)
+                            Text("Kilometers", comment: "Label for kilometers unit")
+                                .tag(true)
                         } label: {
                             Text("Preferred units",
                                  comment: "Label for units selected when adding an odometer reading")
@@ -51,25 +55,35 @@ struct AddOdometerReadingView: View {
                 }
                 
                 Section {
-                    Picker(selection: $selectedVehicleID) {
-                        ForEach(vehicles) { vehicle in
-                            Text(vehicle.name)
-                                .tag(vehicle.id)
+                    HStack {
+                        Image(systemName: SFSymbol.carFill)
+                            .foregroundStyle(.secondary)
+                        
+                        Picker(selection: $selectedVehicleID) {
+                            ForEach(vehicles) { vehicle in
+                                Text(vehicle.name)
+                                    .tag(vehicle.id)
+                            }
+                        } label: {
+                            Text("Select a vehicle",
+                                 comment: "Picker for selecting a vehicle")
                         }
-                    } label: {
-                        Text("Select a vehicle",
-                             comment: "Picker for selecting a vehicle")
+                        .pickerStyle(.menu)
                     }
-                    .pickerStyle(.menu)
                 } header: {
                     Text("VehicleSectionHeader",
                          comment: "Label for Picker for selecting a vehicle")
                 }
                 
-                DatePicker(selection: $date, displayedComponents: .date) {
-                    Text("Date", comment: "Date picker label")
+                HStack {
+                    Image(systemName: SFSymbol.calendar)
+                        .foregroundStyle(.secondary)
+                    
+                    DatePicker(selection: $date, displayedComponents: .date) {
+                        Text("Date", comment: "Date picker label")
+                    }
+                    .dynamicTypeSize(...DynamicTypeSize.accessibility2)
                 }
-                .dynamicTypeSize(...DynamicTypeSize.accessibility2)
             }
             .onAppear {
                 if !vehicles.isEmpty {
@@ -80,7 +94,7 @@ struct AddOdometerReadingView: View {
                                   comment: "Title for form when adding an odometer reading"))
             .toolbar {
                 ToolbarItem {
-                    Button {
+                    Button(role: .confirm) {
                         if let selectedVehicleID {
                             let reading = OdometerReading(date: date,
                                                           distance: distance,
@@ -89,8 +103,8 @@ struct AddOdometerReadingView: View {
                             addTapped(reading)
                         }
                     } label: {
-                        Text("Add",
-                             comment: "Label for submit button on form to add an entry")
+                        Label("Add", systemImage: "checkmark")
+                            .labelStyle(.iconOnly)
                     }
                     .disabled(distance < 0)
                 }
@@ -101,10 +115,10 @@ struct AddOdometerReadingView: View {
 }
 
 #Preview {
+    let sampleVehicles = [
+        Vehicle(name: "Nate Forester", make: "Subaru", model: "Forester"),
+        Vehicle(name: "Dani Impreza", make: "Subaru", model: "Impreza")
+    ]
+
     AddOdometerReadingView(vehicles: sampleVehicles) { _ in }
 }
-
-let sampleVehicle = [
-    Vehicle(name: "Nate Forester", make: "Subaru", model: "Forester"),
-    Vehicle(name: "Dani Impreza", make: "Subaru", model: "Impreza")
-]

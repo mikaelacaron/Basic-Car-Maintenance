@@ -62,14 +62,17 @@ enum SFSymbol {
     static let gear = "gear"
 
     // Navigation Items
-    static let filter = "line.3.horizontal.decrease.circle"
+    static let filter = "line.3.horizontal.decrease"
     static let plus = "plus"
     static let share = "square.and.arrow.up"
+    static let carFill = "car.fill"
     
     // Dashboard
     static let trash = "trash"
     static let pencil = "pencil"
     static let magnifyingGlass = "magnifyingglass"
+    static let gaugeWithNeedle = "gauge.with.needle"
+    static let calendar = "calendar"
     
     // Settings
     static let document = "doc.badge.plus"
@@ -84,6 +87,9 @@ enum SFSymbol {
 
     // ContributorsProfileView
     static let personCircle = "person.circle.fill"
+    
+    // SmallBasicCarMaintenanceWidget
+    static let wrenchAndScrewdriver = "wrench.and.screwdriver"
   
 }
 

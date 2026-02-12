@@ -3,6 +3,7 @@
 xcrun xcodebuild docbuild \
     -scheme Basic-Car-Maintenance \
     -destination 'generic/platform=iOS Simulator' \
+    -skipPackagePluginValidation \
     -derivedDataPath "$PWD/.derivedData"
 
 xcrun docc process-archive transform-for-static-hosting \

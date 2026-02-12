@@ -99,10 +99,10 @@ struct AddMaintenanceView: View {
 }
 
 #Preview {
+    let sampleVehicles = [
+        Vehicle(name: "Lexus", make: "Lexus", model: "White"),
+        Vehicle(name: "Test", make: "Lexus", model: "White")
+    ]
+    
     AddMaintenanceView(vehicles: sampleVehicles) { _ in }
 }
-
-let sampleVehicles = [
-    Vehicle(name: "Lexus", make: "Lexus", model: "White"),
-    Vehicle(name: "Test", make: "Lexus", model: "White")
-]
