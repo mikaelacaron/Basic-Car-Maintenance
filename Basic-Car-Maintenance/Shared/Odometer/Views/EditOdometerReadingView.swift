@@ -22,62 +22,51 @@ struct EditOdometerReadingView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(spacing: 20) {
-                    VStack(spacing: 16) {
-                        HStack {
-                            Image(systemName: SFSymbol.speedometer)
-                                .foregroundStyle(.secondary)
-                            TextField("Distance", value: $distance, format: .number)
-                        }
+            Form {
+                Section {
+                    HStack {
+                        Image(systemName: SFSymbol.gaugeWithNeedle)
+                            .foregroundStyle(.secondary)
+                        TextField("Distance", value: $distance, format: .number)
                         
                         Picker(selection: $isMetric) {
-                            Text("Miles", comment: "Label for miles unit").tag(false)
-                            Text("Kilometers", comment: "Label for kilometers unit").tag(true)
+                            Text("Miles", comment: "Label for miles unit")
+                                .tag(false)
+                            Text("Kilometers", comment: "Label for kilometers unit")
+                                .tag(true)
                         } label: {
                             Text("Preferred units",
-                                 comment: "Label for unit system picker")
+                                 comment: "Label for units selected when adding an odometer reading")
                         }
                         .pickerStyle(.segmented)
                     }
-                    .padding()
-                    .liquidGlassSection()
-                    
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("Vehicle", comment: "Label for vehicle selection")
-                            .font(.caption)
+                }
+                
+                Section {
+                    HStack {
+                        Image(systemName: SFSymbol.carFill)
                             .foregroundStyle(.secondary)
-                            .padding(.leading, 8)
                         
-                        HStack {
-                            Image(systemName: SFSymbol.carFill)
-                                .foregroundStyle(.secondary)
-                            if let vehicleName = vehicles
-                                .filter({ $0.id == selectedReading.vehicleID }).first?.name {
-                                Text(vehicleName)
-                                    .foregroundStyle(.secondary)
-                            }
+                        if let vehicleName = vehicles
+                            .filter({ $0.id == selectedReading.vehicleID }).first?.name {
+                            Text(vehicleName)
+                                .opacity(0.3)
                         }
-                        .padding()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .liquidGlassSection()
                     }
+                } header: {
+                    Text("Vehicle")
+                }
+                
+                HStack {
+                    Image(systemName: SFSymbol.calendar)
+                        .foregroundStyle(.secondary)
                     
-                    VStack {
-                        DatePicker(selection: $date, displayedComponents: .date) {
-                            Label {
-                                Text("Date", comment: "Date picker label")
-                            } icon: {
-                                Image(systemName: SFSymbol.calendar)
-                            }
-                        }
-                        .dynamicTypeSize(...DynamicTypeSize.accessibility2)
+                    DatePicker(selection: $date, displayedComponents: .date) {
+                        Text("Date", comment: "Date picker label")
                     }
-                    .padding()
-                    .liquidGlassSection()
+                    .dynamicTypeSize(...DynamicTypeSize.accessibility2)
                 }
             }
-            .background(Color(UIColor.systemGroupedBackground).ignoresSafeArea())
             .onAppear {
                 setEditReadingValues(selectedReading)
             }
@@ -85,15 +74,13 @@ struct EditOdometerReadingView: View {
                                   comment: "Title for form when editing an odometer reading"))
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button {
+                    Button(role: .cancel) {
                         dismiss()
-                    } label: {
-                        Text("Cancel")
                     }
                 }
                 
                 ToolbarItem {
-                    Button {
+                    Button(role: .confirm) {
                         let reading = OdometerReading(id: selectedReading.id,
                                                       date: date,
                                                       distance: distance,
@@ -101,8 +88,8 @@ struct EditOdometerReadingView: View {
                                                       vehicleID: selectedReading.vehicleID)
                         updateTapped(reading)
                     } label: {
-                        Text("Update",
-                             comment: "Label for submit button on form to update an existing entry")
+                        Label("Update", systemImage: "checkmark")
+                            .labelStyle(.iconOnly)
                     }
                     .disabled(distance < 0)
                 }
@@ -119,10 +106,15 @@ struct EditOdometerReadingView: View {
 }
 
 #Preview {
+    let sampleVehicles = [
+        Vehicle(id: UUID().uuidString, name: "Nate Forester", make: "Subaru", model: "Forester"),
+        Vehicle(id: UUID().uuidString, name: "Dani Impreza", make: "Subaru", model: "Impreza")
+    ]
+    
     EditOdometerReadingView(
         selectedReading: OdometerReading(date: Date(),
                                          distance: 0,
                                          isMetric: false,
-                                         vehicleID: ""),
-        vehicles: []) { _ in }
+                                         vehicleID: sampleVehicles[0].id!),
+        vehicles: sampleVehicles) { _ in }
 }
