@@ -42,8 +42,10 @@ struct AddOdometerReadingView: View {
                         TextField("Distance", value: $distance, format: .number)
                         
                         Picker(selection: $isMetric) {
-                            Text("Miles").tag(false)
-                            Text("Kilometers").tag(true)
+                            Text("Miles", comment: "Label for miles unit")
+                                .tag(false)
+                            Text("Kilometers", comment: "Label for kilometers unit")
+                                .tag(true)
                         } label: {
                             Text("Preferred units",
                                  comment: "Label for units selected when adding an odometer reading")
