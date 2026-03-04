@@ -96,8 +96,12 @@ class OdometerViewModel {
                     .document(id)
                     .setData(from: readingToUpdate)
                 
+                if let index = readings.firstIndex(where: { $0.id == id }) {
+                    readings[index] = readingToUpdate
+                }
+
                 AnalyticsService.shared.logEvent(.odometerUpdate)
-                
+
                 isShowingEditReadingView = false
             } catch {
                 errorMessage = error.localizedDescription
