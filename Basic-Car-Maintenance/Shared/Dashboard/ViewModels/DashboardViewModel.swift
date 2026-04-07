@@ -92,20 +92,8 @@ class DashboardViewModel {
         isLoading = true
 
         if let userUID = userUID {
-            let db = Firestore.firestore()
             do {
-                let docRef = db.collectionGroup(FirestoreCollection.maintenanceEvents)
-                    .whereField(FirestoreField.userID, isEqualTo: userUID)
-                
-                let querySnapshot = try await docRef.getDocuments()
-                
-                var events = [MaintenanceEvent]()
-                
-                for document in querySnapshot.documents {
-                    if let event = try? document.data(as: MaintenanceEvent.self) {
-                        events.append(event)
-                    }
-                }
+                let events = try await firebaseService.getEvents(withUserUID: userUID)
                 self.isLoading = false
                 self.events = events
                 WidgetCenter.shared.reloadAllTimelines()
@@ -123,11 +111,7 @@ class DashboardViewModel {
             eventToUpdate.userID = uid
             
             do {
-                try Firestore
-                    .firestore()
-                    .collection(FirestorePath.maintenanceEvents(vehicleID: eventToUpdate.vehicleID).path)
-                    .document(id)
-                    .setData(from: eventToUpdate)
+                try await firebaseService.updateMaintenanceEvent(eventToUpdate, withId: id)
             } catch {
                 showAddErrorAlert.toggle()
                 errorMessage = error.localizedDescription
