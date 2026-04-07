@@ -14,6 +14,7 @@ import WidgetKit
 class DashboardViewModel {
     
     let userUID: String?
+    let firebaseService: FirebaseServiceProtocol
     
     var events = [MaintenanceEvent]()
     var showAddErrorAlert = false
@@ -59,8 +60,9 @@ class DashboardViewModel {
         }
     }
     
-    init(userUID: String?) {
+    init(userUID: String?, firebaseService: FirebaseServiceProtocol = FirebaseService()) {
         self.userUID = userUID
+        self.firebaseService = firebaseService
     }
     
     /// Adding a `MaintenanceEvent` in Firestore at:
@@ -72,10 +74,7 @@ class DashboardViewModel {
             eventToAdd.userID = uid
             
             do {
-                try Firestore
-                    .firestore()
-                    .collection(FirestorePath.maintenanceEvents(vehicleID: eventToAdd.vehicleID).path)
-                    .addDocument(from: eventToAdd)
+                try  firebaseService.addMaintenanceEvent(eventToAdd)
                 
                 events.append(maintenanceEvent)
                 AnalyticsService.shared.logEvent(.maintenanceCreate)
