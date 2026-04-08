@@ -38,6 +38,8 @@ struct DashboardViewModelTests {
     
     @Test func errorMessageIsSetWhenEventCannotBeAddedSuccessfully() async throws {
         
+        let _ = try await FirestoreTestHelper()
+
         let uid = UUID().uuidString
         let viewModel = DashboardViewModel(userUID: uid, firebaseService: FaillingFirebaseService())
         let event = MaintenanceEvent(
@@ -55,6 +57,8 @@ struct DashboardViewModelTests {
     @Test 
     func addedEventIsRetrievedSuccessfully() async throws {
         
+        let _ = try await FirestoreTestHelper()
+
         let vehicleId = UUID().uuidString
         let eventToAdd = MaintenanceEvent(
             vehicleID: vehicleId, 
@@ -76,6 +80,9 @@ struct DashboardViewModelTests {
     
     @Test 
     func addedEventIsUpdatedSuccessfully() async throws {
+        
+        let _ = try await FirestoreTestHelper()
+
         // arrange
         let vehicleId = UUID().uuidString
         let eventToAdd = MaintenanceEvent(
@@ -111,6 +118,9 @@ struct DashboardViewModelTests {
     
     @Test 
     func errorMessageIsSetWhenEventCannotBeUpdated() async throws {
+        
+        let _ = try await FirestoreTestHelper()
+
         let vehicleId = UUID().uuidString
         
         let viewModel = DashboardViewModel(userUID: UUID().uuidString, firebaseService: FaillingFirebaseService())
@@ -132,6 +142,9 @@ struct DashboardViewModelTests {
     
     @Test 
     func addedEventIsDeletedSuccessfully() async throws {
+        
+        let _ = try await FirestoreTestHelper()
+
         let vehicleId = UUID().uuidString
         let eventToAdd = MaintenanceEvent(
             vehicleID: vehicleId, 
@@ -151,6 +164,9 @@ struct DashboardViewModelTests {
     
     @Test 
     func errorMessageIsSetWhenEventCannotBeDeleted() async throws {
+        
+        let _ = try await FirestoreTestHelper()
+
         let vehicleId = UUID().uuidString
         let eventToDelete = MaintenanceEvent(
             id: UUID().uuidString,
