@@ -129,11 +129,7 @@ class DashboardViewModel {
         }
         
         do {
-            try await Firestore
-                .firestore()
-                .collection(FirestorePath.maintenanceEvents(vehicleID: event.vehicleID).path)
-                .document(documentId)
-                .delete()
+            try await firebaseService.deleteMaintenanceEvent(event, withDocumentId: documentId)
             errorMessage = ""
             
             if let eventIndex = events.firstIndex(of: event) {

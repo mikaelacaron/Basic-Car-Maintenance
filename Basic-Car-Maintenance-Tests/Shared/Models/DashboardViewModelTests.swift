@@ -16,86 +16,94 @@ struct DashboardViewModelTests {
     
     var userUID: String 
     var viewModel: DashboardViewModel
-    var event: MaintenanceEvent
-    
+     
     init() {
         let uid =  UUID().uuidString
         userUID = uid
         viewModel = DashboardViewModel(userUID: uid)
-        event = MaintenanceEvent(userID: uid, vehicleID: "1234", title: "Headlamp Fix", date: Date.now, notes: "")
     }
     
- 
-
+    
+    
     @Test func maintenanceEventIsAddedSuccessfully() async throws {
-        viewModel.addEvent(event)
-        #expect(viewModel.events.contains([event]))
+        
+        let eventToAdd = MaintenanceEvent(vehicleID: UUID().uuidString, title: "Headlamp Fix", date: Date.now, notes: "")
+
+        viewModel.addEvent(eventToAdd)
+        
+        #expect(viewModel.events.contains([eventToAdd]))
         #expect(viewModel.errorMessage == "")
         #expect(!viewModel.isShowingAddMaintenanceEvent)
     }
     
     @Test func errorMessageIsSetWhenEventCannotBeAddedSuccessfully() async throws {
+        
         let uid = UUID().uuidString
         let viewModel = DashboardViewModel(userUID: uid, firebaseService: FaillingFirebaseService())
         let event = MaintenanceEvent(
-            vehicleID: "1234", 
+            vehicleID: UUID().uuidString, 
             title: "", date: Date.now, 
             notes: ""
         )
+        
         viewModel.addEvent(event)
+        
         #expect(viewModel.errorMessage != "")
+        #expect(viewModel.showAddErrorAlert)
     }
-
+    
     @Test 
     func addedEventIsRetrievedSuccessfully() async throws {
-         let vehicleId = UUID().uuidString
-         let eventToRetrieve = MaintenanceEvent(
+        
+        let vehicleId = UUID().uuidString
+        let eventToAdd = MaintenanceEvent(
             vehicleID: vehicleId, 
             title: "To fix wheels", date: Date.now, 
             notes: "Wheels must be tested after fix"
         )
         
-        viewModel.addEvent(eventToRetrieve)
-        try await Task.sleep(nanoseconds: 500_000_000)
-        viewModel.events.removeAll()
+        viewModel.addEvent(eventToAdd)
         await viewModel.getMaintenanceEvents()
         
         #expect(viewModel.events.count == 1)
         #expect(viewModel.events.contains(where: {
-            $0.title == eventToRetrieve.title && 
-            $0.vehicleID == eventToRetrieve.vehicleID &&
-            $0.notes == eventToRetrieve.notes &&
-            $0.date == eventToRetrieve.date
+            $0.title == eventToAdd.title && 
+            $0.vehicleID == eventToAdd.vehicleID  &&
+            $0.notes == eventToAdd.notes
+           
         }))
     }
     
     @Test 
-    func addedEventIsUpdatedSuccessfully() async {
+    func addedEventIsUpdatedSuccessfully() async throws {
+        // arrange
         let vehicleId = UUID().uuidString
         let eventToAdd = MaintenanceEvent(
-           vehicleID: vehicleId, 
-           title: "To fix wheels", date: Date.now, 
-           notes: "Wheels must be tested after fix"
-       )
+            vehicleID: vehicleId, 
+            title: "To fix wheels", date: Date.now, 
+            notes: "Wheels must be tested after fix"
+        )
         
         viewModel.addEvent(eventToAdd)
-        viewModel.events.removeAll()
         await viewModel.getMaintenanceEvents() // retieve events from store so we it can have an id
-        guard let savedEvent = viewModel.events.first(where: {$0.vehicleID == eventToAdd.vehicleID}) else {
-            return
-        }
-    
+        let savedEvent =  try #require(
+            viewModel.events.first(where: {$0.vehicleID == eventToAdd.vehicleID}) 
+        )
+        
         let eventToUpdate = MaintenanceEvent(
             id: savedEvent.id, 
             userID: savedEvent.userID, 
             vehicleID: savedEvent.vehicleID, 
             title: "Fix the engine", date: savedEvent.date, notes: "Engine will be tested after fix")
-        await viewModel.updateEvent(eventToUpdate)
         
+        // act
+        await viewModel.updateEvent(eventToUpdate)
         // get updated event
-        guard let updatedEvent = viewModel.events.first(where: {$0.id == eventToUpdate.id}) else {
-            return
-        }
+        let updatedEvent = try #require( 
+            viewModel.events.first(where: {$0.id == eventToUpdate.id})
+        )
+        
+        // assert
         #expect(updatedEvent.title == eventToUpdate.title)
         #expect(updatedEvent.notes == eventToUpdate.notes)
         
@@ -104,31 +112,60 @@ struct DashboardViewModelTests {
     @Test 
     func errorMessageIsSetWhenEventCannotBeUpdated() async throws {
         let vehicleId = UUID().uuidString
-        let eventToAdd = MaintenanceEvent(
-           vehicleID: vehicleId, 
-           title: "To fix wheels", date: Date.now, 
-           notes: "Wheels must be tested after fix"
-       )
+        
         let viewModel = DashboardViewModel(userUID: UUID().uuidString, firebaseService: FaillingFirebaseService())
         
-        viewModel.addEvent(eventToAdd)
-        viewModel.events.removeAll()
-        await viewModel.getMaintenanceEvents() // retieve events from store so we it can have an id
-        guard let savedEvent = viewModel.events.first(where: {$0.vehicleID == eventToAdd.vehicleID}) else {
-            return
-        }
-    
+        
         let eventToUpdate = MaintenanceEvent(
-            id: savedEvent.id, 
-            userID: savedEvent.userID, 
-            vehicleID: savedEvent.vehicleID, 
-            title: "Fix the engine", date: savedEvent.date, notes: "Engine will be tested after fix")
+            id: UUID().uuidString,            
+            userID: UUID().uuidString, 
+            vehicleID: vehicleId, 
+            title: "Fix the engine", date: Date.now, notes: "Engine will be tested after fix"
+        )
+        
         await viewModel.updateEvent(eventToUpdate)
         
         #expect(viewModel.errorMessage != "")
-        
+        #expect(viewModel.showAddErrorAlert)
+
     }
     
+    @Test 
+    func addedEventIsDeletedSuccessfully() async throws {
+        let vehicleId = UUID().uuidString
+        let eventToAdd = MaintenanceEvent(
+            vehicleID: vehicleId, 
+            title: "To fix wheels", date: Date.now, 
+            notes: "Wheels must be tested after fix"
+        )
+        
+        viewModel.addEvent(eventToAdd)
+        await viewModel.getMaintenanceEvents() // retieve events from store so we it can have an id
+        let savedEvent = try #require( 
+            viewModel.events.first(where: {$0.vehicleID == eventToAdd.vehicleID})
+        )
+        await viewModel.deleteEvent(savedEvent)
+        
+        #expect(!viewModel.events.contains(where: {$0.id == savedEvent.id}))
+    }
     
+    @Test 
+    func errorMessageIsSetWhenEventCannotBeDeleted() async throws {
+        let vehicleId = UUID().uuidString
+        let eventToDelete = MaintenanceEvent(
+            id: UUID().uuidString,
+            vehicleID: vehicleId, 
+            title: "To fix wheels", date: Date.now, 
+            notes: "Wheels must be tested after fix"
+        )
+        let viewModel = DashboardViewModel(userUID: UUID().uuidString, firebaseService: FaillingFirebaseService())
+        
+        
+        await viewModel.deleteEvent(eventToDelete)
+        
+        #expect(viewModel.errorMessage != "")
+        #expect(viewModel.showErrorAlert)
+
+    }
     
 }

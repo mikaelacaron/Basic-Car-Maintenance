@@ -9,9 +9,16 @@
 import FirebaseFirestore
 
 class FirebaseService: FirebaseServiceProtocol {
-    
+    func deleteMaintenanceEvent(_ event: MaintenanceEvent, withDocumentId documentId: String) async throws {
+        try await Firestore
+            .firestore()
+            .collection(FirestorePath.maintenanceEvents(vehicleID: event.vehicleID).path)
+            .document(documentId)
+            .delete()
+    }
+
     func addMaintenanceEvent(_ eventToAdd: MaintenanceEvent) throws {
-        try Firestore
+        try Firestore 
             .firestore()
             .collection(FirestorePath.maintenanceEvents(vehicleID: eventToAdd.vehicleID).path)
             .addDocument(from: eventToAdd)    
