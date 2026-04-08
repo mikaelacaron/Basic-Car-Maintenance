@@ -5,7 +5,8 @@
 //  https://github.com/mikaelacaron/Basic-Car-Maintenance
 //  See LICENSE for license information.
 /*
- Abstract: A test helper class that resets the firestore database before and after each test run
+ Abstract: A test helper class that resets the firestore database before and after each test run. But deletes all previously
+ stored data in the firestore.
  */
 
 import Foundation
