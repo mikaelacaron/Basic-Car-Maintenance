@@ -38,7 +38,7 @@ struct DashboardViewModelTests {
     @Test func errorMessageIsSetWhenEventCannotBeAddedSuccessfully() async throws {
         
         let uid = UUID().uuidString
-        let viewModel = DashboardViewModel(userUID: uid, firebaseService: FaillingFirebaseService())
+        let viewModel = DashboardViewModel(userUID: uid, firebaseService: FailingFirebaseService())
         let event = MaintenanceEvent(
             vehicleID: UUID().uuidString, 
             title: "", date: Date.now, 
@@ -114,7 +114,7 @@ struct DashboardViewModelTests {
         
         let vehicleId = UUID().uuidString
         
-        let viewModel = DashboardViewModel(userUID: UUID().uuidString, firebaseService: FaillingFirebaseService())
+        let viewModel = DashboardViewModel(userUID: UUID().uuidString, firebaseService: FailingFirebaseService())
         
         
         let eventToUpdate = MaintenanceEvent(
@@ -161,7 +161,7 @@ struct DashboardViewModelTests {
             title: "To fix wheels", date: Date.now, 
             notes: "Wheels must be tested after fix"
         )
-        let viewModel = DashboardViewModel(userUID: UUID().uuidString, firebaseService: FaillingFirebaseService())
+        let viewModel = DashboardViewModel(userUID: UUID().uuidString, firebaseService: FailingFirebaseService())
         
         
         await viewModel.deleteEvent(eventToDelete)

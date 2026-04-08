@@ -15,7 +15,7 @@ enum TestError: Error {
     case failed
 }
 
-class FaillingFirebaseService: FirebaseServiceProtocol {
+class FailingFirebaseService: FirebaseServiceProtocol {
     func deleteMaintenanceEvent(_ event: MaintenanceEvent, withDocumentId documentId: String) async throws {
         throw TestError.failed
     }
