@@ -28,7 +28,7 @@ jobs:
         echo "prev_week=$start_of_week..$end_of_week" >> "$GITHUB_ENV"
 
     - name: Run issue-metrics tool for issues and PRs opened last week
-      uses: github/issue-metrics@v3
+      uses: github-community-projects/issue-metrics@v3
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SEARCH_QUERY: 'mikaelacaron/Basic-Car-Maintenance created:${{ env.prev_week }}'
@@ -43,7 +43,7 @@ jobs:
           labels: weekly-report
     
     - name: Run issue-metrics tool for issues and PRs closed last week
-      uses: github/issue-metrics@v3
+      uses: github-community-projects/issue-metrics@v3
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SEARCH_QUERY: 'mikaelacaron/Basic-Car-Maintenance closed:${{ env.prev_week }}'
