@@ -76,21 +76,3 @@ class OdometerViewModel {
         }
     }
 }
-
-/* newReading
- _id: FirebaseFirestore.DocumentID<Swift.String>(value: nil), 
- userID: Optional("2E2814A4-1104-44E2-A6DF-DDC2AF6AD185"), 
- date: 2025-03-06 00:45:37 +0000, 
- distance: 138542, 
- isMetric: true, 
- vehicleID: "LV0000"
- */
-
-/* viewModel.reading.fist
- _id: FirebaseFirestore.DocumentID<Swift.String>(value: Optional("hkmecvIaYFYGHLelAp2N")), 
- userID: Optional("2E2814A4-1104-44E2-A6DF-DDC2AF6AD185"), 
- date: 2025-03-06 00:45:37 +0000, 
- distance: 138542, 
- isMetric: true, 
- vehicleID: "LV0000")
- */
