@@ -13,6 +13,7 @@ import Foundation
 import Testing
 @testable import Basic_Car_Maintenance
 
+@Suite(.disabled("Requires Firebase emulator running. Re-enable once CI is configured to run the emulator."))
 class OdometerViewModelTests {
     let userUID: String
     let viewModel: OdometerViewModel
