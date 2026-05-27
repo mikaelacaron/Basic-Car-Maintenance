@@ -157,6 +157,8 @@ struct OdometerView: View {
                     // swiftlint:disable:next line_length
                     EditOdometerReadingView(selectedReading: selectedReading, vehicles: viewModel.vehicles) { updatedReading in
                         viewModel.updateOdometerReading(updatedReading)
+                        //TODO: Shani
+                        print("Reading updated\(updatedReading)")
                     }
                     .alert("An Error Occurred", isPresented: $viewModel.showEditErrorAlert) {
                         Button("OK", role: .cancel) { }

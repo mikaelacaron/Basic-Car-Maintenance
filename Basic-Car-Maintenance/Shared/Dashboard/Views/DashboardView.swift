@@ -192,6 +192,9 @@ struct DashboardView: View {
                 await viewModel.getMaintenanceEvents()
                 await viewModel.getVehicles()
             }
+            .onAppear {
+                Task { await viewModel.getVehicles() }
+            }
             .sheet(isPresented: $isShowingAddView) {
                 makeAddMaintenanceView()
             }
