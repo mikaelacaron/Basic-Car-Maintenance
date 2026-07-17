@@ -1,0 +1,12 @@
+[
+  {
+    "fingerprint" : "f17a4f9dfb6a6afb0408426354e4180daaf49cee",
+    "packageIdentity" : "swiftlint",
+    "targetName" : "SwiftLintPlugin"
+  },
+  {
+    "fingerprint" : "7c80ce6f142164b0201871e580b021d1b2c69804",
+    "packageIdentity" : "swiftlintplugins",
+    "targetName" : "SwiftLintBuildToolPlugin"
+  }
+]

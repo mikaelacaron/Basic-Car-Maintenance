@@ -2,7 +2,8 @@
 //  Bundle+extension.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Mikaela Caron on 8/19/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
 import Foundation
@@ -15,4 +16,8 @@ extension Bundle {
     var buildNumber: String {
         return infoDictionary?["CFBundleVersion"] as? String ?? "1"
     }
+    
+    var keychainAccessGroup: String {
+        return infoDictionary?["KeychainAccessGroup"] as? String ?? "\(bundleIdentifier!).Shared"
+      }
 }

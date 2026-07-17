@@ -111,6 +111,8 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+fastlane/UnitTestsReport
+fastlane/CodeCoverageReport
 
 # Code Injection
 # After new code Injection tools there's a generated folder /iOSInjectionProject

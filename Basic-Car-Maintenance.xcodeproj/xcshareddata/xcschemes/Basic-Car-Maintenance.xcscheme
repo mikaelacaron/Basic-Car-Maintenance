@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1500"
+   LastUpgradeVersion = "1600"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -26,8 +26,13 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      shouldAutocreateTestPlan = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <TestPlans>
+         <TestPlanReference
+            reference = "container:Basic-Car-Maintenance.xctestplan"
+            default = "YES">
+         </TestPlanReference>
+      </TestPlans>
       <Testables>
          <TestableReference
             skipped = "NO"
@@ -35,8 +40,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FF5D13B32A86C2D800BC9BD6"
-               BuildableName = "Basic-Car-MaintenanceTests.xctest"
-               BlueprintName = "Basic-Car-MaintenanceTests"
+               BuildableName = "Basic-Car-Maintenance-Tests.xctest"
+               BlueprintName = "Basic-Car-Maintenance-Tests"
                ReferencedContainer = "container:Basic-Car-Maintenance.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -46,10 +51,15 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FF5D13BD2A86C2D800BC9BD6"
-               BuildableName = "Basic-Car-MaintenanceUITests.xctest"
-               BlueprintName = "Basic-Car-MaintenanceUITests"
+               BuildableName = "Basic-Car-Maintenance-UITests.xctest"
+               BlueprintName = "Basic-Car-Maintenance-UITests"
                ReferencedContainer = "container:Basic-Car-Maintenance.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "BasicCarMaintenanceUITests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>
@@ -73,6 +83,20 @@
             ReferencedContainer = "container:Basic-Car-Maintenance.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-FIRAnalyticsDebugEnabled"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-useEmulator YES"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-FIRDebugEnabled"
+            isEnabled = "NO">
+         </CommandLineArgument>
+      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

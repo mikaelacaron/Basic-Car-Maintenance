@@ -1,0 +1,181 @@
+@Tutorial(time: 20) {
+    @Intro(title: "How to Contribute to this Project") {
+        Here's instructions on how to prepare, fork, clone, configure, build and contribute to this project. This tutorial uses the [GitHub CLI](https://cli.github.com/)
+        
+    }
+    
+    @Section(title: "Prerequisites") {
+
+        @ContentAndMedia {
+            Complete these steps before beginning. 
+            
+            @Image(source: 1-intro.png, alt:"GitHub Screenshot")
+        }
+        
+        @Steps {
+            @Step {
+                Read the Code of Conduct
+            }
+            @Step {
+                Read the CONTRIBUTING guidelines
+            }
+            @Step {
+                Download [Xcode 16.0](https://developer.apple.com/xcode/resources/) or later.
+                
+            }
+            @Step {
+                Install [GitHub CLI](https://cli.github.com/) command line tools
+            }
+
+            @Step {
+               Use `gh auth login` to authenticate with the [GitHub CLI](https://cli.github.com/manual/gh_auth_login)
+            }
+        }
+    }
+            
+    @Section(title: "Fork and Clone") {
+        @ContentAndMedia {
+            Fork and clone 
+            
+            @Image(source: 2-fork.png, alt: "GitHub Fork")
+        }
+        
+        @Steps {
+            @Step {
+                Fork the repo on GitHub to your own account.  Select Fork from the Basic-Car-Maintenance github page.
+                
+                This example shows a fork to `ampsonic`'s profile
+                
+                @Image(source: 2-fork.png, alt: "GitHub Fork")
+            }
+            
+            @Step {
+                Clone your fork to your computer. 
+                
+                `gh repo clone USERNAME/Basic-Car-Maintenance`
+                
+                @Image(source: 3-clone.png, alt: "CLI github clone")
+            }
+        }
+    }
+    @Section(title: "Configuring the project with the xcconfig files to build the project on your machine") {
+        @ContentAndMedia {
+            Copy the template file, edit it to include your development team ID. Set an appropriate bundle id. 
+            
+            @Image(source: 4-config.png, alt: "Copying template file")
+        }
+        
+        @Steps {
+            @Step {
+                In the same folder that contains the Basic-Car-Maintenance.xcconfig.template, run this command, in Terminal, to create a new Xcode configuration file (which properly sets up the signing information)
+                
+                `cp Basic-Car-Maintenance.xcconfig.template Basic-Car-Maintenance.xcconfig`
+                
+                @Image(source: 4-config.png, alt: "Copying template file")
+            }
+            
+            @Step {
+                In the Basic-Car-Maintenance.xcconfig file, fill in your DEVELOPMENT_TEAM and PRODUCT_BUNDLE_IDENTIFIER. You can find this by logging into the Apple Developer Portal
+                
+                Note: A free account does not have a `DEVELOPMENT_TEAM`. Instead fill in `ABC123`. Do NOT run this app on a real device due to issues with the Sign in With Apple capability.
+
+                @Image(source: 5-dev-id.png, alt: "Edit config with dev id")
+            }
+            @Step {
+                Build project in Xcode
+
+                @Image(source: 6-build.png, alt: "Basic Car Maitnenace running in simulator")
+            }
+        }
+    }
+
+    @Section(title: "Setting Up Firebase Local Emulator") {
+        @ContentAndMedia {
+            Follow these steps to set up the Firebase Local Emulator to load data locally and not affect production. Please do not skip this step.
+        }
+
+        @Steps {
+            @Step {
+                Install Homebrew, a package manager for macOS, if you haven't already:
+
+                `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+            }
+            @Step {
+                Install Xcode command line tools:
+
+                `xcode-select --install`
+            }
+            @Step {
+                Install Node Version Manager (NVM). You then don't need to update the system node version.
+
+                `brew install nvm`
+            }
+            @Step {
+                Add the executable to the `$PATH` via `.zshrc` or `.bashrc` file as prompted after installation. Do NOT forget this! (and then restart your Terminal)
+            }
+            @Step {
+                Download and use the latest stable version of Node.js:
+
+                `nvm install stable` 
+            }
+            @Step {
+                `nvm use stable`
+            }
+            @Step {
+                Install OpenJDK, and add the executable to the `$PATH` via `.zshrc` or `.bashrc` file as prompted after installation. Do NOT forget this! (and then restart your Terminal)
+
+                `brew install openjdk` 
+            }
+            @Step {
+                Install Firebase Tools for running the emulator.
+
+                `npm install -g firebase-tools`
+            }
+        }
+    }
+
+    @Section(title: "Start Working on an Issue") {
+        @ContentAndMedia {
+            **BEFORE** starting on an issue, comment on the issue you want to work on.
+
+            This prevents two people from working on the same issue. [Mikaela](https://github.com/mikaelacaron) (the maintainer) will assign you that issue, and you can get started on it.
+
+            @Image(source: 7-issue.png, alt: "GitHub issue")
+        }
+        
+        @Steps {
+            @Step {
+                Checkout a new branch (from the `dev` branch) to work on an issue. 
+                
+                The `feature-name` part of the branch can be shortened or omitted and you add your username instead. No commits should be made to the `main` branch directly. The `main` branch shall only consist of the deployed code. Developers are expected to work on feature branches, and upon successful development and testing, a PR (pull request) must be opened to merge with `dev`. `git checkout -b issueNumber-feature-name`
+                
+                @Image(source: 8-checkout.png, alt: "Checkout issue locally")
+            }
+            @Step {
+                Anytime you run the project, first in Terminal `cd` to `backend` in the Basic-Car-Maintenance directory. This is the directory with the `firebase.json` file, you should see that if you type `ls`
+
+                `cd backend`
+            }
+            @Step {
+                Start the Firebase Emulator. Which will start the emulators, and keep your data in local-data directory. Meaning when you start and stop the emulator your data will persist.
+
+                `firebase emulators:start --import=./local-data --export-on-exit`
+            }
+            @Step {
+                Run the app. You should see your anonymous user in Authentication, and once you add new data, see it in Firestore emulator UI at: http://127.0.0.1:4000/firestore
+                
+                If you don't see your user, delete the app from the simulator, and in the menu go to Device > Erase All Content and Settings (which resets your simulator), and try to run again
+            }
+            
+            @Step {
+                If you receive the following error when you launch the emulator:  _'firebase-tools no longer supports Java version before 11. Please upgrade to Java version 11 or above to continue using the emulators'_
+
+                The openJDK install failed and you will have to install the latest JDK manually. You can download the latest version here [JDK23](https://www.oracle.com/java/technologies/downloads/#jdk23-mac) 
+            }
+            
+            @Step {
+                When your feature or fix is complete, open a pull request (PR) from your feature branch to the `dev` branch. Make sure to use a descriptive PR title and fill out the entire PR template without deleting any sections.
+            }
+        }
+    }
+}

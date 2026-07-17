@@ -2,43 +2,138 @@
 //  SettingsViewModel.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Mikaela Caron on 9/11/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
-import Foundation
-import FirebaseFirestoreSwift
 import FirebaseFirestore
+import Foundation
 
-@MainActor
-final class SettingsViewModel: ObservableObject {
-    
+@Observable
+final class SettingsViewModel {
     let authenticationViewModel: AuthenticationViewModel
+
+    var contributors: [Contributor]?
     
-    @Published var vehicles = [Vehicle]()
+    var vehicles = [Vehicle]()
+    var errorMessage: String = ""
+    var showErrorAlert = false
+    
+    var sortedContributors: [Contributor] {
+        guard let contributors = contributors, !contributors.isEmpty else {
+            return []
+        }
+        
+        return contributors.sorted { (contributor1, contributor2) in
+            switch (contributor1.contributions, contributor2.contributions) {
+            case let (contributor1, contributor2) where contributor1 > contributor2:
+                return true
+            case let (contributor1, contributor2) where contributor1 < contributor2:
+                return false
+            default:
+                return contributor1.login < contributor2.login
+            }
+        }
+    }
     
     init(authenticationViewModel: AuthenticationViewModel) {
         self.authenticationViewModel = authenticationViewModel
     }
     
-    func addVehicle(_ vehicle: Vehicle) async {
+    // swiftlint:disable:next line_length
+    /// Fetches the list of contributors for the GitHub repository [Basic-Car-Maintenance](https://github.com/mikaelacaron/Basic-Car-Maintenance).
+    func getContributors() async {
+        let url = GitHubURL.apiContributors
+        let decoder = JSONDecoder()
+        var page = 1
+        var allContributors: [Contributor] = []
         
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        while true {
+            guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+                fatalError("Failed to construct URLComponents for contributors API call.")
+            }
+            
+            urlComponents.queryItems = [
+                URLQueryItem(name: "page", value: "\(page)"),
+                URLQueryItem(name: "per_page", value: "100")
+            ]
+            
+            guard let updatedURL = urlComponents.url else {
+                fatalError("Failed to construct a valid URL for the contributors API call.")
+            }
+            
+            do {
+                let (data, _) = try await URLSession.shared.data(from: updatedURL)
+                print(data)
+                let contributorsForPage = try decoder.decode([Contributor].self, from: data)
+                
+                if contributorsForPage.isEmpty {
+                    break
+                }
+                
+                allContributors.append(contentsOf: contributorsForPage)
+                self.contributors = allContributors
+                page += 1
+            } catch {
+                print("Error fetching or decoding contributors: \(error)")
+            }
+        }
+    }
+    
+    /// Adds a new vehicle to the Firestore database and the local ``SettingsViewModel/vehicles`` array.
+    ///
+    /// - Parameter vehicle: The vehicle to be added.
+    /// - Throws: An error if there's an issue adding the vehicle to Firestore.
+    func addVehicle(_ vehicle: Vehicle) async throws {
         if let uid = authenticationViewModel.user?.uid {
             var vehicleToAdd = vehicle
             vehicleToAdd.userID = uid
             
-            try? Firestore
-                .firestore()
-                .collection("vehicles")
-                .addDocument(from: vehicleToAdd)
-
-            vehicles.append(vehicleToAdd)
+            do {
+                try Firestore
+                    .firestore()
+                    .collection(FirestoreCollection.vehicles)
+                    .addDocument(from: vehicleToAdd)
+                vehicles.append(vehicleToAdd)
+            } catch {
+                throw error
+            }
+            
+            AnalyticsService.shared.logEvent(.vehicleCreate)
         }
     }
     
+    func updateVehicle(_ vehicle: Vehicle) async {
+        
+        if let userUID = authenticationViewModel.user?.uid {
+            guard let vehicleID = vehicle.id else { return }
+            var vehicleToUpdate = vehicle
+            vehicleToUpdate.userID = userUID
+            
+            do {
+                try Firestore.firestore()
+                    .collection(FirestoreCollection.vehicles)
+                    .document(vehicleID)
+                    .setData(from: vehicleToUpdate)
+                
+                AnalyticsService.shared.logEvent(.vehicleUpdate)
+                
+                await getVehicles()
+            } catch {
+                errorMessage = error.localizedDescription
+                showErrorAlert = true
+            }
+        }
+    }
+    
+    /// Fetches the user's vehicles from Firestore based on their unique user ID.
     func getVehicles() async {
         if let uid = authenticationViewModel.user?.uid {
             let db = Firestore.firestore()
-            let docRef = db.collection("vehicles").whereField("userID", isEqualTo: uid)
+            let docRef = db.collection(FirestoreCollection.vehicles)
+                .whereField(FirestoreField.userID, isEqualTo: uid)
             
             let querySnapshot = try? await docRef.getDocuments()
             
@@ -55,15 +150,28 @@ final class SettingsViewModel: ObservableObject {
             }
         }
     }
-    
-    func deleteVehicle(_ vehicle: Vehicle) async {
-        guard let documentId = vehicle.id else {
-            fatalError("Event \(vehicle.name) has no document ID.")
-        }
-        try? await Firestore
-            .firestore()
-            .collection("vehicles")
-            .document(documentId)
-            .delete()
+        
+    /// Deletes a vehicle from both Firestore and the local ``SettingsViewModel/vehicles`` array.
+    ///
+    /// - Parameter vehicle: The vehicle to be deleted.
+    /// - Throws: An error if there's an issue deleting the vehicle from Firestore.
+    func deleteVehicle(_ vehicle: Vehicle) async throws {
+//        guard let documentId = vehicle.id else {
+//            fatalError("Event \(vehicle.name) has no document ID.")
+//        }
+//        
+//        do {
+//            try await Firestore
+//                .firestore()
+//                .collection(FirestoreCollection.vehicles)
+//                .document(documentId)
+//                .delete()
+//            
+//            vehicles.removeAll { $0.id == vehicle.id }
+//        } catch {
+//            throw error
+//        }
+        
+        AnalyticsService.shared.logEvent(.vehicleDelete)
     }
 }

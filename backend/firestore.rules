@@ -1,0 +1,24 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /alerts/{document=**} {
+      allow read; 
+    }
+
+    match /vehicles/{vehicleId}/{document=**} {
+      // Allow users to create vehicles if authenticated
+      allow read, write: if true;
+    }
+
+    // collection grouop query
+    match /{path=**}/maintenance_events/{events} {
+      allow read: if true;
+    }
+
+    match /{path=**}/odometer_readings/{readings} {
+      allow read: if true; 
+    }
+  }
+}

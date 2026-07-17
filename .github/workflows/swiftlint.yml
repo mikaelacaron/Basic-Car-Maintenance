@@ -1,0 +1,21 @@
+name: SwiftLint
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+      - dev
+  push:
+    branches:
+      - main
+      - dev
+jobs:
+  SwiftLint:
+    runs-on: macos-13
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: SwiftLint
+        # To make SwiftLint treat all warnings as errors, add the --strict flag:
+        # run: swiftlint --strict --quiet --reporter github-actions-logging
+        run: swiftlint --quiet --reporter github-actions-logging

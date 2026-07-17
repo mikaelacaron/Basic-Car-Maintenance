@@ -1,0 +1,43 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+require 'fileutils'
+
+default_platform(:ios)
+
+$ignore_file_path = '.xcovignore'
+
+before_all do
+	FileUtils.rm_rf("./UnitTestsReport")
+	FileUtils.rm_rf("./CodeCoverageReport")
+end
+
+platform :ios do
+	desc "Run tests and create a unit-test report"
+
+	lane :unit_tests do
+  		run_tests(
+			scheme: "Basic-Car-Maintenance",
+			only_testing: "Basic-Car-Maintenance-Tests",
+			xcargs: "-skipPackagePluginValidation",
+			device: "iPhone 16 Pro",
+			skip_build: true,
+			xcodebuild_formatter: 'xcbeautify -qq --is-ci --renderer github-actions',
+			output_types: 'junit',
+			output_directory: "./fastlane/UnitTestsReport"
+		)
+	end
+
+end

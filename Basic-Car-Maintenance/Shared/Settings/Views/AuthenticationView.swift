@@ -2,16 +2,17 @@
 //  AuthenticationView.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Mikaela Caron on 9/17/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
-import SwiftUI
 import AuthenticationServices
+import SwiftUI
 
 struct AuthenticationView: View {
     @Environment(\.colorScheme) var colorScheme
     
-    @ObservedObject var viewModel: AuthenticationViewModel
+    var viewModel: AuthenticationViewModel
     
     init(viewModel: AuthenticationViewModel) {
         self.viewModel = viewModel
@@ -42,6 +43,7 @@ struct AuthenticationView: View {
                         .frame(minHeight: 44)
                     }
                 }
+                .listRowBackground(Color.clear)
             } else {
                 VStack(alignment: .center, spacing: 8) {
                     Text("Signed in as \(viewModel.user?.email ?? "No Email Found")")
@@ -55,6 +57,7 @@ struct AuthenticationView: View {
                 }
             }
         }
+        .analyticsView("\(Self.self)")
     }
 }
 

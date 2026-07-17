@@ -2,15 +2,18 @@
 //  MaintenanceEvent.swift
 //  Basic-Car-Maintenance
 //
-//  Created by Mikaela Caron on 8/25/23.
+//  https://github.com/mikaelacaron/Basic-Car-Maintenance
+//  See LICENSE for license information.
 //
 
+import FirebaseFirestore
 import Foundation
-import FirebaseFirestoreSwift
 
 struct MaintenanceEvent: Codable, Identifiable, Hashable {
     @DocumentID var id: String?
     var userID: String?
+    
+    let vehicleID: String
     let title: String
     let date: Date
     let notes: String

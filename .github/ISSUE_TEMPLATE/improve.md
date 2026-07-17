@@ -2,7 +2,7 @@
 name: Improve a Feature
 about: Create a report to help us improve an existing feature
 title: IMPROVE -
-labels: improve
+labels: improvement
 assignees: ''
 
 ---

@@ -10,5 +10,9 @@
 	<true/>
 	<key>com.apple.security.files.user-selected.read-only</key>
 	<true/>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>$(KEYCHAIN_SHARING_GROUP_IDENTIFIER)</string>
+	</array>
 </dict>
 </plist>

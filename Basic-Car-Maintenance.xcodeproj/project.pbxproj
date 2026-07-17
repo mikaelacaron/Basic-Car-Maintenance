@@ -3,36 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 71;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FF09FC912AB6FF44006BE61A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */; };
-		FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3DDF512AA4D28F009D91C4 /* DashboardViewModel.swift */; };
-		FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */; };
-		FF5D13AB2A86C2D800BC9BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */; };
-		FF5D13AF2A86C2D800BC9BD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5D13AE2A86C2D800BC9BD6 /* Preview Assets.xcassets */; };
-		FF5D13B92A86C2D800BC9BD6 /* BasicCarMaintenanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13B82A86C2D800BC9BD6 /* BasicCarMaintenanceTests.swift */; };
-		FF5D13C32A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13C22A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift */; };
-		FF5D13C52A86C2D800BC9BD6 /* BasicCarMaintenanceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D13C42A86C2D800BC9BD6 /* BasicCarMaintenanceUITestsLaunchTests.swift */; };
-		FF748B5E2AB3589C004748A5 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF748B5D2AB3589C004748A5 /* AuthenticationViewModel.swift */; };
-		FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B3B2A908E3E00F49A13 /* DashboardView.swift */; };
-		FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B3D2A908E7A00F49A13 /* SettingsView.swift */; };
-		FF755B432A90915E00F49A13 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FF755B422A90915E00F49A13 /* Localizable.xcstrings */; };
-		FF755B462A90969D00F49A13 /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B452A90969D00F49A13 /* Bundle+extension.swift */; };
-		FF755B492A909A0000F49A13 /* AddMaintenanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */; };
-		FFAA56ED2AC8905C000120EE /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = FFAA56EC2AC8905C000120EE /* Documentation.docc */; };
-		FFBFE0912A98EFEC000A9BEB /* MaintenanceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */; };
-		FFBFE0932A98F212000A9BEB /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0922A98F212000A9BEB /* Vehicle.swift */; };
-		FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */; };
-		FFC67D1D2AAEF7920073B338 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC67D1C2AAEF7920073B338 /* SettingsViewModel.swift */; };
-		FFC8CDA42AA385E800D129A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */; };
+		9DBF34442E9298F40081DF0E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9DBF34432E9298F40081DF0E /* FirebaseFirestore */; };
+		9DBF34462E9299000081DF0E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9DBF34452E9299000081DF0E /* FirebaseAuth */; };
+		9DBF34482E9299220081DF0E /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9DBF34472E9299220081DF0E /* FirebaseCore */; };
+		FF153AFF2B07C3E000D0BA30 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */; };
+		FF4E82BE2AD39863004949AF /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */; };
+		FF4E82C22AD39863004949AF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FF4E82C12AD39863004949AF /* FirebaseStorage */; };
 		FFC8CDA72AA3867A00D129A6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDA62AA3867A00D129A6 /* FirebaseAnalytics */; };
-		FFC8CDA92AA3867A00D129A6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDA82AA3867A00D129A6 /* FirebaseAnalyticsSwift */; };
 		FFC8CDAB2AA3867A00D129A6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDAA2AA3867A00D129A6 /* FirebaseAuth */; };
 		FFC8CDAD2AA3867A00D129A6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDAC2AA3867A00D129A6 /* FirebaseFirestore */; };
-		FFC8CDAF2AA3867A00D129A6 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FFC8CDAE2AA3867A00D129A6 /* FirebaseFirestoreSwift */; };
 		FFC8CDB32AA4226900D129A6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC8CDB22AA4226900D129A6 /* AdSupport.framework */; };
+		FFDADF7F2ACD35A100DDEF79 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDADF7E2ACD35A100DDEF79 /* WidgetKit.framework */; };
+		FFDADF812ACD35A100DDEF79 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDADF802ACD35A100DDEF79 /* SwiftUI.framework */; };
+		FFDADF8E2ACD35A200DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FFDADF7D2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,47 +37,99 @@
 			remoteGlobalIDString = FF5D13A22A86C2D600BC9BD6;
 			remoteInfo = "Basic-Car-Maintenance";
 		};
+		FFDADF8C2ACD35A200DDEF79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF5D139B2A86C2D500BC9BD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFDADF7C2ACD35A100DDEF79;
+			remoteInfo = "Basic-Car-Maintenance-WidgetExtension";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FFDADF8F2ACD35A200DDEF79 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FFDADF8E2ACD35A200DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9DBF35902E947CFA0081DF0E /* Basic-Car-Maintenance-WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Basic-Car-Maintenance-WidgetExtension.entitlements"; sourceTree = "<group>"; };
 		FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Basic-Car-Maintenance.xcconfig"; sourceTree = SOURCE_ROOT; };
-		FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
-		FF3DDF512AA4D28F009D91C4 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		FF5D13A32A86C2D600BC9BD6 /* Basic-Car-Maintenance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic-Car-Maintenance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceApp.swift; sourceTree = "<group>"; };
-		FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FF5D13AC2A86C2D800BC9BD6 /* Basic_Car_Maintenance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Basic_Car_Maintenance.entitlements; sourceTree = "<group>"; };
-		FF5D13AE2A86C2D800BC9BD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FF5D13B42A86C2D800BC9BD6 /* Basic-Car-MaintenanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Basic-Car-MaintenanceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF5D13B82A86C2D800BC9BD6 /* BasicCarMaintenanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceTests.swift; sourceTree = "<group>"; };
-		FF5D13BE2A86C2D800BC9BD6 /* Basic-Car-MaintenanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Basic-Car-MaintenanceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF5D13C22A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceUITests.swift; sourceTree = "<group>"; };
-		FF5D13C42A86C2D800BC9BD6 /* BasicCarMaintenanceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCarMaintenanceUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FF748B5D2AB3589C004748A5 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
-		FF755B3B2A908E3E00F49A13 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		FF755B3D2A908E7A00F49A13 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		FF755B422A90915E00F49A13 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		FF755B452A90969D00F49A13 /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
-		FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMaintenanceView.swift; sourceTree = "<group>"; };
-		FFAA56EC2AC8905C000120EE /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
-		FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceEvent.swift; sourceTree = "<group>"; };
-		FFBFE0922A98F212000A9BEB /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
-		FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
-		FFC67D1C2AAEF7920073B338 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FF5D13B42A86C2D800BC9BD6 /* Basic-Car-Maintenance-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Basic-Car-Maintenance-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF5D13BE2A86C2D800BC9BD6 /* Basic-Car-Maintenance-UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Basic-Car-Maintenance-UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA392762C54738E00A0AD6D /* Basic-Car-Maintenance.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Basic-Car-Maintenance.xctestplan"; sourceTree = "<group>"; };
 		FFC8CDB22AA4226900D129A6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
+		FFDADF7D2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Basic-Car-Maintenance-WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDADF7E2ACD35A100DDEF79 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FFDADF802ACD35A100DDEF79 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9DBF34402E9295F80081DF0E /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Shared/GoogleService-Info.plist",
+				Shared/Models/MaintenanceEvent.swift,
+				Shared/Models/Vehicle.swift,
+				"Shared/Utilities/Bundle+extension.swift",
+				Shared/Utilities/Constants.swift,
+			);
+			target = FFDADF7C2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension */;
+		};
+		9DBF358D2E945E890081DF0E /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppIntent.swift,
+				DataService.swift,
+				VehicleAppEntity.swift,
+			);
+			target = FF5D13A22A86C2D600BC9BD6 /* Basic-Car-Maintenance */;
+		};
+		FF52DEBC2CADE9EF0023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Shared/Info.plist,
+				Shared/PrivacyInfo.xcprivacy,
+			);
+			target = FF5D13A22A86C2D600BC9BD6 /* Basic-Car-Maintenance */;
+		};
+		FF52DEC82CADEA000023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FFDADF7C2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FF52DE902CADE9EF0023F8DE /* Basic-Car-Maintenance */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FF52DEBC2CADE9EF0023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 9DBF34402E9295F80081DF0E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance"; sourceTree = "<group>"; };
+		FF52DEC22CADEA000023F8DE /* Basic-Car-Maintenance-Widget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (9DBF358D2E945E890081DF0E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, FF52DEC82CADEA000023F8DE /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance-Widget"; sourceTree = "<group>"; };
+		FF52DECC2CADEA030023F8DE /* Basic-Car-Maintenance-Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance-Tests"; sourceTree = "<group>"; };
+		FF52DECF2CADEA060023F8DE /* Basic-Car-Maintenance-UITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Basic-Car-Maintenance-UITests"; sourceTree = "<group>"; };
+		FF52DED52CADEA150023F8DE /* Configurations */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Configurations; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FF5D13A02A86C2D600BC9BD6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFC8CDAF2AA3867A00D129A6 /* FirebaseFirestoreSwift in Frameworks */,
-				FFC8CDA92AA3867A00D129A6 /* FirebaseAnalyticsSwift in Frameworks */,
+				FF4E82BE2AD39863004949AF /* FirebaseRemoteConfig in Frameworks */,
 				FFC8CDAD2AA3867A00D129A6 /* FirebaseFirestore in Frameworks */,
 				FFC8CDAB2AA3867A00D129A6 /* FirebaseAuth in Frameworks */,
 				FFC8CDA72AA3867A00D129A6 /* FirebaseAnalytics in Frameworks */,
+				FF153AFF2B07C3E000D0BA30 /* FirebaseCrashlytics in Frameworks */,
+				FF4E82C22AD39863004949AF /* FirebaseStorage in Frameworks */,
 				FFC8CDB32AA4226900D129A6 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,33 +148,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFDADF7A2ACD35A100DDEF79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFDADF812ACD35A100DDEF79 /* SwiftUI.framework in Frameworks */,
+				9DBF34482E9299220081DF0E /* FirebaseCore in Frameworks */,
+				FFDADF7F2ACD35A100DDEF79 /* WidgetKit.framework in Frameworks */,
+				9DBF34442E9298F40081DF0E /* FirebaseFirestore in Frameworks */,
+				9DBF34462E9299000081DF0E /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FF3DDF492AA4386C009D91C4 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				FF755B3B2A908E3E00F49A13 /* DashboardView.swift */,
-				FF755B482A909A0000F49A13 /* AddMaintenanceView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		FF3DDF502AA4D282009D91C4 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				FF3DDF512AA4D28F009D91C4 /* DashboardViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		FF5D139A2A86C2D500BC9BD6 = {
 			isa = PBXGroup;
 			children = (
+				9DBF35902E947CFA0081DF0E /* Basic-Car-Maintenance-WidgetExtension.entitlements */,
+				FFA392762C54738E00A0AD6D /* Basic-Car-Maintenance.xctestplan */,
+				FF52DED52CADEA150023F8DE /* Configurations */,
 				FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */,
-				FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */,
-				FF5D13B72A86C2D800BC9BD6 /* Basic-Car-MaintenanceTests */,
-				FF5D13C12A86C2D800BC9BD6 /* Basic-Car-MaintenanceUITests */,
+				FF52DE902CADE9EF0023F8DE /* Basic-Car-Maintenance */,
+				FF52DEC22CADEA000023F8DE /* Basic-Car-Maintenance-Widget */,
+				FF52DECC2CADEA030023F8DE /* Basic-Car-Maintenance-Tests */,
+				FF52DECF2CADEA060023F8DE /* Basic-Car-Maintenance-UITests */,
 				FF5D13A42A86C2D600BC9BD6 /* Products */,
 				FFC8CDB12AA4226900D129A6 /* Frameworks */,
 			);
@@ -145,121 +183,19 @@
 			isa = PBXGroup;
 			children = (
 				FF5D13A32A86C2D600BC9BD6 /* Basic-Car-Maintenance.app */,
-				FF5D13B42A86C2D800BC9BD6 /* Basic-Car-MaintenanceTests.xctest */,
-				FF5D13BE2A86C2D800BC9BD6 /* Basic-Car-MaintenanceUITests.xctest */,
+				FF5D13B42A86C2D800BC9BD6 /* Basic-Car-Maintenance-Tests.xctest */,
+				FF5D13BE2A86C2D800BC9BD6 /* Basic-Car-Maintenance-UITests.xctest */,
+				FFDADF7D2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FF5D13A52A86C2D600BC9BD6 /* Basic-Car-Maintenance */ = {
-			isa = PBXGroup;
-			children = (
-				FFAA56EC2AC8905C000120EE /* Documentation.docc */,
-				FF755B412A908F4100F49A13 /* Shared */,
-				FF5D13AA2A86C2D800BC9BD6 /* Assets.xcassets */,
-				FF5D13AC2A86C2D800BC9BD6 /* Basic_Car_Maintenance.entitlements */,
-				FF5D13AD2A86C2D800BC9BD6 /* Preview Content */,
-			);
-			path = "Basic-Car-Maintenance";
-			sourceTree = "<group>";
-		};
-		FF5D13AD2A86C2D800BC9BD6 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				FF5D13AE2A86C2D800BC9BD6 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		FF5D13B72A86C2D800BC9BD6 /* Basic-Car-MaintenanceTests */ = {
-			isa = PBXGroup;
-			children = (
-				FF5D13B82A86C2D800BC9BD6 /* BasicCarMaintenanceTests.swift */,
-			);
-			path = "Basic-Car-MaintenanceTests";
-			sourceTree = "<group>";
-		};
-		FF5D13C12A86C2D800BC9BD6 /* Basic-Car-MaintenanceUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FF5D13C22A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift */,
-				FF5D13C42A86C2D800BC9BD6 /* BasicCarMaintenanceUITestsLaunchTests.swift */,
-			);
-			path = "Basic-Car-MaintenanceUITests";
-			sourceTree = "<group>";
-		};
-		FF755B3F2A908EC400F49A13 /* Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-				FF3DDF492AA4386C009D91C4 /* Views */,
-				FF3DDF502AA4D282009D91C4 /* ViewModels */,
-			);
-			path = Dashboard;
-			sourceTree = "<group>";
-		};
-		FF755B402A908EC900F49A13 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				FFC67D1E2AAEF7960073B338 /* Views */,
-				FFC67D1F2AAEF7A00073B338 /* ViewModels */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		FF755B412A908F4100F49A13 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				FF755B422A90915E00F49A13 /* Localizable.xcstrings */,
-				FFC8CDA32AA385E800D129A6 /* GoogleService-Info.plist */,
-				FF5D13A62A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift */,
-				FFBFE08F2A98EFDD000A9BEB /* Models */,
-				FF755B3F2A908EC400F49A13 /* Dashboard */,
-				FF755B402A908EC900F49A13 /* Settings */,
-				FF755B442A90968D00F49A13 /* Utilities */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		FF755B442A90968D00F49A13 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				FF755B452A90969D00F49A13 /* Bundle+extension.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		FFBFE08F2A98EFDD000A9BEB /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FFBFE0902A98EFEC000A9BEB /* MaintenanceEvent.swift */,
-				FFBFE0922A98F212000A9BEB /* Vehicle.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		FFC67D1E2AAEF7960073B338 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				FF755B3D2A908E7A00F49A13 /* SettingsView.swift */,
-				FFBFE0962A98F7CB000A9BEB /* AddVehicleView.swift */,
-				FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		FFC67D1F2AAEF7A00073B338 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				FFC67D1C2AAEF7920073B338 /* SettingsViewModel.swift */,
-				FF748B5D2AB3589C004748A5 /* AuthenticationViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		FFC8CDB12AA4226900D129A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				FFC8CDB22AA4226900D129A6 /* AdSupport.framework */,
+				FFDADF7E2ACD35A100DDEF79 /* WidgetKit.framework */,
+				FFDADF802ACD35A100DDEF79 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -274,27 +210,34 @@
 				FF5D139F2A86C2D600BC9BD6 /* Sources */,
 				FF5D13A02A86C2D600BC9BD6 /* Frameworks */,
 				FF5D13A12A86C2D600BC9BD6 /* Resources */,
-				FF748B5A2AB34A61004748A5 /* SwiftLintScript */,
+				FFDADF8F2ACD35A200DDEF79 /* Embed Foundation Extensions */,
+				FF50DDC22B07DF0C00E87362 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C90C058C2CB0FC8000046C42 /* PBXTargetDependency */,
+				FFDADF8D2ACD35A200DDEF79 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FF52DE902CADE9EF0023F8DE /* Basic-Car-Maintenance */,
 			);
 			name = "Basic-Car-Maintenance";
 			packageProductDependencies = (
 				FFC8CDA62AA3867A00D129A6 /* FirebaseAnalytics */,
-				FFC8CDA82AA3867A00D129A6 /* FirebaseAnalyticsSwift */,
 				FFC8CDAA2AA3867A00D129A6 /* FirebaseAuth */,
 				FFC8CDAC2AA3867A00D129A6 /* FirebaseFirestore */,
-				FFC8CDAE2AA3867A00D129A6 /* FirebaseFirestoreSwift */,
+				FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */,
+				FF4E82C12AD39863004949AF /* FirebaseStorage */,
+				FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */,
 			);
 			productName = "Basic-Car-Maintenance";
 			productReference = FF5D13A32A86C2D600BC9BD6 /* Basic-Car-Maintenance.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FF5D13B32A86C2D800BC9BD6 /* Basic-Car-MaintenanceTests */ = {
+		FF5D13B32A86C2D800BC9BD6 /* Basic-Car-Maintenance-Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF5D13CB2A86C2D800BC9BD6 /* Build configuration list for PBXNativeTarget "Basic-Car-MaintenanceTests" */;
+			buildConfigurationList = FF5D13CB2A86C2D800BC9BD6 /* Build configuration list for PBXNativeTarget "Basic-Car-Maintenance-Tests" */;
 			buildPhases = (
 				FF5D13B02A86C2D800BC9BD6 /* Sources */,
 				FF5D13B12A86C2D800BC9BD6 /* Frameworks */,
@@ -305,14 +248,17 @@
 			dependencies = (
 				FF5D13B62A86C2D800BC9BD6 /* PBXTargetDependency */,
 			);
-			name = "Basic-Car-MaintenanceTests";
+			fileSystemSynchronizedGroups = (
+				FF52DECC2CADEA030023F8DE /* Basic-Car-Maintenance-Tests */,
+			);
+			name = "Basic-Car-Maintenance-Tests";
 			productName = "Basic-Car-MaintenanceTests";
-			productReference = FF5D13B42A86C2D800BC9BD6 /* Basic-Car-MaintenanceTests.xctest */;
+			productReference = FF5D13B42A86C2D800BC9BD6 /* Basic-Car-Maintenance-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FF5D13BD2A86C2D800BC9BD6 /* Basic-Car-MaintenanceUITests */ = {
+		FF5D13BD2A86C2D800BC9BD6 /* Basic-Car-Maintenance-UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF5D13CE2A86C2D800BC9BD6 /* Build configuration list for PBXNativeTarget "Basic-Car-MaintenanceUITests" */;
+			buildConfigurationList = FF5D13CE2A86C2D800BC9BD6 /* Build configuration list for PBXNativeTarget "Basic-Car-Maintenance-UITests" */;
 			buildPhases = (
 				FF5D13BA2A86C2D800BC9BD6 /* Sources */,
 				FF5D13BB2A86C2D800BC9BD6 /* Frameworks */,
@@ -323,10 +269,33 @@
 			dependencies = (
 				FF5D13C02A86C2D800BC9BD6 /* PBXTargetDependency */,
 			);
-			name = "Basic-Car-MaintenanceUITests";
+			fileSystemSynchronizedGroups = (
+				FF52DECF2CADEA060023F8DE /* Basic-Car-Maintenance-UITests */,
+			);
+			name = "Basic-Car-Maintenance-UITests";
 			productName = "Basic-Car-MaintenanceUITests";
-			productReference = FF5D13BE2A86C2D800BC9BD6 /* Basic-Car-MaintenanceUITests.xctest */;
+			productReference = FF5D13BE2A86C2D800BC9BD6 /* Basic-Car-Maintenance-UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		FFDADF7C2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFDADF922ACD35A200DDEF79 /* Build configuration list for PBXNativeTarget "Basic-Car-Maintenance-WidgetExtension" */;
+			buildPhases = (
+				FFDADF792ACD35A100DDEF79 /* Sources */,
+				FFDADF7A2ACD35A100DDEF79 /* Frameworks */,
+				FFDADF7B2ACD35A100DDEF79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FF52DEC22CADEA000023F8DE /* Basic-Car-Maintenance-Widget */,
+			);
+			name = "Basic-Car-Maintenance-WidgetExtension";
+			productName = "Basic-Car-Maintenance-WidgetExtension";
+			productReference = FFDADF7D2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -336,7 +305,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					FF5D13A22A86C2D600BC9BD6 = {
 						CreatedOnToolsVersion = 15.0;
@@ -349,6 +318,9 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = FF5D13A22A86C2D600BC9BD6;
 					};
+					FFDADF7C2ACD35A100DDEF79 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 				};
 			};
 			buildConfigurationList = FF5D139E2A86C2D500BC9BD6 /* Build configuration list for PBXProject "Basic-Car-Maintenance" */;
@@ -358,18 +330,31 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
+				de,
+				fr,
+				uk,
+				hi,
+				ko,
+				be,
+				ru,
+				"pt-BR",
+				nl,
+				fa,
 			);
 			mainGroup = FF5D139A2A86C2D500BC9BD6;
 			packageReferences = (
 				FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C90C058A2CB0FC5800046C42 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
 			);
 			productRefGroup = FF5D13A42A86C2D600BC9BD6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				FF5D13A22A86C2D600BC9BD6 /* Basic-Car-Maintenance */,
-				FF5D13B32A86C2D800BC9BD6 /* Basic-Car-MaintenanceTests */,
-				FF5D13BD2A86C2D800BC9BD6 /* Basic-Car-MaintenanceUITests */,
+				FF5D13B32A86C2D800BC9BD6 /* Basic-Car-Maintenance-Tests */,
+				FF5D13BD2A86C2D800BC9BD6 /* Basic-Car-Maintenance-UITests */,
+				FFDADF7C2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -379,10 +364,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF5D13AF2A86C2D800BC9BD6 /* Preview Assets.xcassets in Resources */,
-				FFC8CDA42AA385E800D129A6 /* GoogleService-Info.plist in Resources */,
-				FF5D13AB2A86C2D800BC9BD6 /* Assets.xcassets in Resources */,
-				FF755B432A90915E00F49A13 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,10 +381,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFDADF7B2ACD35A100DDEF79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FF748B5A2AB34A61004748A5 /* SwiftLintScript */ = {
+		FF50DDC22B07DF0C00E87362 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -412,15 +400,19 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				" $(SRCROOT)/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				" $(SRCROOT)/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				" $(SRCROOT)/${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				" $(SRCROOT)/$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				" $(SRCROOT)/$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
 			);
-			name = SwiftLintScript;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -429,19 +421,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFBFE0912A98EFEC000A9BEB /* MaintenanceEvent.swift in Sources */,
-				FF755B492A909A0000F49A13 /* AddMaintenanceView.swift in Sources */,
-				FF09FC912AB6FF44006BE61A /* AuthenticationView.swift in Sources */,
-				FF755B3E2A908E7A00F49A13 /* SettingsView.swift in Sources */,
-				FF3DDF522AA4D28F009D91C4 /* DashboardViewModel.swift in Sources */,
-				FFBFE0972A98F7CB000A9BEB /* AddVehicleView.swift in Sources */,
-				FFC67D1D2AAEF7920073B338 /* SettingsViewModel.swift in Sources */,
-				FF755B3C2A908E3E00F49A13 /* DashboardView.swift in Sources */,
-				FFBFE0932A98F212000A9BEB /* Vehicle.swift in Sources */,
-				FF5D13A72A86C2D600BC9BD6 /* BasicCarMaintenanceApp.swift in Sources */,
-				FF748B5E2AB3589C004748A5 /* AuthenticationViewModel.swift in Sources */,
-				FF755B462A90969D00F49A13 /* Bundle+extension.swift in Sources */,
-				FFAA56ED2AC8905C000120EE /* Documentation.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +428,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF5D13B92A86C2D800BC9BD6 /* BasicCarMaintenanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,14 +435,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF5D13C52A86C2D800BC9BD6 /* BasicCarMaintenanceUITestsLaunchTests.swift in Sources */,
-				FF5D13C32A86C2D800BC9BD6 /* BasicCarMaintenanceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFDADF792ACD35A100DDEF79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C90C058C2CB0FC8000046C42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C90C058B2CB0FC8000046C42 /* SwiftLintBuildToolPlugin */;
+		};
 		FF5D13B62A86C2D800BC9BD6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FF5D13A22A86C2D600BC9BD6 /* Basic-Car-Maintenance */;
@@ -475,15 +462,22 @@
 			target = FF5D13A22A86C2D600BC9BD6 /* Basic-Car-Maintenance */;
 			targetProxy = FF5D13BF2A86C2D800BC9BD6 /* PBXContainerItemProxy */;
 		};
+		FFDADF8D2ACD35A200DDEF79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFDADF7C2ACD35A100DDEF79 /* Basic-Car-Maintenance-WidgetExtension */;
+			targetProxy = FFDADF8C2ACD35A200DDEF79 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FF5D13C62A86C2D800BC9BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = Project.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -513,7 +507,8 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -542,10 +537,12 @@
 		};
 		FF5D13C72A86C2D800BC9BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = Project.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -575,6 +572,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -596,16 +594,20 @@
 		};
 		FF5D13C92A86C2D800BC9BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Basic-Car-Maintenance/Basic_Car_Maintenance.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Basic-Car-Maintenance/Preview Content\"";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Basic-Car-Maintenance/Shared/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Basic Car";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -617,16 +619,15 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-Maintenance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -635,16 +636,20 @@
 		};
 		FF5D13CA2A86C2D800BC9BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF098EFA2AB3424E003EC0FE /* Basic-Car-Maintenance.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Basic-Car-Maintenance/Basic_Car_Maintenance.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Basic-Car-Maintenance/Preview Content\"";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Basic-Car-Maintenance/Shared/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Basic Car";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -656,16 +661,15 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-Maintenance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -674,16 +678,15 @@
 		};
 		FF5D13CC2A86C2D800BC9BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = UnitTests.xcconfig;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-MaintenanceTests";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -696,16 +699,15 @@
 		};
 		FF5D13CD2A86C2D800BC9BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = UnitTests.xcconfig;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-MaintenanceTests";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -718,15 +720,14 @@
 		};
 		FF5D13CF2A86C2D800BC9BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = UITests.xcconfig;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-MaintenanceUITests";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -739,15 +740,14 @@
 		};
 		FF5D13D02A86C2D800BC9BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = UITests.xcconfig;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 13.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.icyappstudio.Basic-Car-MaintenanceUITests";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -755,6 +755,65 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Basic-Car-Maintenance";
+			};
+			name = Release;
+		};
+		FFDADF902ACD35A200DDEF79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = Widget.xcconfig;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Basic-Car-Maintenance-WidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Basic-Car-Maintenance-Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Basic-Car-Maintenance-Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FFDADF912ACD35A200DDEF79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = FF52DED52CADEA150023F8DE /* Configurations */;
+			baseConfigurationReferenceRelativePath = Widget.xcconfig;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Basic-Car-Maintenance-WidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Basic-Car-Maintenance-Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Basic-Car-Maintenance-Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -779,7 +838,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF5D13CB2A86C2D800BC9BD6 /* Build configuration list for PBXNativeTarget "Basic-Car-MaintenanceTests" */ = {
+		FF5D13CB2A86C2D800BC9BD6 /* Build configuration list for PBXNativeTarget "Basic-Car-Maintenance-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF5D13CC2A86C2D800BC9BD6 /* Debug */,
@@ -788,7 +847,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF5D13CE2A86C2D800BC9BD6 /* Build configuration list for PBXNativeTarget "Basic-Car-MaintenanceUITests" */ = {
+		FF5D13CE2A86C2D800BC9BD6 /* Build configuration list for PBXNativeTarget "Basic-Car-Maintenance-UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF5D13CF2A86C2D800BC9BD6 /* Debug */,
@@ -797,29 +856,76 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		FFDADF922ACD35A200DDEF79 /* Build configuration list for PBXNativeTarget "Basic-Car-Maintenance-WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFDADF902ACD35A200DDEF79 /* Debug */,
+				FFDADF912ACD35A200DDEF79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C90C058A2CB0FC5800046C42 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.57.0;
+			};
+		};
 		FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 10.14.0;
+				minimumVersion = 12.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9DBF34432E9298F40081DF0E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		9DBF34452E9299000081DF0E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		9DBF34472E9299220081DF0E /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		C90C058B2CB0FC8000046C42 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C90C058A2CB0FC5800046C42 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+		FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		FF4E82C12AD39863004949AF /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		FFC8CDA62AA3867A00D129A6 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
-		};
-		FFC8CDA82AA3867A00D129A6 /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
 		};
 		FFC8CDAA2AA3867A00D129A6 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -830,11 +936,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
-		};
-		FFC8CDAE2AA3867A00D129A6 /* FirebaseFirestoreSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

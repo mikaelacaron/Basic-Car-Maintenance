@@ -1,5 +1,5 @@
 # What it Does
-* Closes issue #
+* Closes #issueNumber
 * Describe what your change does
 
 # How I Tested
