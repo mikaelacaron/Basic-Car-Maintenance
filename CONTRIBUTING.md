@@ -1,7 +1,7 @@
 # Contribution Guidelines
 This document contains the rules and guidelines that developers are expected to follow, while contributing to this repository.
 
-* All contributions must NOT add any SwiftLint warnings or errors. There is a GitHub action setup for any PRs to `dev`, and Xcode will show any warnings/errors.
+* All contributions must NOT add any SwiftLint warnings or errors. There is a GitHub action setup for any PRs to `main`, and Xcode will show any warnings/errors.
 
 # About the Project
 This app was created for [Hacktoberfest](https://hacktoberfest.com/), to help beginners in iOS dev contribute to open source. It is an app to help keep track of your car maintenance activites. This project uses [Firebase](https://firebase.google.com), [Firestore](https://firebase.google.com/products/firestore), and Sign in With Apple.
@@ -72,13 +72,13 @@ firebase emulators:start --import=./local-data --export-on-exit
    * You should see your anonymous user in Authentication, and once you add new data, see it in Firestore emulator UI at: http://127.0.0.1:4000/firestore
    * If you don't see your user, delete the app from the simulator, and in the menu go to Device > Erase All Content and Settings (which resets your simulator), and try to run again
    * If you receive the following error when you launch the emulator: _'firebase-tools no longer supports Java version before 11. Please upgrade to Java version 11 or above to continue using the emulators.'_ The openJDK install failed and you will have to install the latest JDK manually. You can download the latest version here [JDK23](https://www.oracle.com/java/technologies/downloads/#jdk23-mac)
-* **Checkout** a new branch (from the `dev` branch) to work on an issue
-* When your feature / fix is complete open a pull request, PR, from your feature branch to the `dev` branch
+* **Checkout** a new branch (from the `main` branch) to work on an issue
+* When your feature / fix is complete open a pull request, PR, from your feature branch to the `main` branch
    * Use a descriptive PR title and fill out the entire PR template, do not delete any sections.
 
 # Branches and PRs
 * No commits should be made to the `main` branch directly. The `main` branch shall only consist of the deployed code
-* Developers are expected to work on feature branches, and upon successful development and testing, a PR (pull request) must be opened to merge with `dev`
+* Developers are expected to work on feature branches, and upon successful development and testing, a PR (pull request) must be opened to merge with `main`
 * Use kebab-case for branch names
 ✅ **Examples of valid branch names:**
    * 8123-fix-title-of-issue (issue number)

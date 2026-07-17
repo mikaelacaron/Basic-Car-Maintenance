@@ -1,10 +1,10 @@
 # Basic Car Maintenance
 ![Static Badge](https://img.shields.io/badge/status-active-brightgreen)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mikaelacaron/Basic-Car-Maintenance/dev?logo=github)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mikaelacaron/Basic-Car-Maintenance/main?logo=github)
 ![GitHub contributors](https://img.shields.io/github/contributors/mikaelacaron/Basic-Car-Maintenance)
 [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](https://www.firsttimersonly.com/)
 [![Unit Tests](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/unit-tests.yml)
-[![Deploy DocC Documentation](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml/badge.svg?branch=dev)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml)
+[![Deploy DocC Documentation](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml/badge.svg?branch=main)](https://github.com/mikaelacaron/Basic-Car-Maintenance/actions/workflows/docc.yml)
 
 ![Alt](https://repobeats.axiom.co/api/embed/889ac81d440c882bb217c6ee7dda4601e0d8d6d9.svg "Repobeats analytics image")
 
@@ -31,8 +31,8 @@ This project is beginner-friendly and open to contributions, especially during [
 # Getting Started
 Before contributing, follow these steps:
 
-* Read the [Code of Conduct](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/dev/CODE_OF_CONDUCT.md)
-* Read the [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/dev/CONTRIBUTING.md) guidelines
+* Read the [Code of Conduct](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CODE_OF_CONDUCT.md)
+* Read the [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md) guidelines
 * Download Xcode 16.0 or later
 * Browse the open [issues](https://github.com/mikaelacaron/Basic-Car-Maintenance/issues) and **comment** which you would like to work on
    * It is only one person per issue, except where noted.
@@ -56,7 +56,7 @@ PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 
 * Build the project ✅
 
-* Setup the Firebase emulator, following the steps in [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/dev/CONTRIBUTING.md#setup-the-firebase-Emulator)
+* Setup the Firebase emulator, following the steps in [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md#setup-the-firebase-Emulator)
 
 > [!WARNING]
 > DO **NOT** skip setting up the emulators! or your app won't work
@@ -64,7 +64,7 @@ PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.Basic-Car-Maintenance
 * Start the emulator with: `firebase emulators:start --import=./local-data --export-on-exit`
   * Be sure to be in the `backend` folder that contains the `firebase.json` file.
 
-* **Checkout** a new branch, from the `dev` branch, to work on an issue
+* **Checkout** a new branch, from the `main` branch, to work on an issue
 
 # Contributing
 To start contributing, review [CONTRIBUTING.md](https://github.com/mikaelacaron/Basic-Car-Maintenance/blob/main/CONTRIBUTING.md). New contributors are always welcome to support this project.
