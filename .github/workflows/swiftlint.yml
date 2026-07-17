@@ -4,11 +4,9 @@ on:
   pull_request:
     branches:
       - main
-      - dev
   push:
     branches:
       - main
-      - dev
 jobs:
   SwiftLint:
     runs-on: macos-13
