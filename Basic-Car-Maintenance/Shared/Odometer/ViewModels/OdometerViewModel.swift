@@ -26,7 +26,7 @@ class OdometerViewModel {
     var selectedVehicle: Vehicle?
     
     let firebaseService: FirebaseServiceProtocol
-
+    
     init(userUID: String?, firebaseService: FirebaseServiceProtocol) {
         self.userUID = userUID
         self.firebaseService = firebaseService
@@ -50,7 +50,7 @@ class OdometerViewModel {
             AnalyticsService.shared.logEvent(.odometerDelete)
         }
     }
-        
+    
     func getOdometerReadings() async {
         if let userUID = userUID {
             self.readings = await firebaseService.getReadings(userUID: userUID)   
@@ -58,8 +58,11 @@ class OdometerViewModel {
     }
     
     func updateOdometerReading(_ reading: OdometerReading) {
+        if let uid = userUID {
+            var readingToUpdate = reading
+            readingToUpdate.userID = uid
         do {
-            try firebaseService.updateReading(reading)
+            try firebaseService.updateReading(readingToUpdate)
             
             AnalyticsService.shared.logEvent(.odometerUpdate)
             
@@ -69,6 +72,7 @@ class OdometerViewModel {
             showEditErrorAlert = true
         }
     }
+}
     
     func getVehicles() async {
         if let userUID = userUID {
