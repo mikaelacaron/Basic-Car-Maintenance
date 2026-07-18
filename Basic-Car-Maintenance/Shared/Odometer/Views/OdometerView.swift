@@ -6,6 +6,7 @@
 //  See LICENSE for license information.
 //
 
+import Foundation
 import SwiftUI
 import Charts
 
@@ -16,7 +17,7 @@ struct OdometerView: View {
     @State private var selectedTimeRange: TimeRange = .all
     
     init(userUID: String?) {
-        self.init(viewModel: OdometerViewModel(userUID: userUID))
+        self.init(viewModel: OdometerViewModel(userUID: userUID, firebaseService: FirebaseService()))
     }
     
     fileprivate init(viewModel: OdometerViewModel) {
@@ -236,12 +237,9 @@ enum TimeRange: String, CaseIterable, Identifiable {
 }
 
 #Preview {
-    let viewModel = OdometerViewModel(userUID: nil)
     let firstCar = createVehicle(id: "id1", name: "My 1st car")
     let secondCar = createVehicle(id: "id2", name: "2nd Car")
     let thirdCar = createVehicle(id: "id3", name: "3rd Car")
-
-    viewModel.vehicles.append(contentsOf: [firstCar, secondCar, thirdCar])
     
     let firstReading = createReading(vehicleID: firstCar.id!,
                                      date: "2024/10/18",
@@ -270,11 +268,12 @@ enum TimeRange: String, CaseIterable, Identifiable {
     let eighthReading = createReading(vehicleID: secondCar.id!,
                                      date: "2024/11/13",
                                      distance: 1542)
-    
     let ninthReading = createReading(vehicleID: thirdCar.id!,
                                      date: "2024/11/16",
                                      distance: 1600)
-    
+
+    let viewModel = OdometerViewModel(userUID: nil, firebaseService: FirebaseService())
+
     // swiftlint:disable:next line_length
     viewModel.readings.append(contentsOf: [firstReading, secondReading, thirdReading, fourthReading, fifthReading, sixthReading, seventhReading, eighthReading, ninthReading])
     
