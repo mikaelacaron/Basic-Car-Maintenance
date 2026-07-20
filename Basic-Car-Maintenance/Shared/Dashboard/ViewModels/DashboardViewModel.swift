@@ -92,8 +92,6 @@ class DashboardViewModel {
     func getMaintenanceEvents() async {
         isLoading = true
         
-        defer { isLoading = false }
-        
         if let userUID = userUID {
             let db = Firestore.firestore()
             do {

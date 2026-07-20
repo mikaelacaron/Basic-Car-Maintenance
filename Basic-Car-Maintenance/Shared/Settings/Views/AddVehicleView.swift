@@ -85,7 +85,6 @@ struct AddVehicleView: View {
                                               vin: VIN,
                                               licensePlateNumber: licensePlateNumber)
                         addTapped(vehicle)
-                        print("VEHICLE HAS BEEN ADDED")
                     } label: {
                         Text("Add")
                     }

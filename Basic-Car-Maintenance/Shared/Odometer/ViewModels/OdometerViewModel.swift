@@ -26,7 +26,6 @@ class OdometerViewModel {
     var selectedVehicle: Vehicle?
     
     let firebaseService: FirebaseServiceProtocol
-    
     init(userUID: String?, firebaseService: FirebaseServiceProtocol) {
         self.userUID = userUID
         self.firebaseService = firebaseService
