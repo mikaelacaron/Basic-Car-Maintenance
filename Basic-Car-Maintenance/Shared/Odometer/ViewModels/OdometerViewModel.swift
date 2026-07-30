@@ -58,15 +58,19 @@ class OdometerViewModel {
     }
     
     func updateOdometerReading(_ reading: OdometerReading) {
-        do {
-            try firebaseService.updateReading(reading)
-            
-            AnalyticsService.shared.logEvent(.odometerUpdate)
-            
-            isShowingEditReadingView = false
-        } catch {
-            errorMessage = error.localizedDescription
-            showEditErrorAlert = true
+        if let uid = userUID {
+            var readingToUpdate = reading
+            readingToUpdate.userID = uid
+            do {
+                try firebaseService.updateReading(readingToUpdate)
+                
+                AnalyticsService.shared.logEvent(.odometerUpdate)
+                
+                isShowingEditReadingView = false
+            } catch {
+                errorMessage = error.localizedDescription
+                showEditErrorAlert = true
+            }
         }
     }
     
