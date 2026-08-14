@@ -91,11 +91,11 @@ Made with [contrib.rocks](https://contrib.rocks).
 
 ## Star History
 
-<a href="https://star-history.com/#mikaelacaron/Basic-Car-Maintenance&Date">
+<a href="https://star-history.dera.page/#mikaelacaron/Basic-Car-Maintenance&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=mikaelacaron/Basic-Car-Maintenance&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=mikaelacaron/Basic-Car-Maintenance&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=mikaelacaron/Basic-Car-Maintenance&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://star-history.dera.page/svg?repos=mikaelacaron/Basic-Car-Maintenance&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://star-history.dera.page/svg?repos=mikaelacaron/Basic-Car-Maintenance&type=Date" />
+    <img alt="Star History Chart" src="https://star-history.dera.page/svg?repos=mikaelacaron/Basic-Car-Maintenance&type=Date" />
   </picture>
 </a>
 
